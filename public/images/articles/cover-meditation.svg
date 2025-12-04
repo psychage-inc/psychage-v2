@@ -1,0 +1,14 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="med-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0fdfa" />
+      <stop offset="100%" stop-color="#ccfbf1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#med-grad)" />
+  
+  <!-- Lotus Flower Abstract -->
+  <path d="M400 300 Q 350 250 400 150 Q 450 250 400 300" fill="#5eead4" fill-opacity="0.6" />
+  <path d="M400 300 Q 300 280 320 200 Q 380 280 400 300" fill="#2dd4bf" fill-opacity="0.5" />
+  <path d="M400 300 Q 500 280 480 200 Q 420 280 400 300" fill="#2dd4bf" fill-opacity="0.5" />
+</svg>

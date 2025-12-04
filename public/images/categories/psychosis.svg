@@ -1,0 +1,17 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#1a1a1a"/>
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a5568" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#2d3748" stop-opacity="0.2"/>
+    </linearGradient>
+    <filter id="blur1" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+  </defs>
+  <circle cx="400" cy="300" r="150" fill="url(#grad1)" filter="url(#blur1)"/>
+  <path d="M300 200 Q 500 100 600 300 T 400 500" stroke="rgba(255,255,255,0.1)" stroke-width="2" fill="none"/>
+  <path d="M200 400 Q 300 500 500 400 T 600 200" stroke="rgba(255,255,255,0.1)" stroke-width="2" fill="none"/>
+  <circle cx="350" cy="250" r="40" fill="rgba(255,255,255,0.05)"/>
+  <circle cx="550" cy="450" r="60" fill="rgba(255,255,255,0.03)"/>
+</svg>

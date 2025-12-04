@@ -1,0 +1,95 @@
+@import './tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        /* Map tokens to semantic variables if needed, or use tokens directly in tailwind config */
+        /* We already mapped tokens in tailwind.config.js to var(--color-name) which are defined in tokens.css */
+    }
+
+    body {
+        @apply bg-background text-text-primary antialiased;
+        font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+    }
+
+    ::selection {
+        background-color: rgba(13, 148, 136, 0.2);
+        /* Primary with opacity */
+        color: var(--color-primary);
+    }
+}
+
+/* Premium Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-surface-active rounded-full hover:bg-border-hover transition-colors;
+}
+
+
+@layer utilities {
+
+    /* Glassmorphism - Adaptive */
+    .glass {
+        @apply bg-white/70 dark:bg-black/60 backdrop-blur-xl border border-white/20 dark:border-white/10 shadow-lg shadow-black/5 dark:shadow-black/20;
+    }
+
+    .glass-hover {
+        @apply transition-all duration-300 ease-out hover:bg-white/80 dark:hover:bg-black/70 hover:border-white/30 dark:hover:border-white/20 hover:shadow-xl hover:-translate-y-0.5;
+    }
+
+    /* Grain Effect */
+    .bg-grain {
+        position: relative;
+    }
+
+    .bg-grain::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+        pointer-events: none;
+        z-index: 10;
+        mix-blend-mode: overlay;
+    }
+
+    /* Text Gradients */
+    .text-gradient {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-text-primary via-text-secondary to-text-primary animate-gradient;
+        background-size: 300% auto;
+    }
+
+    .text-gradient-primary {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-light via-primary to-primary-hover;
+    }
+
+    /* Animations */
+    .animate-gradient {
+        animation: gradient 8s linear infinite;
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+}

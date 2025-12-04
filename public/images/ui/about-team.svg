@@ -1,0 +1,18 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#1c1917"/>
+  <defs>
+    <linearGradient id="gradTeam" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d97706" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#b45309" stop-opacity="0.1"/>
+    </linearGradient>
+    <filter id="blurTeam" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+  </defs>
+  <circle cx="400" cy="300" r="150" fill="url(#gradTeam)" filter="url(#blurTeam)"/>
+  <circle cx="250" cy="300" r="60" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="550" cy="300" r="60" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="400" cy="150" r="60" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="400" cy="450" r="60" fill="rgba(255,255,255,0.1)"/>
+  <path d="M250 300 L 400 150 L 550 300 L 400 450 Z" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+</svg>

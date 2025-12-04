@@ -1,0 +1,21 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="morning-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff7ed" />
+      <stop offset="100%" stop-color="#ffedd5" />
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#morning-grad)" />
+  
+  <!-- Abstract Plant/Growth -->
+  <path d="M640 720 Q 640 400 400 300" stroke="#10b981" stroke-width="20" stroke-linecap="round" fill="none" />
+  <path d="M640 720 Q 640 500 880 400" stroke="#34d399" stroke-width="15" stroke-linecap="round" fill="none" />
+  
+  <!-- Leaves -->
+  <ellipse cx="400" cy="300" rx="40" ry="80" transform="rotate(-30 400 300)" fill="#059669" />
+  <ellipse cx="880" cy="400" rx="30" ry="60" transform="rotate(30 880 400)" fill="#10b981" />
+  
+  <!-- Sun -->
+  <circle cx="200" cy="150" r="80" fill="#fcd34d" />
+  <circle cx="200" cy="150" r="100" fill="#fcd34d" fill-opacity="0.3" />
+</svg>

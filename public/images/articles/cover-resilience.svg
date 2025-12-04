@@ -1,0 +1,15 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="resilience-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff1f2" />
+      <stop offset="100%" stop-color="#ffe4e6" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#resilience-grad)" />
+  
+  <!-- Bouncing Ball/Growth -->
+  <path d="M100 300 Q 200 350 300 200 T 500 150 T 700 50" stroke="#e11d48" stroke-width="6" stroke-linecap="round" fill="none" />
+  
+  <!-- Strength/Shield -->
+  <path d="M350 150 L 450 150 L 450 250 L 400 300 L 350 250 Z" fill="#fb7185" fill-opacity="0.2" />
+</svg>

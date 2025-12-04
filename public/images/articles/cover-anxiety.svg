@@ -1,0 +1,18 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="anxiety-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#134e4a" />
+      <stop offset="100%" stop-color="#042f2e" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#anxiety-grad)" />
+  
+  <!-- Tangled Lines (Anxiety) -->
+  <path d="M100 200 Q 200 100 300 300 T 500 100 T 700 300" stroke="#2dd4bf" stroke-width="2" stroke-opacity="0.3" fill="none" />
+  <path d="M100 250 Q 250 350 400 150 T 700 250" stroke="#5eead4" stroke-width="2" stroke-opacity="0.2" fill="none" />
+  
+  <!-- Central Focus (Clarity) -->
+  <circle cx="400" cy="200" r="80" fill="#ccfbf1" fill-opacity="0.1" />
+  <circle cx="400" cy="200" r="60" fill="#ccfbf1" fill-opacity="0.2" />
+  <circle cx="400" cy="200" r="40" fill="#ccfbf1" fill-opacity="0.3" />
+</svg>

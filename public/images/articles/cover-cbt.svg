@@ -1,0 +1,18 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cbt-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0f9ff" />
+      <stop offset="100%" stop-color="#e0f2fe" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#cbt-grad)" />
+  
+  <!-- Thought Cycle -->
+  <circle cx="250" cy="200" r="60" stroke="#0ea5e9" stroke-width="4" fill="none" />
+  <circle cx="400" cy="200" r="60" stroke="#0284c7" stroke-width="4" fill="none" />
+  <circle cx="550" cy="200" r="60" stroke="#0369a1" stroke-width="4" fill="none" />
+  
+  <!-- Arrows -->
+  <path d="M310 200 L 340 200" stroke="#0ea5e9" stroke-width="4" marker-end="url(#arrow)" />
+  <path d="M460 200 L 490 200" stroke="#0284c7" stroke-width="4" marker-end="url(#arrow)" />
+</svg>

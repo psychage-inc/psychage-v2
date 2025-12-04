@@ -1,0 +1,24 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="calm-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2dd4bf" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg-grad)" />
+  <!-- Chaotic Left Side -->
+  <path d="M100 360 Q 150 200 200 500 T 300 200 T 400 600" stroke="#94a3b8" stroke-width="4" stroke-opacity="0.3" fill="none" />
+  <path d="M100 400 Q 180 500 250 300 T 350 500 T 450 300" stroke="#cbd5e1" stroke-width="2" stroke-opacity="0.2" fill="none" />
+  
+  <!-- Transition to Calm -->
+  <path d="M500 360 C 600 360, 700 360, 800 360 S 1000 360, 1180 360" stroke="url(#calm-grad)" stroke-width="8" stroke-linecap="round" />
+  
+  <!-- Calm Elements -->
+  <circle cx="1000" cy="360" r="150" fill="url(#calm-grad)" fill-opacity="0.1" />
+  <circle cx="1000" cy="360" r="100" fill="url(#calm-grad)" fill-opacity="0.2" />
+  <circle cx="1000" cy="360" r="50" fill="url(#calm-grad)" fill-opacity="0.3" />
+</svg>

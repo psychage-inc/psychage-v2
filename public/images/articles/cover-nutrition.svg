@@ -1,0 +1,18 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="nutrition-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0fdf4" />
+      <stop offset="100%" stop-color="#dcfce7" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#nutrition-grad)" />
+  
+  <!-- Leaf/Brain Connection -->
+  <path d="M400 350 Q 300 250 300 150 Q 300 50 400 50 Q 500 50 500 150 Q 500 250 400 350" fill="#4ade80" fill-opacity="0.2" />
+  
+  <!-- Green Elements -->
+  <circle cx="350" cy="200" r="30" fill="#22c55e" />
+  <circle cx="450" cy="200" r="30" fill="#16a34a" />
+  <circle cx="400" cy="150" r="30" fill="#15803d" />
+  <circle cx="400" cy="250" r="30" fill="#4ade80" />
+</svg>

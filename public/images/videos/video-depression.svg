@@ -1,0 +1,26 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0c4a6e" />
+      <stop offset="100%" stop-color="#075985" />
+    </linearGradient>
+    <radialGradient id="sun-grad" cx="50%" cy="100%" r="60%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="50%" stop-color="#f59e0b" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#sky-grad)" />
+  
+  <!-- Rising Sun -->
+  <circle cx="640" cy="600" r="300" fill="url(#sun-grad)" />
+  
+  <!-- Mountains/Horizon -->
+  <path d="M0 720 L 300 500 L 600 650 L 900 450 L 1280 720 Z" fill="#0f172a" fill-opacity="0.8" />
+  <path d="M0 720 L 400 600 L 800 680 L 1280 720 Z" fill="#1e293b" fill-opacity="0.9" />
+  
+  <!-- Rays of Hope -->
+  <path d="M640 600 L 640 100" stroke="#fbbf24" stroke-width="2" stroke-opacity="0.2" stroke-dasharray="10 20" />
+  <path d="M640 600 L 400 200" stroke="#fbbf24" stroke-width="2" stroke-opacity="0.1" stroke-dasharray="10 20" />
+  <path d="M640 600 L 880 200" stroke="#fbbf24" stroke-width="2" stroke-opacity="0.1" stroke-dasharray="10 20" />
+</svg>

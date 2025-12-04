@@ -1,0 +1,123 @@
+
+> psychage-web@0.1.0 lint
+> ESLINT_USE_FLAT_CONFIG=false eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0
+
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/App.tsx
+  26:7   error  'ProviderOnboarding' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  41:11  error  'navigate' is assigned a value but never used            @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/article/TableOfContents.tsx
+  2:10  error  'motion' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/chat/AIChatWidget.tsx
+   3:29  error  'User' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           @typescript-eslint/no-unused-vars
+   3:62  error  'ExternalLink' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   @typescript-eslint/no-unused-vars
+   4:8   error  'Button' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+  29:13  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/chat/AIChatWidget.tsx:29:13
+  27 |     if (saved) {
+  28 |         try {
+> 29 |             setMessages(JSON.parse(saved));
+     |             ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  30 |         } catch (e) {
+  31 |             console.error("Failed to parse chat history");
+  32 |         }  react-hooks/set-state-in-effect
+  30:18  error  'e' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/home/CategorySection.tsx
+  11:3  error  'Activity' is defined but never used   @typescript-eslint/no-unused-vars
+  12:3  error  'Timer' is defined but never used      @typescript-eslint/no-unused-vars
+  13:3  error  'BarChart3' is defined but never used  @typescript-eslint/no-unused-vars
+  14:3  error  'Waves' is defined but never used      @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/home/HeroSection.tsx
+  2:28  error  'Activity' is defined but never used  @typescript-eslint/no-unused-vars
+  2:45  error  'Globe' is defined but never used     @typescript-eslint/no-unused-vars
+  7:10  error  'fadeIn' is defined but never used    @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/home/NewsletterSection.tsx
+  3:10  error  'ArrowRight' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/home/ToolsSection.tsx
+  4:10  error  'motion' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/home/VideoSection.tsx
+  8:9  error  'containerRef' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/home/hero/BentoCard.tsx
+  2:25  error  'useState' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/layout/Footer.tsx
+   16:11  error  An empty interface declaration allows any non-nullish value, including literals like `0` and `""`.
+- If that's what you want, disable this lint rule with an inline comment or configure the 'allowInterfaces' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead  @typescript-eslint/no-empty-object-type
+  156:42  error  'idx' is defined but never used                                                                                                                                                                                                                                                                                                                                                           @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/layout/NavHub.tsx
+  11:3  error  'Search' is defined but never used  @typescript-eslint/no-unused-vars
+  14:3  error  'Zap' is defined but never used     @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/layout/NavMenu.tsx
+  26:55  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/layout/Navigation.tsx
+  9:10  error  'Link' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/pages/AboutPage.tsx
+  3:18  error  'Users' is defined but never used         @typescript-eslint/no-unused-vars
+  3:46  error  'CheckCircle2' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/pages/ClarityScoreTool.tsx
+   6:16  error  'useNavigate' is defined but never used                  @typescript-eslint/no-unused-vars
+  42:17  error  Empty block statement                                    no-empty
+  53:17  error  Empty block statement                                    no-empty
+  68:12  error  'showHistoryList' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  68:29  error  'setShowHistoryList' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/pages/ProviderDirectory.tsx
+   3:34  error  'Calendar' is defined but never used                      @typescript-eslint/no-unused-vars
+   3:44  error  'Star' is defined but never used                          @typescript-eslint/no-unused-vars
+   3:50  error  'Shield' is defined but never used                        @typescript-eslint/no-unused-vars
+   3:58  error  'Clock' is defined but never used                         @typescript-eslint/no-unused-vars
+   3:65  error  'Languages' is defined but never used                     @typescript-eslint/no-unused-vars
+   3:76  error  'GraduationCap' is defined but never used                 @typescript-eslint/no-unused-vars
+  18:12  error  'isMobileFiltersOpen' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/pages/SearchResults.tsx
+  45:13  error  'matchedTools' is never reassigned. Use 'const' instead  prefer-const
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/pages/ToolsPage.tsx
+  9:40  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/ui/Skeletons.tsx
+  4:10  error  'Loader2' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/context/BookmarkContext.tsx
+   1:54  error    'useEffect' is defined but never used                                                                                           @typescript-eslint/no-unused-vars
+  44:14  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/data/categories.tsx
+  3:46  error  'Smile' is defined but never used     @typescript-eslint/no-unused-vars
+  3:77  error  'BookOpen' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/pages/ArticleCategoryPage.tsx
+  6:10  error  'categories' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/pages/LearnPage.tsx
+  10:10  error  'NoiseTexture' is defined but never used               @typescript-eslint/no-unused-vars
+  14:11  error  'featuredArticles' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+✖ 49 problems (48 errors, 1 warning)
+  1 error and 0 warnings potentially fixable with the `--fix` option.
+
+(node:33775) ESLintRCWarning: You are using an eslintrc configuration file, which is deprecated and support will be removed in v10.0.0. Please migrate to an eslint.config.js file. See https://eslint.org/docs/latest/use/configure/migration-guide for details. An eslintrc configuration file is used because you have the ESLINT_USE_FLAT_CONFIG environment variable set to false. If you want to use an eslint.config.js file, remove the environment variable. If you want to find the location of the eslintrc configuration file, use the --debug flag.
+(Use `node --trace-warnings ...` to show where the warning was created)

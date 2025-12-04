@@ -1,0 +1,19 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="social-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5f3ff" />
+      <stop offset="100%" stop-color="#ede9fe" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#social-grad)" />
+  
+  <!-- Crowd vs Individual -->
+  <circle cx="200" cy="200" r="30" fill="#a78bfa" fill-opacity="0.3" />
+  <circle cx="250" cy="150" r="30" fill="#a78bfa" fill-opacity="0.3" />
+  <circle cx="300" cy="250" r="30" fill="#a78bfa" fill-opacity="0.3" />
+  <circle cx="150" cy="250" r="30" fill="#a78bfa" fill-opacity="0.3" />
+  
+  <!-- Isolated Figure -->
+  <circle cx="600" cy="200" r="40" fill="#7c3aed" />
+  <circle cx="600" cy="200" r="60" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="5 5" fill="none" />
+</svg>

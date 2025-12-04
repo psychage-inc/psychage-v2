@@ -1,0 +1,25 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="night-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#312e81" />
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#night-grad)" />
+  
+  <!-- Moon -->
+  <circle cx="1000" cy="200" r="80" fill="#fef3c7" fill-opacity="0.9" />
+  <circle cx="1000" cy="200" r="120" fill="#fef3c7" fill-opacity="0.1" />
+  
+  <!-- Clouds -->
+  <path d="M200 500 Q 300 400 400 500 T 600 500 T 800 500" stroke="#6366f1" stroke-width="100" stroke-opacity="0.1" stroke-linecap="round" fill="none" />
+  <path d="M600 600 Q 700 500 800 600 T 1000 600" stroke="#818cf8" stroke-width="80" stroke-opacity="0.1" stroke-linecap="round" fill="none" />
+  
+  <!-- Stars -->
+  <circle cx="100" cy="100" r="2" fill="white" fill-opacity="0.8" />
+  <circle cx="300" cy="200" r="3" fill="white" fill-opacity="0.6" />
+  <circle cx="500" cy="150" r="2" fill="white" fill-opacity="0.7" />
+  <circle cx="700" cy="300" r="4" fill="white" fill-opacity="0.5" />
+  <circle cx="900" cy="100" r="2" fill="white" fill-opacity="0.8" />
+  <circle cx="1100" cy="400" r="3" fill="white" fill-opacity="0.6" />
+</svg>

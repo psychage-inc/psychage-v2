@@ -1,0 +1,15 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#0f172a"/>
+  <defs>
+    <linearGradient id="gradHeroArt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0.2"/>
+    </linearGradient>
+    <filter id="blurHeroArt" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+  </defs>
+  <circle cx="400" cy="300" r="200" fill="url(#gradHeroArt)" filter="url(#blurHeroArt)"/>
+  <path d="M200 300 Q 400 100 600 300" stroke="rgba(255,255,255,0.2)" stroke-width="4" fill="none"/>
+  <circle cx="400" cy="300" r="100" fill="rgba(255,255,255,0.1)"/>
+</svg>

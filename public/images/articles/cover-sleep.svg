@@ -1,0 +1,17 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sleep-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#312e81" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#sleep-grad)" />
+  
+  <!-- Moon Phases -->
+  <circle cx="200" cy="200" r="40" fill="#4338ca" />
+  <circle cx="400" cy="200" r="40" fill="#6366f1" />
+  <circle cx="600" cy="200" r="40" fill="#818cf8" />
+  
+  <!-- Wave -->
+  <path d="M0 350 C 200 300, 600 400, 800 350" stroke="#a5b4fc" stroke-width="4" stroke-opacity="0.3" fill="none" />
+</svg>

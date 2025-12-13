@@ -70,11 +70,11 @@ const BentoCard: React.FC<BentoCardProps> = ({
 
   // Define styles based on variant
   const variantStyles = {
-    primary: "bg-gradient-to-br from-teal-900 to-teal-800 text-white border border-teal-700/50 shadow-lg shadow-teal-900/20 dark:from-teal-950 dark:to-teal-900 dark:border-teal-800/50",
-    vibrant: "bg-teal-500 text-white border border-teal-400 shadow-lg shadow-teal-500/30 dark:bg-teal-600 dark:border-teal-500",
-    surface: "bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl text-gray-900 border border-white/40 dark:border-white/10 shadow-lg shadow-black/5 dark:text-gray-100",
-    depth: "bg-gray-900 text-white border border-gray-800 shadow-lg shadow-black/40 dark:bg-black dark:border-gray-800",
-    red: "bg-rose-600 text-white border border-rose-500 shadow-lg shadow-rose-600/30 dark:bg-rose-700 dark:border-rose-600"
+    primary: "bg-gradient-to-br from-teal-900 to-teal-800 text-white border border-teal-700/50 shadow-lg shadow-teal-900/20",
+    vibrant: "bg-teal-500 text-white border border-teal-400 shadow-lg shadow-teal-500/30",
+    surface: "bg-white/80 backdrop-blur-xl text-gray-900 border border-gray-200 shadow-lg shadow-black/5",
+    depth: "bg-gray-900 text-white border border-gray-800 shadow-lg shadow-black/40",
+    red: "bg-rose-600 text-white border border-rose-500 shadow-lg shadow-rose-600/30"
   };
 
   return (

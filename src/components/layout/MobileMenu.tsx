@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ArrowRight, Brain, ChevronRight } from 'lucide-react';
+import ThemeToggle from '../ui/ThemeToggle';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -56,12 +57,15 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onNavigateGene
                   Psychage
                 </span>
               </div>
-              <button
-                onClick={onClose}
-                className="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
-              >
-                <X size={24} />
-              </button>
+              <div className="flex items-center gap-2">
+                <ThemeToggle />
+                <button
+                  onClick={onClose}
+                  className="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
+                >
+                  <X size={24} />
+                </button>
+              </div>
             </div>
 
             {/* Links */}

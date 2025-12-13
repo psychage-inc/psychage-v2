@@ -1,0 +1,42 @@
+{
+    "footer": {
+        "hero": {
+            "title": "Mental health <br /> <span class=\"text-gray-600\">is just health.</span>",
+            "subtitle": "Building a future where quality care is accessible, understandable, and destigmatized for everyone.",
+            "cta": "Join the movement"
+        },
+        "columns": {
+            "learn": "Learn",
+            "popular": "Popular",
+            "company": "Company",
+            "connect": "Connect"
+        },
+        "links": {
+            "anxiety": "Anxiety & Panic",
+            "depression": "Depression",
+            "wellness": "Wellness",
+            "clarity_score": "Clarity Score™",
+            "find_provider": "Find a Provider",
+            "articles": "Articles",
+            "about_us": "About Us",
+            "careers": "Careers",
+            "contact_support": "Contact Support",
+            "crisis_resources": "Crisis Resources"
+        },
+        "legal": {
+            "privacy": "Privacy",
+            "terms": "Terms",
+            "sitemap": "Sitemap",
+            "choices": "Choices",
+            "copyright": "© {{year}} Psychage Health, Inc.",
+            "back_to_top": "Back to Top"
+        }
+    },
+    "language": {
+        "en": "English",
+        "pt": "Português",
+        "sv": "Svenska",
+        "fr": "Français",
+        "es": "Español"
+    }
+}

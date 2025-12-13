@@ -1,0 +1,42 @@
+{
+    "footer": {
+        "hero": {
+            "title": "Mental hälsa <br /> <span class=\"text-gray-600\">är bara hälsa.</span>",
+            "subtitle": "Bygger en framtid där kvalitetsvård är tillgänglig, förståelig och avstigmatiserad för alla.",
+            "cta": "Gå med i rörelsen"
+        },
+        "columns": {
+            "learn": "Lära",
+            "popular": "Populär",
+            "company": "Företag",
+            "connect": "Ansluta"
+        },
+        "links": {
+            "anxiety": "Ångest & Panik",
+            "depression": "Depression",
+            "wellness": "Välbefinnande",
+            "clarity_score": "Clarity Score™",
+            "find_provider": "Hitta Vårdgivare",
+            "articles": "Artiklar",
+            "about_us": "Om Oss",
+            "careers": "Karriärer",
+            "contact_support": "Kontakta Support",
+            "crisis_resources": "Krisresurser"
+        },
+        "legal": {
+            "privacy": "Integritet",
+            "terms": "Villkor",
+            "sitemap": "Webbplatskarta",
+            "choices": "Val",
+            "copyright": "© {{year}} Psychage Health, Inc.",
+            "back_to_top": "Tillbaka till toppen"
+        }
+    },
+    "language": {
+        "en": "English",
+        "pt": "Português",
+        "sv": "Svenska",
+        "fr": "Français",
+        "es": "Español"
+    }
+}

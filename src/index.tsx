@@ -4,6 +4,7 @@ import App from './App';
 import ErrorBoundary from './components/error/ErrorBoundary';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import { ThemeProvider } from './context/ThemeContext';
 import './styles/globals.css';
 
 const startApp = () => {
@@ -17,11 +18,13 @@ const startApp = () => {
   root.render(
     <React.StrictMode>
       <ErrorBoundary>
-        <HelmetProvider>
-          <BrowserRouter>
-            <App />
-          </BrowserRouter>
-        </HelmetProvider>
+        <ThemeProvider>
+          <HelmetProvider>
+            <BrowserRouter>
+              <App />
+            </BrowserRouter>
+          </HelmetProvider>
+        </ThemeProvider>
       </ErrorBoundary>
     </React.StrictMode>
   );

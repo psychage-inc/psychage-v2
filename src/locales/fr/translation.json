@@ -1,0 +1,42 @@
+{
+    "footer": {
+        "hero": {
+            "title": "La santé mentale <br /> <span class=\"text-gray-600\">c'est juste la santé.</span>",
+            "subtitle": "Construire un avenir où des soins de qualité sont accessibles, compréhensibles et déstigmatisés pour tous.",
+            "cta": "Rejoignez le mouvement"
+        },
+        "columns": {
+            "learn": "Apprendre",
+            "popular": "Populaire",
+            "company": "Entreprise",
+            "connect": "Connecter"
+        },
+        "links": {
+            "anxiety": "Anxiété et Panique",
+            "depression": "Dépression",
+            "wellness": "Bien-être",
+            "clarity_score": "Clarity Score™",
+            "find_provider": "Trouver un Praticien",
+            "articles": "Articles",
+            "about_us": "À Propos",
+            "careers": "Carrières",
+            "contact_support": "Contact Support",
+            "crisis_resources": "Ressources de Crise"
+        },
+        "legal": {
+            "privacy": "Confidentialité",
+            "terms": "Conditions",
+            "sitemap": "Plan du Site",
+            "choices": "Choix",
+            "copyright": "© {{year}} Psychage Health, Inc.",
+            "back_to_top": "Retour en haut"
+        }
+    },
+    "language": {
+        "en": "English",
+        "pt": "Português",
+        "sv": "Svenska",
+        "fr": "Français",
+        "es": "Español"
+    }
+}

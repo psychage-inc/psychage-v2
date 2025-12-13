@@ -37,15 +37,15 @@ const TopicHubSection: React.FC<TopicHubSectionProps> = ({
             <div className="container mx-auto max-w-[1280px]">
 
                 {/* Header */}
-                <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6 border-b border-gray-100 dark:border-gray-800 pb-8">
+                <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6 border-b border-gray-100 pb-8">
                     <div>
                         <span className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-2 block">
                             {category.name}
                         </span>
-                        <h2 className="text-3xl font-display font-bold text-gray-900 dark:text-white mb-3">
+                        <h2 className="text-3xl font-display font-bold text-gray-900 mb-3">
                             {title || `Mastering ${category.name}`}
                         </h2>
-                        <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl">
+                        <p className="text-lg text-gray-600 max-w-2xl">
                             {description || category.description}
                         </p>
                     </div>
@@ -53,7 +53,7 @@ const TopicHubSection: React.FC<TopicHubSectionProps> = ({
                         variant="outline"
                         rightIcon={<ArrowRight size={18} />}
                         onClick={() => navigate(`/category/${category.slug}`)}
-                        className="shrink-0 border-gray-200 dark:border-gray-700"
+                        className="shrink-0 border-gray-200"
                     >
                         View All Resources
                     </Button>
@@ -64,17 +64,17 @@ const TopicHubSection: React.FC<TopicHubSectionProps> = ({
                     {/* Main Feature (First Article) */}
                     {categoryArticles[0] && (
                         <div className="lg:col-span-6 group cursor-pointer" onClick={() => navigate(`/learn/article/${categoryArticles[0].id}`)}>
-                            <div className="relative aspect-[4/3] rounded-xl overflow-hidden mb-6 bg-gray-100 dark:bg-gray-900">
+                            <div className="relative aspect-[4/3] rounded-xl overflow-hidden mb-6 bg-gray-100">
                                 <img
                                     src={categoryArticles[0].image}
                                     alt={categoryArticles[0].title}
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
                             </div>
-                            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:underline decoration-gray-300 underline-offset-4 transition-all">
+                            <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:underline decoration-gray-300 underline-offset-4 transition-all">
                                 {categoryArticles[0].title}
                             </h3>
-                            <p className="text-gray-600 dark:text-gray-400 line-clamp-2 leading-relaxed">
+                            <p className="text-gray-600 line-clamp-2 leading-relaxed">
                                 {categoryArticles[0].description}
                             </p>
                         </div>
@@ -91,7 +91,7 @@ const TopicHubSection: React.FC<TopicHubSectionProps> = ({
                                     className="flex gap-6 group cursor-pointer items-start"
                                     onClick={() => navigate(`/learn/article/${article.id}`)}
                                 >
-                                    <div className="w-28 h-20 shrink-0 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-900">
+                                    <div className="w-28 h-20 shrink-0 rounded-lg overflow-hidden bg-gray-100">
                                         <img
                                             src={article.image}
                                             alt={article.title}
@@ -104,7 +104,7 @@ const TopicHubSection: React.FC<TopicHubSectionProps> = ({
                                             <span className="text-[10px] text-gray-300">•</span>
                                             <span className="text-[10px] text-gray-400">{article.readTime} min read</span>
                                         </div>
-                                        <h4 className="font-bold text-lg text-gray-900 dark:text-white leading-tight mb-1 group-hover:underline decoration-gray-200 underline-offset-4 transition-all">
+                                        <h4 className="font-bold text-lg text-gray-900 leading-tight mb-1 group-hover:underline decoration-gray-200 underline-offset-4 transition-all">
                                             {article.title}
                                         </h4>
                                     </div>
@@ -114,7 +114,7 @@ const TopicHubSection: React.FC<TopicHubSectionProps> = ({
 
                         {/* Video Section (if available) */}
                         {categoryVideos.length > 0 && (
-                            <div className="mt-auto pt-8 border-t border-gray-100 dark:border-gray-800">
+                            <div className="mt-auto pt-8 border-t border-gray-100">
                                 <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-6">Related Videos</h4>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                     {categoryVideos.map(video => (
@@ -123,7 +123,7 @@ const TopicHubSection: React.FC<TopicHubSectionProps> = ({
                                             className="group cursor-pointer"
                                             onClick={() => navigate(`/watch/${video.id}`)}
                                         >
-                                            <div className="relative aspect-video rounded-lg overflow-hidden mb-3 bg-gray-100 dark:bg-gray-900">
+                                            <div className="relative aspect-video rounded-lg overflow-hidden mb-3 bg-gray-100">
                                                 <img
                                                     src={video.thumbnail}
                                                     alt={video.title}
@@ -138,7 +138,7 @@ const TopicHubSection: React.FC<TopicHubSectionProps> = ({
                                                     {Math.floor(video.duration / 60)}:{String(video.duration % 60).padStart(2, '0')}
                                                 </span>
                                             </div>
-                                            <h5 className="font-bold text-sm text-gray-900 dark:text-white line-clamp-2 group-hover:underline decoration-gray-200 underline-offset-2 transition-all">
+                                            <h5 className="font-bold text-sm text-gray-900 line-clamp-2 group-hover:underline decoration-gray-200 underline-offset-2 transition-all">
                                                 {video.title}
                                             </h5>
                                         </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, ChevronRight, Zap, ExternalLink } from 'lucide-react';
+import { motion } from 'framer-motion';
 import {
   NavClarityGlyph,
   NavMoodGlyph,
@@ -167,6 +168,21 @@ const NavMenu: React.FC<NavMenuProps> = ({ activeTab, onMouseLeave, onCategorySe
   const currentSection = menuConfig[activeTab as keyof typeof menuConfig];
   if (!currentSection) return null;
 
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.05
+      }
+    }
+  };
+
+  const itemAnim = {
+    hidden: { opacity: 0, y: 10 },
+    show: { opacity: 1, y: 0 }
+  };
+
   return (
     <div className="w-full" onMouseLeave={onMouseLeave}>
       <div className="flex flex-col md:flex-row gap-8">
@@ -181,9 +197,15 @@ const NavMenu: React.FC<NavMenuProps> = ({ activeTab, onMouseLeave, onCategorySe
             <span className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-[10px] font-mono text-gray-500 dark:text-gray-400 font-bold">V2.4.0</span>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <motion.div
+            variants={container}
+            initial="hidden"
+            animate="show"
+            className="grid grid-cols-1 md:grid-cols-2 gap-4"
+          >
             {currentSection.items.map((item) => (
-              <a
+              <motion.a
+                variants={itemAnim}
                 key={item.id}
                 href="#"
                 onClick={(e) => handleItemClick(e, item)}
@@ -214,16 +236,20 @@ const NavMenu: React.FC<NavMenuProps> = ({ activeTab, onMouseLeave, onCategorySe
                 <div className="absolute top-4 right-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
                   <ArrowRight size={16} className="text-teal-500" />
                 </div>
-              </a>
+              </motion.a>
             ))}
-          </div>
+          </motion.div>
         </div>
 
         {/* RIGHT PANEL: SIDEBAR & UTILITIES */}
         <div className="w-full md:w-72 border-l border-gray-100 dark:border-gray-800 pl-8 flex flex-col justify-between">
 
           {/* Quick Actions List */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: 10 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.1 }}
+          >
             <h4 className="text-[11px] font-bold text-gray-900 dark:text-white uppercase tracking-widest mb-4 opacity-40">
               Quick Actions
             </h4>
@@ -239,10 +265,15 @@ const NavMenu: React.FC<NavMenuProps> = ({ activeTab, onMouseLeave, onCategorySe
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Dynamic Footer Card */}
-          <div className="mt-8 pt-6 border-t border-gray-100 dark:border-gray-800">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="mt-8 pt-6 border-t border-gray-100 dark:border-gray-800"
+          >
             <div className="flex items-start gap-3 p-3 rounded-xl bg-teal-50 dark:bg-teal-900/20 border border-teal-100 dark:border-teal-800/50">
               <div className="p-1.5 rounded bg-teal-200 dark:bg-teal-800 text-teal-800 dark:text-teal-200">
                 <Zap size={14} fill="currentColor" />
@@ -254,7 +285,7 @@ const NavMenu: React.FC<NavMenuProps> = ({ activeTab, onMouseLeave, onCategorySe
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </div>

@@ -1,0 +1,42 @@
+{
+    "footer": {
+        "hero": {
+            "title": "La salud mental <br /> <span class=\"text-gray-600\">es solo salud.</span>",
+            "subtitle": "Construyendo un futuro donde la atención de calidad sea accesible, comprensible y desestigmatizada para todos.",
+            "cta": "Únete al movimiento"
+        },
+        "columns": {
+            "learn": "Aprender",
+            "popular": "Popular",
+            "company": "Empresa",
+            "connect": "Conectar"
+        },
+        "links": {
+            "anxiety": "Ansiedad y Pánico",
+            "depression": "Depresión",
+            "wellness": "Bienestar",
+            "clarity_score": "Clarity Score™",
+            "find_provider": "Buscar Proveedor",
+            "articles": "Artículos",
+            "about_us": "Sobre Nosotros",
+            "careers": "Carreras",
+            "contact_support": "Soporte",
+            "crisis_resources": "Recursos de Crisis"
+        },
+        "legal": {
+            "privacy": "Privacidad",
+            "terms": "Términos",
+            "sitemap": "Mapa del Sitio",
+            "choices": "Opciones",
+            "copyright": "© {{year}} Psychage Health, Inc.",
+            "back_to_top": "Volver arriba"
+        }
+    },
+    "language": {
+        "en": "English",
+        "pt": "Português",
+        "sv": "Svenska",
+        "fr": "Français",
+        "es": "Español"
+    }
+}

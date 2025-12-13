@@ -48,7 +48,7 @@ const App: React.FC = () => {
 
     return (
         <BookmarkProvider>
-            <div className="min-h-screen bg-[#fafaf9] dark:bg-[#050505] font-sans text-gray-900 dark:text-white overflow-x-hidden flex flex-col transition-colors duration-300">
+            <div className="min-h-screen bg-[#fafaf9] font-sans text-gray-900 overflow-x-hidden flex flex-col transition-colors duration-300">
 
                 <Navigation />
 
@@ -72,7 +72,7 @@ const App: React.FC = () => {
                                             categoryId="anxiety"
                                             title="Mastering Anxiety"
                                             description="Evidence-based strategies to calm your mind and body."
-                                            className="bg-white dark:bg-[#0a0a0a]"
+                                            className="bg-white"
                                         />
 
                                         <VideoShowcaseSection />
@@ -91,7 +91,7 @@ const App: React.FC = () => {
                                             categoryId="mindfulness"
                                             title="Mindfulness & Meditation"
                                             description="Practices to stay present and reduce stress in a busy world."
-                                            className="bg-white dark:bg-[#0a0a0a]"
+                                            className="bg-white"
                                             showVideos={false}
                                         />
 

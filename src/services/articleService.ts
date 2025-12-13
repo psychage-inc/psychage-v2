@@ -1,5 +1,6 @@
 import { Article } from '../types/models';
 import { articles } from '../data/articles';
+import { useMemo } from 'react';
 
 export const articleService = {
     getAll: async (): Promise<Article[]> => {
@@ -15,3 +16,8 @@ export const articleService = {
         return articles.find(a => a.slug === slug);
     }
 };
+
+// Hook wrapper for React components
+export function useArticleService() {
+    return useMemo(() => articleService, []);
+}

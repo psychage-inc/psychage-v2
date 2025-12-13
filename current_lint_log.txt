@@ -1,0 +1,257 @@
+
+> psychage-web@0.1.0 lint
+> ESLINT_USE_FLAT_CONFIG=false eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0
+
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/App.tsx
+  53:7  error  'ProviderAnalytics' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/home/AllCategoriesSection.tsx
+  13:11  error  'groupedCategories' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/home/ToolsSection.tsx
+  4:51  error  'Activity' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/home/TopicHubSection.tsx
+  2:28  error  'BookOpen' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/home/VideoShowcaseSection.tsx
+  17:11  error  'x' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/home/hero/HeroBackground3D.tsx
+  11:64  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  12:24  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  43:67  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  44:24  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/layout/Footer.tsx
+  11:3  error  'Globe' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/layout/NavMenu.tsx
+   8:3   error  'NavCourseGlyph' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          @typescript-eslint/no-unused-vars
+  20:69  error  'onCategorySelect' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+  49:7   error  Error: This value cannot be modified
+
+Modifying a variable defined outside a component or hook is not allowed. Consider using an effect.
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/layout/NavMenu.tsx:49:7
+  47 |     } else if (categoryMap[item.id]) {
+  48 |       // Direct navigation to learn page with filter
+> 49 |       window.location.href = `/learn?filter=${categoryMap[item.id]}`;
+     |       ^^^^^^^^^^^^^^^ value cannot be modified
+  50 |     } else if (onNavigateGeneric) {
+  51 |       // Fallback
+  52 |       onNavigateGeneric('404');  react-hooks/immutability
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/layout/Navigation.tsx
+  19:11  error  'location' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/pages/ArticleDetail.tsx
+  41:6  warning  React Hook useEffect has a missing dependency: 'articleService'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/pages/SearchResults.tsx
+  34:37  error    Compilation Skipped: Existing memoization could not be preserved
+
+React Compiler has skipped optimizing this component because the existing manual memoization could not be preserved. The inferred dependencies did not match the manually specified dependencies, which could cause the value to change more or less frequently than expected. The inferred dependency was `articles`, but the source dependencies were [normalizedQuery, selectedCategory, sortBy]. Inferred different dependency than source.
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/pages/SearchResults.tsx:34:37
+  32 |
+  33 |     // Filter Logic
+> 34 |     const filteredResults = useMemo(() => {
+     |                                     ^^^^^^^
+> 35 |         let matchedArticles = articles.filter(item =>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 36 |             item.title.toLowerCase().includes(normalizedQuery) ||
+     …
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 69 |         return { matchedArticles, matchedVideos, matchedTools };
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 70 |     }, [normalizedQuery, selectedCategory, sortBy]);
+     | ^^^^^^ Could not preserve existing manual memoization
+  71 |
+  72 |     const { matchedArticles, matchedVideos, matchedTools } = filteredResults;
+  73 |     const totalResults = matchedArticles.length + matchedVideos.length + matchedTools.length;  react-hooks/preserve-manual-memoization
+  70:8   warning  React Hook useMemo has a missing dependency: 'articles'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                react-hooks/exhaustive-deps
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/symptom-checker/ResultsAnalysis.tsx
+  2:17  error  'useEffect' is defined but never used  @typescript-eslint/no-unused-vars
+  5:10  error  'Condition' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/symptom-checker/SymptomLayout.tsx
+   2:17  error  'useState' is defined but never used           @typescript-eslint/no-unused-vars
+   5:8   error  'Button' is defined but never used             @typescript-eslint/no-unused-vars
+  17:11  error  'navigate' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/symptom-checker/SymptomRefinement.tsx
+  14:12  error  'activeTab' is assigned a value but never used             @typescript-eslint/no-unused-vars
+  14:23  error  'setActiveTab' is assigned a value but never used          @typescript-eslint/no-unused-vars
+  16:11  error  'handleSeverityChange' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  16:35  error  'id' is defined but never used                             @typescript-eslint/no-unused-vars
+  16:47  error  'val' is defined but never used                            @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/symptom-checker/SymptomSearch.tsx
+  3:27  error  'Tag' is defined but never used      @typescript-eslint/no-unused-vars
+  4:20  error  'Symptom' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/ui/Breadcrumbs.tsx
+  2:16  error  'useLocation' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/ui/InteractiveCard.tsx
+  2:10  error  'motion' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/components/ui/Toast.tsx
+  2:18  error  'AnimatePresence' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/context/ThemeContext.tsx
+  42:14  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/context/ToastContext.tsx
+  23:14  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/data/articles/en.tsx
+  4:10  error  'Lightbulb' is defined but never used      @typescript-eslint/no-unused-vars
+  4:21  error  'Quote' is defined but never used          @typescript-eslint/no-unused-vars
+  4:41  error  'AlertTriangle' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/data/articles/es.tsx
+  4:10  error  'Lightbulb' is defined but never used  @typescript-eslint/no-unused-vars
+  4:21  error  'Quote' is defined but never used      @typescript-eslint/no-unused-vars
+  5:8   error  'Citation' is defined but never used   @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/data/categories.tsx
+  4:19  error  'Zap' is defined but never used       @typescript-eslint/no-unused-vars
+  5:26  error  'Coffee' is defined but never used    @typescript-eslint/no-unused-vars
+  5:42  error  'Smile' is defined but never used     @typescript-eslint/no-unused-vars
+  5:49  error  'UserPlus' is defined but never used  @typescript-eslint/no-unused-vars
+  6:30  error  'BookOpen' is defined but never used  @typescript-eslint/no-unused-vars
+  6:40  error  'Clock' is defined but never used     @typescript-eslint/no-unused-vars
+  6:47  error  'Target' is defined but never used    @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/hooks/useReducedMotion.ts
+  8:9  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/hooks/useReducedMotion.ts:8:9
+   6 |     useEffect(() => {
+   7 |         const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+>  8 |         setMatches(mediaQuery.matches);
+     |         ^^^^^^^^^^ Avoid calling setState() directly within an effect
+   9 |
+  10 |         const handleChange = () => {
+  11 |             setMatches(mediaQuery.matches);  react-hooks/set-state-in-effect
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/pages/ArticleCategoryPage.tsx
+  38:8  warning  React Hook useEffect has a missing dependency: 'articleService'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/pages/LearnPage.tsx
+    4:18  error    'Filter' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+    4:26  error    'ArrowRight' is defined but never used                                                                             @typescript-eslint/no-unused-vars
+    4:48  error    'Clock' is defined but never used                                                                                  @typescript-eslint/no-unused-vars
+    4:55  error    'Tag' is defined but never used                                                                                    @typescript-eslint/no-unused-vars
+   48:8   warning  React Hook useEffect has a missing dependency: 'articleService'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  145:45  error    'index' is defined but never used                                                                                  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/pages/auth/LoginPage.tsx
+  4:22  error  'Check' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/pages/auth/SignUpPage.tsx
+  4:42  error  'ChevronRight' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/pages/connect/ConnectLandingPage.tsx
+  4:43  error  'CheckCircle2' is defined but never used  @typescript-eslint/no-unused-vars
+  4:57  error  'ArrowRight' is defined but never used    @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/pages/connect/ProviderDetailPage.tsx
+  3:77   error  'ArrowLeft' is defined but never used    @typescript-eslint/no-unused-vars
+  3:103  error  'CheckCircle' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/pages/connect/ProviderSearchPage.tsx
+  14:11  error  'navigate' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/pages/dashboard/UserAssessmentHistory.tsx
+  4:8  error  'ScoreHistoryPage' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/pages/dashboard/UserSidebar.tsx
+  7:7  error  'sidebarItems' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/pages/future/CommunityLanding.tsx
+  2:10  error  'Card' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/pages/learn/ArticlePage.tsx
+   2:10  error    'ArrowLeft' is defined but never used                                                                              @typescript-eslint/no-unused-vars
+  10:8   error    'Disclaimer' is defined but never used                                                                             @typescript-eslint/no-unused-vars
+  15:10  error    'Display' is defined but never used                                                                                @typescript-eslint/no-unused-vars
+  44:8   warning  React Hook useEffect has a missing dependency: 'articleService'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/pages/learn/CategoryPage.tsx
+   4:10  error    'ArrowLeft' is defined but never used                                                                              @typescript-eslint/no-unused-vars
+   4:45  error    'SlidersHorizontal' is defined but never used                                                                      @typescript-eslint/no-unused-vars
+  10:10  error    'NoiseTexture' is defined but never used                                                                           @typescript-eslint/no-unused-vars
+  39:8   warning  React Hook useEffect has a missing dependency: 'articleService'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/pages/learn/LearnLandingPage.tsx
+  53:8  warning  React Hook useEffect has a missing dependency: 'articleService'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/pages/learn/SearchResultsPage.tsx
+  45:8  warning  React Hook useEffect has a missing dependency: 'articleService'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/pages/provider/ProviderAnalytics.tsx
+  5:10  error  'BarChart3' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/pages/provider/ProviderDashboard.tsx
+  2:10  error  'motion' is defined but never used      @typescript-eslint/no-unused-vars
+  3:34  error  'Star' is defined but never used        @typescript-eslint/no-unused-vars
+  3:40  error  'ArrowRight' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/pages/tools/ToolsLandingPage.tsx
+   6:77  error  'Search' is defined but never used              @typescript-eslint/no-unused-vars
+   6:85  error  'Filter' is defined but never used              @typescript-eslint/no-unused-vars
+  19:12  error  'isLoading' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/pages/tools/clarity-score/AssessmentResultsPage.tsx
+  6:19  error  'Text' is defined but never used               @typescript-eslint/no-unused-vars
+  7:10  error  'assessmentService' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/pages/tools/clarity-score/ScoreHistoryPage.tsx
+   4:43  error  'Download' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          @typescript-eslint/no-unused-vars
+   6:19  error  'Text' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              @typescript-eslint/no-unused-vars
+  33:17  error  Error: Cannot access variable before it is declared
+
+`generateChart` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/pages/tools/clarity-score/ScoreHistoryPage.tsx:33:17
+  31 |                 const sorted = [...parsed].sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+  32 |                 setHistory(sorted);
+> 33 |                 generateChart(sorted);
+     |                 ^^^^^^^^^^^^^ `generateChart` accessed before it is declared
+  34 |             } catch (e) {
+  35 |                 console.error("Failed to parse history", e);
+  36 |             }
+
+/Users/raiyanabdullah/Desktop/psychage-v2/src/pages/tools/clarity-score/ScoreHistoryPage.tsx:40:5
+  38 |     }, []);
+  39 |
+> 40 |     const generateChart = (data: HistoryItem[]) => {
+     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 41 |         if (data.length < 2) return;
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 42 |
+     …
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 68 |         setPoints(calculatedPoints);
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 69 |     };
+     | ^^^^^^^ `generateChart` is declared here
+  70 |
+  71 |     const clearHistory = () => {
+  72 |         if (window.confirm("Are you sure you want to clear your assessment history?")) {  react-hooks/immutability
+
+✖ 87 problems (77 errors, 10 warnings)
+
+(node:3008) ESLintRCWarning: You are using an eslintrc configuration file, which is deprecated and support will be removed in v10.0.0. Please migrate to an eslint.config.js file. See https://eslint.org/docs/latest/use/configure/migration-guide for details. An eslintrc configuration file is used because you have the ESLINT_USE_FLAT_CONFIG environment variable set to false. If you want to use an eslint.config.js file, remove the environment variable. If you want to find the location of the eslintrc configuration file, use the --debug flag.
+(Use `node --trace-warnings ...` to show where the warning was created)

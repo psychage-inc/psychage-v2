@@ -17,6 +17,7 @@ export const articles: Article[] = [
     category: getCat('anxiety'),
     readTime: 8,
     publishedAt: "2025-01-15",
+    views: 12500,
     author: {
       id: "sarah-chen",
       name: "Dr. Sarah Chen",
@@ -175,6 +176,7 @@ export const articles: Article[] = [
     category: getCat('wellness'),
     readTime: 6,
     publishedAt: "2025-01-10",
+    views: 9800,
     author: {
       id: "dr-james-wilson",
       name: "Dr. James Wilson",
@@ -224,6 +226,7 @@ export const articles: Article[] = [
     category: getCat('mindfulness'),
     readTime: 5,
     publishedAt: "2025-01-05",
+    views: 15000,
     author: {
       id: "maya-patel",
       name: "Maya Patel",
@@ -270,6 +273,7 @@ export const articles: Article[] = [
     category: getCat('workplace'),
     readTime: 7,
     publishedAt: "2024-12-28",
+    views: 11200,
     author: {
       id: "david-kim",
       name: "David Kim",
@@ -320,6 +324,7 @@ export const articles: Article[] = [
     category: getCat('therapy'),
     readTime: 10,
     publishedAt: "2024-12-20",
+    views: 8500,
     author: {
       id: "dr-sarah-chen",
       name: "Dr. Sarah Chen",
@@ -364,6 +369,7 @@ export const articles: Article[] = [
     category: getCat('resilience'),
     readTime: 6,
     publishedAt: "2024-12-15",
+    views: 18000,
     author: {
       id: "elena-rodriguez",
       name: "Elena Rodriguez",
@@ -409,6 +415,7 @@ export const articles: Article[] = [
     category: getCat('anxiety'),
     readTime: 5,
     publishedAt: "2024-12-10",
+    views: 21000,
     author: { id: "sarah-chen", name: "Dr. Sarah Chen", role: "Licensed Therapist", image: "/images/authors/author-female-1.svg" },
     tags: ["Anxiety", "Social", "Self-Help"],
     content: (
@@ -449,6 +456,7 @@ export const articles: Article[] = [
     category: getCat('depression'),
     readTime: 7,
     publishedAt: "2024-12-05",
+    views: 10500,
     author: { id: "clinical-board", name: "Clinical Review Board", role: "Medical Review", image: "/images/authors/author-team.svg" },
     tags: ["Depression", "Mental Health", "Education"],
     content: (
@@ -499,6 +507,7 @@ export const articles: Article[] = [
     category: getCat('wellness'),
     readTime: 4,
     publishedAt: "2024-12-01",
+    views: 25000,
     author: { id: "elena-rodriguez", name: "Elena Rodriguez", role: "Life Coach", image: "/images/authors/author-female-2.svg" },
     tags: ["Wellness", "Routine", "Lifestyle"],
     content: (
@@ -536,6 +545,7 @@ export const articles: Article[] = [
     category: getCat('mindfulness'),
     readTime: 8,
     publishedAt: "2024-11-28",
+    views: 19000,
     author: { id: "maya-patel", name: "Maya Patel", role: "Mindfulness Coach", image: "/images/authors/author-female-3.svg" },
     tags: ["Meditation", "Mindfulness", "Beginner"],
     content: (
@@ -577,6 +587,7 @@ export const articles: Article[] = [
     category: getCat('workplace'),
     readTime: 6,
     publishedAt: "2024-11-25",
+    views: 13000,
     author: { id: "david-kim", name: "David Kim", role: "Organizational Psychologist", image: "/images/authors/author-male-1.svg" },
     tags: ["Workplace", "Boundaries", "Career"],
     content: (
@@ -613,6 +624,7 @@ export const articles: Article[] = [
     category: getCat('therapy'),
     readTime: 9,
     publishedAt: "2024-11-20",
+    views: 7500,
     author: { id: "sarah-chen", name: "Dr. Sarah Chen", role: "Licensed Therapist", image: "/images/authors/author-female-1.svg" },
     tags: ["Therapy", "Mental Health", "Guide"],
     content: (
@@ -646,6 +658,7 @@ export const articles: Article[] = [
     category: getCat('anxiety'),
     readTime: 4,
     publishedAt: "2024-11-15",
+    views: 22000,
     author: { id: "clinical-board", name: "Clinical Review Board", role: "Medical Review", image: "/images/authors/author-team.svg" },
     tags: ["Anxiety", "Panic", "Help"],
     content: (
@@ -682,6 +695,7 @@ export const articles: Article[] = [
     category: getCat('depression'),
     readTime: 6,
     publishedAt: "2024-11-10",
+    views: 6000,
     author: { id: "sarah-chen", name: "Dr. Sarah Chen", role: "Licensed Therapist", image: "/images/authors/author-female-1.svg" },
     tags: ["Depression", "SAD", "Winter"],
     content: (
@@ -716,6 +730,7 @@ export const articles: Article[] = [
     category: getCat('wellness'),
     readTime: 7,
     publishedAt: "2024-11-05",
+    views: 9000,
     author: { id: "clinical-board", name: "Clinical Review Board", role: "Medical Review", image: "/images/authors/author-team.svg" },
     tags: ["Nutrition", "Wellness", "Health"],
     content: (

@@ -110,4 +110,5 @@ export interface Article {
     citations?: Citation[];
     relatedArticles?: string[];
     featured?: boolean;
+    views?: number;
 }

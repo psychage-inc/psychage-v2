@@ -14,6 +14,25 @@ import SearchAutocomplete from '../search/SearchAutocomplete';
 
 type SortOption = 'relevance' | 'date' | 'title';
 
+const CATEGORY_MAPPING: Record<string, string> = {
+    // Videos
+    'education': 'mood',
+    'support': 'relationships',
+    'yoga': 'wellness',
+
+    // Tools
+    'assessment': 'wellness',
+    'self-care': 'wellness',
+    'relaxation': 'mindfulness',
+    'professional': 'therapy-types',
+    'emergency': 'trauma'
+};
+
+const getCanonicalCategory = (category: string) => {
+    const lower = category.toLowerCase();
+    return CATEGORY_MAPPING[lower] || lower;
+};
+
 const SearchResults: React.FC = () => {
     const [searchParams, setSearchParams] = useSearchParams();
     const query = searchParams.get('q') || '';
@@ -42,7 +61,7 @@ const SearchResults: React.FC = () => {
             item.category.toLowerCase().includes(normalizedQuery)
         );
 
-        const matchedTools = tools.filter(tool =>
+        let matchedTools = tools.filter(tool =>
             tool.name.toLowerCase().includes(normalizedQuery) ||
             tool.description.toLowerCase().includes(normalizedQuery)
         );
@@ -50,9 +69,8 @@ const SearchResults: React.FC = () => {
         // Apply Category Filter
         if (selectedCategory !== 'all') {
             matchedArticles = matchedArticles.filter(a => a.category.id === selectedCategory);
-            // Videos and Tools categories might need mapping, for now simple filter
-            matchedVideos = matchedVideos.filter(v => v.category.toLowerCase() === selectedCategory);
-            // Tools don't have category ID in same way, skipping for now or assume 'all'
+            matchedVideos = matchedVideos.filter(v => getCanonicalCategory(v.category) === selectedCategory);
+            matchedTools = matchedTools.filter(t => getCanonicalCategory(t.category) === selectedCategory);
         }
 
         // Apply Sorting

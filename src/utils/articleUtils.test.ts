@@ -9,12 +9,13 @@ const createArticle = (id: number, views?: number): Article => ({
     slug: `article-${id}`,
     description: 'desc',
     content: 'content',
-    author: { name: 'Author', role: 'Role', avatar: 'avatar' },
-    category: { id: 'cat', name: 'Category', slug: 'cat', group: 'group' },
+    author: { id: 'author-1', name: 'Author', role: 'Role', image: 'avatar.jpg' },
+    category: { id: 'cat', name: 'Category', slug: 'cat', description: 'Category description', group: 'condition' },
     readTime: 5,
-    publishDate: '2023-01-01',
+    publishedAt: '2023-01-01',
     image: 'image.jpg',
-    views: views
+    views: views,
+    tags: ['test']
 });
 
 describe('getPopularArticles', () => {

@@ -5,6 +5,7 @@ import ErrorBoundary from './components/error/ErrorBoundary';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from './context/ThemeContext';
+import { AuthProvider } from './context/AuthContext';
 import './styles/globals.css';
 
 const startApp = () => {
@@ -21,7 +22,9 @@ const startApp = () => {
         <ThemeProvider>
           <HelmetProvider>
             <BrowserRouter>
-              <App />
+              <AuthProvider>
+                <App />
+              </AuthProvider>
             </BrowserRouter>
           </HelmetProvider>
         </ThemeProvider>

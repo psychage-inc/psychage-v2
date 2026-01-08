@@ -260,4 +260,114 @@ export const SkeletonProviderDirectory = () => (
     </div>
 );
 
+// Home Page Section Skeletons
+
+export const SkeletonTopicCard = () => (
+    <div className="relative flex flex-col justify-between p-6 sm:p-8 rounded-3xl border border-gray-100 bg-gray-50 h-[200px]">
+        <Skeleton className="w-12 h-12 rounded-xl mb-6" />
+        <div className="mt-auto">
+            <Skeleton className="h-6 w-3/4 mb-2" />
+            <Skeleton className="h-4 w-full" />
+        </div>
+    </div>
+);
+
+export const SkeletonToolCard = ({ large = false }: { large?: boolean }) => (
+    <div className={`bg-white rounded-3xl border border-gray-200 p-8 ${large ? 'md:col-span-2 md:row-span-2' : ''}`}>
+        <Skeleton className={`${large ? 'w-16 h-16' : 'w-12 h-12'} rounded-2xl mb-6`} />
+        <Skeleton className={`h-8 ${large ? 'w-1/2' : 'w-3/4'} mb-4`} />
+        <Skeleton className="h-4 w-full mb-2" />
+        <Skeleton className="h-4 w-2/3" />
+    </div>
+);
+
+export const SkeletonTopicHub = ({ invert = false }: { invert?: boolean }) => (
+    <div className="py-20 px-6">
+        <div className="container mx-auto max-w-[1280px]">
+            {/* Header Skeleton */}
+            <div className={`flex flex-col md:flex-row justify-between items-end mb-12 gap-6 border-b border-gray-100 pb-8 ${invert ? "md:flex-row-reverse" : ""}`}>
+                <div className={invert ? "items-end flex flex-col" : ""}>
+                    <Skeleton className="h-3 w-20 mb-2" />
+                    <Skeleton className="h-8 w-64 mb-3" />
+                    <Skeleton className="h-5 w-80" />
+                </div>
+                <Skeleton className="h-10 w-40 rounded-lg" />
+            </div>
+            {/* Content Grid Skeleton */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                <div className={`lg:col-span-6 ${invert ? "lg:order-last" : ""}`}>
+                    <Skeleton className="aspect-[4/3] rounded-xl mb-6" />
+                    <Skeleton className="h-7 w-3/4 mb-3" />
+                    <Skeleton className="h-4 w-full" />
+                </div>
+                <div className="lg:col-span-6 space-y-8">
+                    {[1, 2].map(i => (
+                        <div key={i} className="flex gap-6">
+                            <Skeleton className="w-28 h-20 rounded-lg shrink-0" />
+                            <div className="flex-1">
+                                <Skeleton className="h-3 w-20 mb-2" />
+                                <Skeleton className="h-5 w-full mb-1" />
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    </div>
+);
+
+export const SkeletonVideoShowcase = () => (
+    <div className="py-24 bg-gray-50">
+        <div className="container mx-auto px-6 md:px-12 mb-12">
+            <Skeleton className="h-3 w-24 mb-2" />
+            <Skeleton className="h-10 w-48 mb-4" />
+            <Skeleton className="h-5 w-80" />
+        </div>
+        <div className="flex gap-6 overflow-hidden pl-6 md:pl-12">
+            {[1, 2, 3, 4].map(i => (
+                <div key={i} className="w-[300px] md:w-[360px] shrink-0">
+                    <Skeleton className="aspect-video rounded-xl mb-4" />
+                    <Skeleton className="h-3 w-16 mb-2" />
+                    <Skeleton className="h-5 w-full mb-2" />
+                    <Skeleton className="h-3 w-20" />
+                </div>
+            ))}
+        </div>
+    </div>
+);
+
+export const SkeletonQuickTopics = () => (
+    <div className="py-16 px-6 bg-white">
+        <div className="container mx-auto max-w-[1280px]">
+            <div className="mb-10">
+                <Skeleton className="h-3 w-20 mb-2" />
+                <Skeleton className="h-10 w-64 mb-3" />
+                <Skeleton className="h-5 w-96" />
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {[1, 2, 3, 4, 5, 6].map(i => (
+                    <SkeletonTopicCard key={i} />
+                ))}
+            </div>
+        </div>
+    </div>
+);
+
+export const SkeletonToolsSection = () => (
+    <div className="py-20 px-6 bg-[#fafaf9]">
+        <div className="container mx-auto max-w-[1280px]">
+            <div className="mb-12">
+                <Skeleton className="h-3 w-16 mb-2" />
+                <Skeleton className="h-10 w-56 mb-3" />
+                <Skeleton className="h-5 w-80" />
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <SkeletonToolCard large />
+                <SkeletonToolCard />
+                <SkeletonToolCard />
+            </div>
+        </div>
+    </div>
+);
+
 export default Skeleton;

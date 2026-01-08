@@ -36,24 +36,29 @@ export interface User {
 // Token management
 export const tokenStorage = {
   getAccessToken: (): string | null => {
+    if (typeof window === 'undefined') return null;
     return localStorage.getItem(ACCESS_TOKEN_KEY);
   },
 
   getRefreshToken: (): string | null => {
+    if (typeof window === 'undefined') return null;
     return localStorage.getItem(REFRESH_TOKEN_KEY);
   },
 
   setTokens: (tokens: AuthTokens): void => {
+    if (typeof window === 'undefined') return;
     localStorage.setItem(ACCESS_TOKEN_KEY, tokens.access_token);
     localStorage.setItem(REFRESH_TOKEN_KEY, tokens.refresh_token);
   },
 
   clearTokens: (): void => {
+    if (typeof window === 'undefined') return;
     localStorage.removeItem(ACCESS_TOKEN_KEY);
     localStorage.removeItem(REFRESH_TOKEN_KEY);
   },
 
   isAuthenticated: (): boolean => {
+    if (typeof window === 'undefined') return false;
     return !!localStorage.getItem(ACCESS_TOKEN_KEY);
   }
 };
@@ -194,11 +199,12 @@ export const api = {
       return response;
     },
 
-    signup: async (email: string, password: string, displayName?: string) => {
+    signup: async (email: string, password: string, displayName?: string, role: 'patient' | 'provider' = 'patient') => {
       return api.post<{ user: User }>('/api/auth/signup', {
         email,
         password,
         display_name: displayName,
+        role,
       });
     },
 
@@ -211,6 +217,9 @@ export const api = {
     },
 
     me: () => api.get<User>('/api/auth/me'),
+
+    confirmPasswordReset: (token: string, password: string) =>
+      api.post('/api/auth/reset-password/confirm', { token, password }),
   },
 
   // Provider endpoints
@@ -242,6 +251,46 @@ export const api = {
     trackView: (id: string | number) => api.post(`/api/providers/${id}/view`),
 
     toggleFavorite: (id: string | number) => api.post(`/api/providers/favorites`, { providerId: id }),
+
+    getFavorites: () => api.get<unknown[]>('/api/providers/favorites'),
+
+    register: (data: any) => api.post('/api/providers/register', data),
+  },
+
+  // Provider Dashboard endpoints
+  provider: {
+    getStats: () => api.get<any>('/api/provider/stats'),
+    getActivity: () => api.get<any[]>('/api/provider/activity'),
+    getAnalytics: (params?: { range?: '7d' | '30d' | '90d' | 'all' }) => {
+      const searchParams = new URLSearchParams();
+      if (params?.range) searchParams.set('range', params.range);
+      return api.get<{
+        profileViews: number[];
+        viewLabels: string[];
+        totalViews: number;
+        viewsChange: number;
+        conversionRate: number;
+        conversionChange: number;
+        profileCompleteness: number;
+        topLocations: { location: string; percentage: number }[];
+      }>(`/api/provider/analytics?${searchParams.toString()}`);
+    },
+    getPatients: (params?: { page?: number; limit?: number; search?: string }) => {
+      const searchParams = new URLSearchParams();
+      if (params?.page) searchParams.set('page', params.page.toString());
+      if (params?.limit) searchParams.set('limit', params.limit.toString());
+      if (params?.search) searchParams.set('search', params.search);
+      return api.get<unknown[]>(`/api/provider/patients?${searchParams.toString()}`);
+    },
+    getAppointments: (params?: { start?: string; end?: string }) => {
+      const searchParams = new URLSearchParams();
+      if (params?.start) searchParams.set('start', params.start);
+      if (params?.end) searchParams.set('end', params.end);
+      return api.get<unknown[]>(`/api/provider/appointments?${searchParams.toString()}`);
+    },
+    getProfile: () => api.get<any>('/api/provider/profile'),
+    updateProfile: (data: any) => api.put<any>('/api/provider/profile', data),
+    updateAvailability: (availability: any) => api.put('/api/provider/availability', availability),
   },
 
   // Article endpoints
@@ -276,6 +325,51 @@ export const api = {
   // Assessment endpoints
   assessment: {
     getQuestions: () => api.get<unknown[]>('/api/assessment/questions'),
+  },
+
+  user: {
+    getProfile: () => api.get<User & { location?: string }>('/api/user/profile'),
+    updateProfile: (data: Partial<User & { location?: string }>) => api.put<User>('/api/user/profile', data),
+    getActivity: () => api.get<any[]>('/api/user/activity'),
+    changePassword: (data: any) => api.post('/api/auth/change-password', data),
+    uploadAvatar: async (file: File) => {
+      const formData = new FormData();
+      formData.append('avatar', file);
+      // Special handling for FormData to avoid default JSON content-type
+      const token = localStorage.getItem('psychage_access_token');
+      const headers: Record<string, string> = {};
+      if (token) headers['Authorization'] = `Bearer ${token}`;
+
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:3000'}/api/upload/avatar`, {
+        method: 'POST',
+        headers,
+        body: formData
+      });
+      return response.json();
+    }
+  },
+
+  // Admin endpoints
+  admin: {
+    getStats: () => api.get<any>('/api/admin/stats'),
+    getRecentActivity: () => api.get<any[]>('/api/admin/activity'),
+    getProviders: (params?: { status?: string; page?: number; limit?: number }) => {
+      const searchParams = new URLSearchParams();
+      if (params?.status) searchParams.set('status', params.status);
+      if (params?.page) searchParams.set('page', params.page.toString());
+      if (params?.limit) searchParams.set('limit', params.limit.toString());
+      const query = searchParams.toString();
+      return api.get<unknown[]>(`/api/admin/providers${query ? `?${query}` : ''}`);
+    },
+    updateProviderStatus: (id: string | number, status: 'active' | 'suspended' | 'rejected') =>
+      api.post(`/api/admin/providers/${id}/status`, { status }),
+    getAuditLogs: (params?: { page?: number; limit?: number }) => {
+      const searchParams = new URLSearchParams();
+      if (params?.page) searchParams.set('page', params.page.toString());
+      if (params?.limit) searchParams.set('limit', params.limit.toString());
+      return api.get<unknown[]>(`/api/admin/audit-logs?${searchParams.toString()}`);
+    },
+    getReports: (type: string) => api.get<any>(`/api/admin/reports?type=${type}`)
   },
 
   // Mood tracking endpoints

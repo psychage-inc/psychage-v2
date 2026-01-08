@@ -1,21 +1,20 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Menu, ChevronDown, User, X } from 'lucide-react';
+import { Search, Menu, ChevronDown, User, X, LogOut, LayoutDashboard, Settings } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import NavMenu from './NavMenu';
 import MobileMenu from './MobileMenu';
 import Button from '../ui/Button';
-import AuthModal from '../auth/AuthModal';
 import { useTheme } from '../../context/ThemeContext';
+import { useAuth } from '../../context/AuthContext';
 
 const Navigation: React.FC = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
     const [activeTab, setActiveTab] = useState<string | null>(null);
-    const [isAuthOpen, setIsAuthOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
-    const [isDark, setIsDark] = useState(false);
+    const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
 
     // Refs for hover management
     const searchInputRef = useRef<HTMLInputElement>(null);
@@ -23,12 +22,13 @@ const Navigation: React.FC = () => {
 
     const navigate = useNavigate();
     const location = useLocation();
+    const { user, isAuthenticated, logout } = useAuth();
+    const userMenuRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 20);
             if (window.scrollY > 20 && activeTab) {
-                // Optional: close menu on aggressive scroll
                 setActiveTab(null);
             }
         };
@@ -45,11 +45,21 @@ const Navigation: React.FC = () => {
             if (e.key === 'Escape') {
                 setIsSearchOpen(false);
                 setActiveTab(null);
-                setIsAuthOpen(false);
+                setIsUserMenuOpen(false);
             }
         };
+        const handleClickOutside = (event: MouseEvent) => {
+            if (userMenuRef.current && !userMenuRef.current.contains(event.target as Node)) {
+                setIsUserMenuOpen(false);
+            }
+        };
+
         window.addEventListener('keydown', handleKeyDown);
-        return () => window.removeEventListener('keydown', handleKeyDown);
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
     }, []);
 
     useEffect(() => {
@@ -63,6 +73,22 @@ const Navigation: React.FC = () => {
         { name: 'Resources', hasMenu: true },
         { name: 'Company', hasMenu: true }
     ];
+
+    const getDashboardPath = () => {
+        if (!user) return '/login';
+        switch (user.role) {
+            case 'admin': return '/admin';
+            case 'provider': return '/provider/dashboard';
+            case 'patient': return '/dashboard';
+            default: return '/dashboard';
+        }
+    };
+
+    const handleLogout = async () => {
+        await logout();
+        navigate('/');
+        setIsUserMenuOpen(false);
+    };
 
     const handleSearchSubmit = (e?: React.FormEvent) => {
         e?.preventDefault();
@@ -106,8 +132,6 @@ const Navigation: React.FC = () => {
 
     return (
         <>
-            <AuthModal isOpen={isAuthOpen} onClose={() => setIsAuthOpen(false)} />
-
             <header
                 className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${isScrolled || activeTab || isSearchOpen
                     ? 'bg-white/80 backdrop-blur-xl border-b border-gray-200 shadow-sm'
@@ -171,23 +195,87 @@ const Navigation: React.FC = () => {
                             {isSearchOpen ? <X size={20} /> : <Search size={20} />}
                         </button>
 
-                        {/* Auth Button */}
-                        <button
-                            onClick={() => setIsAuthOpen(true)}
-                            onMouseEnter={() => handleMouseEnter('')}
-                            className="hidden md:flex w-10 h-10 rounded-full items-center justify-center text-gray-500 hover:bg-gray-100 hover:text-gray-900 transition-all"
-                        >
-                            <User size={20} />
-                        </button>
+                        {isAuthenticated ? (
+                            <>
+                                {/* Dashboard Button */}
+                                <Button
+                                    className="hidden md:flex rounded-full px-6 h-10 bg-teal-600 hover:bg-teal-700 text-white shadow-lg shadow-teal-900/20 border-none font-bold text-sm ml-2"
+                                    onClick={() => navigate(getDashboardPath())}
+                                    onMouseEnter={() => handleMouseEnter('')}
+                                >
+                                    Dashboard
+                                </Button>
 
-                        {/* CTA Button */}
-                        <Button
-                            className="hidden md:flex rounded-full px-6 h-10 bg-teal-600 hover:bg-teal-700 text-white shadow-lg shadow-teal-900/20 border-none font-bold text-sm ml-2"
-                            onClick={() => navigate('/clarity-score')}
-                            onMouseEnter={() => handleMouseEnter('')}
-                        >
-                            Start
-                        </Button>
+                                {/* User Menu */}
+                                <div className="relative" ref={userMenuRef}>
+                                    <button
+                                        onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
+                                        className={`hidden md:flex w-10 h-10 rounded-full items-center justify-center transition-all ml-2 ${isUserMenuOpen ? 'bg-gray-100 text-gray-900' : 'text-gray-500 hover:bg-gray-100 hover:text-gray-900'}`}
+                                    >
+                                        <User size={20} />
+                                    </button>
+
+                                    <AnimatePresence>
+                                        {isUserMenuOpen && (
+                                            <motion.div
+                                                initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                                                animate={{ opacity: 1, y: 0, scale: 1 }}
+                                                exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                                                transition={{ duration: 0.1 }}
+                                                className="absolute right-0 top-full mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden py-1 z-[60]"
+                                            >
+                                                <div className="px-4 py-3 border-b border-gray-100">
+                                                    <p className="text-sm font-medium text-gray-900 truncate">{user?.display_name || 'User'}</p>
+                                                    <p className="text-xs text-gray-500 truncate">{user?.email}</p>
+                                                </div>
+                                                <button
+                                                    onClick={() => { navigate(getDashboardPath()); setIsUserMenuOpen(false); }}
+                                                    className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 flex items-center gap-2"
+                                                >
+                                                    <LayoutDashboard size={16} />
+                                                    Dashboard
+                                                </button>
+                                                <button
+                                                    onClick={() => { navigate('/settings'); setIsUserMenuOpen(false); }}
+                                                    className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 flex items-center gap-2"
+                                                >
+                                                    <Settings size={16} />
+                                                    Settings
+                                                </button>
+                                                <div className="h-px bg-gray-100 my-1" />
+                                                <button
+                                                    onClick={handleLogout}
+                                                    className="w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-red-50 flex items-center gap-2"
+                                                >
+                                                    <LogOut size={16} />
+                                                    Sign Out
+                                                </button>
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
+                                </div>
+                            </>
+                        ) : (
+                            <>
+                                {/* Login Button */}
+                                <button
+                                    onClick={() => navigate('/login')}
+                                    onMouseEnter={() => handleMouseEnter('')}
+                                    className="hidden md:flex px-4 py-2 rounded-full text-sm font-bold text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all"
+                                >
+                                    Sign In
+                                </button>
+
+                                {/* Get Started Button */}
+                                <Button
+                                    className="hidden md:flex rounded-full px-6 h-10 bg-teal-600 hover:bg-teal-700 text-white shadow-lg shadow-teal-900/20 border-none font-bold text-sm ml-2"
+                                    onClick={() => navigate('/signup')}
+                                    onMouseEnter={() => handleMouseEnter('')}
+                                >
+                                    Get Started
+                                </Button>
+                            </>
+                        )}
 
                         {/* Mobile Menu Button */}
                         <button
@@ -272,5 +360,4 @@ const Navigation: React.FC = () => {
         </>
     );
 };
-
 export default Navigation;

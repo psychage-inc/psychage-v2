@@ -9,7 +9,7 @@ interface AuthState {
 
 interface AuthContextType extends AuthState {
   login: (email: string, password: string) => Promise<{ success: boolean; error?: string }>;
-  signup: (email: string, password: string, displayName?: string) => Promise<{ success: boolean; error?: string }>;
+  signup: (email: string, password: string, displayName?: string, role?: 'patient' | 'provider') => Promise<{ success: boolean; error?: string }>;
   logout: () => Promise<void>;
   refreshUser: () => Promise<void>;
   requestPasswordReset: (email: string) => Promise<{ success: boolean; error?: string }>;
@@ -40,7 +40,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           }
         } catch (error) {
           console.error('Failed to restore session:', error);
-          tokenStorage.clearTokens();
+          if (error instanceof ApiError && error.status === 401) {
+            tokenStorage.clearTokens();
+          }
+          // For other errors (network, 500), do not clear tokens.
+          // User remains "authenticated" in storage but state is set to null below,
+          // effectively logging them out of *session* but allowing retry on reload.
         }
       }
       setState({
@@ -77,9 +82,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  const signup = useCallback(async (email: string, password: string, displayName?: string) => {
+  const signup = useCallback(async (email: string, password: string, displayName?: string, role: 'patient' | 'provider' = 'patient') => {
     try {
-      const response = await api.auth.signup(email, password, displayName);
+      const response = await api.auth.signup(email, password, displayName, role);
       if (response.success) {
         // After signup, user needs to verify email or can log in
         return { success: true };

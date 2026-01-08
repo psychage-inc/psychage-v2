@@ -1,7 +1,9 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ArrowRight, Brain, ChevronRight } from 'lucide-react';
+import { X, ArrowRight, Brain, ChevronRight, LogOut, User } from 'lucide-react';
 import ThemeToggle from '../ui/ThemeToggle';
+import { useAuth } from '../../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -10,10 +12,32 @@ interface MobileMenuProps {
 }
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onNavigateGeneric }) => {
+  const { user, isAuthenticated, logout } = useAuth();
+  const navigate = useNavigate();
 
   const handleNav = (view: string) => {
     onClose();
-    if (onNavigateGeneric) onNavigateGeneric(view);
+    if (onNavigateGeneric) {
+      onNavigateGeneric(view);
+    } else {
+      navigate(view === 'home' ? '/' : `/${view}`);
+    }
+  };
+
+  const handleLogout = async () => {
+    await logout();
+    onClose();
+    navigate('/');
+  };
+
+  const getDashboardPath = () => {
+    if (!user) return 'login';
+    switch (user.role) {
+      case 'admin': return 'admin';
+      case 'provider': return 'provider/dashboard';
+      case 'patient': return 'dashboard';
+      default: return 'dashboard';
+    }
   };
 
   const menuItems = [
@@ -25,6 +49,10 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onNavigateGene
     { name: 'About', view: 'about' },
     { name: 'Contact', view: 'contact' },
   ];
+
+  if (isAuthenticated) {
+    menuItems.splice(1, 0, { name: 'Dashboard', view: getDashboardPath() });
+  }
 
   return (
     <AnimatePresence>
@@ -56,6 +84,11 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onNavigateGene
                 <span className="font-display font-bold text-xl text-gray-900 dark:text-white">
                   Psychage
                 </span>
+                {isAuthenticated && (
+                  <div className="ml-2 px-2 py-0.5 bg-gray-100 rounded-md text-xs font-semibold text-gray-600 capitalize">
+                    {user?.role}
+                  </div>
+                )}
               </div>
               <div className="flex items-center gap-2">
                 <ThemeToggle />
@@ -87,13 +120,30 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onNavigateGene
             </nav>
 
             {/* Footer / CTA */}
-            <div className="p-6 border-t border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
-              <button
-                onClick={() => handleNav('clarity-score')}
-                className="w-full py-3.5 px-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl font-bold shadow-lg shadow-gray-900/20 active:scale-[0.98] transition-all flex justify-center items-center gap-2"
-              >
-                Start Assessment <ArrowRight size={18} />
-              </button>
+            <div className="p-6 border-t border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50 space-y-3">
+              {isAuthenticated ? (
+                <button
+                  onClick={handleLogout}
+                  className="w-full py-3.5 px-4 bg-red-50 text-red-600 hover:bg-red-100 rounded-xl font-bold transition-all flex justify-center items-center gap-2"
+                >
+                  <LogOut size={18} /> Sign Out
+                </button>
+              ) : (
+                <>
+                  <button
+                    onClick={() => handleNav('login')}
+                    className="w-full py-3.5 px-4 bg-white border border-gray-200 text-gray-900 rounded-xl font-bold hover:bg-gray-50 transition-all flex justify-center items-center gap-2"
+                  >
+                    <User size={18} /> Sign In
+                  </button>
+                  <button
+                    onClick={() => handleNav('signup')}
+                    className="w-full py-3.5 px-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl font-bold shadow-lg shadow-gray-900/20 active:scale-[0.98] transition-all flex justify-center items-center gap-2"
+                  >
+                    Get Started <ArrowRight size={18} />
+                  </button>
+                </>
+              )}
             </div>
           </motion.div>
         </>

@@ -1,21 +1,47 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Mail, Lock } from 'lucide-react';
+import { Mail, Lock, AlertCircle } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Label } from '@/components/ui/Label';
 import { Display, Text } from '@/components/ui/Typography';
 import { Card } from '@/components/ui/Card';
+import { useAuth } from '../../context/AuthContext';
+import { Alert, AlertDescription } from '@/components/ui/Alert';
 
 const LoginPage = () => {
-    const [isLoading, setIsLoading] = React.useState(false);
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState<string | null>(null);
+    const { login, isLoading } = useAuth();
+    const navigate = useNavigate();
+    const location = useLocation();
 
-    const handleSubmit = (e: React.FormEvent) => {
+    // Get the page they were trying to visit, or default to appropriate dashboard
+    const from = location.state?.from?.pathname;
+
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        setIsLoading(true);
-        // Simulate login
-        setTimeout(() => setIsLoading(false), 2000);
+        setError(null);
+
+        try {
+            const result = await login(email, password);
+
+            if (result.success) {
+                // If we have a specific destination, go there
+                if (from) {
+                    navigate(from, { replace: true });
+                } else {
+                    // Default to dashboard
+                    navigate('/dashboard', { replace: true });
+                }
+            } else {
+                setError(result.error || 'Failed to login. Please check your credentials.');
+            }
+        } catch (err) {
+            setError('An unexpected error occurred. Please try again.');
+        }
     };
 
     return (
@@ -39,6 +65,13 @@ const LoginPage = () => {
 
                 <Card className="p-8 border-border/50 shadow-xl bg-surface/80 backdrop-blur-sm">
                     <form onSubmit={handleSubmit} className="space-y-6">
+                        {error && (
+                            <Alert variant="destructive">
+                                <AlertCircle className="h-4 w-4" />
+                                <AlertDescription>{error}</AlertDescription>
+                            </Alert>
+                        )}
+
                         <div className="space-y-2">
                             <Label htmlFor="email">Email address</Label>
                             <div className="relative">
@@ -48,6 +81,9 @@ const LoginPage = () => {
                                     placeholder="name@example.com"
                                     required
                                     className="pl-10"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    disabled={isLoading}
                                 />
                                 <Mail className="absolute left-3 top-3 h-5 w-5 text-text-tertiary" />
                             </div>
@@ -69,6 +105,9 @@ const LoginPage = () => {
                                     type="password"
                                     required
                                     className="pl-10"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    disabled={isLoading}
                                 />
                                 <Lock className="absolute left-3 top-3 h-5 w-5 text-text-tertiary" />
                             </div>

@@ -1,58 +1,74 @@
 import { Category } from '../types/models';
-import { api } from '../lib/api';
+import { supabase } from '../lib/supabaseClient';
 import { useMemo } from 'react';
 
-// Fallback to mock data if API fails
+// Fallback to mock data if API fails or for development
 import { categories as mockCategories } from '../data/categories';
-
-const USE_API = import.meta.env.VITE_API_URL ? true : false;
 
 export const categoryService = {
     getAll: async (): Promise<Category[]> => {
-        if (!USE_API) {
-            await new Promise(resolve => setTimeout(resolve, 400));
-            return mockCategories;
-        }
-
         try {
-            const response = await api.get<Category[]>('/api/categories');
-            return response.data || [];
+            const { data, error } = await supabase
+                .from('categories')
+                .select('*');
+
+            if (error) throw error;
+            return (data || []).map(mapToCategory);
         } catch (error) {
-            console.error('Failed to fetch categories from API, using mock data:', error);
+            console.error('Failed to fetch categories from Supabase, using mock data:', error);
             return mockCategories;
         }
     },
 
     getBySlug: async (slug: string): Promise<Category | undefined> => {
-        if (!USE_API) {
-            await new Promise(resolve => setTimeout(resolve, 300));
-            return mockCategories.find(c => c.slug === slug);
-        }
-
         try {
-            const response = await api.get<Category>(`/api/categories/${slug}`);
-            return response.data;
+            const { data, error } = await supabase
+                .from('categories')
+                .select('*')
+                .eq('slug', slug)
+                .single();
+
+            if (error) {
+                if (error.code === 'PGRST116') return undefined; // Not found
+                throw error;
+            }
+            return mapToCategory(data);
         } catch (error) {
-            console.error('Failed to fetch category from API, using mock data:', error);
+            console.error('Failed to fetch category from Supabase, using mock data:', error);
             return mockCategories.find(c => c.slug === slug);
         }
     },
 
     getByGroup: async (group: string): Promise<Category[]> => {
-        if (!USE_API) {
-            await new Promise(resolve => setTimeout(resolve, 400));
-            return mockCategories.filter(c => c.group === group);
-        }
-
         try {
-            const response = await api.get<Category[]>(`/api/categories?group=${group}`);
-            return response.data || [];
+            const { data, error } = await supabase
+                .from('categories')
+                .select('*')
+                .eq('group', group);
+
+            if (error) throw error;
+            return (data || []).map(mapToCategory);
         } catch (error) {
-            console.error('Failed to fetch categories by group from API, using mock data:', error);
+            console.error('Failed to fetch categories by group from Supabase, using mock data:', error);
             return mockCategories.filter(c => c.group === group);
         }
     }
 };
+
+function mapToCategory(data: any): Category {
+    return {
+        id: data.id,
+        name: data.name,
+        slug: data.slug,
+        description: data.description,
+        group: data.group as Category['group'],
+        image: data.image,
+        color: data.color,
+        // Mocking fields not yet in DB
+        icon: undefined, // Need a mapper for icon strings if added to DB
+        subTopics: []
+    };
+}
 
 // Hook wrapper for React components
 export function useCategoryService() {

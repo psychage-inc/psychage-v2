@@ -9,7 +9,7 @@ export interface Review {
 }
 
 export interface Provider {
-    id: number;
+    id: number | string;
     name: string;
     role: string;
     image: string;
@@ -32,7 +32,7 @@ export interface Provider {
 }
 
 export interface Video {
-    id: number;
+    id: number | string;
     title: string;
     thumbnail: string;
     duration: number; // in seconds

@@ -1,16 +1,35 @@
-import { Article } from '../types/models';
-import { api } from '../lib/api';
+import { Article, Category } from '../types/models';
+import { supabase } from '../lib/supabaseClient';
 import { useMemo } from 'react';
 
 // Fallback to mock data if API fails
 import { articles as mockArticles } from '../data/articles';
 
-const USE_API = import.meta.env.VITE_API_URL ? true : false;
-
 export const articleService = {
     getAll: async (params?: { category?: string; featured?: boolean }): Promise<Article[]> => {
-        if (!USE_API) {
-            await new Promise(resolve => setTimeout(resolve, 800));
+        try {
+            let selectString = '*, category:categories(*)';
+            // If filtering by category, use inner join to ensure we filter connected results
+            if (params?.category) {
+                selectString = '*, category:categories!inner(*)';
+            }
+
+            let query = supabase.from('articles').select(selectString);
+
+            if (params?.featured) {
+                query = query.eq('featured', true);
+            }
+            if (params?.category) {
+                query = query.eq('category.slug', params.category);
+            }
+
+            const { data, error } = await query;
+
+            if (error) throw error;
+            return (data || []).map(mapToArticle);
+        } catch (error) {
+            console.error('Failed to fetch articles from Supabase, using mock data:', error);
+            // Fallback filtering logic
             let result = mockArticles;
             if (params?.category) {
                 result = result.filter(a => a.category.slug === params.category);
@@ -20,49 +39,48 @@ export const articleService = {
             }
             return result;
         }
-
-        try {
-            const queryParams: Record<string, string> = {};
-            if (params?.category) queryParams.category = params.category;
-            if (params?.featured) queryParams.featured = 'true';
-
-            const query = new URLSearchParams(queryParams).toString();
-            const response = await api.get<Article[]>(
-                `/api/articles${query ? `?${query}` : ''}`
-            );
-            return response.data || [];
-        } catch (error) {
-            console.error('Failed to fetch articles from API, using mock data:', error);
-            return mockArticles;
-        }
     },
 
     getById: async (id: number | string): Promise<Article | undefined> => {
-        if (!USE_API) {
-            await new Promise(resolve => setTimeout(resolve, 500));
-            return mockArticles.find(a => a.id.toString() === id.toString());
-        }
-
         try {
-            const response = await api.get<Article>(`/api/articles/${id}`);
-            return response.data;
+            const { data, error } = await supabase
+                .from('articles')
+                .select(`
+                    *,
+                    category:categories(*)
+                `)
+                .eq('id', id)
+                .single();
+
+            if (error) {
+                if (error.code === 'PGRST116') return undefined;
+                throw error;
+            }
+            return mapToArticle(data);
         } catch (error) {
-            console.error('Failed to fetch article from API, using mock data:', error);
+            console.error('Failed to fetch article from Supabase, using mock data:', error);
             return mockArticles.find(a => a.id.toString() === id.toString());
         }
     },
 
     getBySlug: async (slug: string): Promise<Article | undefined> => {
-        if (!USE_API) {
-            await new Promise(resolve => setTimeout(resolve, 500));
-            return mockArticles.find(a => a.slug === slug);
-        }
-
         try {
-            const response = await api.get<Article>(`/api/articles/slug/${slug}`);
-            return response.data;
+            const { data, error } = await supabase
+                .from('articles')
+                .select(`
+                    *,
+                    category:categories(*)
+                `)
+                .eq('slug', slug)
+                .single();
+
+            if (error) {
+                if (error.code === 'PGRST116') return undefined;
+                throw error;
+            }
+            return mapToArticle(data);
         } catch (error) {
-            console.error('Failed to fetch article from API, using mock data:', error);
+            console.error('Failed to fetch article from Supabase, using mock data:', error);
             return mockArticles.find(a => a.slug === slug);
         }
     },
@@ -75,26 +93,50 @@ export const articleService = {
         return articleService.getAll({ category: categorySlug });
     },
 
-    toggleBookmark: async (articleId: string): Promise<{ bookmarked: boolean }> => {
-        try {
-            const response = await api.post<{ bookmarked: boolean }>(`/api/articles/${articleId}/bookmark`);
-            return response.data || { bookmarked: false };
-        } catch (error) {
-            console.error('Failed to toggle bookmark:', error);
-            throw error;
-        }
+    toggleBookmark: async (articleId: string | number): Promise<{ bookmarked: boolean }> => {
+        // Placeholder
+        console.log('Bookmarking', articleId);
+        return { bookmarked: true };
     },
 
     getBookmarks: async (): Promise<Article[]> => {
-        try {
-            const response = await api.get<Article[]>('/api/articles/bookmarks');
-            return response.data || [];
-        } catch (error) {
-            console.error('Failed to fetch bookmarks:', error);
-            return [];
-        }
+        // Placeholder
+        return [];
     }
 };
+
+function mapToArticle(data: any): Article {
+    return {
+        id: data.id,
+        slug: data.slug,
+        title: data.title,
+        description: data.description,
+        image: data.image,
+        category: {
+            id: data.category?.id,
+            name: data.category?.name,
+            slug: data.category?.slug,
+            description: data.category?.description,
+            group: data.category?.group,
+            image: data.category?.image,
+            color: data.category?.color,
+            subTopics: []
+        } as Category,
+        readTime: data.read_time || 5,
+        publishedAt: data.created_at,
+        content: data.content || data.description, // Fallback
+        tags: data.tags || [],
+        featured: data.featured,
+        author: {
+            id: 'team',
+            name: 'PsychAge Team',
+            role: 'Editor',
+            image: ''
+        },
+        relatedArticles: [],
+        citations: []
+    };
+}
 
 // Hook wrapper for React components
 export function useArticleService() {

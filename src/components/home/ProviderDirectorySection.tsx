@@ -1,45 +1,59 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Star, MapPin, ArrowRight, ShieldCheck } from 'lucide-react';
 import { Card } from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
 import { Display, Text } from '@/components/ui/Typography';
 import { staggerContainer, slideUp } from '@/lib/animations';
-
-const providers = [
-    {
-        id: 1,
-        name: "Dr. Sarah Chen",
-        specialty: "Clinical Psychologist",
-        rating: 4.9,
-        reviews: 128,
-        location: "San Francisco, CA",
-        image: "/images/authors/author-placeholder.svg",
-        verified: true
-    },
-    {
-        id: 2,
-        name: "Dr. Michael Ross",
-        specialty: "Psychiatrist",
-        rating: 4.8,
-        reviews: 93,
-        location: "New York, NY",
-        image: "/images/authors/author-placeholder.svg",
-        verified: true
-    },
-    {
-        id: 3,
-        name: "Elena Rodriguez",
-        specialty: "Trauma Specialist",
-        rating: 5.0,
-        reviews: 56,
-        location: "Austin, TX",
-        image: "/images/authors/author-placeholder.svg",
-        verified: true
-    }
-];
+import { useProviderService } from '@/services/providerService';
+import { Provider } from '@/types/models';
+import { SkeletonProviderCard } from '@/components/ui/Skeletons';
 
 const ProviderDirectorySection: React.FC = () => {
+    const providerService = useProviderService();
+    const [providers, setProviders] = useState<Provider[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        let cancelled = false;
+
+        providerService.getAll({ verified: true, limit: 3 })
+            .then(data => { if (!cancelled) setProviders(data.slice(0, 3)); })
+            .catch(() => { /* Silent fallback - service returns mock data */ })
+            .finally(() => { if (!cancelled) setLoading(false); });
+
+        return () => { cancelled = true; };
+    }, [providerService]);
+
+    if (loading) {
+        return (
+            <section className="py-24 bg-white relative overflow-hidden">
+                <div className="container mx-auto px-6 md:px-12">
+                    <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                        <div className="max-w-2xl">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-100 mb-4">
+                                <ShieldCheck size={14} className="text-teal-600" />
+                                <span className="text-xs font-bold tracking-widest uppercase text-teal-700">Verified Specialists</span>
+                            </div>
+                            <Display className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                                Find the right care, <br />
+                                <span className="text-gray-400">right now.</span>
+                            </Display>
+                            <Text className="text-lg text-gray-500 max-w-xl">
+                                Connect with top-rated mental health professionals tailored to your specific needs.
+                            </Text>
+                        </div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {[1, 2, 3].map(i => <SkeletonProviderCard key={i} />)}
+                    </div>
+                </div>
+            </section>
+        );
+    }
+
+    if (providers.length === 0) return null;
+
     return (
         <section className="py-24 bg-white relative overflow-hidden">
             <div className="container mx-auto px-6 md:px-12">
@@ -94,7 +108,7 @@ const ProviderDirectorySection: React.FC = () => {
                                     <div className="flex justify-between items-start mb-2">
                                         <div>
                                             <h3 className="font-bold text-lg text-gray-900">{provider.name}</h3>
-                                            <p className="text-sm text-teal-600 font-medium">{provider.specialty}</p>
+                                            <p className="text-sm text-teal-600 font-medium">{provider.role}</p>
                                         </div>
                                         <div className="flex items-center gap-1 bg-amber-50 px-2 py-1 rounded-md border border-amber-100">
                                             <Star size={14} className="text-amber-500 fill-amber-500" />

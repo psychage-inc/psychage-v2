@@ -1,13 +1,30 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Play, Clock, ArrowRight } from 'lucide-react';
-import { videos } from '../../data/videos';
+import { useVideoService } from '@/services/videoService';
+import { Video } from '@/types/models';
 import { Display, Text } from '@/components/ui/Typography';
 import Button from '@/components/ui/Button';
+import { SkeletonVideoShowcase } from '@/components/ui/Skeletons';
 import { useNavigate } from 'react-router-dom';
 
 const VideoShowcaseSection: React.FC = () => {
     const navigate = useNavigate();
+    const videoService = useVideoService();
+    const [videos, setVideos] = useState<Video[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        let cancelled = false;
+
+        videoService.getPopular(6)
+            .then(data => { if (!cancelled) setVideos(data); })
+            .catch(() => { /* Silent fallback - service returns mock data */ })
+            .finally(() => { if (!cancelled) setLoading(false); });
+
+        return () => { cancelled = true; };
+    }, [videoService]);
+
     const scrollRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
         target: scrollRef,
@@ -15,6 +32,9 @@ const VideoShowcaseSection: React.FC = () => {
     });
 
     const x = useTransform(scrollYProgress, [0, 1], ["0%", "-5%"]);
+
+    if (loading) return <SkeletonVideoShowcase />;
+    if (videos.length === 0) return null;
 
     return (
         <section ref={scrollRef} className="py-24 bg-gray-50 text-gray-900 overflow-hidden relative">

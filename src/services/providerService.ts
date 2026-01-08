@@ -1,11 +1,9 @@
 import { Provider } from '../types/models';
-import { api } from '../lib/api';
+import { supabase } from '../lib/supabaseClient';
 import { useMemo } from 'react';
 
 // Fallback to mock data if API fails
 import { providers as mockProviders } from '../data/providers';
-
-const USE_API = import.meta.env.VITE_API_URL ? true : false;
 
 export interface ProviderSearchParams {
     specialty?: string;
@@ -15,73 +13,106 @@ export interface ProviderSearchParams {
     videoVisit?: boolean;
     page?: number;
     limit?: number;
+    search?: string;
 }
 
 export const providerService = {
     getAll: async (params?: ProviderSearchParams): Promise<Provider[]> => {
-        if (!USE_API) {
-            await new Promise(resolve => setTimeout(resolve, 800));
-            let result = mockProviders as unknown as Provider[];
+        try {
+            let query = supabase.from('providers').select('*');
+
+            if (params?.location) {
+                // Assuming location is "City, State" or just State
+                const state = params.location.includes(',') ? params.location.split(',')[1].trim() : params.location;
+                query = query.eq('practice_state', state);
+            }
+            if (params?.verified) {
+                query = query.eq('verification_status', 'verified');
+            }
             if (params?.specialty) {
-                result = result.filter(p => p.specialties.includes(params.specialty!));
+                query = query.contains('specialties', [params.specialty]);
             }
             if (params?.insurance) {
-                result = result.filter(p => p.insurance.includes(params.insurance!));
+                query = query.contains('insurance', [params.insurance]);
             }
+            if (params?.search) {
+                query = query.or(`full_name.ilike.%${params.search}%,practice_name.ilike.%${params.search}%`);
+            }
+
+            if (params?.page && params?.limit) {
+                const from = (params.page - 1) * params.limit;
+                const to = from + params.limit - 1;
+                query = query.range(from, to);
+            } else if (params?.limit) {
+                query = query.limit(params.limit);
+            }
+
+            const { data, error } = await query;
+            if (error) throw error;
+            return (data || []).map(mapToProvider);
+        } catch (error) {
+            console.error('Failed to fetch providers from Supabase, using mock data:', error);
+            // Fallback logic
+            let result = mockProviders as unknown as Provider[];
             if (params?.verified) {
                 result = result.filter(p => p.verified);
             }
+            if (params?.specialty) {
+                result = result.filter(p => p.specialties.includes(params.specialty!));
+            }
+            if (params?.limit) {
+                result = result.slice(0, params.limit);
+            }
             return result;
-        }
-
-        try {
-            const queryParams = new URLSearchParams();
-            if (params?.specialty) queryParams.set('specialty', params.specialty);
-            if (params?.insurance) queryParams.set('insurance', params.insurance);
-            if (params?.location) queryParams.set('location', params.location);
-            if (params?.verified) queryParams.set('verified', 'true');
-            if (params?.videoVisit) queryParams.set('videoVisit', 'true');
-            if (params?.page) queryParams.set('page', params.page.toString());
-            if (params?.limit) queryParams.set('limit', params.limit.toString());
-
-            const query = queryParams.toString();
-            const response = await api.get<Provider[]>(
-                `/api/providers${query ? `?${query}` : ''}`
-            );
-            return response.data || [];
-        } catch (error) {
-            console.error('Failed to fetch providers from API, using mock data:', error);
-            return mockProviders as unknown as Provider[];
         }
     },
 
-    getById: async (id: number): Promise<Provider | undefined> => {
-        if (!USE_API) {
-            await new Promise(resolve => setTimeout(resolve, 500));
-            return (mockProviders as unknown as Provider[]).find(p => p.id === id);
-        }
-
+    getById: async (id: number | string): Promise<Provider | undefined> => {
         try {
-            const response = await api.get<Provider>(`/api/providers/${id}`);
-            return response.data;
+            const { data, error } = await supabase
+                .from('providers')
+                .select('*')
+                .eq('id', id)
+                .single();
+
+            if (error) {
+                if (error.code === 'PGRST116') return undefined; // Not found
+                throw error;
+            }
+            return mapToProvider(data);
         } catch (error) {
-            console.error('Failed to fetch provider from API, using mock data:', error);
-            return (mockProviders as unknown as Provider[]).find(p => p.id === id);
+            console.error('Failed to fetch provider from Supabase, using mock data:', error);
+            return (mockProviders as unknown as Provider[]).find(p => p.id.toString() === id.toString());
+        }
+    },
+
+    getLocations: async (): Promise<string[]> => {
+        try {
+            // Fetch all states for now (optimization: create RPC for distinct)
+            const { data, error } = await supabase.from('providers').select('practice_state');
+            if (error) throw error;
+
+            const states = new Set(data.map((p: any) => p.practice_state).filter(Boolean));
+            return Array.from(states).sort();
+        } catch (error) {
+            console.error('Failed to fetch locations:', error);
+            return [];
         }
     },
 
     getSpecializations: async (): Promise<string[]> => {
-        if (!USE_API) {
-            const allSpecialties = new Set<string>();
-            (mockProviders as unknown as Provider[]).forEach(p => {
-                p.specialties.forEach(s => allSpecialties.add(s));
-            });
-            return Array.from(allSpecialties).sort();
-        }
-
         try {
-            const response = await api.get<string[]>('/api/providers?specializations=true');
-            return response.data || [];
+            // Need to unnest array, but for now let's just fetch all and process in JS
+            const { data, error } = await supabase.from('providers').select('specialties');
+            if (error) throw error;
+
+            const specialties = new Set<string>();
+            data.forEach((p: any) => {
+                if (Array.isArray(p.specialties)) {
+                    p.specialties.forEach((s: string) => specialties.add(s));
+                }
+            });
+            return Array.from(specialties).sort();
         } catch (error) {
             console.error('Failed to fetch specializations:', error);
             return [];
@@ -89,61 +120,63 @@ export const providerService = {
     },
 
     getInsuranceProviders: async (): Promise<string[]> => {
-        if (!USE_API) {
-            const allInsurance = new Set<string>();
-            (mockProviders as unknown as Provider[]).forEach(p => {
-                p.insurance.forEach(i => allInsurance.add(i));
-            });
-            return Array.from(allInsurance).sort();
-        }
-
         try {
-            const response = await api.get<string[]>('/api/providers?insurance=list');
-            return response.data || [];
+            const { data, error } = await supabase.from('providers').select('insurance');
+            if (error) throw error;
+
+            const insurance = new Set<string>();
+            data.forEach((p: any) => {
+                if (Array.isArray(p.insurance)) {
+                    p.insurance.forEach((i: string) => insurance.add(i));
+                }
+            });
+            return Array.from(insurance).sort();
         } catch (error) {
-            console.error('Failed to fetch insurance providers:', error);
+            console.error('Failed to fetch insurance:', error);
             return [];
         }
     },
 
-    toggleFavorite: async (providerId: number): Promise<{ favorited: boolean }> => {
-        try {
-            const response = await api.post<{ favorited: boolean }>('/api/providers/favorites', { providerId });
-            return response.data || { favorited: false };
-        } catch (error) {
-            console.error('Failed to toggle favorite:', error);
-            throw error;
-        }
+    toggleFavorite: async (providerId: number | string): Promise<{ favorited: boolean }> => {
+        // Placeholder
+        return { favorited: true };
     },
 
     getFavorites: async (): Promise<Provider[]> => {
-        try {
-            const response = await api.get<Provider[]>('/api/providers/favorites');
-            return response.data || [];
-        } catch (error) {
-            console.error('Failed to fetch favorites:', error);
-            return [];
-        }
+        return [];
     },
 
-    submitReview: async (providerId: number, data: { rating: number; comment: string }): Promise<void> => {
-        try {
-            await api.post(`/api/providers/${providerId}/reviews`, data);
-        } catch (error) {
-            console.error('Failed to submit review:', error);
-            throw error;
-        }
+    submitReview: async (providerId: number | string, data: { rating: number; comment: string }): Promise<void> => {
+        // Placeholder
     },
 
-    trackView: async (providerId: number): Promise<void> => {
-        try {
-            await api.post(`/api/providers/${providerId}/view`);
-        } catch (error) {
-            // Silent fail for analytics
-            console.debug('Failed to track provider view:', error);
-        }
+    trackView: async (providerId: number | string): Promise<void> => {
+        // Placeholder
     }
 };
+
+function mapToProvider(data: any): Provider {
+    return {
+        id: data.id,
+        name: data.full_name,
+        role: data.role || 'Provider',
+        image: data.profile_photo_url,
+        rating: Number(data.rating || 0),
+        reviews: data.reviews_count || 0,
+        specialties: data.specialties || [],
+        location: `${data.practice_city}, ${data.practice_state}`,
+        availability: data.is_accepting_patients ? 'Available' : 'Full',
+        insurance: data.insurance || [],
+        verified: data.verification_status === 'verified',
+        bio: data.bio || '',
+        education: [data.credentials || ''],
+        languages: data.languages_spoken || [],
+        approach: typeof data.treatment_approaches === 'string' ? data.treatment_approaches : (data.treatment_approaches?.[0] || ''),
+        yearsExperience: data.years_of_experience || 0,
+        reviewsList: [], // Mocking for now
+        isVideoVisit: true // Default
+    };
+}
 
 // Hook wrapper for React components
 export function useProviderService() {

@@ -1,24 +1,80 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Mail, Lock, User, CheckCircle2 } from 'lucide-react';
+import { Mail, Lock, User, CheckCircle2, AlertCircle } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Label } from '@/components/ui/Label';
 import { Display, Text } from '@/components/ui/Typography';
 import { Card } from '@/components/ui/Card';
+import { Alert, AlertDescription } from '@/components/ui/Alert';
 import { cn } from '@/lib/utils';
+import { useAuth } from '../../context/AuthContext';
 
 const SignUpPage = () => {
     const [userType, setUserType] = useState<'patient' | 'provider'>('patient');
-    const [isLoading, setIsLoading] = useState(false);
+    const [formData, setFormData] = useState({
+        displayName: '',
+        email: '',
+        password: '',
+        confirmPassword: ''
+    });
+    const [error, setError] = useState<string | null>(null);
+    const [termsAccepted, setTermsAccepted] = useState(false);
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        setIsLoading(true);
-        // Simulate signup
-        setTimeout(() => setIsLoading(false), 2000);
+    const { signup, isLoading } = useAuth();
+    const navigate = useNavigate();
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setFormData(prev => ({ ...prev, [e.target.id]: e.target.value }));
     };
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setError(null);
+
+        if (formData.password !== formData.confirmPassword) {
+            setError("Passwords do not match");
+            return;
+        }
+
+        if (formData.password.length < 8) {
+            setError("Password must be at least 8 characters long");
+            return;
+        }
+
+        if (!termsAccepted) {
+            setError("You must accept the terms and conditions");
+            return;
+        }
+
+        try {
+            const result = await signup(
+                formData.email,
+                formData.password,
+                formData.displayName,
+                userType
+            );
+
+            if (result.success) {
+                // Determine redirect based on role
+                // For now, simplify to sending everyone to login with a success message
+                navigate('/login', {
+                    state: {
+                        message: `Account created successfully! Please log in as a ${userType}.`,
+                        email: formData.email
+                    }
+                });
+            } else {
+                setError(result.error || 'Failed to create account. Please try again.');
+            }
+        } catch (err) {
+            setError('An unexpected error occurred. Please try again.');
+        }
+    };
+
+    const isPasswordValid = formData.password.length >= 8;
+    const hasNumber = /\d/.test(formData.password);
 
     return (
         <div className="min-h-[90vh] flex items-center justify-center px-4 py-12 bg-background relative overflow-hidden">
@@ -54,6 +110,7 @@ const SignUpPage = () => {
                                 "relative z-10 px-6 py-2 rounded-lg text-sm font-medium transition-colors duration-200 min-w-[120px]",
                                 userType === 'patient' ? "text-primary" : "text-text-secondary hover:text-text-primary"
                             )}
+                            type="button"
                         >
                             I'm a Patient
                         </button>
@@ -63,6 +120,7 @@ const SignUpPage = () => {
                                 "relative z-10 px-6 py-2 rounded-lg text-sm font-medium transition-colors duration-200 min-w-[120px]",
                                 userType === 'provider' ? "text-primary" : "text-text-secondary hover:text-text-primary"
                             )}
+                            type="button"
                         >
                             I'm a Provider
                         </button>
@@ -71,18 +129,39 @@ const SignUpPage = () => {
 
                 <Card className="p-8 border-border/50 shadow-xl bg-surface/80 backdrop-blur-sm">
                     <form onSubmit={handleSubmit} className="space-y-6">
+                        {error && (
+                            <Alert variant="destructive">
+                                <AlertCircle className="h-4 w-4" />
+                                <AlertDescription>{error}</AlertDescription>
+                            </Alert>
+                        )}
                         <div className="grid md:grid-cols-2 gap-4">
                             <div className="space-y-2">
-                                <Label htmlFor="fullname">Full Name</Label>
+                                <Label htmlFor="displayName">Full Name</Label>
                                 <div className="relative">
-                                    <Input id="fullname" placeholder="John Doe" required className="pl-10" />
+                                    <Input
+                                        id="displayName"
+                                        placeholder="John Doe"
+                                        required
+                                        className="pl-10"
+                                        value={formData.displayName}
+                                        onChange={handleChange}
+                                    />
                                     <User className="absolute left-3 top-3 h-5 w-5 text-text-tertiary" />
                                 </div>
                             </div>
                             <div className="space-y-2">
                                 <Label htmlFor="email">Email Address</Label>
                                 <div className="relative">
-                                    <Input id="email" type="email" placeholder="name@example.com" required className="pl-10" />
+                                    <Input
+                                        id="email"
+                                        type="email"
+                                        placeholder="name@example.com"
+                                        required
+                                        className="pl-10"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                    />
                                     <Mail className="absolute left-3 top-3 h-5 w-5 text-text-tertiary" />
                                 </div>
                             </div>
@@ -91,29 +170,47 @@ const SignUpPage = () => {
                         <div className="space-y-2">
                             <Label htmlFor="password">Password</Label>
                             <div className="relative">
-                                <Input id="password" type="password" required className="pl-10" />
+                                <Input
+                                    id="password"
+                                    type="password"
+                                    required
+                                    className="pl-10"
+                                    value={formData.password}
+                                    onChange={handleChange}
+                                />
                                 <Lock className="absolute left-3 top-3 h-5 w-5 text-text-tertiary" />
                             </div>
 
                             {/* Password Strength Indicator */}
                             <div className="mt-2 space-y-2">
                                 <div className="flex gap-1 h-1">
-                                    <div className="flex-1 bg-success rounded-full"></div>
-                                    <div className="flex-1 bg-success rounded-full"></div>
-                                    <div className="flex-1 bg-text-tertiary/20 rounded-full"></div>
-                                    <div className="flex-1 bg-text-tertiary/20 rounded-full"></div>
+                                    <div className={cn("flex-1 rounded-full transition-colors", formData.password.length > 0 ? "bg-red-400" : "bg-gray-200", isPasswordValid && "bg-success")}></div>
+                                    <div className={cn("flex-1 rounded-full transition-colors", isPasswordValid ? "bg-success" : "bg-gray-200")}></div>
+                                    <div className={cn("flex-1 rounded-full transition-colors", hasNumber && isPasswordValid ? "bg-success" : "bg-gray-200")}></div>
+                                    <div className={cn("flex-1 rounded-full transition-colors", formData.password.length > 12 ? "bg-success" : "bg-gray-200")}></div>
                                 </div>
                                 <ul className="text-xs text-text-secondary space-y-1">
-                                    <li className="flex items-center text-success"><CheckCircle2 className="w-3 h-3 mr-1" /> At least 8 characters</li>
-                                    <li className="flex items-center text-text-tertiary"><CheckCircle2 className="w-3 h-3 mr-1" /> Contains a number</li>
+                                    <li className={cn("flex items-center transition-colors", isPasswordValid ? "text-success" : "text-text-tertiary")}>
+                                        <CheckCircle2 className="w-3 h-3 mr-1" /> At least 8 characters
+                                    </li>
+                                    <li className={cn("flex items-center transition-colors", hasNumber ? "text-success" : "text-text-tertiary")}>
+                                        <CheckCircle2 className="w-3 h-3 mr-1" /> Contains a number
+                                    </li>
                                 </ul>
                             </div>
                         </div>
 
                         <div className="space-y-2">
-                            <Label htmlFor="confirm-password">Confirm Password</Label>
+                            <Label htmlFor="confirmPassword">Confirm Password</Label>
                             <div className="relative">
-                                <Input id="confirm-password" type="password" required className="pl-10" />
+                                <Input
+                                    id="confirmPassword"
+                                    type="password"
+                                    required
+                                    className="pl-10"
+                                    value={formData.confirmPassword}
+                                    onChange={handleChange}
+                                />
                                 <Lock className="absolute left-3 top-3 h-5 w-5 text-text-tertiary" />
                             </div>
                         </div>
@@ -123,6 +220,8 @@ const SignUpPage = () => {
                                 id="terms"
                                 type="checkbox"
                                 required
+                                checked={termsAccepted}
+                                onChange={(e) => setTermsAccepted(e.target.checked)}
                                 className="mt-1 h-4 w-4 rounded border-border text-primary focus:ring-primary"
                             />
                             <Label htmlFor="terms" className="font-normal text-text-secondary leading-tight">
@@ -131,7 +230,7 @@ const SignUpPage = () => {
                         </div>
 
                         <Button type="submit" className="w-full" size="lg" isLoading={isLoading}>
-                            {userType === 'provider' ? 'Continue Application' : 'Create Account'}
+                            {userType === 'provider' ? 'Create Provider Account' : 'Create Account'}
                         </Button>
                     </form>
 

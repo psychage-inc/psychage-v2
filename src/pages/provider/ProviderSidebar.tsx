@@ -1,11 +1,12 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { LayoutDashboard, Users, Calendar, Settings, LogOut, BarChart3, UserSquare2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Card } from '@/components/ui/Card';
+import { useAuth } from '@/context/AuthContext';
 
 const sidebarItems = [
-    { icon: LayoutDashboard, label: 'Overview', to: '/provider/dashboard' },
+    { icon: LayoutDashboard, label: 'Overview', to: '/provider' },
     { icon: Calendar, label: 'Appointments', to: '/provider/appointments' },
     { icon: Users, label: 'Patients', to: '/provider/patients' },
     { icon: BarChart3, label: 'Analytics', to: '/provider/analytics' },
@@ -14,14 +15,45 @@ const sidebarItems = [
 ];
 
 const ProviderSidebar: React.FC = () => {
+    const { user, logout } = useAuth();
+    const navigate = useNavigate();
+
+    const handleLogout = async () => {
+        await logout();
+        navigate('/');
+    };
+
+    // Get initials from display name or email
+    const getInitials = () => {
+        if (user?.display_name) {
+            const parts = user.display_name.split(' ');
+            if (parts.length >= 2) {
+                return (parts[0][0] + parts[1][0]).toUpperCase();
+            }
+            return user.display_name.substring(0, 2).toUpperCase();
+        }
+        if (user?.email) {
+            return user.email.substring(0, 2).toUpperCase();
+        }
+        return 'PR';
+    };
+
     return (
         <Card className="p-4 h-full min-h-[500px] flex flex-col border-primary/20 bg-surface">
             <div className="flex items-center gap-3 px-4 py-4 mb-6 border-b border-border">
-                <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-sm">
-                    DR
-                </div>
+                {user?.avatar_url ? (
+                    <img
+                        src={user.avatar_url}
+                        alt={user.display_name || 'Provider'}
+                        className="w-10 h-10 rounded-full object-cover"
+                    />
+                ) : (
+                    <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-sm">
+                        {getInitials()}
+                    </div>
+                )}
                 <div>
-                    <h3 className="font-bold text-text-primary text-sm">Dr. Roberts</h3>
+                    <h3 className="font-bold text-text-primary text-sm">{user?.display_name || 'Provider'}</h3>
                     <p className="text-xs text-text-tertiary">Verified Provider</p>
                 </div>
             </div>
@@ -31,7 +63,7 @@ const ProviderSidebar: React.FC = () => {
                     <NavLink
                         key={item.to}
                         to={item.to}
-                        end={item.to === '/provider/dashboard'}
+                        end={item.to === '/provider'}
                         className={({ isActive }) => cn(
                             "flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-colors",
                             isActive
@@ -45,7 +77,10 @@ const ProviderSidebar: React.FC = () => {
                 ))}
             </nav>
 
-            <button className="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium text-error hover:bg-error/5 transition-colors mt-auto w-full text-left">
+            <button
+                onClick={handleLogout}
+                className="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium text-error hover:bg-error/5 transition-colors mt-auto w-full text-left"
+            >
                 <LogOut size={18} />
                 Log Out
             </button>

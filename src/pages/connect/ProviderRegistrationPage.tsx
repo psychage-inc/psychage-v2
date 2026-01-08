@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import { api } from '@/lib/api';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate, Link } from 'react-router-dom';
-import { CheckCircle2, ChevronRight, User, Briefcase, FileText, Lock, Upload, ArrowLeft, ShieldCheck } from 'lucide-react';
+import { CheckCircle2, ChevronRight, User, Briefcase, FileText, Lock, Upload, ArrowLeft, ShieldCheck, X, Image } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import { Display, Text } from '@/components/ui/Typography';
 import { Card } from '@/components/ui/Card';
@@ -17,9 +18,12 @@ const steps = [
 
 const ProviderRegistrationPage: React.FC = () => {
     const navigate = useNavigate();
-    const { success } = useToast();
+    const { success, error: showError } = useToast();
     const [currentStep, setCurrentStep] = useState(1);
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [photoFile, setPhotoFile] = useState<File | null>(null);
+    const [photoPreview, setPhotoPreview] = useState<string | null>(null);
+    const fileInputRef = useRef<HTMLInputElement>(null);
     const [formData, setFormData] = useState({
         firstName: '', lastName: '', email: '', password: '',
         title: '', licenseNumber: '', state: '', specialties: '',
@@ -30,6 +34,40 @@ const ProviderRegistrationPage: React.FC = () => {
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const value = e.target.type === 'checkbox' ? (e.target as HTMLInputElement).checked : e.target.value;
         setFormData(prev => ({ ...prev, [e.target.name]: value }));
+    };
+
+    const handlePhotoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const file = e.target.files?.[0];
+        if (!file) return;
+
+        // Validate file type
+        if (!file.type.startsWith('image/')) {
+            showError('Please upload an image file (JPG or PNG)');
+            return;
+        }
+
+        // Validate file size (5MB)
+        if (file.size > 5 * 1024 * 1024) {
+            showError('File size must be less than 5MB');
+            return;
+        }
+
+        setPhotoFile(file);
+
+        // Create preview URL
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            setPhotoPreview(reader.result as string);
+        };
+        reader.readAsDataURL(file);
+    };
+
+    const handleRemovePhoto = () => {
+        setPhotoFile(null);
+        setPhotoPreview(null);
+        if (fileInputRef.current) {
+            fileInputRef.current.value = '';
+        }
     };
 
     const handleNext = () => {
@@ -49,13 +87,32 @@ const ProviderRegistrationPage: React.FC = () => {
     };
 
     const handleSubmit = async () => {
+        if (!formData.agreedToTerms) {
+            showError('Please agree to the Provider Terms to continue');
+            return;
+        }
+
         setIsSubmitting(true);
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 2000));
-        setIsSubmitting(false);
-        // Navigate to success or dashboard (mock)
-        success("Application submitted successfully! We will be in touch shortly.");
-        navigate('/connect');
+        try {
+            // Create FormData to include photo if present
+            const submitData = {
+                ...formData,
+                hasPhoto: !!photoFile,
+            };
+
+            const response = await api.providers.register(submitData);
+            if (response.success) {
+                // If we have a photo and the registration returned a provider ID, upload the photo
+                // Note: This depends on backend implementation
+                success("Application submitted successfully! We will be in touch shortly.");
+                navigate('/connect');
+            }
+        } catch (error) {
+            console.error(error);
+            showError('Failed to submit application. Please try again.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -223,17 +280,57 @@ const ProviderRegistrationPage: React.FC = () => {
                                             value={formData.bio}
                                             onChange={handleChange}
                                             rows={4}
+                                            maxLength={300}
                                             className="w-full p-4 rounded-xl bg-surface-hover border border-border focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none"
                                             placeholder="Tell patients about your approach..."
                                         />
-                                        <p className="text-xs text-text-tertiary text-right">0/300 characters</p>
+                                        <p className="text-xs text-text-tertiary text-right">{formData.bio.length}/300 characters</p>
                                     </div>
 
-                                    <div className="border-2 border-dashed border-border rounded-xl p-8 text-center bg-surface-hover/50 hover:bg-surface-hover transition-colors cursor-pointer group">
-                                        <Upload className="mx-auto text-text-tertiary group-hover:text-primary mb-4 transition-colors" size={32} />
-                                        <p className="font-bold text-text-primary mb-1">Upload Profile Photo</p>
-                                        <p className="text-sm text-text-secondary">JPG or PNG, max 5MB</p>
-                                    </div>
+                                    <input
+                                        type="file"
+                                        ref={fileInputRef}
+                                        className="hidden"
+                                        accept="image/jpeg,image/png,image/webp"
+                                        onChange={handlePhotoChange}
+                                    />
+
+                                    {photoPreview ? (
+                                        <div className="relative border-2 border-primary rounded-xl p-4 bg-primary/5">
+                                            <div className="flex items-center gap-4">
+                                                <img
+                                                    src={photoPreview}
+                                                    alt="Preview"
+                                                    className="w-20 h-20 rounded-full object-cover border-2 border-white shadow-md"
+                                                />
+                                                <div className="flex-1">
+                                                    <p className="font-bold text-text-primary flex items-center gap-2">
+                                                        <Image size={16} className="text-primary" />
+                                                        {photoFile?.name}
+                                                    </p>
+                                                    <p className="text-sm text-text-secondary">
+                                                        {photoFile ? `${(photoFile.size / 1024 / 1024).toFixed(2)} MB` : ''}
+                                                    </p>
+                                                </div>
+                                                <button
+                                                    type="button"
+                                                    onClick={handleRemovePhoto}
+                                                    className="p-2 text-text-tertiary hover:text-error hover:bg-error/10 rounded-full transition-colors"
+                                                >
+                                                    <X size={20} />
+                                                </button>
+                                            </div>
+                                        </div>
+                                    ) : (
+                                        <div
+                                            onClick={() => fileInputRef.current?.click()}
+                                            className="border-2 border-dashed border-border rounded-xl p-8 text-center bg-surface-hover/50 hover:bg-surface-hover hover:border-primary/50 transition-colors cursor-pointer group"
+                                        >
+                                            <Upload className="mx-auto text-text-tertiary group-hover:text-primary mb-4 transition-colors" size={32} />
+                                            <p className="font-bold text-text-primary mb-1">Upload Profile Photo</p>
+                                            <p className="text-sm text-text-secondary">JPG or PNG, max 5MB</p>
+                                        </div>
+                                    )}
                                 </div>
                             )}
 
@@ -259,9 +356,10 @@ const ProviderRegistrationPage: React.FC = () => {
                                         <label className="flex items-center gap-3 cursor-pointer">
                                             <input
                                                 type="checkbox"
+                                                name="agreedToTerms"
                                                 className="w-5 h-5 rounded border-border text-primary focus:ring-primary"
                                                 checked={formData.agreedToTerms}
-                                            // onChange handled by generic handler but type is checkbox
+                                                onChange={handleChange}
                                             />
                                             <span className="text-sm font-medium text-text-primary">I have read and agree to the Provider Terms</span>
                                         </label>

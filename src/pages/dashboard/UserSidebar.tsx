@@ -1,16 +1,17 @@
 import React from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { LayoutDashboard, User, BrainCircuit, Bookmark, LogOut } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Card } from '@/components/ui/Card';
+import { useAuth } from '@/context/AuthContext';
 
 const UserSidebar: React.FC = () => {
     const location = useLocation();
-    const navigate = useNavigate();
+    const { logout } = useAuth();
 
     const links = [
         { name: 'Overview', icon: LayoutDashboard, path: '/dashboard' },
-        { name: 'Clarity History', icon: BrainCircuit, path: '/dashboard/history' },
+        { name: 'Clarity History', icon: BrainCircuit, path: '/dashboard/assessments' },
         { name: 'My Bookmarks', icon: Bookmark, path: '/dashboard/bookmarks' },
         { name: 'Profile Settings', icon: User, path: '/dashboard/profile' },
     ];
@@ -42,7 +43,7 @@ const UserSidebar: React.FC = () => {
 
                 <div className="pt-4 mt-4 border-t border-border">
                     <button
-                        onClick={() => navigate('/login')}
+                        onClick={logout}
                         className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-red-500 hover:bg-red-50 transition-all font-medium"
                     >
                         <LogOut size={18} />

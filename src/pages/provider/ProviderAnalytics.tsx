@@ -128,7 +128,7 @@ const ProviderAnalytics: React.FC = () => {
                         {dateRangeOptions.map((option) => (
                             <Button
                                 key={option.value}
-                                variant={dateRange === option.value ? 'default' : 'outline'}
+                                variant={dateRange === option.value ? 'primary' : 'outline'}
                                 size="sm"
                                 onClick={() => setDateRange(option.value)}
                             >

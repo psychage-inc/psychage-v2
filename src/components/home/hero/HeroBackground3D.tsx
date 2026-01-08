@@ -89,7 +89,8 @@ const SynapticWeb: React.FC<NeuralProps> = ({
 
     return (
         <group>
-            <Points ref={pointsRef} positions={positions} stride={3} frustumCulled={false}>
+            {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+            <Points ref={pointsRef as any} positions={positions} stride={3} frustumCulled={false}>
                 <PointMaterial
                     transparent
                     color="#2dd4bf"

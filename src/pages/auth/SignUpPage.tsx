@@ -65,10 +65,9 @@ const SignUpPage = () => {
                         email: formData.email
                     }
                 });
-            } else {
-                setError(result.error || 'Failed to create account. Please try again.');
             }
-        } catch (err) {
+        } catch {
+            // Registration error handled by AuthContext
             setError('An unexpected error occurred. Please try again.');
         }
     };
@@ -91,6 +90,13 @@ const SignUpPage = () => {
                 className="w-full max-w-xl relative z-10"
             >
                 <div className="text-center mb-8">
+                    <div className="flex justify-center mb-6">
+                        <img
+                            src="/images/logo.png"
+                            alt="Psychage"
+                            className="h-16 w-auto object-contain"
+                        />
+                    </div>
                     <Display className="text-3xl mb-2">Create your account</Display>
                     <Text>Join Psychage to start your mental health journey</Text>
                 </div>

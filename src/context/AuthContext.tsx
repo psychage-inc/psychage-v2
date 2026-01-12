@@ -1,21 +1,6 @@
-import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
-import { api, tokenStorage, User, ApiError } from '../lib/api';
-
-interface AuthState {
-  user: User | null;
-  isLoading: boolean;
-  isAuthenticated: boolean;
-}
-
-interface AuthContextType extends AuthState {
-  login: (email: string, password: string) => Promise<{ success: boolean; error?: string }>;
-  signup: (email: string, password: string, displayName?: string, role?: 'patient' | 'provider') => Promise<{ success: boolean; error?: string }>;
-  logout: () => Promise<void>;
-  refreshUser: () => Promise<void>;
-  requestPasswordReset: (email: string) => Promise<{ success: boolean; error?: string }>;
-}
-
-const AuthContext = createContext<AuthContextType | undefined>(undefined);
+import React, { useContext, useState, useEffect, useCallback } from 'react';
+import { api, tokenStorage, ApiError } from '../lib/api';
+import { AuthContext, AuthState, AuthContextType } from './AuthContextDefinition';
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [state, setState] = useState<AuthState>({
@@ -158,6 +143,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   );
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useAuth() {
   const context = useContext(AuthContext);
   if (context === undefined) {
@@ -166,4 +152,4 @@ export function useAuth() {
   return context;
 }
 
-export default AuthContext;
+

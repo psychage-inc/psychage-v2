@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ArrowRight, Brain, ChevronRight, LogOut, User } from 'lucide-react';
+import { X, ArrowRight, ChevronRight, LogOut, User } from 'lucide-react';
 import ThemeToggle from '../ui/ThemeToggle';
 import { useAuth } from '../../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
@@ -77,12 +77,11 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onNavigateGene
             {/* Header */}
             <div className="p-6 flex items-center justify-between border-b border-gray-100 dark:border-gray-800">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-gray-900 dark:bg-white rounded-lg flex items-center justify-center text-white dark:text-gray-900">
-                  <Brain size={18} />
-                </div>
-                <span className="font-display font-bold text-xl text-gray-900 dark:text-white">
-                  Psychage
-                </span>
+                <img
+                  src="/images/logo.png"
+                  alt="Psychage"
+                  className="h-10 w-auto object-contain"
+                />
                 {isAuthenticated && (
                   <div className="ml-2 px-2 py-0.5 bg-gray-100 rounded-md text-xs font-semibold text-gray-600 capitalize">
                     {user?.role}

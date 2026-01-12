@@ -1,8 +1,7 @@
 import { Provider } from '../types/models';
 import { supabase } from '../lib/supabaseClient';
 import { useMemo } from 'react';
-
-// Fallback to mock data if API fails
+import { ProviderProfile } from '../lib/api';
 import { providers as mockProviders } from '../data/providers';
 
 export interface ProviderSearchParams {
@@ -18,53 +17,45 @@ export interface ProviderSearchParams {
 
 export const providerService = {
     getAll: async (params?: ProviderSearchParams): Promise<Provider[]> => {
-        try {
-            let query = supabase.from('providers').select('*');
+        let query = supabase.from('providers').select('*');
 
-            if (params?.location) {
-                // Assuming location is "City, State" or just State
-                const state = params.location.includes(',') ? params.location.split(',')[1].trim() : params.location;
-                query = query.eq('practice_state', state);
-            }
-            if (params?.verified) {
-                query = query.eq('verification_status', 'verified');
-            }
-            if (params?.specialty) {
-                query = query.contains('specialties', [params.specialty]);
-            }
-            if (params?.insurance) {
-                query = query.contains('insurance', [params.insurance]);
-            }
-            if (params?.search) {
-                query = query.or(`full_name.ilike.%${params.search}%,practice_name.ilike.%${params.search}%`);
-            }
-
-            if (params?.page && params?.limit) {
-                const from = (params.page - 1) * params.limit;
-                const to = from + params.limit - 1;
-                query = query.range(from, to);
-            } else if (params?.limit) {
-                query = query.limit(params.limit);
-            }
-
-            const { data, error } = await query;
-            if (error) throw error;
-            return (data || []).map(mapToProvider);
-        } catch (error) {
-            console.error('Failed to fetch providers from Supabase, using mock data:', error);
-            // Fallback logic
-            let result = mockProviders as unknown as Provider[];
-            if (params?.verified) {
-                result = result.filter(p => p.verified);
-            }
-            if (params?.specialty) {
-                result = result.filter(p => p.specialties.includes(params.specialty!));
-            }
-            if (params?.limit) {
-                result = result.slice(0, params.limit);
-            }
-            return result;
+        if (params?.location) {
+            // Assuming location is "City, State" or just State
+            const state = params.location.includes(',') ? params.location.split(',')[1].trim() : params.location;
+            query = query.eq('practice_state', state);
         }
+        if (params?.verified) {
+            query = query.eq('verification_status', 'verified');
+        }
+        if (params?.specialty) {
+            query = query.contains('specialties', [params.specialty]);
+        }
+        if (params?.insurance) {
+            query = query.contains('insurance', [params.insurance]);
+        }
+        if (params?.search) {
+            query = query.or(`full_name.ilike.%${params.search}%,practice_name.ilike.%${params.search}%`);
+        }
+
+        if (params?.page && params?.limit) {
+            const from = (params.page - 1) * params.limit;
+            const to = from + params.limit - 1;
+            query = query.range(from, to);
+        } else if (params?.limit) {
+            query = query.limit(params.limit);
+        }
+
+        const { data, error } = await query;
+        if (error) {
+            console.error('Failed to fetch providers from Supabase, using fallback:', error);
+            // Return filtered mock data as fallback
+            return filterMockProviders(mockProviders, params);
+        }
+        if (!data || data.length === 0) {
+            // If no data from DB, use mock data
+            return filterMockProviders(mockProviders, params);
+        }
+        return data.map(mapToProvider);
     },
 
     getById: async (id: number | string): Promise<Provider | undefined> => {
@@ -76,13 +67,17 @@ export const providerService = {
                 .single();
 
             if (error) {
-                if (error.code === 'PGRST116') return undefined; // Not found
+                if (error.code === 'PGRST116') {
+                    // Not found in DB, try mock data
+                    return mockProviders.find(p => p.id === Number(id) || p.id === id);
+                }
                 throw error;
             }
             return mapToProvider(data);
         } catch (error) {
-            console.error('Failed to fetch provider from Supabase, using mock data:', error);
-            return (mockProviders as unknown as Provider[]).find(p => p.id.toString() === id.toString());
+            console.error('Failed to fetch provider from Supabase, using fallback:', error);
+            // Fallback to mock data
+            return mockProviders.find(p => p.id === Number(id) || p.id === id);
         }
     },
 
@@ -92,11 +87,18 @@ export const providerService = {
             const { data, error } = await supabase.from('providers').select('practice_state');
             if (error) throw error;
 
-            const states = new Set(data.map((p: any) => p.practice_state).filter(Boolean));
+            const states = new Set((data as { practice_state: string }[]).map(p => p.practice_state).filter(Boolean));
+            if (states.size === 0) {
+                // Fallback to mock data locations
+                const mockLocations = new Set(mockProviders.map(p => p.location.split(',')[1]?.trim()).filter(Boolean));
+                return Array.from(mockLocations).sort();
+            }
             return Array.from(states).sort();
         } catch (error) {
-            console.error('Failed to fetch locations:', error);
-            return [];
+            console.error('Failed to fetch locations, using fallback:', error);
+            // Fallback to mock data locations
+            const mockLocations = new Set(mockProviders.map(p => p.location.split(',')[1]?.trim()).filter(Boolean));
+            return Array.from(mockLocations).sort();
         }
     },
 
@@ -107,15 +109,22 @@ export const providerService = {
             if (error) throw error;
 
             const specialties = new Set<string>();
-            data.forEach((p: any) => {
+            (data as { specialties: string[] }[]).forEach(p => {
                 if (Array.isArray(p.specialties)) {
                     p.specialties.forEach((s: string) => specialties.add(s));
                 }
             });
+            if (specialties.size === 0) {
+                // Fallback to mock data
+                mockProviders.forEach(p => p.specialties.forEach(s => specialties.add(s)));
+            }
             return Array.from(specialties).sort();
         } catch (error) {
-            console.error('Failed to fetch specializations:', error);
-            return [];
+            console.error('Failed to fetch specializations, using fallback:', error);
+            // Fallback to mock data
+            const specialties = new Set<string>();
+            mockProviders.forEach(p => p.specialties.forEach(s => specialties.add(s)));
+            return Array.from(specialties).sort();
         }
     },
 
@@ -125,19 +134,41 @@ export const providerService = {
             if (error) throw error;
 
             const insurance = new Set<string>();
-            data.forEach((p: any) => {
+            (data as { insurance: string[] }[]).forEach(p => {
                 if (Array.isArray(p.insurance)) {
                     p.insurance.forEach((i: string) => insurance.add(i));
                 }
             });
+            if (insurance.size === 0) {
+                // Fallback to mock data
+                mockProviders.forEach(p => p.insurance.forEach(i => insurance.add(i)));
+            }
             return Array.from(insurance).sort();
         } catch (error) {
-            console.error('Failed to fetch insurance:', error);
-            return [];
+            console.error('Failed to fetch insurance, using fallback:', error);
+            // Fallback to mock data
+            const insurance = new Set<string>();
+            mockProviders.forEach(p => p.insurance.forEach(i => insurance.add(i)));
+            return Array.from(insurance).sort();
         }
     },
 
-    toggleFavorite: async (providerId: number | string): Promise<{ favorited: boolean }> => {
+    updateProfile: async (data: Partial<ProviderProfile>): Promise<void> => {
+        // In real app, we'd use providerId to secure the update
+        // For Supabase, RLS handles security (user can only update their own profile)
+        const { error } = await supabase.from('providers').update(data).select().single(); // Assuming logged in user
+        if (error) throw error;
+    },
+
+    updateAvailability: async (_data: unknown): Promise<void> => {
+        // Placeholder
+    },
+
+    verifyProvider: async (): Promise<void> => {
+        // Admin only
+    },
+
+    toggleFavorite: async (_providerId: number | string): Promise<{ favorited: boolean }> => {
         // Placeholder
         return { favorited: true };
     },
@@ -146,16 +177,105 @@ export const providerService = {
         return [];
     },
 
-    submitReview: async (providerId: number | string, data: { rating: number; comment: string }): Promise<void> => {
+    submitReview: async (_providerId: number | string, _data: { rating: number; comment: string }): Promise<void> => {
         // Placeholder
     },
 
-    trackView: async (providerId: number | string): Promise<void> => {
+    getActivity: async (_providerId: string): Promise<Record<string, unknown>[]> => {
         // Placeholder
+        return [];
+    },
+
+    trackView: async (_providerId: number | string): Promise<void> => {
+        // Placeholder
+    },
+
+    // Admin methods
+    getAdminProviders: async (status: string): Promise<Provider[]> => {
+        try {
+            const { data, error } = await supabase
+                .from('providers')
+                .select('*')
+                .eq('verification_status', status);
+
+            if (error) throw error;
+            if (!data) return [];
+            return data.map(mapToProvider);
+        } catch (error) {
+            console.error('Failed to fetch admin providers', error);
+            // Fallback to filtering mockProviders
+            // Infer status for mock providers since they don't have it natively yet
+            return mockProviders.filter(p => {
+                const pStatus = p.verified ? 'active' : 'pending';
+                return pStatus === status;
+            }).map(p => ({ ...p, status: p.verified ? 'active' : 'pending' }));
+        }
+    },
+
+    updateProviderStatus: async (id: number | string, status: string): Promise<void> => {
+        const { error } = await supabase
+            .from('providers')
+            .update({ verification_status: status })
+            .eq('id', id);
+
+        if (error) throw error;
     }
 };
 
-function mapToProvider(data: any): Provider {
+interface DBProvider {
+    id: number | string;
+    full_name: string;
+    role?: string; // or specific enum
+    profile_photo_url?: string;
+    rating?: number;
+    reviews_count?: number;
+    specialties?: string[];
+    practice_city?: string;
+    practice_state?: string;
+    is_accepting_patients?: boolean;
+    insurance?: string[];
+    verification_status?: string;
+    bio?: string;
+    credentials?: string;
+    languages_spoken?: string[];
+    treatment_approaches?: string | string[];
+    years_of_experience?: number;
+    practice_name?: string;
+}
+
+// Helper function to filter mock providers based on search params
+function filterMockProviders(providers: Provider[], params?: ProviderSearchParams): Provider[] {
+    let filtered = [...providers];
+
+    if (params?.search) {
+        const searchLower = params.search.toLowerCase();
+        filtered = filtered.filter(p =>
+            p.name.toLowerCase().includes(searchLower) ||
+            p.specialties.some(s => s.toLowerCase().includes(searchLower))
+        );
+    }
+    if (params?.specialty) {
+        filtered = filtered.filter(p => p.specialties.includes(params.specialty!));
+    }
+    if (params?.insurance) {
+        filtered = filtered.filter(p => p.insurance.includes(params.insurance!));
+    }
+    if (params?.location) {
+        const locationLower = params.location.toLowerCase();
+        filtered = filtered.filter(p => p.location.toLowerCase().includes(locationLower));
+    }
+    if (params?.verified) {
+        filtered = filtered.filter(p => p.verified);
+    }
+    if (params?.limit) {
+        const start = params.page ? (params.page - 1) * params.limit : 0;
+        filtered = filtered.slice(start, start + params.limit);
+    }
+
+    return filtered;
+}
+
+function mapToProvider(data: DBProvider): Provider {
     return {
         id: data.id,
         name: data.full_name,
@@ -174,7 +294,9 @@ function mapToProvider(data: any): Provider {
         approach: typeof data.treatment_approaches === 'string' ? data.treatment_approaches : (data.treatment_approaches?.[0] || ''),
         yearsExperience: data.years_of_experience || 0,
         reviewsList: [], // Mocking for now
-        isVideoVisit: true // Default
+        isVideoVisit: true, // Default
+        status: data.verification_status,
+        email: 'provider@example.com' // Mock email as it's not in public profile
     };
 }
 

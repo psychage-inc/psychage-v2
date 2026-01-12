@@ -3,8 +3,9 @@ import ProviderSidebar from './ProviderSidebar';
 import { Card } from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
 import { TrendingUp, Users, Eye, ArrowUp, ArrowDown, Download, Loader2, Calendar as CalendarIcon, Activity } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import SEO from '@/components/SEO';
-import { api } from '@/lib/api';
+import { api, ProviderStats } from '@/lib/api';
 import { cn } from '@/lib/utils';
 import {
     AreaChart,
@@ -14,9 +15,6 @@ import {
     CartesianGrid,
     Tooltip,
     ResponsiveContainer,
-    BarChart,
-    Bar,
-    Cell
 } from 'recharts';
 
 type DateRange = '7d' | '30d' | '90d' | 'all';
@@ -32,8 +30,12 @@ interface AnalyticsData {
     topLocations: { location: string; percentage: number }[];
 }
 
+// Helper for type safety
+const safeNum = (val: number | undefined | null): number => typeof val === 'number' ? val : 0;
+
 const ProviderAnalytics: React.FC = () => {
-    const [stats, setStats] = useState<any>(null);
+    const navigate = useNavigate();
+    const [stats, setStats] = useState<ProviderStats | null>(null);
     const [analytics, setAnalytics] = useState<AnalyticsData | null>(null);
     const [isLoading, setIsLoading] = useState(true);
     const [dateRange, setDateRange] = useState<DateRange>('30d');
@@ -115,7 +117,7 @@ const ProviderAnalytics: React.FC = () => {
         views: profileViews[index] || 0
     }));
 
-    const profileCompleteness = analytics?.profileCompleteness ?? stats?.profileCompleteness ?? 0;
+    const profileCompleteness = safeNum(analytics?.profileCompleteness ?? stats?.profileCompleteness);
     const topLocations = analytics?.topLocations ?? [];
 
     const handleDownloadReport = () => {
@@ -256,6 +258,8 @@ const ProviderAnalytics: React.FC = () => {
                                                     strokeWidth={3}
                                                     fillOpacity={1}
                                                     fill="url(#colorViews)"
+                                                    animationDuration={2000}
+                                                    animationEasing="ease-in-out"
                                                     activeDot={{ r: 6, strokeWidth: 0 }}
                                                 />
                                             </AreaChart>
@@ -285,7 +289,7 @@ const ProviderAnalytics: React.FC = () => {
                                                     </div>
                                                     <div className="h-1.5 w-full bg-surface rounded-full overflow-hidden">
                                                         <div
-                                                            className="h-full bg-indigo-500 rounded-full transition-all duration-500"
+                                                            className="h-full bg-indigo-500 rounded-full transition-all duration-1000 ease-out"
                                                             style={{ width: `${item.percentage}%` }}
                                                         />
                                                     </div>
@@ -329,7 +333,7 @@ const ProviderAnalytics: React.FC = () => {
                                                     : 'Complete your profile information to improve visibility.'}
                                             </p>
                                             {profileCompleteness < 100 && (
-                                                <Button size="sm" variant="ghost" className="px-0 text-primary h-auto mt-1 hover:bg-transparent hover:underline" onClick={() => window.location.href = '/provider/profile'}>
+                                                <Button size="sm" variant="ghost" className="px-0 text-primary h-auto mt-1 hover:bg-transparent hover:underline" onClick={() => navigate('/provider/profile')}>
                                                     Complete Setup &rarr;
                                                 </Button>
                                             )}

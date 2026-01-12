@@ -25,10 +25,9 @@ const ResetPasswordPage = () => {
 
             if (result.success) {
                 setIsSubmitted(true);
-            } else {
-                setError(result.error || 'Failed to send reset email. Please try again.');
             }
-        } catch (err) {
+        } catch {
+            // Error handled by AuthContext
             setError('An unexpected error occurred. Please try again.');
         }
     };
@@ -56,6 +55,13 @@ const ResetPasswordPage = () => {
                         Back to Login
                     </Link>
                     <div className="text-center">
+                        <div className="flex justify-center mb-6">
+                            <img
+                                src="/images/logo.png"
+                                alt="Psychage"
+                                className="h-16 w-auto object-contain"
+                            />
+                        </div>
                         <Display className="text-3xl mb-2">Reset Password</Display>
                         <Text>Enter your email to receive reset instructions</Text>
                     </div>

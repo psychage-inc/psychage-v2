@@ -10,7 +10,7 @@ import {
   ArrowUp
 } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import CrisisBanner from './CrisisBanner';
 
 // interface FooterProps { }
@@ -24,7 +24,7 @@ interface FooterLink {
 const Footer: React.FC = () => {
   const footerRef = useRef<HTMLDivElement>(null);
   const currentYear = new Date().getFullYear();
-  const navigate = useNavigate();
+
 
   // Scroll animations for parallax effect
   const { scrollYProgress } = useScroll({
@@ -39,19 +39,18 @@ const Footer: React.FC = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleLinkClick = (e: React.MouseEvent, view: string, id?: string) => {
-    e.preventDefault();
-    if (view === 'home') navigate('/');
-    else if (view === 'category' && id) navigate(`/category/${id}`);
-    else if (view === 'clarity-score') navigate('/clarity-score');
-    else if (view === 'find-care') navigate('/find-care');
-    else if (view === 'about') navigate('/about');
-    else if (view === 'contact') navigate('/contact');
-    else if (view === 'privacy') navigate('/legal/privacy');
-    else if (view === 'terms') navigate('/legal/terms');
-    else if (view === 'learn') navigate('/learn');
-    else if (view === 'tools') navigate('/tools');
-    else navigate(`/${view}`);
+  const getPath = (view: string, id?: string) => {
+    if (view === 'home') return '/';
+    if (view === 'category' && id) return `/category/${id}`;
+    if (view === 'clarity-score') return '/clarity-score';
+    if (view === 'find-care') return '/find-care';
+    if (view === 'about') return '/about';
+    if (view === 'contact') return '/contact';
+    if (view === 'privacy') return '/legal/privacy';
+    if (view === 'terms') return '/legal/terms';
+    if (view === 'learn') return '/learn';
+    if (view === 'tools') return '/tools';
+    return `/${view}`;
   };
 
   const footerLinks: Record<string, FooterLink[]> = {
@@ -101,6 +100,11 @@ const Footer: React.FC = () => {
             viewport={{ once: true }}
             className="max-w-4xl"
           >
+            <img
+              src="/images/logo.png"
+              alt="Psychage"
+              className="h-20 w-auto mb-8 object-contain"
+            />
             <h2 className="font-display font-bold text-5xl md:text-8xl tracking-tight leading-[0.9] mb-8 text-gray-900">
               Mental health <br />
               <span className="text-gray-500">is just health.</span>
@@ -117,12 +121,12 @@ const Footer: React.FC = () => {
             viewport={{ once: true }}
             className="flex flex-col gap-8 items-start"
           >
-            <button onClick={(e) => handleLinkClick(e, 'about')} className="group flex items-center gap-4 text-xl md:text-3xl font-semibold hover:text-teal-600 transition-colors">
+            <Link to="/about" className="group flex items-center gap-4 text-xl md:text-3xl font-semibold hover:text-teal-600 transition-colors">
               Join the movement
               <span className="bg-gray-900 text-white rounded-full p-2 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
                 <ArrowRight className="group-hover:-rotate-45 transition-transform duration-300" size={24} />
               </span>
-            </button>
+            </Link>
 
             <div className="flex items-center gap-2 text-gray-600 text-sm font-medium border border-gray-300 rounded-full px-4 py-2 hover:border-gray-400 transition-colors cursor-pointer">
               <Globe size={16} />
@@ -158,14 +162,13 @@ const Footer: React.FC = () => {
               <ul className="space-y-4">
                 {column.links.map((link) => (
                   <li key={link.name}>
-                    <a
-                      href="#"
-                      onClick={(e) => handleLinkClick(e, link.view, link.id)}
+                    <Link
+                      to={getPath(link.view, link.id)}
                       className="group flex items-center gap-2 text-lg text-gray-600 hover:text-gray-900 transition-colors duration-300"
                     >
                       <ArrowRight size={14} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-teal-600" />
                       <span className="group-hover:translate-x-1 transition-transform">{link.name}</span>
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -197,8 +200,8 @@ const Footer: React.FC = () => {
               Back to Top <ArrowUp size={16} className="group-hover:-translate-y-1 transition-transform" />
             </button>
             <div className="flex flex-wrap gap-x-6 gap-y-2 md:justify-end">
-              <button onClick={(e) => handleLinkClick(e, 'privacy')} className="hover:text-gray-900 transition-colors">Privacy</button>
-              <button onClick={(e) => handleLinkClick(e, 'terms')} className="hover:text-gray-900 transition-colors">Terms</button>
+              <Link to="/legal/privacy" className="hover:text-gray-900 transition-colors">Privacy</Link>
+              <Link to="/legal/terms" className="hover:text-gray-900 transition-colors">Terms</Link>
               <button className="hover:text-gray-900 transition-colors">Sitemap</button>
               <button className="hover:text-gray-900 transition-colors">Choices</button>
             </div>

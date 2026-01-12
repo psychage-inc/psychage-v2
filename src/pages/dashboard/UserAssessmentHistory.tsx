@@ -8,8 +8,15 @@ import SEO from '@/components/SEO';
 import { api } from '@/lib/api';
 import { format } from 'date-fns';
 
+interface AssessmentHistoryItem {
+    id?: string;
+    date: string;
+    score: number;
+    status?: string;
+}
+
 const UserAssessmentHistory: React.FC = () => {
-    const [history, setHistory] = useState<any[]>([]);
+    const [history, setHistory] = useState<AssessmentHistoryItem[]>([]);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
@@ -17,7 +24,7 @@ const UserAssessmentHistory: React.FC = () => {
             try {
                 const response = await api.clarityScore.getHistory();
                 if (response.success && response.data) {
-                    setHistory(response.data);
+                    setHistory(response.data as unknown as AssessmentHistoryItem[]);
                 }
             } catch (error) {
                 console.error("Failed to fetch assessment history", error);

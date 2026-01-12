@@ -1,12 +1,12 @@
 import React from 'react';
-import { ArrowRight, ChevronRight, Zap, ExternalLink } from 'lucide-react';
+import { ArrowRight, ChevronRight, ExternalLink, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
   NavClarityGlyph,
   NavMoodGlyph,
   NavSleepGlyph,
   NavArticleGlyph,
-  NavCourseGlyph,
   NavNetworkGlyph,
   NavCrisisGlyph
 } from './NavAssets';
@@ -18,7 +18,7 @@ interface NavMenuProps {
   onNavigateGeneric?: (view: string) => void;
 }
 
-const NavMenu: React.FC<NavMenuProps> = ({ activeTab, onMouseLeave, onCategorySelect, onNavigateGeneric }) => {
+const NavMenu: React.FC<NavMenuProps> = ({ activeTab, onMouseLeave, onNavigateGeneric }) => {
   if (!activeTab) return null;
 
   const handleItemClick = (e: React.MouseEvent, item: { id: string }) => {
@@ -45,9 +45,9 @@ const NavMenu: React.FC<NavMenuProps> = ({ activeTab, onMouseLeave, onCategorySe
 
     if (viewMap[item.id] && onNavigateGeneric) {
       onNavigateGeneric(viewMap[item.id]);
-    } else if (categoryMap[item.id]) {
+    } else if (categoryMap[item.id] && onNavigateGeneric) {
       // Direct navigation to learn page with filter
-      window.location.href = `/learn?filter=${categoryMap[item.id]}`;
+      onNavigateGeneric(`learn?filter=${categoryMap[item.id]}`);
     } else if (onNavigateGeneric) {
       // Fallback
       onNavigateGeneric('404');
@@ -256,12 +256,12 @@ const NavMenu: React.FC<NavMenuProps> = ({ activeTab, onMouseLeave, onCategorySe
             <ul className="space-y-1">
               {currentSection.quickActions.map((action, idx) => (
                 <li key={idx}>
-                  <a href={action.href} className="flex items-center justify-between py-2 px-3 -mx-3 rounded-lg text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-teal-700 dark:hover:text-teal-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all group">
+                  <Link to={action.href} className="flex items-center justify-between py-2 px-3 -mx-3 rounded-lg text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-teal-700 dark:hover:text-teal-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all group">
                     <div className="flex items-center gap-3">
                       <action.icon size={16} className="text-gray-400 dark:text-gray-500 group-hover:text-teal-500 transition-colors" />
                       {action.label}
                     </div>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

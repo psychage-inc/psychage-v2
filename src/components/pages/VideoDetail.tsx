@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { ArrowLeft, Play, ThumbsUp, Share2, Bookmark } from 'lucide-react';
+import { ArrowLeft, Play, ThumbsUp, Share2, Bookmark, CheckCircle } from 'lucide-react';
 import { videoService } from '../../services/videoService';
 import { Video } from '../../types/models';
 import { motion } from 'framer-motion';
 import Button from '../ui/Button';
 import { useParams, useNavigate } from 'react-router-dom';
 import SEO from '../SEO';
+import VideoPlayer from '../video/VideoPlayer';
 
 const VideoDetail: React.FC = () => {
     const { id } = useParams<{ id: string }>();
@@ -91,9 +92,11 @@ const VideoDetail: React.FC = () => {
                                     </div>
                                 </>
                             ) : (
-                                <div className="w-full h-full flex items-center justify-center text-gray-500 bg-gray-900">
-                                    <p className="font-mono text-sm">Video Player Placeholder (YouTube/Vimeo Embed)</p>
-                                </div>
+                                <VideoPlayer
+                                    videoUrl={video.videoUrl}
+                                    videoType={video.videoType}
+                                    title={video.title}
+                                />
                             )}
                         </div>
 
@@ -131,7 +134,7 @@ const VideoDetail: React.FC = () => {
                         <div className="bg-gray-50 rounded-2xl p-6 mb-8">
                             <div className="text-sm font-bold text-gray-900 mb-2">About this video</div>
                             <p className="text-gray-600 leading-relaxed mb-4">
-                                In this session, we explore the physiological mechanisms of anxiety and demonstrate a clinically proven breathing technique to reset your nervous system in under 5 minutes.
+                                {video.description || `In this session, we explore topics related to ${video.category.toLowerCase()} to help you on your mental wellness journey.`}
                             </p>
                             <div className="flex gap-2 text-xs font-bold text-teal-600">
                                 <span>#{video.category}</span>
@@ -140,15 +143,23 @@ const VideoDetail: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* Transcript (Placeholder) */}
+                        {/* Transcript */}
                         <div>
                             <h3 className="font-bold text-gray-900 mb-4">Transcript</h3>
                             <div className="h-64 overflow-y-auto border border-gray-100 rounded-xl p-4 text-sm text-gray-600 leading-relaxed space-y-4">
-                                <p><span className="text-teal-600 font-mono text-xs mr-2">00:00</span> Welcome to this guided session on anxiety management.</p>
-                                <p><span className="text-teal-600 font-mono text-xs mr-2">00:15</span> Let's begin by finding a comfortable seated position.</p>
-                                <p><span className="text-teal-600 font-mono text-xs mr-2">00:45</span> Notice the tension in your shoulders and gently let it drop.</p>
-                                <p><span className="text-teal-600 font-mono text-xs mr-2">01:20</span> Inhale deeply through your nose for a count of four.</p>
-                                <p className="text-gray-400 italic">[Transcript continues...]</p>
+                                {video.transcript && video.transcript.length > 0 ? (
+                                    video.transcript.map((segment, index) => (
+                                        <p key={index}>
+                                            <span className="text-teal-600 font-mono text-xs mr-2">{segment.timestamp}</span>
+                                            {segment.text}
+                                        </p>
+                                    ))
+                                ) : (
+                                    <div className="flex flex-col items-center justify-center h-full text-gray-400">
+                                        <CheckCircle size={24} className="mb-2 opacity-50" />
+                                        <p className="italic">Transcript coming soon...</p>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>

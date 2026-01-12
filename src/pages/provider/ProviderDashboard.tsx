@@ -1,16 +1,26 @@
 
 import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 import { Users, Calendar, Clock, AlertCircle } from 'lucide-react';
 import ProviderSidebar from './ProviderSidebar';
 import { Card } from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
 import SEO from '@/components/SEO';
-import { api } from '@/lib/api';
+import { api, ProviderStats } from '@/lib/api';
 import { format } from 'date-fns';
 
 const ProviderDashboard: React.FC = () => {
-    const [stats, setStats] = useState<any>(null);
-    const [activity, setActivity] = useState<any[]>([]);
+    interface ProviderActivityItem {
+        type: 'alert' | 'success' | 'info';
+        title: string;
+        description?: string;
+        message?: string;
+        created_at?: string;
+        createdAt?: string;
+    }
+
+    const [stats, setStats] = useState<ProviderStats | null>(null);
+    const [activity, setActivity] = useState<ProviderActivityItem[]>([]);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
@@ -22,8 +32,8 @@ const ProviderDashboard: React.FC = () => {
                     api.provider.getActivity()
                 ]);
 
-                if (statsRes.success) setStats(statsRes.data);
-                if (activityRes.success) setActivity(activityRes.data);
+                if (statsRes.success && statsRes.data) setStats(statsRes.data);
+                if (activityRes.success && activityRes.data) setActivity(activityRes.data as unknown as ProviderActivityItem[]);
             } catch (error) {
                 console.error("Failed to fetch dashboard data", error);
             } finally {
@@ -43,8 +53,8 @@ const ProviderDashboard: React.FC = () => {
             bg: 'bg-blue-50'
         },
         {
-            label: 'Appointments Today',
-            value: stats?.appointmentsToday || 0,
+            label: 'Total Appointments',
+            value: stats?.totalAppointments || 0,
             icon: Calendar,
             color: 'text-teal-600',
             bg: 'bg-teal-50'
@@ -87,15 +97,22 @@ const ProviderDashboard: React.FC = () => {
                                 ))
                             ) : (
                                 statCards.map((stat, idx) => (
-                                    <Card key={idx} className="p-6 flex items-center gap-4">
-                                        <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${stat.bg} ${stat.color}`}>
-                                            <stat.icon size={24} />
-                                        </div>
-                                        <div>
-                                            <p className="text-3xl font-bold text-text-primary">{stat.value}</p>
-                                            <p className="text-sm text-text-secondary">{stat.label}</p>
-                                        </div>
-                                    </Card>
+                                    <motion.div
+                                        key={idx}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: idx * 0.1, duration: 0.4 }}
+                                    >
+                                        <Card className="p-6 flex items-center gap-4 h-full">
+                                            <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${stat.bg} ${stat.color}`}>
+                                                <stat.icon size={24} />
+                                            </div>
+                                            <div>
+                                                <p className="text-3xl font-bold text-text-primary">{stat.value}</p>
+                                                <p className="text-sm text-text-secondary">{stat.label}</p>
+                                            </div>
+                                        </Card>
+                                    </motion.div>
                                 ))
                             )}
                         </div>
@@ -116,7 +133,13 @@ const ProviderDashboard: React.FC = () => {
                                     ))
                                 ) : activity.length > 0 ? (
                                     activity.map((item, idx) => (
-                                        <div key={idx} className="flex items-start gap-4 p-4 rounded-xl hover:bg-surface-hover transition-colors border border-border/50">
+                                        <motion.div
+                                            key={idx}
+                                            initial={{ opacity: 0, x: -10 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            transition={{ delay: 0.3 + (idx * 0.05), duration: 0.3 }}
+                                            className="flex items-start gap-4 p-4 rounded-xl hover:bg-surface-hover transition-colors border border-border/50"
+                                        >
                                             <div className={`w-2 h-2 rounded-full mt-2 ${item.type === 'alert' ? 'bg-red-500' :
                                                 item.type === 'success' ? 'bg-green-500' : 'bg-primary'
                                                 }`} />
@@ -125,9 +148,9 @@ const ProviderDashboard: React.FC = () => {
                                                 <p className="text-sm text-text-secondary">{item.description || item.message}</p>
                                             </div>
                                             <span className="text-xs text-text-tertiary whitespace-nowrap">
-                                                {format(new Date(item.created_at || item.createdAt), 'MMM d, p')}
+                                                {format(new Date(item.created_at || item.createdAt || new Date()), 'MMM d, p')}
                                             </span>
-                                        </div>
+                                        </motion.div>
                                     ))
                                 ) : (
                                     <div className="text-center py-8 text-text-secondary flex flex-col items-center">

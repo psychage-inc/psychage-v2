@@ -1,14 +1,16 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Play } from 'lucide-react';
 import { Video } from '../../data/videos';
+
+const VIDEO_PLACEHOLDER = '/images/videos/video-placeholder.svg';
 
 interface VideoCardProps {
   video: Video;
 }
 
 const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
+  const [imageError, setImageError] = useState(false);
   // Format seconds to MM:SS
   const formatDuration = (seconds: number) => {
     const minutes = Math.floor(seconds / 60);
@@ -51,9 +53,10 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
       {/* Thumbnail Container */}
       <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-gray-900 shadow-md">
         <motion.img
-          src={video.thumbnail}
+          src={imageError ? VIDEO_PLACEHOLDER : video.thumbnail}
           alt={`Thumbnail for ${video.title}`}
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          onError={() => setImageError(true)}
         />
         
         {/* Dark Overlay on Hover */}

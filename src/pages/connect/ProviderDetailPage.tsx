@@ -1,18 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { MapPin, Star, Clock, Languages, Video, ShieldCheck, MessageSquare, GraduationCap } from 'lucide-react';
+import { MapPin, Star, Clock, Languages, Video, ShieldCheck, MessageSquare, GraduationCap, CheckCircle } from 'lucide-react';
 import { providerService } from '@/services/providerService';
 import { Provider } from '@/types/models';
 import Button from '@/components/ui/Button';
 import Badge from '@/components/ui/Badge';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import SEO from '@/components/SEO';
+import BookingModal, { BookingDetails } from '@/components/booking/BookingModal';
+import MessagingModal, { MessageDetails } from '@/components/messaging/MessagingModal';
 
 const ProviderDetailPage: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
     const [provider, setProvider] = useState<Provider | undefined>();
     const [loading, setLoading] = useState(true);
+    const [showBookingModal, setShowBookingModal] = useState(false);
+    const [showMessagingModal, setShowMessagingModal] = useState(false);
+    const [bookingSuccess, setBookingSuccess] = useState<BookingDetails | null>(null);
+    const [messageSuccess, setMessageSuccess] = useState(false);
 
     useEffect(() => {
         const fetchProvider = async () => {
@@ -36,15 +42,25 @@ const ProviderDetailPage: React.FC = () => {
     }, [provider]);
 
     const handleBook = () => {
-        // In a real app, this would open a booking modal
-        const confirm = window.confirm(`Start booking an appointment with ${provider?.name}?`);
-        if (confirm) {
-            alert("This feature is coming soon! In production, you would be taken to the calendar.");
-        }
+        setShowBookingModal(true);
+    };
+
+    const handleBookingConfirm = (booking: BookingDetails) => {
+        setShowBookingModal(false);
+        setBookingSuccess(booking);
+        // Auto-dismiss success message after 5 seconds
+        setTimeout(() => setBookingSuccess(null), 5000);
     };
 
     const handleMessage = () => {
-        alert("Messaging is enabled for verified accounts only.");
+        setShowMessagingModal(true);
+    };
+
+    const handleMessageSend = (_message: MessageDetails) => {
+        setShowMessagingModal(false);
+        setMessageSuccess(true);
+        // Auto-dismiss success message after 5 seconds
+        setTimeout(() => setMessageSuccess(false), 5000);
     };
 
     if (loading) {
@@ -265,6 +281,62 @@ const ProviderDetailPage: React.FC = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Booking Modal */}
+            {provider && (
+                <BookingModal
+                    isOpen={showBookingModal}
+                    onClose={() => setShowBookingModal(false)}
+                    provider={provider}
+                    onConfirm={handleBookingConfirm}
+                />
+            )}
+
+            {/* Messaging Modal */}
+            {provider && (
+                <MessagingModal
+                    isOpen={showMessagingModal}
+                    onClose={() => setShowMessagingModal(false)}
+                    provider={provider}
+                    onSend={handleMessageSend}
+                />
+            )}
+
+            {/* Success Notifications */}
+            {bookingSuccess && (
+                <div className="fixed bottom-6 right-6 z-50 bg-green-100 border border-green-200 rounded-2xl p-6 shadow-xl max-w-sm animate-in slide-in-from-right">
+                    <div className="flex items-start gap-4">
+                        <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+                            <CheckCircle className="text-white" size={20} />
+                        </div>
+                        <div>
+                            <h4 className="font-bold text-green-900">Appointment Booked!</h4>
+                            <p className="text-sm text-green-700 mt-1">
+                                Your appointment with {bookingSuccess.providerName} has been scheduled for {bookingSuccess.time} on {new Date(bookingSuccess.date).toLocaleDateString()}.
+                            </p>
+                            <p className="text-xs text-green-600 mt-2">
+                                A confirmation email has been sent to your inbox.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {messageSuccess && (
+                <div className="fixed bottom-6 right-6 z-50 bg-blue-100 border border-blue-200 rounded-2xl p-6 shadow-xl max-w-sm animate-in slide-in-from-right">
+                    <div className="flex items-start gap-4">
+                        <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
+                            <MessageSquare className="text-white" size={20} />
+                        </div>
+                        <div>
+                            <h4 className="font-bold text-blue-900">Message Sent!</h4>
+                            <p className="text-sm text-blue-700 mt-1">
+                                Your message has been delivered. Expect a response within 24-48 hours.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

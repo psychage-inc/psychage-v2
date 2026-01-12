@@ -1,10 +1,10 @@
 import { Category } from '../types';
 import React from 'react';
 import {
-    Brain, Heart, Zap, Activity, Users, CloudRain, Sun, Shield,
-    AlertTriangle, Moon, Coffee, Anchor, Smile, UserPlus,
-    MessageCircle, Sparkles, BookOpen, Clock, Target,
-    Smartphone, Leaf, LifeBuoy, Fingerprint, Scale, Home, Briefcase
+    Brain, Heart, Activity, CloudRain, Sun, Shield,
+    AlertTriangle, Moon, Anchor, Smartphone, Leaf,
+    Fingerprint, Scale, Home, Briefcase,
+    Users, Sparkles, MessageCircle, LifeBuoy
 } from 'lucide-react';
 
 export const categories: Category[] = [

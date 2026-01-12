@@ -7,8 +7,17 @@ import { AlertTriangle, CheckCircle, Clock } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import AdminSidebar from './AdminSidebar';
 
+interface Report {
+    id: string;
+    created_at: string;
+    type: 'content' | 'user' | 'system';
+    subject?: string;
+    status: 'resolved' | 'investigating' | 'pending';
+    reporter_id?: string;
+}
+
 const ReportsPage: React.FC = () => {
-    const [reports, setReports] = useState<any[]>([]);
+    const [reports, setReports] = useState<Report[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const [filter, setFilter] = useState('all');
 
@@ -18,7 +27,9 @@ const ReportsPage: React.FC = () => {
             try {
                 const response = await api.admin.getReports(filter);
                 if (response.success && response.data) {
-                    setReports(response.data);
+                    // Assuming API returns array of reports but typed as Record<string, unknown> by cleaner
+                    // We need to cast it properly if it's actually an array
+                    setReports(response.data as unknown as Report[]);
                 }
             } catch (error) {
                 console.error("Failed to fetch reports", error);

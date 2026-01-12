@@ -30,7 +30,8 @@ export const videoService = {
 
             const { data, error } = await query;
             if (error) throw error;
-            return (data || []).map(mapToVideo);
+            return (data as unknown as DBVideo[] || [])
+                .map(mapToVideo);
         } catch (error) {
             console.error('Failed to fetch videos from Supabase, using mock data:', error);
             // Fallback logic
@@ -57,7 +58,7 @@ export const videoService = {
                 if (error.code === 'PGRST116') return undefined; // Not found
                 throw error;
             }
-            return mapToVideo(data);
+            return mapToVideo(data as unknown as DBVideo);
         } catch (error) {
             console.error('Failed to fetch video from Supabase, using mock data:', error);
             return (mockVideos as unknown as Video[]).find(v => v.id.toString() === id.toString());
@@ -73,7 +74,8 @@ export const videoService = {
                 .limit(limit);
 
             if (error) throw error;
-            return (data || []).map(mapToVideo);
+            return (data as unknown as DBVideo[] || [])
+                .map(mapToVideo);
         } catch (error) {
             console.error('Failed to fetch popular videos from Supabase, using mock data:', error);
             return (mockVideos as unknown as Video[])
@@ -92,12 +94,37 @@ export const videoService = {
     }
 };
 
-function mapToVideo(data: any): Video {
+interface DBVideo {
+    id: number | string;
+    title: string;
+    thumbnail: string;
+    duration: string;
+    views?: number;
+    category?: {
+        name: string;
+    } | null;
+}
+
+function mapToVideo(data: DBVideo): Video {
+    // Handle duration: if string "mm:ss", convert to seconds
+    let durationSeconds = 0;
+    if (typeof data.duration === 'string') {
+        if (data.duration.includes(':')) {
+            const parts = data.duration.split(':').map(Number);
+            if (parts.length === 2) durationSeconds = parts[0] * 60 + parts[1];
+            else if (parts.length === 3) durationSeconds = parts[0] * 3600 + parts[1] * 60 + parts[2];
+        } else {
+            durationSeconds = parseInt(data.duration, 10) || 0;
+        }
+    } else {
+        durationSeconds = Number(data.duration) || 0;
+    }
+
     return {
         id: data.id,
         title: data.title,
         thumbnail: data.thumbnail,
-        duration: data.duration,
+        duration: durationSeconds,
         views: data.views || 0,
         category: data.category?.name || 'General' // Flatten category object to string name
     };

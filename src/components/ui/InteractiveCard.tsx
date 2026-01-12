@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+
 
 interface InteractiveCardProps extends React.HTMLAttributes<HTMLDivElement> {
     children: React.ReactNode;

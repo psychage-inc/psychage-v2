@@ -10,6 +10,8 @@ import SEO from '../SEO';
 
 const ProviderDirectory: React.FC = () => {
     const [searchTerm, setSearchTerm] = useState('');
+    const [locationSearch, setLocationSearch] = useState('');
+    const [sortBy, setSortBy] = useState<'relevance' | 'rating' | 'experience'>('relevance');
     const [isLoading, setIsLoading] = useState(true);
     const [providers, setProviders] = useState<Provider[]>([]);
     const [error, setError] = useState<string | null>(null);
@@ -63,12 +65,16 @@ const ProviderDirectory: React.FC = () => {
         setSelectedInsurance([]);
         setAvailabilityFilter('any');
         setSearchTerm('');
+        setLocationSearch('');
+        setSortBy('relevance');
     };
 
     const filteredProviders = useMemo(() => {
-        return providers.filter(p => {
+        let filtered = providers.filter(p => {
             const matchesSearch = p.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 p.specialties.some(s => s.toLowerCase().includes(searchTerm.toLowerCase()));
+
+            const matchesLocation = locationSearch === '' || p.location.toLowerCase().includes(locationSearch.toLowerCase());
 
             const matchesSpecialty = selectedSpecialties.length === 0 || selectedSpecialties.some(s => p.specialties.includes(s));
             const matchesInsurance = selectedInsurance.length === 0 || selectedInsurance.some(i => p.insurance.includes(i));
@@ -77,9 +83,17 @@ const ProviderDirectory: React.FC = () => {
             if (availabilityFilter === 'week') matchesAvailability = p.availability.toLowerCase().includes('week') || p.availability.toLowerCase().includes('tomorrow');
             if (availabilityFilter === 'tomorrow') matchesAvailability = p.availability.toLowerCase().includes('tomorrow');
 
-            return matchesSearch && matchesSpecialty && matchesInsurance && matchesAvailability;
+            return matchesSearch && matchesLocation && matchesSpecialty && matchesInsurance && matchesAvailability;
         });
-    }, [providers, searchTerm, selectedSpecialties, selectedInsurance, availabilityFilter]);
+
+        if (sortBy === 'rating') {
+            filtered = [...filtered].sort((a, b) => b.rating - a.rating);
+        } else if (sortBy === 'experience') {
+            filtered = [...filtered].sort((a, b) => (b.yearsExperience || 0) - (a.yearsExperience || 0));
+        }
+
+        return filtered;
+    }, [providers, searchTerm, locationSearch, selectedSpecialties, selectedInsurance, availabilityFilter, sortBy]);
 
     if (isLoading) return <SkeletonProviderDirectory />;
     if (error) return <div className="min-h-screen flex items-center justify-center text-red-500">{error}</div>;
@@ -119,8 +133,10 @@ const ProviderDirectory: React.FC = () => {
                                 <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
                                 <input
                                     type="text"
-                                    placeholder="City or Zip"
+                                    placeholder="City or State"
                                     className="w-full h-12 pl-12 pr-4 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 transition-all outline-none font-medium text-gray-900 dark:text-white"
+                                    value={locationSearch}
+                                    onChange={(e) => setLocationSearch(e.target.value)}
                                 />
                             </div>
                             <Button
@@ -224,10 +240,14 @@ const ProviderDirectory: React.FC = () => {
                             </h2>
                             <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
                                 <span>Sort by:</span>
-                                <select className="bg-transparent font-medium text-gray-900 dark:text-white outline-none cursor-pointer">
-                                    <option>Relevance</option>
-                                    <option>Rating</option>
-                                    <option>Experience</option>
+                                <select
+                                    className="bg-transparent font-medium text-gray-900 dark:text-white outline-none cursor-pointer"
+                                    value={sortBy}
+                                    onChange={(e) => setSortBy(e.target.value as 'relevance' | 'rating' | 'experience')}
+                                >
+                                    <option value="relevance">Relevance</option>
+                                    <option value="rating">Rating</option>
+                                    <option value="experience">Experience</option>
                                 </select>
                             </div>
                         </div>

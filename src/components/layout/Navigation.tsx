@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Menu, ChevronDown, User, X, LogOut, LayoutDashboard, Settings } from 'lucide-react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import NavMenu from './NavMenu';
 import MobileMenu from './MobileMenu';
 import Button from '../ui/Button';
-import { useTheme } from '../../context/ThemeContext';
 import { useAuth } from '../../context/AuthContext';
 
 const Navigation: React.FC = () => {
@@ -21,7 +20,6 @@ const Navigation: React.FC = () => {
     const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
     const navigate = useNavigate();
-    const location = useLocation();
     const { user, isAuthenticated, logout } = useAuth();
     const userMenuRef = useRef<HTMLDivElement>(null);
 
@@ -145,12 +143,11 @@ const Navigation: React.FC = () => {
                 >
                     {/* Logo */}
                     <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigate('/')}>
-                        <div className="w-10 h-10 bg-teal-600 text-white rounded-xl flex items-center justify-center font-bold shadow-lg shadow-teal-900/10">
-                            P
-                        </div>
-                        <span className="font-display font-bold text-xl tracking-tight text-gray-900">
-                            Psychage OS
-                        </span>
+                        <img
+                            src="/images/logo.png"
+                            alt="Psychage Logo"
+                            className="h-12 w-auto object-contain"
+                        />
                     </div>
 
                     {/* Desktop Navigation */}

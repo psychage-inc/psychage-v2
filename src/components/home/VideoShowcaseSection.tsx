@@ -1,5 +1,5 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef, useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { Play, Clock, ArrowRight } from 'lucide-react';
 import { useVideoService } from '@/services/videoService';
 import { Video } from '@/types/models';
@@ -16,22 +16,23 @@ const VideoShowcaseSection: React.FC = () => {
 
     useEffect(() => {
         let cancelled = false;
-
-        videoService.getPopular(6)
-            .then(data => { if (!cancelled) setVideos(data); })
-            .catch(() => { /* Silent fallback - service returns mock data */ })
-            .finally(() => { if (!cancelled) setLoading(false); });
-
+        async function fetchVideos() {
+            try {
+                const data = await videoService.getAll();
+                if (!cancelled) {
+                    setVideos(data);
+                    setLoading(false);
+                }
+            } catch {
+                if (!cancelled) setLoading(false);
+            }
+        }
+        fetchVideos();
         return () => { cancelled = true; };
     }, [videoService]);
 
     const scrollRef = useRef<HTMLDivElement>(null);
-    const { scrollYProgress } = useScroll({
-        target: scrollRef,
-        offset: ["start end", "end start"]
-    });
 
-    const x = useTransform(scrollYProgress, [0, 1], ["0%", "-5%"]);
 
     if (loading) return <SkeletonVideoShowcase />;
     if (videos.length === 0) return null;

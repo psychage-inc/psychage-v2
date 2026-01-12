@@ -29,6 +29,13 @@ export interface Provider {
     reviewsList: Review[];
     nextAvailable?: string;
     isVideoVisit?: boolean;
+    status?: string; // e.g., 'pending', 'active', 'suspended', 'rejected'
+    email?: string;
+}
+
+export interface TranscriptSegment {
+    timestamp: string;
+    text: string;
 }
 
 export interface Video {
@@ -38,6 +45,10 @@ export interface Video {
     duration: number; // in seconds
     views: number;
     category: string;
+    videoUrl?: string; // YouTube or Vimeo URL
+    videoType?: 'youtube' | 'vimeo' | 'direct';
+    description?: string;
+    transcript?: TranscriptSegment[];
 }
 
 export interface Tool {

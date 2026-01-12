@@ -23,6 +23,11 @@
 }
 
 /* Premium Scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-surface-active) var(--color-background);
+}
+
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -40,7 +45,7 @@
 
     /* Glassmorphism - Adaptive */
     .glass {
-        @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-lg shadow-black/5;
+        @apply bg-white/80 backdrop-blur-xl border border-white/20 shadow-lg shadow-black/5;
     }
 
     .glass-hover {

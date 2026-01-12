@@ -26,7 +26,8 @@ export const articleService = {
             const { data, error } = await query;
 
             if (error) throw error;
-            return (data || []).map(mapToArticle);
+            return (data as unknown as DBArticle[] || [])
+                .map(mapToArticle);
         } catch (error) {
             console.error('Failed to fetch articles from Supabase, using mock data:', error);
             // Fallback filtering logic
@@ -93,19 +94,93 @@ export const articleService = {
         return articleService.getAll({ category: categorySlug });
     },
 
-    toggleBookmark: async (articleId: string | number): Promise<{ bookmarked: boolean }> => {
-        // Placeholder
-        console.log('Bookmarking', articleId);
-        return { bookmarked: true };
+    /**
+     * Toggle bookmark for an article
+     * Requires userId to be passed - caller should get this from auth context
+     */
+    toggleBookmark: async (articleId: string | number, userId: string): Promise<{ bookmarked: boolean }> => {
+        if (!userId) {
+            console.warn('Cannot toggle bookmark: No user ID provided');
+            return { bookmarked: false };
+        }
+
+        try {
+            const { bookmarkService } = await import('./bookmarkService');
+            return await bookmarkService.toggle(userId, 'article', String(articleId));
+        } catch (error) {
+            console.error('Failed to toggle bookmark:', error);
+            return { bookmarked: false };
+        }
     },
 
-    getBookmarks: async (): Promise<Article[]> => {
-        // Placeholder
-        return [];
+    /**
+     * Get all bookmarked articles for a user
+     * Requires userId to be passed - caller should get this from auth context
+     */
+    getBookmarks: async (userId: string): Promise<Article[]> => {
+        if (!userId) {
+            console.warn('Cannot get bookmarks: No user ID provided');
+            return [];
+        }
+
+        try {
+            const { bookmarkService } = await import('./bookmarkService');
+            const bookmarks = await bookmarkService.getByType(userId, 'article');
+            const articleIds = bookmarks.map(b => b.resource_id);
+
+            if (articleIds.length === 0) return [];
+
+            // Fetch all bookmarked articles
+            const articles = await Promise.all(
+                articleIds.map(id => articleService.getById(id))
+            );
+
+            return articles.filter((a): a is Article => a !== undefined);
+        } catch (error) {
+            console.error('Failed to fetch bookmarked articles:', error);
+            return [];
+        }
+    },
+
+    /**
+     * Check if an article is bookmarked by a user
+     */
+    isBookmarked: async (articleId: string | number, userId: string): Promise<boolean> => {
+        if (!userId) return false;
+
+        try {
+            const { bookmarkService } = await import('./bookmarkService');
+            return await bookmarkService.isBookmarked(userId, 'article', String(articleId));
+        } catch (error) {
+            console.error('Failed to check bookmark status:', error);
+            return false;
+        }
     }
 };
 
-function mapToArticle(data: any): Article {
+interface DBArticle {
+    id: number | string;
+    slug: string;
+    title: string;
+    description: string;
+    image: string;
+    category?: {
+        id: string;
+        name: string;
+        slug: string;
+        description: string;
+        group: string;
+        image: string;
+        color: string;
+    } | null;
+    read_time?: number;
+    created_at: string;
+    content?: string;
+    tags?: string[];
+    featured?: boolean;
+}
+
+function mapToArticle(data: DBArticle): Article {
     return {
         id: data.id,
         slug: data.slug,
@@ -113,20 +188,20 @@ function mapToArticle(data: any): Article {
         description: data.description,
         image: data.image,
         category: {
-            id: data.category?.id,
-            name: data.category?.name,
-            slug: data.category?.slug,
-            description: data.category?.description,
-            group: data.category?.group,
-            image: data.category?.image,
-            color: data.category?.color,
+            id: data.category?.id || '',
+            name: data.category?.name || 'Uncategorized',
+            slug: data.category?.slug || 'uncategorized',
+            description: data.category?.description || '',
+            group: data.category?.group || '',
+            image: data.category?.image || '',
+            color: data.category?.color || '',
             subTopics: []
         } as Category,
         readTime: data.read_time || 5,
         publishedAt: data.created_at,
         content: data.content || data.description, // Fallback
         tags: data.tags || [],
-        featured: data.featured,
+        featured: data.featured || false,
         author: {
             id: 'team',
             name: 'PsychAge Team',

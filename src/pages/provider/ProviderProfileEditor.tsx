@@ -64,8 +64,8 @@ const ProviderProfileEditor: React.FC = () => {
             const res = await api.provider.updateProfile(formData);
             if (res.error) throw new Error(res.error);
             setMessage({ type: 'success', text: 'Profile updated successfully!' });
-        } catch (error: any) {
-            setMessage({ type: 'error', text: error.message || 'Failed to update profile.' });
+        } catch (error) {
+            setMessage({ type: 'error', text: error instanceof Error ? error.message : 'Failed to update profile.' });
         } finally {
             setIsSaving(false);
         }

@@ -113,9 +113,11 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                             <div className="p-8 relative z-10">
                                 <div className="flex items-center justify-between mb-8">
                                     <div className="flex items-center gap-2">
-                                        <div className="w-8 h-8 rounded-xl bg-teal-500 flex items-center justify-center text-white">
-                                            <Sparkles size={16} fill="currentColor" />
-                                        </div>
+                                        <img
+                                            src="/images/logo.png"
+                                            alt="Psychage"
+                                            className="h-10 w-auto object-contain"
+                                        />
                                         <h2 className="text-2xl font-display font-bold text-gray-900 dark:text-white">
                                             {view === 'login' ? 'Welcome back' : view === 'signup' ? 'Join the Journey' : 'Reset password'}
                                         </h2>

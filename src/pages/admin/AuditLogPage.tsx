@@ -3,11 +3,19 @@ import { Card } from '@/components/ui/Card';
 import SEO from '@/components/SEO';
 import { api } from '@/lib/api';
 import { format } from 'date-fns';
-import { FileText, User, Activity } from 'lucide-react';
+import { FileText, User } from 'lucide-react';
 import AdminSidebar from './AdminSidebar';
 
+interface AuditLog {
+    id: string;
+    created_at: string;
+    user_id?: string;
+    action: string;
+    details: string | Record<string, unknown>;
+}
+
 const AuditLogPage: React.FC = () => {
-    const [logs, setLogs] = useState<any[]>([]);
+    const [logs, setLogs] = useState<AuditLog[]>([]);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
@@ -16,7 +24,7 @@ const AuditLogPage: React.FC = () => {
             try {
                 const response = await api.admin.getAuditLogs();
                 if (response.success && response.data) {
-                    setLogs(response.data);
+                    setLogs(response.data as unknown as AuditLog[]);
                 }
             } catch (error) {
                 console.error("Failed to fetch audit logs", error);

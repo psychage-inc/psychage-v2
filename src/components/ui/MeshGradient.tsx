@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+import React from 'react';
 
 interface MeshGradientProps {
     className?: string;

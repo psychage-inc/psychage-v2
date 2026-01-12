@@ -11,7 +11,15 @@ import { format } from 'date-fns';
 import { cn } from '@/lib/utils';
 
 const ProviderPatients: React.FC = () => {
-    const [patients, setPatients] = useState<any[]>([]);
+    interface Patient {
+        id: string | number;
+        full_name: string;
+        avatar_url?: string;
+        next_appointment?: string;
+        status?: 'active' | 'inactive';
+    }
+
+    const [patients, setPatients] = useState<Patient[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const [searchQuery, setSearchQuery] = useState('');
     const [showAddModal, setShowAddModal] = useState(false);
@@ -24,7 +32,7 @@ const ProviderPatients: React.FC = () => {
             try {
                 const res = await api.provider.getPatients({ search: searchQuery });
                 if (res.success && Array.isArray(res.data)) {
-                    setPatients(res.data);
+                    setPatients(res.data as unknown as Patient[]);
                 } else {
                     setPatients([]);
                 }
@@ -54,19 +62,19 @@ const ProviderPatients: React.FC = () => {
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
 
-    const handleViewProfile = (patient: any) => {
+    const handleViewProfile = (patient: Patient) => {
         // In a real app, this would navigate to patient detail page
         console.log('Viewing patient:', patient.id);
         setActiveMenu(null);
     };
 
-    const handleSendMessage = (patient: any) => {
+    const handleSendMessage = (patient: Patient) => {
         // In a real app, this would open messaging interface
         console.log('Sending message to:', patient.id);
         setActiveMenu(null);
     };
 
-    const handleScheduleAppointment = (patient: any) => {
+    const handleScheduleAppointment = (patient: Patient) => {
         // In a real app, this would open scheduling modal
         console.log('Scheduling appointment for:', patient.id);
         setActiveMenu(null);
@@ -111,7 +119,7 @@ const ProviderPatients: React.FC = () => {
                                     <Loader2 className="animate-spin text-primary" size={32} />
                                 </div>
                             ) : patients.length > 0 ? (
-                                patients.map((patient: any, idx: number) => (
+                                patients.map((patient, idx) => (
                                     <Card key={idx} className="p-4 flex items-center justify-between hover:border-primary/50 transition-colors cursor-pointer group">
                                         <div className="flex items-center gap-4">
                                             <div className="w-12 h-12 rounded-full bg-surface-hover flex items-center justify-center font-bold text-text-secondary group-hover:bg-primary group-hover:text-white transition-colors overflow-hidden">

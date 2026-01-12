@@ -1,6 +1,5 @@
-import React, { useRef } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import * as THREE from 'three';
+import React from 'react';
+import { Canvas } from '@react-three/fiber';
 import { MeshDistortMaterial, Sphere, Float } from '@react-three/drei';
 
 const AnimatedShape = ({ position, color, speed, distort }: { position: [number, number, number], color: string, speed: number, distort: number }) => {

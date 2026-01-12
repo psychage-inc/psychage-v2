@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { PenTool, Calendar, Save, Trash2, TrendingUp, ArrowLeft } from 'lucide-react';
+import { PenTool, Calendar, Save, Trash2, TrendingUp, ArrowLeft, Loader2 } from 'lucide-react';
 import Button from '../ui/Button';
 import { useNavigate } from 'react-router-dom';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { moodService, MoodEntry as ServiceMoodEntry } from '../../services/moodService';
+import { useAuth } from '../../context/AuthContext';
 
 interface MoodEntry {
     id: string;
@@ -12,6 +14,15 @@ interface MoodEntry {
     emotions: string[];
     note: string;
 }
+
+// Convert service entry to component entry
+const fromServiceEntry = (entry: ServiceMoodEntry): MoodEntry => ({
+    id: entry.id,
+    date: entry.created_at,
+    mood: entry.value,
+    emotions: entry.tags || [],
+    note: entry.notes || ''
+});
 
 const EMOTIONS = [
     "Happy", "Excited", "Calm", "Grateful",
@@ -23,46 +34,100 @@ const STORAGE_KEY = 'psychage_mood_journal';
 
 const MoodJournal: React.FC = () => {
     const navigate = useNavigate();
+    const { user } = useAuth();
 
-    const [entries, setEntries] = useState<MoodEntry[]>(() => {
-        try {
-            const saved = localStorage.getItem(STORAGE_KEY);
-            return saved ? JSON.parse(saved) : [];
-        } catch {
-            console.error("Failed to load journal entries");
-            return [];
-        }
-    });
-
+    const [entries, setEntries] = useState<MoodEntry[]>([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [isSaving, setIsSaving] = useState(false);
     const [mood, setMood] = useState(5);
     const [selectedEmotions, setSelectedEmotions] = useState<string[]>([]);
     const [note, setNote] = useState('');
     const [view, setView] = useState<'new' | 'history'>('new');
 
-    const saveEntry = () => {
-        const newEntry: MoodEntry = {
-            id: Date.now().toString(),
-            date: new Date().toISOString(),
-            mood,
-            emotions: selectedEmotions,
-            note
-        };
+    // Load entries on mount
+    const loadEntries = useCallback(async () => {
+        setIsLoading(true);
+        try {
+            if (user?.id) {
+                // Load from Supabase if authenticated
+                const serviceEntries = await moodService.getEntries(user.id);
+                setEntries(serviceEntries.map(fromServiceEntry));
+            } else {
+                // Fall back to localStorage for guests
+                const saved = localStorage.getItem(STORAGE_KEY);
+                setEntries(saved ? JSON.parse(saved) : []);
+            }
+        } catch (error) {
+            console.error('Failed to load entries:', error);
+            // Fall back to localStorage
+            const saved = localStorage.getItem(STORAGE_KEY);
+            setEntries(saved ? JSON.parse(saved) : []);
+        } finally {
+            setIsLoading(false);
+        }
+    }, [user?.id]);
 
-        const updatedEntries = [newEntry, ...entries];
-        setEntries(updatedEntries);
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedEntries));
+    useEffect(() => {
+        loadEntries();
+    }, [loadEntries]);
 
-        // Reset form
-        setMood(5);
-        setSelectedEmotions([]);
-        setNote('');
-        setView('history');
+    const saveEntry = async () => {
+        setIsSaving(true);
+        try {
+            if (user?.id) {
+                // Save to Supabase if authenticated
+                const serviceEntry = await moodService.createEntry(
+                    user.id,
+                    mood,
+                    note || undefined,
+                    selectedEmotions
+                );
+                if (serviceEntry) {
+                    setEntries(prev => [fromServiceEntry(serviceEntry), ...prev]);
+                }
+            } else {
+                // Fall back to localStorage for guests
+                const newEntry: MoodEntry = {
+                    id: Date.now().toString(),
+                    date: new Date().toISOString(),
+                    mood,
+                    emotions: selectedEmotions,
+                    note
+                };
+                const updatedEntries = [newEntry, ...entries];
+                setEntries(updatedEntries);
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedEntries));
+            }
+
+            // Reset form
+            setMood(5);
+            setSelectedEmotions([]);
+            setNote('');
+            setView('history');
+        } catch (error) {
+            console.error('Failed to save entry:', error);
+        } finally {
+            setIsSaving(false);
+        }
     };
 
-    const deleteEntry = (id: string) => {
-        const updatedEntries = entries.filter(e => e.id !== id);
-        setEntries(updatedEntries);
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedEntries));
+    const deleteEntry = async (id: string) => {
+        try {
+            if (user?.id) {
+                // Delete from Supabase if authenticated
+                const success = await moodService.deleteEntry(id);
+                if (success) {
+                    setEntries(prev => prev.filter(e => e.id !== id));
+                }
+            } else {
+                // Fall back to localStorage for guests
+                const updatedEntries = entries.filter(e => e.id !== id);
+                setEntries(updatedEntries);
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedEntries));
+            }
+        } catch (error) {
+            console.error('Failed to delete entry:', error);
+        }
     };
 
     const toggleEmotion = (emotion: string) => {
@@ -176,8 +241,14 @@ const MoodJournal: React.FC = () => {
                                         />
                                     </div>
 
-                                    <Button onClick={saveEntry} size="lg" className="w-full" rightIcon={<Save size={18} />}>
-                                        Save Entry
+                                    <Button
+                                        onClick={saveEntry}
+                                        size="lg"
+                                        className="w-full"
+                                        disabled={isSaving}
+                                        rightIcon={isSaving ? <Loader2 size={18} className="animate-spin" /> : <Save size={18} />}
+                                    >
+                                        {isSaving ? 'Saving...' : 'Save Entry'}
                                     </Button>
                                 </motion.div>
                             ) : (
@@ -188,7 +259,12 @@ const MoodJournal: React.FC = () => {
                                     exit={{ opacity: 0, x: -20 }}
                                     className="space-y-4"
                                 >
-                                    {entries.length === 0 ? (
+                                    {isLoading ? (
+                                        <div className="bg-white rounded-3xl p-12 text-center border border-gray-100">
+                                            <Loader2 size={32} className="animate-spin text-teal-500 mx-auto mb-4" />
+                                            <p className="text-gray-500">Loading your entries...</p>
+                                        </div>
+                                    ) : entries.length === 0 ? (
                                         <div className="bg-white rounded-3xl p-12 text-center border border-gray-100">
                                             <div className="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto mb-4 text-gray-300">
                                                 <Calendar size={24} />
@@ -290,6 +366,8 @@ const MoodJournal: React.FC = () => {
                                                     fillOpacity={1}
                                                     fill="url(#colorMood)"
                                                     dot={{ r: 3, fill: '#14b8a6' }}
+                                                    animationDuration={1500}
+                                                    animationEasing="ease-in-out"
                                                 />
                                             </AreaChart>
                                         </ResponsiveContainer>

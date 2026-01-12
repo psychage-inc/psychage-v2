@@ -48,9 +48,11 @@ export const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
                             transition={{ duration: 0.8, ease: "easeOut" }}
                             className="mb-8"
                         >
-                            <h1 className="text-4xl md:text-6xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-text-primary via-primary to-text-primary tracking-tight">
-                                PsychAge
-                            </h1>
+                            <img
+                                src="/images/logo.png"
+                                alt="Psychage"
+                                className="w-32 md:w-48 h-auto object-contain"
+                            />
                         </motion.div>
 
                         {/* Loading Line */}
@@ -92,12 +94,12 @@ export const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
 // Final Export: We use the simpler Wipe effect for that "Curtain" feel.
 // Final Export: We use the simpler Wipe effect for that "Curtain" feel.
 export const LoadingScreenWipe = ({ onComplete }: { onComplete: () => void }) => {
-    const [shouldExit, setShouldExit] = useState(false);
+
 
     useEffect(() => {
         // Trigger the exit animation after a delay
         const timer = setTimeout(() => {
-            setShouldExit(true);
+
             onComplete();
         }, 3000); // 3 seconds loading time for the full cinematic feel
 
@@ -126,27 +128,15 @@ export const LoadingScreenWipe = ({ onComplete }: { onComplete: () => void }) =>
 
             {/* Content Container */}
             <div className="relative z-10 flex flex-col items-center">
-                <div className="text-6xl md:text-8xl font-bold font-display tracking-tighter flex items-center">
-                    {/* "Psych" - Staggered Entry */}
-                    <motion.span
-                        className="text-text-primary inline-block"
-                        initial={{ opacity: 0, x: -20, filter: "blur(10px)" }}
-                        animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
-                    >
-                        Psych
-                    </motion.span>
-
-                    {/* "Age" - Staggered Entry + Glow */}
-                    <motion.span
-                        className="text-primary inline-block ml-1"
-                        initial={{ opacity: 0, x: 20, filter: "blur(10px)" }}
-                        animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
-                        transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-                        style={{ textShadow: "0 0 30px rgba(var(--color-primary), 0.5)" }} // Inline style for dynamic glow using CSS var if possible, or fallback
-                    >
-                        Age
-                    </motion.span>
+                <div className="flex items-center justify-center">
+                    <motion.img
+                        src="/images/logo.png"
+                        alt="Psychage"
+                        className="w-48 md:w-64 h-auto object-contain"
+                        initial={{ opacity: 0, scale: 0.8, filter: "blur(10px)" }}
+                        animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+                        transition={{ duration: 1.2, ease: "easeOut" }}
+                    />
                 </div>
 
                 {/* Tagline / Subtitle */}

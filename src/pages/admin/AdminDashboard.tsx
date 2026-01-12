@@ -16,29 +16,23 @@ interface AdminStats {
 
 const AdminDashboard: React.FC = () => {
     const [stats, setStats] = useState<AdminStats | null>(null);
-    const [recentActivity, setRecentActivity] = useState<any[]>([]);
+    const [recentActivity, setRecentActivity] = useState<Record<string, unknown>[]>([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         const fetchData = async () => {
+            setError(null);
             try {
-                // In a real app, these would be separate endpoints, or a single dashboard-stats endpoint
-                // For now, we'll try to fetch stats, but gracefully fallback if the endpoint is mocked/empty
                 const [statsRes, activityRes] = await Promise.all([
-                    api.admin.getStats().catch(() => ({ success: false, data: null })),
-                    api.admin.getRecentActivity().catch(() => ({ success: false, data: [] }))
+                    api.admin.getStats(),
+                    api.admin.getRecentActivity()
                 ]);
 
                 if (statsRes.success && statsRes.data) {
-                    setStats(statsRes.data);
+                    setStats(statsRes.data as unknown as AdminStats);
                 } else {
-                    // Fallback mock data if API fails (for development/demo purposes)
-                    setStats({
-                        users: 1250,
-                        pendingProviders: 3,
-                        alerts: 0,
-                        activeSessions: 42
-                    });
+                    setError('Failed to load dashboard statistics');
                 }
 
                 if (activityRes.success && activityRes.data) {
@@ -46,6 +40,7 @@ const AdminDashboard: React.FC = () => {
                 }
             } catch (error) {
                 console.error("Failed to fetch admin dashboard data", error);
+                setError('Unable to connect to the server. Please try again later.');
             } finally {
                 setIsLoading(false);
             }
@@ -78,6 +73,13 @@ const AdminDashboard: React.FC = () => {
                             <p className="text-text-secondary">Overview of system status and recent activity.</p>
                         </div>
 
+                        {error && (
+                            <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg flex items-center gap-2">
+                                <AlertTriangle size={20} />
+                                <span>{error}</span>
+                            </div>
+                        )}
+
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                             {statItems.map((stat, i) => (
                                 <Card key={i} className="p-6">
@@ -107,11 +109,13 @@ const AdminDashboard: React.FC = () => {
                                 ) : (
                                     <ul className="space-y-4">
                                         {recentActivity.length > 0 ? (
-                                            recentActivity.map((log: any, i: number) => (
+                                            recentActivity.map((log, i) => (
                                                 <li key={i} className="flex items-center justify-between py-2 border-b border-border last:border-0">
-                                                    <span className="text-text-secondary">{log.details || log.action}</span>
+                                                    <span className="text-text-secondary">
+                                                        {(log.details as string) || (log.action as string)}
+                                                    </span>
                                                     <span className="text-xs text-text-tertiary">
-                                                        {log.created_at ? format(new Date(log.created_at), 'MMM d, h:mm a') : 'Just now'}
+                                                        {log.created_at ? format(new Date(log.created_at as string), 'MMM d, h:mm a') : 'Just now'}
                                                     </span>
                                                 </li>
                                             ))

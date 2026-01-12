@@ -33,6 +33,33 @@ export interface User {
   avatar_url?: string;
 }
 
+export interface ProviderStats {
+  profileCompleteness: number;
+  activePatients: number;
+  patientsChange: number;
+  pendingRequests: number;
+  requestsChange: number;
+  totalAppointments?: number;
+  averageRating?: number;
+  revenue?: number;
+  views?: number;
+}
+
+export interface ProviderProfile {
+  id: string;
+  userId: string;
+  specialization: string[];
+  bio: string;
+  display_name?: string;
+  email?: string;
+  role?: string;
+  status?: string;
+  // Additional profile fields
+  full_name?: string;
+  title?: string;
+  specialities?: string[];
+}
+
 // Token management
 export const tokenStorage = {
   getAccessToken: (): string | null => {
@@ -254,13 +281,13 @@ export const api = {
 
     getFavorites: () => api.get<unknown[]>('/api/providers/favorites'),
 
-    register: (data: any) => api.post('/api/providers/register', data),
+    register: (data: Record<string, unknown>) => api.post('/api/providers/register', data),
   },
 
   // Provider Dashboard endpoints
   provider: {
-    getStats: () => api.get<any>('/api/provider/stats'),
-    getActivity: () => api.get<any[]>('/api/provider/activity'),
+    getStats: () => api.get<ProviderStats>('/api/provider/stats'),
+    getActivity: () => api.get<unknown[]>('/api/provider/activity'),
     getAnalytics: (params?: { range?: '7d' | '30d' | '90d' | 'all' }) => {
       const searchParams = new URLSearchParams();
       if (params?.range) searchParams.set('range', params.range);
@@ -288,9 +315,9 @@ export const api = {
       if (params?.end) searchParams.set('end', params.end);
       return api.get<unknown[]>(`/api/provider/appointments?${searchParams.toString()}`);
     },
-    getProfile: () => api.get<any>('/api/provider/profile'),
-    updateProfile: (data: any) => api.put<any>('/api/provider/profile', data),
-    updateAvailability: (availability: any) => api.put('/api/provider/availability', availability),
+    getProfile: () => api.get<ProviderProfile>('/api/provider/profile'),
+    updateProfile: (data: Partial<ProviderProfile>) => api.put<ProviderProfile>('/api/provider/profile', data),
+    updateAvailability: (availability: unknown) => api.put('/api/provider/availability', availability),
   },
 
   // Article endpoints
@@ -330,8 +357,8 @@ export const api = {
   user: {
     getProfile: () => api.get<User & { location?: string }>('/api/user/profile'),
     updateProfile: (data: Partial<User & { location?: string }>) => api.put<User>('/api/user/profile', data),
-    getActivity: () => api.get<any[]>('/api/user/activity'),
-    changePassword: (data: any) => api.post('/api/auth/change-password', data),
+    getActivity: () => api.get<Record<string, unknown>[]>('/api/user/activity'),
+    changePassword: (data: Record<string, unknown>) => api.post('/api/auth/change-password', data),
     uploadAvatar: async (file: File) => {
       const formData = new FormData();
       formData.append('avatar', file);
@@ -351,8 +378,8 @@ export const api = {
 
   // Admin endpoints
   admin: {
-    getStats: () => api.get<any>('/api/admin/stats'),
-    getRecentActivity: () => api.get<any[]>('/api/admin/activity'),
+    getStats: () => api.get<Record<string, unknown>>('/api/admin/stats'),
+    getRecentActivity: () => api.get<Record<string, unknown>[]>('/api/admin/activity'),
     getProviders: (params?: { status?: string; page?: number; limit?: number }) => {
       const searchParams = new URLSearchParams();
       if (params?.status) searchParams.set('status', params.status);
@@ -369,7 +396,7 @@ export const api = {
       if (params?.limit) searchParams.set('limit', params.limit.toString());
       return api.get<unknown[]>(`/api/admin/audit-logs?${searchParams.toString()}`);
     },
-    getReports: (type: string) => api.get<any>(`/api/admin/reports?type=${type}`)
+    getReports: (type: string) => api.get<Record<string, unknown>>(`/api/admin/reports?type=${type}`)
   },
 
   // Mood tracking endpoints

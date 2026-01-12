@@ -11,10 +11,22 @@ import { api } from '@/lib/api';
 import { format } from 'date-fns';
 
 const UserDashboard: React.FC = () => {
+    interface DashboardStats {
+        streak: number;
+        latestScore: number;
+        lastAssessed: string;
+        change: number;
+    }
+
+    interface DashboardActivity {
+        type: 'assessment' | 'appointment'; // inferred from usage
+        title: string;
+        date: string;
+    }
+
     const { user } = useAuth();
-    const [stats, setStats] = useState<any>(null);
-    const [activity, setActivity] = useState<any[]>([]);
-    const [isLoading, setIsLoading] = useState(true);
+    const [stats, setStats] = useState<DashboardStats | null>(null);
+    const [activity, setActivity] = useState<DashboardActivity[]>([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -28,8 +40,6 @@ const UserDashboard: React.FC = () => {
                 if (activityRes.success) setActivity(activityRes.data || []);
             } catch (error) {
                 console.error("Failed to fetch dashboard data", error);
-            } finally {
-                setIsLoading(false);
             }
         };
 
@@ -45,7 +55,7 @@ const UserDashboard: React.FC = () => {
             <SEO title="Dashboard | Psychage" />
 
             <div className="container mx-auto max-w-[1200px]">
-                <h1 className="text-3xl font-display font-bold text-text-primary mb-8">Worker Dashboard</h1>
+                <h1 className="text-3xl font-display font-bold text-text-primary mb-8">My Dashboard</h1>
 
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
                     {/* Sidebar */}

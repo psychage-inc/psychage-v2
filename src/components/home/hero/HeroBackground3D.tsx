@@ -1,4 +1,4 @@
-import React, { useRef, useMemo, useState } from 'react';
+import React, { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Points, PointMaterial, Line } from '@react-three/drei';
 import * as THREE from 'three';
@@ -12,20 +12,14 @@ interface NeuralProps {
 
 const SynapticWeb: React.FC<NeuralProps> = ({
     count = 200,
-    connectionDistance = 1.2,
     mouseInteractionRadius = 2.5
 }) => {
     const pointsRef = useRef<THREE.Points>(null!);
-    const linesRef = useRef<THREE.LineSegments>(null!);
-    const [hoveredNode, setHoveredNode] = useState<number | null>(null);
 
     // Generate random points in a sphere
     const positions = useMemo(() => {
         return random.inSphere(new Float32Array(count * 3), { radius: 3.5 }) as Float32Array;
     }, [count]);
-
-    // Create geometry for lines (will be updated each frame)
-    const linesGeometry = useMemo(() => new THREE.BufferGeometry(), []);
 
     // Mouse position in 3D space
     const mouse = useRef(new THREE.Vector3());

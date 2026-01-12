@@ -2,15 +2,16 @@ import React, { useEffect, useState } from 'react';
 import UserSidebar from './UserSidebar';
 import { Card } from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
-import { BookMarked, ArrowRight, User, GraduationCap, MapPin, Star } from 'lucide-react';
+import { BookMarked, ArrowRight, GraduationCap, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
 import { api } from '@/lib/api';
+import { Article, Provider } from '@/types/models';
 
 const BookmarksPage: React.FC = () => {
     const [activeTab, setActiveTab] = useState<'articles' | 'providers'>('articles');
-    const [bookmarks, setBookmarks] = useState<any[]>([]);
-    const [favorites, setFavorites] = useState<any[]>([]);
+    const [bookmarks, setBookmarks] = useState<Article[]>([]);
+    const [favorites, setFavorites] = useState<Provider[]>([]);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
@@ -23,11 +24,11 @@ const BookmarksPage: React.FC = () => {
                 ]);
 
                 if (articlesRes.success && articlesRes.data) {
-                    setBookmarks(articlesRes.data);
+                    setBookmarks(articlesRes.data as unknown as Article[]);
                 }
 
                 if (providersRes.success && providersRes.data) {
-                    setFavorites(providersRes.data);
+                    setFavorites(providersRes.data as unknown as Provider[]);
                 }
             } catch (error) {
                 console.error('Failed to fetch bookmarks', error);
@@ -132,16 +133,16 @@ const BookmarksPage: React.FC = () => {
                                                                 Article
                                                             </span>
                                                             <span className="text-text-tertiary">•</span>
-                                                            <span className="text-xs text-text-tertiary">{item.category}</span>
+                                                            <span className="text-xs text-text-tertiary">{item.category?.name || 'Uncategorized'}</span>
                                                         </div>
                                                         <h3 className="font-bold text-text-primary text-lg group-hover:text-primary transition-colors">{item.title}</h3>
-                                                        <p className="text-sm text-text-secondary line-clamp-1">{item.summary || item.description}</p>
+                                                        <p className="text-sm text-text-secondary line-clamp-1">{item.description}</p>
                                                     </div>
                                                     <div className="flex items-center gap-3 mt-4 md:mt-0">
                                                         <Button
                                                             variant="ghost"
                                                             size="sm"
-                                                            onClick={() => removeBookmark(item.id)}
+                                                            onClick={() => removeBookmark(String(item.id))}
                                                             className="text-text-tertiary hover:text-error"
                                                         >
                                                             Remove
@@ -163,8 +164,8 @@ const BookmarksPage: React.FC = () => {
                                                 <div key={provider.id} className="flex flex-col md:flex-row md:items-center justify-between p-4 bg-surface-hover rounded-xl border border-border group hover:border-primary/30 transition-colors">
                                                     <div className="flex items-start gap-4">
                                                         <div className="w-12 h-12 rounded-full bg-surface border-2 border-surface shadow-sm overflow-hidden flex-shrink-0">
-                                                            {provider.avatar_url ? (
-                                                                <img src={provider.avatar_url} alt={provider.name} className="w-full h-full object-cover" />
+                                                            {provider.image ? (
+                                                                <img src={provider.image} alt={provider.name} className="w-full h-full object-cover" />
                                                             ) : (
                                                                 <div className="w-full h-full flex items-center justify-center bg-primary/10 text-primary font-bold">
                                                                     {provider.name?.charAt(0) || 'P'}
@@ -173,7 +174,7 @@ const BookmarksPage: React.FC = () => {
                                                         </div>
                                                         <div>
                                                             <h3 className="font-bold text-text-primary text-lg group-hover:text-primary transition-colors">{provider.name}</h3>
-                                                            <p className="text-primary text-sm font-medium">{provider.specialization}</p>
+                                                            <p className="text-primary text-sm font-medium">{provider.specialties[0] || 'General'}</p>
                                                             <div className="flex items-center gap-1 text-xs text-text-secondary mt-1">
                                                                 <MapPin size={12} />
                                                                 {provider.location || 'Online'}
@@ -184,7 +185,7 @@ const BookmarksPage: React.FC = () => {
                                                         <Button
                                                             variant="ghost"
                                                             size="sm"
-                                                            onClick={() => removeFavorite(provider.id)}
+                                                            onClick={() => removeFavorite(String(provider.id))}
                                                             className="text-text-tertiary hover:text-error"
                                                         >
                                                             Remove

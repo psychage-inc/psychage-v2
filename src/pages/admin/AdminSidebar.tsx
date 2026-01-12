@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { LayoutDashboard, Users, FileText, Activity, ShieldAlert, LogOut } from 'lucide-react';
+import { LayoutDashboard, Users, FileText, ShieldAlert, LogOut } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Card } from '@/components/ui/Card';
 import { useAuth } from '@/context/AuthContext';

@@ -22,6 +22,8 @@ import ProtectedRoute from './components/auth/ProtectedRoute';
 import RoleGuard from './components/auth/RoleGuard';
 import LoadingScreen from './components/ui/LoadingScreen';
 import PageTransition from './components/ui/PageTransition';
+import { ScrollManager } from './components/ui/ScrollManager';
+import { CustomCursor } from './components/ui/CustomCursor';
 
 // --- LAZY LOADED ROUTES (Code Splitting) ---
 const LearnPage = React.lazy(() => import('./pages/LearnPage'));
@@ -80,6 +82,9 @@ const App: React.FC = () => {
                 <AnimatePresence mode="wait">
                     {isLoading && <LoadingScreen key="loading-screen" onComplete={() => setIsLoading(false)} />}
                 </AnimatePresence>
+
+                <ScrollManager />
+                <CustomCursor />
 
                 {!isLoading && (
                     <div className="min-h-screen bg-[#fafaf9] font-sans text-gray-900 overflow-x-hidden flex flex-col transition-colors duration-300">

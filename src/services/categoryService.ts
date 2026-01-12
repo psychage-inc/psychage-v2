@@ -13,7 +13,7 @@ export const categoryService = {
                 .select('*');
 
             if (error) throw error;
-            return (data || []).map(mapToCategory);
+            return (data as unknown as DBCategory[] || []).map(mapToCategory);
         } catch (error) {
             console.error('Failed to fetch categories from Supabase, using mock data:', error);
             return mockCategories;
@@ -32,7 +32,7 @@ export const categoryService = {
                 if (error.code === 'PGRST116') return undefined; // Not found
                 throw error;
             }
-            return mapToCategory(data);
+            return mapToCategory(data as unknown as DBCategory);
         } catch (error) {
             console.error('Failed to fetch category from Supabase, using mock data:', error);
             return mockCategories.find(c => c.slug === slug);
@@ -47,7 +47,7 @@ export const categoryService = {
                 .eq('group', group);
 
             if (error) throw error;
-            return (data || []).map(mapToCategory);
+            return (data as unknown as DBCategory[] || []).map(mapToCategory);
         } catch (error) {
             console.error('Failed to fetch categories by group from Supabase, using mock data:', error);
             return mockCategories.filter(c => c.group === group);
@@ -55,13 +55,23 @@ export const categoryService = {
     }
 };
 
-function mapToCategory(data: any): Category {
+interface DBCategory {
+    id: string;
+    name: string;
+    slug: string;
+    description: string;
+    group: string;
+    image: string;
+    color: string;
+}
+
+function mapToCategory(data: DBCategory): Category {
     return {
         id: data.id,
         name: data.name,
         slug: data.slug,
         description: data.description,
-        group: data.group as Category['group'],
+        group: data.group as Category['group'], // optimize: validate against enum
         image: data.image,
         color: data.color,
         // Mocking fields not yet in DB

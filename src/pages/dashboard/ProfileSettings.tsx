@@ -47,7 +47,7 @@ const ProfileSettings: React.FC = () => {
                             firstName,
                             lastName,
                             email: user.email || '',
-                            location: (profileRes.data as any).location || '',
+                            location: profileRes.data.location || '',
                         });
                         return;
                     }

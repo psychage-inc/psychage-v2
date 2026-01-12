@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Star, MapPin, Calendar, ShieldCheck, CreditCard, Video, Clock } from 'lucide-react';
 import { Provider } from '../../types/models';
@@ -6,12 +6,22 @@ import Badge from '../ui/Badge';
 import Button from '../ui/Button';
 import { Link, useNavigate } from 'react-router-dom';
 
+// Default fallback avatar
+const FallbackAvatar: React.FC<{ name: string; className?: string }> = ({ name, className }) => (
+    <div className={`bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center ${className}`}>
+        <span className="text-white font-bold text-xl">
+            {name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase()}
+        </span>
+    </div>
+);
+
 interface ProviderCardProps {
   provider: Provider;
 }
 
 const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
   const navigate = useNavigate();
+  const [imageError, setImageError] = useState(false);
 
   return (
     <motion.div
@@ -20,12 +30,17 @@ const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
     >
       <div className="flex items-start gap-4 mb-4">
         <div className="relative">
-          <img
-            src={provider.image}
-            alt={provider.name}
-            loading="lazy"
-            className="w-20 h-20 rounded-full object-cover border-2 border-white dark:border-gray-800 shadow-md"
-          />
+          {!imageError && provider.image ? (
+            <img
+              src={provider.image}
+              alt={provider.name}
+              loading="lazy"
+              className="w-20 h-20 rounded-full object-cover border-2 border-white dark:border-gray-800 shadow-md"
+              onError={() => setImageError(true)}
+            />
+          ) : (
+            <FallbackAvatar name={provider.name} className="w-20 h-20 rounded-full border-2 border-white dark:border-gray-800 shadow-md" />
+          )}
           {provider.verified && (
             <div className="absolute -bottom-1 -right-1 bg-white dark:bg-gray-800 rounded-full p-1 shadow-sm">
               <ShieldCheck size={16} className="text-teal-500 fill-teal-50 dark:fill-teal-900/30" />

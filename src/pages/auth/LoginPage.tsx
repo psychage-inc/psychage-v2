@@ -37,10 +37,11 @@ const LoginPage = () => {
                     navigate('/dashboard', { replace: true });
                 }
             } else {
-                setError(result.error || 'Failed to login. Please check your credentials.');
+                // Login error handled by AuthContext
             }
-        } catch (err) {
-            setError('An unexpected error occurred. Please try again.');
+        } catch {
+            // Login error handled by AuthContext
+            setError('Login failed. Please check your credentials. Please try again.');
         }
     };
 
@@ -59,6 +60,13 @@ const LoginPage = () => {
                 className="w-full max-w-md relative z-10"
             >
                 <div className="text-center mb-8">
+                    <div className="flex justify-center mb-6">
+                        <img
+                            src="/images/logo.png"
+                            alt="Psychage"
+                            className="h-16 w-auto object-contain"
+                        />
+                    </div>
                     <Display className="text-3xl mb-2">Welcome Back</Display>
                     <Text>Sign in to continue your journey</Text>
                 </div>

@@ -28,6 +28,16 @@ const colorSchemes: Record<string, { bg: string; iconBg: string; iconColor: stri
     red: { bg: 'bg-white', iconBg: 'bg-red-50', iconColor: 'text-red-600', hover: 'hover:border-red-100' },
 };
 
+const getToolLink = (toolId: number) => {
+    switch (toolId) {
+        case 1: return '/clarity-score';
+        case 2: return '/tools/mood-journal';
+        case 3: return '/tools/sleep-architect';
+        case 5: return '/find-care';
+        default: return '#';
+    }
+};
+
 const ToolsSection: React.FC = () => {
     const navigate = useNavigate();
     const toolService = useToolService();
@@ -94,7 +104,7 @@ const ToolsSection: React.FC = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                onClick={() => navigate(`/tools/${featuredTool.id}`)}
+                                onClick={() => navigate(getToolLink(featuredTool.id))}
                                 className="group cursor-pointer md:col-span-2 md:row-span-2 relative overflow-hidden bg-white rounded-3xl border border-gray-200 p-8 md:p-12 shadow-sm hover:shadow-xl transition-all duration-500"
                             >
                                 <div className={`absolute top-0 right-0 w-64 h-64 ${colors.iconBg} rounded-full blur-3xl -mr-16 -mt-16 opacity-0 group-hover:opacity-50 transition-opacity duration-700`} />
@@ -134,7 +144,7 @@ const ToolsSection: React.FC = () => {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: (index + 1) * 0.1 }}
-                                    onClick={() => navigate(`/tools/${tool.id}`)}
+                                    onClick={() => navigate(getToolLink(tool.id))}
                                     className="group cursor-pointer md:col-span-1 md:row-span-1 bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-8 shadow-md hover:shadow-xl transition-all duration-300 text-white relative overflow-hidden"
                                 >
                                     <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl -mr-10 -mt-10" />
@@ -160,7 +170,7 @@ const ToolsSection: React.FC = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: (index + 1) * 0.1 }}
-                                onClick={() => navigate(`/tools/${tool.id}`)}
+                                onClick={() => navigate(getToolLink(tool.id))}
                                 className={`group cursor-pointer md:col-span-1 md:row-span-1 ${colors.bg} rounded-3xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition-all duration-300 ${colors.hover}`}
                             >
                                 <div className={`w-12 h-12 rounded-xl ${colors.iconBg} flex items-center justify-center mb-6`}>

@@ -42,10 +42,9 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onNavigateGene
 
   const menuItems = [
     { name: 'Home', view: 'home' },
-    { name: 'Articles', view: 'home' }, // Should route to category in real app
-    { name: 'Videos', view: 'home' },
-    { name: 'Tools', view: 'clarity-score' },
-    { name: 'Find Care', view: 'providers' },
+    { name: 'Articles', view: 'learn' },
+    { name: 'Tools', view: 'tools' },
+    { name: 'Find Care', view: 'find-care' },
     { name: 'About', view: 'about' },
     { name: 'Contact', view: 'contact' },
   ];

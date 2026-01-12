@@ -84,9 +84,9 @@ const NavMenu: React.FC<NavMenuProps> = ({ activeTab, onMouseLeave, onCategorySe
         },
       ],
       quickActions: [
-        { label: "Start Daily Check-in", href: "#", icon: Zap },
-        { label: "Log Symptoms", href: "#", icon: ChevronRight },
-        { label: "View Reports", href: "#", icon: ExternalLink },
+        { label: "Start Daily Check-in", href: "/clarity-score", icon: Zap },
+        { label: "Mood Journal", href: "/tools/mood-journal", icon: ChevronRight },
+        { label: "All Tools", href: "/tools", icon: ExternalLink },
       ]
     },
     Resources: {
@@ -134,7 +134,7 @@ const NavMenu: React.FC<NavMenuProps> = ({ activeTab, onMouseLeave, onCategorySe
       ],
       quickActions: [
         { label: "Browse All Topics", href: "/learn", icon: Zap },
-        { label: "Meditation Audio", href: "#", icon: ChevronRight },
+        { label: "Sleep Architect", href: "/tools/sleep-architect", icon: ChevronRight },
         { label: "Crisis Resources", href: "/contact", icon: ExternalLink },
       ]
     },
@@ -158,9 +158,9 @@ const NavMenu: React.FC<NavMenuProps> = ({ activeTab, onMouseLeave, onCategorySe
         },
       ],
       quickActions: [
-        { label: "Contact Support", href: "#", icon: ChevronRight },
-        { label: "Press Kit", href: "#", icon: ExternalLink },
-        { label: "Careers", href: "#", icon: ChevronRight },
+        { label: "Contact Support", href: "/contact", icon: ChevronRight },
+        { label: "Find a Provider", href: "/find-care", icon: ExternalLink },
+        { label: "Provider Registration", href: "/providers/register", icon: ChevronRight },
       ]
     }
   };

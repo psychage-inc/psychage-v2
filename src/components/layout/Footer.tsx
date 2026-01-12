@@ -44,11 +44,13 @@ const Footer: React.FC = () => {
     if (view === 'home') navigate('/');
     else if (view === 'category' && id) navigate(`/category/${id}`);
     else if (view === 'clarity-score') navigate('/clarity-score');
-    else if (view === 'providers') navigate('/providers');
+    else if (view === 'find-care') navigate('/find-care');
     else if (view === 'about') navigate('/about');
     else if (view === 'contact') navigate('/contact');
     else if (view === 'privacy') navigate('/legal/privacy');
     else if (view === 'terms') navigate('/legal/terms');
+    else if (view === 'learn') navigate('/learn');
+    else if (view === 'tools') navigate('/tools');
     else navigate(`/${view}`);
   };
 
@@ -60,12 +62,13 @@ const Footer: React.FC = () => {
     ],
     popular: [
       { name: 'Clarity Score™', view: 'clarity-score' },
-      { name: 'Find a Provider', view: 'providers' },
-      { name: 'Articles', view: 'home' }, // Just Scroll to top for now
+      { name: 'Find a Provider', view: 'find-care' },
+      { name: 'Articles', view: 'learn' },
+      { name: 'Tools', view: 'tools' },
     ],
     company: [
       { name: 'About Us', view: 'about' },
-      { name: 'Careers', view: 'about' }, // Reusing about for now
+      { name: 'Contact Us', view: 'contact' },
     ],
     connect: [
       { name: 'Contact Support', view: 'contact' },

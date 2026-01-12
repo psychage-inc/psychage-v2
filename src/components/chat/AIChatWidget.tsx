@@ -61,9 +61,29 @@ const AIChatWidget: React.FC = () => {
         localStorage.removeItem(STORAGE_KEY);
     };
 
-    // --- MOCK AI LOGIC ---
-    const handleSend = () => {
+    // --- REAL AI LOGIC ---
+    const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+
+    // We'll use a ref to keep the chat session instance if we wanted single-session persistence
+    // But since we store messages in localStorage, we might want to reconstruct chat history each time or just send full context.
+    // For simplicity and robustness with localStorage, we'll use generateContent with history as context or startChat with history.
+
+    // However, to properly use startChat with restored history, we need to map our Message format to Gemini's Content format.
+    // Gemini format: { role: 'user' | 'model', parts: [{ text: string }] }
+
+    const handleSend = async () => {
         if (!inputText.trim()) return;
+
+        if (!apiKey) {
+            const errorMsg: Message = {
+                id: Date.now().toString(),
+                sender: 'ai',
+                text: "I'm missing my API key. Please add VITE_GEMINI_API_KEY to your .env file.",
+                type: 'text'
+            };
+            setMessages(prev => [...prev, errorMsg]);
+            return;
+        }
 
         const userMsg: Message = {
             id: Date.now().toString(),
@@ -75,52 +95,62 @@ const AIChatWidget: React.FC = () => {
         setInputText('');
         setIsTyping(true);
 
-        // Simple keyword matching for demo purposes
-        const lowerInput = userMsg.text.toLowerCase();
+        try {
+            // Dynamic import to avoid SSR issues if any, though likely fine in SPA
+            const { GoogleGenAI } = await import('@google/genai');
+            const genAI = new GoogleGenAI({ apiKey }); // GoogleGenAI often takes an object or just string. Let's check docs or safe bet.
+            // Wait, looking at other usage, often it is `new GoogleGenAI(apiKey)` or `new GoogleGenAI({ apiKey })`.
+            // The search result [1] said `import { GoogleGenAI } ...`.
+            // Let's assume `new GoogleGenAI({ apiKey })` is safer if it's the new SDK, as it matches the `ApiClient` options pattern seen in d.ts (opts: ApiClientInitOptions).
+            // ApiClientInitOptions has `apiKey?: string`.
 
-        setTimeout(() => {
-            let aiResponse: Message = {
+            // const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" }); // OLD SDK
+
+            // Prepare history for the chat model
+            // Filter out system messages or error messages if any, and map to Gemini format
+            const history = messages
+                .filter(m => m.id !== 'init' && m.type !== 'crisis') // Skip init if desired, or keep it. Let's keep previous conversation.
+                .map(m => ({
+                    role: m.sender === 'user' ? 'user' : 'model',
+                    parts: [{ text: m.text }]
+                }));
+
+            // NEW SDK Usage
+            const chat = genAI.chats.create({
+                model: "gemini-1.5-flash",
+                history: history,
+                config: {
+                    maxOutputTokens: 500,
+                },
+            });
+
+            const result = await chat.sendMessage({ message: userMsg.text });
+            const response = result; // Response is directly returned or wrapped? 
+            // In 0.2.0, sendMessage returns Promise<GenerateContentResponse>.
+            // GenerateContentResponse has .text getter.
+
+            const text = response.text; // Getter
+
+            const aiMsg: Message = {
                 id: (Date.now() + 1).toString(),
                 sender: 'ai',
-                text: "I'm not sure about that yet, but I can help you find a therapist or articles on anxiety.",
+                text: text || "I'm not sure what to say.",
                 type: 'text'
             };
 
-            if (lowerInput.includes('suicide') || lowerInput.includes('kill') || lowerInput.includes('hurt') || lowerInput.includes('die')) {
-                aiResponse = {
-                    id: (Date.now() + 1).toString(),
-                    sender: 'ai',
-                    text: "I'm concerned about what you're sharing. If you are in immediate danger, please reach out for help right now.",
-                    type: 'crisis'
-                };
-            } else if (lowerInput.includes('anxiety') || lowerInput.includes('nervous')) {
-                aiResponse = {
-                    id: (Date.now() + 1).toString(),
-                    sender: 'ai',
-                    text: "Anxiety is a common response to stress. We have several resources that might help.",
-                    suggestions: [
-                        { label: "Read Anxiety Guide", action: "/article/1" },
-                        { label: "Breathing Tool", action: "/tool/breath" }
-                    ]
-                };
-            } else if (lowerInput.includes('therapist') || lowerInput.includes('doctor')) {
-                aiResponse = {
-                    id: (Date.now() + 1).toString(),
-                    sender: 'ai',
-                    text: "Finding a professional is a great step. You can search our directory for verified providers.",
-                    suggestions: [
-                        { label: "Open Directory", action: "/providers" }
-                    ]
-                };
-            } else if (lowerInput.includes('clear')) {
-                clearChat();
-                setIsTyping(false);
-                return;
-            }
-
-            setMessages(prev => [...prev, aiResponse]);
+            setMessages(prev => [...prev, aiMsg]);
+        } catch (error) {
+            console.error("AI Error:", error);
+            const errorMsg: Message = {
+                id: (Date.now() + 1).toString(),
+                sender: 'ai',
+                text: "I'm having trouble connecting right now. Please try again later.",
+                type: 'text'
+            };
+            setMessages(prev => [...prev, errorMsg]);
+        } finally {
             setIsTyping(false);
-        }, 1500);
+        }
     };
 
     const handleKeyPress = (e: React.KeyboardEvent) => {

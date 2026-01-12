@@ -1,7 +1,5 @@
-import { api } from '../lib/api';
+import { supabase } from '../lib/supabaseClient';
 import { useMemo } from 'react';
-
-const USE_API = import.meta.env.VITE_API_URL ? true : false;
 
 export interface ConditionMatch {
     id: string;
@@ -18,23 +16,52 @@ export interface SymptomCheckResult {
 }
 
 export interface CrisisResource {
+    id?: string;
     name: string;
     phone: string;
     description: string;
     available: string;
 }
 
-// Crisis symptom IDs
-const crisisSymptomIds = [
-    'suicidal-thoughts',
-    'self-harm',
-    'suicide-ideation',
-    'crisis',
-    'emergency'
+export interface Symptom {
+    id: string;
+    name: string;
+    category: string;
+    is_crisis: boolean;
+}
+
+interface ConditionRow {
+    id: string;
+    name: string;
+    description: string;
+    recommended_action: string;
+    article_id?: number;
+}
+
+// Fallback crisis resources if DB fails
+const fallbackCrisisResources: CrisisResource[] = [
+    {
+        name: '988 Suicide & Crisis Lifeline',
+        phone: '988',
+        description: 'Free, confidential support for people in distress',
+        available: '24/7'
+    },
+    {
+        name: 'Crisis Text Line',
+        phone: 'Text HOME to 741741',
+        description: 'Free crisis counseling via text message',
+        available: '24/7'
+    },
+    {
+        name: 'National Domestic Violence Hotline',
+        phone: '1-800-799-7233',
+        description: 'Support for domestic violence survivors',
+        available: '24/7'
+    }
 ];
 
-// Mock condition database
-const conditionDatabase: ConditionMatch[] = [
+// Fallback condition database
+const fallbackConditions: ConditionMatch[] = [
     {
         id: 'anxiety',
         name: 'Generalized Anxiety Disorder',
@@ -61,89 +88,140 @@ const conditionDatabase: ConditionMatch[] = [
     }
 ];
 
-// Crisis resources
-const crisisResources: CrisisResource[] = [
-    {
-        name: '988 Suicide & Crisis Lifeline',
-        phone: '988',
-        description: 'Free, confidential support for people in distress',
-        available: '24/7'
-    },
-    {
-        name: 'Crisis Text Line',
-        phone: 'Text HOME to 741741',
-        description: 'Free crisis counseling via text message',
-        available: '24/7'
-    },
-    {
-        name: 'National Domestic Violence Hotline',
-        phone: '1-800-799-7233',
-        description: 'Support for domestic violence survivors',
-        available: '24/7'
-    }
-];
-
-function checkSymptomsLocal(selectedIds: string[]): SymptomCheckResult {
-    // Check for crisis symptoms
-    const hasCrisisSymptom = selectedIds.some(id =>
-        crisisSymptomIds.some(crisis => id.toLowerCase().includes(crisis))
-    );
-
-    if (hasCrisisSymptom) {
-        return {
-            conditions: [],
-            isCrisis: true
-        };
-    }
-
-    // Return mock conditions based on number of symptoms
-    const numConditions = Math.min(selectedIds.length, 3);
-    const conditions = conditionDatabase.slice(0, numConditions).map((condition, index) => ({
-        ...condition,
-        matchRate: Math.max(50, condition.matchRate - (index * 10))
-    }));
-
-    return {
-        conditions,
-        isCrisis: false
-    };
-}
-
 export const symptomService = {
-    checkSymptoms: async (selectedIds: string[]): Promise<SymptomCheckResult> => {
-        if (!USE_API) {
-            await new Promise(resolve => setTimeout(resolve, 800));
-            return checkSymptomsLocal(selectedIds);
-        }
-
+    getSymptoms: async (): Promise<Symptom[]> => {
         try {
-            const response = await api.post<SymptomCheckResult>('/api/symptoms/check', { symptoms: selectedIds });
-            return response.data || { conditions: [], isCrisis: false };
+            const { data, error } = await supabase
+                .from('symptoms')
+                .select('*')
+                .order('category', { ascending: true });
+
+            if (error) throw error;
+            return data || [];
         } catch (error) {
-            console.error('Failed to check symptoms via API, using local check:', error);
-            return checkSymptomsLocal(selectedIds);
+            console.error('Failed to fetch symptoms from Supabase:', error);
+            return [];
+        }
+    },
+
+    checkSymptoms: async (selectedIds: string[]): Promise<SymptomCheckResult> => {
+        try {
+            // Check if any selected symptoms are crisis symptoms
+            const { data: crisisSymptoms, error: crisisError } = await supabase
+                .from('symptoms')
+                .select('id')
+                .in('id', selectedIds)
+                .eq('is_crisis', true);
+
+            if (crisisError) throw crisisError;
+
+            if (crisisSymptoms && crisisSymptoms.length > 0) {
+                return { conditions: [], isCrisis: true };
+            }
+
+            // Get matching conditions based on symptoms
+            const { data: conditions, error: condError } = await supabase
+                .from('conditions')
+                .select('*, condition_symptoms!inner(symptom_id)')
+                .in('condition_symptoms.symptom_id', selectedIds);
+
+            if (condError) throw condError;
+
+            if (!conditions || conditions.length === 0) {
+                // Fallback to basic matching
+                const numConditions = Math.min(selectedIds.length, 3);
+                return {
+                    conditions: fallbackConditions.slice(0, numConditions).map((c, i) => ({
+                        ...c,
+                        matchRate: Math.max(50, c.matchRate - (i * 10))
+                    })),
+                    isCrisis: false
+                };
+            }
+
+            // Calculate match rates based on symptom overlap
+            const matchedConditions: ConditionMatch[] = conditions.map((cond: ConditionRow) => ({
+                id: cond.id,
+                name: cond.name,
+                matchRate: Math.min(95, 50 + (selectedIds.length * 10)),
+                description: cond.description,
+                recommendedAction: cond.recommended_action,
+                articleId: cond.article_id
+            }));
+
+            return {
+                conditions: matchedConditions.slice(0, 3),
+                isCrisis: false
+            };
+        } catch (error) {
+            console.error('Failed to check symptoms via Supabase, using fallback:', error);
+            // Fallback logic
+            const numConditions = Math.min(selectedIds.length, 3);
+            return {
+                conditions: fallbackConditions.slice(0, numConditions).map((c, i) => ({
+                    ...c,
+                    matchRate: Math.max(50, c.matchRate - (i * 10))
+                })),
+                isCrisis: false
+            };
         }
     },
 
     getCrisisResources: async (): Promise<CrisisResource[]> => {
-        if (!USE_API) {
-            await new Promise(resolve => setTimeout(resolve, 300));
-            return crisisResources;
-        }
-
         try {
-            const response = await api.get<CrisisResource[]>('/api/symptoms/crisis-resources');
-            return response.data || crisisResources;
+            const { data, error } = await supabase
+                .from('crisis_resources')
+                .select('*')
+                .eq('is_active', true)
+                .order('sort_order', { ascending: true });
+
+            if (error) throw error;
+            return (data || []).map(r => ({
+                id: r.id,
+                name: r.name,
+                phone: r.phone,
+                description: r.description,
+                available: r.available
+            }));
         } catch (error) {
-            console.error('Failed to fetch crisis resources from API, using local data:', error);
-            return crisisResources;
+            console.error('Failed to fetch crisis resources from Supabase, using fallback:', error);
+            return fallbackCrisisResources;
+        }
+    },
+
+    getConditions: async (): Promise<ConditionMatch[]> => {
+        try {
+            const { data, error } = await supabase
+                .from('conditions')
+                .select('*')
+                .order('name', { ascending: true });
+
+            if (error) throw error;
+            return (data || []).map((c: ConditionRow) => ({
+                id: c.id,
+                name: c.name,
+                matchRate: 0,
+                description: c.description,
+                recommendedAction: c.recommended_action,
+                articleId: c.article_id
+            }));
+        } catch (error) {
+            console.error('Failed to fetch conditions:', error);
+            return fallbackConditions;
         }
     }
 };
 
 // Keep the standalone function for backward compatibility
 export function checkSymptoms(selectedIds: string[]): SymptomCheckResult {
-    return checkSymptomsLocal(selectedIds);
+    const numConditions = Math.min(selectedIds.length, 3);
+    return {
+        conditions: fallbackConditions.slice(0, numConditions).map((c, i) => ({
+            ...c,
+            matchRate: Math.max(50, c.matchRate - (i * 10))
+        })),
+        isCrisis: false
+    };
 }
 
 // Hook wrapper for React components

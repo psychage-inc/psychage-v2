@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { PenTool, Calendar, Save, Trash2, TrendingUp, ArrowLeft } from 'lucide-react';
 import Button from '../ui/Button';
 import { useNavigate } from 'react-router-dom';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 interface MoodEntry {
     id: string;
@@ -253,6 +254,51 @@ const MoodJournal: React.FC = () => {
                             </h3>
 
                             <div className="space-y-6">
+                                {/* Mood Trend Chart */}
+                                <div>
+                                    <div className="text-sm text-gray-500 mb-2">Mood Trend (Last 7 Entries)</div>
+                                    <div className="h-40 w-full -ml-4">
+                                        <ResponsiveContainer width="100%" height="100%">
+                                            <AreaChart data={entries.slice(0, 7).reverse().map(e => ({
+                                                mood: e.mood,
+                                                date: new Date(e.date).toLocaleDateString(undefined, { weekday: 'short' })
+                                            }))}>
+                                                <defs>
+                                                    <linearGradient id="colorMood" x1="0" y1="0" x2="0" y2="1">
+                                                        <stop offset="5%" stopColor="#14b8a6" stopOpacity={0.3} />
+                                                        <stop offset="95%" stopColor="#14b8a6" stopOpacity={0} />
+                                                    </linearGradient>
+                                                </defs>
+                                                <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#E5E7EB" />
+                                                <XAxis
+                                                    dataKey="date"
+                                                    axisLine={false}
+                                                    tickLine={false}
+                                                    tick={{ fill: '#9CA3AF', fontSize: 10 }}
+                                                    interval="preserveStartEnd"
+                                                />
+                                                <YAxis hide domain={[0, 10]} />
+                                                <Tooltip
+                                                    contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
+                                                    itemStyle={{ color: '#0f766e', fontWeight: 'bold' }}
+                                                />
+                                                <Area
+                                                    type="monotone"
+                                                    dataKey="mood"
+                                                    stroke="#14b8a6"
+                                                    strokeWidth={3}
+                                                    fillOpacity={1}
+                                                    fill="url(#colorMood)"
+                                                    dot={{ r: 3, fill: '#14b8a6' }}
+                                                />
+                                            </AreaChart>
+                                        </ResponsiveContainer>
+                                    </div>
+                                    {entries.length < 2 && (
+                                        <p className="text-xs text-gray-400 text-center mt-2">Log more entries to see your trend</p>
+                                    )}
+                                </div>
+
                                 <div>
                                     <div className="text-sm text-gray-500 mb-1">Total Entries</div>
                                     <div className="text-3xl font-display font-bold text-gray-900">{entries.length}</div>

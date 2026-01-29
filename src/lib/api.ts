@@ -230,7 +230,7 @@ export const api = {
       return api.post<{ user: User }>('/api/auth/signup', {
         email,
         password,
-        display_name: displayName,
+        name: displayName,
         role,
       });
     },

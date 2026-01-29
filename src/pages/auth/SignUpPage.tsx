@@ -65,9 +65,12 @@ const SignUpPage = () => {
                         email: formData.email
                     }
                 });
+            } else {
+                setError(result.error || 'Signup failed. Please try again.');
             }
-        } catch {
+        } catch (err) {
             // Registration error handled by AuthContext
+            console.error('Signup error:', err);
             setError('An unexpected error occurred. Please try again.');
         }
     };

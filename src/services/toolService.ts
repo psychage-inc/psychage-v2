@@ -1,60 +1,9 @@
 import { Tool } from '../types/models';
-import { supabase } from '../lib/supabaseClient';
+import api from '../lib/api';
 import { useMemo } from 'react';
 
-// Fallback to mock data if Supabase fails
+// Fallback to mock data if API fails
 import { tools as mockTools } from '../data/tools';
-
-export const toolService = {
-    getAll: async (): Promise<Tool[]> => {
-        try {
-            const { data, error } = await supabase
-                .from('tools')
-                .select('*')
-                .order('id', { ascending: true });
-
-            if (error) throw error;
-            return (data || []).map(mapToTool);
-        } catch (error) {
-            console.error('Failed to fetch tools from Supabase, using mock data:', error);
-            return mockTools as unknown as Tool[];
-        }
-    },
-
-    getById: async (id: number): Promise<Tool | undefined> => {
-        try {
-            const { data, error } = await supabase
-                .from('tools')
-                .select('*')
-                .eq('id', id)
-                .single();
-
-            if (error) {
-                if (error.code === 'PGRST116') return undefined; // Not found
-                throw error;
-            }
-            return mapToTool(data);
-        } catch (error) {
-            console.error('Failed to fetch tool from Supabase, using mock data:', error);
-            return (mockTools as unknown as Tool[]).find(t => t.id === id);
-        }
-    },
-
-    getByCategory: async (category: string): Promise<Tool[]> => {
-        try {
-            const { data, error } = await supabase
-                .from('tools')
-                .select('*')
-                .ilike('category', category);
-
-            if (error) throw error;
-            return (data || []).map(mapToTool);
-        } catch (error) {
-            console.error('Failed to fetch tools by category from Supabase, using mock data:', error);
-            return (mockTools as unknown as Tool[]).filter(t => t.category.toLowerCase() === category.toLowerCase());
-        }
-    }
-};
 
 interface ToolRow {
     id: number;
@@ -77,6 +26,48 @@ function mapToTool(data: ToolRow): Tool {
         features: data.features || []
     };
 }
+
+export const toolService = {
+    getAll: async (): Promise<Tool[]> => {
+        try {
+            const response = await api.tools.getAll();
+            if (!response.success || !response.data) {
+                console.warn('API returned no data, using mock tools');
+                return mockTools as unknown as Tool[];
+            }
+            return (response.data as ToolRow[]).map(mapToTool);
+        } catch (error) {
+            console.error('Failed to fetch tools from API, using mock data:', error);
+            return mockTools as unknown as Tool[];
+        }
+    },
+
+    getById: async (id: number): Promise<Tool | undefined> => {
+        try {
+            const response = await api.tools.getById(id);
+            if (!response.success || !response.data) {
+                return (mockTools as unknown as Tool[]).find(t => t.id === id);
+            }
+            return mapToTool(response.data as ToolRow);
+        } catch (error) {
+            console.error('Failed to fetch tool from API, using mock data:', error);
+            return (mockTools as unknown as Tool[]).find(t => t.id === id);
+        }
+    },
+
+    getByCategory: async (category: string): Promise<Tool[]> => {
+        try {
+            const response = await api.tools.getByCategory(category);
+            if (!response.success || !response.data) {
+                return (mockTools as unknown as Tool[]).filter(t => t.category.toLowerCase() === category.toLowerCase());
+            }
+            return (response.data as ToolRow[]).map(mapToTool);
+        } catch (error) {
+            console.error('Failed to fetch tools by category from API, using mock data:', error);
+            return (mockTools as unknown as Tool[]).filter(t => t.category.toLowerCase() === category.toLowerCase());
+        }
+    }
+};
 
 // Hook wrapper for React components
 export function useToolService() {

@@ -1,4 +1,4 @@
-import { supabase } from '../lib/supabaseClient';
+import api from '../lib/api';
 import { useMemo } from 'react';
 
 export interface Bookmark {
@@ -10,33 +10,22 @@ export interface Bookmark {
 }
 
 export const bookmarkService = {
-    getAll: async (userId: string): Promise<Bookmark[]> => {
+    getAll: async (_userId?: string): Promise<Bookmark[]> => {
         try {
-            const { data, error } = await supabase
-                .from('bookmarks')
-                .select('*')
-                .eq('user_id', userId)
-                .order('created_at', { ascending: false });
-
-            if (error) throw error;
-            return data || [];
+            const response = await api.bookmarks.getAll();
+            if (!response.success || !response.data) return [];
+            return response.data as Bookmark[];
         } catch (error) {
             console.error('Failed to fetch bookmarks:', error);
             return [];
         }
     },
 
-    getByType: async (userId: string, resourceType: Bookmark['resource_type']): Promise<Bookmark[]> => {
+    getByType: async (_userId: string, resourceType: Bookmark['resource_type']): Promise<Bookmark[]> => {
         try {
-            const { data, error } = await supabase
-                .from('bookmarks')
-                .select('*')
-                .eq('user_id', userId)
-                .eq('resource_type', resourceType)
-                .order('created_at', { ascending: false });
-
-            if (error) throw error;
-            return data || [];
+            const response = await api.bookmarks.getByType(resourceType);
+            if (!response.success || !response.data) return [];
+            return response.data as Bookmark[];
         } catch (error) {
             console.error('Failed to fetch bookmarks by type:', error);
             return [];
@@ -44,47 +33,24 @@ export const bookmarkService = {
     },
 
     add: async (
-        userId: string,
+        _userId: string,
         resourceType: Bookmark['resource_type'],
         resourceId: string
     ): Promise<Bookmark | null> => {
         try {
-            const { data, error } = await supabase
-                .from('bookmarks')
-                .insert({
-                    user_id: userId,
-                    resource_type: resourceType,
-                    resource_id: resourceId
-                })
-                .select()
-                .single();
-
-            if (error) {
-                // Handle unique constraint violation (already bookmarked)
-                if (error.code === '23505') {
-                    console.log('Item already bookmarked');
-                    return null;
-                }
-                throw error;
-            }
-            return data;
+            const response = await api.bookmarks.add(resourceType, resourceId);
+            if (!response.success || !response.data) return null;
+            return response.data as Bookmark;
         } catch (error) {
             console.error('Failed to add bookmark:', error);
             return null;
         }
     },
 
-    remove: async (userId: string, resourceType: Bookmark['resource_type'], resourceId: string): Promise<boolean> => {
+    remove: async (_userId: string, resourceType: Bookmark['resource_type'], resourceId: string): Promise<boolean> => {
         try {
-            const { error } = await supabase
-                .from('bookmarks')
-                .delete()
-                .eq('user_id', userId)
-                .eq('resource_type', resourceType)
-                .eq('resource_id', resourceId);
-
-            if (error) throw error;
-            return true;
+            const response = await api.bookmarks.remove(resourceType, resourceId);
+            return response.success;
         } catch (error) {
             console.error('Failed to remove bookmark:', error);
             return false;
@@ -92,29 +58,16 @@ export const bookmarkService = {
     },
 
     toggle: async (
-        userId: string,
+        _userId: string,
         resourceType: Bookmark['resource_type'],
         resourceId: string
     ): Promise<{ bookmarked: boolean }> => {
         try {
-            // Check if already bookmarked
-            const { data: existing } = await supabase
-                .from('bookmarks')
-                .select('id')
-                .eq('user_id', userId)
-                .eq('resource_type', resourceType)
-                .eq('resource_id', resourceId)
-                .single();
-
-            if (existing) {
-                // Remove bookmark
-                await bookmarkService.remove(userId, resourceType, resourceId);
+            const response = await api.bookmarks.toggle(resourceType, resourceId);
+            if (!response.success || !response.data) {
                 return { bookmarked: false };
-            } else {
-                // Add bookmark
-                await bookmarkService.add(userId, resourceType, resourceId);
-                return { bookmarked: true };
             }
+            return response.data;
         } catch (error) {
             console.error('Failed to toggle bookmark:', error);
             return { bookmarked: false };
@@ -122,37 +75,25 @@ export const bookmarkService = {
     },
 
     isBookmarked: async (
-        userId: string,
+        _userId: string,
         resourceType: Bookmark['resource_type'],
         resourceId: string
     ): Promise<boolean> => {
         try {
-            const { data, error } = await supabase
-                .from('bookmarks')
-                .select('id')
-                .eq('user_id', userId)
-                .eq('resource_type', resourceType)
-                .eq('resource_id', resourceId)
-                .single();
-
-            if (error && error.code !== 'PGRST116') throw error;
-            return !!data;
+            const response = await api.bookmarks.isBookmarked(resourceType, resourceId);
+            if (!response.success || !response.data) return false;
+            return response.data.bookmarked;
         } catch (error) {
             console.error('Failed to check bookmark status:', error);
             return false;
         }
     },
 
-    getBookmarkedArticleIds: async (userId: string): Promise<string[]> => {
+    getBookmarkedArticleIds: async (_userId?: string): Promise<string[]> => {
         try {
-            const { data, error } = await supabase
-                .from('bookmarks')
-                .select('resource_id')
-                .eq('user_id', userId)
-                .eq('resource_type', 'article');
-
-            if (error) throw error;
-            return (data || []).map(b => b.resource_id);
+            const response = await api.bookmarks.getByType('article');
+            if (!response.success || !response.data) return [];
+            return (response.data as Bookmark[]).map(b => b.resource_id);
         } catch (error) {
             console.error('Failed to fetch bookmarked article IDs:', error);
             return [];

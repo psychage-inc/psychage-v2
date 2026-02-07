@@ -1,7 +1,8 @@
 import { Provider } from '../types/models';
-import { supabase } from '../lib/supabaseClient';
+import api, { ProviderProfile } from '../lib/api';
 import { useMemo } from 'react';
-import { ProviderProfile } from '../lib/api';
+
+// Fallback to mock data if API fails
 import { providers as mockProviders } from '../data/providers';
 
 export interface ProviderSearchParams {
@@ -15,217 +16,10 @@ export interface ProviderSearchParams {
     search?: string;
 }
 
-export const providerService = {
-    getAll: async (params?: ProviderSearchParams): Promise<Provider[]> => {
-        let query = supabase.from('providers').select('*');
-
-        if (params?.location) {
-            // Assuming location is "City, State" or just State
-            const state = params.location.includes(',') ? params.location.split(',')[1].trim() : params.location;
-            query = query.eq('practice_state', state);
-        }
-        if (params?.verified) {
-            query = query.eq('verification_status', 'verified');
-        }
-        if (params?.specialty) {
-            query = query.contains('specialties', [params.specialty]);
-        }
-        if (params?.insurance) {
-            query = query.contains('insurance', [params.insurance]);
-        }
-        if (params?.search) {
-            query = query.or(`full_name.ilike.%${params.search}%,practice_name.ilike.%${params.search}%`);
-        }
-
-        if (params?.page && params?.limit) {
-            const from = (params.page - 1) * params.limit;
-            const to = from + params.limit - 1;
-            query = query.range(from, to);
-        } else if (params?.limit) {
-            query = query.limit(params.limit);
-        }
-
-        const { data, error } = await query;
-        if (error) {
-            console.error('Failed to fetch providers from Supabase, using fallback:', error);
-            // Return filtered mock data as fallback
-            return filterMockProviders(mockProviders, params);
-        }
-        if (!data || data.length === 0) {
-            // If no data from DB, use mock data
-            return filterMockProviders(mockProviders, params);
-        }
-        return data.map(mapToProvider);
-    },
-
-    getById: async (id: number | string): Promise<Provider | undefined> => {
-        try {
-            const { data, error } = await supabase
-                .from('providers')
-                .select('*')
-                .eq('id', id)
-                .single();
-
-            if (error) {
-                if (error.code === 'PGRST116') {
-                    // Not found in DB, try mock data
-                    return mockProviders.find(p => p.id === Number(id) || p.id === id);
-                }
-                throw error;
-            }
-            return mapToProvider(data);
-        } catch (error) {
-            console.error('Failed to fetch provider from Supabase, using fallback:', error);
-            // Fallback to mock data
-            return mockProviders.find(p => p.id === Number(id) || p.id === id);
-        }
-    },
-
-    getLocations: async (): Promise<string[]> => {
-        try {
-            // Fetch all states for now (optimization: create RPC for distinct)
-            const { data, error } = await supabase.from('providers').select('practice_state');
-            if (error) throw error;
-
-            const states = new Set((data as { practice_state: string }[]).map(p => p.practice_state).filter(Boolean));
-            if (states.size === 0) {
-                // Fallback to mock data locations
-                const mockLocations = new Set(mockProviders.map(p => p.location.split(',')[1]?.trim()).filter(Boolean));
-                return Array.from(mockLocations).sort();
-            }
-            return Array.from(states).sort();
-        } catch (error) {
-            console.error('Failed to fetch locations, using fallback:', error);
-            // Fallback to mock data locations
-            const mockLocations = new Set(mockProviders.map(p => p.location.split(',')[1]?.trim()).filter(Boolean));
-            return Array.from(mockLocations).sort();
-        }
-    },
-
-    getSpecializations: async (): Promise<string[]> => {
-        try {
-            // Need to unnest array, but for now let's just fetch all and process in JS
-            const { data, error } = await supabase.from('providers').select('specialties');
-            if (error) throw error;
-
-            const specialties = new Set<string>();
-            (data as { specialties: string[] }[]).forEach(p => {
-                if (Array.isArray(p.specialties)) {
-                    p.specialties.forEach((s: string) => specialties.add(s));
-                }
-            });
-            if (specialties.size === 0) {
-                // Fallback to mock data
-                mockProviders.forEach(p => p.specialties.forEach(s => specialties.add(s)));
-            }
-            return Array.from(specialties).sort();
-        } catch (error) {
-            console.error('Failed to fetch specializations, using fallback:', error);
-            // Fallback to mock data
-            const specialties = new Set<string>();
-            mockProviders.forEach(p => p.specialties.forEach(s => specialties.add(s)));
-            return Array.from(specialties).sort();
-        }
-    },
-
-    getInsuranceProviders: async (): Promise<string[]> => {
-        try {
-            const { data, error } = await supabase.from('providers').select('insurance');
-            if (error) throw error;
-
-            const insurance = new Set<string>();
-            (data as { insurance: string[] }[]).forEach(p => {
-                if (Array.isArray(p.insurance)) {
-                    p.insurance.forEach((i: string) => insurance.add(i));
-                }
-            });
-            if (insurance.size === 0) {
-                // Fallback to mock data
-                mockProviders.forEach(p => p.insurance.forEach(i => insurance.add(i)));
-            }
-            return Array.from(insurance).sort();
-        } catch (error) {
-            console.error('Failed to fetch insurance, using fallback:', error);
-            // Fallback to mock data
-            const insurance = new Set<string>();
-            mockProviders.forEach(p => p.insurance.forEach(i => insurance.add(i)));
-            return Array.from(insurance).sort();
-        }
-    },
-
-    updateProfile: async (data: Partial<ProviderProfile>): Promise<void> => {
-        // In real app, we'd use providerId to secure the update
-        // For Supabase, RLS handles security (user can only update their own profile)
-        const { error } = await supabase.from('providers').update(data).select().single(); // Assuming logged in user
-        if (error) throw error;
-    },
-
-    updateAvailability: async (_data: unknown): Promise<void> => {
-        // Placeholder
-    },
-
-    verifyProvider: async (): Promise<void> => {
-        // Admin only
-    },
-
-    toggleFavorite: async (_providerId: number | string): Promise<{ favorited: boolean }> => {
-        // Placeholder
-        return { favorited: true };
-    },
-
-    getFavorites: async (): Promise<Provider[]> => {
-        return [];
-    },
-
-    submitReview: async (_providerId: number | string, _data: { rating: number; comment: string }): Promise<void> => {
-        // Placeholder
-    },
-
-    getActivity: async (_providerId: string): Promise<Record<string, unknown>[]> => {
-        // Placeholder
-        return [];
-    },
-
-    trackView: async (_providerId: number | string): Promise<void> => {
-        // Placeholder
-    },
-
-    // Admin methods
-    getAdminProviders: async (status: string): Promise<Provider[]> => {
-        try {
-            const { data, error } = await supabase
-                .from('providers')
-                .select('*')
-                .eq('verification_status', status);
-
-            if (error) throw error;
-            if (!data) return [];
-            return data.map(mapToProvider);
-        } catch (error) {
-            console.error('Failed to fetch admin providers', error);
-            // Fallback to filtering mockProviders
-            // Infer status for mock providers since they don't have it natively yet
-            return mockProviders.filter(p => {
-                const pStatus = p.verified ? 'active' : 'pending';
-                return pStatus === status;
-            }).map(p => ({ ...p, status: p.verified ? 'active' : 'pending' }));
-        }
-    },
-
-    updateProviderStatus: async (id: number | string, status: string): Promise<void> => {
-        const { error } = await supabase
-            .from('providers')
-            .update({ verification_status: status })
-            .eq('id', id);
-
-        if (error) throw error;
-    }
-};
-
 interface DBProvider {
     id: number | string;
     full_name: string;
-    role?: string; // or specific enum
+    role?: string;
     profile_photo_url?: string;
     rating?: number;
     reviews_count?: number;
@@ -241,6 +35,31 @@ interface DBProvider {
     treatment_approaches?: string | string[];
     years_of_experience?: number;
     practice_name?: string;
+}
+
+function mapToProvider(data: DBProvider): Provider {
+    return {
+        id: data.id,
+        name: data.full_name,
+        role: data.role || 'Provider',
+        image: data.profile_photo_url,
+        rating: Number(data.rating || 0),
+        reviews: data.reviews_count || 0,
+        specialties: data.specialties || [],
+        location: `${data.practice_city || ''}, ${data.practice_state || ''}`.replace(/^, |, $/g, ''),
+        availability: data.is_accepting_patients ? 'Available' : 'Full',
+        insurance: data.insurance || [],
+        verified: data.verification_status === 'verified',
+        bio: data.bio || '',
+        education: [data.credentials || ''],
+        languages: data.languages_spoken || [],
+        approach: typeof data.treatment_approaches === 'string' ? data.treatment_approaches : (data.treatment_approaches?.[0] || ''),
+        yearsExperience: data.years_of_experience || 0,
+        reviewsList: [],
+        isVideoVisit: true,
+        status: data.verification_status,
+        email: 'provider@example.com'
+    };
 }
 
 // Helper function to filter mock providers based on search params
@@ -275,30 +94,197 @@ function filterMockProviders(providers: Provider[], params?: ProviderSearchParam
     return filtered;
 }
 
-function mapToProvider(data: DBProvider): Provider {
-    return {
-        id: data.id,
-        name: data.full_name,
-        role: data.role || 'Provider',
-        image: data.profile_photo_url,
-        rating: Number(data.rating || 0),
-        reviews: data.reviews_count || 0,
-        specialties: data.specialties || [],
-        location: `${data.practice_city}, ${data.practice_state}`,
-        availability: data.is_accepting_patients ? 'Available' : 'Full',
-        insurance: data.insurance || [],
-        verified: data.verification_status === 'verified',
-        bio: data.bio || '',
-        education: [data.credentials || ''],
-        languages: data.languages_spoken || [],
-        approach: typeof data.treatment_approaches === 'string' ? data.treatment_approaches : (data.treatment_approaches?.[0] || ''),
-        yearsExperience: data.years_of_experience || 0,
-        reviewsList: [], // Mocking for now
-        isVideoVisit: true, // Default
-        status: data.verification_status,
-        email: 'provider@example.com' // Mock email as it's not in public profile
-    };
-}
+export const providerService = {
+    getAll: async (params?: ProviderSearchParams): Promise<Provider[]> => {
+        try {
+            const response = await api.providers.getAll({
+                state: params?.location,
+                specialization: params?.specialty,
+                insurance: params?.insurance,
+                page: params?.page,
+                limit: params?.limit
+            });
+
+            if (!response.success || !response.data || (response.data as DBProvider[]).length === 0) {
+                console.warn('API returned no providers, using mock data');
+                return filterMockProviders(mockProviders, params);
+            }
+
+            return (response.data as DBProvider[]).map(mapToProvider);
+        } catch (error) {
+            console.error('Failed to fetch providers from API, using fallback:', error);
+            return filterMockProviders(mockProviders, params);
+        }
+    },
+
+    getById: async (id: number | string): Promise<Provider | undefined> => {
+        try {
+            const response = await api.providers.getById(id);
+
+            if (!response.success || !response.data) {
+                return mockProviders.find(p => p.id === Number(id) || p.id === id);
+            }
+
+            return mapToProvider(response.data as DBProvider);
+        } catch (error) {
+            console.error('Failed to fetch provider from API, using fallback:', error);
+            return mockProviders.find(p => p.id === Number(id) || p.id === id);
+        }
+    },
+
+    getLocations: async (): Promise<string[]> => {
+        try {
+            // Get unique states from providers
+            const response = await api.providers.getAll({});
+            if (!response.success || !response.data) {
+                const mockLocations = new Set(mockProviders.map(p => p.location.split(',')[1]?.trim()).filter(Boolean));
+                return Array.from(mockLocations).sort();
+            }
+
+            const states = new Set((response.data as DBProvider[]).map(p => p.practice_state).filter(Boolean) as string[]);
+            if (states.size === 0) {
+                const mockLocations = new Set(mockProviders.map(p => p.location.split(',')[1]?.trim()).filter(Boolean));
+                return Array.from(mockLocations).sort();
+            }
+            return Array.from(states).sort();
+        } catch (error) {
+            console.error('Failed to fetch locations, using fallback:', error);
+            const mockLocations = new Set(mockProviders.map(p => p.location.split(',')[1]?.trim()).filter(Boolean));
+            return Array.from(mockLocations).sort();
+        }
+    },
+
+    getSpecializations: async (): Promise<string[]> => {
+        try {
+            const response = await api.providers.getSpecializations();
+            if (!response.success || !response.data || (response.data as string[]).length === 0) {
+                const specialties = new Set<string>();
+                mockProviders.forEach(p => p.specialties.forEach(s => specialties.add(s)));
+                return Array.from(specialties).sort();
+            }
+            return response.data as string[];
+        } catch (error) {
+            console.error('Failed to fetch specializations, using fallback:', error);
+            const specialties = new Set<string>();
+            mockProviders.forEach(p => p.specialties.forEach(s => specialties.add(s)));
+            return Array.from(specialties).sort();
+        }
+    },
+
+    getInsuranceProviders: async (): Promise<string[]> => {
+        try {
+            const response = await api.providers.getInsurance();
+            if (!response.success || !response.data || (response.data as string[]).length === 0) {
+                const insurance = new Set<string>();
+                mockProviders.forEach(p => p.insurance.forEach(i => insurance.add(i)));
+                return Array.from(insurance).sort();
+            }
+            return response.data as string[];
+        } catch (error) {
+            console.error('Failed to fetch insurance, using fallback:', error);
+            const insurance = new Set<string>();
+            mockProviders.forEach(p => p.insurance.forEach(i => insurance.add(i)));
+            return Array.from(insurance).sort();
+        }
+    },
+
+    updateProfile: async (data: Partial<ProviderProfile>): Promise<void> => {
+        const response = await api.provider.updateProfile(data);
+        if (!response.success) {
+            throw new Error(response.error || 'Failed to update profile');
+        }
+    },
+
+    updateAvailability: async (data: unknown): Promise<void> => {
+        const response = await api.provider.updateAvailability(data);
+        if (!response.success) {
+            throw new Error(response.error || 'Failed to update availability');
+        }
+    },
+
+    verifyProvider: async (): Promise<void> => {
+        // Admin only - placeholder
+    },
+
+    toggleFavorite: async (providerId: number | string): Promise<{ favorited: boolean }> => {
+        try {
+            const response = await api.providers.toggleFavorite(providerId);
+            if (!response.success) {
+                return { favorited: false };
+            }
+            return (response.data as { favorited: boolean }) || { favorited: true };
+        } catch (error) {
+            console.error('Failed to toggle favorite:', error);
+            return { favorited: false };
+        }
+    },
+
+    getFavorites: async (): Promise<Provider[]> => {
+        try {
+            const response = await api.providers.getFavorites();
+            if (!response.success || !response.data) {
+                return [];
+            }
+            return (response.data as DBProvider[]).map(mapToProvider);
+        } catch (error) {
+            console.error('Failed to fetch favorites:', error);
+            return [];
+        }
+    },
+
+    submitReview: async (_providerId: number | string, _data: { rating: number; comment: string }): Promise<void> => {
+        // Placeholder - implement when API is ready
+    },
+
+    getActivity: async (_providerId: string): Promise<Record<string, unknown>[]> => {
+        try {
+            const response = await api.provider.getActivity();
+            if (!response.success || !response.data) {
+                return [];
+            }
+            return response.data as Record<string, unknown>[];
+        } catch (error) {
+            console.error('Failed to fetch provider activity:', error);
+            return [];
+        }
+    },
+
+    trackView: async (providerId: number | string): Promise<void> => {
+        try {
+            await api.providers.trackView(providerId);
+        } catch (error) {
+            console.error('Failed to track provider view:', error);
+        }
+    },
+
+    // Admin methods
+    getAdminProviders: async (status: string): Promise<Provider[]> => {
+        try {
+            const response = await api.admin.getProviders({ status });
+            if (!response.success || !response.data) {
+                // Fallback to filtering mockProviders
+                return mockProviders.filter(p => {
+                    const pStatus = p.verified ? 'active' : 'pending';
+                    return pStatus === status;
+                }).map(p => ({ ...p, status: p.verified ? 'active' : 'pending' }));
+            }
+            return (response.data as DBProvider[]).map(mapToProvider);
+        } catch (error) {
+            console.error('Failed to fetch admin providers', error);
+            return mockProviders.filter(p => {
+                const pStatus = p.verified ? 'active' : 'pending';
+                return pStatus === status;
+            }).map(p => ({ ...p, status: p.verified ? 'active' : 'pending' }));
+        }
+    },
+
+    updateProviderStatus: async (id: number | string, status: string): Promise<void> => {
+        const response = await api.admin.updateProviderStatus(id, status as 'active' | 'suspended' | 'rejected');
+        if (!response.success) {
+            throw new Error(response.error || 'Failed to update provider status');
+        }
+    }
+};
 
 // Hook wrapper for React components
 export function useProviderService() {

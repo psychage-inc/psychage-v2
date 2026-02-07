@@ -1,4 +1,4 @@
-import { supabase } from '../lib/supabaseClient';
+import api from '../lib/api';
 import { useMemo } from 'react';
 
 export interface UserActivity {
@@ -24,17 +24,11 @@ export type ActionType =
     | 'signup';
 
 export const activityService = {
-    getRecentActivity: async (userId: string, limit: number = 10): Promise<UserActivity[]> => {
+    getRecentActivity: async (_userId?: string, limit: number = 10): Promise<UserActivity[]> => {
         try {
-            const { data, error } = await supabase
-                .from('user_activity')
-                .select('*')
-                .eq('user_id', userId)
-                .order('created_at', { ascending: false })
-                .limit(limit);
-
-            if (error) throw error;
-            return data || [];
+            const response = await api.activity.getRecent(limit);
+            if (!response.success || !response.data) return [];
+            return response.data as UserActivity[];
         } catch (error) {
             console.error('Failed to fetch user activity:', error);
             return [];
@@ -42,50 +36,33 @@ export const activityService = {
     },
 
     logActivity: async (
-        userId: string,
+        _userId: string,
         actionType: ActionType,
         resourceType?: string,
         resourceId?: string,
         metadata?: Record<string, unknown>
     ): Promise<boolean> => {
         try {
-            const { error } = await supabase
-                .from('user_activity')
-                .insert({
-                    user_id: userId,
-                    action_type: actionType,
-                    resource_type: resourceType,
-                    resource_id: resourceId,
-                    metadata: metadata || {}
-                });
-
-            if (error) throw error;
-            return true;
+            const response = await api.activity.log(actionType, resourceType, resourceId, metadata);
+            return response.success;
         } catch (error) {
             console.error('Failed to log activity:', error);
             return false;
         }
     },
 
-    getActivityByType: async (userId: string, actionType: ActionType, limit: number = 10): Promise<UserActivity[]> => {
+    getActivityByType: async (_userId: string, actionType: ActionType, limit: number = 10): Promise<UserActivity[]> => {
         try {
-            const { data, error } = await supabase
-                .from('user_activity')
-                .select('*')
-                .eq('user_id', userId)
-                .eq('action_type', actionType)
-                .order('created_at', { ascending: false })
-                .limit(limit);
-
-            if (error) throw error;
-            return data || [];
+            const response = await api.activity.getByType(actionType, limit);
+            if (!response.success || !response.data) return [];
+            return response.data as UserActivity[];
         } catch (error) {
             console.error('Failed to fetch activity by type:', error);
             return [];
         }
     },
 
-    getActivityStats: async (userId: string): Promise<{
+    getActivityStats: async (_userId?: string): Promise<{
         totalAssessments: number;
         articlesRead: number;
         videosWatched: number;
@@ -94,14 +71,8 @@ export const activityService = {
         daysActive: number;
     }> => {
         try {
-            const { data, error } = await supabase
-                .from('user_activity')
-                .select('action_type, created_at')
-                .eq('user_id', userId);
-
-            if (error) throw error;
-
-            if (!data || data.length === 0) {
+            const response = await api.activity.getStats();
+            if (!response.success || !response.data) {
                 return {
                     totalAssessments: 0,
                     articlesRead: 0,
@@ -111,22 +82,13 @@ export const activityService = {
                     daysActive: 0
                 };
             }
-
-            const actionCounts = data.reduce((acc: Record<string, number>, item) => {
-                acc[item.action_type] = (acc[item.action_type] || 0) + 1;
-                return acc;
-            }, {});
-
-            // Calculate unique active days
-            const uniqueDays = new Set(data.map(d => new Date(d.created_at).toDateString()));
-
-            return {
-                totalAssessments: actionCounts['assessment_completed'] || 0,
-                articlesRead: actionCounts['article_viewed'] || 0,
-                videosWatched: actionCounts['video_watched'] || 0,
-                moodLogs: actionCounts['mood_logged'] || 0,
-                sleepLogs: actionCounts['sleep_logged'] || 0,
-                daysActive: uniqueDays.size
+            return response.data as {
+                totalAssessments: number;
+                articlesRead: number;
+                videosWatched: number;
+                moodLogs: number;
+                sleepLogs: number;
+                daysActive: number;
             };
         } catch (error) {
             console.error('Failed to fetch activity stats:', error);

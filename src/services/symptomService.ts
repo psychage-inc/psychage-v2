@@ -1,4 +1,4 @@
-import { supabase } from '../lib/supabaseClient';
+import api from '../lib/api';
 import { useMemo } from 'react';
 
 export interface ConditionMatch {
@@ -30,15 +30,7 @@ export interface Symptom {
     is_crisis: boolean;
 }
 
-interface ConditionRow {
-    id: string;
-    name: string;
-    description: string;
-    recommended_action: string;
-    article_id?: number;
-}
-
-// Fallback crisis resources if DB fails
+// Fallback crisis resources if API fails
 const fallbackCrisisResources: CrisisResource[] = [
     {
         name: '988 Suicide & Crisis Lifeline',
@@ -91,44 +83,20 @@ const fallbackConditions: ConditionMatch[] = [
 export const symptomService = {
     getSymptoms: async (): Promise<Symptom[]> => {
         try {
-            const { data, error } = await supabase
-                .from('symptoms')
-                .select('*')
-                .order('category', { ascending: true });
-
-            if (error) throw error;
-            return data || [];
+            const response = await api.symptoms.getAll();
+            if (!response.success || !response.data) return [];
+            return response.data as Symptom[];
         } catch (error) {
-            console.error('Failed to fetch symptoms from Supabase:', error);
+            console.error('Failed to fetch symptoms from API:', error);
             return [];
         }
     },
 
     checkSymptoms: async (selectedIds: string[]): Promise<SymptomCheckResult> => {
         try {
-            // Check if any selected symptoms are crisis symptoms
-            const { data: crisisSymptoms, error: crisisError } = await supabase
-                .from('symptoms')
-                .select('id')
-                .in('id', selectedIds)
-                .eq('is_crisis', true);
-
-            if (crisisError) throw crisisError;
-
-            if (crisisSymptoms && crisisSymptoms.length > 0) {
-                return { conditions: [], isCrisis: true };
-            }
-
-            // Get matching conditions based on symptoms
-            const { data: conditions, error: condError } = await supabase
-                .from('conditions')
-                .select('*, condition_symptoms!inner(symptom_id)')
-                .in('condition_symptoms.symptom_id', selectedIds);
-
-            if (condError) throw condError;
-
-            if (!conditions || conditions.length === 0) {
-                // Fallback to basic matching
+            const response = await api.symptoms.check(selectedIds);
+            if (!response.success || !response.data) {
+                // Fallback logic
                 const numConditions = Math.min(selectedIds.length, 3);
                 return {
                     conditions: fallbackConditions.slice(0, numConditions).map((c, i) => ({
@@ -138,23 +106,9 @@ export const symptomService = {
                     isCrisis: false
                 };
             }
-
-            // Calculate match rates based on symptom overlap
-            const matchedConditions: ConditionMatch[] = conditions.map((cond: ConditionRow) => ({
-                id: cond.id,
-                name: cond.name,
-                matchRate: Math.min(95, 50 + (selectedIds.length * 10)),
-                description: cond.description,
-                recommendedAction: cond.recommended_action,
-                articleId: cond.article_id
-            }));
-
-            return {
-                conditions: matchedConditions.slice(0, 3),
-                isCrisis: false
-            };
+            return response.data as SymptomCheckResult;
         } catch (error) {
-            console.error('Failed to check symptoms via Supabase, using fallback:', error);
+            console.error('Failed to check symptoms via API, using fallback:', error);
             // Fallback logic
             const numConditions = Math.min(selectedIds.length, 3);
             return {
@@ -169,42 +123,24 @@ export const symptomService = {
 
     getCrisisResources: async (): Promise<CrisisResource[]> => {
         try {
-            const { data, error } = await supabase
-                .from('crisis_resources')
-                .select('*')
-                .eq('is_active', true)
-                .order('sort_order', { ascending: true });
-
-            if (error) throw error;
-            return (data || []).map(r => ({
-                id: r.id,
-                name: r.name,
-                phone: r.phone,
-                description: r.description,
-                available: r.available
-            }));
+            const response = await api.symptoms.getCrisisResources();
+            if (!response.success || !response.data) {
+                return fallbackCrisisResources;
+            }
+            return response.data as CrisisResource[];
         } catch (error) {
-            console.error('Failed to fetch crisis resources from Supabase, using fallback:', error);
+            console.error('Failed to fetch crisis resources from API, using fallback:', error);
             return fallbackCrisisResources;
         }
     },
 
     getConditions: async (): Promise<ConditionMatch[]> => {
         try {
-            const { data, error } = await supabase
-                .from('conditions')
-                .select('*')
-                .order('name', { ascending: true });
-
-            if (error) throw error;
-            return (data || []).map((c: ConditionRow) => ({
-                id: c.id,
-                name: c.name,
-                matchRate: 0,
-                description: c.description,
-                recommendedAction: c.recommended_action,
-                articleId: c.article_id
-            }));
+            const response = await api.symptoms.getConditions();
+            if (!response.success || !response.data) {
+                return fallbackConditions;
+            }
+            return response.data as ConditionMatch[];
         } catch (error) {
             console.error('Failed to fetch conditions:', error);
             return fallbackConditions;

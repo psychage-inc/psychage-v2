@@ -281,13 +281,13 @@ export const api = {
 
     getFavorites: () => api.get<unknown[]>('/api/providers/favorites'),
 
-    register: (data: Record<string, unknown>) => api.post('/api/providers/register', data),
+    register: (data: Record<string, unknown>) => api.post('/api/providers/profile/submit', data),
   },
 
-  // Provider Dashboard endpoints
+  // Provider Dashboard endpoints (uses /api/providers/ to match V1 backend)
   provider: {
-    getStats: () => api.get<ProviderStats>('/api/provider/stats'),
-    getActivity: () => api.get<unknown[]>('/api/provider/activity'),
+    getStats: () => api.get<ProviderStats>('/api/providers/dashboard'),
+    getActivity: () => api.get<unknown[]>('/api/providers/activity'),
     getAnalytics: (params?: { range?: '7d' | '30d' | '90d' | 'all' }) => {
       const searchParams = new URLSearchParams();
       if (params?.range) searchParams.set('range', params.range);
@@ -300,24 +300,24 @@ export const api = {
         conversionChange: number;
         profileCompleteness: number;
         topLocations: { location: string; percentage: number }[];
-      }>(`/api/provider/analytics?${searchParams.toString()}`);
+      }>(`/api/providers/analytics?${searchParams.toString()}`);
     },
     getPatients: (params?: { page?: number; limit?: number; search?: string }) => {
       const searchParams = new URLSearchParams();
       if (params?.page) searchParams.set('page', params.page.toString());
       if (params?.limit) searchParams.set('limit', params.limit.toString());
       if (params?.search) searchParams.set('search', params.search);
-      return api.get<unknown[]>(`/api/provider/patients?${searchParams.toString()}`);
+      return api.get<unknown[]>(`/api/providers/patients?${searchParams.toString()}`);
     },
     getAppointments: (params?: { start?: string; end?: string }) => {
       const searchParams = new URLSearchParams();
       if (params?.start) searchParams.set('start', params.start);
       if (params?.end) searchParams.set('end', params.end);
-      return api.get<unknown[]>(`/api/provider/appointments?${searchParams.toString()}`);
+      return api.get<unknown[]>(`/api/providers/appointments?${searchParams.toString()}`);
     },
-    getProfile: () => api.get<ProviderProfile>('/api/provider/profile'),
-    updateProfile: (data: Partial<ProviderProfile>) => api.put<ProviderProfile>('/api/provider/profile', data),
-    updateAvailability: (availability: unknown) => api.put('/api/provider/availability', availability),
+    getProfile: () => api.get<ProviderProfile>('/api/providers/profile'),
+    updateProfile: (data: Partial<ProviderProfile>) => api.put<ProviderProfile>('/api/providers/profile', data),
+    updateAvailability: (availability: unknown) => api.put('/api/providers/availability', availability),
   },
 
   // Article endpoints
@@ -358,7 +358,7 @@ export const api = {
     getProfile: () => api.get<User & { location?: string }>('/api/user/profile'),
     updateProfile: (data: Partial<User & { location?: string }>) => api.put<User>('/api/user/profile', data),
     getActivity: () => api.get<Record<string, unknown>[]>('/api/user/activity'),
-    changePassword: (data: Record<string, unknown>) => api.post('/api/auth/change-password', data),
+    changePassword: (data: Record<string, unknown>) => api.post('/api/user/password', data),
     uploadAvatar: async (file: File) => {
       const formData = new FormData();
       formData.append('avatar', file);
@@ -367,7 +367,7 @@ export const api = {
       const headers: Record<string, string> = {};
       if (token) headers['Authorization'] = `Bearer ${token}`;
 
-      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:3000'}/api/upload/avatar`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:3000'}/api/user/photo`, {
         method: 'POST',
         headers,
         body: formData
@@ -403,7 +403,7 @@ export const api = {
   mood: {
     getEntries: () => api.get<unknown[]>('/api/mood'),
 
-    createEntry: (data: { value: number; notes?: string }) =>
+    createEntry: (data: { mood_rating: number; notes?: string; entry_date: string }) =>
       api.post<unknown>('/api/mood', data),
   },
 
@@ -411,10 +411,70 @@ export const api = {
   sleep: {
     getEntries: () => api.get<unknown[]>('/api/sleep'),
 
-    createEntry: (data: { hours: number; quality: number; notes?: string }) =>
+    createEntry: (data: { hours: number; quality: number; notes?: string; bed_time?: string; wake_time?: string; date?: string }) =>
       api.post<unknown>('/api/sleep', data),
 
-    getAverages: () => api.get<unknown>('/api/sleep/averages'),
+    updateEntry: (id: string, data: { hours?: number; quality?: number; notes?: string; bed_time?: string; wake_time?: string }) =>
+      api.put<unknown>(`/api/sleep/${id}`, data),
+
+    deleteEntry: (id: string) => api.delete<void>(`/api/sleep/${id}`),
+
+    getAverages: (days?: number) => api.get<unknown>(`/api/sleep/averages${days ? `?days=${days}` : ''}`),
+
+    getStats: () => api.get<unknown>('/api/sleep/stats'),
+  },
+
+  // Tools endpoints
+  tools: {
+    getAll: () => api.get<unknown[]>('/api/tools'),
+
+    getById: (id: number) => api.get<unknown>(`/api/tools/${id}`),
+
+    getByCategory: (category: string) => api.get<unknown[]>(`/api/tools?category=${category}`),
+  },
+
+  // Symptoms endpoints
+  symptoms: {
+    getAll: () => api.get<unknown[]>('/api/symptoms'),
+
+    check: (symptomIds: string[]) =>
+      api.post<{ conditions: unknown[]; isCrisis: boolean }>('/api/symptoms/check', { symptomIds }),
+
+    getConditions: () => api.get<unknown[]>('/api/conditions'),
+
+    getCrisisResources: () => api.get<unknown[]>('/api/crisis-resources'),
+  },
+
+  // Bookmarks endpoints (general)
+  bookmarks: {
+    getAll: () => api.get<unknown[]>('/api/bookmarks'),
+
+    getByType: (resourceType: string) => api.get<unknown[]>(`/api/bookmarks?type=${resourceType}`),
+
+    add: (resourceType: string, resourceId: string) =>
+      api.post<unknown>('/api/bookmarks', { resource_type: resourceType, resource_id: resourceId }),
+
+    remove: (resourceType: string, resourceId: string) =>
+      api.delete<void>(`/api/bookmarks?type=${resourceType}&id=${resourceId}`),
+
+    toggle: (resourceType: string, resourceId: string) =>
+      api.post<{ bookmarked: boolean }>('/api/bookmarks/toggle', { resource_type: resourceType, resource_id: resourceId }),
+
+    isBookmarked: (resourceType: string, resourceId: string) =>
+      api.get<{ bookmarked: boolean }>(`/api/bookmarks/check?type=${resourceType}&id=${resourceId}`),
+  },
+
+  // Activity endpoints
+  activity: {
+    getRecent: (limit?: number) => api.get<unknown[]>(`/api/user/activity${limit ? `?limit=${limit}` : ''}`),
+
+    log: (actionType: string, resourceType?: string, resourceId?: string, metadata?: Record<string, unknown>) =>
+      api.post<void>('/api/user/activity', { action_type: actionType, resource_type: resourceType, resource_id: resourceId, metadata }),
+
+    getByType: (actionType: string, limit?: number) =>
+      api.get<unknown[]>(`/api/user/activity?action_type=${actionType}${limit ? `&limit=${limit}` : ''}`),
+
+    getStats: () => api.get<unknown>('/api/user/activity/stats'),
   },
 };
 

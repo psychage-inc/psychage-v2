@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, LayoutGroup } from 'framer-motion';
 import { Search, Menu, ChevronDown, User, X, LogOut, LayoutDashboard, Settings } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import NavMenu from './NavMenu';
@@ -12,6 +12,7 @@ const Navigation: React.FC = () => {
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
     const [activeTab, setActiveTab] = useState<string | null>(null);
+    const [hoveredLink, setHoveredLink] = useState<string | null>(null);
     const [isScrolled, setIsScrolled] = useState(false);
     const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
 
@@ -139,7 +140,7 @@ const Navigation: React.FC = () => {
             >
                 <div
                     className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative z-50"
-                    onMouseEnter={handleMenuEnter}
+                    onMouseLeave={() => setHoveredLink(null)}
                 >
                     {/* Logo */}
                     <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigate('/')}>
@@ -152,40 +153,56 @@ const Navigation: React.FC = () => {
 
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex items-center gap-1">
-                        {navLinks.map((link) => (
-                            <div key={link.name}>
-                                {link.hasMenu ? (
-                                    <button
-                                        onMouseEnter={() => handleMouseEnter(link.name)}
-                                        className={`px-4 py-2 rounded-full text-sm font-bold transition-all duration-200 flex items-center gap-1.5 ${activeTab === link.name
-                                            ? 'bg-gray-100 text-gray-900'
-                                            : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
-                                            }`}
-                                        aria-expanded={activeTab === link.name}
-                                        aria-haspopup="menu"
-                                        aria-label={`${link.name} menu`}
-                                    >
-                                        {link.name}
-                                        <ChevronDown
-                                            size={14}
-                                            className={`transition-transform duration-200 ${activeTab === link.name ? 'rotate-180' : ''}`}
-                                            aria-hidden="true"
-                                        />
-                                    </button>
-                                ) : (
-                                    <div
-                                        onMouseEnter={() => handleMouseEnter('')}
-                                    >
+                        <LayoutGroup>
+                            {navLinks.map((link) => (
+                                <div key={link.name} className="relative">
+                                    {link.hasMenu ? (
                                         <button
-                                            onClick={() => navigate(link.href!)}
-                                            className="px-4 py-2 rounded-full text-sm font-bold text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all"
+                                            onMouseEnter={() => { handleMouseEnter(link.name); setHoveredLink(link.name); }}
+                                            className={`relative px-4 py-2 rounded-full text-sm font-bold transition-colors duration-200 flex items-center gap-1.5 z-10 ${activeTab === link.name || hoveredLink === link.name
+                                                ? 'text-gray-900'
+                                                : 'text-gray-600'
+                                                }`}
+                                            aria-expanded={activeTab === link.name}
+                                            aria-haspopup="menu"
+                                            aria-label={`${link.name} menu`}
                                         >
+                                            {activeTab === link.name && (
+                                                <motion.div
+                                                    layoutId="nav-bg"
+                                                    className="absolute inset-0 bg-gray-100 rounded-full -z-10"
+                                                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                                                />
+                                            )}
                                             {link.name}
+                                            <ChevronDown
+                                                size={14}
+                                                className={`transition-transform duration-200 ${activeTab === link.name ? 'rotate-180' : ''}`}
+                                                aria-hidden="true"
+                                            />
                                         </button>
-                                    </div>
-                                )}
-                            </div>
-                        ))}
+                                    ) : (
+                                        <div
+                                            onMouseEnter={() => { handleMouseEnter(''); setHoveredLink(link.name); }}
+                                        >
+                                            <button
+                                                onClick={() => navigate(link.href!)}
+                                                className={`relative px-4 py-2 rounded-full text-sm font-bold transition-colors duration-200 z-10 ${hoveredLink === link.name ? 'text-gray-900' : 'text-gray-600'}`}
+                                            >
+                                                {hoveredLink === link.name && (
+                                                    <motion.div
+                                                        layoutId="nav-bg"
+                                                        className="absolute inset-0 bg-gray-100 rounded-full -z-10"
+                                                        transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                                                    />
+                                                )}
+                                                {link.name}
+                                            </button>
+                                        </div>
+                                    )}
+                                </div>
+                            ))}
+                        </LayoutGroup>
                     </nav>
 
                     {/* Right Actions */}

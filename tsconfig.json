@@ -24,8 +24,16 @@
       ]
     },
     "allowImportingTsExtensions": true,
-    "noEmit": true
+    "noEmit": true,
+    "resolveJsonModule": true
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "e2e", "dist", "src/tests"]
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "e2e",
+    "dist",
+    "src/tests"
+  ]
 }

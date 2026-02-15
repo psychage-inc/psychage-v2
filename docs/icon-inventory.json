@@ -1,0 +1,394 @@
+{
+  "project": {
+    "name": "Psychage",
+    "platform": "Web",
+    "tech_stack": "React 18.3.1 + TypeScript 5.5.3 + Vite",
+    "current_icon_library": "lucide-react v0.414.0",
+    "analysis_date": "2026-02-15"
+  },
+  "total_unique_icons": 97,
+  "categories": {
+    "navigation": [
+      { "name": "arrow-left", "lucide_name": "ArrowLeft", "intent": "Navigate back/previous" },
+      { "name": "arrow-right", "lucide_name": "ArrowRight", "intent": "Navigate forward/next/CTA" },
+      { "name": "arrow-up", "lucide_name": "ArrowUp", "intent": "Trending up indicator" },
+      { "name": "arrow-down", "lucide_name": "ArrowDown", "intent": "Trending down indicator" },
+      { "name": "arrow-up-right", "lucide_name": "ArrowUpRight", "intent": "External link/positive trend" },
+      { "name": "chevron-left", "lucide_name": "ChevronLeft", "intent": "Previous page/collapse" },
+      { "name": "chevron-right", "lucide_name": "ChevronRight", "intent": "Next page/expand/drill-down" },
+      { "name": "chevron-down", "lucide_name": "ChevronDown", "intent": "Dropdown/accordion expand" },
+      { "name": "menu", "lucide_name": "Menu", "intent": "Mobile navigation toggle" },
+      { "name": "home", "lucide_name": "Home", "intent": "Home page navigation" },
+      { "name": "external-link", "lucide_name": "ExternalLink", "intent": "Opens in new window" }
+    ],
+    "actions": [
+      { "name": "search", "lucide_name": "Search", "intent": "Search functionality" },
+      { "name": "filter", "lucide_name": "Filter", "intent": "Filter/refine results" },
+      { "name": "plus", "lucide_name": "Plus", "intent": "Add new item" },
+      { "name": "edit", "lucide_name": "Edit", "intent": "Edit/modify content" },
+      { "name": "save", "lucide_name": "Save", "intent": "Save changes" },
+      { "name": "trash", "lucide_name": "Trash2", "intent": "Delete item" },
+      { "name": "download", "lucide_name": "Download", "intent": "Download/export" },
+      { "name": "upload", "lucide_name": "Upload", "intent": "Upload file" },
+      { "name": "refresh", "lucide_name": "RefreshCw", "intent": "Retry/refresh action" },
+      { "name": "close", "lucide_name": "X", "intent": "Close modal/dismiss" },
+      { "name": "more-options", "lucide_name": "MoreVertical", "intent": "Options menu" },
+      { "name": "share", "lucide_name": "Share2", "intent": "Share content" },
+      { "name": "bookmark", "lucide_name": "Bookmark", "intent": "Save/bookmark item" },
+      { "name": "bookmark-filled", "lucide_name": "BookMarked", "intent": "Saved/bookmarked state" },
+      { "name": "send", "lucide_name": "Send", "intent": "Submit/send message" },
+      { "name": "ban", "lucide_name": "Ban", "intent": "Block/restrict" },
+      { "name": "attach", "lucide_name": "Paperclip", "intent": "Attach file" },
+      { "name": "play", "lucide_name": "Play", "intent": "Play video/media" },
+      { "name": "thumbs-up", "lucide_name": "ThumbsUp", "intent": "Like/approve" }
+    ],
+    "status": [
+      { "name": "check", "lucide_name": "Check", "intent": "Checkmark/selected" },
+      { "name": "check-circle", "lucide_name": "CheckCircle", "intent": "Success state" },
+      { "name": "check-circle-filled", "lucide_name": "CheckCircle2", "intent": "Success confirmed" },
+      { "name": "alert-circle", "lucide_name": "AlertCircle", "intent": "Warning/attention" },
+      { "name": "alert-triangle", "lucide_name": "AlertTriangle", "intent": "Error/danger state" },
+      { "name": "info", "lucide_name": "Info", "intent": "Information tooltip" },
+      { "name": "help-circle", "lucide_name": "HelpCircle", "intent": "Help/support info" },
+      { "name": "loader", "lucide_name": "Loader2", "intent": "Loading spinner" },
+      { "name": "trending-up", "lucide_name": "TrendingUp", "intent": "Positive progress" }
+    ],
+    "communication": [
+      { "name": "mail", "lucide_name": "Mail", "intent": "Email/contact" },
+      { "name": "phone", "lucide_name": "Phone", "intent": "Phone/call" },
+      { "name": "message-square", "lucide_name": "MessageSquare", "intent": "Chat/messaging" },
+      { "name": "message-circle", "lucide_name": "MessageCircle", "intent": "Conversation/therapy" },
+      { "name": "bot", "lucide_name": "Bot", "intent": "AI assistant" }
+    ],
+    "media": [
+      { "name": "camera", "lucide_name": "Camera", "intent": "Photo upload" },
+      { "name": "image", "lucide_name": "Image", "intent": "Image file" },
+      { "name": "video", "lucide_name": "Video", "intent": "Video consultation" }
+    ],
+    "system": [
+      { "name": "settings", "lucide_name": "Settings", "intent": "User preferences" },
+      { "name": "lock", "lucide_name": "Lock", "intent": "Password/security" },
+      { "name": "user", "lucide_name": "User", "intent": "User profile" },
+      { "name": "user-plus", "lucide_name": "UserPlus", "intent": "Add user" },
+      { "name": "users", "lucide_name": "Users", "intent": "Multiple people/community" },
+      { "name": "users-alt", "lucide_name": "Users2", "intent": "Community variant" },
+      { "name": "user-square", "lucide_name": "UserSquare2", "intent": "Provider profile" },
+      { "name": "dashboard", "lucide_name": "LayoutDashboard", "intent": "Dashboard view" },
+      { "name": "layout", "lucide_name": "Layout", "intent": "Layout variant" },
+      { "name": "globe", "lucide_name": "Globe", "intent": "Global/international" },
+      { "name": "languages", "lucide_name": "Languages", "intent": "Language selection" },
+      { "name": "calendar", "lucide_name": "Calendar", "intent": "Date/scheduling" },
+      { "name": "clock", "lucide_name": "Clock", "intent": "Time/duration" },
+      { "name": "file-text", "lucide_name": "FileText", "intent": "Document/report" },
+      { "name": "history", "lucide_name": "History", "intent": "Past records" },
+      { "name": "logout", "lucide_name": "LogOut", "intent": "Sign out" },
+      { "name": "location", "lucide_name": "MapPin", "intent": "Location/geography" },
+      { "name": "star", "lucide_name": "Star", "intent": "Rating/favorite" },
+      { "name": "eye", "lucide_name": "Eye", "intent": "View count/visibility" },
+      { "name": "credit-card", "lucide_name": "CreditCard", "intent": "Payment method" },
+      { "name": "building", "lucide_name": "Building", "intent": "Organization/business" }
+    ],
+    "domain_specific": {
+      "mental_health_core": [
+        { "name": "brain", "lucide_name": "Brain", "intent": "Mental health/cognition", "usage": "Neurodiversity, general mental health" },
+        { "name": "brain-circuit", "lucide_name": "BrainCircuit", "intent": "Assessment tool", "usage": "Clarity Score, mental assessments" },
+        { "name": "heart", "lucide_name": "Heart", "intent": "Emotional wellness/relationships", "usage": "Relationships category, favorites" },
+        { "name": "heart-handshake", "lucide_name": "HeartHandshake", "intent": "Care/connection", "usage": "Provider matching" },
+        { "name": "activity", "lucide_name": "Activity", "intent": "Health metrics", "usage": "Psychosis category, vital stats" },
+        { "name": "stethoscope", "lucide_name": "Stethoscope", "intent": "Medical consultation", "usage": "Provider features" }
+      ],
+      "wellness_tools": [
+        { "name": "moon", "lucide_name": "Moon", "intent": "Sleep/mood", "usage": "Sleep Architect, Mood Disorders" },
+        { "name": "sun", "lucide_name": "Sun", "intent": "Wellness/energy", "usage": "Holistic Wellness category" },
+        { "name": "wind", "lucide_name": "Wind", "intent": "Breathwork", "usage": "Breathwork tool" },
+        { "name": "leaf", "lucide_name": "Leaf", "intent": "Mindfulness/nature", "usage": "Mindfulness category" },
+        { "name": "coffee", "lucide_name": "Coffee", "intent": "Morning routine", "usage": "Sleep architecture" },
+        { "name": "thermometer", "lucide_name": "Thermometer", "intent": "Health metrics", "usage": "Sleep tracking" },
+        { "name": "pen-tool", "lucide_name": "PenTool", "intent": "Journaling", "usage": "Mood Journal tool" }
+      ],
+      "conditions": [
+        { "name": "cloud-rain", "lucide_name": "CloudRain", "intent": "Anxiety/grief", "usage": "Anxiety Disorders, Grief & Loss" },
+        { "name": "anchor", "lucide_name": "Anchor", "intent": "Addiction/grounding", "usage": "Addiction & Recovery" },
+        { "name": "scale", "lucide_name": "Scale", "intent": "Balance/eating", "usage": "Eating Disorders" },
+        { "name": "fingerprint", "lucide_name": "Fingerprint", "intent": "Identity/personality", "usage": "Personality Disorders" },
+        { "name": "smartphone", "lucide_name": "Smartphone", "intent": "Digital wellness", "usage": "Digital Wellbeing category" }
+      ],
+      "safety_crisis": [
+        { "name": "shield", "lucide_name": "Shield", "intent": "Protection/trauma", "usage": "Trauma & PTSD category" },
+        { "name": "shield-check", "lucide_name": "ShieldCheck", "intent": "Verified/secure", "usage": "Provider verification" },
+        { "name": "shield-alert", "lucide_name": "ShieldAlert", "intent": "Crisis/emergency", "usage": "Crisis Support tool" },
+        { "name": "life-buoy", "lucide_name": "LifeBuoy", "intent": "Support/medication", "usage": "Medication category" }
+      ],
+      "professional": [
+        { "name": "graduation-cap", "lucide_name": "GraduationCap", "intent": "Credentials/education", "usage": "Provider qualifications" },
+        { "name": "briefcase", "lucide_name": "Briefcase", "intent": "Workplace/professional", "usage": "Workplace Health category" },
+        { "name": "bar-chart", "lucide_name": "BarChart2", "intent": "Analytics/results", "usage": "Assessment results" },
+        { "name": "bar-chart-alt", "lucide_name": "BarChart3", "intent": "Provider analytics", "usage": "Provider dashboard" }
+      ],
+      "content_learning": [
+        { "name": "book-open", "lucide_name": "BookOpen", "intent": "Learning/articles", "usage": "Learn section" },
+        { "name": "lightbulb", "lucide_name": "Lightbulb", "intent": "Tips/insights", "usage": "Article highlights" },
+        { "name": "quote", "lucide_name": "Quote", "intent": "Citations/quotes", "usage": "Article blockquotes" },
+        { "name": "wrench", "lucide_name": "Wrench", "intent": "Tools section", "usage": "Tools navigation" },
+        { "name": "zap", "lucide_name": "Zap", "intent": "Energy/quick action", "usage": "Featured content, mood tracking" }
+      ],
+      "identity": [
+        { "name": "sparkles", "lucide_name": "Sparkles", "intent": "LGBTQ+/premium", "usage": "LGBTQ+ Support, premium features" }
+      ],
+      "auth": [
+        { "name": "github", "lucide_name": "Github", "intent": "GitHub OAuth", "usage": "Social login" },
+        { "name": "chrome", "lucide_name": "Chrome", "intent": "Google OAuth", "usage": "Social login" }
+      ]
+    }
+  },
+  "usage_frequency": {
+    "ArrowRight": 24,
+    "CheckCircle2": 14,
+    "X": 13,
+    "ArrowLeft": 12,
+    "AlertCircle": 12,
+    "ChevronRight": 12,
+    "Search": 11,
+    "AlertTriangle": 10,
+    "Loader2": 9,
+    "Calendar": 9,
+    "Users": 9,
+    "Mail": 8,
+    "Clock": 8,
+    "BrainCircuit": 8,
+    "Moon": 8,
+    "ShieldAlert": 7,
+    "CheckCircle": 7,
+    "User": 7,
+    "MapPin": 7,
+    "Lock": 6,
+    "Bookmark": 6,
+    "FileText": 6,
+    "PenTool": 6,
+    "Heart": 6,
+    "Brain": 6,
+    "Sparkles": 6,
+    "ShieldCheck": 6,
+    "LayoutDashboard": 5,
+    "Settings": 5,
+    "TrendingUp": 5,
+    "Video": 5,
+    "Star": 5,
+    "RefreshCw": 5,
+    "LogOut": 5,
+    "Filter": 5,
+    "BarChart3": 4,
+    "UserSquare2": 4,
+    "Share2": 4,
+    "ChevronDown": 4,
+    "Activity": 4,
+    "MessageSquare": 4,
+    "Phone": 4,
+    "Check": 4,
+    "Download": 3,
+    "Wind": 3,
+    "Shield": 3,
+    "GraduationCap": 3,
+    "Trash2": 3,
+    "BookOpen": 3,
+    "Send": 3,
+    "Play": 3,
+    "Globe": 3,
+    "BarChart2": 3,
+    "History": 2,
+    "Upload": 2,
+    "Languages": 2,
+    "Save": 2,
+    "Bot": 2,
+    "Sun": 2,
+    "Leaf": 2,
+    "Briefcase": 2,
+    "Home": 2,
+    "ArrowUp": 2,
+    "ArrowDown": 2,
+    "Plus": 2,
+    "Info": 2,
+    "CloudRain": 2,
+    "Menu": 2,
+    "Zap": 2,
+    "HeartHandshake": 2,
+    "ChevronLeft": 2,
+    "ExternalLink": 2,
+    "ArrowUpRight": 1,
+    "Quote": 1,
+    "Lightbulb": 1,
+    "LifeBuoy": 1,
+    "MessageCircle": 1,
+    "Anchor": 1,
+    "Fingerprint": 1,
+    "Scale": 1,
+    "Smartphone": 1,
+    "CreditCard": 1,
+    "Eye": 1,
+    "Stethoscope": 1,
+    "Thermometer": 1,
+    "Coffee": 1,
+    "Camera": 1,
+    "Image": 1,
+    "MoreVertical": 1,
+    "UserPlus": 1,
+    "Building": 1,
+    "Users2": 1,
+    "Layout": 1,
+    "BookMarked": 1,
+    "Paperclip": 1,
+    "ThumbsUp": 1,
+    "Ban": 1,
+    "Wrench": 1,
+    "HelpCircle": 1,
+    "Github": 1,
+    "Chrome": 1
+  },
+  "duplicate_intents": [
+    {
+      "intent": "Success/completion state",
+      "icons": ["Check", "CheckCircle", "CheckCircle2"],
+      "recommendation": "Consolidate to 2: 'check' (inline), 'check-circle' (standalone success)"
+    },
+    {
+      "intent": "Warning/alert",
+      "icons": ["AlertCircle", "AlertTriangle"],
+      "recommendation": "Keep both: 'alert-circle' (info-level), 'alert-triangle' (danger-level)"
+    },
+    {
+      "intent": "User groups",
+      "icons": ["Users", "Users2"],
+      "recommendation": "Consolidate to 1: 'users' (community/team)"
+    },
+    {
+      "intent": "Shield variants",
+      "icons": ["Shield", "ShieldCheck", "ShieldAlert"],
+      "recommendation": "Keep all 3: each serves distinct semantic purpose"
+    },
+    {
+      "intent": "Bar charts",
+      "icons": ["BarChart2", "BarChart3"],
+      "recommendation": "Consolidate to 1: 'bar-chart' (analytics)"
+    },
+    {
+      "intent": "Arrow navigation",
+      "icons": ["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", "ArrowUpRight"],
+      "recommendation": "Keep all: directional variants needed"
+    },
+    {
+      "intent": "Chevron navigation",
+      "icons": ["ChevronLeft", "ChevronRight", "ChevronDown"],
+      "recommendation": "Keep all: breadcrumbs/accordions need all variants"
+    },
+    {
+      "intent": "Message types",
+      "icons": ["MessageSquare", "MessageCircle"],
+      "recommendation": "Consolidate to 1: 'message' (chat/messaging)"
+    }
+  ],
+  "recommended_naming_convention": "kebab-case with semantic prefixes: {category}-{name}[-variant]. Examples: nav-arrow-left, action-search, status-check-circle, domain-brain-circuit. Avoid library-specific names (lucide, heroicons). Use intent-based names that describe function, not appearance.",
+  "animated_candidates": {
+    "always_animate": [
+      { "name": "loader", "animation": "Continuous rotation (360°)", "duration": "1000ms infinite" },
+      { "name": "refresh", "animation": "Clockwise spin on trigger", "duration": "600ms ease-out" }
+    ],
+    "state_transitions": [
+      { "name": "check-circle", "animation": "Scale in with checkmark draw", "states": ["unchecked", "checked"], "duration": "300ms" },
+      { "name": "bookmark", "animation": "Fill transition + slight scale", "states": ["unsaved", "saved"], "duration": "250ms" },
+      { "name": "heart", "animation": "Pulse/beat on toggle", "states": ["unfavorited", "favorited"], "duration": "300ms" },
+      { "name": "star", "animation": "Rotate + fill", "states": ["unrated", "rated"], "duration": "350ms" },
+      { "name": "thumbs-up", "animation": "Bounce up", "states": ["unliked", "liked"], "duration": "300ms" },
+      { "name": "moon", "animation": "Crescent to full transition", "states": ["sleep-off", "sleep-on"], "duration": "400ms" },
+      { "name": "menu", "animation": "Hamburger to X morph", "states": ["closed", "open"], "duration": "300ms" },
+      { "name": "chevron-down", "animation": "180° rotation", "states": ["collapsed", "expanded"], "duration": "200ms" },
+      { "name": "eye", "animation": "Blink/reveal", "states": ["hidden", "visible"], "duration": "250ms" },
+      { "name": "lock", "animation": "Shackle open/close", "states": ["locked", "unlocked"], "duration": "300ms" }
+    ],
+    "hover_micro_animations": [
+      { "name": "arrow-right", "animation": "Slide right 4px", "trigger": "hover" },
+      { "name": "external-link", "animation": "Slight diagonal move", "trigger": "hover" },
+      { "name": "send", "animation": "Tilt + slide right", "trigger": "hover" },
+      { "name": "download", "animation": "Bounce down", "trigger": "hover" },
+      { "name": "upload", "animation": "Bounce up", "trigger": "hover" },
+      { "name": "search", "animation": "Gentle pulse", "trigger": "focus" },
+      { "name": "play", "animation": "Scale up slightly", "trigger": "hover" },
+      { "name": "trash", "animation": "Subtle shake", "trigger": "hover" },
+      { "name": "edit", "animation": "Pencil write motion", "trigger": "hover" }
+    ],
+    "attention_seekers": [
+      { "name": "alert-triangle", "animation": "Subtle pulse glow", "context": "Error states" },
+      { "name": "alert-circle", "animation": "Ring pulse", "context": "Warning banners" },
+      { "name": "phone", "animation": "Vibrate/ring", "context": "Crisis hotline CTA" },
+      { "name": "sparkles", "animation": "Twinkle/shimmer", "context": "Premium features" },
+      { "name": "zap", "animation": "Electric pulse", "context": "Featured content" },
+      { "name": "brain-circuit", "animation": "Neural network pulse", "context": "Assessment start" },
+      { "name": "bot", "animation": "Typing indicator dots", "context": "AI response" }
+    ],
+    "static_recommended": [
+      { "name": "All navigation arrows/chevrons", "reason": "Micro-animations sufficient, no Lottie needed" },
+      { "name": "All system icons (settings, user, etc.)", "reason": "Static clarity preferred" },
+      { "name": "Content icons (book-open, file-text)", "reason": "No semantic state change" },
+      { "name": "Location/globe icons", "reason": "Static context indicators" }
+    ]
+  },
+  "implementation_recommendations": {
+    "total_lottie_files_needed": {
+      "minimum": 72,
+      "with_all_variants": 97,
+      "with_animations": 115
+    },
+    "priority_tiers": {
+      "tier_1_critical": [
+        "loader", "check-circle", "alert-triangle", "alert-circle", "search",
+        "menu", "close", "arrow-right", "arrow-left", "chevron-down",
+        "brain-circuit", "heart", "bookmark", "user", "settings"
+      ],
+      "tier_2_high_usage": [
+        "calendar", "clock", "mail", "phone", "lock", "moon", "shield-alert",
+        "users", "star", "map-pin", "video", "filter", "refresh", "download"
+      ],
+      "tier_3_domain": [
+        "brain", "pen-tool", "wind", "leaf", "sun", "shield-check",
+        "graduation-cap", "briefcase", "bar-chart", "stethoscope", "sparkles"
+      ],
+      "tier_4_low_usage": [
+        "All remaining icons with usage count <= 2"
+      ]
+    },
+    "color_system": {
+      "tokens": [
+        { "name": "--icon-primary", "usage": "Default icon color" },
+        { "name": "--icon-secondary", "usage": "Muted/less emphasis" },
+        { "name": "--icon-success", "usage": "Check states, positive" },
+        { "name": "--icon-warning", "usage": "Alert circle, caution" },
+        { "name": "--icon-error", "usage": "Alert triangle, danger" },
+        { "name": "--icon-disabled", "usage": "Inactive states" },
+        { "name": "--icon-inverse", "usage": "On dark backgrounds" }
+      ],
+      "recommendation": "Export Lottie files with single fill color, apply colors via CSS filter or Lottie color property at runtime"
+    },
+    "file_structure": {
+      "recommended": "/src/assets/icons/lottie/{category}/{icon-name}.json",
+      "example": [
+        "/src/assets/icons/lottie/navigation/arrow-left.json",
+        "/src/assets/icons/lottie/actions/search.json",
+        "/src/assets/icons/lottie/status/check-circle.json",
+        "/src/assets/icons/lottie/domain/brain-circuit.json"
+      ]
+    }
+  },
+  "usage_by_location": {
+    "navigation_header": ["menu", "search", "user", "chevron-down", "logout", "settings"],
+    "sidebar": ["dashboard", "history", "bookmark", "settings", "users", "bar-chart", "user-square", "shield-alert", "file-text"],
+    "hero_sections": ["arrow-right", "play", "brain", "sparkles", "check", "trending-up"],
+    "cards": ["clock", "calendar", "bookmark", "arrow-up-right", "star", "map-pin", "video", "shield-check"],
+    "forms": ["mail", "lock", "user", "alert-circle", "check-circle", "eye", "camera", "upload"],
+    "modals": ["close", "check-circle", "alert-triangle", "send", "calendar", "chevron-left", "chevron-right"],
+    "tools": ["brain-circuit", "pen-tool", "moon", "wind", "users", "shield-alert"],
+    "categories": ["cloud-rain", "moon", "shield", "brain", "fingerprint", "anchor", "scale", "activity", "sun", "leaf", "smartphone", "heart", "briefcase", "home", "users", "sparkles", "message-circle", "life-buoy"],
+    "crisis_resources": ["alert-circle", "phone", "message-square", "globe", "heart", "alert-triangle", "external-link"],
+    "provider_profiles": ["map-pin", "star", "clock", "languages", "video", "shield-check", "message-square", "graduation-cap"],
+    "toast_notifications": ["check-circle", "alert-triangle", "info", "alert-circle", "close"],
+    "empty_states": ["search", "bookmark", "file-text"]
+  }
+}

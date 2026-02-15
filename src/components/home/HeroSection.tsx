@@ -6,6 +6,7 @@ import Magnetic from '@/components/ui/Magnetic';
 import { useNavigate } from 'react-router-dom';
 import MeshGradient from '@/components/ui/MeshGradient';
 import HeroInsightCard from './hero/HeroInsightCard';
+import Hero3D from './Hero3D';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 
 const HeroSection: React.FC = () => {
@@ -25,6 +26,7 @@ const HeroSection: React.FC = () => {
         >
             {/* Mesh Gradient Background */}
             <MeshGradient className="opacity-60 dark:opacity-40" />
+            {!prefersReducedMotion && <Hero3D className="opacity-60" />}
 
             <div className="container mx-auto px-4 relative z-10 grid lg:grid-cols-2 gap-12 items-center w-full max-w-7xl">
 

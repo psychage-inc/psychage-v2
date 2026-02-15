@@ -64,32 +64,40 @@ const NavMenu: React.FC<NavMenuProps> = ({ activeTab, onMouseLeave, onNavigateGe
             className="grid grid-cols-1 md:grid-cols-2 gap-8"
           >
             {currentSection.sections?.map((section, idx) => (
-              <div key={idx} className="space-y-4">
+              <motion.div
+                key={idx}
+                className="space-y-4"
+                variants={{
+                  hidden: { opacity: 0 },
+                  show: { opacity: 1, transition: { staggerChildren: 0.05 } }
+                }}
+              >
                 <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider">{section.title}</h3>
                 <div className="grid gap-4">
                   {section.items.map((item) => {
                     const Icon = iconMap[item.icon] || iconMap.default;
                     return (
-                      <Link
-                        key={item.id}
-                        to={item.href}
-                        onClick={() => onNavigateGeneric?.(item.href)}
-                        className="group relative flex items-start gap-4 p-3 rounded-2xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-200"
-                      >
-                        <div className="w-10 h-10 shrink-0 rounded-xl bg-white dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700 p-2 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center text-teal-600">
-                          <Icon size={20} />
-                        </div>
-                        <div>
-                          <h4 className="font-bold text-sm text-gray-900 dark:text-white leading-tight group-hover:text-teal-600 transition-colors">
-                            {item.label}
-                          </h4>
-                          <p className="text-xs text-gray-500 mt-0.5">{item.description}</p>
-                        </div>
-                      </Link>
+                      <motion.div key={item.id} variants={itemAnim}>
+                        <Link
+                          to={item.href}
+                          onClick={() => onNavigateGeneric?.(item.href)}
+                          className="group relative flex items-start gap-4 p-3 rounded-2xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-200"
+                        >
+                          <div className="w-10 h-10 shrink-0 rounded-xl bg-white dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700 p-2 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center text-teal-600">
+                            <Icon size={20} />
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-sm text-gray-900 dark:text-white leading-tight group-hover:text-teal-600 transition-colors">
+                              {item.label}
+                            </h4>
+                            <p className="text-xs text-gray-500 mt-0.5">{item.description}</p>
+                          </div>
+                        </Link>
+                      </motion.div>
                     )
                   })}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </motion.div>
         </div>

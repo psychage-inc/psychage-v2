@@ -18,8 +18,9 @@
   <meta name="author" content="Psychage Health, Inc.">
   <meta name="robots" content="index, follow">
 
-  <!-- Content Security Policy -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://images.unsplash.com data:; connect-src 'self';">
+  <!-- Content Security Policy - relaxed for development, tighten for production -->
+  <!-- Note: connect-src needs ws: wss: for Vite HMR in dev mode -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://images.unsplash.com data: blob:; connect-src 'self' ws: wss: http://localhost:* https://localhost:*;">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">

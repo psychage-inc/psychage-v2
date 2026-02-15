@@ -12,7 +12,7 @@ import TopicHubSection from './components/home/TopicHubSection';
 import HowItWorksSection from './components/home/HowItWorksSection';
 import QuickTopics from './components/home/QuickTopics';
 import ToolsSection from './components/home/ToolsSection';
-import AIChatWidget from './components/chat/AIChatWidget';
+import MindMate from './components/ai/MindMate';
 import NotFoundPage from './components/pages/NotFoundPage';
 import { GlobalLoading } from './components/ui/Skeletons';
 import { BookmarkProvider } from './context/BookmarkContext';
@@ -21,7 +21,7 @@ import SEO from './components/SEO';
 import SkipLink from './components/ui/SkipLink';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import RoleGuard from './components/auth/RoleGuard';
-import LoadingScreen from './components/ui/LoadingScreen';
+import Preloader from './components/Preloader';
 import PageTransition from './components/ui/PageTransition';
 import { ScrollManager } from './components/ui/ScrollManager';
 import { CustomCursor } from './components/ui/CustomCursor';
@@ -82,9 +82,7 @@ const App: React.FC = () => {
         <AuthProvider>
             <BookmarkProvider>
                 <SkipLink />
-                <AnimatePresence mode="wait">
-                    {isLoading && <LoadingScreen key="loading-screen" onComplete={() => setIsLoading(false)} />}
-                </AnimatePresence>
+                {isLoading && <Preloader onComplete={() => setIsLoading(false)} />}
 
                 <ScrollManager />
                 <CustomCursor />
@@ -282,7 +280,7 @@ const App: React.FC = () => {
 
                         <Footer />
 
-                        <AIChatWidget />
+                        <MindMate />
                     </div>
                 )}
             </BookmarkProvider>

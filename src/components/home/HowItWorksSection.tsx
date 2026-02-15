@@ -32,7 +32,7 @@ const HowItWorksSection: React.FC = () => {
     const navigate = useNavigate();
 
     return (
-        <section className="relative py-24 overflow-hidden">
+        <section id="how-it-works" className="relative py-24 overflow-hidden">
             {/* Background Decorations */}
             <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-white/50" />
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />

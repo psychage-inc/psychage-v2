@@ -125,10 +125,10 @@ const SearchResults: React.FC = () => {
                         <div className="flex flex-wrap gap-2">
                             <button
                                 onClick={() => setSelectedCategory('all')}
-                                className={`px - 4 py - 1.5 rounded - full text - sm font - medium transition - colors ${selectedCategory === 'all'
+                                className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${selectedCategory === 'all'
                                     ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900'
                                     : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600'
-                                    } `}
+                                    }`}
                             >
                                 All
                             </button>
@@ -136,10 +136,10 @@ const SearchResults: React.FC = () => {
                                 <button
                                     key={cat.id}
                                     onClick={() => setSelectedCategory(cat.id)}
-                                    className={`px - 4 py - 1.5 rounded - full text - sm font - medium transition - colors ${selectedCategory === cat.id
+                                    className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${selectedCategory === cat.id
                                         ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900'
                                         : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600'
-                                        } `}
+                                        }`}
                                 >
                                     {cat.name}
                                 </button>
@@ -226,7 +226,7 @@ const SearchResults: React.FC = () => {
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer group border border-gray-100 dark:border-gray-800"
-                                        onClick={() => navigate(`/ learn / article / ${article.id} `)}
+                                        onClick={() => navigate(`/learn/article/${article.id}`)}
                                     >
                                         <ArticleCard article={article} />
                                     </motion.div>
@@ -243,7 +243,7 @@ const SearchResults: React.FC = () => {
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                                 {matchedVideos.map(video => (
-                                    <div key={video.id} onClick={() => navigate(`/ watch / ${video.id} `)}>
+                                    <div key={video.id} onClick={() => navigate(`/watch/${video.id}`)}>
                                         <VideoCard video={video} />
                                     </div>
                                 ))}

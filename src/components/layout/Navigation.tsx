@@ -161,11 +161,15 @@ const Navigation: React.FC = () => {
                                             ? 'bg-gray-100 text-gray-900'
                                             : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                                             }`}
+                                        aria-expanded={activeTab === link.name}
+                                        aria-haspopup="menu"
+                                        aria-label={`${link.name} menu`}
                                     >
                                         {link.name}
                                         <ChevronDown
                                             size={14}
                                             className={`transition-transform duration-200 ${activeTab === link.name ? 'rotate-180' : ''}`}
+                                            aria-hidden="true"
                                         />
                                     </button>
                                 ) : (
@@ -194,8 +198,10 @@ const Navigation: React.FC = () => {
                                 ? 'bg-gray-100 text-gray-900'
                                 : 'text-gray-500 hover:bg-gray-100 hover:text-gray-900'
                                 }`}
+                            aria-label={isSearchOpen ? 'Close search' : 'Open search'}
+                            aria-expanded={isSearchOpen}
                         >
-                            {isSearchOpen ? <X size={20} /> : <Search size={20} />}
+                            {isSearchOpen ? <X size={20} aria-hidden="true" /> : <Search size={20} aria-hidden="true" />}
                         </button>
 
                         {/* Crisis Support Button */}
@@ -203,6 +209,7 @@ const Navigation: React.FC = () => {
                             onClick={() => navigate('/crisis')}
                             onMouseEnter={() => handleMouseEnter('')}
                             className="hidden md:flex items-center justify-center px-4 h-10 rounded-full text-sm font-bold text-red-600 bg-red-50 hover:bg-red-100 transition-colors border border-red-100"
+                            aria-label="Crisis support - get immediate help"
                         >
                             Crisis Support
                         </button>
@@ -223,8 +230,11 @@ const Navigation: React.FC = () => {
                                     <button
                                         onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
                                         className={`hidden md:flex w-10 h-10 rounded-full items-center justify-center transition-all ml-2 ${isUserMenuOpen ? 'bg-gray-100 text-gray-900' : 'text-gray-500 hover:bg-gray-100 hover:text-gray-900'}`}
+                                        aria-label="User menu"
+                                        aria-expanded={isUserMenuOpen}
+                                        aria-haspopup="menu"
                                     >
-                                        <User size={20} />
+                                        <User size={20} aria-hidden="true" />
                                     </button>
 
                                     <AnimatePresence>
@@ -293,8 +303,10 @@ const Navigation: React.FC = () => {
                         <button
                             className="md:hidden w-10 h-10 rounded-full flex items-center justify-center text-gray-900 hover:bg-gray-100"
                             onClick={() => setIsMobileMenuOpen(true)}
+                            aria-label="Open navigation menu"
+                            aria-expanded={isMobileMenuOpen}
                         >
-                            <Menu size={24} />
+                            <Menu size={24} aria-hidden="true" />
                         </button>
                     </div>
                 </div>

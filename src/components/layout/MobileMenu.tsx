@@ -76,14 +76,26 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onNavigateGene
                 <button
                   onClick={onClose}
                   className="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
+                  aria-label="Close navigation menu"
                 >
-                  <X size={24} />
+                  <X size={24} aria-hidden="true" />
                 </button>
               </div>
             </div>
 
             {/* Links */}
-            <nav className="flex-1 overflow-y-auto py-6 px-6 flex flex-col gap-2">
+            <nav className="flex-1 overflow-y-auto py-6 px-6 flex flex-col gap-2" role="navigation" aria-label="Mobile navigation">
+
+              {/* Crisis Support - Prominent at top */}
+              <Link
+                to="/crisis"
+                onClick={() => handleNav('/crisis')}
+                className="py-4 px-4 text-base font-bold text-white bg-red-600 dark:bg-red-700 rounded-xl flex items-center justify-center gap-2 mb-4 shadow-lg shadow-red-500/20 hover:bg-red-700 dark:hover:bg-red-600 transition-colors"
+                aria-label="Get crisis support - available 24/7"
+              >
+                <HeartHandshake size={20} aria-hidden="true" />
+                Crisis Support - Available 24/7
+              </Link>
 
               {/* Accordion Sections */}
               {Object.entries(navigationConfig).map(([key, section]) => (
@@ -91,16 +103,20 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onNavigateGene
                   <button
                     onClick={() => toggleSection(key)}
                     className="w-full flex items-center justify-between py-3 text-lg font-bold text-gray-800 dark:text-gray-200"
+                    aria-expanded={expandedSection === key}
+                    aria-controls={`mobile-section-${key}`}
                   >
                     <span className="capitalize">{key}</span>
                     <ChevronDown
                       size={20}
                       className={`transition-transform duration-200 ${expandedSection === key ? 'rotate-180 text-teal-600' : 'text-gray-400'}`}
+                      aria-hidden="true"
                     />
                   </button>
                   <AnimatePresence>
                     {expandedSection === key && (
                       <motion.div
+                        id={`mobile-section-${key}`}
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: 'auto', opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
@@ -150,14 +166,6 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onNavigateGene
                 Find Providers
               </Link>
 
-              <Link
-                to="/crisis"
-                onClick={() => handleNav('/crisis')}
-                className="py-3 text-lg font-bold text-red-600 dark:text-red-400 flex items-center gap-2 mb-4 block"
-              >
-                <HeartHandshake size={20} />
-                Crisis Support
-              </Link>
 
 
             </nav>

@@ -1,18 +1,37 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
+const LOADING_SHOWN_KEY = 'psychage_loading_shown';
+
 export const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(() => {
+        // Check if loading has been shown this session
+        if (typeof window !== 'undefined') {
+            return !sessionStorage.getItem(LOADING_SHOWN_KEY);
+        }
+        return true;
+    });
 
     useEffect(() => {
-        // Simulate loading time (can be replaced with real asset loading)
+        // If loading was already shown, complete immediately
+        if (!isLoading) {
+            onComplete();
+            return;
+        }
+
+        // Mark as shown for this session
+        sessionStorage.setItem(LOADING_SHOWN_KEY, 'true');
+
+        // Simulate loading time (reduced from 3000ms)
         const timer = setTimeout(() => {
             setIsLoading(false);
-            setTimeout(onComplete, 1000); // Wait for exit animation
-        }, 3000);
+            setTimeout(onComplete, 800); // Wait for exit animation
+        }, 2000);
 
         return () => clearTimeout(timer);
-    }, [onComplete]);
+    }, [onComplete, isLoading]);
+
+    if (!isLoading) return null;
 
     return (
         <AnimatePresence>
@@ -61,7 +80,7 @@ export const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
                                 className="absolute top-0 left-0 h-full bg-primary"
                                 initial={{ width: "0%" }}
                                 animate={{ width: "100%" }}
-                                transition={{ duration: 2.5, ease: "easeInOut" }}
+                                transition={{ duration: 1.8, ease: "easeInOut" }}
                             />
                         </div>
 
@@ -75,15 +94,6 @@ export const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
                             Initializing
                         </motion.p>
                     </div>
-
-                    {/* Curtain Reveal Layers - Exit Animation */}
-                    <motion.div
-                        className="absolute inset-0 bg-primary z-20"
-                        initial={{ height: "0%" }}
-                        exit={{ height: "100%" }}
-                        transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-                        style={{ bottom: 0, top: 'auto', display: 'none' }} // Hidden initially, used for complex logic if needed, but simplified below
-                    />
                 </motion.div>
             )}
         </AnimatePresence>
@@ -92,19 +102,34 @@ export const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
 
 
 // Final Export: We use the simpler Wipe effect for that "Curtain" feel.
-// Final Export: We use the simpler Wipe effect for that "Curtain" feel.
 export const LoadingScreenWipe = ({ onComplete }: { onComplete: () => void }) => {
-
+    const [shouldShow] = useState(() => {
+        if (typeof window !== 'undefined') {
+            const hasShown = sessionStorage.getItem(LOADING_SHOWN_KEY);
+            if (!hasShown) {
+                sessionStorage.setItem(LOADING_SHOWN_KEY, 'true');
+                return true;
+            }
+            return false;
+        }
+        return true;
+    });
 
     useEffect(() => {
-        // Trigger the exit animation after a delay
-        const timer = setTimeout(() => {
-
+        if (!shouldShow) {
             onComplete();
-        }, 3000); // 3 seconds loading time for the full cinematic feel
+            return;
+        }
+
+        // Trigger the exit animation after a delay (reduced from 3000ms)
+        const timer = setTimeout(() => {
+            onComplete();
+        }, 2500);
 
         return () => clearTimeout(timer);
-    }, [onComplete]);
+    }, [onComplete, shouldShow]);
+
+    if (!shouldShow) return null;
 
     return (
         <motion.div
@@ -157,17 +182,17 @@ export const LoadingScreenWipe = ({ onComplete }: { onComplete: () => void }) =>
                     transition={{ delay: 1 }}
                 >
                     <motion.div
-                        className="absolute top-0 left-0 h-full bg-gradient-to-r from-primary/60 to-primary box-shadow-glow"
+                        className="absolute top-0 left-0 h-full bg-gradient-to-r from-primary/60 to-primary"
                         initial={{ width: "0%" }}
                         animate={{ width: "100%" }}
-                        transition={{ duration: 2.0, ease: "easeInOut", delay: 1 }}
+                        transition={{ duration: 1.5, ease: "easeInOut", delay: 1 }}
                     />
                     {/* Leading Glow Head */}
                     <motion.div
                         className="absolute top-0 h-full w-[20px] bg-white blur-[5px]"
                         initial={{ left: "0%", opacity: 0 }}
                         animate={{ left: "100%", opacity: 1 }}
-                        transition={{ duration: 2.0, ease: "easeInOut", delay: 1 }}
+                        transition={{ duration: 1.5, ease: "easeInOut", delay: 1 }}
                     />
                 </motion.div>
             </div>

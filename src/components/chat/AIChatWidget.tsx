@@ -78,10 +78,11 @@ const AIChatWidget: React.FC = () => {
             const errorMsg: Message = {
                 id: Date.now().toString(),
                 sender: 'ai',
-                text: "I'm missing my API key. Please add VITE_GEMINI_API_KEY to your .env file.",
+                text: "I'm temporarily unavailable. Please try again later or contact support if the issue persists.",
                 type: 'text'
             };
             setMessages(prev => [...prev, errorMsg]);
+            console.error('AIChatWidget: Missing VITE_GEMINI_API_KEY environment variable');
             return;
         }
 

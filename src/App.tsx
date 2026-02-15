@@ -42,6 +42,7 @@ const ClarityScoreTool = React.lazy(() => import('./components/pages/ClarityScor
 const AboutPage = React.lazy(() => import('./components/pages/AboutPage'));
 const ContactPage = React.lazy(() => import('./components/pages/ContactPage'));
 const LegalPage = React.lazy(() => import('./components/pages/LegalPages'));
+const CrisisPage = React.lazy(() => import('./components/pages/CrisisPage'));
 
 // Auth Pages
 const LoginPage = React.lazy(() => import('./pages/auth/LoginPage'));
@@ -167,6 +168,7 @@ const App: React.FC = () => {
                                         <Route path="/contact" element={<PageTransition><ContactPage /></PageTransition>} />
                                         <Route path="/legal/privacy" element={<PageTransition><LegalPage type="privacy" /></PageTransition>} />
                                         <Route path="/legal/terms" element={<PageTransition><LegalPage type="terms" /></PageTransition>} />
+                                        <Route path="/crisis" element={<PageTransition><CrisisPage /></PageTransition>} />
                                         <Route path="/providers/register" element={<PageTransition><ProviderRegistrationPage /></PageTransition>} />
 
                                         {/* Auth Routes */}

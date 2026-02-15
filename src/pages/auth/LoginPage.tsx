@@ -59,6 +59,17 @@ const LoginPage = () => {
         e.preventDefault();
         setError(null);
 
+        // Client-side validation
+        if (!email.trim()) {
+            setError('Please enter your email address.');
+            return;
+        }
+
+        if (!password) {
+            setError('Please enter your password.');
+            return;
+        }
+
         try {
             const result = await login(email, password);
 
@@ -71,11 +82,26 @@ const LoginPage = () => {
                     navigate('/dashboard', { replace: true });
                 }
             } else {
-                // Login error handled by AuthContext
+                // Handle specific error types
+                const errorMessage = result.error || 'Login failed';
+                const lowerError = errorMessage.toLowerCase();
+
+                if (lowerError.includes('invalid') || lowerError.includes('credentials') || lowerError.includes('password')) {
+                    setError('Invalid email or password. Please check your credentials and try again.');
+                } else if (lowerError.includes('not found') || lowerError.includes('no user') || lowerError.includes('does not exist')) {
+                    setError('No account found with this email. Would you like to sign up?');
+                } else if (lowerError.includes('too many') || lowerError.includes('rate limit')) {
+                    setError('Too many login attempts. Please wait a few minutes and try again.');
+                } else if (lowerError.includes('network') || lowerError.includes('connection') || lowerError.includes('fetch')) {
+                    setError('Unable to connect. Please check your internet connection and try again.');
+                } else if (lowerError.includes('disabled') || lowerError.includes('blocked')) {
+                    setError('This account has been disabled. Please contact support for assistance.');
+                } else {
+                    setError(errorMessage);
+                }
             }
         } catch {
-            // Login error handled by AuthContext
-            setError('Login failed. Please check your credentials. Please try again.');
+            setError('An unexpected error occurred. Please try again or contact support if the issue persists.');
         }
     };
 

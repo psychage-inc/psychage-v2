@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect, useCallback } from 'react';
 import { api, tokenStorage, ApiError } from '../lib/api';
 import { AuthContext, AuthState, AuthContextType } from './AuthContextDefinition';
+import { supabase } from '../lib/supabaseClient';
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [state, setState] = useState<AuthState>({
@@ -127,6 +128,40 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
+  const signInWithGoogle = useCallback(async () => {
+    try {
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider: 'google',
+        options: {
+          redirectTo: `${window.location.origin}/auth/callback`,
+        },
+      });
+      if (error) {
+        return { success: false, error: error.message };
+      }
+      return { success: true };
+    } catch (error) {
+      return { success: false, error: 'Failed to sign in with Google' };
+    }
+  }, []);
+
+  const signInWithApple = useCallback(async () => {
+    try {
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider: 'apple',
+        options: {
+          redirectTo: `${window.location.origin}/auth/callback`,
+        },
+      });
+      if (error) {
+        return { success: false, error: error.message };
+      }
+      return { success: true };
+    } catch (error) {
+      return { success: false, error: 'Failed to sign in with Apple' };
+    }
+  }, []);
+
   const value: AuthContextType = {
     ...state,
     login,
@@ -134,6 +169,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     logout,
     refreshUser,
     requestPasswordReset,
+    signInWithGoogle,
+    signInWithApple,
   };
 
   return (

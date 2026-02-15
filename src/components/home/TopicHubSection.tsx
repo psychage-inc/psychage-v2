@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import Button from '@/components/ui/Button';
 import { useTopicHubData } from '@/hooks/useTopicHubData';
 import { SkeletonTopicHub } from '@/components/ui/Skeletons';
+import InteractiveCard from '@/components/ui/InteractiveCard';
+import GrainOverlay from '@/components/ui/GrainOverlay';
 
 interface TopicHubSectionProps {
     categoryId: string;
@@ -29,8 +31,9 @@ const TopicHubSection: React.FC<TopicHubSectionProps> = ({
     if (!category || categoryArticles.length === 0) return null;
 
     return (
-        <section className={`py-20 px-6 ${className}`}>
-            <div className="container mx-auto max-w-[1280px]">
+        <section className={`py-20 px-6 relative overflow-hidden ${className}`}>
+            <GrainOverlay opacity={0.03} />
+            <div className="container mx-auto max-w-[1280px] relative z-10">
 
                 {/* Header */}
                 <div className={`flex flex-col md:flex-row justify-between items-end mb-12 gap-6 border-b border-gray-100 pb-8 ${invert ? "md:flex-row-reverse text-right" : ""}`}>
@@ -57,22 +60,28 @@ const TopicHubSection: React.FC<TopicHubSectionProps> = ({
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
 
-                    {/* Main Feature (First Article) */}
                     {categoryArticles[0] && (
-                        <div className={`lg:col-span-6 group cursor-pointer ${invert ? "lg:order-last" : ""}`} onClick={() => navigate(`/learn/article/${categoryArticles[0].id}`)}>
-                            <div className="relative aspect-[4/3] rounded-xl overflow-hidden mb-6 bg-gray-100">
-                                <img
-                                    src={categoryArticles[0].image}
-                                    alt={categoryArticles[0].title}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                />
-                            </div>
-                            <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:underline decoration-gray-300 underline-offset-4 transition-all">
-                                {categoryArticles[0].title}
-                            </h3>
-                            <p className="text-gray-600 line-clamp-2 leading-relaxed">
-                                {categoryArticles[0].description}
-                            </p>
+                        <div className={`lg:col-span-6 h-full ${invert ? "lg:order-last" : ""}`}>
+                            <InteractiveCard
+                                onClick={() => navigate(`/learn/article/${categoryArticles[0].id}`)}
+                                className="h-full bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-lg cursor-pointer group"
+                            >
+                                <div className="p-5 h-full flex flex-col">
+                                    <div className="relative aspect-[4/3] rounded-xl overflow-hidden mb-6 bg-gray-100 dark:bg-slate-800">
+                                        <img
+                                            src={categoryArticles[0].image}
+                                            alt={categoryArticles[0].title}
+                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                        />
+                                    </div>
+                                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+                                        {categoryArticles[0].title}
+                                    </h3>
+                                    <p className="text-gray-600 dark:text-gray-400 line-clamp-2 leading-relaxed">
+                                        {categoryArticles[0].description}
+                                    </p>
+                                </div>
+                            </InteractiveCard>
                         </div>
                     )}
 

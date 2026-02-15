@@ -476,6 +476,35 @@ export const api = {
 
     getStats: () => api.get<unknown>('/api/user/activity/stats'),
   },
+
+  // Search endpoints
+  search: {
+    all: (params: { query: string; type?: 'articles' | 'providers' | 'tools' | 'all'; limit?: number; page?: number }) => {
+      const searchParams = new URLSearchParams();
+      searchParams.set('q', params.query);
+      if (params.type) searchParams.set('type', params.type);
+      if (params.limit) searchParams.set('limit', params.limit.toString());
+      if (params.page) searchParams.set('page', params.page.toString());
+      return api.get<{
+        articles: unknown[];
+        providers: unknown[];
+        tools: unknown[];
+        total: number;
+      }>(`/api/search?${searchParams.toString()}`);
+    },
+
+    articles: (query: string, limit?: number) =>
+      api.get<unknown[]>(`/api/search/articles?q=${encodeURIComponent(query)}${limit ? `&limit=${limit}` : ''}`),
+
+    providers: (query: string, limit?: number) =>
+      api.get<unknown[]>(`/api/search/providers?q=${encodeURIComponent(query)}${limit ? `&limit=${limit}` : ''}`),
+
+    tools: (query: string, limit?: number) =>
+      api.get<unknown[]>(`/api/search/tools?q=${encodeURIComponent(query)}${limit ? `&limit=${limit}` : ''}`),
+
+    suggestions: (query: string) =>
+      api.get<{ suggestions: string[]; recentSearches: string[] }>(`/api/search/suggestions?q=${encodeURIComponent(query)}`),
+  },
 };
 
 export default api;

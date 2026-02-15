@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Moon, Clock, CheckCircle2, ArrowLeft, Sun, Coffee, Smartphone, Thermometer } from 'lucide-react';
 import Button from '../ui/Button';
+import Breadcrumbs from '../ui/Breadcrumbs';
 import { useNavigate } from 'react-router-dom';
 
 const SleepArchitect: React.FC = () => {
@@ -53,6 +54,9 @@ const SleepArchitect: React.FC = () => {
     return (
         <div className="min-h-screen bg-indigo-50/30 pt-24 pb-12 px-6">
             <div className="container mx-auto max-w-5xl">
+                <div className="mb-6">
+                    <Breadcrumbs />
+                </div>
                 <button onClick={() => navigate('/tools')} className="flex items-center gap-2 text-gray-400 hover:text-gray-900 mb-8 font-bold text-sm uppercase tracking-wider">
                     <ArrowLeft size={16} /> Back to Tools
                 </button>
@@ -138,8 +142,8 @@ const SleepArchitect: React.FC = () => {
                                         key={habit.id}
                                         onClick={() => toggleHabit(habit.id)}
                                         className={`w-full p-4 rounded-xl flex items-center gap-4 transition-all ${checkedHabits.includes(habit.id)
-                                                ? 'bg-indigo-600/20 border border-indigo-500/50 text-white'
-                                                : 'bg-white/5 border border-white/10 text-gray-400 hover:bg-white/10'
+                                            ? 'bg-indigo-600/20 border border-indigo-500/50 text-white'
+                                            : 'bg-white/5 border border-white/10 text-gray-400 hover:bg-white/10'
                                             }`}
                                     >
                                         <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-colors ${checkedHabits.includes(habit.id) ? 'border-indigo-400 bg-indigo-400' : 'border-gray-500'

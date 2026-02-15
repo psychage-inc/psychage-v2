@@ -6,9 +6,10 @@ import Button from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Label } from '@/components/ui/Label';
 import { Display, Text } from '@/components/ui/Typography';
-import { Card } from '@/components/ui/Card';
 import { Alert, AlertDescription } from '@/components/ui/Alert';
 import { useAuth } from '../../context/AuthContext';
+import MeshGradient from '@/components/ui/MeshGradient';
+import InteractiveCard from '@/components/ui/InteractiveCard';
 
 const ResetPasswordPage = () => {
     const [email, setEmail] = useState('');
@@ -33,53 +34,79 @@ const ResetPasswordPage = () => {
     };
 
     return (
-        <div className="min-h-[80vh] flex items-center justify-center px-4 py-12 bg-background relative overflow-hidden">
-            {/* Background Decor */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-6xl pointer-events-none">
-                <div className="absolute top-20 left-1/4 w-64 h-64 bg-accent-teal/5 rounded-full blur-3xl" />
-                <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-            </div>
+        <div className="min-h-screen flex items-center justify-center px-4 py-12 bg-background relative overflow-hidden">
+            {/* Dynamic Background */}
+            <MeshGradient className="opacity-60" />
+
+            <div className="absolute inset-0 bg-background/20 backdrop-blur-[1px] pointer-events-none" />
 
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
                 className="w-full max-w-md relative z-10"
             >
                 <div className="mb-8">
-                    <Link
-                        to="/login"
-                        className="inline-flex items-center text-sm text-text-secondary hover:text-primary transition-colors mb-6"
+                    <motion.div
+                        initial={{ x: -10, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{ delay: 0.1 }}
                     >
-                        <ArrowLeft className="w-4 h-4 mr-1" />
-                        Back to Login
-                    </Link>
+                        <Link
+                            to="/login"
+                            className="inline-flex items-center text-sm text-text-secondary hover:text-primary transition-colors mb-6 group"
+                        >
+                            <ArrowLeft className="w-4 h-4 mr-1 group-hover:-translate-x-1 transition-transform" />
+                            Back to Login
+                        </Link>
+                    </motion.div>
+
                     <div className="text-center">
-                        <div className="flex justify-center mb-6">
+                        <motion.div
+                            initial={{ y: -20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ delay: 0.2, duration: 0.5 }}
+                            className="flex justify-center mb-6"
+                        >
                             <img
                                 src="/images/logo.png"
                                 alt="Psychage"
-                                className="h-16 w-auto object-contain"
+                                className="h-16 w-auto object-contain drop-shadow-lg"
                             />
-                        </div>
-                        <Display className="text-3xl mb-2">Reset Password</Display>
-                        <Text>Enter your email to receive reset instructions</Text>
+                        </motion.div>
+                        <motion.div
+                            initial={{ y: 10, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ delay: 0.3, duration: 0.5 }}
+                        >
+                            <Display className="text-3xl mb-3 font-bold bg-clip-text text-transparent bg-gradient-to-r from-text-primary to-text-secondary">
+                                Reset Password
+                            </Display>
+                            <Text className="text-text-secondary">Enter your email to receive reset instructions</Text>
+                        </motion.div>
                     </div>
                 </div>
 
-                <Card className="p-8 border-border/50 shadow-xl bg-surface/80 backdrop-blur-sm">
+                <InteractiveCard
+                    spotlightColor="rgba(20, 184, 166, 0.1)"
+                    className="p-8 border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl"
+                >
                     {isSubmitted ? (
                         <div className="text-center py-6">
-                            <div className="w-16 h-16 bg-success/10 text-success rounded-full flex items-center justify-center mx-auto mb-4">
+                            <motion.div
+                                initial={{ scale: 0.8, opacity: 0 }}
+                                animate={{ scale: 1, opacity: 1 }}
+                                className="w-16 h-16 bg-emerald-500/10 text-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 border border-emerald-500/20"
+                            >
                                 <CheckCircle2 className="w-8 h-8" />
-                            </div>
+                            </motion.div>
                             <h3 className="text-xl font-semibold text-text-primary mb-2">Check your email</h3>
-                            <p className="text-text-secondary mb-6">
-                                We've sent password reset instructions to <span className="font-medium text-text-primary">{email}</span>
+                            <p className="text-text-secondary mb-8">
+                                We've sent password reset instructions to <span className="font-medium text-text-primary block mt-1">{email}</span>
                             </p>
                             <Button
                                 variant="outline"
-                                className="w-full"
+                                className="w-full border-white/10 hover:bg-white/5 text-text-primary"
                                 onClick={() => setIsSubmitted(false)}
                             >
                                 Use a different email
@@ -88,35 +115,40 @@ const ResetPasswordPage = () => {
                     ) : (
                         <form onSubmit={handleSubmit} className="space-y-6">
                             {error && (
-                                <Alert variant="destructive">
+                                <Alert variant="destructive" className="animate-in slide-in-from-top-2">
                                     <AlertCircle className="h-4 w-4" />
                                     <AlertDescription>{error}</AlertDescription>
                                 </Alert>
                             )}
 
                             <div className="space-y-2">
-                                <Label htmlFor="email">Email address</Label>
-                                <div className="relative">
+                                <Label htmlFor="email" className="text-text-primary ml-1">Email address</Label>
+                                <div className="relative group">
                                     <Input
                                         id="email"
                                         type="email"
                                         placeholder="name@example.com"
                                         required
-                                        className="pl-10"
+                                        className="pl-11 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
                                         disabled={isLoading}
                                     />
-                                    <Mail className="absolute left-3 top-3 h-5 w-5 text-text-tertiary" />
+                                    <Mail className="absolute left-3.5 top-3.5 h-5 w-5 text-text-tertiary group-focus-within:text-primary transition-colors" />
                                 </div>
                             </div>
 
-                            <Button type="submit" className="w-full" size="lg" isLoading={isLoading}>
+                            <Button
+                                type="submit"
+                                className="w-full h-12 text-base font-semibold shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all duration-300"
+                                size="lg"
+                                isLoading={isLoading}
+                            >
                                 Send Reset Instructions
                             </Button>
                         </form>
                     )}
-                </Card>
+                </InteractiveCard>
             </motion.div>
         </div>
     );

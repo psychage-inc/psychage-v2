@@ -2,19 +2,15 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { LayoutDashboard, User, BrainCircuit, Bookmark, LogOut } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Card } from '@/components/ui/Card';
+import InteractiveCard from '@/components/ui/InteractiveCard';
 import { useAuth } from '@/context/AuthContext';
+import { motion } from 'framer-motion';
+
+import { patientSidebarItems } from '@/config/sidebars';
 
 const UserSidebar: React.FC = () => {
     const location = useLocation();
     const { logout } = useAuth();
-
-    const links = [
-        { name: 'Overview', icon: LayoutDashboard, path: '/dashboard' },
-        { name: 'Clarity History', icon: BrainCircuit, path: '/dashboard/assessments' },
-        { name: 'My Bookmarks', icon: Bookmark, path: '/dashboard/bookmarks' },
-        { name: 'Profile Settings', icon: User, path: '/dashboard/profile' },
-    ];
 
     const isActive = (path: string) => {
         if (path === '/dashboard' && location.pathname === '/dashboard') return true;
@@ -23,35 +19,48 @@ const UserSidebar: React.FC = () => {
     };
 
     return (
-        <Card className="p-4 h-full">
-            <nav className="space-y-2">
-                {links.map((link) => (
-                    <Link
-                        key={link.path}
-                        to={link.path}
-                        className={cn(
-                            "flex items-center gap-3 px-4 py-3 rounded-xl transition-all font-medium",
-                            isActive(link.path)
-                                ? 'bg-primary text-white shadow-md'
-                                : 'text-text-secondary hover:bg-surface-hover hover:text-text-primary'
-                        )}
-                    >
-                        <link.icon size={18} />
-                        {link.name}
-                    </Link>
-                ))}
-
-                <div className="pt-4 mt-4 border-t border-border">
-                    <button
-                        onClick={logout}
-                        className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-red-500 hover:bg-red-50 transition-all font-medium"
-                    >
-                        <LogOut size={18} />
-                        Log Out
-                    </button>
-                </div>
+        <InteractiveCard className="p-4 h-full bg-surface/50 backdrop-blur-md border-white/5 flex flex-col">
+            <nav className="space-y-2 flex-grow">
+                {patientSidebarItems.map((link) => {
+                    const active = isActive(link.path);
+                    return (
+                        <Link
+                            key={link.path}
+                            to={link.path}
+                            className={cn(
+                                "relative flex items-center gap-3 px-4 py-3 rounded-xl transition-all font-medium overflow-hidden group",
+                                active
+                                    ? 'text-white shadow-md'
+                                    : 'text-text-secondary hover:text-text-primary'
+                            )}
+                        >
+                            {active && (
+                                <motion.div
+                                    layoutId="active-sidebar-link"
+                                    className="absolute inset-0 bg-primary z-0"
+                                    initial={false}
+                                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                                />
+                            )}
+                            <span className={cn("relative z-10 flex items-center gap-3", active ? "text-white" : "group-hover:translate-x-1 transition-transform")}>
+                                <link.icon size={18} />
+                                {link.label}
+                            </span>
+                        </Link>
+                    );
+                })}
             </nav>
-        </Card>
+
+            <div className="pt-4 mt-4 border-t border-border/50">
+                <button
+                    onClick={logout}
+                    className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-error hover:bg-error/10 transition-all font-medium group"
+                >
+                    <LogOut size={18} className="group-hover:-translate-x-1 transition-transform" />
+                    Log Out
+                </button>
+            </div>
+        </InteractiveCard>
     );
 };
 

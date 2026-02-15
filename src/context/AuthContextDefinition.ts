@@ -13,6 +13,8 @@ export interface AuthContextType extends AuthState {
     logout: () => Promise<void>;
     refreshUser: () => Promise<void>;
     requestPasswordReset: (email: string) => Promise<{ success: boolean; error?: string }>;
+    signInWithGoogle: () => Promise<{ success: boolean; error?: string }>;
+    signInWithApple: () => Promise<{ success: boolean; error?: string }>;
 }
 
 export const AuthContext = createContext<AuthContextType | undefined>(undefined);

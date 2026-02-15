@@ -30,6 +30,7 @@ const Badge: React.FC<BadgeProps> = ({
     sky: "bg-sky-100 text-sky-800",
     rose: "bg-rose-100 text-rose-800",
     red: "bg-red-100 text-red-800",
+    outline: "bg-transparent border border-border text-text-primary",
   };
 
   return (

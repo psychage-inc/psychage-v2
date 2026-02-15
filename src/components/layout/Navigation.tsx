@@ -67,16 +67,16 @@ const Navigation: React.FC = () => {
     }, [isSearchOpen]);
 
     const navLinks = [
-        { name: 'Platform', hasMenu: true },
-        { name: 'Resources', hasMenu: true },
-        { name: 'Company', hasMenu: true }
+        { name: 'Learn', hasMenu: true },
+        { name: 'Tools', hasMenu: true },
+        { name: 'Find Providers', hasMenu: false, href: '/find-care' }
     ];
 
     const getDashboardPath = () => {
         if (!user) return '/login';
         switch (user.role) {
             case 'admin': return '/admin';
-            case 'provider': return '/provider/dashboard';
+            case 'provider': return '/provider';
             case 'patient': return '/dashboard';
             default: return '/dashboard';
         }
@@ -154,28 +154,34 @@ const Navigation: React.FC = () => {
                     <nav className="hidden md:flex items-center gap-1">
                         {navLinks.map((link) => (
                             <div key={link.name}>
-                                <button
-                                    onMouseEnter={() => handleMouseEnter(link.name)}
-                                    className={`px-4 py-2 rounded-full text-sm font-bold transition-all duration-200 flex items-center gap-1.5 ${activeTab === link.name
-                                        ? 'bg-gray-100 text-gray-900'
-                                        : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
-                                        }`}
-                                >
-                                    {link.name}
-                                    <ChevronDown
-                                        size={14}
-                                        className={`transition-transform duration-200 ${activeTab === link.name ? 'rotate-180' : ''}`}
-                                    />
-                                </button>
+                                {link.hasMenu ? (
+                                    <button
+                                        onMouseEnter={() => handleMouseEnter(link.name)}
+                                        className={`px-4 py-2 rounded-full text-sm font-bold transition-all duration-200 flex items-center gap-1.5 ${activeTab === link.name
+                                            ? 'bg-gray-100 text-gray-900'
+                                            : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                                            }`}
+                                    >
+                                        {link.name}
+                                        <ChevronDown
+                                            size={14}
+                                            className={`transition-transform duration-200 ${activeTab === link.name ? 'rotate-180' : ''}`}
+                                        />
+                                    </button>
+                                ) : (
+                                    <div
+                                        onMouseEnter={() => handleMouseEnter('')}
+                                    >
+                                        <button
+                                            onClick={() => navigate(link.href!)}
+                                            className="px-4 py-2 rounded-full text-sm font-bold text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all"
+                                        >
+                                            {link.name}
+                                        </button>
+                                    </div>
+                                )}
                             </div>
                         ))}
-                        <button
-                            onClick={() => navigate('/find-care')}
-                            onMouseEnter={() => handleMouseEnter('')}
-                            className="px-4 py-2 rounded-full text-sm font-bold text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all"
-                        >
-                            Find Care
-                        </button>
                     </nav>
 
                     {/* Right Actions */}
@@ -190,6 +196,15 @@ const Navigation: React.FC = () => {
                                 }`}
                         >
                             {isSearchOpen ? <X size={20} /> : <Search size={20} />}
+                        </button>
+
+                        {/* Crisis Support Button */}
+                        <button
+                            onClick={() => navigate('/crisis')}
+                            onMouseEnter={() => handleMouseEnter('')}
+                            className="hidden md:flex items-center justify-center px-4 h-10 rounded-full text-sm font-bold text-red-600 bg-red-50 hover:bg-red-100 transition-colors border border-red-100"
+                        >
+                            Crisis Support
                         </button>
 
                         {isAuthenticated ? (
@@ -233,7 +248,7 @@ const Navigation: React.FC = () => {
                                                     Dashboard
                                                 </button>
                                                 <button
-                                                    onClick={() => { navigate('/dashboard/profile'); setIsUserMenuOpen(false); }}
+                                                    onClick={() => { navigate('/dashboard/settings'); setIsUserMenuOpen(false); }}
                                                     className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 flex items-center gap-2"
                                                 >
                                                     <Settings size={16} />

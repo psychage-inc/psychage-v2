@@ -6,6 +6,7 @@ import SEO from '@/components/SEO';
 import { api } from '@/lib/api';
 import { format } from 'date-fns';
 import AdminSidebar from './AdminSidebar';
+import Breadcrumbs from '@/components/ui/Breadcrumbs';
 
 interface AdminStats {
     users: number;
@@ -59,7 +60,10 @@ const AdminDashboard: React.FC = () => {
     return (
         <div className="min-h-screen bg-background pt-24 pb-20 px-6">
             <SEO title="Admin Dashboard | Psychage" />
+
+
             <div className="container mx-auto max-w-[1400px]">
+                <Breadcrumbs className="mb-6" />
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
                     {/* Sidebar */}
                     <div className="lg:col-span-3">

@@ -6,8 +6,10 @@ import Button from '@/components/ui/Button';
 import { useToolService } from '@/services/toolService';
 import { Tool } from '@/types/models';
 import { SkeletonToolsSection } from '@/components/ui/Skeletons';
+import InteractiveCard from '../ui/InteractiveCard';
+import { cn } from '@/lib/utils';
 
-// Icon mapping - icons can't come from API
+// Icon mapping
 const iconMap: Record<string, LucideIcon> = {
     PenTool,
     Moon,
@@ -19,13 +21,13 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 // Color scheme mapping for tool cards
-const colorSchemes: Record<string, { bg: string; iconBg: string; iconColor: string; hover: string }> = {
-    teal: { bg: 'bg-white', iconBg: 'bg-teal-50', iconColor: 'text-teal-600', hover: 'hover:border-teal-100' },
-    indigo: { bg: 'bg-white', iconBg: 'bg-indigo-50', iconColor: 'text-indigo-600', hover: 'hover:border-indigo-100' },
-    amber: { bg: 'bg-white', iconBg: 'bg-amber-50', iconColor: 'text-amber-600', hover: 'hover:border-amber-100' },
-    sky: { bg: 'bg-white', iconBg: 'bg-sky-50', iconColor: 'text-sky-600', hover: 'hover:border-sky-100' },
-    rose: { bg: 'bg-white', iconBg: 'bg-rose-50', iconColor: 'text-rose-600', hover: 'hover:border-rose-100' },
-    red: { bg: 'bg-white', iconBg: 'bg-red-50', iconColor: 'text-red-600', hover: 'hover:border-red-100' },
+const colorSchemes: Record<string, { iconBg: string; iconColor: string; spotlight: string }> = {
+    teal: { iconBg: 'bg-teal-50', iconColor: 'text-teal-600', spotlight: 'rgba(20, 184, 166, 0.1)' },
+    indigo: { iconBg: 'bg-indigo-50', iconColor: 'text-indigo-600', spotlight: 'rgba(99, 102, 241, 0.1)' },
+    amber: { iconBg: 'bg-amber-50', iconColor: 'text-amber-600', spotlight: 'rgba(245, 158, 11, 0.1)' },
+    sky: { iconBg: 'bg-sky-50', iconColor: 'text-sky-600', spotlight: 'rgba(14, 165, 233, 0.1)' },
+    rose: { iconBg: 'bg-rose-50', iconColor: 'text-rose-600', spotlight: 'rgba(244, 63, 94, 0.1)' },
+    red: { iconBg: 'bg-red-50', iconColor: 'text-red-600', spotlight: 'rgba(239, 68, 68, 0.1)' },
 };
 
 const getToolLink = (toolId: number) => {
@@ -46,12 +48,10 @@ const ToolsSection: React.FC = () => {
 
     useEffect(() => {
         let cancelled = false;
-
         toolService.getAll()
             .then(data => { if (!cancelled) setTools(data.slice(0, 3)); })
-            .catch(() => { /* Silent fallback - service returns mock data */ })
+            .catch(() => { /* Silent fallback */ })
             .finally(() => { if (!cancelled) setLoading(false); });
-
         return () => { cancelled = true; };
     }, [toolService]);
 
@@ -61,71 +61,93 @@ const ToolsSection: React.FC = () => {
     const [featuredTool, ...secondaryTools] = tools;
 
     return (
-        <section className="py-24 px-6 bg-gray-50/50 border-y border-gray-100">
-            <div className="container mx-auto max-w-6xl">
+        <section className="py-24 px-6 bg-slate-50 border-y border-slate-200 relative overflow-hidden">
+            {/* Decorative Background */}
+            <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[800px] h-[800px] bg-teal-500/5 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="container mx-auto max-w-6xl relative z-10">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
                     <div>
                         <motion.div
                             initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-100 mb-4"
+                            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-teal-100 shadow-sm mb-4"
                         >
                             <Activity size={14} className="text-teal-600" />
                             <span className="text-xs font-bold tracking-widest uppercase text-teal-700">
                                 Interactive Tools
                             </span>
                         </motion.div>
-                        <h2 className="text-3xl md:text-5xl font-display font-bold text-gray-900 mb-4 tracking-tight">
-                            Tools for your <span className="text-teal-600">mind</span>
+                        <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-4 tracking-tight">
+                            Tools for your <span className="text-teal-600 relative">
+                                mind
+                                <svg className="absolute w-full h-3 -bottom-1 left-0 text-teal-200 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
+                                    <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" />
+                                </svg>
+                            </span>
                         </h2>
-                        <p className="text-xl text-gray-600 max-w-xl leading-relaxed">
-                            Clinically-validated exercises and trackers to help you understand and improve your mental well-being.
+                        <p className="text-xl text-slate-600 max-w-xl leading-relaxed">
+                            Clinically-validated exercises and trackers to help you understand and improve your well-being.
                         </p>
                     </div>
                     <Button
                         variant="outline"
                         rightIcon={<ArrowRight size={18} />}
                         onClick={() => navigate('/tools')}
-                        className="shrink-0 bg-white border-gray-200 hover:bg-gray-50 text-gray-900"
+                        className="shrink-0 bg-white border-slate-200 hover:bg-slate-50 text-slate-900 shadow-sm hover:shadow"
                     >
                         View All Tools
                     </Button>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(200px,auto)]">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(240px,auto)]">
 
                     {/* Primary Feature (First Tool - Spans 2 cols, 2 rows on desktop) */}
                     {featuredTool && (() => {
                         const Icon = iconMap[featuredTool.iconName] || Activity;
                         const colors = colorSchemes[featuredTool.color] || colorSchemes.teal;
+
                         return (
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                onClick={() => navigate(getToolLink(featuredTool.id))}
-                                className="group cursor-pointer md:col-span-2 md:row-span-2 relative overflow-hidden bg-white rounded-3xl border border-gray-200 p-8 md:p-12 shadow-sm hover:shadow-xl transition-all duration-500"
+                                className="md:col-span-2 md:row-span-2 h-full"
                             >
-                                <div className={`absolute top-0 right-0 w-64 h-64 ${colors.iconBg} rounded-full blur-3xl -mr-16 -mt-16 opacity-0 group-hover:opacity-50 transition-opacity duration-700`} />
+                                <InteractiveCard
+                                    onClick={() => navigate(getToolLink(featuredTool.id))}
+                                    spotlightColor={colors.spotlight}
+                                    className="h-full bg-white border-slate-200 shadow-lg hover:shadow-xl cursor-pointer group"
+                                >
+                                    <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-teal-50/50 to-transparent rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none" />
 
-                                <div className="relative z-10 h-full flex flex-col justify-between">
-                                    <div>
-                                        <div className={`w-16 h-16 rounded-2xl ${colors.iconBg} flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500`}>
-                                            <Icon size={32} className={colors.iconColor} />
+                                    <div className="relative z-10 h-full flex flex-col p-10 md:p-12">
+                                        <div className="flex-grow">
+                                            <div className={cn(
+                                                "w-20 h-20 rounded-3xl flex items-center justify-center mb-10 transition-transform duration-500 group-hover:scale-110 shadow-sm",
+                                                colors.iconBg
+                                            )}>
+                                                <Icon size={40} className={colors.iconColor} />
+                                            </div>
+                                            <h3 className="text-4xl font-display font-bold text-slate-900 mb-6 group-hover:text-teal-700 transition-colors">
+                                                {featuredTool.name}
+                                            </h3>
+                                            <p className="text-xl text-slate-600 leading-relaxed max-w-md">
+                                                {featuredTool.description}
+                                            </p>
                                         </div>
-                                        <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-teal-700 transition-colors">
-                                            {featuredTool.name}
-                                        </h3>
-                                        <p className="text-lg text-gray-600 leading-relaxed max-w-sm">
-                                            {featuredTool.description}
-                                        </p>
-                                    </div>
 
-                                    <div className="mt-8 flex items-center text-teal-600 font-bold group-hover:gap-3 transition-all">
-                                        Get Started <ArrowRight size={20} className="ml-2" />
+                                        <div className="mt-10 pt-10 border-t border-slate-100 flex items-center justify-between">
+                                            <span className="text-teal-700 font-bold group-hover:underline decoration-2 underline-offset-4">
+                                                Start Session
+                                            </span>
+                                            <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-900 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
+                                                <ArrowRight size={20} />
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
+                                </InteractiveCard>
                             </motion.div>
                         );
                     })()}
@@ -134,7 +156,7 @@ const ToolsSection: React.FC = () => {
                     {secondaryTools.map((tool, index) => {
                         const Icon = iconMap[tool.iconName] || Activity;
                         const colors = colorSchemes[tool.color] || colorSchemes.indigo;
-                        const isDark = index === 1; // Make the last tool dark themed
+                        const isDark = index === 1; // Keeping the dark theme for variety
 
                         if (isDark) {
                             return (
@@ -144,21 +166,31 @@ const ToolsSection: React.FC = () => {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: (index + 1) * 0.1 }}
-                                    onClick={() => navigate(getToolLink(tool.id))}
-                                    className="group cursor-pointer md:col-span-1 md:row-span-1 bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-8 shadow-md hover:shadow-xl transition-all duration-300 text-white relative overflow-hidden"
+                                    className="md:col-span-1 md:row-span-1 h-full"
                                 >
-                                    <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl -mr-10 -mt-10" />
-                                    <div className="relative z-10">
-                                        <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-6">
-                                            <Icon size={24} className="text-white" />
+                                    <InteractiveCard
+                                        onClick={() => navigate(getToolLink(tool.id))}
+                                        spotlightColor="rgba(255,255,255,0.1)"
+                                        className="h-full bg-slate-900 border-slate-800 shadow-lg hover:shadow-xl cursor-pointer group"
+                                    >
+                                        <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-2xl -mr-10 -mt-10" />
+
+                                        <div className="relative z-10 flex flex-col h-full p-8">
+                                            <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center mb-6 backdrop-blur-sm">
+                                                <Icon size={24} className="text-white" />
+                                            </div>
+                                            <h3 className="text-xl font-bold text-white mb-3">
+                                                {tool.name}
+                                            </h3>
+                                            <p className="text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+                                                {tool.description}
+                                            </p>
+
+                                            <div className="flex justify-end">
+                                                <ArrowRight size={20} className="text-white/50 group-hover:text-white group-hover:translate-x-1 transition-all" />
+                                            </div>
                                         </div>
-                                        <h3 className="text-xl font-bold text-white mb-2">
-                                            {tool.name}
-                                        </h3>
-                                        <p className="text-gray-300 text-sm">
-                                            {tool.description}
-                                        </p>
-                                    </div>
+                                    </InteractiveCard>
                                 </motion.div>
                             );
                         }
@@ -170,22 +202,32 @@ const ToolsSection: React.FC = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: (index + 1) * 0.1 }}
-                                onClick={() => navigate(getToolLink(tool.id))}
-                                className={`group cursor-pointer md:col-span-1 md:row-span-1 ${colors.bg} rounded-3xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition-all duration-300 ${colors.hover}`}
+                                className="md:col-span-1 md:row-span-1 h-full"
                             >
-                                <div className={`w-12 h-12 rounded-xl ${colors.iconBg} flex items-center justify-center mb-6`}>
-                                    <Icon size={24} className={colors.iconColor} />
-                                </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                                    {tool.name}
-                                </h3>
-                                <p className="text-gray-500 text-sm mb-4">
-                                    {tool.description}
-                                </p>
+                                <InteractiveCard
+                                    onClick={() => navigate(getToolLink(tool.id))}
+                                    spotlightColor={colors.spotlight}
+                                    className="h-full bg-white border-slate-200 shadow-sm hover:shadow-lg cursor-pointer group"
+                                >
+                                    <div className="relative z-10 flex flex-col h-full p-8">
+                                        <div className={cn("w-12 h-12 rounded-2xl flex items-center justify-center mb-6 shadow-sm", colors.iconBg)}>
+                                            <Icon size={24} className={colors.iconColor} />
+                                        </div>
+                                        <h3 className="text-xl font-bold text-slate-900 mb-3">
+                                            {tool.name}
+                                        </h3>
+                                        <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">
+                                            {tool.description}
+                                        </p>
+
+                                        <div className="flex justify-end">
+                                            <ArrowRight size={20} className="text-slate-300 group-hover:text-teal-600 group-hover:translate-x-1 transition-all" />
+                                        </div>
+                                    </div>
+                                </InteractiveCard>
                             </motion.div>
                         );
                     })}
-
                 </div>
             </div>
         </section>

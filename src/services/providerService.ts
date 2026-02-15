@@ -202,8 +202,14 @@ export const providerService = {
         }
     },
 
-    verifyProvider: async (): Promise<void> => {
-        // Admin only - placeholder
+    verifyProvider: async (providerId: number | string, status: 'active' | 'rejected'): Promise<{ success: boolean }> => {
+        try {
+            const response = await api.admin.updateProviderStatus(providerId, status);
+            return { success: response.success };
+        } catch (error) {
+            console.error('Failed to verify provider:', error);
+            return { success: false };
+        }
     },
 
     toggleFavorite: async (providerId: number | string): Promise<{ favorited: boolean }> => {
@@ -232,8 +238,28 @@ export const providerService = {
         }
     },
 
-    submitReview: async (_providerId: number | string, _data: { rating: number; comment: string }): Promise<void> => {
-        // Placeholder - implement when API is ready
+    submitReview: async (providerId: number | string, data: { rating: number; comment: string }): Promise<{ success: boolean; error?: string }> => {
+        try {
+            // Try to submit to backend API
+            const response = await api.post<{ success: boolean }>(`/api/providers/${providerId}/reviews`, data);
+            return { success: response.success };
+        } catch (error) {
+            console.error('Failed to submit review:', error);
+            // Queue locally for later sync if API unavailable
+            try {
+                const queueKey = 'psychage_review_queue';
+                const existingQueue = JSON.parse(localStorage.getItem(queueKey) || '[]');
+                existingQueue.push({
+                    providerId,
+                    ...data,
+                    queuedAt: new Date().toISOString()
+                });
+                localStorage.setItem(queueKey, JSON.stringify(existingQueue));
+                return { success: true, error: 'Review saved locally. Will sync when connection is restored.' };
+            } catch {
+                return { success: false, error: 'Failed to submit review. Please try again.' };
+            }
+        }
     },
 
     getActivity: async (_providerId: string): Promise<Record<string, unknown>[]> => {

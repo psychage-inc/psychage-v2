@@ -13,6 +13,19 @@ const iconMap: Record<string, LucideIcon> = {
     BrainCircuit, PenTool, Moon, Wind, Users, ShieldAlert
 };
 
+// Color mapping for Tailwind classes (can't use dynamic classes due to purging)
+const colorClasses: Record<string, { bg: string; text: string }> = {
+    teal: { bg: 'bg-teal-100', text: 'text-teal-600' },
+    amber: { bg: 'bg-amber-100', text: 'text-amber-600' },
+    indigo: { bg: 'bg-indigo-100', text: 'text-indigo-600' },
+    sky: { bg: 'bg-sky-100', text: 'text-sky-600' },
+    rose: { bg: 'bg-rose-100', text: 'text-rose-600' },
+    red: { bg: 'bg-red-100', text: 'text-red-600' },
+    green: { bg: 'bg-green-100', text: 'text-green-600' },
+    purple: { bg: 'bg-purple-100', text: 'text-purple-600' },
+    blue: { bg: 'bg-blue-100', text: 'text-blue-600' },
+};
+
 const ToolsLandingPage: React.FC = () => {
     const navigate = useNavigate();
     const [tools, setTools] = useState<Tool[]>([]);
@@ -132,7 +145,7 @@ const ToolsLandingPage: React.FC = () => {
                                     transition={{ delay: index * 0.1 }}
                                     className={`group bg-surface rounded-3xl p-8 border border-border shadow-sm hover:shadow-lg transition-all relative overflow-hidden ${isLocked ? 'opacity-75' : ''}`}
                                 >
-                                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-${tool.color}-100 text-${tool.color}-600`}>
+                                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 ${colorClasses[tool.color]?.bg || 'bg-gray-100'} ${colorClasses[tool.color]?.text || 'text-gray-600'}`}>
                                         <Icon size={24} />
                                     </div>
                                     <h3 className="font-display font-bold text-xl text-text-primary mb-2 group-hover:text-primary transition-colors">{tool.name}</h3>

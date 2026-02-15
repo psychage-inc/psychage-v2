@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Category } from '../../types';
 import { NoiseTexture } from '../home/hero/HeroAssets';
+import InteractiveCard from '../ui/InteractiveCard';
 
 interface CategoryCardProps {
     category: Category;
@@ -11,15 +12,15 @@ interface CategoryCardProps {
 
 const CategoryCard: React.FC<CategoryCardProps> = ({ category, onClick }) => {
     return (
-        <motion.div
-            whileHover={{ y: -5 }}
-            className="group relative overflow-hidden rounded-3xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300 cursor-pointer h-full flex flex-col"
+        <InteractiveCard
+            className="group h-full flex flex-col cursor-pointer border-white/5 bg-white/5 backdrop-blur-sm dark:bg-white/5 dark:border-white/5 hover:border-primary/20 hover:bg-white/10 transition-all duration-300"
             onClick={onClick}
+            spotlightColor="rgba(20, 184, 166, 0.15)" // Teal spotlight
         >
             <NoiseTexture opacity={0.03} />
 
             {/* Header / Visual Area */}
-            <div className={`h-32 ${category.color} relative overflow-hidden`}>
+            <div className={`h-32 ${category.color} relative overflow-hidden rounded-t-2xl`}>
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-black/10 dark:from-white/5 dark:to-black/40" />
 
@@ -41,15 +42,15 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ category, onClick }) => {
 
             {/* Body */}
             <div className="p-6 flex flex-col flex-grow relative">
-                <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
+                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6 flex-grow">
                     {category.description}
                 </p>
 
-                <div className="flex items-center text-teal-600 dark:text-teal-400 font-bold text-sm uppercase tracking-wider group-hover:translate-x-1 transition-transform mt-auto">
+                <div className="flex items-center text-primary font-bold text-sm uppercase tracking-wider group-hover:translate-x-1 transition-transform mt-auto">
                     Explore <ArrowRight size={16} className="ml-2" />
                 </div>
             </div>
-        </motion.div>
+        </InteractiveCard>
     );
 };
 

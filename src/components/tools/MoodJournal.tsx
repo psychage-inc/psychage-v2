@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { PenTool, Calendar, Save, Trash2, TrendingUp, ArrowLeft, Loader2 } from 'lucide-react';
 import Button from '../ui/Button';
+import Breadcrumbs from '../ui/Breadcrumbs';
 import { useNavigate } from 'react-router-dom';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { moodService, MoodEntry as ServiceMoodEntry } from '../../services/moodService';
@@ -147,6 +148,9 @@ const MoodJournal: React.FC = () => {
     return (
         <div className="min-h-screen bg-gray-50 pt-24 pb-12 px-6">
             <div className="container mx-auto max-w-4xl">
+                <div className="mb-6">
+                    <Breadcrumbs />
+                </div>
                 <div className="mb-8 flex items-center justify-between">
                     <button onClick={() => navigate('/tools')} className="flex items-center gap-2 text-gray-400 hover:text-gray-900 font-bold text-sm uppercase tracking-wider">
                         <ArrowLeft size={16} /> Back to Tools

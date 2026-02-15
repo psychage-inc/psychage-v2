@@ -6,6 +6,7 @@ import { Tool } from '../../types/models';
 import { BrainCircuit, PenTool, Moon, Wind, Users, ShieldAlert, ArrowRight, Search, Filter, LucideIcon } from 'lucide-react';
 import Button from '../ui/Button';
 import SEO from '../SEO';
+import Breadcrumbs from '../ui/Breadcrumbs';
 
 const iconMap: Record<string, LucideIcon> = {
     BrainCircuit,
@@ -74,6 +75,9 @@ const ToolsPage: React.FC = () => {
         <div className="min-h-screen bg-gray-50 pt-24 pb-12 px-6">
             <SEO title="Mental Health Toolkit | Psychage" description="Clinically-validated tools and exercises for your mental well-being." />
             <div className="container mx-auto max-w-6xl">
+                <div className="mb-8">
+                    <Breadcrumbs />
+                </div>
                 <div className="text-center max-w-2xl mx-auto mb-16">
                     <h1 className="font-display font-bold text-4xl md:text-5xl text-gray-900 mb-6">
                         Mental Health Toolkit

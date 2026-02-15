@@ -27,18 +27,24 @@ const bgColors = {
 };
 
 const Toast: React.FC<ToastProps> = ({ id, type, message, onDismiss }) => {
+    const isUrgent = type === 'error' || type === 'warning';
+
     return (
         <motion.div
             layout
+            role={isUrgent ? 'alert' : 'status'}
+            aria-live={isUrgent ? 'assertive' : 'polite'}
+            aria-atomic="true"
             initial={{ opacity: 0, y: 50, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9, transition: { duration: 0.2 } }}
             className={`flex items-start gap-3 p-4 rounded-xl border shadow-lg max-w-sm w-full pointer-events-auto ${bgColors[type]}`}
         >
-            <div className="shrink-0 mt-0.5">{icons[type]}</div>
+            <div className="shrink-0 mt-0.5" aria-hidden="true">{icons[type]}</div>
             <p className="text-sm font-medium text-gray-800 flex-grow pt-0.5">{message}</p>
             <button
                 onClick={() => onDismiss(id)}
+                aria-label="Dismiss notification"
                 className="shrink-0 text-gray-400 hover:text-gray-600 transition-colors"
             >
                 <X size={16} />

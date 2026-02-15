@@ -52,6 +52,12 @@ const NotFoundPage: React.FC = () => {
                         <button onClick={() => navigate('/tools/clarity-score')} className="text-sm font-medium text-gray-600 hover:text-teal-600 flex items-center justify-center gap-1 group transition-colors">
                             Clarity Score Tool <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                         </button>
+                        <button onClick={() => navigate('/providers')} className="text-sm font-medium text-gray-600 hover:text-teal-600 flex items-center justify-center gap-1 group transition-colors">
+                            Find Providers <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                        </button>
+                        <button onClick={() => navigate('/crisis')} className="text-sm font-bold text-rose-600 hover:text-rose-700 flex items-center justify-center gap-1 group transition-colors mt-2">
+                            Emergency Help <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                        </button>
                     </div>
                 </div>
 

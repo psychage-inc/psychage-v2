@@ -1,24 +1,73 @@
 import React, { useEffect, useState } from 'react';
-import { Mail, MapPin, Phone, MessageSquare, Send, Check } from 'lucide-react';
+import { Mail, MapPin, Phone, MessageSquare, Send, Check, AlertCircle } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import SEO from '@/components/SEO';
+import { contactService, ContactFormData } from '@/services/contactService';
 
 const ContactPage: React.FC = () => {
     const [submitted, setSubmitted] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
+    const [successMessage, setSuccessMessage] = useState<string>('');
+
+    // Form state
+    const [formData, setFormData] = useState<ContactFormData>({
+        firstName: '',
+        lastName: '',
+        email: '',
+        subject: 'General Inquiry',
+        message: ''
+    });
 
     useEffect(() => {
         window.scrollTo(0, 0);
+        // Process any queued submissions on page load
+        contactService.processQueue();
     }, []);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleInputChange = (
+        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    ) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
+        // Clear error when user starts typing
+        if (error) setError(null);
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsLoading(true);
-        // Simulate API call
-        setTimeout(() => {
+        setError(null);
+
+        try {
+            const result = await contactService.submit(formData);
+
+            if (result.success) {
+                setSubmitted(true);
+                setSuccessMessage(result.message || 'Thank you for reaching out!');
+                // Reset form
+                setFormData({
+                    firstName: '',
+                    lastName: '',
+                    email: '',
+                    subject: 'General Inquiry',
+                    message: ''
+                });
+            } else {
+                setError(result.error || 'Failed to send message. Please try again.');
+            }
+        } catch (err) {
+            console.error('Contact form error:', err);
+            setError('An unexpected error occurred. Please try again or email us directly.');
+        } finally {
             setIsLoading(false);
-            setSubmitted(true);
-        }, 1500);
+        }
+    };
+
+    const resetForm = () => {
+        setSubmitted(false);
+        setError(null);
+        setSuccessMessage('');
     };
 
     return (
@@ -103,29 +152,49 @@ const ContactPage: React.FC = () => {
                                 </div>
                                 <h3 className="font-display font-bold text-2xl text-text-primary mb-2">Message Sent!</h3>
                                 <p className="text-text-secondary max-w-sm mx-auto mb-8">
-                                    Thank you for reaching out. Our team will get back to you within 24 hours.
+                                    {successMessage}
                                 </p>
-                                <Button variant="outline" onClick={() => setSubmitted(false)}>
+                                <Button variant="outline" onClick={resetForm}>
                                     Send Another Message
                                 </Button>
                             </div>
                         ) : (
                             <form onSubmit={handleSubmit} className="space-y-6">
+                                {/* Error Alert */}
+                                {error && (
+                                    <div className="flex items-start gap-3 p-4 bg-red-50 border border-red-200 rounded-xl text-red-700">
+                                        <AlertCircle size={20} className="shrink-0 mt-0.5" />
+                                        <p className="text-sm">{error}</p>
+                                    </div>
+                                )}
+
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
-                                        <label className="text-sm font-bold text-text-secondary ml-1">First Name</label>
+                                        <label htmlFor="firstName" className="text-sm font-bold text-text-secondary ml-1">
+                                            First Name
+                                        </label>
                                         <input
+                                            id="firstName"
+                                            name="firstName"
                                             required
                                             type="text"
+                                            value={formData.firstName}
+                                            onChange={handleInputChange}
                                             className="w-full px-4 py-3 rounded-xl bg-surface-hover border-transparent focus:bg-surface focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-medium text-text-primary placeholder:text-text-tertiary"
                                             placeholder="Jane"
                                         />
                                     </div>
                                     <div className="space-y-2">
-                                        <label className="text-sm font-bold text-text-secondary ml-1">Last Name</label>
+                                        <label htmlFor="lastName" className="text-sm font-bold text-text-secondary ml-1">
+                                            Last Name
+                                        </label>
                                         <input
+                                            id="lastName"
+                                            name="lastName"
                                             required
                                             type="text"
+                                            value={formData.lastName}
+                                            onChange={handleInputChange}
                                             className="w-full px-4 py-3 rounded-xl bg-surface-hover border-transparent focus:bg-surface focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-medium text-text-primary placeholder:text-text-tertiary"
                                             placeholder="Doe"
                                         />
@@ -133,18 +202,32 @@ const ContactPage: React.FC = () => {
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="text-sm font-bold text-text-secondary ml-1">Email Address</label>
+                                    <label htmlFor="email" className="text-sm font-bold text-text-secondary ml-1">
+                                        Email Address
+                                    </label>
                                     <input
+                                        id="email"
+                                        name="email"
                                         required
                                         type="email"
+                                        value={formData.email}
+                                        onChange={handleInputChange}
                                         className="w-full px-4 py-3 rounded-xl bg-surface-hover border-transparent focus:bg-surface focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-medium text-text-primary placeholder:text-text-tertiary"
                                         placeholder="jane@example.com"
                                     />
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="text-sm font-bold text-text-secondary ml-1">Subject</label>
-                                    <select className="w-full px-4 py-3 rounded-xl bg-surface-hover border-transparent focus:bg-surface focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-medium text-text-primary">
+                                    <label htmlFor="subject" className="text-sm font-bold text-text-secondary ml-1">
+                                        Subject
+                                    </label>
+                                    <select
+                                        id="subject"
+                                        name="subject"
+                                        value={formData.subject}
+                                        onChange={handleInputChange}
+                                        className="w-full px-4 py-3 rounded-xl bg-surface-hover border-transparent focus:bg-surface focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-medium text-text-primary"
+                                    >
                                         <option>General Inquiry</option>
                                         <option>Technical Support</option>
                                         <option>Partnership Opportunity</option>
@@ -153,14 +236,30 @@ const ContactPage: React.FC = () => {
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="text-sm font-bold text-text-secondary ml-1">Message</label>
+                                    <label htmlFor="message" className="text-sm font-bold text-text-secondary ml-1">
+                                        Message
+                                    </label>
                                     <textarea
+                                        id="message"
+                                        name="message"
                                         required
                                         rows={5}
+                                        value={formData.message}
+                                        onChange={handleInputChange}
                                         className="w-full px-4 py-3 rounded-xl bg-surface-hover border-transparent focus:bg-surface focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-medium resize-none text-text-primary placeholder:text-text-tertiary"
                                         placeholder="How can we help you?"
                                     />
                                 </div>
+
+                                {/* Honeypot field for spam protection */}
+                                <input
+                                    type="text"
+                                    name="website"
+                                    className="hidden"
+                                    tabIndex={-1}
+                                    autoComplete="off"
+                                    aria-hidden="true"
+                                />
 
                                 <Button
                                     type="submit"

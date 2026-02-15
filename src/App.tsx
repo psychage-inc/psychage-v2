@@ -1,6 +1,6 @@
 import React, { Suspense, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Navigation from './components/layout/Navigation';
 import Footer from './components/layout/Footer';
 import HeroSection from './components/home/HeroSection';
@@ -9,6 +9,7 @@ import SymptomCheckerSection from './components/home/SymptomCheckerSection';
 import NewsletterSection from './components/home/NewsletterSection';
 import VideoShowcaseSection from './components/home/VideoShowcaseSection';
 import TopicHubSection from './components/home/TopicHubSection';
+import HowItWorksSection from './components/home/HowItWorksSection';
 import QuickTopics from './components/home/QuickTopics';
 import ToolsSection from './components/home/ToolsSection';
 import AIChatWidget from './components/chat/AIChatWidget';
@@ -47,12 +48,13 @@ const LoginPage = React.lazy(() => import('./pages/auth/LoginPage'));
 const SignUpPage = React.lazy(() => import('./pages/auth/SignUpPage'));
 const ResetPasswordPage = React.lazy(() => import('./pages/auth/ResetPasswordPage'));
 const UpdatePasswordPage = React.lazy(() => import('./pages/auth/UpdatePasswordPage'));
+const AuthCallback = React.lazy(() => import('./pages/auth/AuthCallback'));
 
 // User Dashboard
 const UserDashboard = React.lazy(() => import('./pages/dashboard/UserDashboard'));
-const ProfileSettings = React.lazy(() => import('./pages/dashboard/ProfileSettings'));
+const AccountSettings = React.lazy(() => import('./pages/dashboard/AccountSettings'));
 const BookmarksPage = React.lazy(() => import('./pages/dashboard/BookmarksPage'));
-const UserAssessmentHistory = React.lazy(() => import('./pages/dashboard/UserAssessmentHistory'));
+const AssessmentHistory = React.lazy(() => import('./pages/dashboard/AssessmentHistory'));
 
 // Admin Dashboard
 const AdminDashboard = React.lazy(() => import('./pages/admin/AdminDashboard'));
@@ -98,6 +100,8 @@ const App: React.FC = () => {
                                             <PageTransition>
                                                 <SEO title="Psychage | Mental Health Education & Tools" description="The first adaptive operating system for mental health. Measure, analyze, and optimize your cognitive state in real-time." />
                                                 <HeroSection />
+
+                                                <HowItWorksSection />
 
                                                 {/* Quick Access Topics */}
                                                 <QuickTopics />
@@ -170,6 +174,7 @@ const App: React.FC = () => {
                                         <Route path="/signup" element={<PageTransition><SignUpPage /></PageTransition>} />
                                         <Route path="/reset-password" element={<PageTransition><ResetPasswordPage /></PageTransition>} />
                                         <Route path="/update-password" element={<PageTransition><UpdatePasswordPage /></PageTransition>} />
+                                        <Route path="/auth/callback" element={<AuthCallback />} />
 
                                         {/* Protected Routes: User Dashboard */}
                                         <Route path="/dashboard" element={
@@ -179,19 +184,27 @@ const App: React.FC = () => {
                                                 </RoleGuard>
                                             </ProtectedRoute>
                                         } />
-                                        <Route path="/dashboard/profile" element={
+                                        <Route path="/dashboard/profile" element={<Navigate to="/dashboard/settings" replace />} />
+                                        <Route path="/dashboard/settings" element={
                                             <ProtectedRoute>
-                                                <PageTransition><ProfileSettings /></PageTransition>
+                                                <RoleGuard allowedRoles={['patient', 'admin']}>
+                                                    <PageTransition><AccountSettings /></PageTransition>
+                                                </RoleGuard>
                                             </ProtectedRoute>
                                         } />
                                         <Route path="/dashboard/bookmarks" element={
                                             <ProtectedRoute>
-                                                <PageTransition><BookmarksPage /></PageTransition>
+                                                <RoleGuard allowedRoles={['patient', 'admin']}>
+                                                    <PageTransition><BookmarksPage /></PageTransition>
+                                                </RoleGuard>
                                             </ProtectedRoute>
                                         } />
-                                        <Route path="/dashboard/assessments" element={
+                                        <Route path="/dashboard/assessments" element={<Navigate to="/dashboard/history" replace />} />
+                                        <Route path="/dashboard/history" element={
                                             <ProtectedRoute>
-                                                <PageTransition><UserAssessmentHistory /></PageTransition>
+                                                <RoleGuard allowedRoles={['patient', 'admin']}>
+                                                    <PageTransition><AssessmentHistory /></PageTransition>
+                                                </RoleGuard>
                                             </ProtectedRoute>
                                         } />
 

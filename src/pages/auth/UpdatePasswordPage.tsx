@@ -6,10 +6,11 @@ import Button from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Label } from '@/components/ui/Label';
 import { Display, Text } from '@/components/ui/Typography';
-import { Card } from '@/components/ui/Card';
 import { Alert, AlertDescription } from '@/components/ui/Alert';
 import { api } from '../../lib/api';
 import { cn } from '@/lib/utils';
+import MeshGradient from '@/components/ui/MeshGradient';
+import InteractiveCard from '@/components/ui/InteractiveCard';
 
 const UpdatePasswordPage = () => {
     const [searchParams] = useSearchParams();
@@ -70,124 +71,158 @@ const UpdatePasswordPage = () => {
 
     if (isSuccess) {
         return (
-            <div className="min-h-[80vh] flex items-center justify-center px-4 py-12 bg-background relative overflow-hidden">
+            <div className="min-h-screen flex items-center justify-center px-4 py-12 bg-background relative overflow-hidden">
+                <MeshGradient className="opacity-60" />
+                <div className="absolute inset-0 bg-background/20 backdrop-blur-[1px] pointer-events-none" />
+
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, ease: "easeOut" }}
                     className="w-full max-w-md relative z-10"
                 >
-                    <Card className="p-8 border-border/50 shadow-xl bg-surface/80 backdrop-blur-sm text-center">
-                        <div className="w-16 h-16 bg-success/10 text-success rounded-full flex items-center justify-center mx-auto mb-4">
+                    <InteractiveCard
+                        spotlightColor="rgba(20, 184, 166, 0.1)"
+                        className="p-8 border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl text-center"
+                    >
+                        <motion.div
+                            initial={{ scale: 0.8, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            className="w-16 h-16 bg-emerald-500/10 text-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 border border-emerald-500/20"
+                        >
                             <CheckCircle2 className="w-8 h-8" />
-                        </div>
+                        </motion.div>
                         <h3 className="text-xl font-semibold text-text-primary mb-2">Password Updated</h3>
-                        <p className="text-text-secondary mb-6">
+                        <p className="text-text-secondary mb-8">
                             Your password has been successfully reset. Redirecting to login...
                         </p>
                         <Button
-                            className="w-full"
+                            className="w-full h-12 text-base font-semibold shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all duration-300"
                             onClick={() => navigate('/login')}
                         >
                             Go to Login
                         </Button>
-                    </Card>
+                    </InteractiveCard>
                 </motion.div>
             </div>
         );
     }
 
     return (
-        <div className="min-h-[80vh] flex items-center justify-center px-4 py-12 bg-background relative overflow-hidden">
-            {/* Background Decor */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-6xl pointer-events-none">
-                <div className="absolute top-20 right-1/4 w-64 h-64 bg-accent-indigo/5 rounded-full blur-3xl" />
-                <div className="absolute bottom-20 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-            </div>
+        <div className="min-h-screen flex items-center justify-center px-4 py-12 bg-background relative overflow-hidden">
+            {/* Dynamic Background */}
+            <MeshGradient className="opacity-60" />
+
+            <div className="absolute inset-0 bg-background/20 backdrop-blur-[1px] pointer-events-none" />
 
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
                 className="w-full max-w-md relative z-10"
             >
                 <div className="mb-8">
-                    <Link
-                        to="/login"
-                        className="inline-flex items-center text-sm text-text-secondary hover:text-primary transition-colors mb-6"
+                    <motion.div
+                        initial={{ x: -10, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{ delay: 0.1 }}
                     >
-                        <ArrowLeft className="w-4 h-4 mr-1" />
-                        Back to Login
-                    </Link>
+                        <Link
+                            to="/login"
+                            className="inline-flex items-center text-sm text-text-secondary hover:text-primary transition-colors mb-6 group"
+                        >
+                            <ArrowLeft className="w-4 h-4 mr-1 group-hover:-translate-x-1 transition-transform" />
+                            Back to Login
+                        </Link>
+                    </motion.div>
+
                     <div className="text-center">
-                        <Display className="text-3xl mb-2">Set New Password</Display>
-                        <Text>Create a strong password for your account</Text>
+                        <motion.div
+                            initial={{ y: 10, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ delay: 0.2, duration: 0.5 }}
+                        >
+                            <Display className="text-3xl mb-3 font-bold bg-clip-text text-transparent bg-gradient-to-r from-text-primary to-text-secondary">
+                                Set New Password
+                            </Display>
+                            <Text className="text-text-secondary">Create a strong password for your account</Text>
+                        </motion.div>
                     </div>
                 </div>
 
-                <Card className="p-8 border-border/50 shadow-xl bg-surface/80 backdrop-blur-sm">
+                <InteractiveCard
+                    spotlightColor="rgba(20, 184, 166, 0.1)"
+                    className="p-8 border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl"
+                >
                     <form onSubmit={handleSubmit} className="space-y-6">
                         {error && (
-                            <Alert variant="destructive">
+                            <Alert variant="destructive" className="animate-in slide-in-from-top-2">
                                 <AlertCircle className="h-4 w-4" />
                                 <AlertDescription>{error}</AlertDescription>
                             </Alert>
                         )}
 
                         <div className="space-y-2">
-                            <Label htmlFor="password">New Password</Label>
-                            <div className="relative">
+                            <Label htmlFor="password" className="text-text-primary ml-1">New Password</Label>
+                            <div className="relative group">
                                 <Input
                                     id="password"
                                     type="password"
                                     required
-                                    className="pl-10"
+                                    className="pl-11 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
                                     disabled={isLoading}
                                 />
-                                <Lock className="absolute left-3 top-3 h-5 w-5 text-text-tertiary" />
+                                <Lock className="absolute left-3.5 top-3.5 h-5 w-5 text-text-tertiary group-focus-within:text-primary transition-colors" />
                             </div>
 
                             {/* Password Strength Indicator */}
-                            <div className="mt-2 space-y-2">
-                                <div className="flex gap-1 h-1">
-                                    <div className={cn("flex-1 rounded-full transition-colors", password.length > 0 ? "bg-red-400" : "bg-gray-200", isPasswordValid && "bg-success")}></div>
-                                    <div className={cn("flex-1 rounded-full transition-colors", isPasswordValid ? "bg-success" : "bg-gray-200")}></div>
-                                    <div className={cn("flex-1 rounded-full transition-colors", hasNumber && isPasswordValid ? "bg-success" : "bg-gray-200")}></div>
-                                    <div className={cn("flex-1 rounded-full transition-colors", password.length > 12 ? "bg-success" : "bg-gray-200")}></div>
+                            <div className="mt-3 space-y-2 px-1">
+                                <div className="flex gap-1.5 h-1.5">
+                                    <div className={cn("flex-1 rounded-full transition-all duration-500", password.length > 0 ? "bg-red-400" : "bg-white/10", isPasswordValid && "bg-emerald-500")}></div>
+                                    <div className={cn("flex-1 rounded-full transition-all duration-500", isPasswordValid ? "bg-emerald-500" : "bg-white/10")}></div>
+                                    <div className={cn("flex-1 rounded-full transition-all duration-500", hasNumber && isPasswordValid ? "bg-emerald-500" : "bg-white/10")}></div>
+                                    <div className={cn("flex-1 rounded-full transition-all duration-500", password.length > 12 ? "bg-emerald-500" : "bg-white/10")}></div>
                                 </div>
-                                <ul className="text-xs text-text-secondary space-y-1">
-                                    <li className={cn("flex items-center transition-colors", isPasswordValid ? "text-success" : "text-text-tertiary")}>
-                                        <CheckCircle2 className="w-3 h-3 mr-1" /> At least 8 characters
+                                <ul className="text-xs text-text-secondary space-y-1 mt-2">
+                                    <li className={cn("flex items-center transition-colors duration-300", isPasswordValid ? "text-emerald-400" : "text-text-tertiary")}>
+                                        <CheckCircle2 className="w-3.5 h-3.5 mr-1.5" /> At least 8 characters
                                     </li>
-                                    <li className={cn("flex items-center transition-colors", hasNumber ? "text-success" : "text-text-tertiary")}>
-                                        <CheckCircle2 className="w-3 h-3 mr-1" /> Contains a number
+                                    <li className={cn("flex items-center transition-colors duration-300", hasNumber ? "text-emerald-400" : "text-text-tertiary")}>
+                                        <CheckCircle2 className="w-3.5 h-3.5 mr-1.5" /> Contains a number
                                     </li>
                                 </ul>
                             </div>
                         </div>
 
                         <div className="space-y-2">
-                            <Label htmlFor="confirmPassword">Confirm New Password</Label>
-                            <div className="relative">
+                            <Label htmlFor="confirmPassword" className="text-text-primary ml-1">Confirm New Password</Label>
+                            <div className="relative group">
                                 <Input
                                     id="confirmPassword"
                                     type="password"
                                     required
-                                    className="pl-10"
+                                    className="pl-11 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
                                     value={confirmPassword}
                                     onChange={(e) => setConfirmPassword(e.target.value)}
                                     disabled={isLoading}
                                 />
-                                <Lock className="absolute left-3 top-3 h-5 w-5 text-text-tertiary" />
+                                <Lock className="absolute left-3.5 top-3.5 h-5 w-5 text-text-tertiary group-focus-within:text-primary transition-colors" />
                             </div>
                         </div>
 
-                        <Button type="submit" className="w-full" size="lg" isLoading={isLoading} disabled={!!error && error !== "Passwords do not match" && !token}>
+                        <Button
+                            type="submit"
+                            className="w-full h-12 text-base font-semibold shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all duration-300"
+                            size="lg"
+                            isLoading={isLoading}
+                            disabled={!!error && error !== "Passwords do not match" && !token}
+                        >
                             Update Password
                         </Button>
                     </form>
-                </Card>
+                </InteractiveCard>
             </motion.div>
         </div>
     );

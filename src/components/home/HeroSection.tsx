@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import Button from '@/components/ui/Button';
 import Magnetic from '@/components/ui/Magnetic';
 import { useNavigate } from 'react-router-dom';
-import HeroBackgroundFluid from './hero/HeroBackgroundFluid';
+import MeshGradient from '@/components/ui/MeshGradient';
 import HeroInsightCard from './hero/HeroInsightCard';
 
 const HeroSection: React.FC = () => {
@@ -21,8 +21,8 @@ const HeroSection: React.FC = () => {
             ref={containerRef}
             className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden bg-background pt-20"
         >
-            {/* Organic Fluid Background */}
-            <HeroBackgroundFluid />
+            {/* Mesh Gradient Background */}
+            <MeshGradient className="opacity-60 dark:opacity-40" />
 
             <div className="container mx-auto px-4 relative z-10 grid lg:grid-cols-2 gap-12 items-center w-full max-w-7xl">
 

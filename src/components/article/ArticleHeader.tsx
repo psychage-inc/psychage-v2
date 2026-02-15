@@ -1,9 +1,9 @@
-
 import React from 'react';
-import { ChevronRight, Calendar, Clock, Share2, Bookmark } from 'lucide-react';
+import { Calendar, Clock, Share2, Bookmark } from 'lucide-react';
 import { Article } from '../../types';
 import Badge from '../ui/Badge';
 import { useBookmarks } from '../../context/BookmarkContext';
+import Breadcrumbs from '../ui/Breadcrumbs';
 
 interface ArticleHeaderProps {
   article: Article;
@@ -16,13 +16,15 @@ const ArticleHeader: React.FC<ArticleHeaderProps> = ({ article }) => {
   return (
     <header className="max-w-4xl mx-auto px-6 pt-32 pb-12 text-center md:text-left">
       {/* Breadcrumb */}
-      <nav className="flex items-center justify-center md:justify-start gap-2 text-sm text-gray-500 mb-8 overflow-x-auto whitespace-nowrap">
-        <span className="hover:text-teal-600 cursor-pointer transition-colors">Home</span>
-        <ChevronRight size={14} />
-        <span className="hover:text-teal-600 cursor-pointer transition-colors">Learn</span>
-        <ChevronRight size={14} />
-        <span className="font-semibold text-teal-700">{article.category.name}</span>
-      </nav>
+      <div className="flex justify-center md:justify-start mb-8">
+        <Breadcrumbs
+          pageData={{
+            title: article.title,
+            category: article.category.name,
+            categorySlug: article.category.slug
+          }}
+        />
+      </div>
 
       <div className="mb-8">
         <Badge variant="teal" className="mb-6">{article.category.name}</Badge>
@@ -76,8 +78,8 @@ const ArticleHeader: React.FC<ArticleHeaderProps> = ({ article }) => {
           <button
             onClick={() => toggleBookmark(article.id)}
             className={`p-2.5 rounded-full transition-colors ${bookmarked
-                ? 'bg-teal-50 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400'
-                : 'hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-400 hover:text-gray-900 dark:hover:text-white'
+              ? 'bg-teal-50 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400'
+              : 'hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-400 hover:text-gray-900 dark:hover:text-white'
               }`}
             title={bookmarked ? "Remove Bookmark" : "Save Article"}
           >

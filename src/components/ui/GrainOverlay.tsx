@@ -1,13 +1,21 @@
 import React from 'react';
 
-const GrainOverlay: React.FC = () => {
+interface GrainOverlayProps {
+    className?: string;
+    opacity?: number;
+}
+
+const GrainOverlay: React.FC<GrainOverlayProps> = ({ className = '', opacity = 0.05 }) => {
     return (
-        <div className="fixed inset-0 pointer-events-none z-[50] opacity-[0.03] mix-blend-overlay">
+        <div
+            className={`absolute inset-0 pointer-events-none z-[0] mix-blend-overlay ${className}`}
+            style={{ opacity }}
+        >
             <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
                 <filter id="noiseFilter">
                     <feTurbulence
                         type="fractalNoise"
-                        baseFrequency="0.65"
+                        baseFrequency="0.80"
                         numOctaves="3"
                         stitchTiles="stitch"
                     />

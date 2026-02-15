@@ -5,16 +5,11 @@ import { cn } from '@/lib/utils';
 import { Card } from '@/components/ui/Card';
 import { useAuth } from '@/context/AuthContext';
 
+import { adminSidebarItems } from '@/config/sidebars';
+
 const AdminSidebar: React.FC = () => {
     const location = useLocation();
     const { logout } = useAuth();
-
-    const links = [
-        { name: 'Dashboard', icon: LayoutDashboard, path: '/admin' },
-        { name: 'Providers', icon: Users, path: '/admin/providers' },
-        { name: 'Audit Logs', icon: ShieldAlert, path: '/admin/audit' },
-        { name: 'Reports', icon: FileText, path: '/admin/reports' },
-    ];
 
     const isActive = (path: string) => {
         if (path === '/admin') return location.pathname === '/admin';
@@ -24,7 +19,7 @@ const AdminSidebar: React.FC = () => {
     return (
         <Card className="p-4 h-full min-h-[calc(100vh-8rem)]">
             <nav className="space-y-2">
-                {links.map((link) => {
+                {adminSidebarItems.map((link) => {
                     const active = isActive(link.path);
                     return (
                         <Link
@@ -38,7 +33,7 @@ const AdminSidebar: React.FC = () => {
                             )}
                         >
                             <link.icon size={18} className={cn(active ? "text-white" : "text-text-tertiary group-hover:text-primary")} />
-                            {link.name}
+                            {link.label}
                         </Link>
                     );
                 })}

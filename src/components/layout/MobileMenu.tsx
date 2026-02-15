@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ArrowRight, ChevronRight, LogOut, User } from 'lucide-react';
+import { X, ArrowRight, ChevronRight, LogOut, User, ChevronDown, HeartHandshake } from 'lucide-react';
 import ThemeToggle from '../ui/ThemeToggle';
 import { useAuth } from '../../context/AuthContext';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+import { navigationConfig } from '../../config/navigation';
+import { useNavigation } from '../../hooks/useNavigation';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -14,14 +16,14 @@ interface MobileMenuProps {
 const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onNavigateGeneric }) => {
   const { user, isAuthenticated, logout } = useAuth();
   const navigate = useNavigate();
+  const { getDashboardConfig } = useNavigation();
+  const [expandedSection, setExpandedSection] = useState<string | null>(null);
 
-  const handleNav = (view: string) => {
+  const dashboardConfig = getDashboardConfig();
+
+  const handleNav = (path: string) => {
     onClose();
-    if (onNavigateGeneric) {
-      onNavigateGeneric(view);
-    } else {
-      navigate(view === 'home' ? '/' : `/${view}`);
-    }
+    navigate(path);
   };
 
   const handleLogout = async () => {
@@ -30,28 +32,9 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onNavigateGene
     navigate('/');
   };
 
-  const getDashboardPath = () => {
-    if (!user) return 'login';
-    switch (user.role) {
-      case 'admin': return 'admin';
-      case 'provider': return 'provider/dashboard';
-      case 'patient': return 'dashboard';
-      default: return 'dashboard';
-    }
+  const toggleSection = (section: string) => {
+    setExpandedSection(expandedSection === section ? null : section);
   };
-
-  const menuItems = [
-    { name: 'Home', view: 'home' },
-    { name: 'Articles', view: 'learn' },
-    { name: 'Tools', view: 'tools' },
-    { name: 'Find Care', view: 'find-care' },
-    { name: 'About', view: 'about' },
-    { name: 'Contact', view: 'contact' },
-  ];
-
-  if (isAuthenticated) {
-    menuItems.splice(1, 0, { name: 'Dashboard', view: getDashboardPath() });
-  }
 
   return (
     <AnimatePresence>
@@ -101,41 +84,111 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onNavigateGene
 
             {/* Links */}
             <nav className="flex-1 overflow-y-auto py-6 px-6 flex flex-col gap-2">
-              {menuItems.map((item) => (
-                <button
-                  key={item.name}
-                  onClick={() => handleNav(item.view)}
-                  className="group flex items-center justify-between p-4 rounded-xl text-lg font-bold text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-teal-700 dark:hover:text-teal-400 transition-all border border-transparent hover:border-gray-100 dark:hover:border-gray-700 text-left w-full"
-                >
-                  {item.name}
-                  <ChevronRight size={18} className="text-gray-300 dark:text-gray-600 group-hover:text-teal-500" />
-                </button>
+
+              {/* Accordion Sections */}
+              {Object.entries(navigationConfig).map(([key, section]) => (
+                <div key={key} className="border-b border-gray-100 dark:border-gray-800 last:border-0 pb-2 mb-2">
+                  <button
+                    onClick={() => toggleSection(key)}
+                    className="w-full flex items-center justify-between py-3 text-lg font-bold text-gray-800 dark:text-gray-200"
+                  >
+                    <span className="capitalize">{key}</span>
+                    <ChevronDown
+                      size={20}
+                      className={`transition-transform duration-200 ${expandedSection === key ? 'rotate-180 text-teal-600' : 'text-gray-400'}`}
+                    />
+                  </button>
+                  <AnimatePresence>
+                    {expandedSection === key && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        className="overflow-hidden"
+                      >
+                        <div className="pl-4 pb-4 space-y-3">
+                          {section.sections.map((subSection, idx) => (
+                            <div key={idx} className="space-y-2">
+                              {subSection.items.map(item => (
+                                <Link
+                                  key={item.href}
+                                  to={item.href}
+                                  onClick={() => handleNav(item.href)}
+                                  className="block text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-teal-600 dark:hover:text-teal-400 py-1"
+                                >
+                                  {item.label}
+                                </Link>
+                              ))}
+                            </div>
+                          ))}
+                          {section.quickActions && (
+                            <div className="pt-2 border-t border-gray-100 dark:border-gray-800 space-y-2">
+                              {section.quickActions.map(action => (
+                                <Link
+                                  key={action.href}
+                                  to={action.href}
+                                  onClick={() => handleNav(action.href)}
+                                  className="flex items-center text-sm font-semibold text-teal-600 dark:text-teal-400"
+                                >
+                                  {action.label} <ChevronRight size={14} />
+                                </Link>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
               ))}
 
-              <div className="mt-6 pt-6 border-t border-gray-100 dark:border-gray-800">
-                <button onClick={() => handleNav('about')} className="block w-full text-left py-3 font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">Help Center</button>
-              </div>
+              <Link
+                to="/find-care"
+                onClick={() => handleNav('/find-care')}
+                className="py-3 text-lg font-bold text-gray-800 dark:text-gray-200 border-b border-gray-100 dark:border-gray-800 mb-2 block"
+              >
+                Find Providers
+              </Link>
+
+              <Link
+                to="/crisis"
+                onClick={() => handleNav('/crisis')}
+                className="py-3 text-lg font-bold text-red-600 dark:text-red-400 flex items-center gap-2 mb-4 block"
+              >
+                <HeartHandshake size={20} />
+                Crisis Support
+              </Link>
+
+
             </nav>
 
             {/* Footer / CTA */}
             <div className="p-6 border-t border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50 space-y-3">
               {isAuthenticated ? (
-                <button
-                  onClick={handleLogout}
-                  className="w-full py-3.5 px-4 bg-red-50 text-red-600 hover:bg-red-100 rounded-xl font-bold transition-all flex justify-center items-center gap-2"
-                >
-                  <LogOut size={18} /> Sign Out
-                </button>
+                <>
+                  <button
+                    onClick={() => handleNav(dashboardConfig?.path || '/dashboard')}
+                    className="w-full py-3.5 px-4 bg-teal-600 text-white rounded-xl font-bold shadow-lg shadow-teal-900/20 active:scale-[0.98] transition-all flex justify-center items-center gap-2"
+                  >
+                    Dashboard <ArrowRight size={18} />
+                  </button>
+                  <button
+                    onClick={handleLogout}
+                    className="w-full py-3.5 px-4 bg-red-50 text-red-600 hover:bg-red-100 rounded-xl font-bold transition-all flex justify-center items-center gap-2"
+                  >
+                    <LogOut size={18} /> Sign Out
+                  </button>
+                </>
               ) : (
                 <>
                   <button
-                    onClick={() => handleNav('login')}
+                    onClick={() => handleNav('/login')}
                     className="w-full py-3.5 px-4 bg-white border border-gray-200 text-gray-900 rounded-xl font-bold hover:bg-gray-50 transition-all flex justify-center items-center gap-2"
                   >
                     <User size={18} /> Sign In
                   </button>
                   <button
-                    onClick={() => handleNav('signup')}
+                    onClick={() => handleNav('/signup')}
                     className="w-full py-3.5 px-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl font-bold shadow-lg shadow-gray-900/20 active:scale-[0.98] transition-all flex justify-center items-center gap-2"
                   >
                     Get Started <ArrowRight size={18} />

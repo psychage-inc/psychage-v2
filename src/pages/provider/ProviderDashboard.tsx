@@ -8,6 +8,7 @@ import Button from '@/components/ui/Button';
 import SEO from '@/components/SEO';
 import { api, ProviderStats } from '@/lib/api';
 import { format } from 'date-fns';
+import Breadcrumbs from '@/components/ui/Breadcrumbs';
 
 const ProviderDashboard: React.FC = () => {
     interface ProviderActivityItem {
@@ -72,7 +73,10 @@ const ProviderDashboard: React.FC = () => {
         <div className="min-h-screen bg-background pt-24 pb-20 px-6">
             <SEO title="Provider Dashboard | Psychage" />
 
+
+
             <div className="container mx-auto max-w-[1200px]">
+                <Breadcrumbs className="mb-6" />
                 <h1 className="text-3xl font-display font-bold text-text-primary mb-8">Provider Dashboard</h1>
 
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">

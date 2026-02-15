@@ -5,14 +5,7 @@ import { cn } from '@/lib/utils';
 import { Card } from '@/components/ui/Card';
 import { useAuth } from '@/context/AuthContext';
 
-const sidebarItems = [
-    { icon: LayoutDashboard, label: 'Overview', to: '/provider' },
-    { icon: Calendar, label: 'Appointments', to: '/provider/appointments' },
-    { icon: Users, label: 'Patients', to: '/provider/patients' },
-    { icon: BarChart3, label: 'Analytics', to: '/provider/analytics' },
-    { icon: UserSquare2, label: 'My Profile', to: '/provider/profile' },
-    { icon: Settings, label: 'Settings', to: '/provider/settings' },
-];
+import { providerSidebarItems } from '@/config/sidebars';
 
 const ProviderSidebar: React.FC = () => {
     const { user, logout } = useAuth();
@@ -59,11 +52,11 @@ const ProviderSidebar: React.FC = () => {
             </div>
 
             <nav className="space-y-1 flex-grow">
-                {sidebarItems.map((item) => (
+                {providerSidebarItems.map((item) => (
                     <NavLink
-                        key={item.to}
-                        to={item.to}
-                        end={item.to === '/provider'}
+                        key={item.path}
+                        to={item.path}
+                        end={item.path === '/provider'}
                         className={({ isActive }) => cn(
                             "flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-colors",
                             isActive

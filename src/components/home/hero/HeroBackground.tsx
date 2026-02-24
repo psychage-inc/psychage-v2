@@ -28,7 +28,7 @@ const HeroBackground: React.FC = () => {
   }, [mouseX, mouseY]);
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10 bg-[#fafaf9] transition-colors duration-500">
+    <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10 bg-background transition-colors duration-500">
       {/* Aurora Gradients - Teal (Top Left) */}
       <motion.div
         style={{ x: x1, y: y1 }}

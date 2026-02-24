@@ -31,6 +31,37 @@ export default {
                 error: 'var(--color-error)',
                 success: 'var(--color-success)',
                 warning: 'var(--color-warning)',
+                // Psychage Brand System
+                teal: {
+                    50: '#F0FDFA',
+                    400: '#2DD4BF',
+                    500: '#14B8A6',
+                    600: '#0D9488',
+                },
+                charcoal: {
+                    100: '#F5F5F4',
+                    300: '#D6D3D1',
+                    500: '#78716C',
+                    700: '#44403C',
+                    900: '#1C1917',
+                },
+                crisis: {
+                    red: '#DC2626',
+                },
+                urgent: {
+                    amber: '#D97706',
+                },
+                watch: {
+                    blue: '#2563EB',
+                },
+                safe: {
+                    green: '#059669',
+                },
+                relevance: {
+                    high: '#0D9488',
+                    moderate: '#6366F1',
+                    explore: '#8B5CF6',
+                }
             },
             fontFamily: {
                 sans: ['var(--font-sans)'],

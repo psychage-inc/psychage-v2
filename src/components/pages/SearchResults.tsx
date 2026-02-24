@@ -94,7 +94,7 @@ const SearchResults: React.FC = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50 dark:bg-[#050505] pt-24 pb-20 transition-colors duration-300">
+        <div className="min-h-screen bg-background pt-24 pb-20 transition-colors duration-300">
             <SEO
                 title={`Search Results for "${query}" | Psychage`}
                 description={`Search results for ${query} on Psychage.`}

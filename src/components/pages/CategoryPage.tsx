@@ -31,7 +31,7 @@ const CategoryPage: React.FC = () => {
     const categoryTools = tools.slice(0, 2);
 
     return (
-        <div className="min-h-screen bg-[#fafaf9]">
+        <div className="min-h-screen bg-background">
             <SEO
                 title={`${categoryTitle} | Psychage Resources`}
                 description={`Explore articles, videos, and tools related to ${categoryTitle} on Psychage.`}

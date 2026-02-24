@@ -22,11 +22,11 @@ export const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
         // Mark as shown for this session
         sessionStorage.setItem(LOADING_SHOWN_KEY, 'true');
 
-        // Simulate loading time (reduced from 3000ms)
+        // Simulate loading time
         const timer = setTimeout(() => {
             setIsLoading(false);
             setTimeout(onComplete, 800); // Wait for exit animation
-        }, 2000);
+        }, 100);
 
         return () => clearTimeout(timer);
     }, [onComplete, isLoading]);
@@ -121,10 +121,10 @@ export const LoadingScreenWipe = ({ onComplete }: { onComplete: () => void }) =>
             return;
         }
 
-        // Trigger the exit animation after a delay (reduced from 3000ms)
+        // Trigger exit immediately after React hydration
         const timer = setTimeout(() => {
             onComplete();
-        }, 2500);
+        }, 800); // Only keep enough time for the intro animation to play or data to fetch
 
         return () => clearTimeout(timer);
     }, [onComplete, shouldShow]);
@@ -160,7 +160,7 @@ export const LoadingScreenWipe = ({ onComplete }: { onComplete: () => void }) =>
                         className="w-48 md:w-64 h-auto object-contain"
                         initial={{ opacity: 0, scale: 0.8, filter: "blur(10px)" }}
                         animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-                        transition={{ duration: 1.2, ease: "easeOut" }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
                     />
                 </div>
 
@@ -169,7 +169,7 @@ export const LoadingScreenWipe = ({ onComplete }: { onComplete: () => void }) =>
                     className="mt-4 text-text-secondary text-sm font-medium tracking-[0.2em] uppercase"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 0.7, y: 0 }}
-                    transition={{ delay: 0.8, duration: 0.8 }}
+                    transition={{ delay: 0.4, duration: 0.6 }}
                 >
                     Cognitive Optimization
                 </motion.p>
@@ -179,20 +179,20 @@ export const LoadingScreenWipe = ({ onComplete }: { onComplete: () => void }) =>
                     className="mt-12 w-64 h-[2px] bg-surface-active/50 rounded-full overflow-hidden relative"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 1 }}
+                    transition={{ delay: 0.5 }}
                 >
                     <motion.div
                         className="absolute top-0 left-0 h-full bg-gradient-to-r from-primary/60 to-primary"
                         initial={{ width: "0%" }}
                         animate={{ width: "100%" }}
-                        transition={{ duration: 1.5, ease: "easeInOut", delay: 1 }}
+                        transition={{ duration: 0.8, ease: "easeInOut", delay: 0.5 }}
                     />
                     {/* Leading Glow Head */}
                     <motion.div
                         className="absolute top-0 h-full w-[20px] bg-white blur-[5px]"
                         initial={{ left: "0%", opacity: 0 }}
                         animate={{ left: "100%", opacity: 1 }}
-                        transition={{ duration: 1.5, ease: "easeInOut", delay: 1 }}
+                        transition={{ duration: 0.8, ease: "easeInOut", delay: 0.5 }}
                     />
                 </motion.div>
             </div>

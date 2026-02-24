@@ -20,7 +20,7 @@
 
   <!-- Content Security Policy - relaxed for development, tighten for production -->
   <!-- Note: connect-src needs ws: wss: for Vite HMR in dev mode -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://images.unsplash.com data: blob:; connect-src 'self' ws: wss: http://localhost:* https://localhost:*;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://images.unsplash.com https://cdn.sanity.io data: blob:; connect-src 'self' ws: wss: http://localhost:* https://localhost:* https://*.supabase.co https://*.sanity.io https://cdn.sanity.io https://generativelanguage.googleapis.com;">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -118,4 +118,3 @@
 </body>
 
 </html>
-```

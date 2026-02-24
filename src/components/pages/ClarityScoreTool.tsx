@@ -166,10 +166,10 @@ const ClarityScoreTool: React.FC = () => {
         };
     };
 
-    if (isLoading) return <div className="min-h-screen bg-[#fafaf9] dark:bg-[#050505] pt-32 text-center">Loading...</div>;
+    if (isLoading) return <div className="min-h-screen bg-background pt-32 text-center">Loading...</div>;
 
     return (
-        <div className="min-h-screen bg-[#fafaf9] dark:bg-[#050505] pt-24 pb-12 px-6 transition-colors duration-300">
+        <div className="min-h-screen bg-background pt-24 pb-12 px-6 transition-colors duration-300">
             <SEO title="Clarity Score Assessment | Psychage" description="Assess your mental clarity and receive personalized recommendations." />
 
             {/* Crisis Overlay */}

@@ -7,7 +7,7 @@ const NotFoundPage: React.FC = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="min-h-screen bg-[#fafaf9] flex items-center justify-center p-6">
+        <div className="min-h-screen bg-background flex items-center justify-center p-6">
             <div className="max-w-md w-full text-center">
 
                 <div className="relative w-48 h-48 mx-auto mb-8">

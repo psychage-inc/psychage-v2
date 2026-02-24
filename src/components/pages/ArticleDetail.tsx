@@ -44,15 +44,15 @@ const ArticleDetail: React.FC = () => {
   }, [article]);
 
   if (loading) {
-    return <div className="min-h-screen flex items-center justify-center bg-white dark:bg-[#050505] text-gray-900 dark:text-white">Loading...</div>;
+    return <div className="min-h-screen flex items-center justify-center bg-background text-gray-900 dark:text-white">Loading...</div>;
   }
 
   if (!article) {
-    return <div className="min-h-screen flex items-center justify-center bg-white dark:bg-[#050505] text-gray-900 dark:text-white">Article not found</div>;
+    return <div className="min-h-screen flex items-center justify-center bg-background text-gray-900 dark:text-white">Article not found</div>;
   }
 
   return (
-    <div className="min-h-screen bg-white dark:bg-[#050505] relative transition-colors duration-300">
+    <div className="min-h-screen bg-background relative transition-colors duration-300">
       <SEO
         title={`${article.title} | Psychage`}
         description={article.description}

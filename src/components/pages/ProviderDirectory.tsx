@@ -99,7 +99,7 @@ const ProviderDirectory: React.FC = () => {
     if (error) return <div className="min-h-screen flex items-center justify-center text-red-500">{error}</div>;
 
     return (
-        <div className="min-h-screen bg-[#fafaf9] dark:bg-[#050505] pt-24 pb-20 transition-colors duration-300">
+        <div className="min-h-screen bg-background pt-24 pb-20 transition-colors duration-300">
             <SEO title="Find a Therapist | Psychage" description="Connect with verified mental health providers." />
 
             {/* Header */}

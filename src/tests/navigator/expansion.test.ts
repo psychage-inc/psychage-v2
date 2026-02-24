@@ -11,7 +11,7 @@
  * - Category diversity with new condition families
  */
 
-import { describe, it, expect, beforeAll } from 'vitest';
+import { describe, it, expect, beforeAll, vi } from 'vitest';
 import { runSymptomNavigator } from '@/lib/navigator/engine';
 import { calculateConditionScore, rankAndDiversify, scoreAllConditions } from '@/lib/navigator/scoring';
 import { normalizeSymptoms, DEFAULT_MATCHING_CONFIG } from '@/lib/navigator/utils';
@@ -34,6 +34,11 @@ describe('Expansion — New Condition Matching', () => {
   let hasExpansion: boolean;
 
   beforeAll(() => {
+    // Enable all tiers for expansion tests
+    vi.stubEnv('VITE_NAV_TIER1_ENABLED', 'true');
+    vi.stubEnv('VITE_NAV_TIER2_ENABLED', 'true');
+    vi.stubEnv('VITE_NAV_TIER3_ENABLED', 'true');
+
     kb = createTestKnowledgeBase();
     // Guard: check if expansion conditions exist in the test KB
     hasExpansion = kb.conditions.some((c) => c.id === 'SCZ');

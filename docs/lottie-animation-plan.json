@@ -1,0 +1,1439 @@
+{
+  "project": "Psychage — Animated Lottie Icon System",
+  "total_unique_lottie_files": 97,
+  "total_animated_placements": 189,
+  "existing_setup": {
+    "library": "lottie-react v2.4.1 (already installed)",
+    "existing_usage": "Preloader.tsx uses Lottie for intro animation"
+  },
+
+  "animation_triggers_legend": {
+    "LOOP": "Continuous looping animation, always playing when visible",
+    "HOVER": "Plays forward on mouseenter, reverses on mouseleave",
+    "CLICK": "Plays once on click/tap, then resets",
+    "SCROLL": "Plays once when element enters viewport (IntersectionObserver)",
+    "STATE": "Two-segment animation — frame 0→N for 'on', frame N→0 for 'off'",
+    "MORPH": "Shape morphs between two distinct icons",
+    "FOCUS": "Plays when parent input receives focus",
+    "STAGGER": "Plays in sequence with sibling icons (cascade effect)"
+  },
+
+  "placements": [
+    {
+      "section": "NAVIGATION — Desktop Header",
+      "file": "src/components/layout/Navigation.tsx",
+      "icons": [
+        {
+          "icon": "search",
+          "context": "Search toggle button in navbar",
+          "trigger": "HOVER",
+          "animation": "Magnifying glass handle bounces, lens pulses slightly",
+          "duration_ms": 600,
+          "notes": "Plays on hover, draws attention to search"
+        },
+        {
+          "icon": "close",
+          "context": "Replaces search icon when search is open",
+          "trigger": "MORPH",
+          "animation": "Search icon morphs into X (cross-fade rotation)",
+          "duration_ms": 300,
+          "notes": "Single Lottie with 2 segments: search→X and X→search"
+        },
+        {
+          "icon": "menu",
+          "context": "Mobile hamburger button",
+          "trigger": "MORPH",
+          "animation": "Three lines morph into X shape",
+          "duration_ms": 350,
+          "notes": "STATE toggle — frame 0-15: hamburger→X, frame 15-0: X→hamburger"
+        },
+        {
+          "icon": "chevron-down",
+          "context": "Mega-menu dropdown indicator next to nav links",
+          "trigger": "STATE",
+          "animation": "Chevron rotates 180° smoothly with slight bounce",
+          "duration_ms": 250,
+          "notes": "Tied to activeTab state"
+        },
+        {
+          "icon": "user",
+          "context": "User menu toggle button",
+          "trigger": "HOVER",
+          "animation": "User silhouette does subtle wave/nod",
+          "duration_ms": 500,
+          "notes": "Friendly micro-interaction"
+        },
+        {
+          "icon": "dashboard",
+          "context": "Dashboard link in user dropdown",
+          "trigger": "HOVER",
+          "animation": "Dashboard grid squares stagger-fill",
+          "duration_ms": 400
+        },
+        {
+          "icon": "settings",
+          "context": "Settings link in user dropdown",
+          "trigger": "HOVER",
+          "animation": "Gear rotates 90° with subtle bounce",
+          "duration_ms": 400
+        },
+        {
+          "icon": "logout",
+          "context": "Sign out button in user dropdown",
+          "trigger": "HOVER",
+          "animation": "Arrow slides out of door frame",
+          "duration_ms": 400,
+          "notes": "Red color variant"
+        }
+      ]
+    },
+
+    {
+      "section": "NAVIGATION — Mega Menu",
+      "file": "src/components/layout/NavMenu.tsx",
+      "icons": [
+        {
+          "icon": "brain",
+          "context": "Mental Health category in mega-menu grid",
+          "trigger": "HOVER",
+          "animation": "Brain hemispheres pulse with neural sparks",
+          "duration_ms": 700
+        },
+        {
+          "icon": "leaf",
+          "context": "Wellness category",
+          "trigger": "HOVER",
+          "animation": "Leaf unfurls and sways gently",
+          "duration_ms": 600
+        },
+        {
+          "icon": "briefcase",
+          "context": "Workplace category",
+          "trigger": "HOVER",
+          "animation": "Briefcase latch clicks open",
+          "duration_ms": 500
+        },
+        {
+          "icon": "heart",
+          "context": "Relationships category",
+          "trigger": "HOVER",
+          "animation": "Heart beats once (systole + diastole)",
+          "duration_ms": 500
+        },
+        {
+          "icon": "bar-chart",
+          "context": "Assessments category",
+          "trigger": "HOVER",
+          "animation": "Bars rise up sequentially from left to right",
+          "duration_ms": 600
+        },
+        {
+          "icon": "edit",
+          "context": "Journal category",
+          "trigger": "HOVER",
+          "animation": "Pencil draws a short squiggle line",
+          "duration_ms": 500
+        },
+        {
+          "icon": "moon",
+          "context": "Sleep category",
+          "trigger": "HOVER",
+          "animation": "Crescent moon waxes with a twinkle star",
+          "duration_ms": 600
+        },
+        {
+          "icon": "zap",
+          "context": "Quick action / featured",
+          "trigger": "HOVER",
+          "animation": "Lightning bolt flashes with electric pulse",
+          "duration_ms": 400
+        },
+        {
+          "icon": "chevron-right",
+          "context": "Quick action list items",
+          "trigger": "HOVER",
+          "animation": "Slides right 3px and back",
+          "duration_ms": 250
+        }
+      ]
+    },
+
+    {
+      "section": "NAVIGATION — Mobile Menu",
+      "file": "src/components/layout/MobileMenu.tsx",
+      "icons": [
+        {
+          "icon": "close",
+          "context": "Close mobile menu",
+          "trigger": "CLICK",
+          "animation": "X rotates 90° then fades",
+          "duration_ms": 250
+        },
+        {
+          "icon": "heart-handshake",
+          "context": "Crisis support CTA at top",
+          "trigger": "LOOP",
+          "animation": "Hands clasp with gentle pulse — attention-grabbing",
+          "duration_ms": 1500,
+          "notes": "Always animating to draw eye to crisis help"
+        },
+        {
+          "icon": "chevron-down",
+          "context": "Section accordion toggles",
+          "trigger": "STATE",
+          "animation": "Smooth 180° rotation",
+          "duration_ms": 250
+        },
+        {
+          "icon": "chevron-right",
+          "context": "Quick action arrows",
+          "trigger": "HOVER",
+          "animation": "Nudge right 3px",
+          "duration_ms": 200
+        },
+        {
+          "icon": "user",
+          "context": "Sign in button",
+          "trigger": "HOVER",
+          "animation": "Subtle bounce",
+          "duration_ms": 300
+        },
+        {
+          "icon": "logout",
+          "context": "Sign out button",
+          "trigger": "HOVER",
+          "animation": "Arrow slides out",
+          "duration_ms": 400
+        },
+        {
+          "icon": "arrow-right",
+          "context": "CTA buttons (Sign In, Dashboard)",
+          "trigger": "HOVER",
+          "animation": "Slides right 4px with ease-out",
+          "duration_ms": 250
+        }
+      ]
+    },
+
+    {
+      "section": "NAVIGATION — Sidebar (Patient Dashboard)",
+      "file": "src/pages/dashboard/UserSidebar.tsx",
+      "icons": [
+        {
+          "icon": "dashboard",
+          "context": "Overview nav item",
+          "trigger": "HOVER",
+          "animation": "Grid squares stagger-fill from top-left",
+          "duration_ms": 400
+        },
+        {
+          "icon": "history",
+          "context": "History nav item",
+          "trigger": "HOVER",
+          "animation": "Clock hands spin backward once",
+          "duration_ms": 500
+        },
+        {
+          "icon": "bookmark",
+          "context": "Saved items nav",
+          "trigger": "HOVER",
+          "animation": "Bookmark flag slides down, then fills",
+          "duration_ms": 400
+        },
+        {
+          "icon": "settings",
+          "context": "Settings nav item",
+          "trigger": "HOVER",
+          "animation": "Gear rotates 90°",
+          "duration_ms": 400
+        },
+        {
+          "icon": "logout",
+          "context": "Sign out at bottom of sidebar",
+          "trigger": "HOVER",
+          "animation": "Door opens, arrow slides out",
+          "duration_ms": 500
+        }
+      ]
+    },
+
+    {
+      "section": "NAVIGATION — Sidebar (Admin)",
+      "file": "src/pages/admin/AdminSidebar.tsx",
+      "icons": [
+        {
+          "icon": "dashboard",
+          "trigger": "HOVER",
+          "animation": "Grid squares stagger-fill",
+          "duration_ms": 400,
+          "context": "Admin dashboard nav"
+        },
+        {
+          "icon": "users",
+          "trigger": "HOVER",
+          "animation": "Figures wave in sequence",
+          "duration_ms": 500,
+          "context": "User management nav"
+        },
+        {
+          "icon": "file-text",
+          "trigger": "HOVER",
+          "animation": "Page flips with a text line appearing",
+          "duration_ms": 450,
+          "context": "Reports nav"
+        },
+        {
+          "icon": "shield-alert",
+          "trigger": "HOVER",
+          "animation": "Shield pulses with exclamation mark flash",
+          "duration_ms": 500,
+          "context": "Alerts nav"
+        },
+        {
+          "icon": "logout",
+          "trigger": "HOVER",
+          "animation": "Arrow slides out of door",
+          "duration_ms": 400,
+          "context": "Admin logout"
+        }
+      ]
+    },
+
+    {
+      "section": "NAVIGATION — Sidebar (Provider)",
+      "file": "src/pages/provider/ProviderSidebar.tsx",
+      "icons": [
+        {
+          "icon": "dashboard",
+          "trigger": "HOVER",
+          "animation": "Grid stagger-fill",
+          "duration_ms": 400,
+          "context": "Provider overview"
+        },
+        {
+          "icon": "users",
+          "trigger": "HOVER",
+          "animation": "Figures wave sequence",
+          "duration_ms": 500,
+          "context": "Patients nav"
+        },
+        {
+          "icon": "calendar",
+          "trigger": "HOVER",
+          "animation": "Calendar page flips",
+          "duration_ms": 500,
+          "context": "Appointments nav"
+        },
+        {
+          "icon": "settings",
+          "trigger": "HOVER",
+          "animation": "Gear rotation 90°",
+          "duration_ms": 400,
+          "context": "Settings nav"
+        },
+        {
+          "icon": "bar-chart",
+          "trigger": "HOVER",
+          "animation": "Bars rise up left-to-right",
+          "duration_ms": 600,
+          "context": "Analytics nav"
+        },
+        {
+          "icon": "user-square",
+          "trigger": "HOVER",
+          "animation": "Profile card slides in",
+          "duration_ms": 400,
+          "context": "Profile nav"
+        },
+        {
+          "icon": "logout",
+          "trigger": "HOVER",
+          "animation": "Arrow slides out",
+          "duration_ms": 400,
+          "context": "Provider logout"
+        }
+      ]
+    },
+
+    {
+      "section": "NAVIGATION — Breadcrumbs & Pagination",
+      "file": "src/components/ui/Breadcrumbs.tsx + Pagination.tsx",
+      "icons": [
+        {
+          "icon": "home",
+          "trigger": "HOVER",
+          "animation": "Chimney puffs a tiny smoke ring",
+          "duration_ms": 500,
+          "context": "Breadcrumb home link"
+        },
+        {
+          "icon": "chevron-right",
+          "trigger": "SCROLL",
+          "animation": "Fade-slide in from left (stagger with breadcrumb text)",
+          "duration_ms": 200,
+          "context": "Breadcrumb separator"
+        },
+        {
+          "icon": "chevron-left",
+          "trigger": "HOVER",
+          "animation": "Nudge left 2px",
+          "duration_ms": 200,
+          "context": "Pagination prev"
+        },
+        {
+          "icon": "chevron-right",
+          "trigger": "HOVER",
+          "animation": "Nudge right 2px",
+          "duration_ms": 200,
+          "context": "Pagination next"
+        }
+      ]
+    },
+
+    {
+      "section": "HOME — Hero Section",
+      "file": "src/components/home/HeroSection.tsx",
+      "icons": [
+        {
+          "icon": "arrow-right",
+          "context": "Primary CTA 'Start Free Analysis' button",
+          "trigger": "HOVER",
+          "animation": "Arrow slides right 5px, slight scale up, bounces back",
+          "duration_ms": 350,
+          "notes": "Highest-visibility icon on the site — must feel premium"
+        },
+        {
+          "icon": "play",
+          "context": "Secondary CTA 'How it works' button",
+          "trigger": "HOVER",
+          "animation": "Play triangle scales up and pulses once",
+          "duration_ms": 400,
+          "notes": "Invites click — should feel playful"
+        }
+      ]
+    },
+
+    {
+      "section": "HOME — How It Works Steps",
+      "file": "src/components/home/HowItWorksSection.tsx",
+      "icons": [
+        {
+          "icon": "brain",
+          "context": "Step 1 — Take Assessment",
+          "trigger": "SCROLL",
+          "animation": "Brain draws in with neural connections lighting up",
+          "duration_ms": 800,
+          "notes": "Plays once when card scrolls into view"
+        },
+        {
+          "icon": "sparkles",
+          "context": "Step 2 — Get Insights",
+          "trigger": "SCROLL",
+          "animation": "Stars twinkle in one-by-one with stagger",
+          "duration_ms": 800,
+          "stagger_delay_ms": 200
+        },
+        {
+          "icon": "trending-up",
+          "context": "Step 3 — Track Progress",
+          "trigger": "SCROLL",
+          "animation": "Line draws left-to-right, arrow head pops at the end",
+          "duration_ms": 800,
+          "stagger_delay_ms": 400
+        },
+        {
+          "icon": "arrow-right",
+          "context": "Section CTA button",
+          "trigger": "HOVER",
+          "animation": "Slides right 4px",
+          "duration_ms": 250
+        }
+      ]
+    },
+
+    {
+      "section": "HOME — Quick Topics Grid",
+      "file": "src/components/home/QuickTopics.tsx",
+      "icons": [
+        {
+          "icon": "brain",
+          "context": "Mental Health topic card",
+          "trigger": "HOVER",
+          "animation": "Brain hemispheres pulse",
+          "duration_ms": 600
+        },
+        {
+          "icon": "heart",
+          "context": "Relationships topic card",
+          "trigger": "HOVER",
+          "animation": "Single heartbeat",
+          "duration_ms": 500
+        },
+        {
+          "icon": "users",
+          "context": "Community topic card",
+          "trigger": "HOVER",
+          "animation": "Figures pop up one by one",
+          "duration_ms": 500
+        },
+        {
+          "icon": "sparkles",
+          "context": "LGBTQ+ topic card",
+          "trigger": "HOVER",
+          "animation": "Stars twinkle in rainbow sequence",
+          "duration_ms": 600,
+          "notes": "Color could shift through rainbow palette"
+        },
+        {
+          "icon": "stethoscope",
+          "context": "Professional Help topic card",
+          "trigger": "HOVER",
+          "animation": "Stethoscope chest piece pulses like listening to heartbeat",
+          "duration_ms": 600
+        },
+        {
+          "icon": "activity",
+          "context": "Health Metrics topic card",
+          "trigger": "HOVER",
+          "animation": "EKG line draws across, peaks at center",
+          "duration_ms": 700
+        },
+        {
+          "icon": "arrow-right",
+          "context": "'Explore all' link",
+          "trigger": "HOVER",
+          "animation": "Slides right 4px",
+          "duration_ms": 250
+        }
+      ]
+    },
+
+    {
+      "section": "HOME — Tools Preview",
+      "file": "src/components/home/ToolsSection.tsx",
+      "icons": [
+        {
+          "icon": "pen-tool",
+          "context": "Mood Journal tool card",
+          "trigger": "HOVER",
+          "animation": "Pen draws a wavy line",
+          "duration_ms": 600
+        },
+        {
+          "icon": "moon",
+          "context": "Sleep Architect tool card",
+          "trigger": "HOVER",
+          "animation": "Moon waxes, stars appear around it",
+          "duration_ms": 700
+        },
+        {
+          "icon": "brain-circuit",
+          "context": "Clarity Score tool card",
+          "trigger": "HOVER",
+          "animation": "Circuit paths light up sequentially, brain glows",
+          "duration_ms": 800,
+          "notes": "Hero icon of the platform — make this one premium"
+        },
+        {
+          "icon": "activity",
+          "context": "Health tracker tool card",
+          "trigger": "HOVER",
+          "animation": "EKG line draws",
+          "duration_ms": 700
+        },
+        {
+          "icon": "wind",
+          "context": "Breathwork tool card",
+          "trigger": "HOVER",
+          "animation": "Wind curves flow and swirl",
+          "duration_ms": 700
+        },
+        {
+          "icon": "users",
+          "context": "Provider Finder tool card",
+          "trigger": "HOVER",
+          "animation": "People figures pop in sequence",
+          "duration_ms": 500
+        },
+        {
+          "icon": "shield-alert",
+          "context": "Crisis Support tool card",
+          "trigger": "HOVER",
+          "animation": "Shield pulses, exclamation mark flashes",
+          "duration_ms": 600
+        },
+        {
+          "icon": "arrow-right",
+          "context": "Tool card CTA link",
+          "trigger": "HOVER",
+          "animation": "Slides right 4px",
+          "duration_ms": 250
+        }
+      ]
+    },
+
+    {
+      "section": "HOME — Topic Hub / Categories",
+      "file": "src/components/home/TopicHubSection.tsx",
+      "icons": [
+        {
+          "icon": "arrow-right",
+          "context": "View all resources button",
+          "trigger": "HOVER",
+          "animation": "Slides right 4px",
+          "duration_ms": 250
+        },
+        {
+          "icon": "play",
+          "context": "Video thumbnail overlay",
+          "trigger": "HOVER",
+          "animation": "Play button scales from 0.8→1.0 with opacity fade-in",
+          "duration_ms": 300,
+          "notes": "Appears on parent hover, auto-plays on reveal"
+        }
+      ]
+    },
+
+    {
+      "section": "CATEGORY CARDS (used across multiple pages)",
+      "file": "src/components/articles/CategoryCard.tsx",
+      "icons": [
+        {
+          "icon": "[dynamic — all 22 category icons]",
+          "context": "Large background decorative icon (size 140)",
+          "trigger": "HOVER",
+          "animation": "Icon slowly draws in, then scales 110% + rotates 6° on hover",
+          "duration_ms": 800,
+          "notes": "Each category icon needs its own premium draw-in animation. These are the HERO icons."
+        },
+        {
+          "icon": "arrow-right",
+          "context": "Explore category footer text",
+          "trigger": "HOVER",
+          "animation": "Slides right 4px",
+          "duration_ms": 250
+        }
+      ]
+    },
+
+    {
+      "section": "CATEGORY ICONS — Full List (22 unique)",
+      "file": "src/data/categories.tsx",
+      "note": "Each category icon needs a dedicated Lottie with a SCROLL + HOVER dual animation",
+      "icons": [
+        { "icon": "cloud-rain", "category": "Anxiety Disorders", "trigger": "SCROLL + HOVER", "animation": "Raindrops fall from cloud, slow to gentle drizzle on loop hover", "duration_ms": 900 },
+        { "icon": "moon", "category": "Mood Disorders", "trigger": "SCROLL + HOVER", "animation": "Crescent slowly waxes, stars twinkle", "duration_ms": 800 },
+        { "icon": "shield", "category": "Trauma & PTSD", "trigger": "SCROLL + HOVER", "animation": "Shield assembles from fragments, glows when complete", "duration_ms": 900 },
+        { "icon": "brain", "category": "Neurodiversity", "trigger": "SCROLL + HOVER", "animation": "Neural pathways light up in branching pattern", "duration_ms": 900 },
+        { "icon": "fingerprint", "category": "Personality Disorders", "trigger": "SCROLL + HOVER", "animation": "Fingerprint spirals draw from center outward", "duration_ms": 1000 },
+        { "icon": "anchor", "category": "Addiction & Recovery", "trigger": "SCROLL + HOVER", "animation": "Anchor drops and chain links form", "duration_ms": 800 },
+        { "icon": "scale", "category": "Eating Disorders", "trigger": "SCROLL + HOVER", "animation": "Scale pans balance gently, settle to center", "duration_ms": 900 },
+        { "icon": "activity", "category": "Psychosis", "trigger": "SCROLL + HOVER", "animation": "EKG heartbeat line draws across", "duration_ms": 800 },
+        { "icon": "moon", "category": "Sleep & Rest", "trigger": "SCROLL + HOVER", "animation": "(same as mood — reuse Lottie file)", "duration_ms": 800 },
+        { "icon": "sun", "category": "Holistic Wellness", "trigger": "SCROLL + HOVER", "animation": "Sun rays extend outward, gentle rotation", "duration_ms": 800 },
+        { "icon": "leaf", "category": "Mindfulness", "trigger": "SCROLL + HOVER", "animation": "Leaf unfurls, veins draw in", "duration_ms": 800 },
+        { "icon": "smartphone", "category": "Digital Wellbeing", "trigger": "SCROLL + HOVER", "animation": "Screen flickers then dims peacefully", "duration_ms": 700 },
+        { "icon": "heart", "category": "Relationships", "trigger": "SCROLL + HOVER", "animation": "Heart beats, radiates warmth lines", "duration_ms": 700 },
+        { "icon": "briefcase", "category": "Workplace Health", "trigger": "SCROLL + HOVER", "animation": "Briefcase opens, light shines out", "duration_ms": 700 },
+        { "icon": "home", "category": "Parenting", "trigger": "SCROLL + HOVER", "animation": "House builds up from foundation, chimney puffs", "duration_ms": 900 },
+        { "icon": "cloud-rain", "category": "Grief & Loss", "trigger": "SCROLL + HOVER", "animation": "(reuse anxiety cloud-rain)", "duration_ms": 900 },
+        { "icon": "alert-triangle", "category": "Anger Management", "trigger": "SCROLL + HOVER", "animation": "Triangle shakes, exclamation mark pulses then calms", "duration_ms": 800 },
+        { "icon": "users", "category": "Men's Mental Health", "trigger": "SCROLL + HOVER", "animation": "Silhouettes stand up tall", "duration_ms": 700 },
+        { "icon": "users", "category": "Women's Mental Health", "trigger": "SCROLL + HOVER", "animation": "(reuse — same icon, diff color)", "duration_ms": 700 },
+        { "icon": "sparkles", "category": "LGBTQ+ Support", "trigger": "SCROLL + HOVER", "animation": "Stars shimmer in rainbow gradient wave", "duration_ms": 800 },
+        { "icon": "message-circle", "category": "Types of Therapy", "trigger": "SCROLL + HOVER", "animation": "Speech bubble inflates, dots appear inside", "duration_ms": 700 },
+        { "icon": "life-buoy", "category": "Medication", "trigger": "SCROLL + HOVER", "animation": "Ring spins once, rope trails behind", "duration_ms": 700 }
+      ]
+    },
+
+    {
+      "section": "TOOLS PAGES",
+      "file": "src/components/pages/ToolsPage.tsx + src/pages/tools/ToolsLandingPage.tsx + src/components/tool/ToolCard.tsx",
+      "icons": [
+        {
+          "icon": "brain-circuit",
+          "context": "Clarity Score tool card icon",
+          "trigger": "HOVER",
+          "animation": "Circuit paths light up, brain pulses",
+          "duration_ms": 800
+        },
+        {
+          "icon": "pen-tool",
+          "context": "Mood Journal tool card",
+          "trigger": "HOVER",
+          "animation": "Pen draws wavy mood line",
+          "duration_ms": 600
+        },
+        {
+          "icon": "moon",
+          "context": "Sleep Architect tool card",
+          "trigger": "HOVER",
+          "animation": "Moon + stars",
+          "duration_ms": 700
+        },
+        {
+          "icon": "wind",
+          "context": "Breathwork tool card",
+          "trigger": "HOVER",
+          "animation": "Wind swirls flow",
+          "duration_ms": 700
+        },
+        {
+          "icon": "users",
+          "context": "Provider Finder tool card",
+          "trigger": "HOVER",
+          "animation": "Figures pop in",
+          "duration_ms": 500
+        },
+        {
+          "icon": "shield-alert",
+          "context": "Crisis Support tool card",
+          "trigger": "HOVER",
+          "animation": "Shield pulse + flash",
+          "duration_ms": 600
+        },
+        {
+          "icon": "search",
+          "context": "Tool search input",
+          "trigger": "FOCUS",
+          "animation": "Magnifying glass tilts and lens shimmers",
+          "duration_ms": 400
+        },
+        {
+          "icon": "filter",
+          "context": "Empty state / no results",
+          "trigger": "LOOP",
+          "animation": "Funnel slowly pulses — 'nothing to filter'",
+          "duration_ms": 2000,
+          "notes": "Gentle loop to fill empty state"
+        },
+        {
+          "icon": "arrow-right",
+          "context": "Open tool button",
+          "trigger": "HOVER",
+          "animation": "Slide right 4px",
+          "duration_ms": 250
+        }
+      ]
+    },
+
+    {
+      "section": "TOOL — Sleep Architect",
+      "file": "src/components/tools/SleepArchitect.tsx",
+      "icons": [
+        {
+          "icon": "clock",
+          "context": "Sleep calculator header icon (size 32)",
+          "trigger": "SCROLL",
+          "animation": "Clock hands spin to target time, settle with bounce",
+          "duration_ms": 800
+        },
+        {
+          "icon": "moon",
+          "context": "'Did you know' section",
+          "trigger": "SCROLL",
+          "animation": "Moon + stars fade in",
+          "duration_ms": 600
+        },
+        {
+          "icon": "sun",
+          "context": "Wake-up habit icon",
+          "trigger": "HOVER",
+          "animation": "Sunrise — rays extend",
+          "duration_ms": 500
+        },
+        {
+          "icon": "coffee",
+          "context": "Caffeine cutoff habit",
+          "trigger": "HOVER",
+          "animation": "Steam rises from cup",
+          "duration_ms": 600
+        },
+        {
+          "icon": "smartphone",
+          "context": "Screen time habit",
+          "trigger": "HOVER",
+          "animation": "Screen dims / turns off",
+          "duration_ms": 500
+        },
+        {
+          "icon": "thermometer",
+          "context": "Room temperature habit",
+          "trigger": "HOVER",
+          "animation": "Mercury level drops to optimal zone",
+          "duration_ms": 600
+        },
+        {
+          "icon": "check-circle",
+          "context": "Completed habit checkmark",
+          "trigger": "CLICK",
+          "animation": "Circle draws, then checkmark strokes in with satisfying pop",
+          "duration_ms": 400,
+          "notes": "Reward animation — feels good to check off"
+        },
+        {
+          "icon": "arrow-left",
+          "context": "Back button",
+          "trigger": "HOVER",
+          "animation": "Slides left 3px",
+          "duration_ms": 200
+        }
+      ]
+    },
+
+    {
+      "section": "TOOL — Mood Journal",
+      "file": "src/components/tools/MoodJournal.tsx",
+      "icons": [
+        {
+          "icon": "pen-tool",
+          "context": "Journal header icon (size 24)",
+          "trigger": "SCROLL",
+          "animation": "Pen draws a few flowing lines",
+          "duration_ms": 700
+        },
+        {
+          "icon": "calendar",
+          "context": "Empty state — no entries yet",
+          "trigger": "LOOP",
+          "animation": "Calendar page gently flips back and forth",
+          "duration_ms": 2500,
+          "notes": "Slow, calming loop for empty state"
+        },
+        {
+          "icon": "trash",
+          "context": "Delete journal entry button",
+          "trigger": "HOVER",
+          "animation": "Trash lid opens slightly, shakes subtly",
+          "duration_ms": 400,
+          "notes": "Warning feel — red color on hover"
+        },
+        {
+          "icon": "trending-up",
+          "context": "Insights section header",
+          "trigger": "SCROLL",
+          "animation": "Line draws upward with arrow popping at end",
+          "duration_ms": 600
+        },
+        {
+          "icon": "save",
+          "context": "Save entry button",
+          "trigger": "CLICK",
+          "animation": "Floppy disk slides down into slot",
+          "duration_ms": 350
+        },
+        {
+          "icon": "loader",
+          "context": "Saving spinner (replaces save icon)",
+          "trigger": "LOOP",
+          "animation": "Smooth circular spinner with gradient trail",
+          "duration_ms": 1000
+        },
+        {
+          "icon": "arrow-left",
+          "context": "Back button",
+          "trigger": "HOVER",
+          "animation": "Slides left 3px",
+          "duration_ms": 200
+        }
+      ]
+    },
+
+    {
+      "section": "DASHBOARD — Patient",
+      "file": "src/pages/dashboard/UserDashboard.tsx",
+      "icons": [
+        {
+          "icon": "brain-circuit",
+          "context": "Latest Clarity Score card header",
+          "trigger": "SCROLL",
+          "animation": "Circuits light up, brain glows",
+          "duration_ms": 800,
+          "notes": "Plays once when dashboard loads"
+        },
+        {
+          "icon": "trending-up",
+          "context": "Recent activity header",
+          "trigger": "SCROLL",
+          "animation": "Line draws with upward arrow",
+          "duration_ms": 600
+        },
+        {
+          "icon": "calendar",
+          "context": "Activity type indicator in feed",
+          "trigger": "SCROLL",
+          "animation": "Calendar page flip",
+          "duration_ms": 400,
+          "stagger_delay_ms": 100,
+          "notes": "Each activity item staggers"
+        },
+        {
+          "icon": "alert-circle",
+          "context": "Error state display",
+          "trigger": "LOOP",
+          "animation": "Circle pulses with gentle ring expansion",
+          "duration_ms": 2000,
+          "notes": "Slow attention pulse — error needs to be seen"
+        },
+        {
+          "icon": "refresh",
+          "context": "Retry button in error state",
+          "trigger": "CLICK",
+          "animation": "Arrows spin 360° once",
+          "duration_ms": 500
+        },
+        {
+          "icon": "arrow-right",
+          "context": "View all activity link",
+          "trigger": "HOVER",
+          "animation": "Slides right 3px",
+          "duration_ms": 200
+        }
+      ]
+    },
+
+    {
+      "section": "DASHBOARD — Admin",
+      "file": "src/pages/admin/AdminDashboard.tsx",
+      "icons": [
+        {
+          "icon": "users",
+          "context": "Total Users stat card",
+          "trigger": "SCROLL",
+          "animation": "Figures pop in with counter roll",
+          "duration_ms": 600
+        },
+        {
+          "icon": "file-text",
+          "context": "Pending Providers stat card",
+          "trigger": "SCROLL",
+          "animation": "Document page flips, text lines appear",
+          "duration_ms": 600,
+          "stagger_delay_ms": 150
+        },
+        {
+          "icon": "alert-triangle",
+          "context": "System Alerts stat card",
+          "trigger": "SCROLL",
+          "animation": "Triangle builds, exclamation mark pulses",
+          "duration_ms": 600,
+          "stagger_delay_ms": 300
+        },
+        {
+          "icon": "activity",
+          "context": "Active Sessions stat card",
+          "trigger": "SCROLL",
+          "animation": "EKG line draws across",
+          "duration_ms": 600,
+          "stagger_delay_ms": 450
+        }
+      ]
+    },
+
+    {
+      "section": "DASHBOARD — Provider",
+      "file": "src/pages/provider/ProviderDashboard.tsx",
+      "icons": [
+        {
+          "icon": "users",
+          "context": "Active Patients stat card",
+          "trigger": "SCROLL",
+          "animation": "Figures pop in",
+          "duration_ms": 600
+        },
+        {
+          "icon": "calendar",
+          "context": "Appointments stat card",
+          "trigger": "SCROLL",
+          "animation": "Calendar page flips",
+          "duration_ms": 600,
+          "stagger_delay_ms": 150
+        },
+        {
+          "icon": "clock",
+          "context": "Pending Requests stat card",
+          "trigger": "SCROLL",
+          "animation": "Clock hands tick forward",
+          "duration_ms": 600,
+          "stagger_delay_ms": 300
+        }
+      ]
+    },
+
+    {
+      "section": "AUTH — Login Page",
+      "file": "src/pages/auth/LoginPage.tsx",
+      "icons": [
+        {
+          "icon": "mail",
+          "context": "Email input left icon",
+          "trigger": "FOCUS",
+          "animation": "Envelope opens, letter peeks out",
+          "duration_ms": 400,
+          "notes": "Plays forward on focus, reverses on blur"
+        },
+        {
+          "icon": "lock",
+          "context": "Password input left icon",
+          "trigger": "FOCUS",
+          "animation": "Lock shackle opens",
+          "duration_ms": 400,
+          "notes": "Plays forward on focus, reverses on blur"
+        },
+        {
+          "icon": "alert-circle",
+          "context": "Login error message",
+          "trigger": "SCROLL",
+          "animation": "Circle draws, exclamation appears with shake",
+          "duration_ms": 500,
+          "notes": "Plays once when error appears"
+        },
+        {
+          "icon": "arrow-right",
+          "context": "Sign up link arrow",
+          "trigger": "HOVER",
+          "animation": "Slides right 4px",
+          "duration_ms": 250
+        },
+        {
+          "icon": "github",
+          "context": "GitHub OAuth button",
+          "trigger": "HOVER",
+          "animation": "Octocat tentacles wave subtly",
+          "duration_ms": 500
+        },
+        {
+          "icon": "chrome",
+          "context": "Google OAuth button",
+          "trigger": "HOVER",
+          "animation": "Chrome logo segments rotate 30°",
+          "duration_ms": 400
+        }
+      ]
+    },
+
+    {
+      "section": "AI CHAT — Widget & MindMate",
+      "file": "src/components/chat/AIChatWidget.tsx + src/components/ai/MindMate.tsx",
+      "icons": [
+        {
+          "icon": "sparkles",
+          "context": "Floating chat toggle button (size 24)",
+          "trigger": "LOOP",
+          "animation": "Stars continuously twinkle in sequence — eye-catching persistent loop",
+          "duration_ms": 2000,
+          "notes": "This is the floating action button — MUST be animated to attract clicks"
+        },
+        {
+          "icon": "bot",
+          "context": "Chat header logo + AI message avatar",
+          "trigger": "LOOP",
+          "animation": "Bot antenna blinks subtly, eyes glint every few seconds",
+          "duration_ms": 3000,
+          "notes": "Very slow, ambient loop — feels alive but not distracting"
+        },
+        {
+          "icon": "send",
+          "context": "Send message button",
+          "trigger": "HOVER",
+          "animation": "Paper plane tilts up 15°, ready for launch",
+          "duration_ms": 300
+        },
+        {
+          "icon": "send",
+          "context": "Send message button",
+          "trigger": "CLICK",
+          "animation": "Paper plane launches diagonally, fades at top-right, resets",
+          "duration_ms": 400,
+          "notes": "Satisfying send animation"
+        },
+        {
+          "icon": "trash",
+          "context": "Clear chat button",
+          "trigger": "HOVER",
+          "animation": "Trash lid opens, shakes",
+          "duration_ms": 400
+        },
+        {
+          "icon": "close",
+          "context": "Close chat button",
+          "trigger": "CLICK",
+          "animation": "X spins 90° then fades",
+          "duration_ms": 200
+        },
+        {
+          "icon": "alert-triangle",
+          "context": "Crisis warning in chat",
+          "trigger": "LOOP",
+          "animation": "Gentle pulse glow — not alarming but noticeable",
+          "duration_ms": 2000
+        },
+        {
+          "icon": "phone",
+          "context": "Call crisis line button",
+          "trigger": "LOOP",
+          "animation": "Phone rings/vibrates continuously",
+          "duration_ms": 1500,
+          "notes": "Urgent — always animating when visible"
+        },
+        {
+          "icon": "location",
+          "context": "User location indicator in MindMate",
+          "trigger": "SCROLL",
+          "animation": "Pin drops down and bounces",
+          "duration_ms": 400
+        }
+      ]
+    },
+
+    {
+      "section": "ARTICLES — Cards",
+      "file": "src/components/article/ArticleCard.tsx",
+      "icons": [
+        {
+          "icon": "clock",
+          "context": "Read time in card footer",
+          "trigger": "SCROLL",
+          "animation": "Clock hands tick to position",
+          "duration_ms": 300,
+          "notes": "Subtle — just a quick tick on enter"
+        },
+        {
+          "icon": "arrow-up-right",
+          "context": "Card hover indicator (top-right)",
+          "trigger": "HOVER",
+          "animation": "Arrow slides diagonally 3px up-right",
+          "duration_ms": 250
+        },
+        {
+          "icon": "bookmark",
+          "context": "Bookmark toggle button",
+          "trigger": "STATE",
+          "animation": "Unsaved→Saved: flag drops down + fills with color. Saved→Unsaved: color drains upward",
+          "duration_ms": 350,
+          "notes": "Two-state toggle with satisfying fill animation"
+        }
+      ]
+    },
+
+    {
+      "section": "ARTICLES — Header",
+      "file": "src/components/article/ArticleHeader.tsx",
+      "icons": [
+        {
+          "icon": "calendar",
+          "context": "Publish date metadata",
+          "trigger": "SCROLL",
+          "animation": "Calendar page appears",
+          "duration_ms": 300
+        },
+        {
+          "icon": "clock",
+          "context": "Read time metadata",
+          "trigger": "SCROLL",
+          "animation": "Hands tick",
+          "duration_ms": 300,
+          "stagger_delay_ms": 100
+        },
+        {
+          "icon": "share",
+          "context": "Share article button",
+          "trigger": "HOVER",
+          "animation": "Nodes expand outward from center, connections draw",
+          "duration_ms": 500
+        },
+        {
+          "icon": "bookmark",
+          "context": "Bookmark article toggle",
+          "trigger": "STATE",
+          "animation": "(same as article card bookmark)",
+          "duration_ms": 350
+        }
+      ]
+    },
+
+    {
+      "section": "ARTICLES — Content Components",
+      "file": "src/components/content/NextSteps.tsx + RelatedContent.tsx",
+      "icons": [
+        {
+          "icon": "check-circle",
+          "context": "Next steps section header",
+          "trigger": "SCROLL",
+          "animation": "Circle draws, checkmark pops",
+          "duration_ms": 500
+        },
+        {
+          "icon": "book-open",
+          "context": "Related content section header",
+          "trigger": "SCROLL",
+          "animation": "Book opens, pages fan out",
+          "duration_ms": 600
+        },
+        {
+          "icon": "arrow-right",
+          "context": "Read more links",
+          "trigger": "HOVER",
+          "animation": "Slides right 3px",
+          "duration_ms": 200
+        }
+      ]
+    },
+
+    {
+      "section": "SEARCH RESULTS",
+      "file": "src/components/pages/SearchResults.tsx",
+      "icons": [
+        {
+          "icon": "arrow-left",
+          "context": "Back to home link",
+          "trigger": "HOVER",
+          "animation": "Slides left 3px",
+          "duration_ms": 200
+        },
+        {
+          "icon": "search",
+          "context": "Empty results state (size 32)",
+          "trigger": "LOOP",
+          "animation": "Magnifying glass searches around — scanning motion",
+          "duration_ms": 2500,
+          "notes": "Slow loop for empty state — 'looking for something'"
+        },
+        {
+          "icon": "pen-tool",
+          "context": "Journal results section header",
+          "trigger": "SCROLL",
+          "animation": "Pen draws",
+          "duration_ms": 500
+        },
+        {
+          "icon": "file-text",
+          "context": "Article results section header",
+          "trigger": "SCROLL",
+          "animation": "Page flip",
+          "duration_ms": 450
+        },
+        {
+          "icon": "video",
+          "context": "Video results section header",
+          "trigger": "SCROLL",
+          "animation": "Play button appears in viewfinder",
+          "duration_ms": 500
+        },
+        {
+          "icon": "chevron-down",
+          "context": "Sort dropdown",
+          "trigger": "STATE",
+          "animation": "180° rotation",
+          "duration_ms": 200
+        }
+      ]
+    },
+
+    {
+      "section": "CRISIS PAGE",
+      "file": "src/components/pages/CrisisPage.tsx",
+      "icons": [
+        {
+          "icon": "heart",
+          "context": "Hero section icon (size 40)",
+          "trigger": "LOOP",
+          "animation": "Steady heartbeat — reassuring, alive, present",
+          "duration_ms": 1200,
+          "notes": "Always beating on crisis page — conveys 'we are here'"
+        },
+        {
+          "icon": "alert-triangle",
+          "context": "Warning banner + section headers",
+          "trigger": "LOOP",
+          "animation": "Subtle pulse glow",
+          "duration_ms": 2000,
+          "notes": "Gentle attention without alarm"
+        },
+        {
+          "icon": "phone",
+          "context": "Call buttons and resource cards (3+ instances)",
+          "trigger": "LOOP",
+          "animation": "Phone vibrates/rings continuously",
+          "duration_ms": 1500,
+          "notes": "CRITICAL — must always be animated, this saves lives"
+        },
+        {
+          "icon": "message-square",
+          "context": "Text crisis line buttons",
+          "trigger": "LOOP",
+          "animation": "Speech bubble pulses, typing dots appear/disappear",
+          "duration_ms": 2000,
+          "notes": "Always animated — text line is alternative to calling"
+        },
+        {
+          "icon": "globe",
+          "context": "Treatment locator resource card",
+          "trigger": "HOVER",
+          "animation": "Globe rotates slowly",
+          "duration_ms": 3000
+        },
+        {
+          "icon": "external-link",
+          "context": "External resource links",
+          "trigger": "HOVER",
+          "animation": "Arrow pops out diagonally",
+          "duration_ms": 250
+        },
+        {
+          "icon": "arrow-left",
+          "context": "Back button",
+          "trigger": "HOVER",
+          "animation": "Slides left 3px",
+          "duration_ms": 200
+        }
+      ]
+    },
+
+    {
+      "section": "TOASTS / NOTIFICATIONS",
+      "file": "src/components/ui/Toast.tsx",
+      "icons": [
+        {
+          "icon": "check-circle",
+          "context": "Success toast icon",
+          "trigger": "SCROLL",
+          "animation": "Circle draws, checkmark strokes in with satisfying pop",
+          "duration_ms": 500,
+          "notes": "Plays once on toast entry — green color"
+        },
+        {
+          "icon": "alert-circle",
+          "context": "Error toast icon",
+          "trigger": "SCROLL",
+          "animation": "Circle draws with shake, exclamation appears",
+          "duration_ms": 500,
+          "notes": "Red color — slightly more aggressive than success"
+        },
+        {
+          "icon": "alert-triangle",
+          "context": "Warning toast icon",
+          "trigger": "SCROLL",
+          "animation": "Triangle builds upward, exclamation pulses",
+          "duration_ms": 500,
+          "notes": "Amber color"
+        },
+        {
+          "icon": "info",
+          "context": "Info toast icon",
+          "trigger": "SCROLL",
+          "animation": "Circle draws, 'i' fades in with a gentle bob",
+          "duration_ms": 500,
+          "notes": "Blue color — calming"
+        },
+        {
+          "icon": "close",
+          "context": "Dismiss toast button",
+          "trigger": "HOVER",
+          "animation": "X rotates 90°",
+          "duration_ms": 200
+        }
+      ]
+    },
+
+    {
+      "section": "MODAL",
+      "file": "src/components/ui/Modal.tsx",
+      "icons": [
+        {
+          "icon": "close",
+          "context": "Close modal button (top-right corner)",
+          "trigger": "HOVER",
+          "animation": "X rotates 90° with slight scale",
+          "duration_ms": 250
+        }
+      ]
+    },
+
+    {
+      "section": "BUTTON COMPONENT (Global)",
+      "file": "src/components/ui/Button.tsx",
+      "icons": [
+        {
+          "icon": "loader",
+          "context": "Button loading state — replaces leftIcon",
+          "trigger": "LOOP",
+          "animation": "Smooth circular spinner with gradient trail, branded colors",
+          "duration_ms": 1000,
+          "notes": "Global loading indicator — used in every form submission"
+        }
+      ]
+    },
+
+    {
+      "section": "LANGUAGE SWITCHER",
+      "file": "src/components/ui/LanguageSwitcher.tsx",
+      "icons": [
+        {
+          "icon": "globe",
+          "context": "Language selector button",
+          "trigger": "HOVER",
+          "animation": "Globe rotates 30°",
+          "duration_ms": 400
+        },
+        {
+          "icon": "check",
+          "context": "Selected language checkmark",
+          "trigger": "SCROLL",
+          "animation": "Checkmark strokes in",
+          "duration_ms": 200,
+          "notes": "Appears when dropdown opens"
+        }
+      ]
+    }
+  ],
+
+  "summary": {
+    "total_unique_lottie_files_needed": 85,
+    "note": "97 icon names but several share the same Lottie (reuse across contexts), 12 reuse opportunities",
+    "animation_type_breakdown": {
+      "HOVER": 72,
+      "SCROLL": 38,
+      "LOOP": 16,
+      "STATE": 8,
+      "CLICK": 6,
+      "FOCUS": 3,
+      "MORPH": 2,
+      "STAGGER": 4
+    },
+    "highest_impact_icons": [
+      { "icon": "brain-circuit", "reason": "Platform hero icon — Assessment/Clarity Score", "priority": "P0" },
+      { "icon": "sparkles", "reason": "AI chat FAB — always visible, must attract clicks", "priority": "P0" },
+      { "icon": "phone", "reason": "Crisis line — literally saves lives", "priority": "P0" },
+      { "icon": "heart", "reason": "Crisis page hero — conveys 'we are here'", "priority": "P0" },
+      { "icon": "loader", "reason": "Global loading spinner — seen on every action", "priority": "P0" },
+      { "icon": "arrow-right", "reason": "24 uses — most frequent icon, every CTA", "priority": "P0" },
+      { "icon": "bookmark", "reason": "Core engagement feature — satisfying toggle", "priority": "P0" },
+      { "icon": "check-circle", "reason": "Every success state + habit tracking + toasts", "priority": "P0" },
+      { "icon": "menu/close morph", "reason": "First thing mobile users see", "priority": "P0" },
+      { "icon": "bot", "reason": "AI personality — needs to feel alive", "priority": "P0" }
+    ],
+    "reusable_lottie_files": [
+      { "file": "arrow-right.json", "contexts": "CTAs, nav links, read more (24 placements)" },
+      { "file": "arrow-left.json", "contexts": "Back buttons (12 placements)" },
+      { "file": "chevron-right.json", "contexts": "Breadcrumbs, pagination, lists (12 placements)" },
+      { "file": "check-circle.json", "contexts": "Toasts, habit tracking, success states (14 placements)" },
+      { "file": "close.json", "contexts": "Modals, chat, toasts, mobile menu (13 placements)" },
+      { "file": "settings.json", "contexts": "3 sidebars + nav dropdown (4 placements)" },
+      { "file": "dashboard.json", "contexts": "3 sidebars + nav dropdown (4 placements)" },
+      { "file": "logout.json", "contexts": "3 sidebars + nav dropdown (4 placements)" },
+      { "file": "users.json", "contexts": "Categories, tools, stats, nav (9 placements)" },
+      { "file": "calendar.json", "contexts": "Articles, dashboard, provider, sleep tool (9 placements)" },
+      { "file": "moon.json", "contexts": "Categories, tools, sleep architect, nav menu (8 placements)" },
+      { "file": "brain-circuit.json", "contexts": "Tools, dashboard, tool cards (8 placements)" }
+    ],
+    "design_guidelines": {
+      "line_weight": "2px stroke (matching Lucide's default)",
+      "color_approach": "Single-color Lottie files, colorize at runtime via CSS",
+      "max_duration": "1000ms for hover/click, 2500ms for loops, 800ms for scroll-in",
+      "easing": "ease-out for entrances, ease-in-out for loops, spring for bounces",
+      "file_size_target": "Under 5KB per icon, under 15KB for complex animations",
+      "accessibility": "All animated icons must respect prefers-reduced-motion — fall back to static first frame"
+    }
+  }
+}

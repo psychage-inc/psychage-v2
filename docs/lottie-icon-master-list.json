@@ -1,0 +1,890 @@
+{
+  "project": "Psychage",
+  "total_unique_icons": 104,
+  "note": "108 icon names imported across codebase → 104 unique Lottie files after deduplication (4 pairs share the same file with state variants)",
+
+  "deduplication_map": {
+    "CheckCircle + CheckCircle2": "→ 1 file: check-circle.json (outline vs filled = color variant at runtime)",
+    "BarChart2 + BarChart3": "→ 1 file: bar-chart.json (same visual, different stroke weight = runtime variant)",
+    "Users + Users2": "→ 1 file: users.json (single vs double outline = same animation)",
+    "Bookmark + BookMarked": "→ 1 file: bookmark.json (STATE animation: empty ↔ filled)"
+  },
+
+  "icons": [
+    {
+      "id": 1,
+      "file": "activity.json",
+      "name": "Activity",
+      "intent": "EKG heartbeat line / health metrics",
+      "category": "domain",
+      "used_in": ["categories (Psychosis)", "QuickTopics", "ToolsSection", "AdminDashboard (Active Sessions)", "ProviderAnalytics", "SymptomCheckerSection"]
+    },
+    {
+      "id": 2,
+      "file": "alert-circle.json",
+      "name": "AlertCircle",
+      "intent": "Warning / attention needed",
+      "category": "status",
+      "used_in": ["LoginPage", "SignUpPage", "UpdatePasswordPage", "ResetPasswordPage", "Toast (error)", "UserDashboard (error)", "ProviderDashboard", "CrisisBanner", "MessagingModal", "AccountSettings", "SparkLanding", "CommunityLanding", "ProviderPatients"]
+    },
+    {
+      "id": 3,
+      "file": "alert-triangle.json",
+      "name": "AlertTriangle",
+      "intent": "Danger / critical error",
+      "category": "status",
+      "used_in": ["Toast (warning)", "AdminDashboard (System Alerts)", "CrisisPage", "AssessmentPage", "AIChatWidget", "MindMate", "ErrorFallback", "Disclaimer", "ReportsPage", "ProviderDetailAdmin"]
+    },
+    {
+      "id": 4,
+      "file": "anchor.json",
+      "name": "Anchor",
+      "intent": "Addiction & Recovery",
+      "category": "domain",
+      "used_in": ["categories"]
+    },
+    {
+      "id": 5,
+      "file": "arrow-down.json",
+      "name": "ArrowDown",
+      "intent": "Trending down / decrease",
+      "category": "navigation",
+      "used_in": ["ProviderAnalytics"]
+    },
+    {
+      "id": 6,
+      "file": "arrow-left.json",
+      "name": "ArrowLeft",
+      "intent": "Back / previous",
+      "category": "navigation",
+      "used_in": ["CrisisPage", "ArticleCategoryPage", "SleepArchitect", "MoodJournal", "ProviderRegistrationPage", "ProviderOnboarding", "ProviderProfile", "ProviderSearchPage", "SearchResults", "ScoreHistoryPage", "SymptomLayout", "ArticleDetail", "UpdatePasswordPage", "ResetPasswordPage", "VideoDetail", "ProviderDetailAdmin"]
+    },
+    {
+      "id": 7,
+      "file": "arrow-right.json",
+      "name": "ArrowRight",
+      "intent": "Forward / CTA / next",
+      "category": "navigation",
+      "used_in": ["HeroSection", "HowItWorksSection", "TopicHubSection", "QuickTopics", "ToolsSection", "ToolsPage", "ToolsLandingPage", "CategoryCard", "NewsletterSection", "NotFoundPage", "NextSteps", "RelatedContent", "MobileMenu", "NavMenu", "VideoShowcaseSection", "SymptomCheckerSection", "LoginPage", "SignUpPage", "NavHub", "BookmarksPage", "UserDashboard", "AssessmentHistory", "Footer", "AIServicesSection", "LearnPage", "ProviderDirectorySection"]
+    },
+    {
+      "id": 8,
+      "file": "arrow-up.json",
+      "name": "ArrowUp",
+      "intent": "Trending up / increase / scroll to top",
+      "category": "navigation",
+      "used_in": ["ProviderAnalytics", "Footer"]
+    },
+    {
+      "id": 9,
+      "file": "arrow-up-right.json",
+      "name": "ArrowUpRight",
+      "intent": "External / positive trend on cards",
+      "category": "navigation",
+      "used_in": ["ArticleCard"]
+    },
+    {
+      "id": 10,
+      "file": "award.json",
+      "name": "Award",
+      "intent": "Certification / achievement",
+      "category": "domain",
+      "used_in": ["ProviderDetailAdmin"]
+    },
+    {
+      "id": 11,
+      "file": "ban.json",
+      "name": "Ban",
+      "intent": "Block / restrict user",
+      "category": "actions",
+      "used_in": ["ProviderManagement", "ProviderDetailAdmin"]
+    },
+    {
+      "id": 12,
+      "file": "bar-chart.json",
+      "name": "BarChart2 / BarChart3",
+      "intent": "Analytics / results chart",
+      "category": "domain",
+      "used_in": ["ClarityScoreTool", "AssessmentResultsPage", "NavMenu", "ProviderSidebar (Analytics)", "sidebars config"]
+    },
+    {
+      "id": 13,
+      "file": "book-marked.json",
+      "name": "BookMarked",
+      "intent": "Saved bookmarks collection view",
+      "category": "actions",
+      "used_in": ["BookmarksPage"]
+    },
+    {
+      "id": 14,
+      "file": "book-open.json",
+      "name": "BookOpen",
+      "intent": "Learning / articles / read",
+      "category": "domain",
+      "used_in": ["RelatedContent", "CategoryPage", "NavHub", "LearnPage", "ArticleCategoryPage", "ResultsAnalysis"]
+    },
+    {
+      "id": 15,
+      "file": "bookmark.json",
+      "name": "Bookmark",
+      "intent": "Save / unsave toggle",
+      "category": "actions",
+      "used_in": ["ArticleCard", "ArticleHeader", "VideoDetail", "ArticlePage", "UserSidebar", "sidebars config"]
+    },
+    {
+      "id": 16,
+      "file": "bot.json",
+      "name": "Bot",
+      "intent": "AI assistant avatar",
+      "category": "domain",
+      "used_in": ["AIChatWidget", "MindMate"]
+    },
+    {
+      "id": 17,
+      "file": "brain.json",
+      "name": "Brain",
+      "intent": "Mental health / cognition",
+      "category": "domain",
+      "used_in": ["categories (Neurodiversity)", "NavMenu", "QuickTopics", "HowItWorksSection", "HeroInsightCard", "AboutPage", "AssessmentHistory", "AIServicesSection"]
+    },
+    {
+      "id": 18,
+      "file": "brain-circuit.json",
+      "name": "BrainCircuit",
+      "intent": "Assessment tool / Clarity Score",
+      "category": "domain",
+      "used_in": ["ToolCard", "ToolsSection", "ToolsPage", "ToolsLandingPage", "UserDashboard", "UserSidebar", "NavHub", "AssessmentHistory"]
+    },
+    {
+      "id": 19,
+      "file": "briefcase.json",
+      "name": "Briefcase",
+      "intent": "Workplace / professional",
+      "category": "domain",
+      "used_in": ["categories (Workplace Health)", "NavMenu", "ProviderDetailAdmin"]
+    },
+    {
+      "id": 20,
+      "file": "building.json",
+      "name": "Building",
+      "intent": "Organization / practice",
+      "category": "system",
+      "used_in": ["ProviderOnboarding", "ProviderDetailAdmin"]
+    },
+    {
+      "id": 21,
+      "file": "calendar.json",
+      "name": "Calendar",
+      "intent": "Date / scheduling / appointments",
+      "category": "system",
+      "used_in": ["ArticleHeader", "ArticlePage", "UserDashboard", "ProviderDashboard", "ProviderSidebar", "MoodJournal", "AssessmentResultsPage", "ScoreHistoryPage", "BookingModal", "ProviderCard", "ProviderDetailAdmin", "ProviderPatients", "ProviderAnalytics", "ConnectLandingPage", "SearchResultsPage"]
+    },
+    {
+      "id": 22,
+      "file": "camera.json",
+      "name": "Camera",
+      "intent": "Photo upload",
+      "category": "media",
+      "used_in": ["AccountSettings"]
+    },
+    {
+      "id": 23,
+      "file": "check.json",
+      "name": "Check",
+      "intent": "Checkmark / selected / confirmed",
+      "category": "status",
+      "used_in": ["LanguageSwitcher", "ProviderDirectory", "ProviderSearchPage", "ArticlePage", "ContactPage", "HeroInsightCard", "ProviderManagement"]
+    },
+    {
+      "id": 24,
+      "file": "check-circle.json",
+      "name": "CheckCircle / CheckCircle2",
+      "intent": "Success state / confirmation",
+      "category": "status",
+      "used_in": ["Toast (success)", "AccountSettings", "ProviderDetailPage", "NewsletterSection", "AuthModal", "SparkLanding", "CommunityLanding", "en articles", "BookingModal", "VideoDetail", "SleepArchitect", "UpdatePasswordPage", "SignUpPage", "ResetPasswordPage", "AssessmentResultsPage", "ClarityScoreTool", "ToolsLandingPage", "NextSteps", "SymptomCheckerSection", "ResultsAnalysis", "ReportsPage", "HowItWorksSection (mentioned via Sparkles context)"]
+    },
+    {
+      "id": 25,
+      "file": "chevron-down.json",
+      "name": "ChevronDown",
+      "intent": "Dropdown / accordion expand",
+      "category": "navigation",
+      "used_in": ["Navigation (mega-menu indicator)", "MobileMenu (section toggle)", "SearchResults (sort dropdown)"]
+    },
+    {
+      "id": 26,
+      "file": "chevron-left.json",
+      "name": "ChevronLeft",
+      "intent": "Previous / left",
+      "category": "navigation",
+      "used_in": ["Pagination", "BookingModal"]
+    },
+    {
+      "id": 27,
+      "file": "chevron-right.json",
+      "name": "ChevronRight",
+      "intent": "Next / expand / drill-down",
+      "category": "navigation",
+      "used_in": ["Breadcrumbs", "Pagination", "NavMenu", "MobileMenu", "CategoryPage", "ArticlePage", "AssessmentPage", "AssessmentResultsPage", "ClarityScoreTool", "ProviderRegistrationPage", "ProviderOnboarding", "ResultsAnalysis"]
+    },
+    {
+      "id": 28,
+      "file": "chrome.json",
+      "name": "Chrome",
+      "intent": "Google OAuth login",
+      "category": "brand",
+      "used_in": ["AuthModal"]
+    },
+    {
+      "id": 29,
+      "file": "clock.json",
+      "name": "Clock",
+      "intent": "Time / duration / read time",
+      "category": "system",
+      "used_in": ["ArticleHeader", "ArticleCard", "ProviderCard", "ProviderProfile", "ProviderDashboard", "SleepArchitect", "BookingModal", "VideoShowcaseSection", "ProviderDetailAdmin", "ReportsPage"]
+    },
+    {
+      "id": 30,
+      "file": "cloud-rain.json",
+      "name": "CloudRain",
+      "intent": "Anxiety / grief",
+      "category": "domain",
+      "used_in": ["categories (Anxiety Disorders, Grief & Loss)"]
+    },
+    {
+      "id": 31,
+      "file": "coffee.json",
+      "name": "Coffee",
+      "intent": "Morning routine / caffeine",
+      "category": "domain",
+      "used_in": ["SleepArchitect"]
+    },
+    {
+      "id": 32,
+      "file": "credit-card.json",
+      "name": "CreditCard",
+      "intent": "Payment method",
+      "category": "system",
+      "used_in": ["ProviderCard"]
+    },
+    {
+      "id": 33,
+      "file": "download.json",
+      "name": "Download",
+      "intent": "Download / export",
+      "category": "actions",
+      "used_in": ["AssessmentResultsPage", "ProviderAnalytics"]
+    },
+    {
+      "id": 34,
+      "file": "edit.json",
+      "name": "Edit",
+      "intent": "Edit / modify content",
+      "category": "actions",
+      "used_in": ["NavMenu (Journal category)"]
+    },
+    {
+      "id": 35,
+      "file": "external-link.json",
+      "name": "ExternalLink",
+      "intent": "Opens in new window",
+      "category": "navigation",
+      "used_in": ["NavMenu", "CrisisPage", "ProviderDetailAdmin"]
+    },
+    {
+      "id": 36,
+      "file": "eye.json",
+      "name": "Eye",
+      "intent": "View count / visibility",
+      "category": "system",
+      "used_in": ["ProviderAnalytics"]
+    },
+    {
+      "id": 37,
+      "file": "file-text.json",
+      "name": "FileText",
+      "intent": "Document / report / audit log",
+      "category": "system",
+      "used_in": ["AdminSidebar", "AdminDashboard", "ProviderRegistrationPage", "ProviderOnboarding", "ProviderDetailAdmin", "AuditLogPage", "SearchResults", "SearchResultsPage", "sidebars config"]
+    },
+    {
+      "id": 38,
+      "file": "filter.json",
+      "name": "Filter",
+      "intent": "Filter / refine results",
+      "category": "actions",
+      "used_in": ["ToolsPage", "LearnPage", "SearchResultsPage"]
+    },
+    {
+      "id": 39,
+      "file": "fingerprint.json",
+      "name": "Fingerprint",
+      "intent": "Identity / personality",
+      "category": "domain",
+      "used_in": ["categories (Personality Disorders)"]
+    },
+    {
+      "id": 40,
+      "file": "github.json",
+      "name": "Github",
+      "intent": "GitHub OAuth login",
+      "category": "brand",
+      "used_in": ["AuthModal"]
+    },
+    {
+      "id": 41,
+      "file": "globe.json",
+      "name": "Globe",
+      "intent": "Global / international / web",
+      "category": "system",
+      "used_in": ["CrisisPage (treatment locator)", "CrisisResources", "LanguageSwitcher", "Footer", "AboutPage"]
+    },
+    {
+      "id": 42,
+      "file": "graduation-cap.json",
+      "name": "GraduationCap",
+      "intent": "Credentials / education",
+      "category": "domain",
+      "used_in": ["ProviderDetailPage", "ProviderProfile", "BookmarksPage", "ProviderDetailAdmin"]
+    },
+    {
+      "id": 43,
+      "file": "heart.json",
+      "name": "Heart",
+      "intent": "Emotional wellness / love / care",
+      "category": "domain",
+      "used_in": ["categories (Relationships)", "NavMenu", "QuickTopics", "CrisisPage (hero)", "NavHub", "AboutPage", "CommunityLanding", "AssessmentHistory"]
+    },
+    {
+      "id": 44,
+      "file": "heart-handshake.json",
+      "name": "HeartHandshake",
+      "intent": "Care / connection / support",
+      "category": "domain",
+      "used_in": ["MobileMenu (Crisis CTA)", "ConnectLandingPage"]
+    },
+    {
+      "id": 45,
+      "file": "help-circle.json",
+      "name": "HelpCircle",
+      "intent": "Help / support / FAQ",
+      "category": "status",
+      "used_in": ["ToolsLandingPage"]
+    },
+    {
+      "id": 46,
+      "file": "home.json",
+      "name": "Home",
+      "intent": "Home page / parenting",
+      "category": "navigation",
+      "used_in": ["Breadcrumbs", "categories (Parenting)", "NotFoundPage", "ErrorFallback"]
+    },
+    {
+      "id": 47,
+      "file": "image.json",
+      "name": "Image",
+      "intent": "Image file upload",
+      "category": "media",
+      "used_in": ["ProviderRegistrationPage"]
+    },
+    {
+      "id": 48,
+      "file": "info.json",
+      "name": "Info",
+      "intent": "Information / tooltip",
+      "category": "status",
+      "used_in": ["Toast (info)", "Disclaimer"]
+    },
+    {
+      "id": 49,
+      "file": "instagram.json",
+      "name": "Instagram",
+      "intent": "Instagram social link",
+      "category": "brand",
+      "used_in": ["Footer"]
+    },
+    {
+      "id": 50,
+      "file": "languages.json",
+      "name": "Languages",
+      "intent": "Language support / multilingual",
+      "category": "system",
+      "used_in": ["ProviderDetailPage", "ProviderProfile"]
+    },
+    {
+      "id": 51,
+      "file": "layout.json",
+      "name": "Layout",
+      "intent": "Layout view option",
+      "category": "system",
+      "used_in": ["BookmarksPage"]
+    },
+    {
+      "id": 52,
+      "file": "layout-dashboard.json",
+      "name": "LayoutDashboard",
+      "intent": "Dashboard home view",
+      "category": "system",
+      "used_in": ["Navigation (user dropdown)", "UserSidebar", "AdminSidebar", "ProviderSidebar", "sidebars config"]
+    },
+    {
+      "id": 53,
+      "file": "layout-grid.json",
+      "name": "LayoutGrid",
+      "intent": "Grid view / all categories",
+      "category": "system",
+      "used_in": ["NavHub"]
+    },
+    {
+      "id": 54,
+      "file": "leaf.json",
+      "name": "Leaf",
+      "intent": "Mindfulness / nature therapy",
+      "category": "domain",
+      "used_in": ["categories (Mindfulness)", "NavMenu"]
+    },
+    {
+      "id": 55,
+      "file": "life-buoy.json",
+      "name": "LifeBuoy",
+      "intent": "Medication / support ring",
+      "category": "domain",
+      "used_in": ["categories (Medication)"]
+    },
+    {
+      "id": 56,
+      "file": "lightbulb.json",
+      "name": "Lightbulb",
+      "intent": "Tips / insights / ideas",
+      "category": "domain",
+      "used_in": ["articles data"]
+    },
+    {
+      "id": 57,
+      "file": "linkedin.json",
+      "name": "Linkedin",
+      "intent": "LinkedIn social link",
+      "category": "brand",
+      "used_in": ["Footer"]
+    },
+    {
+      "id": 58,
+      "file": "loader.json",
+      "name": "Loader2",
+      "intent": "Loading spinner",
+      "category": "status",
+      "used_in": ["Button (global)", "MoodJournal (save state)", "AuthCallback", "SparkLanding", "CommunityLanding", "ProviderPatients", "ProviderAnalytics", "ProviderProfileEditor"]
+    },
+    {
+      "id": 59,
+      "file": "lock.json",
+      "name": "Lock",
+      "intent": "Password / security",
+      "category": "system",
+      "used_in": ["LoginPage", "SignUpPage", "UpdatePasswordPage", "AuthModal", "ToolsLandingPage", "ProviderRegistrationPage"]
+    },
+    {
+      "id": 60,
+      "file": "logout.json",
+      "name": "LogOut",
+      "intent": "Sign out",
+      "category": "system",
+      "used_in": ["Navigation (user dropdown)", "MobileMenu", "UserSidebar", "AdminSidebar", "ProviderSidebar"]
+    },
+    {
+      "id": 61,
+      "file": "mail.json",
+      "name": "Mail",
+      "intent": "Email / contact",
+      "category": "communication",
+      "used_in": ["LoginPage", "SignUpPage", "ResetPasswordPage", "AuthModal", "ContactPage", "AccountSettings", "ProviderDetailAdmin", "ProviderPatients"]
+    },
+    {
+      "id": 62,
+      "file": "map-pin.json",
+      "name": "MapPin",
+      "intent": "Location / geography",
+      "category": "system",
+      "used_in": ["ProviderCard", "ProviderDetailPage", "ProviderProfile", "ProviderDirectory", "ProviderSearchPage", "ProviderDirectorySection", "ConnectLandingPage", "ContactPage", "AccountSettings", "BookmarksPage", "MindMate", "ProviderDetailAdmin"]
+    },
+    {
+      "id": 63,
+      "file": "menu.json",
+      "name": "Menu",
+      "intent": "Hamburger menu toggle",
+      "category": "navigation",
+      "used_in": ["Navigation (mobile toggle)"]
+    },
+    {
+      "id": 64,
+      "file": "message-circle.json",
+      "name": "MessageCircle",
+      "intent": "Conversation / therapy types",
+      "category": "communication",
+      "used_in": ["categories (Types of Therapy)", "CommunityLanding"]
+    },
+    {
+      "id": 65,
+      "file": "message-square.json",
+      "name": "MessageSquare",
+      "intent": "Chat / text messaging",
+      "category": "communication",
+      "used_in": ["CrisisPage", "CrisisResources", "CrisisBanner", "ContactPage", "ProviderProfile", "ProviderDetailPage", "AIServicesSection"]
+    },
+    {
+      "id": 66,
+      "file": "moon.json",
+      "name": "Moon",
+      "intent": "Sleep / mood / night",
+      "category": "domain",
+      "used_in": ["categories (Mood Disorders, Sleep & Rest)", "NavMenu", "ToolCard", "ToolsSection", "ToolsPage", "ToolsLandingPage", "SleepArchitect", "AIServicesSection", "AssessmentHistory"]
+    },
+    {
+      "id": 67,
+      "file": "more-vertical.json",
+      "name": "MoreVertical",
+      "intent": "Options menu (three dots)",
+      "category": "actions",
+      "used_in": ["ProviderPatients"]
+    },
+    {
+      "id": 68,
+      "file": "paperclip.json",
+      "name": "Paperclip",
+      "intent": "Attach file",
+      "category": "actions",
+      "used_in": ["MessagingModal"]
+    },
+    {
+      "id": 69,
+      "file": "pen-tool.json",
+      "name": "PenTool",
+      "intent": "Journaling / writing",
+      "category": "domain",
+      "used_in": ["ToolCard", "ToolsSection", "ToolsPage", "ToolsLandingPage", "MoodJournal", "SearchResults", "AIServicesSection"]
+    },
+    {
+      "id": 70,
+      "file": "phone.json",
+      "name": "Phone",
+      "intent": "Phone call / crisis hotline",
+      "category": "communication",
+      "used_in": ["CrisisPage", "CrisisResources", "CrisisBanner", "AssessmentPage", "ClarityScoreTool", "AIChatWidget", "MindMate", "NavHub", "ContactPage", "ProviderDetailAdmin"]
+    },
+    {
+      "id": 71,
+      "file": "play.json",
+      "name": "Play",
+      "intent": "Play video / media",
+      "category": "media",
+      "used_in": ["HeroSection", "TopicHubSection", "VideoCard", "VideoShowcaseSection", "NavHub", "VideoDetail"]
+    },
+    {
+      "id": 72,
+      "file": "plus.json",
+      "name": "Plus",
+      "intent": "Add new item",
+      "category": "actions",
+      "used_in": ["SymptomSearch"]
+    },
+    {
+      "id": 73,
+      "file": "quote.json",
+      "name": "Quote",
+      "intent": "Citations / blockquotes",
+      "category": "domain",
+      "used_in": ["articles data"]
+    },
+    {
+      "id": 74,
+      "file": "refresh.json",
+      "name": "RefreshCw",
+      "intent": "Retry / refresh",
+      "category": "actions",
+      "used_in": ["UserDashboard", "ClarityScoreTool", "AssessmentResultsPage", "ErrorFallback", "SymptomLayout", "ProviderSearchPage"]
+    },
+    {
+      "id": 75,
+      "file": "save.json",
+      "name": "Save",
+      "intent": "Save changes",
+      "category": "actions",
+      "used_in": ["MoodJournal", "AccountSettings"]
+    },
+    {
+      "id": 76,
+      "file": "scale.json",
+      "name": "Scale",
+      "intent": "Balance / eating disorders",
+      "category": "domain",
+      "used_in": ["categories (Eating Disorders)"]
+    },
+    {
+      "id": 77,
+      "file": "search.json",
+      "name": "Search",
+      "intent": "Search functionality",
+      "category": "actions",
+      "used_in": ["Navigation", "ToolsPage", "ProviderDirectory", "ProviderSearchPage", "ConnectLandingPage", "SearchResults", "SearchAutocomplete", "NotFoundPage", "ProviderManagement", "ProviderPatients", "LearnPage", "ArticlePage", "SymptomSearch", "SearchResultsPage"]
+    },
+    {
+      "id": 78,
+      "file": "send.json",
+      "name": "Send",
+      "intent": "Submit / send message",
+      "category": "actions",
+      "used_in": ["AIChatWidget", "MindMate", "MessagingModal", "ContactPage"]
+    },
+    {
+      "id": 79,
+      "file": "settings.json",
+      "name": "Settings",
+      "intent": "User preferences / config",
+      "category": "system",
+      "used_in": ["Navigation (user dropdown)", "ProviderSidebar", "sidebars config"]
+    },
+    {
+      "id": 80,
+      "file": "share.json",
+      "name": "Share2",
+      "intent": "Share content",
+      "category": "actions",
+      "used_in": ["ArticleHeader", "AssessmentResultsPage", "VideoDetail"]
+    },
+    {
+      "id": 81,
+      "file": "shield.json",
+      "name": "Shield",
+      "intent": "Protection / trauma / trust",
+      "category": "domain",
+      "used_in": ["categories (Trauma & PTSD)", "CommunityLanding", "AboutPage", "ProviderDetailAdmin"]
+    },
+    {
+      "id": 82,
+      "file": "shield-alert.json",
+      "name": "ShieldAlert",
+      "intent": "Crisis / emergency",
+      "category": "domain",
+      "used_in": ["ToolCard", "ToolsSection", "ToolsPage", "ToolsLandingPage", "AdminSidebar", "sidebars config", "tools data"]
+    },
+    {
+      "id": 83,
+      "file": "shield-check.json",
+      "name": "ShieldCheck",
+      "intent": "Verified / secure provider",
+      "category": "domain",
+      "used_in": ["ProviderCard", "ProviderDetailPage", "ProviderProfile", "ProviderDirectorySection", "ConnectLandingPage", "ProviderRegistrationPage"]
+    },
+    {
+      "id": 84,
+      "file": "smartphone.json",
+      "name": "Smartphone",
+      "intent": "Digital wellbeing / screen time",
+      "category": "domain",
+      "used_in": ["categories (Digital Wellbeing)", "SleepArchitect"]
+    },
+    {
+      "id": 85,
+      "file": "sparkles.json",
+      "name": "Sparkles",
+      "intent": "AI / premium / LGBTQ+",
+      "category": "domain",
+      "used_in": ["AIChatWidget (FAB)", "MindMate (FAB)", "AuthModal", "HowItWorksSection", "categories (LGBTQ+ Support)", "AllCategoriesSection", "SparkLanding", "LearnPage"]
+    },
+    {
+      "id": 86,
+      "file": "star.json",
+      "name": "Star",
+      "intent": "Rating / favorite",
+      "category": "system",
+      "used_in": ["ProviderCard", "ProviderDetailPage", "ProviderProfile", "ProviderDirectorySection", "ReviewCard"]
+    },
+    {
+      "id": 87,
+      "file": "stethoscope.json",
+      "name": "Stethoscope",
+      "intent": "Medical / consultation",
+      "category": "domain",
+      "used_in": ["QuickTopics"]
+    },
+    {
+      "id": 88,
+      "file": "sun.json",
+      "name": "Sun",
+      "intent": "Wellness / energy / morning",
+      "category": "domain",
+      "used_in": ["categories (Holistic Wellness)", "SleepArchitect"]
+    },
+    {
+      "id": 89,
+      "file": "thermometer.json",
+      "name": "Thermometer",
+      "intent": "Temperature / health metric",
+      "category": "domain",
+      "used_in": ["SleepArchitect"]
+    },
+    {
+      "id": 90,
+      "file": "thumbs-up.json",
+      "name": "ThumbsUp",
+      "intent": "Like / approve",
+      "category": "actions",
+      "used_in": ["VideoDetail"]
+    },
+    {
+      "id": 91,
+      "file": "trash.json",
+      "name": "Trash2",
+      "intent": "Delete item",
+      "category": "actions",
+      "used_in": ["AIChatWidget", "MindMate", "MoodJournal", "ScoreHistoryPage"]
+    },
+    {
+      "id": 92,
+      "file": "trending-up.json",
+      "name": "TrendingUp",
+      "intent": "Positive progress / growth",
+      "category": "status",
+      "used_in": ["HowItWorksSection", "HeroInsightCard", "UserDashboard", "MoodJournal", "ScoreHistoryPage", "AssessmentHistory", "ProviderAnalytics", "LearnPage"]
+    },
+    {
+      "id": 93,
+      "file": "twitter.json",
+      "name": "Twitter",
+      "intent": "Twitter/X social link",
+      "category": "brand",
+      "used_in": ["Footer"]
+    },
+    {
+      "id": 94,
+      "file": "upload.json",
+      "name": "Upload",
+      "intent": "Upload file / document",
+      "category": "actions",
+      "used_in": ["ProviderRegistrationPage", "ProviderOnboarding"]
+    },
+    {
+      "id": 95,
+      "file": "user.json",
+      "name": "User",
+      "intent": "User profile / person",
+      "category": "system",
+      "used_in": ["Navigation (menu toggle)", "MobileMenu", "SignUpPage", "AuthModal", "AccountSettings", "UserSidebar", "ProviderRegistrationPage", "ProviderOnboarding", "ReviewCard", "AuditLogPage", "ProviderDetailAdmin", "ResultsAnalysis"]
+    },
+    {
+      "id": 96,
+      "file": "user-plus.json",
+      "name": "UserPlus",
+      "intent": "Add / invite user",
+      "category": "system",
+      "used_in": ["ProviderPatients"]
+    },
+    {
+      "id": 97,
+      "file": "user-square.json",
+      "name": "UserSquare2",
+      "intent": "Provider profile card",
+      "category": "system",
+      "used_in": ["ProviderSidebar", "BookmarksPage", "sidebars config"]
+    },
+    {
+      "id": 98,
+      "file": "users.json",
+      "name": "Users / Users2",
+      "intent": "People / community / team",
+      "category": "system",
+      "used_in": ["categories (Men's Health, Women's Health)", "ToolCard", "ToolsSection", "ToolsPage", "ToolsLandingPage", "QuickTopics", "AdminSidebar", "AdminDashboard", "ProviderSidebar", "ProviderDashboard", "ConnectLandingPage", "sidebars config", "CommunityLanding", "ProviderAnalytics", "SearchResultsPage", "tools data"]
+    },
+    {
+      "id": 99,
+      "file": "video.json",
+      "name": "Video",
+      "intent": "Video call / consultation",
+      "category": "media",
+      "used_in": ["ProviderCard", "ProviderDetailPage", "ProviderProfile", "BookingModal", "SearchResults"]
+    },
+    {
+      "id": 100,
+      "file": "wind.json",
+      "name": "Wind",
+      "intent": "Breathwork / air flow",
+      "category": "domain",
+      "used_in": ["ToolCard", "ToolsSection", "ToolsPage", "ToolsLandingPage", "tools data"]
+    },
+    {
+      "id": 101,
+      "file": "wrench.json",
+      "name": "Wrench",
+      "intent": "Tools section",
+      "category": "system",
+      "used_in": ["SearchResultsPage"]
+    },
+    {
+      "id": 102,
+      "file": "x.json",
+      "name": "X",
+      "intent": "Close / dismiss / cancel",
+      "category": "actions",
+      "used_in": ["Navigation (search close)", "Modal", "Toast (dismiss)", "AIChatWidget", "MindMate", "MobileMenu", "AuthModal", "NavHub", "AccountSettings", "ProviderRegistrationPage", "SearchAutocomplete", "SymptomSearch", "ProviderPatients", "AssessmentHistory", "SearchResultsPage", "ProviderManagement"]
+    },
+    {
+      "id": 103,
+      "file": "x-circle.json",
+      "name": "XCircle",
+      "intent": "Rejected / denied / failed",
+      "category": "status",
+      "used_in": ["ProviderDetailAdmin"]
+    },
+    {
+      "id": 104,
+      "file": "youtube.json",
+      "name": "Youtube",
+      "intent": "YouTube social link",
+      "category": "brand",
+      "used_in": ["Footer"]
+    },
+    {
+      "id": 105,
+      "file": "zap.json",
+      "name": "Zap",
+      "intent": "Energy / quick action / featured",
+      "category": "domain",
+      "used_in": ["NavMenu", "AssessmentHistory"]
+    }
+  ],
+
+  "by_category": {
+    "navigation": {
+      "count": 10,
+      "icons": ["arrow-down", "arrow-left", "arrow-right", "arrow-up", "arrow-up-right", "chevron-down", "chevron-left", "chevron-right", "external-link", "home", "menu"]
+    },
+    "actions": {
+      "count": 16,
+      "icons": ["ban", "book-marked", "bookmark", "download", "edit", "filter", "more-vertical", "paperclip", "plus", "refresh", "save", "search", "send", "share", "thumbs-up", "trash", "upload", "x"]
+    },
+    "status": {
+      "count": 8,
+      "icons": ["alert-circle", "alert-triangle", "check", "check-circle", "help-circle", "info", "loader", "trending-up", "x-circle"]
+    },
+    "communication": {
+      "count": 5,
+      "icons": ["mail", "message-circle", "message-square", "phone"]
+    },
+    "media": {
+      "count": 4,
+      "icons": ["camera", "image", "play", "video"]
+    },
+    "system": {
+      "count": 19,
+      "icons": ["building", "calendar", "clock", "credit-card", "eye", "file-text", "globe", "languages", "layout", "layout-dashboard", "layout-grid", "lock", "logout", "map-pin", "settings", "star", "user", "user-plus", "user-square", "users", "wrench"]
+    },
+    "domain": {
+      "count": 27,
+      "icons": ["activity", "anchor", "award", "bot", "brain", "brain-circuit", "briefcase", "cloud-rain", "coffee", "fingerprint", "graduation-cap", "heart", "heart-handshake", "leaf", "life-buoy", "lightbulb", "moon", "pen-tool", "quote", "scale", "shield", "shield-alert", "shield-check", "smartphone", "sparkles", "stethoscope", "sun", "thermometer", "wind", "zap"]
+    },
+    "brand": {
+      "count": 5,
+      "icons": ["chrome", "github", "instagram", "linkedin", "twitter", "youtube"]
+    }
+  }
+}

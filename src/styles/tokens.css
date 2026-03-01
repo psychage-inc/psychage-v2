@@ -74,7 +74,53 @@ html.light,
   --shadow-glow: 0 0 20px rgba(13, 148, 136, 0.12);
 }
 
+/* Dark Mode Theme */
+html.dark,
+:root.dark {
+  /* Colors - Dark Premium Palette */
+  --color-background: #0a0a0a;
+  --color-surface: #18181b;
+  --color-surface-hover: #27272a;
+  --color-surface-active: #3f3f46;
 
+  --color-primary: #14b8a6;
+  /* Teal-500 */
+  --color-primary-hover: #0d9488;
+  /* Teal-600 */
+  --color-primary-light: #2dd4bf;
+  /* Teal-400 */
+
+  --color-text-primary: #fafaf9;
+  /* Stone-50 */
+  --color-text-secondary: #d6d3d1;
+  /* Stone-300 */
+  --color-text-tertiary: #a8a29e;
+  /* Stone-400 */
+
+  --color-border: #3f3f46;
+  /* Zinc-700 */
+  --color-border-hover: #52525b;
+  /* Zinc-600 */
+
+  --color-error: #f87171;
+  /* Red-400 */
+  --color-success: #4ade80;
+  /* Green-400 */
+  --color-warning: #facc15;
+  /* Yellow-400 */
+
+  /* Shadows - Deeper for dark mode */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.4);
+  --shadow-glow: 0 0 30px rgba(20, 184, 166, 0.3);
+
+  /* Navigator-specific dark tokens */
+  --navigator-bg-overlay: rgba(10, 10, 10, 0.9);
+  --navigator-border: rgba(255, 255, 255, 0.1);
+  --navigator-card-bg: rgba(255, 255, 255, 0.05);
+  --navigator-card-hover: rgba(255, 255, 255, 0.1);
+}
 
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {

@@ -11,7 +11,7 @@ import { NavigatorAnalytics } from '../lib/navigator/analytics';
 
 // Define the shape of our state
 export interface NavigatorState {
-    currentStep: 'welcome' | 'domains' | 'symptoms' | 'details' | 'processing' | 'results';
+    currentStep: 'welcome' | 'age_gate' | 'underage_notice' | 'domains' | 'symptoms' | 'details' | 'processing' | 'results';
     knowledgeBase: KnowledgeBase | null;
     isLoading: boolean;
     error: string | null;
@@ -30,6 +30,7 @@ export interface NavigatorState {
     sessionHash: string;
     startTime: number;
     liveAnnouncement: { message: string; mode: 'polite' | 'assertive'; id: number } | null;
+    ageGatePassed: boolean;
 }
 
 // Define the actions
@@ -65,6 +66,7 @@ const initialState: NavigatorState = {
     sessionHash: crypto.randomUUID(),
     startTime: Date.now(),
     liveAnnouncement: null,
+    ageGatePassed: false,
 };
 
 // Reducer

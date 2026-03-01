@@ -1,35 +1,54 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ShieldAlert, X } from 'lucide-react';
 import { useNavigator } from '../../context/NavigatorContext';
 import { CrisisResourceCard } from './CrisisResourceCard';
+import { useFocusTrap } from '../../hooks/useFocusTrap';
 
 export const CrisisOverlay: React.FC = () => {
-    const { state, dispatch } = useNavigator();
+    const { state, dispatch, announceAssertive } = useNavigator();
 
     const { crisisTriggered, crisisAcknowledged, detectedRegion, knowledgeBase } = state;
     const isVisible = crisisTriggered && !crisisAcknowledged;
+
+    const handleAcknowledge = () => {
+        dispatch({ type: 'ACKNOWLEDGE_CRISIS' });
+    };
+
+    const modalRef = useRef<HTMLDivElement>(null);
+    const headingRef = useRef<HTMLHeadingElement>(null);
+    const acknowledgeButtonRef = useRef<HTMLButtonElement>(null);
+
+    // Custom Escape handler: focus primary button instead of closing (acknowledgment required)
+    const handleEscapeKey = () => {
+        if (acknowledgeButtonRef.current) {
+            acknowledgeButtonRef.current.focus();
+            announceAssertive("Please acknowledge to continue.");
+        }
+    };
+
+    // Focus trap: traps focus within modal, Escape focuses primary button (doesn't close)
+    // Initial focus goes to heading for context (WCAG 2.4.3)
+    useFocusTrap(modalRef, isVisible, handleAcknowledge, undefined, headingRef, false, handleEscapeKey);
 
     useEffect(() => {
         // Prevent body scrolling when overlay is active
         if (isVisible) {
             document.body.style.overflow = 'hidden';
+            announceAssertive("Important Safety Information shown. Please consider reaching out to one of the resources provided.");
         } else {
             document.body.style.overflow = 'unset';
         }
         return () => {
             document.body.style.overflow = 'unset';
         };
-    }, [isVisible]);
-
-    if (!knowledgeBase) return null;
+    }, [isVisible, announceAssertive]);
 
     // Filter resources based on detected region or fallback to international
-    const resources = knowledgeBase.crisisResources[detectedRegion || 'INT'] || knowledgeBase.crisisResources['INT'] || [];
-
-    const handleAcknowledge = () => {
-        dispatch({ type: 'ACKNOWLEDGE_CRISIS' });
-    };
+    // If knowledgeBase is not available, use empty array (error state already handled in context)
+    const resources = knowledgeBase?.crisisResources?.[detectedRegion || 'INT']
+        || knowledgeBase?.crisisResources?.['INT']
+        || [];
 
     return (
         <AnimatePresence>
@@ -49,6 +68,7 @@ export const CrisisOverlay: React.FC = () => {
                     <div className="fixed inset-0 z-[101] overflow-y-auto">
                         <div className="min-h-full flex items-center justify-center p-4 text-center sm:p-0">
                             <motion.div
+                                ref={modalRef}
                                 initial={{ opacity: 0, scale: 0.95, y: 20 }}
                                 animate={{ opacity: 1, scale: 1, y: 0 }}
                                 exit={{ opacity: 0, scale: 0.95, y: 20 }}
@@ -57,6 +77,8 @@ export const CrisisOverlay: React.FC = () => {
                                 role="alertdialog"
                                 aria-modal="true"
                                 aria-labelledby="crisis-modal-title"
+                                aria-describedby="crisis-modal-desc"
+                                tabIndex={-1}
                             >
                                 {/* Header Strip */}
                                 <div className="h-2 bg-crisis-red w-full"></div>
@@ -68,11 +90,16 @@ export const CrisisOverlay: React.FC = () => {
                                         </div>
 
                                         <div className="mt-4 text-center sm:mt-0 sm:ml-4 sm:text-left">
-                                            <h3 className="text-2xl font-serif font-bold text-white drop-shadow-sm" id="crisis-modal-title">
+                                            <h3
+                                                ref={headingRef}
+                                                className="text-2xl font-serif font-bold text-white drop-shadow-sm"
+                                                id="crisis-modal-title"
+                                                tabIndex={-1}
+                                            >
                                                 Important Safety Information
                                             </h3>
                                             <div className="mt-3">
-                                                <p className="text-base text-charcoal-200 leading-relaxed">
+                                                <p id="crisis-modal-desc" className="text-base text-charcoal-200 leading-relaxed">
                                                     Based on your responses, we noticed symptoms that may require immediate attention or support. <strong className="font-semibold text-white">You don't have to go through this alone.</strong> Please consider reaching out to one of the resources below.
                                                 </p>
                                             </div>
@@ -91,6 +118,7 @@ export const CrisisOverlay: React.FC = () => {
 
                                     <div className="mt-10 sm:flex sm:flex-row-reverse gap-3">
                                         <button
+                                            ref={acknowledgeButtonRef}
                                             type="button"
                                             className="w-full inline-flex justify-center rounded-lg border border-white/20 px-6 py-3 bg-white/10 text-base font-medium text-white shadow-sm hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-teal-500 sm:w-auto sm:text-sm transition-colors backdrop-blur-md"
                                             onClick={handleAcknowledge}

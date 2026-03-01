@@ -21,9 +21,9 @@ export const DisclaimerCard: React.FC<DisclaimerCardProps> = ({ className }) => 
                     <ShieldAlert className="w-6 h-6" aria-hidden="true" />
                 </div>
                 <div className="space-y-2">
-                    <h3 className="font-serif text-lg text-charcoal-900 dark:text-charcoal-100 font-medium">
+                    <div className="font-serif text-lg text-charcoal-900 dark:text-charcoal-100 font-medium" role="heading" aria-level="2">
                         Not Medical Advice
-                    </h3>
+                    </div>
                     <p className="text-sm text-charcoal-600 dark:text-charcoal-300 leading-relaxed">
                         The Symptom Navigator is an educational tool designed to help you understand your experiences and find relevant resources. It is <strong className="font-semibold">not a diagnostic tool</strong> and cannot replace professional medical or mental health advice.
                     </p>

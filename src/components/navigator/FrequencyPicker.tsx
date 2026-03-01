@@ -29,10 +29,10 @@ export const FrequencyPicker: React.FC<FrequencyPickerProps> = ({ value, onChang
                         whileTap={{ scale: 0.98 }}
                         onClick={() => onChange(option.value)}
                         className={cn(
-                            "p-4 rounded-xl border text-left transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 group flex items-start gap-4 backdrop-blur-sm",
+                            "p-4 rounded-2xl border text-left transition-all duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 group flex items-start gap-4 backdrop-blur-xl",
                             isSelected
-                                ? "border-teal-400/50 bg-teal-900/30 shadow-[0_0_15px_rgba(20,184,166,0.2)]"
-                                : "border-white/10 bg-white/5 hover:border-white/20 hover:bg-white/10"
+                                ? "border-teal-400/50 bg-teal-900/40 shadow-[0_0_25px_rgba(20,184,166,0.25)]"
+                                : "border-white/10 bg-white/5 hover:border-white/20 hover:bg-white/10 shadow-lg"
                         )}
                     >
                         <div

@@ -20,11 +20,11 @@ export const SymptomQuestionCard: React.FC<SymptomQuestionCardProps> = ({
     return (
         <div
             className={cn(
-                "relative rounded-2xl transition-all duration-500 overflow-hidden outline-none backdrop-blur-md",
+                "relative rounded-3xl transition-all duration-700 overflow-hidden outline-none backdrop-blur-2xl",
                 isActive
-                    ? "bg-white/5 border border-teal-400/50 shadow-[0_0_30px_rgba(20,184,166,0.1)]"
+                    ? "bg-white/10 border border-teal-400/50 shadow-[0_0_40px_rgba(20,184,166,0.2)]"
                     : isCompleted
-                        ? "bg-white/5 border border-white/10 opacity-60 hover:opacity-100 transition-opacity"
+                        ? "bg-white/5 border border-white/10 opacity-70 hover:opacity-100 transition-opacity"
                         : "bg-white/5 border border-transparent opacity-30 pointer-events-none filter blur-[2px]" // Upcoming
             )}
             aria-current={isActive ? "step" : undefined}

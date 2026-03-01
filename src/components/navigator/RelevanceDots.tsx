@@ -16,29 +16,29 @@ const RELEVANCE_CONFIG = {
     high: {
         filledDots: 3,
         totalDots: 4,
-        colorClass: 'text-teal-600',
-        bgColorClass: 'bg-teal-600',
+        colorClass: 'text-relevance-high',
+        bgColorClass: 'bg-relevance-high',
         label: 'Higher relevance'
     },
     moderate: {
         filledDots: 2,
         totalDots: 4,
-        colorClass: 'text-indigo-500',
-        bgColorClass: 'bg-indigo-500',
+        colorClass: 'text-relevance-moderate',
+        bgColorClass: 'bg-relevance-moderate',
         label: 'Moderate relevance'
     },
     low: {
         filledDots: 1,
         totalDots: 4,
-        colorClass: 'text-purple-500',
-        bgColorClass: 'bg-purple-500',
+        colorClass: 'text-relevance-explore',
+        bgColorClass: 'bg-relevance-explore',
         label: 'Worth exploring'
     },
     minimal: {
         filledDots: 0,
         totalDots: 4,
-        colorClass: 'text-gray-400',
-        bgColorClass: 'bg-gray-400',
+        colorClass: 'text-charcoal-400',
+        bgColorClass: 'bg-charcoal-400',
         label: 'Less likely'
     }
 };

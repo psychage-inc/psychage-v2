@@ -3,6 +3,8 @@ import { render, screen } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 import AuthModal from '../components/auth/AuthModal';
 import { AuthProvider } from '../context/AuthContext';
+import * as matchers from '@testing-library/jest-dom/matchers';
+expect.extend(matchers);
 
 // Mock Lucide icons
 vi.mock('lucide-react', () => ({
@@ -56,7 +58,7 @@ const renderWithAuth = (ui: React.ReactElement) => {
 
 describe('AuthModal Accessibility', () => {
     it('inputs should be associated with their labels', () => {
-        renderWithAuth(<AuthModal isOpen={true} onClose={() => {}} />);
+        renderWithAuth(<AuthModal isOpen={true} onClose={() => { }} />);
 
         // Check for Email input association
         const emailInput = screen.getByLabelText(/Email/i);
@@ -70,9 +72,9 @@ describe('AuthModal Accessibility', () => {
     });
 
     it('close button should have an accessible label', () => {
-        renderWithAuth(<AuthModal isOpen={true} onClose={() => {}} />);
+        renderWithAuth(<AuthModal isOpen={true} onClose={() => { }} />);
 
-        const closeButton = screen.getByRole('button', { name: /close modal/i });
+        const closeButton = screen.getAllByRole('button', { name: /close modal/i })[0];
         expect(closeButton).toBeInTheDocument();
     });
 });

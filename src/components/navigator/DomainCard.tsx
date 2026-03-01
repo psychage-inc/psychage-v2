@@ -40,10 +40,10 @@ export const DomainCard: React.FC<DomainCardProps> = ({
         <InteractiveCard
             onClick={() => onToggle(domain)}
             className={cn(
-                "w-full text-left p-6 transition-all duration-300 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal-900 cursor-pointer border",
+                "w-full text-left p-6 transition-all duration-500 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal-900 cursor-pointer overflow-hidden relative rounded-2xl backdrop-blur-xl",
                 isSelected
-                    ? "border-teal-400/50 bg-teal-900/20 shadow-[0_0_20px_rgba(20,184,166,0.15)]"
-                    : "border-white/10 hover:border-white/20 hover:bg-white/10"
+                    ? "bg-teal-900/30 border border-teal-400/50 shadow-[0_0_30px_rgba(20,184,166,0.15)]"
+                    : "bg-white/5 border border-white/10 hover:border-white/20 hover:bg-white/10 shadow-lg"
             )}
             role="button"
             aria-pressed={isSelected}
@@ -55,6 +55,16 @@ export const DomainCard: React.FC<DomainCardProps> = ({
                 }
             }}
         >
+            {/* Background Animation & Glossy Edge Element */}
+            <div
+                className={cn(
+                    "absolute inset-0 bg-gradient-to-br transition-opacity duration-500 -z-10 rounded-2xl ring-1 ring-inset pointer-events-none",
+                    isSelected
+                        ? "from-teal-500/10 via-teal-400/5 to-transparent opacity-100 ring-teal-400/30"
+                        : "from-white/5 to-transparent opacity-0 group-hover:opacity-100 ring-white/10"
+                )}
+            />
+
             {/* Background Gradient for selected state */}
             <div
                 className={cn(

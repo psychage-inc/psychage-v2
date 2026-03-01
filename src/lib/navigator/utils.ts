@@ -57,11 +57,38 @@ export const DEFAULT_MATCHING_CONFIG: MatchingConfig = {
   version: '1.1.0',
 };
 
+// ─── Input Validation ───────────────────────────────────────────────────────
+
+const VALID_DURATIONS: Set<string> = new Set([
+  'less_than_1_week', '1_to_2_weeks', '2_to_4_weeks',
+  '1_to_3_months', '3_to_6_months', '6_months_to_1_year', 'more_than_1_year',
+]);
+
+const VALID_FREQUENCIES: Set<string> = new Set([
+  'rarely', 'sometimes', 'often', 'always',
+]);
+
+/** Sanitize a single user input, clamping/defaulting invalid values. */
+function sanitizeInput(input: UserSymptomInput): UserSymptomInput {
+  return {
+    symptom_id: input.symptom_id,
+    severity: input.severity !== undefined
+      ? Math.max(1, Math.min(10, Math.round(input.severity)))
+      : undefined,
+    duration: input.duration && VALID_DURATIONS.has(input.duration)
+      ? input.duration
+      : undefined,
+    frequency: input.frequency && VALID_FREQUENCIES.has(input.frequency)
+      ? input.frequency
+      : undefined,
+  };
+}
+
 // ─── Symptom Normalization ───────────────────────────────────────────────────
 
 /**
  * Normalize user inputs against the symptom knowledge base.
- * Resolves synonyms and fills in defaults for missing optional fields.
+ * Sanitizes out-of-range values, resolves synonyms, and fills in defaults.
  */
 export function normalizeSymptoms(
   inputs: UserSymptomInput[],
@@ -73,7 +100,8 @@ export function normalizeSymptoms(
   }
 
   return inputs
-    .map((input) => {
+    .map((rawInput) => {
+      const input = sanitizeInput(rawInput);
       const symptom = symptomMap.get(input.symptom_id);
       if (!symptom || !symptom.is_active) return null;
 

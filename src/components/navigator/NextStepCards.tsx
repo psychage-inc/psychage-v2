@@ -47,7 +47,7 @@ export const NextStepCards: React.FC<NextStepCardsProps> = ({ steps }) => {
                         initial={{ opacity: 0, y: 15 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1, duration: 0.4 }}
-                        className="group relative bg-white dark:bg-charcoal-800 rounded-2xl border border-charcoal-200 dark:border-charcoal-700 overflow-hidden hover:border-teal-400 dark:hover:border-teal-500 transition-colors shadow-sm cursor-pointer"
+                        className="group relative bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden hover:border-white/20 transition-all duration-500 shadow-lg hover:shadow-[0_0_20px_rgba(20,184,166,0.15)] cursor-pointer"
                         onClick={step.onClick}
                     >
                         {/* Background Gradient */}
@@ -55,20 +55,20 @@ export const NextStepCards: React.FC<NextStepCardsProps> = ({ steps }) => {
 
                         <div className="relative z-10 p-6 flex flex-col h-full">
                             <div className="flex items-center gap-3 mb-4">
-                                <div className={cn("w-10 h-10 rounded-xl bg-white dark:bg-charcoal-900 shadow-sm border border-charcoal-100 dark:border-charcoal-800 flex items-center justify-center", colorStyle.split(' ').pop())}>
+                                <div className={cn("w-10 h-10 rounded-xl bg-white/10 shadow-sm border border-white/10 flex items-center justify-center backdrop-blur-md", colorStyle.split(' ').pop())}>
                                     <Icon className="w-5 h-5" />
                                 </div>
-                                <h3 className="font-serif text-lg font-medium text-charcoal-900 dark:text-white">
+                                <h3 className="font-serif text-lg font-medium text-text-primary">
                                     {step.title}
                                 </h3>
                             </div>
 
-                            <p className="text-sm text-charcoal-600 dark:text-charcoal-300 leading-relaxed flex-grow">
+                            <p className="text-sm text-text-secondary leading-relaxed flex-grow">
                                 {step.description}
                             </p>
 
                             {step.actionText && (
-                                <div className="mt-5 flex items-center text-sm font-medium text-teal-600 dark:text-teal-400 group-hover:text-teal-700 dark:group-hover:text-teal-300 transition-colors">
+                                <div className="mt-5 flex items-center text-sm font-medium text-teal-400 group-hover:text-teal-300 transition-colors">
                                     <span>{step.actionText}</span>
                                     <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                                 </div>

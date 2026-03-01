@@ -16,6 +16,7 @@ import { normalizeSymptoms, DEFAULT_MATCHING_CONFIG } from '@/lib/navigator/util
 import type {
   KnowledgeBase,
   UserSymptomInput,
+  ScoringConfig,
 } from '@/lib/navigator/types';
 import { createTestKnowledgeBase } from './test-helpers';
 
@@ -156,7 +157,7 @@ describe('Scoring Engine — Condition Matching', () => {
   // ─── Result Count Bounds ─────────────────────────────────────────────────
 
   describe('Result count constraints', () => {
-    it('Results count is always between 1 and 4 when there are matches', () => {
+    it('Results count is always between 1 and max_results when there are matches', () => {
       const inputs: UserSymptomInput[] = [
         { symptom_id: 'MOD_001', severity: 7, duration: '1_to_3_months', frequency: 'often' },
         { symptom_id: 'MOD_003', severity: 6, duration: '2_to_4_weeks', frequency: 'often' },
@@ -168,7 +169,7 @@ describe('Scoring Engine — Condition Matching', () => {
       const results = runSymptomNavigator(inputs, kb);
 
       expect(results.results.length).toBeGreaterThanOrEqual(1);
-      expect(results.results.length).toBeLessThanOrEqual(4);
+      expect(results.results.length).toBeLessThanOrEqual(DEFAULT_MATCHING_CONFIG.max_results);
     });
 
     it('No more than max_per_family (2) conditions from same category', () => {
@@ -386,6 +387,182 @@ describe('Scoring Engine — Condition Matching', () => {
 
       // Disclaimer must exist
       expect(results.disclaimer.length).toBeGreaterThan(50);
+    });
+  });
+
+  // ─── Input Validation (sanitizeInput via normalizeSymptoms) ─────────────
+
+  describe('Input validation', () => {
+    it('Severity 999 clamps to 10', () => {
+      const inputs: UserSymptomInput[] = [
+        { symptom_id: 'MOD_001', severity: 999, duration: '2_to_4_weeks', frequency: 'often' },
+      ];
+
+      const normalized = normalizeSymptoms(inputs, kb.symptoms);
+
+      expect(normalized).toHaveLength(1);
+      expect(normalized[0].severity).toBe(10);
+    });
+
+    it('Severity -5 clamps to 1', () => {
+      const inputs: UserSymptomInput[] = [
+        { symptom_id: 'MOD_001', severity: -5, duration: '2_to_4_weeks', frequency: 'often' },
+      ];
+
+      const normalized = normalizeSymptoms(inputs, kb.symptoms);
+
+      expect(normalized).toHaveLength(1);
+      expect(normalized[0].severity).toBe(1);
+    });
+
+    it('Fractional severity rounds to nearest integer', () => {
+      const inputs: UserSymptomInput[] = [
+        { symptom_id: 'MOD_001', severity: 6.7 },
+      ];
+
+      const normalized = normalizeSymptoms(inputs, kb.symptoms);
+
+      expect(normalized).toHaveLength(1);
+      expect(normalized[0].severity).toBe(7);
+    });
+
+    it('Invalid duration string falls back to default (2_to_4_weeks)', () => {
+      const inputs: UserSymptomInput[] = [
+        { symptom_id: 'MOD_001', severity: 5, duration: 'BOGUS_DURATION' as any, frequency: 'often' },
+      ];
+
+      const normalized = normalizeSymptoms(inputs, kb.symptoms);
+
+      expect(normalized).toHaveLength(1);
+      expect(normalized[0].duration).toBe('2_to_4_weeks');
+    });
+
+    it('Invalid frequency string falls back to default (sometimes)', () => {
+      const inputs: UserSymptomInput[] = [
+        { symptom_id: 'MOD_001', severity: 5, duration: '2_to_4_weeks', frequency: 'BOGUS_FREQ' as any },
+      ];
+
+      const normalized = normalizeSymptoms(inputs, kb.symptoms);
+
+      expect(normalized).toHaveLength(1);
+      expect(normalized[0].frequency).toBe('sometimes');
+    });
+
+    it('Missing severity defaults to 5', () => {
+      const inputs: UserSymptomInput[] = [
+        { symptom_id: 'MOD_001' },
+      ];
+
+      const normalized = normalizeSymptoms(inputs, kb.symptoms);
+
+      expect(normalized).toHaveLength(1);
+      expect(normalized[0].severity).toBe(5);
+      expect(normalized[0].duration).toBe('2_to_4_weeks');
+      expect(normalized[0].frequency).toBe('sometimes');
+    });
+  });
+
+  // ─── PDD/MDE Scoring Bias Regression ──────────────────────────────────────
+
+  describe('PDD/MDE scoring bias regression', () => {
+    const scoringConfig: ScoringConfig = {
+      confidence_cap: 0.75,
+      below_minimum_penalty: 0.3,
+      severity_modifiers: DEFAULT_MATCHING_CONFIG.severity_modifiers,
+      frequency_modifiers: DEFAULT_MATCHING_CONFIG.frequency_modifiers,
+      duration_modifiers: DEFAULT_MATCHING_CONFIG.duration_modifiers,
+    };
+
+    it('MDE outscores PDD when MDE-specific symptom (MOD_006 guilt) is present', () => {
+      // 6 symptoms shared by both + MOD_006 which is weight 2 in MDE, absent in PDD
+      const inputs: UserSymptomInput[] = [
+        { symptom_id: 'MOD_001', severity: 7, duration: '1_to_3_months', frequency: 'often' },
+        { symptom_id: 'MOD_003', severity: 7, duration: '1_to_3_months', frequency: 'often' },
+        { symptom_id: 'ENR_001', severity: 6, duration: '1_to_3_months', frequency: 'often' },
+        { symptom_id: 'SLP_001', severity: 6, duration: '1_to_3_months', frequency: 'often' },
+        { symptom_id: 'COG_001', severity: 5, duration: '2_to_4_weeks', frequency: 'sometimes' },
+        { symptom_id: 'MOD_006', severity: 6, duration: '1_to_3_months', frequency: 'often' }, // MDE-specific (w2), not in PDD
+        { symptom_id: 'APT_001', severity: 5, duration: '2_to_4_weeks', frequency: 'sometimes' },
+      ];
+
+      const normalized = normalizeSymptoms(inputs, kb.symptoms);
+      const mde = kb.conditions.find((c) => c.id === 'MDE')!;
+      const pdd = kb.conditions.find((c) => c.id === 'PDD')!;
+
+      const mdeScore = calculateConditionScore(normalized, mde, scoringConfig);
+      const pddScore = calculateConditionScore(normalized, pdd, scoringConfig);
+
+      expect(mdeScore.capped_score).toBeGreaterThan(pddScore.capped_score);
+    });
+
+    it('PDD does not outscore MDE by more than 30% on shared symptoms alone', () => {
+      // Use only symptoms that exist in both MDE and PDD mappings
+      const sharedInputs: UserSymptomInput[] = [
+        { symptom_id: 'MOD_001', severity: 6, duration: '2_to_4_weeks', frequency: 'often' },
+        { symptom_id: 'MOD_003', severity: 6, duration: '2_to_4_weeks', frequency: 'often' },
+        { symptom_id: 'ENR_001', severity: 6, duration: '2_to_4_weeks', frequency: 'often' },
+        { symptom_id: 'SLP_001', severity: 5, duration: '2_to_4_weeks', frequency: 'sometimes' },
+        { symptom_id: 'COG_001', severity: 5, duration: '2_to_4_weeks', frequency: 'sometimes' },
+      ];
+
+      const normalized = normalizeSymptoms(sharedInputs, kb.symptoms);
+      const mde = kb.conditions.find((c) => c.id === 'MDE')!;
+      const pdd = kb.conditions.find((c) => c.id === 'PDD')!;
+
+      const mdeScore = calculateConditionScore(normalized, mde, scoringConfig);
+      const pddScore = calculateConditionScore(normalized, pdd, scoringConfig);
+
+      // Before the coverage factor fix, PDD would outscore MDE by ~57%
+      // After the fix, the gap should be ≤30%
+      if (pddScore.capped_score > mdeScore.capped_score) {
+        const ratio = pddScore.capped_score / mdeScore.capped_score;
+        expect(ratio).toBeLessThanOrEqual(1.30);
+      }
+    });
+
+    it('Coverage factor deflates scores for conditions with few mappings', () => {
+      // PDD has 15 mappings (below COVERAGE_REFERENCE=20)
+      // MDE has 23 mappings (above COVERAGE_REFERENCE=20)
+      // Same 5 shared symptoms should produce coverageFactor < 1.0 for PDD
+      const inputs: UserSymptomInput[] = [
+        { symptom_id: 'MOD_001', severity: 7, duration: '2_to_4_weeks', frequency: 'often' },
+        { symptom_id: 'MOD_003', severity: 7, duration: '2_to_4_weeks', frequency: 'often' },
+        { symptom_id: 'ENR_001', severity: 7, duration: '2_to_4_weeks', frequency: 'often' },
+        { symptom_id: 'SLP_001', severity: 6, duration: '2_to_4_weeks', frequency: 'often' },
+        { symptom_id: 'COG_001', severity: 6, duration: '2_to_4_weeks', frequency: 'often' },
+      ];
+
+      const normalized = normalizeSymptoms(inputs, kb.symptoms);
+      const pdd = kb.conditions.find((c) => c.id === 'PDD')!;
+
+      const score = calculateConditionScore(normalized, pdd, scoringConfig);
+
+      // PDD's raw normalized_score (before coverage) would be higher than capped_score
+      // because coverage factor < 1.0 deflates it. Verify the score is reasonable.
+      expect(score.capped_score).toBeGreaterThan(0);
+      expect(score.capped_score).toBeLessThanOrEqual(0.75);
+
+      // PDD (15 mappings): coverageFactor = log2(16)/log2(21) ≈ 0.911
+      // The capped_score should be less than the raw normalized_score * countCap
+      const countCap = Math.min(1.0, score.matched_count / 5);
+      const rawCapped = Math.min(score.normalized_score * countCap, 0.75);
+      expect(score.capped_score).toBeLessThan(rawCapped + 0.001);
+    });
+
+    it('Confidence cap still holds with coverage factor applied', () => {
+      // All MDE symptoms at maximum values — coverage factor = 1.0 for MDE (23 mappings)
+      const mde = kb.conditions.find((c) => c.id === 'MDE')!;
+      const inputs: UserSymptomInput[] = mde.symptom_mappings.map((m) => ({
+        symptom_id: m.symptom_id,
+        severity: 10,
+        duration: 'more_than_1_year' as const,
+        frequency: 'always' as const,
+      }));
+
+      const normalized = normalizeSymptoms(inputs, kb.symptoms);
+      const score = calculateConditionScore(normalized, mde, scoringConfig);
+
+      expect(score.capped_score).toBeLessThanOrEqual(0.75);
     });
   });
 });

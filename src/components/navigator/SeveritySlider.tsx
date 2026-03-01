@@ -79,7 +79,7 @@ export const SeveritySlider: React.FC<SeveritySliderProps> = ({
           border-radius: 50%;
           background: white;
           border: 2px solid theme('colors.indigo.500');
-          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+          box-shadow: 0 0 12px rgba(99, 102, 241, 0.6);
           cursor: pointer;
           margin-top: -11px;
         }
@@ -89,7 +89,7 @@ export const SeveritySlider: React.FC<SeveritySliderProps> = ({
           border-radius: 50%;
           background: white;
           border: 2px solid theme('colors.indigo.500');
-          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+          box-shadow: 0 0 12px rgba(99, 102, 241, 0.6);
           cursor: pointer;
         }
         input[type=range]::-webkit-slider-runnable-track {

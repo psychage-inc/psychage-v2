@@ -12,7 +12,7 @@ interface NavigatorButtonProps extends Omit<HTMLMotionProps<"button">, "disabled
     children: React.ReactNode;
 }
 
-export const NavigatorButton: React.FC<NavigatorButtonProps> = ({
+export const NavigatorButton = React.forwardRef<HTMLButtonElement, NavigatorButtonProps>(({
     variant = 'primary',
     size = 'md',
     isLoading = false,
@@ -21,7 +21,7 @@ export const NavigatorButton: React.FC<NavigatorButtonProps> = ({
     className,
     children,
     ...props
-}) => {
+}, ref) => {
     const baseStyles = "relative inline-flex items-center justify-center font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 tracking-wide overflow-hidden group";
 
     const variants = {
@@ -41,6 +41,7 @@ export const NavigatorButton: React.FC<NavigatorButtonProps> = ({
 
     return (
         <motion.button
+            ref={ref}
             whileHover={isDisabled || isLoading ? undefined : { scale: 1.01 }}
             whileTap={isDisabled || isLoading ? undefined : { scale: 0.98 }}
             className={cn(
@@ -66,4 +67,6 @@ export const NavigatorButton: React.FC<NavigatorButtonProps> = ({
             </span>
         </motion.button >
     );
-};
+});
+
+NavigatorButton.displayName = 'NavigatorButton';

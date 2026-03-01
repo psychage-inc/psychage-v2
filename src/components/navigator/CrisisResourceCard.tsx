@@ -48,7 +48,7 @@ export const CrisisResourceCard: React.FC<CrisisResourceCardProps> = ({ resource
     };
 
     return (
-        <InteractiveCard className="bg-white/5 rounded-xl p-5 border-white/10 shadow-lg relative overflow-hidden group backdrop-blur-md">
+        <InteractiveCard className="bg-white/5 rounded-2xl p-6 border-white/10 shadow-xl relative overflow-hidden group backdrop-blur-xl hover:bg-white/10 hover:border-white/20 transition-all duration-500">
             {/* Ambient red glow for crisis card */}
             <div className="absolute inset-0 bg-gradient-to-r from-crisis-red/10 to-transparent opacity-50 z-0 pointer-events-none rounded-xl"></div>
             <div className="absolute top-0 left-0 bottom-0 w-1.5 bg-crisis-red z-10 shadow-[0_0_10px_rgba(239,68,68,0.8)] pointer-events-none"></div>

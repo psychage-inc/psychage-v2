@@ -95,6 +95,27 @@ export async function POST(request: Request): Promise<Response> {
       );
     }
 
+    // Idempotency check — prevent duplicate saves on retry/double-click
+    const idempotencyKey = typeof body.idempotency_key === 'string'
+      ? body.idempotency_key.slice(0, 128)
+      : null;
+
+    if (idempotencyKey) {
+      const { data: existing } = await supabase
+        .from('navigator_saved_results')
+        .select('id, created_at')
+        .eq('user_id', user.id)
+        .eq('idempotency_key', idempotencyKey)
+        .maybeSingle();
+
+      if (existing) {
+        return new Response(
+          JSON.stringify({ id: existing.id, created_at: existing.created_at }),
+          { status: 200, headers: { 'Content-Type': 'application/json' } }
+        );
+      }
+    }
+
     // Encrypt the results before storage
     const plaintext = JSON.stringify(body.results);
 
@@ -117,6 +138,7 @@ export async function POST(request: Request): Promise<Response> {
       .insert({
         user_id: user.id,
         encrypted_results: encrypted,
+        ...(idempotencyKey ? { idempotency_key: idempotencyKey } : {}),
       })
       .select('id, created_at')
       .single();

@@ -108,11 +108,22 @@ export function calculateConditionScore(
   // Normalize to 0-1 range
   const normalized = maxPossibleScore > 0 ? rawScore / maxPossibleScore : 0;
 
+  // Coverage adjustment: conditions with fewer total mappings get inflated
+  // normalized scores due to smaller denominators (e.g. PDD 15 mappings vs
+  // MDE 23 mappings — same symptoms produce a 57% higher PDD score without
+  // this correction). Apply a log-scaled dampening factor for conditions
+  // below the reference mapping count.
+  const COVERAGE_REFERENCE = 20;
+  const coverageFactor = totalMapped >= COVERAGE_REFERENCE
+    ? 1.0
+    : Math.log2(totalMapped + 1) / Math.log2(COVERAGE_REFERENCE + 1);
+  const adjustedNormalized = normalized * coverageFactor;
+
   // Count cap: prevents high scores from just 1-2 symptoms
   const countCap = Math.min(1.0, matchedCount / 5);
 
   // Apply count cap, then absolute confidence cap
-  let capped = Math.min(normalized * countCap, config.confidence_cap);
+  let capped = Math.min(adjustedNormalized * countCap, config.confidence_cap);
 
   // Below-minimum penalty
   const meetsMinimum = matchedCount >= condition.minimum_symptoms_for_relevance;

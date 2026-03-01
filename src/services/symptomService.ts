@@ -1,3 +1,7 @@
+/**
+ * @deprecated Legacy Symptom Checker v1. The active system is the Navigator
+ * engine at src/lib/navigator/engine.ts. Scheduled for removal.
+ */
 import api from '../lib/api';
 import { useMemo } from 'react';
 

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useReducer, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useReducer, useEffect, ReactNode, useRef } from 'react';
 import {
     KnowledgeBase,
     NavigatorResults,
@@ -7,6 +7,7 @@ import {
     UserDuration,
     UserFrequency
 } from '../lib/navigator/types';
+import { NavigatorAnalytics } from '../lib/navigator/analytics';
 
 // Define the shape of our state
 export interface NavigatorState {
@@ -24,9 +25,11 @@ export interface NavigatorState {
     detectedRegion: string | null;
 
     results: NavigatorResults | null;
+    kbLoadedAt: number | null;
 
     sessionHash: string;
     startTime: number;
+    liveAnnouncement: { message: string; mode: 'polite' | 'assertive'; id: number } | null;
 }
 
 // Define the actions
@@ -41,6 +44,8 @@ type NavigatorAction =
     | { type: 'TRIGGER_CRISIS'; payload: RedFlagLevel }
     | { type: 'ACKNOWLEDGE_CRISIS' }
     | { type: 'SET_RESULTS'; payload: NavigatorResults }
+    | { type: 'SET_REGION'; payload: string }
+    | { type: 'ANNOUNCE'; payload: { message: string; mode: 'polite' | 'assertive' } }
     | { type: 'RESET_FLOW' };
 
 // Initial State
@@ -56,8 +61,10 @@ const initialState: NavigatorState = {
     crisisAcknowledged: false,
     detectedRegion: null, // Will be populated later via region detection
     results: null,
-    sessionHash: Math.random().toString(36).substring(2, 15),
+    kbLoadedAt: null,
+    sessionHash: crypto.randomUUID(),
     startTime: Date.now(),
+    liveAnnouncement: null,
 };
 
 // Reducer
@@ -67,7 +74,7 @@ function navigatorReducer(state: NavigatorState, action: NavigatorAction): Navig
             return { ...state, currentStep: action.payload };
 
         case 'KNOWLEDGE_BASE_LOADED':
-            return { ...state, knowledgeBase: action.payload, isLoading: false };
+            return { ...state, knowledgeBase: action.payload, isLoading: false, kbLoadedAt: Date.now() };
 
         case 'KNOWLEDGE_BASE_ERROR':
             return { ...state, error: action.payload, isLoading: false };
@@ -119,14 +126,28 @@ function navigatorReducer(state: NavigatorState, action: NavigatorAction): Navig
         case 'SET_RESULTS':
             return { ...state, results: action.payload };
 
+        case 'SET_REGION':
+            return { ...state, detectedRegion: action.payload };
+
+        case 'ANNOUNCE':
+            return {
+                ...state,
+                liveAnnouncement: {
+                    message: action.payload.message,
+                    mode: action.payload.mode,
+                    id: Date.now()
+                }
+            };
+
         case 'RESET_FLOW':
             return {
                 ...initialState,
-                knowledgeBase: state.knowledgeBase, // Keep KB loaded
+                knowledgeBase: state.knowledgeBase,
                 isLoading: false,
-                sessionHash: Math.random().toString(36).substring(2, 15),
+                kbLoadedAt: state.kbLoadedAt,
+                sessionHash: crypto.randomUUID(),
                 startTime: Date.now(),
-                detectedRegion: state.detectedRegion
+                detectedRegion: state.detectedRegion,
             };
 
         default:
@@ -138,6 +159,9 @@ function navigatorReducer(state: NavigatorState, action: NavigatorAction): Navig
 const NavigatorContext = createContext<{
     state: NavigatorState;
     dispatch: React.Dispatch<NavigatorAction>;
+    announcePolite: (message: string) => void;
+    announceAssertive: (message: string) => void;
+    prefetchKnowledgeBase: () => void;
 } | undefined>(undefined);
 
 // Define regions mapping
@@ -154,45 +178,106 @@ const detectRegion = (): string => {
     return 'DEFAULT'; // International fallback
 };
 
+// Prefetch state tracking (module-level to prevent duplicate fetches)
+let prefetchPromise: Promise<KnowledgeBase> | null = null;
+let prefetchCache: KnowledgeBase | null = null;
+
+async function fetchKnowledgeBaseData(): Promise<KnowledgeBase> {
+    if (prefetchCache) return prefetchCache;
+    if (prefetchPromise) return prefetchPromise;
+
+    prefetchPromise = (async () => {
+        try {
+            const mockDataUrl = '/api/navigator/knowledge-base';
+            const res = await fetch(mockDataUrl);
+            if (res.ok) {
+                const data = await res.json();
+                prefetchCache = data;
+                return data;
+            } else {
+                throw new Error('Could not load knowledge base');
+            }
+        } catch (error) {
+            console.warn('Prefetch failed, will try fallback on demand...', error);
+            const module = await import('../data/mock_knowledge_base');
+            prefetchCache = module.mockKnowledgeBase;
+            return prefetchCache;
+        }
+    })();
+
+    return prefetchPromise;
+}
+
 export const NavigatorProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const [state, dispatch] = useReducer(navigatorReducer, initialState);
+    const analyticsRef = useRef<NavigatorAnalytics | null>(null);
+
+    const announcePolite = (message: string) => dispatch({ type: 'ANNOUNCE', payload: { message, mode: 'polite' } });
+    const announceAssertive = (message: string) => dispatch({ type: 'ANNOUNCE', payload: { message, mode: 'assertive' } });
+
+    // Prefetch function (can be called on hover/focus)
+    const prefetchKnowledgeBase = () => {
+        if (!state.knowledgeBase && !prefetchPromise) {
+            fetchKnowledgeBaseData().catch(() => {
+                // Silently fail prefetch - will retry on actual navigation
+            });
+        }
+    };
 
     // Initial setup & KB fetch
     useEffect(() => {
-        // Set region
-        state.detectedRegion = detectRegion();
+        // Set region via dispatch (not direct mutation)
+        dispatch({ type: 'SET_REGION', payload: detectRegion() });
 
-        const fetchKnowledgeBase = async () => {
+        // Initialize analytics tracker
+        if (!analyticsRef.current) {
+            analyticsRef.current = new NavigatorAnalytics(state.sessionHash, state.sessionHash);
+        }
+
+        const loadKnowledgeBase = async () => {
             try {
-                // In a real app, this would be: 
-                // const response = await fetch('/api/navigator/knowledge-base');
-                // const data = await response.json();
-
-                // For development/demonstration, we will import a mock if fetch fails
-                // To prevent blocking, let's try fetch or fallback to a timeout mock
-                const mockDataUrl = '/api/navigator/knowledge-base';
-                const res = await fetch(mockDataUrl);
-                if (res.ok) {
-                    const data = await res.json();
-                    dispatch({ type: 'KNOWLEDGE_BASE_LOADED', payload: data });
-                } else {
-                    throw new Error('Could not load knowledge base');
-                }
+                const data = await fetchKnowledgeBaseData();
+                dispatch({ type: 'KNOWLEDGE_BASE_LOADED', payload: data });
             } catch (error) {
-                console.warn('Using fallback knowledge base...', error);
-                import('../data/mock_knowledge_base').then((module) => {
-                    dispatch({ type: 'KNOWLEDGE_BASE_LOADED', payload: module.mockKnowledgeBase });
-                }).catch(() => {
-                    dispatch({ type: 'KNOWLEDGE_BASE_ERROR', payload: 'Failed to load' });
-                });
+                const message = 'Failed to load symptom data. Please try again later.';
+                dispatch({ type: 'KNOWLEDGE_BASE_ERROR', payload: message });
+                dispatch({ type: 'ANNOUNCE', payload: { message, mode: 'assertive' } });
             }
         };
 
-        fetchKnowledgeBase();
-    }, []);
+        loadKnowledgeBase();
+    }, [state.sessionHash]);
+
+    // Track step transitions
+    useEffect(() => {
+        if (analyticsRef.current && state.currentStep !== 'welcome') {
+            const stepNames: Record<string, string> = {
+                domains: 'Domain Selection',
+                symptoms: 'Symptom Selection',
+                details: 'Duration & Severity',
+                processing: 'Processing',
+                results: 'Results'
+            };
+
+            const stepName = stepNames[state.currentStep];
+            if (stepName) {
+                analyticsRef.current.trackStepView(state.currentStep, stepName);
+            }
+        }
+    }, [state.currentStep]);
+
+    // Track completion
+    useEffect(() => {
+        if (state.currentStep === 'results' && state.results && analyticsRef.current) {
+            analyticsRef.current.trackComplete(
+                state.selectedSymptoms.size,
+                state.results.results?.length || 0
+            );
+        }
+    }, [state.currentStep, state.results, state.selectedSymptoms.size]);
 
     return (
-        <NavigatorContext.Provider value={{ state, dispatch }}>
+        <NavigatorContext.Provider value={{ state, dispatch, announcePolite, announceAssertive, prefetchKnowledgeBase }}>
             {children}
         </NavigatorContext.Provider>
     );

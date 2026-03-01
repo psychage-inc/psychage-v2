@@ -1,3 +1,7 @@
+/**
+ * @deprecated Legacy Symptom Checker v1 page. The active system is the Navigator
+ * at /navigator (NavigatorPage + NavigatorContext). Scheduled for removal.
+ */
 
 import React, { useState, useEffect } from 'react';
 import SEO from '../SEO';

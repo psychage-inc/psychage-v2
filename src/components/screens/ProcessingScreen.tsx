@@ -1,7 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigator } from '../../context/NavigatorContext';
+import { runSymptomNavigator } from '../../lib/navigator/engine';
+import type { NavigatorResults } from '../../lib/navigator/types';
+import { NavigatorButton } from '../navigator/NavigatorButton';
+import { ShieldAlert } from 'lucide-react';
 
+// Processing animation configuration
 const PROCESSING_STEPS = [
     "Analyzing symptom patterns...",
     "Cross-referencing knowledge base...",
@@ -9,34 +14,116 @@ const PROCESSING_STEPS = [
     "Synthesizing results..."
 ];
 
+// Timing constants (in milliseconds)
+const STEP_INTERVAL_MS = 1200;
+const FINAL_DELAY_MS = 1000;
+const KB_STALENESS_MINUTES = 30;
+const KB_STALE_MS = KB_STALENESS_MINUTES * 60 * 1000;
+
+// Animation constants (in seconds for Framer Motion)
+const BREATH_ANIM_SECONDS = 2;
+const TEXT_TRANSITION_SECONDS = 0.3;
+
 export const ProcessingScreen: React.FC = () => {
-    const { dispatch } = useNavigator();
+    const { state, dispatch, announcePolite, announceAssertive } = useNavigator();
     const [currentStep, setCurrentStep] = useState(0);
+    const [processingError, setProcessingError] = useState<string | null>(null);
+    const hasRun = useRef(false);
 
     useEffect(() => {
-        // Sequence the loading messages
+        // Guard: only run engine once (React 18 StrictMode double-invokes effects)
+        if (hasRun.current) return;
+        hasRun.current = true;
+
+        const { knowledgeBase, selectedSymptoms, detectedRegion, kbLoadedAt } = state;
+
+        // Error: Missing knowledge base (WCAG 4.1.3 Status Messages - announce error assertively)
+        if (!knowledgeBase) {
+            const errorMsg = 'Unable to process results: symptom data unavailable.';
+            setProcessingError(errorMsg);
+            announceAssertive(errorMsg);
+            return;
+        }
+
+        // Staleness warning
+        if (kbLoadedAt && Date.now() - kbLoadedAt > KB_STALE_MS) {
+            console.warn(`[Navigator] Knowledge base loaded >${KB_STALENESS_MINUTES}min ago, results may use stale rules`);
+        }
+
+        // Run the engine synchronously (client-side, ~1-2ms)
+        const userInputs = Array.from(selectedSymptoms.values());
+        const engineResults: NavigatorResults = runSymptomNavigator(
+            userInputs,
+            knowledgeBase,
+            detectedRegion ?? undefined
+        );
+
+        // Reconcile crisis: engine may detect severity-threshold flags
+        // not caught during symptom selection (inherent-only check)
+        if (engineResults.safety.has_crisis && !state.crisisTriggered) {
+            dispatch({ type: 'TRIGGER_CRISIS', payload: 'CRISIS' });
+        } else if (engineResults.safety.has_urgent && !state.crisisTriggered) {
+            dispatch({ type: 'TRIGGER_CRISIS', payload: 'URGENT' });
+        }
+
+        // Animate the processing steps, then dispatch results
         const sequenceLength = PROCESSING_STEPS.length;
         let step = 0;
+
+        announcePolite(PROCESSING_STEPS[0]);
 
         const interval = setInterval(() => {
             step++;
             if (step < sequenceLength) {
                 setCurrentStep(step);
+                announcePolite(PROCESSING_STEPS[step]);
             } else {
                 clearInterval(interval);
-                // After sequence is done, generate fake results and move to results screen
-                // In a real app, this is where you'd call the engine algorithm
-                // For now, we simulate matching
                 setTimeout(() => {
-                    // This should ideally call a function from the matching engine
-                    // dispatch({ type: 'SET_RESULTS', payload: ... })
+                    // SET_RESULTS before SET_STEP so ResultsScreen has data on render
+                    dispatch({ type: 'SET_RESULTS', payload: engineResults });
                     dispatch({ type: 'SET_STEP', payload: 'results' });
-                }, 1000);
+                }, FINAL_DELAY_MS);
             }
-        }, 1200);
+        }, STEP_INTERVAL_MS);
 
         return () => clearInterval(interval);
-    }, [dispatch]);
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps — run once on mount
+
+    // Error state: show accessible error UI with recovery options (WCAG 4.1.3)
+    if (processingError) {
+        return (
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="max-w-xl mx-auto py-24 px-4 sm:px-6 flex flex-col items-center justify-center min-h-[50vh] text-center space-y-6"
+                role="alert"
+            >
+                <div className="w-16 h-16 bg-crisis-red/10 rounded-full flex items-center justify-center">
+                    <ShieldAlert className="w-8 h-8 text-crisis-red" />
+                </div>
+                <div>
+                    <h3 className="text-2xl font-serif text-white mb-2">Processing Error</h3>
+                    <p className="text-charcoal-300 max-w-md">{processingError}</p>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-3">
+                    <NavigatorButton
+                        variant="outline"
+                        onClick={() => dispatch({ type: 'SET_STEP', payload: 'symptoms' })}
+                    >
+                        Go Back
+                    </NavigatorButton>
+                    <NavigatorButton
+                        variant="primary"
+                        onClick={() => dispatch({ type: 'RESET_FLOW' })}
+                    >
+                        Start Over
+                    </NavigatorButton>
+                </div>
+            </motion.div>
+        );
+    }
 
     return (
         <motion.div
@@ -57,7 +144,7 @@ export const ProcessingScreen: React.FC = () => {
                         {/* Simple breathing dot inner */}
                         <motion.div
                             animate={{ scale: [1, 1.2, 1], opacity: [0.7, 1, 0.7] }}
-                            transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+                            transition={{ repeat: Infinity, duration: BREATH_ANIM_SECONDS, ease: "easeInOut" }}
                             className="w-3 h-3 bg-teal-400 rounded-full shadow-[0_0_10px_rgba(45,212,191,0.8)]"
                         />
                     </div>
@@ -71,15 +158,15 @@ export const ProcessingScreen: React.FC = () => {
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
-                        transition={{ duration: 0.3 }}
-                        className="text-lg font-medium text-white absolute inset-0 font-mono tracking-tight"
+                        transition={{ duration: TEXT_TRANSITION_SECONDS }}
+                        className="text-lg font-medium text-text-primary absolute inset-0 font-mono tracking-tight drop-shadow-[0_2px_10px_rgba(255,255,255,0.1)]"
                     >
                         {PROCESSING_STEPS[currentStep]}
                     </motion.p>
                 </AnimatePresence>
             </div>
 
-            <p className="mt-4 text-sm text-charcoal-300">
+            <p className="mt-4 text-sm text-text-secondary">
                 Please wait a moment while we prepare your personalized insights.
             </p>
         </motion.div>

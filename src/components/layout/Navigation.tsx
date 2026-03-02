@@ -379,7 +379,7 @@ const Navigation: React.FC = () => {
                                         setActiveTab(null);
                                     }}
                                     onNavigateGeneric={(view) => {
-                                        navigate(`/${view}`);
+                                        navigate(view.startsWith('/') ? view : `/${view}`);
                                         setActiveTab(null);
                                     }}
                                 />
@@ -394,7 +394,7 @@ const Navigation: React.FC = () => {
                 onClose={() => setIsMobileMenuOpen(false)}
                 onNavigateGeneric={(view) => {
                     if (view === 'home') navigate('/');
-                    else navigate(`/${view}`);
+                    else navigate(view.startsWith('/') ? view : `/${view}`);
                     setIsMobileMenuOpen(false);
                 }}
             />

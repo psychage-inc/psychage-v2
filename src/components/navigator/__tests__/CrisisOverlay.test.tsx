@@ -51,7 +51,8 @@ describe('CrisisOverlay Accessibility & Focus Trap', () => {
             state: mockState as any,
             dispatch: mockDispatch,
             announceAssertive: mockAnnounceAssertive,
-            announcePolite: mockAnnouncePolite
+            announcePolite: mockAnnouncePolite,
+            prefetchKnowledgeBase: vi.fn()
         });
 
         return render(
@@ -141,7 +142,8 @@ describe('CrisisOverlay Accessibility & Focus Trap', () => {
             state: mockState as any,
             dispatch: mockDispatch,
             announceAssertive: mockAnnounceAssertive,
-            announcePolite: mockAnnouncePolite
+            announcePolite: mockAnnouncePolite,
+            prefetchKnowledgeBase: vi.fn()
         });
 
         const { container } = render(<CrisisOverlay />);

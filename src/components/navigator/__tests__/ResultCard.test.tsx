@@ -7,19 +7,23 @@ import type { NavigatorResultItem } from '../../../lib/navigator/types';
 const mockResult: NavigatorResultItem = {
     condition_id: 'TEST_001',
     name: 'Test Condition',
+    full_name: 'Test Condition Full Name',
     description_for_user: 'This is a test condition description.',
-    relevance_level: 'HIGH',
+    relevance_score: 0.85,
+    relevance_level: 'high',
+    relevance_label: 'High Relevance',
+    relevance_color: 'text-rose-600',
     matched_symptoms: [
-        { name: 'Symptom One', weight: 1.0 },
-        { name: 'Symptom Two', weight: 0.8 },
-        { name: 'Symptom Three', weight: 0.6 },
-        { name: 'Symptom Four', weight: 0.5 },
-        { name: 'Symptom Five', weight: 0.4 },
+        { name: 'Symptom One', role: 'core' },
+        { name: 'Symptom Two', role: 'core' },
+        { name: 'Symptom Three', role: 'common' },
+        { name: 'Symptom Four', role: 'common' },
+        { name: 'Symptom Five', role: 'associated' },
     ],
-    family: 'TEST',
-    raw_score: 0.85,
-    normalized_score: 0.75,
-    confidence: 0.65,
+    guide_path: '/learn/test-condition',
+    coping_path: '/coping/test-condition',
+    provider_questions: [],
+    always_recommend_professional: false,
 };
 
 describe('ResultCard', () => {
@@ -98,8 +102,8 @@ describe('ResultCard', () => {
         const smallResult: NavigatorResultItem = {
             ...mockResult,
             matched_symptoms: [
-                { name: 'Symptom One', weight: 1.0 },
-                { name: 'Symptom Two', weight: 0.8 },
+                { name: 'Symptom One', role: 'PRIMARY' },
+                { name: 'Symptom Two', role: 'PRIMARY' },
             ],
         };
 

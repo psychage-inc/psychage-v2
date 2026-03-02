@@ -1,8 +1,13 @@
-import { Provider } from '../types/models';
-import api, { ProviderProfile } from '../lib/api';
-import { useMemo } from 'react';
+/**
+ * Provider Service - Refactored to use Supabase directly
+ *
+ * Manages provider directory with direct database queries and mock data fallback.
+ */
 
-// Fallback to mock data if API fails
+import { Provider } from '../types/models';
+import { supabase } from '../lib/supabaseClient';
+
+// Fallback to mock data if DB query fails
 import { providers as mockProviders } from '../data/providers';
 
 export interface ProviderSearchParams {
@@ -87,7 +92,7 @@ function filterMockProviders(providers: Provider[], params?: ProviderSearchParam
         filtered = filtered.filter(p => p.verified);
     }
     if (params?.limit) {
-        const start = params.page ? (params.page - 1) * params.limit : 0;
+        const start = params?.page ? (params.page - 1) * params.limit : 0;
         filtered = filtered.slice(start, start + params.limit);
     }
 
@@ -95,57 +100,106 @@ function filterMockProviders(providers: Provider[], params?: ProviderSearchParam
 }
 
 export const providerService = {
+    /**
+     * Get all providers with optional filtering
+     */
     getAll: async (params?: ProviderSearchParams): Promise<Provider[]> => {
         try {
-            const response = await api.providers.getAll({
-                state: params?.location,
-                specialization: params?.specialty,
-                insurance: params?.insurance,
-                page: params?.page,
-                limit: params?.limit
-            });
+            let query = supabase
+                .from('providers')
+                .select('*');
 
-            if (!response.success || !response.data || (response.data as DBProvider[]).length === 0) {
-                console.warn('API returned no providers, using mock data');
+            // Apply filters
+            if (params?.location) {
+                query = query.ilike('practice_state', `%${params.location}%`);
+            }
+            if (params?.specialty) {
+                query = query.contains('specialties', [params.specialty]);
+            }
+            if (params?.insurance) {
+                query = query.contains('insurance', [params.insurance]);
+            }
+            if (params?.verified) {
+                query = query.eq('verification_status', 'verified');
+            }
+            if (params?.search) {
+                query = query.or(`full_name.ilike.%${params.search}%,bio.ilike.%${params.search}%`);
+            }
+
+            // Apply pagination
+            if (params?.limit) {
+                const start = params.page ? (params.page - 1) * params.limit : 0;
+                query = query.range(start, start + params.limit - 1);
+            }
+
+            // Order by rating and verification
+            query = query.order('verification_status', { ascending: false })
+                         .order('rating', { ascending: false });
+
+            const { data, error } = await query;
+
+            if (error) {
+                console.error('Error fetching providers from Supabase:', error);
+                console.warn('Falling back to mock providers');
                 return filterMockProviders(mockProviders, params);
             }
 
-            return (response.data as DBProvider[]).map(mapToProvider);
+            if (!data || data.length === 0) {
+                console.warn('No providers found in database, using mock data');
+                return filterMockProviders(mockProviders, params);
+            }
+
+            return data.map(mapToProvider);
         } catch (error) {
-            console.error('Failed to fetch providers from API, using fallback:', error);
+            console.error('Failed to fetch providers, using fallback:', error);
             return filterMockProviders(mockProviders, params);
         }
     },
 
+    /**
+     * Get a single provider by ID
+     */
     getById: async (id: number | string): Promise<Provider | undefined> => {
         try {
-            const response = await api.providers.getById(id);
+            const { data, error } = await supabase
+                .from('providers')
+                .select('*')
+                .eq('id', id)
+                .maybeSingle();
 
-            if (!response.success || !response.data) {
+            if (error) {
+                console.error('Error fetching provider:', error);
                 return mockProviders.find(p => p.id === Number(id) || p.id === id);
             }
 
-            return mapToProvider(response.data as DBProvider);
+            if (!data) {
+                return mockProviders.find(p => p.id === Number(id) || p.id === id);
+            }
+
+            return mapToProvider(data);
         } catch (error) {
-            console.error('Failed to fetch provider from API, using fallback:', error);
+            console.error('Failed to fetch provider, using fallback:', error);
             return mockProviders.find(p => p.id === Number(id) || p.id === id);
         }
     },
 
+    /**
+     * Get unique locations (states) from providers
+     */
     getLocations: async (): Promise<string[]> => {
         try {
-            // Get unique states from providers
-            const response = await api.providers.getAll({});
-            if (!response.success || !response.data) {
+            const { data, error } = await supabase
+                .from('providers')
+                .select('practice_state')
+                .not('practice_state', 'is', null);
+
+            if (error || !data || data.length === 0) {
+                console.warn('No locations from database, using mock data');
                 const mockLocations = new Set(mockProviders.map(p => p.location.split(',')[1]?.trim()).filter(Boolean));
                 return Array.from(mockLocations).sort();
             }
 
-            const states = new Set((response.data as DBProvider[]).map(p => p.practice_state).filter(Boolean) as string[]);
-            if (states.size === 0) {
-                const mockLocations = new Set(mockProviders.map(p => p.location.split(',')[1]?.trim()).filter(Boolean));
-                return Array.from(mockLocations).sort();
-            }
+            const states = new Set(data.map(p => p.practice_state).filter(Boolean) as string[]);
             return Array.from(states).sort();
         } catch (error) {
             console.error('Failed to fetch locations, using fallback:', error);
@@ -154,15 +208,34 @@ export const providerService = {
         }
     },
 
+    /**
+     * Get unique specializations from providers
+     */
     getSpecializations: async (): Promise<string[]> => {
         try {
-            const response = await api.providers.getSpecializations();
-            if (!response.success || !response.data || (response.data as string[]).length === 0) {
+            const { data, error } = await supabase
+                .from('providers')
+                .select('specialties');
+
+            if (error || !data || data.length === 0) {
+                console.warn('No specializations from database, using mock data');
                 const specialties = new Set<string>();
                 mockProviders.forEach(p => p.specialties.forEach(s => specialties.add(s)));
                 return Array.from(specialties).sort();
             }
-            return response.data as string[];
+
+            const specialties = new Set<string>();
+            data.forEach(p => {
+                if (p.specialties) {
+                    p.specialties.forEach((s: string) => specialties.add(s));
+                }
+            });
+
+            if (specialties.size === 0) {
+                mockProviders.forEach(p => p.specialties.forEach(s => specialties.add(s)));
+            }
+
+            return Array.from(specialties).sort();
         } catch (error) {
             console.error('Failed to fetch specializations, using fallback:', error);
             const specialties = new Set<string>();
@@ -171,15 +244,34 @@ export const providerService = {
         }
     },
 
+    /**
+     * Get unique insurance providers
+     */
     getInsuranceProviders: async (): Promise<string[]> => {
         try {
-            const response = await api.providers.getInsurance();
-            if (!response.success || !response.data || (response.data as string[]).length === 0) {
+            const { data, error } = await supabase
+                .from('providers')
+                .select('insurance');
+
+            if (error || !data || data.length === 0) {
+                console.warn('No insurance data from database, using mock data');
                 const insurance = new Set<string>();
                 mockProviders.forEach(p => p.insurance.forEach(i => insurance.add(i)));
                 return Array.from(insurance).sort();
             }
-            return response.data as string[];
+
+            const insurance = new Set<string>();
+            data.forEach(p => {
+                if (p.insurance) {
+                    p.insurance.forEach((i: string) => insurance.add(i));
+                }
+            });
+
+            if (insurance.size === 0) {
+                mockProviders.forEach(p => p.insurance.forEach(i => insurance.add(i)));
+            }
+
+            return Array.from(insurance).sort();
         } catch (error) {
             console.error('Failed to fetch insurance, using fallback:', error);
             const insurance = new Set<string>();
@@ -188,65 +280,124 @@ export const providerService = {
         }
     },
 
-    updateProfile: async (data: Partial<ProviderProfile>): Promise<void> => {
-        const response = await api.provider.updateProfile(data);
-        if (!response.success) {
-            throw new Error(response.error || 'Failed to update profile');
-        }
-    },
-
-    updateAvailability: async (data: unknown): Promise<void> => {
-        const response = await api.provider.updateAvailability(data);
-        if (!response.success) {
-            throw new Error(response.error || 'Failed to update availability');
-        }
-    },
-
-    verifyProvider: async (providerId: number | string, status: 'active' | 'rejected'): Promise<{ success: boolean }> => {
+    /**
+     * Track provider profile view
+     */
+    trackView: async (providerId: number | string): Promise<void> => {
         try {
-            const response = await api.admin.updateProviderStatus(providerId, status);
-            return { success: response.success };
+            // Increment view count in providers table
+            const { error } = await supabase.rpc('increment_provider_views', {
+                provider_id: providerId
+            });
+
+            if (error) {
+                console.error('Error tracking provider view:', error);
+                // Non-critical, don't throw
+            }
         } catch (error) {
-            console.error('Failed to verify provider:', error);
-            return { success: false };
+            console.error('Failed to track provider view:', error);
         }
     },
 
+    /**
+     * Toggle provider favorite
+     */
     toggleFavorite: async (providerId: number | string): Promise<{ favorited: boolean }> => {
         try {
-            const response = await api.providers.toggleFavorite(providerId);
-            if (!response.success) {
+            const { data: { user } } = await supabase.auth.getUser();
+            if (!user) {
+                console.warn('User not authenticated');
                 return { favorited: false };
             }
-            return (response.data as { favorited: boolean }) || { favorited: true };
+
+            // Check if favorite exists
+            const { data: existing } = await supabase
+                .from('provider_favorites')
+                .select('id')
+                .eq('user_id', user.id)
+                .eq('provider_id', providerId)
+                .maybeSingle();
+
+            if (existing) {
+                // Remove favorite
+                await supabase
+                    .from('provider_favorites')
+                    .delete()
+                    .eq('id', existing.id);
+                return { favorited: false };
+            } else {
+                // Add favorite
+                await supabase
+                    .from('provider_favorites')
+                    .insert({
+                        user_id: user.id,
+                        provider_id: providerId,
+                        created_at: new Date().toISOString(),
+                    });
+                return { favorited: true };
+            }
         } catch (error) {
             console.error('Failed to toggle favorite:', error);
             return { favorited: false };
         }
     },
 
+    /**
+     * Get user's favorite providers
+     */
     getFavorites: async (): Promise<Provider[]> => {
         try {
-            const response = await api.providers.getFavorites();
-            if (!response.success || !response.data) {
+            const { data: { user } } = await supabase.auth.getUser();
+            if (!user) {
                 return [];
             }
-            return (response.data as DBProvider[]).map(mapToProvider);
+
+            const { data, error } = await supabase
+                .from('provider_favorites')
+                .select(`
+                    provider_id,
+                    providers (*)
+                `)
+                .eq('user_id', user.id);
+
+            if (error || !data) {
+                console.error('Error fetching favorites:', error);
+                return [];
+            }
+
+            return data
+                .map(fav => fav.providers as unknown as DBProvider)
+                .filter(Boolean)
+                .map(mapToProvider);
         } catch (error) {
             console.error('Failed to fetch favorites:', error);
             return [];
         }
     },
 
+    /**
+     * Submit a review for a provider
+     */
     submitReview: async (providerId: number | string, data: { rating: number; comment: string }): Promise<{ success: boolean; error?: string }> => {
         try {
-            // Try to submit to backend API
-            const response = await api.post<{ success: boolean }>(`/api/providers/${providerId}/reviews`, data);
-            return { success: response.success };
-        } catch (error) {
-            console.error('Failed to submit review:', error);
-            // Queue locally for later sync if API unavailable
-            try {
+            const { data: { user } } = await supabase.auth.getUser();
+            if (!user) {
+                return { success: false, error: 'User not authenticated' };
+            }
+
+            const { error } = await supabase
+                .from('provider_reviews')
+                .insert({
+                    provider_id: providerId,
+                    user_id: user.id,
+                    rating: data.rating,
+                    comment: data.comment,
+                    created_at: new Date().toISOString(),
+                });
+
+            if (error) {
+                console.error('Error submitting review:', error);
+                // Queue locally for later sync if DB unavailable
                 const queueKey = 'psychage_review_queue';
                 const existingQueue = JSON.parse(localStorage.getItem(queueKey) || '[]');
                 existingQueue.push({
@@ -256,63 +407,67 @@ export const providerService = {
                 });
                 localStorage.setItem(queueKey, JSON.stringify(existingQueue));
                 return { success: true, error: 'Review saved locally. Will sync when connection is restored.' };
-            } catch {
-                return { success: false, error: 'Failed to submit review. Please try again.' };
             }
+
+            return { success: true };
+        } catch (error) {
+            console.error('Failed to submit review:', error);
+            return { success: false, error: 'Failed to submit review. Please try again.' };
         }
     },
 
-    getActivity: async (_providerId: string): Promise<Record<string, unknown>[]> => {
+    /**
+     * Get all providers for admin panel (includes pending/suspended)
+     */
+    getAdminProviders: async (filter?: string): Promise<Provider[]> => {
         try {
-            const response = await api.provider.getActivity();
-            if (!response.success || !response.data) {
+            let query = supabase
+                .from('providers')
+                .select('*')
+                .order('created_at', { ascending: false });
+
+            if (filter && filter !== 'all') {
+                query = query.eq('status', filter);
+            }
+
+            const { data, error } = await query;
+
+            if (error) {
+                console.error('Error fetching admin providers:', error);
                 return [];
             }
-            return response.data as Record<string, unknown>[];
+
+            return (data || []).map(mapToProvider);
         } catch (error) {
-            console.error('Failed to fetch provider activity:', error);
+            console.error('Failed to fetch admin providers:', error);
             return [];
         }
     },
 
-    trackView: async (providerId: number | string): Promise<void> => {
+    /**
+     * Update provider status (admin only)
+     */
+    updateProviderStatus: async (id: string | number, status: string): Promise<boolean> => {
         try {
-            await api.providers.trackView(providerId);
-        } catch (error) {
-            console.error('Failed to track provider view:', error);
-        }
-    },
+            const { error } = await supabase
+                .from('providers')
+                .update({ status, updated_at: new Date().toISOString() })
+                .eq('id', id);
 
-    // Admin methods
-    getAdminProviders: async (status: string): Promise<Provider[]> => {
-        try {
-            const response = await api.admin.getProviders({ status });
-            if (!response.success || !response.data) {
-                // Fallback to filtering mockProviders
-                return mockProviders.filter(p => {
-                    const pStatus = p.verified ? 'active' : 'pending';
-                    return pStatus === status;
-                }).map(p => ({ ...p, status: p.verified ? 'active' : 'pending' }));
+            if (error) {
+                console.error('Error updating provider status:', error);
+                return false;
             }
-            return (response.data as DBProvider[]).map(mapToProvider);
+
+            return true;
         } catch (error) {
-            console.error('Failed to fetch admin providers', error);
-            return mockProviders.filter(p => {
-                const pStatus = p.verified ? 'active' : 'pending';
-                return pStatus === status;
-            }).map(p => ({ ...p, status: p.verified ? 'active' : 'pending' }));
+            console.error('Failed to update provider status:', error);
+            return false;
         }
     },
-
-    updateProviderStatus: async (id: number | string, status: string): Promise<void> => {
-        const response = await api.admin.updateProviderStatus(id, status as 'active' | 'suspended' | 'rejected');
-        if (!response.success) {
-            throw new Error(response.error || 'Failed to update provider status');
-        }
-    }
 };
 
 // Hook wrapper for React components
 export function useProviderService() {
-    return useMemo(() => providerService, []);
+    return providerService;
 }

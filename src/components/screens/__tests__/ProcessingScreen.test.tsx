@@ -71,7 +71,8 @@ describe('ProcessingScreen Error States', () => {
             state: mockState as any,
             dispatch: mockDispatch,
             announceAssertive: mockAnnounceAssertive,
-            announcePolite: mockAnnouncePolite
+            announcePolite: mockAnnouncePolite,
+            prefetchKnowledgeBase: vi.fn()
         });
 
         render(<ProcessingScreen />);
@@ -103,7 +104,8 @@ describe('ProcessingScreen Error States', () => {
             state: mockState as any,
             dispatch: mockDispatch,
             announceAssertive: mockAnnounceAssertive,
-            announcePolite: mockAnnouncePolite
+            announcePolite: mockAnnouncePolite,
+            prefetchKnowledgeBase: vi.fn()
         });
 
         render(<ProcessingScreen />);
@@ -142,7 +144,8 @@ describe('ProcessingScreen Error States', () => {
             state: mockState as any,
             dispatch: mockDispatch,
             announceAssertive: mockAnnounceAssertive,
-            announcePolite: mockAnnouncePolite
+            announcePolite: mockAnnouncePolite,
+            prefetchKnowledgeBase: vi.fn()
         });
 
         render(<ProcessingScreen />);

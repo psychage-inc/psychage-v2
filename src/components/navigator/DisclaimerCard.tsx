@@ -21,7 +21,7 @@ export const DisclaimerCard: React.FC<DisclaimerCardProps> = ({ className }) => 
                     <ShieldAlert className="w-6 h-6" aria-hidden="true" />
                 </div>
                 <div className="space-y-2">
-                    <div className="font-serif text-lg text-charcoal-900 dark:text-charcoal-100 font-medium" role="heading" aria-level="2">
+                    <div className="font-serif text-lg text-charcoal-900 dark:text-charcoal-100 font-medium" role="heading" aria-level={2}>
                         Not Medical Advice
                     </div>
                     <p className="text-sm text-charcoal-600 dark:text-charcoal-300 leading-relaxed">

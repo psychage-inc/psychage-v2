@@ -6,7 +6,7 @@ import MeshGradient from '@/components/ui/MeshGradient';
 import { User, Mail, MapPin, Camera, Lock, AlertCircle, CheckCircle, Save, X } from 'lucide-react';
 import SEO from '@/components/SEO';
 import { useAuth } from '@/context/AuthContext';
-import { api } from '@/lib/api';
+import { userProfileService } from '@/services/userProfileService';
 import { motion, AnimatePresence } from 'framer-motion';
 import { validateFileComplete } from '@/utils/fileValidation';
 
@@ -37,29 +37,31 @@ const ProfileSettings: React.FC = () => {
     useEffect(() => {
         const loadProfile = async () => {
             if (user) {
-                // Split display_name into first and last name for the form
-                const names = (user.display_name || '').split(' ');
-                const firstName = names[0] || '';
-                const lastName = names.slice(1).join(' ') || '';
-
                 try {
-                    const profileRes = await api.user.getProfile();
-                    if (profileRes.success && profileRes.data) {
+                    const profile = await userProfileService.getProfile();
+                    if (profile) {
+                        // Split display_name into first and last name for the form
+                        const names = (profile.display_name || profile.full_name || '').split(' ');
+                        const firstName = names[0] || '';
+                        const lastName = names.slice(1).join(' ') || '';
+
                         setFormData({
                             firstName,
                             lastName,
-                            email: user.email || '',
-                            location: profileRes.data.location || '',
+                            email: profile.email || '',
+                            location: profile.location || '',
                         });
                         return;
                     }
-                } catch {
-                    // Fall back to user data if profile fetch fails
+                } catch (error) {
+                    console.error('Failed to load profile:', error);
                 }
 
+                // Fallback to user data
+                const names = (user.display_name || '').split(' ');
                 setFormData({
-                    firstName,
-                    lastName,
+                    firstName: names[0] || '',
+                    lastName: names.slice(1).join(' ') || '',
                     email: user.email || '',
                     location: '',
                 });
@@ -85,9 +87,13 @@ const ProfileSettings: React.FC = () => {
 
         setIsLoading(true);
         try {
-            await api.user.uploadAvatar(file);
-            await refreshUser();
-            setNotification({ type: 'success', message: 'Avatar updated successfully' });
+            const result = await userProfileService.uploadAvatar(file);
+            if (result.success) {
+                await refreshUser();
+                setNotification({ type: 'success', message: 'Avatar updated successfully' });
+            } else {
+                setNotification({ type: 'error', message: result.error || 'Failed to upload avatar' });
+            }
         } catch (error) {
             console.error('Failed to upload avatar', error);
             setNotification({ type: 'error', message: 'Failed to upload avatar' });
@@ -107,17 +113,18 @@ const ProfileSettings: React.FC = () => {
 
         try {
             const displayName = `${formData.firstName} ${formData.lastName}`.trim();
-            const response = await api.user.updateProfile({
+            const result = await userProfileService.updateProfile({
                 display_name: displayName,
+                full_name: displayName,
                 location: formData.location,
             });
 
-            if (response.success) {
+            if (result) {
                 await refreshUser();
                 setNotification({ type: 'success', message: 'Profile updated successfully' });
                 setIsEditing(false);
             } else {
-                throw new Error(response.error || 'Failed to update profile');
+                throw new Error('Failed to update profile');
             }
         } catch (error) {
             setNotification({ type: 'error', message: error instanceof Error ? error.message : 'Failed to update profile' });
@@ -137,16 +144,16 @@ const ProfileSettings: React.FC = () => {
         setNotification(null);
 
         try {
-            const response = await api.user.changePassword({
-                currentPassword: passwordData.currentPassword,
-                newPassword: passwordData.newPassword
-            });
+            const result = await userProfileService.changePassword(
+                passwordData.currentPassword,
+                passwordData.newPassword
+            );
 
-            if (response.success) {
+            if (result.success) {
                 setNotification({ type: 'success', message: 'Password changed successfully' });
                 setPasswordData({ currentPassword: '', newPassword: '', confirmPassword: '' });
             } else {
-                throw new Error(response.error || 'Failed to change password');
+                throw new Error(result.error || 'Failed to change password');
             }
         } catch (error) {
             setNotification({ type: 'error', message: error instanceof Error ? error.message : 'Failed to change password' });

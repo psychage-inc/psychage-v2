@@ -1,10 +1,15 @@
-import api from '../lib/api';
-import { useMemo } from 'react';
+/**
+ * Mood Service - Refactored to use Supabase directly
+ *
+ * Manages mood tracking entries with direct database queries.
+ */
+
+import { supabase } from '../lib/supabaseClient';
 
 export interface MoodEntry {
     id: string;
     user_id: string;
-    value: number;
+    value: number; // 1-5 mood rating
     notes?: string;
     tags: string[];
     created_at: string;
@@ -18,46 +23,89 @@ export interface MoodStats {
 }
 
 export const moodService = {
-    getEntries: async (_userId?: string, limit?: number): Promise<MoodEntry[]> => {
+    /**
+     * Get all mood entries for the current user
+     */
+    getEntries: async (userId?: string, limit?: number): Promise<MoodEntry[]> => {
         try {
-            const response = await api.mood.getEntries();
-            if (!response.success || !response.data) return [];
-
-            // Map V1 response format (mood_rating, entry_date) to V2 format (value, created_at)
-            const rawEntries = response.data as { id: string; user_id: string; mood_rating: number; notes?: string; entry_date: string }[];
-            let entries: MoodEntry[] = rawEntries.map(e => ({
-                id: e.id,
-                user_id: e.user_id,
-                value: e.mood_rating,
-                notes: e.notes,
-                tags: [], // V1 doesn't support tags
-                created_at: e.entry_date,
-            }));
-            if (limit) {
-                entries = entries.slice(0, limit);
+            // If no userId provided, get current authenticated user
+            let targetUserId = userId;
+            if (!targetUserId) {
+                const { data: { user } } = await supabase.auth.getUser();
+                if (!user) {
+                    console.warn('No authenticated user found');
+                    return [];
+                }
+                targetUserId = user.id;
             }
-            return entries;
+
+            let query = supabase
+                .from('mood_entries')
+                .select('*')
+                .eq('user_id', targetUserId)
+                .order('created_at', { ascending: false });
+
+            if (limit) {
+                query = query.limit(limit);
+            }
+
+            const { data, error } = await query;
+
+            if (error) {
+                console.error('Error fetching mood entries:', error);
+                return [];
+            }
+
+            return (data || []).map(entry => ({
+                id: entry.id,
+                user_id: entry.user_id,
+                value: entry.mood_rating || entry.value, // Support both column names
+                notes: entry.notes,
+                tags: entry.tags || [],
+                created_at: entry.created_at,
+            }));
         } catch (error) {
             console.error('Failed to fetch mood entries:', error);
             return [];
         }
     },
 
-    createEntry: async (_userId: string, value: number, notes?: string, _tags?: string[]): Promise<MoodEntry | null> => {
+    /**
+     * Create a new mood entry
+     */
+    createEntry: async (userId: string, value: number, notes?: string, tags?: string[]): Promise<MoodEntry | null> => {
         try {
-            // V1 API expects mood_rating (1-5) and entry_date
-            const entry_date = new Date().toISOString().split('T')[0] as string;
-            const response = await api.mood.createEntry({ mood_rating: value, notes, entry_date });
-            if (!response.success || !response.data) return null;
-            // Map V1 response to V2 format
-            const data = response.data as { id: string; user_id: string; mood_rating: number; notes?: string; entry_date: string };
+            // Validate mood rating
+            if (value < 1 || value > 5) {
+                console.error('Mood rating must be between 1 and 5');
+                return null;
+            }
+
+            const { data, error } = await supabase
+                .from('mood_entries')
+                .insert({
+                    user_id: userId,
+                    mood_rating: value,
+                    value: value, // Include both for compatibility
+                    notes,
+                    tags: tags || [],
+                    created_at: new Date().toISOString(),
+                })
+                .select()
+                .single();
+
+            if (error) {
+                console.error('Error creating mood entry:', error);
+                return null;
+            }
+
             return {
                 id: data.id,
                 user_id: data.user_id,
-                value: data.mood_rating,
+                value: data.mood_rating || data.value,
                 notes: data.notes,
-                tags: [], // V1 doesn't support tags
-                created_at: data.entry_date,
+                tags: data.tags || [],
+                created_at: data.created_at,
             };
         } catch (error) {
             console.error('Failed to create mood entry:', error);
@@ -65,52 +113,166 @@ export const moodService = {
         }
     },
 
+    /**
+     * Update an existing mood entry
+     */
     updateEntry: async (id: string, updates: Partial<Pick<MoodEntry, 'value' | 'notes' | 'tags'>>): Promise<MoodEntry | null> => {
         try {
-            const response = await api.put<MoodEntry>(`/api/mood/${id}`, updates);
-            if (!response.success || !response.data) return null;
-            return response.data;
+            const updateData: Record<string, unknown> = {};
+
+            if (updates.value !== undefined) {
+                if (updates.value < 1 || updates.value > 5) {
+                    console.error('Mood rating must be between 1 and 5');
+                    return null;
+                }
+                updateData.mood_rating = updates.value;
+                updateData.value = updates.value;
+            }
+            if (updates.notes !== undefined) updateData.notes = updates.notes;
+            if (updates.tags !== undefined) updateData.tags = updates.tags;
+
+            const { data, error } = await supabase
+                .from('mood_entries')
+                .update(updateData)
+                .eq('id', id)
+                .select()
+                .single();
+
+            if (error) {
+                console.error('Error updating mood entry:', error);
+                return null;
+            }
+
+            return {
+                id: data.id,
+                user_id: data.user_id,
+                value: data.mood_rating || data.value,
+                notes: data.notes,
+                tags: data.tags || [],
+                created_at: data.created_at,
+            };
         } catch (error) {
             console.error('Failed to update mood entry:', error);
             return null;
         }
     },
 
+    /**
+     * Delete a mood entry
+     */
     deleteEntry: async (id: string): Promise<boolean> => {
         try {
-            const response = await api.delete<void>(`/api/mood/${id}`);
-            return response.success;
+            const { error } = await supabase
+                .from('mood_entries')
+                .delete()
+                .eq('id', id);
+
+            if (error) {
+                console.error('Error deleting mood entry:', error);
+                return false;
+            }
+
+            return true;
         } catch (error) {
             console.error('Failed to delete mood entry:', error);
             return false;
         }
     },
 
-    getStats: async (_userId?: string): Promise<MoodStats> => {
+    /**
+     * Get mood statistics for the current user
+     */
+    getStats: async (userId?: string): Promise<MoodStats> => {
         try {
-            const response = await api.get<MoodStats>('/api/mood/stats');
-            if (!response.success || !response.data) {
+            // Get current user if not provided
+            let targetUserId = userId;
+            if (!targetUserId) {
+                const { data: { user } } = await supabase.auth.getUser();
+                if (!user) {
+                    return { averageMood: 0, totalEntries: 0, trend: 'stable', streakDays: 0 };
+                }
+                targetUserId = user.id;
+            }
+
+            // Fetch all entries for the user
+            const { data: entries, error } = await supabase
+                .from('mood_entries')
+                .select('mood_rating, value, created_at')
+                .eq('user_id', targetUserId)
+                .order('created_at', { ascending: false });
+
+            if (error || !entries || entries.length === 0) {
                 return { averageMood: 0, totalEntries: 0, trend: 'stable', streakDays: 0 };
             }
-            return response.data;
+
+            // Calculate average mood
+            const total = entries.reduce((sum, entry) => sum + (entry.mood_rating || entry.value || 0), 0);
+            const averageMood = total / entries.length;
+
+            // Calculate trend (compare recent vs older entries)
+            let trend: 'up' | 'down' | 'stable' = 'stable';
+            if (entries.length >= 6) {
+                const recentAvg = entries.slice(0, 3).reduce((sum, e) => sum + (e.mood_rating || e.value || 0), 0) / 3;
+                const olderAvg = entries.slice(3, 6).reduce((sum, e) => sum + (e.mood_rating || e.value || 0), 0) / 3;
+                const diff = recentAvg - olderAvg;
+                if (diff > 0.3) trend = 'up';
+                else if (diff < -0.3) trend = 'down';
+            }
+
+            // Calculate streak days (consecutive days with entries)
+            const uniqueDates = new Set(
+                entries.map(e => new Date(e.created_at).toISOString().split('T')[0])
+            );
+            let streakDays = 0;
+            let currentDate = new Date();
+            currentDate.setHours(0, 0, 0, 0);
+
+            while (uniqueDates.has(currentDate.toISOString().split('T')[0])) {
+                streakDays++;
+                currentDate.setDate(currentDate.getDate() - 1);
+            }
+
+            return {
+                averageMood: Math.round(averageMood * 10) / 10,
+                totalEntries: entries.length,
+                trend,
+                streakDays,
+            };
         } catch (error) {
             console.error('Failed to fetch mood stats:', error);
             return { averageMood: 0, totalEntries: 0, trend: 'stable', streakDays: 0 };
         }
     },
 
-    getEntriesByDateRange: async (_userId: string, startDate: string, endDate: string): Promise<MoodEntry[]> => {
+    /**
+     * Get mood entries within a date range
+     */
+    getEntriesByDateRange: async (userId: string, startDate: string, endDate: string): Promise<MoodEntry[]> => {
         try {
-            const response = await api.get<MoodEntry[]>(`/api/mood?start=${startDate}&end=${endDate}`);
-            if (!response.success || !response.data) return [];
-            return response.data;
+            const { data, error } = await supabase
+                .from('mood_entries')
+                .select('*')
+                .eq('user_id', userId)
+                .gte('created_at', startDate)
+                .lte('created_at', endDate)
+                .order('created_at', { ascending: true });
+
+            if (error) {
+                console.error('Error fetching mood entries by date range:', error);
+                return [];
+            }
+
+            return (data || []).map(entry => ({
+                id: entry.id,
+                user_id: entry.user_id,
+                value: entry.mood_rating || entry.value,
+                notes: entry.notes,
+                tags: entry.tags || [],
+                created_at: entry.created_at,
+            }));
         } catch (error) {
             console.error('Failed to fetch mood entries by date range:', error);
             return [];
         }
-    }
+    },
 };
-
-export function useMoodService() {
-    return useMemo(() => moodService, []);
-}

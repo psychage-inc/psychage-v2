@@ -4,6 +4,7 @@ import { useMemo } from 'react';
 
 // Fallback to mock data if API fails or for development
 import { categories as mockCategories } from '../data/categories';
+import { iconMap, defaultIcon } from './categoryIconMapper';
 
 export const categoryService = {
     getAll: async (): Promise<Category[]> => {
@@ -74,8 +75,8 @@ function mapToCategory(data: DBCategory): Category {
         group: data.group as Category['group'], // optimize: validate against enum
         image: data.image,
         color: data.color,
-        // Mocking fields not yet in DB
-        icon: undefined, // Need a mapper for icon strings if added to DB
+        // Map icon from slug or fallback to default Brain icon
+        icon: iconMap[data.slug] || defaultIcon,
         subTopics: []
     };
 }

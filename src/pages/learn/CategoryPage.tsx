@@ -80,9 +80,11 @@ const CategoryPage: React.FC = () => {
                 <div className={`absolute inset-0 ${category.color} opacity-[0.03]`} />
                 <div className="container mx-auto max-w-6xl relative z-10">
                     <div className="flex flex-col md:flex-row gap-8 items-start md:items-center">
-                        <div className={`p-5 rounded-2xl ${category.color} text-white shadow-xl shadow-primary/10`}>
-                            {React.cloneElement(category.icon as React.ReactElement, { size: 48 })}
-                        </div>
+                        {category.icon && React.isValidElement(category.icon) && (
+                            <div className={`p-5 rounded-2xl ${category.color} text-white shadow-xl shadow-primary/10`}>
+                                {React.cloneElement(category.icon, { size: 48 })}
+                            </div>
+                        )}
                         <div>
                             <Display as="h1" className="text-4xl md:text-5xl mb-4">
                                 {category.name}

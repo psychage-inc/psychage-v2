@@ -1,15 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { categories } from '../../data/categories';
+import { categoryService } from '../../services/categoryService';
+import { Category } from '../../types/models';
 import CategoryCard from '../articles/CategoryCard';
-import { Sparkles } from 'lucide-react';
+import { Sparkles, Loader2 } from 'lucide-react';
 
 const AllCategoriesSection: React.FC = () => {
     const navigate = useNavigate();
     const [activeGroup, setActiveGroup] = useState<string>('all');
+    const [categories, setCategories] = useState<Category[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
 
-
+    // Fetch categories on mount
+    useEffect(() => {
+        const loadCategories = async () => {
+            try {
+                setLoading(true);
+                const cats = await categoryService.getAll();
+                setCategories(cats);
+            } catch (err) {
+                console.error('Failed to load categories:', err);
+                setError('Unable to load categories. Please try again later.');
+            } finally {
+                setLoading(false);
+            }
+        };
+        loadCategories();
+    }, []);
 
     const groups = [
         { id: 'all', label: 'All Categories' },
@@ -89,30 +108,55 @@ const AllCategoriesSection: React.FC = () => {
                     ))}
                 </div>
 
-                {/* Categories Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                    {displayCategories.map((category, index) => (
-                        <motion.div
-                            key={category.id}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.05 }}
-                            className="h-full"
-                        >
-                            <CategoryCard
-                                category={category}
-                                onClick={() => navigate(`/learn/${category.slug}`)}
-                            />
-                        </motion.div>
-                    ))}
-                </div>
-
-                {/* Empty State (just in case) */}
-                {displayCategories.length === 0 && (
-                    <div className="text-center py-20 bg-surface rounded-3xl border border-border mt-8">
-                        <p className="text-text-secondary">No categories found for this filter.</p>
+                {/* Loading State */}
+                {loading && (
+                    <div className="text-center py-20">
+                        <Loader2 className="w-12 h-12 text-primary mx-auto mb-4 animate-spin" />
+                        <p className="text-text-secondary">Loading categories...</p>
                     </div>
+                )}
+
+                {/* Error State */}
+                {!loading && error && (
+                    <div className="text-center py-20 bg-red-50 dark:bg-red-900/20 rounded-3xl border border-red-200 dark:border-red-800">
+                        <p className="text-red-600 dark:text-red-400 mb-4">{error}</p>
+                        <button
+                            onClick={() => window.location.reload()}
+                            className="px-6 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium transition-colors"
+                        >
+                            Retry
+                        </button>
+                    </div>
+                )}
+
+                {/* Categories Grid */}
+                {!loading && !error && (
+                    <>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                            {displayCategories.map((category, index) => (
+                                <motion.div
+                                    key={category.id}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: index * 0.05 }}
+                                    className="h-full"
+                                >
+                                    <CategoryCard
+                                        category={category}
+                                        onClick={() => navigate(`/learn/${category.slug}`)}
+                                    />
+                                </motion.div>
+                            ))}
+                        </div>
+
+                        {/* Empty State */}
+                        {displayCategories.length === 0 && (
+                            <div className="text-center py-20 bg-surface rounded-3xl border border-border mt-8">
+                                <p className="text-text-secondary">No categories found for this filter.</p>
+                            </div>
+                        )}
+                    </>
                 )}
             </div>
         </section>

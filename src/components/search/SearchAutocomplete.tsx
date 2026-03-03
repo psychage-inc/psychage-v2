@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Search, X } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { articles } from '../../data/articles';
+import { api } from '../../lib/api';
+import { ArticleWithContent } from '../../services/articleService';
 import { AnimatePresence, motion } from 'framer-motion';
 
 interface SearchAutocompleteProps {
@@ -17,9 +18,11 @@ const SearchAutocomplete: React.FC<SearchAutocompleteProps> = ({
 }) => {
     const [query, setQuery] = useState('');
     const [isOpen, setIsOpen] = useState(false);
-    const [suggestions, setSuggestions] = useState<typeof articles>([]);
+    const [suggestions, setSuggestions] = useState<ArticleWithContent[]>([]);
+    const [loading, setLoading] = useState(false);
     const wrapperRef = useRef<HTMLDivElement>(null);
     const navigate = useNavigate();
+    const debounceTimerRef = useRef<NodeJS.Timeout>();
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -31,21 +34,45 @@ const SearchAutocomplete: React.FC<SearchAutocompleteProps> = ({
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
 
+    const fetchSuggestions = useCallback(async (searchQuery: string) => {
+        if (searchQuery.length < 2) {
+            setSuggestions([]);
+            setIsOpen(false);
+            return;
+        }
+
+        setLoading(true);
+        try {
+            // Use article search API for suggestions
+            const response = await api.search.articles(searchQuery, 5);
+            if (response.success && response.data) {
+                setSuggestions(response.data as ArticleWithContent[]);
+                setIsOpen(response.data.length > 0);
+            } else {
+                setSuggestions([]);
+                setIsOpen(false);
+            }
+        } catch (error) {
+            console.error('Failed to fetch search suggestions:', error);
+            setSuggestions([]);
+            setIsOpen(false);
+        } finally {
+            setLoading(false);
+        }
+    }, []);
+
     const handleQueryChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newQuery = e.target.value;
         setQuery(newQuery);
 
-        if (newQuery.length > 1) {
-            const filtered = articles.filter(article =>
-                article.title.toLowerCase().includes(newQuery.toLowerCase()) ||
-                article.category.name.toLowerCase().includes(newQuery.toLowerCase())
-            ).slice(0, 5);
-            setSuggestions(filtered);
-            setIsOpen(true);
-        } else {
-            setSuggestions([]);
-            setIsOpen(false);
+        // Debounce API calls
+        if (debounceTimerRef.current) {
+            clearTimeout(debounceTimerRef.current);
         }
+
+        debounceTimerRef.current = setTimeout(() => {
+            fetchSuggestions(newQuery);
+        }, 300); // 300ms debounce
     };
 
     const handleSearch = (e: React.FormEvent) => {
@@ -60,8 +87,10 @@ const SearchAutocomplete: React.FC<SearchAutocompleteProps> = ({
         }
     };
 
-    const handleSuggestionClick = (articleId: number | string) => {
-        navigate(`/learn/article/${articleId}`);
+    const handleSuggestionClick = (article: ArticleWithContent) => {
+        // Use slug if available, otherwise use ID
+        const identifier = article.slug || article.id;
+        navigate(`/learn/article/${identifier}`);
         setIsOpen(false);
         setQuery('');
     };
@@ -89,7 +118,7 @@ const SearchAutocomplete: React.FC<SearchAutocompleteProps> = ({
             </form>
 
             <AnimatePresence>
-                {isOpen && suggestions.length > 0 && (
+                {isOpen && (
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -97,26 +126,40 @@ const SearchAutocomplete: React.FC<SearchAutocompleteProps> = ({
                         className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-gray-900 rounded-xl shadow-xl border border-gray-100 dark:border-gray-800 overflow-hidden z-50"
                     >
                         <div className="p-2">
-                            <div className="text-xs font-bold text-gray-400 uppercase tracking-wider px-3 py-2">Suggested Articles</div>
-                            {suggestions.map((article) => (
-                                <button
-                                    key={article.id}
-                                    onClick={() => handleSuggestionClick(article.id)}
-                                    className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors flex items-center gap-3 group"
-                                >
-                                    <div className="w-8 h-8 rounded-md overflow-hidden shrink-0">
-                                        <img src={article.image} alt="" className="w-full h-full object-cover" />
-                                    </div>
-                                    <div>
-                                        <div className="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-teal-600 dark:group-hover:text-teal-400 line-clamp-1">
-                                            {article.title}
+                            <div className="text-xs font-bold text-gray-400 uppercase tracking-wider px-3 py-2">
+                                {loading ? 'Searching...' : 'Suggested Articles'}
+                            </div>
+                            {loading ? (
+                                <div className="px-3 py-4 text-center text-sm text-gray-500">
+                                    <div className="animate-pulse">Loading suggestions...</div>
+                                </div>
+                            ) : suggestions.length > 0 ? (
+                                suggestions.map((article) => (
+                                    <button
+                                        key={article.id}
+                                        onClick={() => handleSuggestionClick(article)}
+                                        className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors flex items-center gap-3 group"
+                                    >
+                                        {article.image && (
+                                            <div className="w-8 h-8 rounded-md overflow-hidden shrink-0 bg-gray-100 dark:bg-gray-800">
+                                                <img src={article.image} alt="" className="w-full h-full object-cover" />
+                                            </div>
+                                        )}
+                                        <div className="flex-grow min-w-0">
+                                            <div className="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-teal-600 dark:group-hover:text-teal-400 line-clamp-1">
+                                                {article.title}
+                                            </div>
+                                            <div className="text-xs text-gray-500 dark:text-gray-400">
+                                                {article.category?.name || 'Article'}
+                                            </div>
                                         </div>
-                                        <div className="text-xs text-gray-500 dark:text-gray-400">
-                                            {article.category.name}
-                                        </div>
-                                    </div>
-                                </button>
-                            ))}
+                                    </button>
+                                ))
+                            ) : (
+                                <div className="px-3 py-4 text-center text-sm text-gray-500">
+                                    No suggestions found
+                                </div>
+                            )}
                         </div>
                     </motion.div>
                 )}

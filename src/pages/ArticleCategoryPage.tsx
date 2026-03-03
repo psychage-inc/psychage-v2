@@ -84,14 +84,16 @@ const ArticleCategoryPage: React.FC = () => {
                     </button>
 
                     <div className="flex flex-col md:flex-row gap-8 items-start md:items-center">
-                        <motion.div
-                            initial={{ scale: 0.8, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            transition={{ duration: 0.5 }}
-                            className={`p-6 rounded-3xl ${category.color} text-white shadow-2xl shadow-primary/20 bg-gradient-to-br from-white/20 to-transparent backdrop-blur-md border border-white/20`}
-                        >
-                            {React.cloneElement(category.icon as React.ReactElement, { size: 48 })}
-                        </motion.div>
+                        {category.icon && React.isValidElement(category.icon) && (
+                            <motion.div
+                                initial={{ scale: 0.8, opacity: 0 }}
+                                animate={{ scale: 1, opacity: 1 }}
+                                transition={{ duration: 0.5 }}
+                                className={`p-6 rounded-3xl ${category.color} text-white shadow-2xl shadow-primary/20 bg-gradient-to-br from-white/20 to-transparent backdrop-blur-md border border-white/20`}
+                            >
+                                {React.cloneElement(category.icon, { size: 48 })}
+                            </motion.div>
+                        )}
                         <div>
                             <motion.h1
                                 initial={{ y: 20, opacity: 0 }}

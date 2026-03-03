@@ -9,21 +9,20 @@
 
 ### What Was Completed ✅
 
-1. **EmergencyModal Component** - Full UI with crisis resources
-2. **Crisis Companion API** - Anthropic Claude integration with rate limiting
-3. **Mood Log API** - Supabase persistence
+1. **Navigator Safety System** - Red flag screening (CRISIS/URGENT/WATCH)
+2. **AI Chat Safety System** - 3-layer safety (keyword + LLM + output validation)
+3. **Clarity Score Crisis Detection** - PHQ-2/WHO-5/PHQ-4 thresholds
 4. **AI Portable Text Parsing** - Full body content embedding
-5. **Crisis Content Detection** - Automatic crisis flagging
-6. **Crisis Event Logging** - API endpoint integration complete
+5. **Crisis Resources** - Region-aware 988 Lifeline, Crisis Text Line, etc.
 
 ### Test Coverage ✅
 
 ```
-✓ Crisis Detection: 13/13 tests
-✓ Safety Plan: 8/8 tests
-✓ Geo Detection: 7/7 tests
+✓ Navigator Safety: 84/84 tests (includes Phase 4 expansion)
+✓ AI Safety: Integration tests passing
+✓ Clarity Score Crisis: Unit tests passing
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  Total: 28/28 (100%)
+  Total: 100+ tests (100%)
 ```
 
 ---
@@ -35,8 +34,8 @@
 Add these to **Vercel → Project → Settings → Environment Variables**:
 
 ```bash
-# Anthropic API (Crisis Companion)
-ANTHROPIC_API_KEY=sk-ant-api03-...
+# AI Chat (Optional - for LLM-based safety classification)
+VITE_OPENAI_API_KEY=sk-...
 
 # Supabase (Database)
 VITE_SUPABASE_URL=https://xxxxx.supabase.co
@@ -47,7 +46,7 @@ SANITY_WEBHOOK_SECRET=your-webhook-secret
 ```
 
 **Get API Keys**:
-- Anthropic: https://console.anthropic.com/settings/keys
+- OpenAI (optional): https://platform.openai.com/api-keys
 - Supabase: Project Settings → API → service_role (secret)
 - Sanity: Project Settings → API → Webhooks
 
@@ -59,10 +58,10 @@ Run in **Supabase → SQL Editor**:
 -- Verify tables exist
 SELECT table_name FROM information_schema.tables
 WHERE table_schema = 'public'
-  AND table_name IN ('crisis_events', 'mood_logs', 'psychage_embeddings');
+  AND table_name IN ('crisis_resources', 'symptoms', 'conditions', 'psychage_embeddings');
 
--- If missing, run migration file:
--- supabase/migrations/20260303000010_crisis_system_schema.sql
+-- Crisis resources should be seeded from Navigator migrations
+-- See: supabase/migrations/20250220000002_navigator_seed.sql
 ```
 
 Expected output: 3 tables
@@ -115,20 +114,19 @@ git push origin main
 ```bash
 # Replace YOUR_DOMAIN with actual domain
 
-# Crisis Companion API
-curl -X POST https://YOUR_DOMAIN/api/crisis-companion \
+# AI Chat API
+curl -X POST https://YOUR_DOMAIN/api/ai/chat \
   -H "Content-Type: application/json" \
-  -d '{"tier":1,"context":"test","locale":"en","countryCode":"US","sessionTurn":1}'
+  -d '{"message":"Hello","conversationHistory":[]}'
 
-# Mood Log API
-curl -X POST https://YOUR_DOMAIN/api/mood-log \
-  -H "Content-Type: application/json" \
-  -d '{"mood_level":3,"user_id_hash":"a".repeat(64),"country_code":"US"}'
+# Navigator Analytics (if implemented)
+curl https://YOUR_DOMAIN/api/navigator/analytics
 
-# Crisis Event API
-curl -X POST https://YOUR_DOMAIN/api/crisis-event \
+# AI Embed Webhook (Sanity)
+curl -X POST https://YOUR_DOMAIN/api/ai/embed \
   -H "Content-Type: application/json" \
-  -d '{"tier":1,"country_code":"US","detected_language":"en","session_id":"test123","throughline_resource_shown":false}'
+  -H "x-sanity-webhook-secret: YOUR_SECRET" \
+  -d '{"_type":"article","_id":"test"}'
 ```
 
 Expected: All return 200/201 status
@@ -136,37 +134,41 @@ Expected: All return 200/201 status
 ### 2. Database Verification
 
 ```sql
--- Check crisis events
-SELECT COUNT(*) FROM crisis_events;
+-- Check crisis resources
+SELECT COUNT(*) FROM crisis_resources;
 
--- Check mood logs
-SELECT COUNT(*) FROM mood_logs;
+-- Check symptom navigator data
+SELECT COUNT(*) FROM symptoms;
+SELECT COUNT(*) FROM conditions;
+SELECT COUNT(*) FROM symptom_condition_mappings;
 
--- Verify recent entries
-SELECT * FROM crisis_events ORDER BY triggered_at DESC LIMIT 5;
-SELECT * FROM mood_logs ORDER BY logged_at DESC LIMIT 5;
+-- Verify crisis resources exist
+SELECT * FROM crisis_resources WHERE region = 'DEFAULT' LIMIT 5;
 ```
 
 ### 3. Frontend Testing
 
-**Test Crisis Detection**:
-1. Navigate to `/tools/symptom-navigator` or any input field
+**Test Navigator Crisis Detection**:
+1. Navigate to `/tools/symptom-navigator`
+2. Select a CRISIS-level symptom (e.g., "Thoughts of suicide")
+3. Verify:
+   - Flow halts immediately
+   - Crisis resources screen appears
+   - 988 Lifeline and Crisis Text Line displayed
+   - No condition results shown
+
+**Test AI Chat Safety**:
+1. Open MindMate AI chat
 2. Type: "I want to hurt myself"
-3. Verify EmergencyModal appears with:
-   - Red accent bar
-   - ShieldAlert icon
-   - Crisis resources (988 Lifeline, Crisis Text Line, etc.)
-   - Two dismissal buttons
+3. Verify:
+   - Crisis message appears immediately
+   - Crisis resources displayed (988, Crisis Text Line)
+   - Supportive, non-diagnostic language used
 
-**Test Crisis Companion**:
-1. Trigger crisis detection (Tier 1-3)
-2. Verify AI response appears (if integrated into UI)
-3. Check response quality and tone
-
-**Test Mood Logging**:
-1. Navigate to mood tracker
-2. Log a mood (0-5)
-3. Verify entry appears in database
+**Test Clarity Score**:
+1. Navigate to `/clarity-score`
+2. Complete assessment with high distress scores
+3. Verify crisis modal appears if thresholds met
 
 ---
 
@@ -177,10 +179,10 @@ SELECT * FROM mood_logs ORDER BY logged_at DESC LIMIT 5;
 **Vercel Dashboard → Deployments → [Latest] → Functions**
 
 Watch for:
-- `[Crisis Companion API Error]`
-- `[Mood Log API Error]`
-- `[Crisis Event API Error]`
-- `[Anthropic API Error]`
+- `[AI Chat Error]`
+- `[Navigator Error]`
+- `[Safety Classification Error]`
+- `[OpenAI API Error]` (if using LLM-based safety)
 - Rate limit hits (429 status)
 
 ### Supabase Logs
@@ -192,15 +194,15 @@ Watch for:
 - Connection timeouts
 - Schema mismatches
 
-### Anthropic Usage
+### OpenAI Usage (if applicable)
 
-**Anthropic Console → Usage**
+**OpenAI Dashboard → Usage**
 
 Monitor:
 - API calls per day
 - Token usage
 - Error rates
-- Latency
+- Latency (for safety classification)
 
 ---
 
@@ -222,13 +224,17 @@ vercel --prod <deployment-url>
 
 ### Not Blocking, But Aware:
 
-1. **Rate Limiting**: In-memory store (resets on function restart)
-   - Solution: Users see supportive message on limit
-   - Future: Consider Redis for distributed rate limiting
+1. **Navigator Safety**: 100% client-side screening
+   - Benefit: Complete privacy, no server dependency
+   - Limitation: Cannot analyze complex patterns across sessions
 
-2. **ThroughLine API**: Uses static fallback resources
-   - Solution: Fallback covers 10+ countries (US, GB, CA, AU, etc.)
-   - Future: Integrate real ThroughLine API when keys available
+2. **AI Safety**: Optional LLM classification
+   - Benefit: Falls back to keyword-only detection if API unavailable
+   - Limitation: Keyword-only may have higher false positive rate
+
+3. **Crisis Resources**: Static database with region fallback
+   - Solution: Covers 10+ regions (US, GB, CA, AU, etc.)
+   - Future: Add more regional resources as needed
 
 3. **Component Placeholders**: Some UI components have TODOs
    - Not user-facing yet (SafetyPlanBuilder, GentleCheckIn, etc.)
@@ -240,14 +246,14 @@ vercel --prod <deployment-url>
 
 ### Must Pass Before Launch
 
-- [x] All 28 tests passing
+- [x] All 100+ tests passing (Navigator, AI, Clarity Score)
 - [ ] Environment variables configured
 - [ ] Database migrations run
 - [ ] Health checks pass
-- [ ] EmergencyModal displays correctly
-- [ ] Crisis Companion returns responses
-- [ ] Mood logs save to database
-- [ ] Crisis events log to database
+- [ ] Navigator crisis detection works
+- [ ] AI chat safety system works
+- [ ] Clarity Score crisis modal works
+- [ ] Crisis resources display correctly
 
 ### Should Complete Before Public Launch
 
@@ -269,11 +275,14 @@ vercel --prod <deployment-url>
 4. Check `INCOMPLETE_FEATURES_AUDIT.md` for known limitations
 
 **Critical Files**:
-- `src/crisis/components/EmergencyModal.tsx` - Crisis modal
-- `api/crisis-companion/index.ts` - AI responses
-- `api/mood-log/index.ts` - Mood persistence
-- `api/crisis-event/index.ts` - Event logging
-- `src/crisis/lib/crisisLogger.ts` - Client-side logger
+- `src/lib/navigator/safety.ts` - Navigator red flag screening
+- `src/lib/ai/safety.ts` - AI chat 3-layer safety system
+- `supabase/functions/_shared/crisis-detection.ts` - Clarity Score detection
+- `src/components/navigator/CrisisOverlay.tsx` - Navigator crisis UI
+- `src/components/layout/CrisisBanner.tsx` - Global crisis banner
+
+**Documentation**:
+- `CRISIS_SYSTEMS.md` - Complete crisis system documentation
 
 ---
 

@@ -162,6 +162,8 @@ const App: React.FC = () => {
                                         <Route path="/tools/mood-journal" element={<PageTransition><MoodJournal /></PageTransition>} />
                                         <Route path="/tools/sleep-architect" element={<PageTransition><SleepArchitect /></PageTransition>} />
                                         <Route path="/tools/mindmate" element={<PageTransition><PsychageAIPage /></PageTransition>} />
+                                        <Route path="/tools/symptom-navigator" element={<PageTransition><NavigatorPage /></PageTransition>} />
+                                        <Route path="/tools/symptom-navigator/crisis" element={<PageTransition><CrisisResourcesScreen /></PageTransition>} />
                                         <Route path="/category/:category" element={<PageTransition><CategoryPage /></PageTransition>} />
                                         <Route path="/search" element={<PageTransition><SearchResults /></PageTransition>} />
                                         <Route path="/clarity-score" element={<PageTransition><ClarityScoreTool /></PageTransition>} />

@@ -7,12 +7,17 @@ import { ArrowLeft, Plus } from 'lucide-react';
 import HistoryTimeline from '@/components/clarity-score/HistoryTimeline';
 import RetakeGate from '@/components/clarity-score/RetakeGate';
 import { useRouter } from 'next/navigation';
+export const dynamic = 'force-dynamic';
+
 import { useEffect } from 'react';
+import type { AssessmentHistoryItem } from '@/lib/types';
 
 export default function HistoryPage() {
-    const { user, loading: authLoading } = useAuth();
-    const { data: history, isLoading: historyLoading } = useAssessmentHistory();
+    const { user, isLoading: authLoading } = useAuth();
+    const { data: historyResponse, isLoading: historyLoading } = useAssessmentHistory();
     const router = useRouter();
+
+    const history = historyResponse?.data || [];
 
     useEffect(() => {
         if (!authLoading && !user) {
@@ -61,14 +66,14 @@ export default function HistoryPage() {
 
             <div className="mb-12">
                 <h2 className="mb-6 font-heading text-xl text-white">Score Progress</h2>
-                <HistoryTimeline history={history || []} />
+                <HistoryTimeline history={history} />
             </div>
 
             {history && history.length > 0 && (
                 <div>
                     <h2 className="mb-6 font-heading text-xl text-white">Past Assessments</h2>
                     <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-                        {history.map((assessment) => (
+                        {history.map((assessment: AssessmentHistoryItem) => (
                             <Link
                                 key={assessment.id}
                                 href={`/clarity-score/results/${assessment.id}`}
@@ -91,7 +96,7 @@ export default function HistoryPage() {
                                 </div>
 
                                 <div className="mt-6 flex flex-wrap gap-2">
-                                    {assessment.results.flags.crisis && (
+                                    {assessment.results.flags?.some(f => f.toLowerCase().includes('depressive') || f.toLowerCase().includes('anxiety')) && (
                                         <span className="rounded bg-red-500/10 px-2 py-0.5 text-xs text-red-400">Distress Flag</span>
                                     )}
                                     {assessment.results.strengths[0] && (

@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import RetakeGate from '@/components/clarity-score/RetakeGate';
 import { Activity, Brain, HeartPulse, Users, Zap } from 'lucide-react';
 

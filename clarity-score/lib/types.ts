@@ -14,30 +14,43 @@ export interface Database {
                     id: string
                     user_id: string | null
                     created_at: string
-                    answers: Record<string, number>
+                    answers: Json
                     total_score: number
-                    domain_scores: Record<string, number>
+                    domain_scores: Json
                     flags: string[]
                 }
                 Insert: {
                     id?: string
                     user_id?: string | null
                     created_at?: string
-                    answers: Record<string, number>
+                    answers: Json
                     total_score: number
-                    domain_scores: Record<string, number>
+                    domain_scores: Json
                     flags?: string[]
                 }
                 Update: {
                     id?: string
                     user_id?: string | null
                     created_at?: string
-                    answers?: Record<string, number>
+                    answers?: Json
                     total_score?: number
-                    domain_scores?: Record<string, number>
+                    domain_scores?: Json
                     flags?: string[]
                 }
+                Relationships: []
             }
+        }
+        Views: {
+            [_ in never]: never
+        }
+        Functions: {
+            [_ in never]: never
+        }
+        Enums: {
+            [_ in never]: never
+        }
+        CompositeTypes: {
+            [_ in never]: never
         }
     }
 }
@@ -52,6 +65,7 @@ export interface ClarityScoreResults {
         cognitive: number;     // PSS-4
         functioning: number;   // Custom
     };
+    rawScores: Record<string, number>;
     subScores: {
         phq2: number;
         gad2: number;
@@ -70,6 +84,7 @@ export interface AssessmentHistoryItem {
     total_score: number;
     created_at: string;
     label?: string;
+    results: ClarityScoreResults;
 }
 
 export interface AssessmentState {

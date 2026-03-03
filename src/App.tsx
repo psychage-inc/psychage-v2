@@ -35,6 +35,7 @@ const ProviderProfile = React.lazy(() => import('./components/pages/ProviderProf
 const ToolsPage = React.lazy(() => import('./components/pages/ToolsPage'));
 const MoodJournal = React.lazy(() => import('./components/tools/MoodJournal'));
 const SleepArchitect = React.lazy(() => import('./components/tools/SleepArchitect'));
+const PsychageAIPage = React.lazy(() => import('./pages/tools/MindMate'));
 const CategoryPage = React.lazy(() => import('./components/pages/CategoryPage'));
 const SearchResults = React.lazy(() => import('./components/pages/SearchResults'));
 const ClarityScoreTool = React.lazy(() => import('./components/pages/ClarityScoreTool'));
@@ -160,6 +161,7 @@ const App: React.FC = () => {
                                         <Route path="/tools" element={<PageTransition><ToolsPage /></PageTransition>} />
                                         <Route path="/tools/mood-journal" element={<PageTransition><MoodJournal /></PageTransition>} />
                                         <Route path="/tools/sleep-architect" element={<PageTransition><SleepArchitect /></PageTransition>} />
+                                        <Route path="/tools/mindmate" element={<PageTransition><PsychageAIPage /></PageTransition>} />
                                         <Route path="/category/:category" element={<PageTransition><CategoryPage /></PageTransition>} />
                                         <Route path="/search" element={<PageTransition><SearchResults /></PageTransition>} />
                                         <Route path="/clarity-score" element={<PageTransition><ClarityScoreTool /></PageTransition>} />

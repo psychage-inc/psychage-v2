@@ -88,6 +88,7 @@ export function calculateClarityScore(answers: Record<string, number>): Omit<Cla
 
     return {
         totalScore,
+        rawScores: answers,
         domainScores: {
             emotional: Math.round(emotionalDomain),
             vitality: Math.round(vitalityDomain),

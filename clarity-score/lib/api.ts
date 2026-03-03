@@ -34,9 +34,9 @@ export const api = {
                     .from('assessments')
                     .insert({
                         user_id: session.user.id,
-                        answers,
+                        answers: answers as any,
                         total_score: scoreData.totalScore,
-                        domain_scores: scoreData.domainScores,
+                        domain_scores: scoreData.domainScores as any,
                         flags: scoreData.flags
                     })
                     .select()
@@ -71,7 +71,7 @@ export const api = {
 
         if (error) throw error;
 
-        const scoreData = calculateClarityScore(data.answers);
+        const scoreData = calculateClarityScore(data.answers as Record<string, number>);
 
         return {
             id: data.id,
@@ -87,23 +87,34 @@ export const api = {
 
         const { data, error, count } = await supabase
             .from('assessments')
-            .select('id, total_score, created_at', { count: 'exact' })
+            .select('id, total_score, created_at, answers', { count: 'exact' })
             .eq('user_id', session.user.id)
             .order('created_at', { ascending: false })
             .range((page - 1) * limit, page * limit - 1);
 
         if (error) throw error;
 
+        const mappedData = data?.map(item => ({
+            id: item.id,
+            total_score: item.total_score,
+            created_at: item.created_at,
+            results: {
+                id: item.id,
+                ...calculateClarityScore(item.answers as Record<string, number>),
+                completedAt: item.created_at
+            }
+        })) || [];
+
         return {
-            data,
+            data: mappedData,
             count
         };
     },
 
-    async shareAssessment(id: string) {
+    async shareAssessment({ id, expiresInDays = 7 }: { id: string; expiresInDays?: number }) {
         const supabase = createClient();
         const { data, error } = await supabase.functions.invoke('assessment-share', {
-            body: { action: 'generate_token', assessment_id: id }
+            body: { action: 'generate_token', assessment_id: id, expires_in_days: expiresInDays }
         });
 
         if (error) {

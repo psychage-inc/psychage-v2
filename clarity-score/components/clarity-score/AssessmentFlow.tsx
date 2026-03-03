@@ -132,8 +132,8 @@ export default function AssessmentFlow() {
 
     if (isSubmitting) {
         return (
-            <div className="flex min-h-[calc(100vh-64px)] flex-col items-center justify-center px-4">
-                <div className="relative mb-8 h-24 w-24">
+            <div className="flex min-h-[calc(100vh-64px)] flex-col items-center justify-center px-4" role="status" aria-live="polite">
+                <div className="relative mb-8 h-24 w-24" aria-hidden="true">
                     <div className="absolute inset-0 animate-[spin_3s_linear_infinite] rounded-full border border-teal/30" />
                     <div className="absolute inset-2 animate-[spin_2s_linear_infinite_reverse] rounded-full border border-teal/50" />
                     <Loader2 className="absolute inset-0 m-auto h-8 w-8 animate-spin text-teal" />

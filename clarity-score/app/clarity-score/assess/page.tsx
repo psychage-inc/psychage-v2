@@ -1,4 +1,6 @@
 import { Metadata } from 'next';
+export const dynamic = 'force-dynamic';
+
 import AssessmentFlow from '@/components/clarity-score/AssessmentFlow';
 
 export const metadata: Metadata = {

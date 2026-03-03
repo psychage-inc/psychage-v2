@@ -2,7 +2,9 @@
 
 import { useAssessmentDetail } from '@/lib/hooks/useAssessment';
 import { notFound, useParams, useRouter } from 'next/navigation';
-import { useEffect } from 'react';
+export const dynamic = 'force-dynamic';
+
+import { useEffect, Suspense } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Share2, FileText, Lock } from 'lucide-react';
 
@@ -113,7 +115,7 @@ export default function ResultsPage() {
             <ClinicalSubscores subScores={results.subScores} />
 
             {/* Flags Warning (if any) */}
-            {(results.flags.crisis || results.flags.distress) && (
+            {results.flags?.some((f: string) => f.toLowerCase().includes('depressive') || f.toLowerCase().includes('anxiety') || f.toLowerCase().includes('crisis')) && (
                 <div className="mt-8 rounded-2xl border border-red-500/30 bg-red-500/10 p-6">
                     <h3 className="mb-2 font-heading text-lg text-red-400">Attention Recommended</h3>
                     <p className="text-sm text-red-300">

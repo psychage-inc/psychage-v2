@@ -24,7 +24,8 @@ export function useAssessmentDetail(id: string) {
 
 export function useShareAssessment() {
     return useMutation({
-        mutationFn: (id: string) => api.shareAssessment(id)
+        mutationFn: ({ assessmentId, expiresInDays }: { assessmentId: string; expiresInDays?: number }) =>
+            api.shareAssessment({ id: assessmentId, expiresInDays })
     });
 }
 

@@ -17,9 +17,12 @@ export default function DomainBreakdown({ scores }: { scores: Record<string, num
                         <div key={d.id}>
                             <div className="mb-1.5 flex justify-between text-sm">
                                 <span className="font-medium text-text-primary">{d.name}</span>
-                                <span className="text-text-muted">{d.val}/20</span>
+                                <div>
+                                    <span className="sr-only">Score: {d.val} out of 20</span>
+                                    <span className="text-text-muted" aria-hidden="true">{d.val}/20</span>
+                                </div>
                             </div>
-                            <div className="h-2 w-full overflow-hidden rounded-full bg-white/5">
+                            <div className="h-2 w-full overflow-hidden rounded-full bg-white/5" role="progressbar" aria-valuenow={d.val} aria-valuemin={0} aria-valuemax={20}>
                                 <div
                                     className={`h-full rounded-full ${d.color}`}
                                     style={{ width: `${percentage}%` }}

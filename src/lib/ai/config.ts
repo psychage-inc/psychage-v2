@@ -15,7 +15,7 @@ export function getAIConfig(): AIConfig {
     llmProvider: provider,
     primaryModel:
       provider === 'anthropic'
-        ? 'claude-sonnet-4-20250514'
+        ? 'claude-sonnet-4-5-20250929'
         : 'gpt-4o',
     safetyModel:
       provider === 'anthropic'

@@ -13,10 +13,11 @@ export default function ProgressBar({ current, total, domainColorClass }: Progre
 
     return (
         <div className="relative w-full py-4">
-            <div className="mb-2 flex justify-between text-xs font-semibold uppercase tracking-wider text-text-muted">
+            <div className="mb-2 flex justify-between text-xs font-semibold uppercase tracking-wider text-text-muted" aria-hidden="true">
                 <span>Psychage</span>
                 <span>{current} of {total}</span>
             </div>
+            <span className="sr-only">Question {current} of {total}</span>
             <div className="h-1.5 w-full overflow-hidden rounded-full bg-white/5">
                 <motion.div
                     className={`h-full ${domainColorClass}`}

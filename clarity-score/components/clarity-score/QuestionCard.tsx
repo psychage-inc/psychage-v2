@@ -41,10 +41,10 @@ export default function QuestionCard({ question, selectedValue, onSelect, direct
             transition={{ type: 'spring', stiffness: 350, damping: 25 }}
             className="flex w-full justify-center"
             role="radiogroup"
-            aria-label={question.text}
+            aria-labelledby={`question-${question.id}`}
         >
             <div className="w-full max-w-xl">
-                <h2 className="font-heading mb-10 text-center text-2xl leading-tight text-white md:text-3xl" style={{ textWrap: 'balance' }}>
+                <h2 id={`question-${question.id}`} className="font-heading mb-10 text-center text-2xl leading-tight text-white md:text-3xl" style={{ textWrap: 'balance' }}>
                     {question.text}
                 </h2>
 

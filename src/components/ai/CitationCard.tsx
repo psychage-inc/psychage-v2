@@ -17,11 +17,12 @@ interface CitationCardProps {
 }
 
 const CitationCard: React.FC<CitationCardProps> = ({ citation }) => {
-  const { title, url, contentType, thumbnail, excerpt, domain, trustScore } = citation;
+  const { title, url_path } = citation;
 
-  const isExternal = contentType === 'external';
-  const isVideo = contentType === 'video';
-  const isArticle = contentType === 'article';
+  // Simplified for SourceCitation type
+  const isExternal = false;
+  const isVideo = false;
+  const isArticle = true;
 
   // Icon based on type
   const Icon = isVideo ? Video : isExternal ? Globe : FileText;
@@ -47,84 +48,37 @@ const CitationCard: React.FC<CitationCardProps> = ({ citation }) => {
 
   return (
     <a
-      href={url}
+      href={url_path}
       target="_blank"
       rel="noopener noreferrer"
       className={`block p-3.5 rounded-xl border-2 ${colorClass} hover:shadow-lg hover:scale-[1.02] transition-all duration-200 group`}
     >
       <div className="flex gap-3">
-        {/* Thumbnail for videos */}
-        {isVideo && thumbnail && (
-          <div className="shrink-0 w-20 h-20 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-700 ring-2 ring-purple-200 dark:ring-purple-800">
-            <img
-              src={thumbnail}
-              alt={title}
-              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-200"
-            />
+        {/* Enhanced Icon for articles */}
+        <div className="shrink-0 relative">
+          <div className={`absolute inset-0 ${iconBgClass} rounded-xl blur-sm opacity-30 group-hover:opacity-50 transition-opacity`} />
+          <div className={`relative w-11 h-11 rounded-xl ${iconBgClass} flex items-center justify-center ring-2 ring-white dark:ring-gray-800`}>
+            <Icon size={22} className={iconColor} />
           </div>
-        )}
-
-        {/* Enhanced Icon for articles/external */}
-        {!thumbnail && (
-          <div className="shrink-0 relative">
-            <div className={`absolute inset-0 ${iconBgClass} rounded-xl blur-sm opacity-30 group-hover:opacity-50 transition-opacity`} />
-            <div className={`relative w-11 h-11 rounded-xl ${iconBgClass} flex items-center justify-center ring-2 ring-white dark:ring-gray-800`}>
-              <Icon size={22} className={iconColor} />
-            </div>
-          </div>
-        )}
+        </div>
 
         {/* Content */}
         <div className="flex-1 min-w-0">
           <div className="flex items-start justify-between gap-2">
-            <h4 className={`text-sm font-bold text-gray-900 dark:text-white line-clamp-2 transition-colors ${
-              isExternal ? 'group-hover:text-blue-600 dark:group-hover:text-blue-400' :
-              isVideo ? 'group-hover:text-purple-600 dark:group-hover:text-purple-400' :
-              'group-hover:text-teal-600 dark:group-hover:text-teal-400'
-            }`}>
+            <h4 className={`text-sm font-bold text-gray-900 dark:text-white line-clamp-2 transition-colors group-hover:text-teal-600 dark:group-hover:text-teal-400`}>
               {title}
             </h4>
             <ExternalLink
               size={15}
-              className={`shrink-0 text-gray-400 transition-colors mt-0.5 ${
-                isExternal ? 'group-hover:text-blue-600 dark:group-hover:text-blue-400' :
-                isVideo ? 'group-hover:text-purple-600 dark:group-hover:text-purple-400' :
-                'group-hover:text-teal-600 dark:group-hover:text-teal-400'
-              }`}
+              className={`shrink-0 text-gray-400 transition-colors mt-0.5 group-hover:text-teal-600 dark:group-hover:text-teal-400`}
             />
           </div>
 
-          {/* Excerpt */}
-          {excerpt && (
-            <p className="text-xs text-gray-600 dark:text-gray-400 mt-1 line-clamp-2">
-              {excerpt}
-            </p>
-          )}
-
-          {/* Domain + Trust Badge (external sources) */}
-          {isExternal && domain && (
-            <div className="flex items-center gap-2 mt-2">
-              <span className="text-xs text-gray-500 dark:text-gray-400">
-                {domain}
-              </span>
-              {trustScore && trustScore >= 0.85 && (
-                <div className="flex items-center gap-1 px-2 py-0.5 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-[10px] font-medium">
-                  <BadgeCheck size={10} />
-                  Verified
-                </div>
-              )}
-            </div>
-          )}
-
-          {/* Enhanced Type badge */}
+          {/* Type badge */}
           <div className="flex items-center gap-2 mt-2">
-            <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-semibold uppercase tracking-wider ${
-              isExternal ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300' :
-              isVideo ? 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300' :
-              'bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300'
-            }`}>
+            <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-semibold uppercase tracking-wider bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300`}>
               <Icon size={10} />
-              {isVideo ? 'Video' : isExternal ? 'Source' : 'Article'}
+              Article
             </span>
           </div>
         </div>

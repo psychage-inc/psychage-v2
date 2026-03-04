@@ -66,7 +66,7 @@ const SearchResults: React.FC = () => {
             });
 
             if (response.success && response.data) {
-                const data = response.data;
+                const data = response.data as { articles?: unknown[]; videos?: unknown[]; tools?: unknown[]; providers?: unknown[]; total?: number };
                 setMatchedArticles((data.articles || []) as ArticleWithContent[]);
                 setMatchedVideos((data.videos || []) as VideoType[]);
                 setMatchedTools((data.tools || []) as ToolType[]);

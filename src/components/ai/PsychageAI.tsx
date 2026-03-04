@@ -350,8 +350,8 @@ const PsychageAI: React.FC = () => {
               {/* Citations */}
               {message.citations && message.citations.length > 0 && (
                 <div className="mt-3 space-y-2">
-                  {message.citations.map((citation) => (
-                    <CitationCard key={citation.id} citation={citation} />
+                  {message.citations.map((citation, idx) => (
+                    <CitationCard key={citation.document_id || idx} citation={citation} />
                   ))}
                 </div>
               )}

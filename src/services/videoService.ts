@@ -121,7 +121,7 @@ function mapToVideo(data: DBVideo): Video {
     }
 
     return {
-        id: data.id,
+        id: typeof data.id === 'number' ? data.id : parseInt(data.id, 10),
         title: data.title,
         thumbnail: data.thumbnail,
         duration: durationSeconds,

@@ -57,6 +57,7 @@ CITATION RULES:
 - Only cite sources present in the context above — never hallucinate URLs
 - Format citations as [SOURCE: Article Title | https://psychage.com/...]
 - If no relevant content was retrieved, recommend speaking with a professional
+`;
 
 // =============================================================================
 // Anthropic Provider

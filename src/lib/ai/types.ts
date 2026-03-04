@@ -277,6 +277,9 @@ export interface SourceCitation {
   chunk_id?: string;
 }
 
+// Alias for backward compatibility
+export type Citation = SourceCitation;
+
 export interface ResourceLink {
   title: string;
   url_path: string;

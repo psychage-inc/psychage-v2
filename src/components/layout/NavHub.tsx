@@ -31,9 +31,9 @@ const NavHub: React.FC<NavHubProps> = ({ isOpen, onClose }) => {
       textColor: "text-teal-900",
       icon: BrainCircuit,
       items: [
-        { label: "Clarity Score™", desc: "Mental focus test", href: "#" },
-        { label: "Mood Journal", desc: "Track patterns", href: "#" },
-        { label: "Sleep Architect", desc: "Optimize rest", href: "#" },
+        { label: "Clarity Score™", desc: "Mental focus test", href: "/clarity-score" },
+        { label: "Mood Journal", desc: "Track patterns", href: "/tools/mood-journal" },
+        { label: "Sleep Architect", desc: "Optimize rest", href: "/tools/sleep-architect" },
       ]
     },
     {
@@ -43,9 +43,9 @@ const NavHub: React.FC<NavHubProps> = ({ isOpen, onClose }) => {
       textColor: "text-indigo-900",
       icon: BookOpen,
       items: [
-        { label: "Articles Library", desc: "Expert insights", href: "#" },
-        { label: "Video Courses", desc: "Visual learning", href: "#" },
-        { label: "Research", desc: "Clinical studies", href: "#" },
+        { label: "Articles Library", desc: "Expert insights", href: "/learn" },
+        { label: "Video Courses", desc: "Visual learning", href: "/learn?type=videos" },
+        { label: "Research", desc: "Clinical studies", href: "/learn?category=research" },
       ]
     },
     {
@@ -55,9 +55,9 @@ const NavHub: React.FC<NavHubProps> = ({ isOpen, onClose }) => {
       textColor: "text-rose-900",
       icon: Heart,
       items: [
-        { label: "Find a Provider", desc: "Therapist match", href: "#" },
-        { label: "Community", desc: "Peer support", href: "#" },
-        { label: "Crisis Resources", desc: "Immediate help", href: "#" },
+        { label: "Find a Provider", desc: "Therapist match", href: "/find-care" },
+        { label: "Community", desc: "Peer support", href: "/about" },
+        { label: "Crisis Resources", desc: "Immediate help", href: "/crisis" },
       ]
     },
     {
@@ -67,9 +67,9 @@ const NavHub: React.FC<NavHubProps> = ({ isOpen, onClose }) => {
       textColor: "text-amber-900",
       icon: Sparkles,
       items: [
-        { label: "Meditation", desc: "Guided audio", href: "#" },
-        { label: "Breathwork", desc: "Somatic exercises", href: "#" },
-        { label: "Daily Habits", desc: "Routine builder", href: "#" },
+        { label: "Meditation", desc: "Guided audio", href: "/tools" },
+        { label: "Breathwork", desc: "Somatic exercises", href: "/tools" },
+        { label: "Daily Habits", desc: "Routine builder", href: "/tools" },
       ]
     }
   ];
@@ -158,20 +158,20 @@ const NavHub: React.FC<NavHubProps> = ({ isOpen, onClose }) => {
             {/* Footer / Quick Actions */}
             <div className="relative z-10 p-6 bg-gray-50/80 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4">
               <div className="flex gap-4">
-                <a href="#" className="flex items-center gap-2 text-sm font-bold text-gray-600 hover:text-teal-600 px-4 py-2 rounded-lg hover:bg-white transition-colors">
+                <a href="/tools" className="flex items-center gap-2 text-sm font-bold text-gray-600 hover:text-teal-600 px-4 py-2 rounded-lg hover:bg-white transition-colors">
                   <Play size={16} className="fill-current" />
                   Start Demo
                 </a>
-                <a href="#" className="flex items-center gap-2 text-sm font-bold text-gray-600 hover:text-teal-600 px-4 py-2 rounded-lg hover:bg-white transition-colors">
+                <a href="/about" className="flex items-center gap-2 text-sm font-bold text-gray-600 hover:text-teal-600 px-4 py-2 rounded-lg hover:bg-white transition-colors">
                   <Users size={16} />
                   About Psychage
                 </a>
               </div>
 
-              <div className="flex items-center gap-2 text-xs font-bold text-amber-600 bg-amber-100 px-4 py-2 rounded-full">
+              <a href="/crisis" className="flex items-center gap-2 text-xs font-bold text-amber-600 bg-amber-100 px-4 py-2 rounded-full hover:bg-amber-200 transition-colors">
                 <Phone size={14} />
                 <span>Crisis Line: 988</span>
-              </div>
+              </a>
             </div>
           </motion.div>
         </>

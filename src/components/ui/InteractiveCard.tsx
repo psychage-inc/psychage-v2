@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
+import { motion, HTMLMotionProps } from 'framer-motion';
 
-
-interface InteractiveCardProps extends React.HTMLAttributes<HTMLDivElement> {
+interface InteractiveCardProps extends HTMLMotionProps<"div"> {
     children: React.ReactNode;
     className?: string;
     spotlightColor?: string;
@@ -33,11 +33,12 @@ const InteractiveCard: React.FC<InteractiveCardProps> = ({
     };
 
     return (
-        <div
+        <motion.div
             ref={divRef}
             onMouseMove={handleMouseMove}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            whileTap={{ scale: 0.98 }}
             className={`relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md transition-all duration-300 ${className}`}
             {...props}
         >
@@ -54,7 +55,7 @@ const InteractiveCard: React.FC<InteractiveCardProps> = ({
             <div className="relative z-10 h-full">
                 {children}
             </div>
-        </div>
+        </motion.div>
     );
 };
 

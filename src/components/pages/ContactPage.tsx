@@ -22,7 +22,7 @@ const ContactPage: React.FC = () => {
     };
 
     return (
-        <div className="min-h-screen bg-[#fafaf9] pt-28 pb-20">
+        <div className="min-h-screen bg-background pt-28 pb-20">
             <SEO
                 title="Contact Us - Psychage"
                 description="Get in touch with the Psychage team for support, partnerships, or general inquiries."

@@ -35,7 +35,11 @@ const getToolLink = (toolId: number) => {
         case 1: return '/clarity-score';
         case 2: return '/tools/mood-journal';
         case 3: return '/tools/sleep-architect';
+        case 4: return '#'; // Breathwork - Coming soon
         case 5: return '/find-care';
+        case 6: return '/crisis';
+        case 7: return '/tools/symptom-navigator';
+        case 8: return '/tools/mindmate';
         default: return '#';
     }
 };

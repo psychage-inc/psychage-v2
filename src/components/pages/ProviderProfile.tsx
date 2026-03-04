@@ -68,12 +68,12 @@ const ProviderProfile: React.FC = () => {
     }, [provider]);
 
     if (loading) {
-        return <div className="min-h-screen flex items-center justify-center bg-[#fafaf9] dark:bg-[#050505]">Loading...</div>;
+        return <div className="min-h-screen flex items-center justify-center bg-background">Loading...</div>;
     }
 
     if (!provider) {
         return (
-            <div className="min-h-screen flex items-center justify-center bg-[#fafaf9] dark:bg-[#050505]">
+            <div className="min-h-screen flex items-center justify-center bg-background">
                 <div className="text-center">
                     <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Provider not found</h2>
                     <Button onClick={() => navigate('/find-care')}>Back to Directory</Button>
@@ -83,7 +83,7 @@ const ProviderProfile: React.FC = () => {
     }
 
     return (
-        <div className="min-h-screen bg-[#fafaf9] dark:bg-[#050505] pt-24 pb-20 transition-colors duration-300">
+        <div className="min-h-screen bg-background pt-24 pb-20 transition-colors duration-300">
             <SEO title={`${provider.name} - ${provider.role} | Psychage`} description={`Book an appointment with ${provider.name}, ${provider.role} in ${provider.location}.`} />
 
             <div className="container mx-auto max-w-[1100px] px-6">

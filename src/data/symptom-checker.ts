@@ -1,3 +1,7 @@
+/**
+ * @deprecated Legacy Symptom Checker v1 data. The active system uses the
+ * Navigator knowledge base at src/lib/navigator/. Scheduled for removal.
+ */
 
 export interface Symptom {
     id: string;

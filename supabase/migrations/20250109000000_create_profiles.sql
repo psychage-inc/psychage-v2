@@ -19,6 +19,51 @@ CREATE TABLE IF NOT EXISTS public.profiles (
     updated_at TIMESTAMPTZ DEFAULT NOW()
 );
 
+-- Add missing columns if they don't exist (for existing profiles tables)
+DO $$
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_name = 'profiles' AND column_name = 'email') THEN
+        ALTER TABLE public.profiles ADD COLUMN email VARCHAR(255);
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_name = 'profiles' AND column_name = 'display_name') THEN
+        ALTER TABLE public.profiles ADD COLUMN display_name VARCHAR(255);
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_name = 'profiles' AND column_name = 'avatar_url') THEN
+        ALTER TABLE public.profiles ADD COLUMN avatar_url TEXT;
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_name = 'profiles' AND column_name = 'role') THEN
+        ALTER TABLE public.profiles ADD COLUMN role VARCHAR(50) DEFAULT 'patient'
+            CHECK (role IN ('patient', 'provider', 'admin'));
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_name = 'profiles' AND column_name = 'location') THEN
+        ALTER TABLE public.profiles ADD COLUMN location VARCHAR(255);
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_name = 'profiles' AND column_name = 'bio') THEN
+        ALTER TABLE public.profiles ADD COLUMN bio TEXT;
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_name = 'profiles' AND column_name = 'created_at') THEN
+        ALTER TABLE public.profiles ADD COLUMN created_at TIMESTAMPTZ DEFAULT NOW();
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_name = 'profiles' AND column_name = 'updated_at') THEN
+        ALTER TABLE public.profiles ADD COLUMN updated_at TIMESTAMPTZ DEFAULT NOW();
+    END IF;
+END $$;
+
 CREATE INDEX IF NOT EXISTS idx_profiles_role ON public.profiles(role);
 CREATE INDEX IF NOT EXISTS idx_profiles_email ON public.profiles(email);
 

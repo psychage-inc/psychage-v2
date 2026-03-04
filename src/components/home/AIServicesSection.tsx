@@ -46,7 +46,7 @@ const services = [
 
 const AIServicesSection: React.FC = () => {
     return (
-        <section className="py-24 bg-[#050505] text-white relative">
+        <section className="py-24 bg-zinc-950 text-white relative">
             <div className="container mx-auto px-6 md:px-12">
                 <div className="text-center max-w-3xl mx-auto mb-20">
                     <motion.div

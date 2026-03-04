@@ -1,0 +1,22 @@
+# Dependencies to Add for MindMate 2.0
+
+Run this command in your project directory:
+
+npm install @anthropic-ai/sdk openai @vercel/node
+
+# Breakdown:
+# - @anthropic-ai/sdk: Official Anthropic SDK for Claude API
+# - openai: OpenAI SDK for embeddings (text-embedding-3-small)
+# - @vercel/node: TypeScript types for Vercel serverless functions
+
+# Optional (for Phase 2 - Web Search):
+npm install brave-search
+
+# Optional (for Phase 2 - Caching):
+npm install @upstash/redis @upstash/ratelimit
+
+# Dev Dependencies (if not already installed):
+npm install -D @types/node
+
+# Verify installation:
+npm list @anthropic-ai/sdk openai @vercel/node

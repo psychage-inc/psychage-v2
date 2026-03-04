@@ -19,7 +19,7 @@ const Skeleton: React.FC<{ className?: string }> = ({ className }) => (
 );
 
 export const GlobalLoading = () => (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#fafaf9]/80 backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 backdrop-blur-sm">
         <div className="flex flex-col items-center gap-4">
             <div className="relative">
                 <div className="w-16 h-16 rounded-full border-4 border-gray-200" />
@@ -195,7 +195,7 @@ export const SkeletonVideoDetail = () => (
 );
 
 export const SkeletonProviderProfile = () => (
-    <div className="animate-pulse pt-28 pb-20 container mx-auto max-w-5xl px-6 bg-[#fafaf9] min-h-screen">
+    <div className="animate-pulse pt-28 pb-20 container mx-auto max-w-5xl px-6 bg-background min-h-screen">
         <Skeleton className="h-4 w-32 mb-8" />
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             <div className="lg:col-span-8 space-y-8">
@@ -240,7 +240,7 @@ export const SkeletonProviderProfile = () => (
 );
 
 export const SkeletonProviderDirectory = () => (
-    <div className="min-h-screen bg-[#fafaf9] pt-28 pb-20">
+    <div className="min-h-screen bg-background pt-28 pb-20">
         <div className="container mx-auto max-w-[1200px] px-6">
             <div className="text-center max-w-2xl mx-auto mb-12">
                 <Skeleton className="h-12 w-3/4 mx-auto mb-6" />
@@ -354,7 +354,7 @@ export const SkeletonQuickTopics = () => (
 );
 
 export const SkeletonToolsSection = () => (
-    <div className="py-20 px-6 bg-[#fafaf9]">
+    <div className="py-20 px-6 bg-background">
         <div className="container mx-auto max-w-[1280px]">
             <div className="mb-12">
                 <Skeleton className="h-3 w-16 mb-2" />

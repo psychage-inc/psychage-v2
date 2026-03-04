@@ -384,7 +384,8 @@ export const articleService = {
 
         try {
             const { bookmarkService } = await import('./bookmarkService');
-            return await bookmarkService.isBookmarked(userId, 'article', String(articleId));
+            const result = await bookmarkService.isBookmarked(userId, 'article', String(articleId));
+            return result.bookmarked;
         } catch (error) {
             console.error('Failed to check bookmark status:', error);
             return false;

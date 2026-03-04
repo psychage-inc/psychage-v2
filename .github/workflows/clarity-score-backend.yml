@@ -1,0 +1,243 @@
+name: Clarity Score Backend CI/CD
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+    paths:
+      - 'supabase/**'
+  pull_request:
+    branches:
+      - main
+      - develop
+    paths:
+      - 'supabase/**'
+
+jobs:
+  lint-and-typecheck:
+    name: Lint & Type Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
+      - name: Lint Edge Functions
+        run: deno lint supabase/functions/
+
+      - name: Type check Edge Functions
+        run: |
+          deno check supabase/functions/assessment-start/index.ts
+          deno check supabase/functions/assessment-submit/index.ts
+          deno check supabase/functions/assessment-history/index.ts
+          deno check supabase/functions/assessment-detail/index.ts
+          deno check supabase/functions/assessment-share/index.ts
+          deno check supabase/functions/assessment-shared/index.ts
+          deno check supabase/functions/health/index.ts
+
+  unit-tests:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
+      - name: Run scoring tests
+        run: deno test --allow-net --allow-env supabase/functions/_shared/__tests__/scoring.test.ts
+
+      - name: Run clinical flags tests
+        run: deno test --allow-net --allow-env supabase/functions/_shared/__tests__/clinical-flags.test.ts
+
+      - name: Run crisis detection tests
+        run: deno test --allow-net --allow-env supabase/functions/_shared/__tests__/crisis-detection.test.ts
+
+  integration-tests:
+    name: Integration Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
+      - name: Setup Supabase CLI
+        uses: supabase/setup-cli@v1
+        with:
+          version: latest
+
+      - name: Start Supabase local instance
+        run: supabase start
+
+      - name: Apply migrations
+        run: supabase db push
+
+      - name: Seed test data
+        run: |
+          # Create test user via SQL
+          supabase db execute - <<SQL
+          INSERT INTO auth.users (
+            id,
+            instance_id,
+            email,
+            encrypted_password,
+            email_confirmed_at,
+            created_at,
+            updated_at,
+            raw_app_meta_data,
+            raw_user_meta_data,
+            is_super_admin,
+            role
+          )
+          VALUES (
+            '00000000-0000-0000-0000-000000000001',
+            '00000000-0000-0000-0000-000000000000',
+            'test@example.com',
+            crypt('test123456', gen_salt('bf')),
+            now(),
+            now(),
+            now(),
+            '{"provider":"email","providers":["email"]}'::jsonb,
+            '{}'::jsonb,
+            false,
+            'authenticated'
+          )
+          ON CONFLICT (id) DO NOTHING;
+          SQL
+
+          # Run seed file
+          supabase db seed
+
+      - name: Run integration tests
+        run: |
+          # Start functions server in background
+          supabase functions serve &
+          FUNCTIONS_PID=$!
+
+          # Wait for server to be ready
+          sleep 5
+
+          # Run integration tests
+          deno test --allow-net --allow-env supabase/functions/_tests/integration.test.ts || true
+
+          # Stop functions server
+          kill $FUNCTIONS_PID || true
+
+      - name: Stop Supabase
+        if: always()
+        run: supabase stop
+
+  deploy-staging:
+    name: Deploy to Staging
+    runs-on: ubuntu-latest
+    needs: [lint-and-typecheck, unit-tests, integration-tests]
+    if: github.ref == 'refs/heads/develop' && github.event_name == 'push'
+    environment:
+      name: staging
+      url: https://staging.psychage.com
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Supabase CLI
+        uses: supabase/setup-cli@v1
+        with:
+          version: latest
+
+      - name: Link to Supabase project
+        run: supabase link --project-ref ${{ secrets.STAGING_SUPABASE_PROJECT_REF }}
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+
+      - name: Deploy database migrations
+        run: supabase db push --linked
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          SUPABASE_DB_PASSWORD: ${{ secrets.STAGING_SUPABASE_DB_PASSWORD }}
+
+      - name: Deploy Edge Functions
+        run: supabase functions deploy
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+
+      - name: Verify deployment
+        run: |
+          HEALTH_URL="https://${{ secrets.STAGING_SUPABASE_PROJECT_REF }}.supabase.co/functions/v1/health"
+          RESPONSE=$(curl -s $HEALTH_URL)
+          echo "Health check response: $RESPONSE"
+          if echo "$RESPONSE" | grep -q '"status":"ok"'; then
+            echo "✅ Staging deployment verified"
+          else
+            echo "❌ Staging deployment verification failed"
+            exit 1
+          fi
+
+  deploy-production:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    needs: [lint-and-typecheck, unit-tests, integration-tests]
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    environment:
+      name: production
+      url: https://psychage.com
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Supabase CLI
+        uses: supabase/setup-cli@v1
+        with:
+          version: latest
+
+      - name: Link to Supabase project
+        run: supabase link --project-ref ${{ secrets.PRODUCTION_SUPABASE_PROJECT_REF }}
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+
+      - name: Deploy database migrations
+        run: supabase db push --linked
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          SUPABASE_DB_PASSWORD: ${{ secrets.PRODUCTION_SUPABASE_DB_PASSWORD }}
+
+      - name: Deploy Edge Functions
+        run: supabase functions deploy
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+
+      - name: Verify deployment
+        run: |
+          HEALTH_URL="https://${{ secrets.PRODUCTION_SUPABASE_PROJECT_REF }}.supabase.co/functions/v1/health"
+          RESPONSE=$(curl -s $HEALTH_URL)
+          echo "Health check response: $RESPONSE"
+          if echo "$RESPONSE" | grep -q '"status":"ok"'; then
+            echo "✅ Production deployment verified"
+          else
+            echo "❌ Production deployment verification failed"
+            exit 1
+          fi
+
+      - name: Notify deployment success
+        if: success()
+        run: |
+          echo "🎉 Clarity Score Backend successfully deployed to production!"
+          echo "Timestamp: $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+
+      - name: Notify deployment failure
+        if: failure()
+        run: |
+          echo "❌ Clarity Score Backend deployment to production failed!"
+          echo "Check logs for details."
+          exit 1

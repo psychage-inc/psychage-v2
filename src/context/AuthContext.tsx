@@ -1,7 +1,20 @@
 import React, { useContext, useState, useEffect, useCallback } from 'react';
-import { api, tokenStorage, ApiError } from '../lib/api';
 import { AuthContext, AuthState, AuthContextType } from './AuthContextDefinition';
 import { supabase } from '../lib/supabaseClient';
+import type { User as SupabaseUser } from '@supabase/supabase-js';
+
+// Map Supabase user to our User type
+function mapSupabaseUser(supabaseUser: SupabaseUser | null) {
+  if (!supabaseUser) return null;
+
+  return {
+    id: supabaseUser.id,
+    email: supabaseUser.email || '',
+    role: (supabaseUser.user_metadata?.role || 'patient') as 'patient' | 'provider' | 'admin',
+    display_name: supabaseUser.user_metadata?.display_name || supabaseUser.user_metadata?.full_name || '',
+    avatar_url: supabaseUser.user_metadata?.avatar_url || '',
+  };
+}
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [state, setState] = useState<AuthState>({
@@ -10,58 +23,57 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     isAuthenticated: false,
   });
 
-  // Check for existing session on mount
+  // Check for existing session on mount and set up auth state listener
   useEffect(() => {
-    const checkAuth = async () => {
-      if (tokenStorage.isAuthenticated()) {
-        try {
-          const response = await api.auth.me();
-          if (response.success && response.data) {
-            setState({
-              user: response.data,
-              isLoading: false,
-              isAuthenticated: true,
-            });
-            return;
-          }
-        } catch (error) {
-          console.error('Failed to restore session:', error);
-          if (error instanceof ApiError && error.status === 401) {
-            tokenStorage.clearTokens();
-          }
-          // For other errors (network, 500), do not clear tokens.
-          // User remains "authenticated" in storage but state is set to null below,
-          // effectively logging them out of *session* but allowing retry on reload.
-        }
-      }
+    // Get initial session
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      const user = mapSupabaseUser(session?.user ?? null);
       setState({
-        user: null,
+        user,
         isLoading: false,
-        isAuthenticated: false,
+        isAuthenticated: !!user,
       });
-    };
+    });
 
-    checkAuth();
+    // Listen for auth state changes
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      const user = mapSupabaseUser(session?.user ?? null);
+      setState({
+        user,
+        isLoading: false,
+        isAuthenticated: !!user,
+      });
+    });
+
+    return () => subscription.unsubscribe();
   }, []);
 
   const login = useCallback(async (email: string, password: string) => {
     try {
-      const response = await api.auth.login(email, password);
-      if (response.success && response.data) {
-        // Fetch user details after successful login
-        const userResponse = await api.auth.me();
-        if (userResponse.success && userResponse.data) {
-          setState({
-            user: userResponse.data,
-            isLoading: false,
-            isAuthenticated: true,
-          });
-          return { success: true };
-        }
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      });
+
+      if (error) {
+        return { success: false, error: error.message };
       }
+
+      if (data.user) {
+        const user = mapSupabaseUser(data.user);
+        setState({
+          user,
+          isLoading: false,
+          isAuthenticated: true,
+        });
+        return { success: true };
+      }
+
       return { success: false, error: 'Login failed' };
     } catch (error) {
-      const message = error instanceof ApiError
+      const message = error instanceof Error
         ? error.message
         : 'An unexpected error occurred';
       return { success: false, error: message };
@@ -70,14 +82,31 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const signup = useCallback(async (email: string, password: string, displayName?: string, role: 'patient' | 'provider' = 'patient') => {
     try {
-      const response = await api.auth.signup(email, password, displayName, role);
-      if (response.success) {
-        // After signup, user needs to verify email or can log in
+      const { data, error } = await supabase.auth.signUp({
+        email,
+        password,
+        options: {
+          data: {
+            display_name: displayName,
+            full_name: displayName,
+            role,
+          },
+        },
+      });
+
+      if (error) {
+        return { success: false, error: error.message };
+      }
+
+      if (data.user) {
+        // Supabase may require email confirmation before allowing sign in
+        // For now, we consider signup successful
         return { success: true };
       }
+
       return { success: false, error: 'Signup failed' };
     } catch (error) {
-      const message = error instanceof ApiError
+      const message = error instanceof Error
         ? error.message
         : 'An unexpected error occurred';
       return { success: false, error: message };
@@ -86,7 +115,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const logout = useCallback(async () => {
     try {
-      await api.auth.logout();
+      await supabase.auth.signOut();
     } catch (error) {
       console.error('Logout error:', error);
     } finally {
@@ -100,11 +129,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const refreshUser = useCallback(async () => {
     try {
-      const response = await api.auth.me();
-      if (response.success && response.data) {
+      const { data: { user: supabaseUser } } = await supabase.auth.getUser();
+      if (supabaseUser) {
+        const user = mapSupabaseUser(supabaseUser);
         setState(prev => ({
           ...prev,
-          user: response.data!,
+          user,
           isAuthenticated: true,
         }));
       }
@@ -115,13 +145,17 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const requestPasswordReset = useCallback(async (email: string) => {
     try {
-      const response = await api.post<{ message: string }>('/api/auth/reset-password', { email });
-      if (response.success) {
-        return { success: true };
+      const { error } = await supabase.auth.resetPasswordForEmail(email, {
+        redirectTo: `${window.location.origin}/update-password`,
+      });
+
+      if (error) {
+        return { success: false, error: error.message };
       }
-      return { success: false, error: 'Failed to send reset email' };
+
+      return { success: true };
     } catch (error) {
-      const message = error instanceof ApiError
+      const message = error instanceof Error
         ? error.message
         : 'An unexpected error occurred';
       return { success: false, error: message };

@@ -35,7 +35,7 @@ const AboutPage: React.FC = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-[#fafaf9] pt-28 pb-20">
+        <div className="min-h-screen bg-background pt-28 pb-20">
             <SEO
                 title="About Us - Psychage"
                 description="Learn about Psychage's mission to democratize access to mental clarity through evidence-based resources and clinical tools."

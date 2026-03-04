@@ -19,8 +19,8 @@ const variants = {
         scale: 1,
         filter: 'blur(0px)',
         transition: {
-            duration: 0.5,
-            ease: [0.25, 0.1, 0.25, 1], // Cubic bezier for smooth entrance
+            duration: 0.4,
+            ease: [0.16, 1, 0.3, 1], // Apple-like snappy curve
             staggerChildren: 0.1
         }
     },
@@ -30,8 +30,8 @@ const variants = {
         scale: 0.99,
         filter: 'blur(5px)',
         transition: {
-            duration: 0.3,
-            ease: "easeIn"
+            duration: 0.2,
+            ease: [0.32, 0, 0.67, 0] // Snappy exit curve
         }
     }
 };

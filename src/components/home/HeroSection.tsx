@@ -44,7 +44,7 @@ const HeroSection: React.FC = () => {
                     >
                         <span className="flex h-2 w-2 rounded-full bg-teal-500 animate-pulse"></span>
                         <span className="text-xs font-semibold text-slate-700 dark:text-slate-200 uppercase tracking-wide">
-                            AI-Powered Profiling
+                            For Executive Coaches
                         </span>
                     </motion.div>
 
@@ -56,9 +56,9 @@ const HeroSection: React.FC = () => {
                             transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
                             className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.1]"
                         >
-                            Discover the <br />
+                            Accelerate Coaching <br />
                             <span className="bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.teal.500),theme(colors.indigo.600),theme(colors.purple.500),theme(colors.teal.500))] bg-[length:200%_auto] animate-gradient">
-                                Age of Your Mind
+                                Breakthroughs
                             </span>
                         </motion.h1>
 
@@ -68,7 +68,7 @@ const HeroSection: React.FC = () => {
                             transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.8, delay: 0.2 }}
                             className="text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-lg mx-auto lg:mx-0"
                         >
-                            Your cognitive age defines how you see the world. Uncover your hidden psychological traits with our professional-grade assessment.
+                            Stop guessing what's blocking your executives. Our cognitive assessment gives you deep, verified insights into their listening skills and resilience so you can deliver coaching results faster.
                         </motion.p>
                     </div>
 
@@ -84,7 +84,7 @@ const HeroSection: React.FC = () => {
                                 className="h-14 px-8 rounded-full text-lg shadow-xl shadow-teal-500/20 bg-teal-600 hover:bg-teal-700 text-white transition-all hover:shadow-2xl hover:shadow-teal-500/30"
                                 onClick={() => navigate('/clarity-score')}
                             >
-                                Start Free Analysis
+                                Start Your Free Trial
                                 <ArrowRight className="ml-2 w-5 h-5" />
                             </Button>
                         </Magnetic>
@@ -98,7 +98,7 @@ const HeroSection: React.FC = () => {
                                 }}
                             >
                                 <Play className="mr-2 w-5 h-5" />
-                                How it works
+                                See How It Works
                             </Button>
                         </Magnetic>
                     </motion.div>
@@ -108,7 +108,7 @@ const HeroSection: React.FC = () => {
                         initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={prefersReducedMotion ? { duration: 0 } : { duration: 1, delay: 0.5 }}
-                        className="pt-4 flex items-center gap-4 text-sm text-slate-500 dark:text-slate-400"
+                        className="pt-4 flex flex-col sm:flex-row items-center sm:items-start gap-4 text-sm text-slate-500 dark:text-slate-400"
                     >
                         <div className="flex -space-x-2">
                             {[1, 2, 3, 4].map(i => (
@@ -117,7 +117,10 @@ const HeroSection: React.FC = () => {
                                 </div>
                             ))}
                         </div>
-                        <p>Joined by 50,000+ others</p>
+                        <div className="flex flex-col text-center sm:text-left">
+                            <p className="font-semibold text-slate-700 dark:text-slate-300">Trusted by 5,000+ top coaches</p>
+                            <p className="text-xs mt-0.5">SOC 2 Compliant &bull; Scientifically Verified</p>
+                        </div>
                     </motion.div>
                 </motion.div>
 

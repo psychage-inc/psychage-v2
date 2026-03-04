@@ -11,7 +11,7 @@ interface Message {
     suggestions?: { label: string; action: string }[];
 }
 
-const STORAGE_KEY = 'psychage_mindmate_history';
+const STORAGE_KEY = 'psychage_ai_chat_history';
 
 const MindMate: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +26,7 @@ const MindMate: React.FC = () => {
         return [{
             id: 'init',
             sender: 'ai',
-            text: "Hi! I'm MindMate, your personal mental health companion. How are you feeling today?",
+            text: "Hi! I'm Psychage AI, your mental health education companion. How can I help you today?",
             type: 'text'
         }];
     });
@@ -78,7 +78,7 @@ const MindMate: React.FC = () => {
             const genAI = new GoogleGenAI({ apiKey });
 
             // Context-aware System Instruction
-            const systemContext = `You are MindMate, a compassionate and professional mental health AI assistant on the PsychAge platform. 
+            const systemContext = `You are Psychage AI, a compassionate and professional mental health education assistant on the Psychage platform.
             The user is currently visiting: ${location.pathname}.
             If the user mentions self-harm or suicide, IMMEDIATELY provide the 988 crisis helpline and encourage them to seek professional help.
             Keep your responses concise, empathetic, and supportive. Use Markdown for formatting.`;
@@ -173,7 +173,7 @@ const MindMate: React.FC = () => {
                                     <Bot size={20} />
                                 </div>
                                 <div>
-                                    <h3 className="font-bold text-gray-900 dark:text-gray-100">MindMate AI</h3>
+                                    <h3 className="font-bold text-gray-900 dark:text-gray-100">Psychage AI</h3>
                                     <div className="flex items-center gap-1.5 opacity-60">
                                         <MapPin size={10} />
                                         <span className="text-[10px] uppercase tracking-wider">{location.pathname === '/' ? 'Home' : location.pathname.replace('/', '')}</span>

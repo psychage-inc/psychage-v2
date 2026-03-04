@@ -39,7 +39,7 @@ export interface TranscriptSegment {
 }
 
 export interface Video {
-    id: number | string;
+    id: number;
     title: string;
     thumbnail: string;
     duration: number; // in seconds

@@ -38,5 +38,9 @@
         "sv": "Svenska",
         "fr": "Français",
         "es": "Español"
+    },
+    "navigator": {
+        "content_notice": "Algum conteúdo de sintomas e condições pode estar em inglês.",
+        "_comment": "Navigator translations pending - using English fallback for now"
     }
 }

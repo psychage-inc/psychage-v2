@@ -1,0 +1,371 @@
+-- ===== SEED DATA FOR CLARITY SCORE BACKEND =====
+-- Creates test user and sample assessments for development
+
+-- Create test user profile
+-- Note: The user must exist in auth.users first (create via Supabase Studio or CLI)
+-- This assumes a test user with ID: '00000000-0000-0000-0000-000000000001'
+
+INSERT INTO profiles (id, display_name, language, age_range, region, clarity_index_opt_in, created_at, updated_at)
+VALUES (
+  '00000000-0000-0000-0000-000000000001',
+  'Test User',
+  'en',
+  '25-34',
+  'US',
+  true,
+  now() - interval '60 days',
+  now() - interval '60 days'
+)
+ON CONFLICT (id) DO UPDATE
+SET display_name = EXCLUDED.display_name;
+
+-- Assessment 1: Thriving (10 weeks ago)
+INSERT INTO assessments (
+  id,
+  user_id,
+  started_at,
+  completed_at,
+  status,
+  language,
+  phq2_raw,
+  gad2_raw,
+  phq4_total,
+  who5_raw,
+  who5_percentage,
+  ucla3_raw,
+  pss4_raw,
+  functioning_raw,
+  domain_emotional,
+  domain_vitality,
+  domain_social,
+  domain_cognitive,
+  domain_functioning,
+  total_score,
+  score_label,
+  clinical_flags,
+  crisis_detected
+) VALUES (
+  '10000000-0000-0000-0000-000000000001',
+  '00000000-0000-0000-0000-000000000001',
+  now() - interval '70 days',
+  now() - interval '70 days',
+  'completed',
+  'en',
+  1, -- phq2_raw
+  1, -- gad2_raw
+  2, -- phq4_total
+  22, -- who5_raw
+  88, -- who5_percentage
+  3, -- ucla3_raw (minimum)
+  3, -- pss4_raw
+  1, -- functioning_raw
+  16.7, -- domain_emotional: (12-2)/12 * 20 = 16.7
+  17.6, -- domain_vitality: 22/25 * 20 = 17.6
+  20.0, -- domain_social: (9-3)/6 * 20 = 20
+  18.8, -- domain_cognitive: (16-3)/16 * 20 = 16.25
+  18.8, -- domain_functioning: (16-1)/16 * 20 = 18.75
+  92, -- total_score
+  'thriving',
+  '[]'::jsonb,
+  false
+);
+
+-- Assessment 2: Balanced (8 weeks ago)
+INSERT INTO assessments (
+  id,
+  user_id,
+  started_at,
+  completed_at,
+  status,
+  language,
+  phq2_raw,
+  gad2_raw,
+  phq4_total,
+  who5_raw,
+  who5_percentage,
+  ucla3_raw,
+  pss4_raw,
+  functioning_raw,
+  domain_emotional,
+  domain_vitality,
+  domain_social,
+  domain_cognitive,
+  domain_functioning,
+  total_score,
+  score_label,
+  clinical_flags,
+  crisis_detected
+) VALUES (
+  '20000000-0000-0000-0000-000000000002',
+  '00000000-0000-0000-0000-000000000001',
+  now() - interval '56 days',
+  now() - interval '56 days',
+  'completed',
+  'en',
+  2, -- phq2_raw
+  3, -- gad2_raw
+  5, -- phq4_total
+  15, -- who5_raw
+  60, -- who5_percentage
+  5, -- ucla3_raw
+  7, -- pss4_raw
+  4, -- functioning_raw
+  11.7, -- domain_emotional: (12-5)/12 * 20 = 11.7
+  12.0, -- domain_vitality: 15/25 * 20 = 12
+  13.3, -- domain_social: (9-5)/6 * 20 = 13.3
+  11.3, -- domain_cognitive: (16-7)/16 * 20 = 11.25
+  15.0, -- domain_functioning: (16-4)/16 * 20 = 15
+  63, -- total_score
+  'balanced',
+  '[]'::jsonb,
+  false
+);
+
+-- Assessment 3: Struggling with moderate flags (6 weeks ago)
+INSERT INTO assessments (
+  id,
+  user_id,
+  started_at,
+  completed_at,
+  status,
+  language,
+  phq2_raw,
+  gad2_raw,
+  phq4_total,
+  who5_raw,
+  who5_percentage,
+  ucla3_raw,
+  pss4_raw,
+  functioning_raw,
+  domain_emotional,
+  domain_vitality,
+  domain_social,
+  domain_cognitive,
+  domain_functioning,
+  total_score,
+  score_label,
+  clinical_flags,
+  crisis_detected
+) VALUES (
+  '30000000-0000-0000-0000-000000000003',
+  '00000000-0000-0000-0000-000000000001',
+  now() - interval '42 days',
+  now() - interval '42 days',
+  'completed',
+  'en',
+  3, -- phq2_raw (moderate depression screen)
+  3, -- gad2_raw (moderate anxiety screen)
+  6, -- phq4_total
+  12, -- who5_raw
+  48, -- who5_percentage (below 50 = moderate)
+  6, -- ucla3_raw (moderate loneliness)
+  8, -- pss4_raw (moderate stress)
+  6, -- functioning_raw (moderate impairment)
+  10.0, -- domain_emotional: (12-6)/12 * 20 = 10
+  9.6, -- domain_vitality: 12/25 * 20 = 9.6
+  10.0, -- domain_social: (9-6)/6 * 20 = 10
+  10.0, -- domain_cognitive: (16-8)/16 * 20 = 10
+  12.5, -- domain_functioning: (16-6)/16 * 20 = 12.5
+  52, -- total_score
+  'struggling',
+  '[
+    {"type": "depression_screen", "severity": "moderate"},
+    {"type": "anxiety_screen", "severity": "moderate"},
+    {"type": "low_wellbeing", "severity": "moderate"},
+    {"type": "loneliness", "severity": "moderate"},
+    {"type": "high_stress", "severity": "moderate"},
+    {"type": "impairment", "severity": "moderate"}
+  ]'::jsonb,
+  false
+);
+
+-- Assessment 4: Distressed with high flags (4 weeks ago)
+INSERT INTO assessments (
+  id,
+  user_id,
+  started_at,
+  completed_at,
+  status,
+  language,
+  phq2_raw,
+  gad2_raw,
+  phq4_total,
+  who5_raw,
+  who5_percentage,
+  ucla3_raw,
+  pss4_raw,
+  functioning_raw,
+  domain_emotional,
+  domain_vitality,
+  domain_social,
+  domain_cognitive,
+  domain_functioning,
+  total_score,
+  score_label,
+  clinical_flags,
+  crisis_detected
+) VALUES (
+  '40000000-0000-0000-0000-000000000004',
+  '00000000-0000-0000-0000-000000000001',
+  now() - interval '28 days',
+  now() - interval '28 days',
+  'completed',
+  'en',
+  4, -- phq2_raw
+  5, -- gad2_raw (high anxiety)
+  9, -- phq4_total (close to crisis threshold)
+  7, -- who5_raw
+  28, -- who5_percentage (exactly at depression screen threshold)
+  7, -- ucla3_raw (high loneliness)
+  12, -- pss4_raw (high stress)
+  10, -- functioning_raw (high impairment)
+  5.0, -- domain_emotional: (12-9)/12 * 20 = 5
+  5.6, -- domain_vitality: 7/25 * 20 = 5.6
+  6.7, -- domain_social: (9-7)/6 * 20 = 6.7
+  5.0, -- domain_cognitive: (16-12)/16 * 20 = 5
+  7.5, -- domain_functioning: (16-10)/16 * 20 = 7.5
+  30, -- total_score
+  'distressed',
+  '[
+    {"type": "depression_screen", "severity": "moderate"},
+    {"type": "anxiety_screen", "severity": "high"},
+    {"type": "low_wellbeing", "severity": "high"},
+    {"type": "loneliness", "severity": "high"},
+    {"type": "high_stress", "severity": "high"},
+    {"type": "impairment", "severity": "high"}
+  ]'::jsonb,
+  false
+);
+
+-- Assessment 5: Back to balanced (2 weeks ago) - showing improvement
+INSERT INTO assessments (
+  id,
+  user_id,
+  started_at,
+  completed_at,
+  status,
+  language,
+  phq2_raw,
+  gad2_raw,
+  phq4_total,
+  who5_raw,
+  who5_percentage,
+  ucla3_raw,
+  pss4_raw,
+  functioning_raw,
+  domain_emotional,
+  domain_vitality,
+  domain_social,
+  domain_cognitive,
+  domain_functioning,
+  total_score,
+  score_label,
+  clinical_flags,
+  crisis_detected
+) VALUES (
+  '50000000-0000-0000-0000-000000000005',
+  '00000000-0000-0000-0000-000000000001',
+  now() - interval '14 days',
+  now() - interval '14 days',
+  'completed',
+  'en',
+  2, -- phq2_raw
+  2, -- gad2_raw
+  4, -- phq4_total
+  16, -- who5_raw
+  64, -- who5_percentage
+  4, -- ucla3_raw
+  6, -- pss4_raw
+  3, -- functioning_raw
+  13.3, -- domain_emotional: (12-4)/12 * 20 = 13.3
+  12.8, -- domain_vitality: 16/25 * 20 = 12.8
+  16.7, -- domain_social: (9-4)/6 * 20 = 16.7
+  12.5, -- domain_cognitive: (16-6)/16 * 20 = 12.5
+  16.3, -- domain_functioning: (16-3)/16 * 20 = 16.25
+  72, -- total_score
+  'balanced',
+  '[]'::jsonb,
+  false
+);
+
+-- Add responses for the latest assessment (Assessment 5) for detail testing
+-- PHQ-4 responses
+INSERT INTO assessment_responses (assessment_id, item_id, instrument, value) VALUES
+  ('50000000-0000-0000-0000-000000000005', 'phq2_1', 'phq4', 1),
+  ('50000000-0000-0000-0000-000000000005', 'phq2_2', 'phq4', 1),
+  ('50000000-0000-0000-0000-000000000005', 'gad2_1', 'phq4', 1),
+  ('50000000-0000-0000-0000-000000000005', 'gad2_2', 'phq4', 1);
+
+-- WHO-5 responses
+INSERT INTO assessment_responses (assessment_id, item_id, instrument, value) VALUES
+  ('50000000-0000-0000-0000-000000000005', 'who5_1', 'who5', 3),
+  ('50000000-0000-0000-0000-000000000005', 'who5_2', 'who5', 3),
+  ('50000000-0000-0000-0000-000000000005', 'who5_3', 'who5', 4),
+  ('50000000-0000-0000-0000-000000000005', 'who5_4', 'who5', 3),
+  ('50000000-0000-0000-0000-000000000005', 'who5_5', 'who5', 3);
+
+-- UCLA-3 responses
+INSERT INTO assessment_responses (assessment_id, item_id, instrument, value) VALUES
+  ('50000000-0000-0000-0000-000000000005', 'ucla_1', 'ucla3', 1),
+  ('50000000-0000-0000-0000-000000000005', 'ucla_2', 'ucla3', 2),
+  ('50000000-0000-0000-0000-000000000005', 'ucla_3', 'ucla3', 1);
+
+-- PSS-4 responses (note: items 2 and 3 are reverse-scored)
+INSERT INTO assessment_responses (assessment_id, item_id, instrument, value) VALUES
+  ('50000000-0000-0000-0000-000000000005', 'pss_1', 'pss4', 2),
+  ('50000000-0000-0000-0000-000000000005', 'pss_2', 'pss4', 3), -- Reversed: 4-3=1
+  ('50000000-0000-0000-0000-000000000005', 'pss_3', 'pss4', 3), -- Reversed: 4-3=1
+  ('50000000-0000-0000-0000-000000000005', 'pss_4', 'pss4', 2);
+
+-- Functioning responses
+INSERT INTO assessment_responses (assessment_id, item_id, instrument, value) VALUES
+  ('50000000-0000-0000-0000-000000000005', 'func_1', 'functioning', 1),
+  ('50000000-0000-0000-0000-000000000005', 'func_2', 'functioning', 1),
+  ('50000000-0000-0000-0000-000000000005', 'func_3', 'functioning', 0),
+  ('50000000-0000-0000-0000-000000000005', 'func_4', 'functioning', 1);
+
+-- Set retake gate (user can take assessment now since 14 days have passed)
+INSERT INTO retake_gates (user_id, last_completed_at, next_available_at)
+VALUES (
+  '00000000-0000-0000-0000-000000000001',
+  now() - interval '14 days',
+  now() - interval '7 days' -- Gate expired 7 days ago, can retake
+)
+ON CONFLICT (user_id) DO UPDATE
+SET last_completed_at = EXCLUDED.last_completed_at,
+    next_available_at = EXCLUDED.next_available_at;
+
+-- Add some Clarity Index contributions (anonymized)
+INSERT INTO clarity_index_contributions (
+  age_range,
+  region,
+  language,
+  total_score,
+  domain_emotional,
+  domain_vitality,
+  domain_social,
+  domain_cognitive,
+  domain_functioning,
+  phq2_raw,
+  gad2_raw,
+  who5_percentage,
+  ucla3_raw,
+  pss4_raw,
+  contributed_at,
+  quarter
+) VALUES
+  ('25-34', 'US', 'en', 92, 16.7, 17.6, 20.0, 18.8, 18.8, 1, 1, 88, 3, 3, now() - interval '70 days', '2025-Q4'),
+  ('25-34', 'US', 'en', 63, 11.7, 12.0, 13.3, 11.3, 15.0, 2, 3, 60, 5, 7, now() - interval '56 days', '2026-Q1'),
+  ('25-34', 'US', 'en', 52, 10.0, 9.6, 10.0, 10.0, 12.5, 3, 3, 48, 6, 8, now() - interval '42 days', '2026-Q1'),
+  ('25-34', 'US', 'en', 30, 5.0, 5.6, 6.7, 5.0, 7.5, 4, 5, 28, 7, 12, now() - interval '28 days', '2026-Q1'),
+  ('25-34', 'US', 'en', 72, 13.3, 12.8, 16.7, 12.5, 16.3, 2, 2, 64, 4, 6, now() - interval '14 days', '2026-Q1');
+
+-- Output success message
+DO $$
+BEGIN
+  RAISE NOTICE 'Seed data inserted successfully!';
+  RAISE NOTICE 'Test user ID: 00000000-0000-0000-0000-000000000001';
+  RAISE NOTICE 'Assessments created: 5';
+  RAISE NOTICE 'Assessment IDs: 10...001 through 50...005';
+  RAISE NOTICE 'User can take new assessment (retake gate expired)';
+END $$;

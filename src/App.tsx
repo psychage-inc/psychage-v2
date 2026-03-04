@@ -1,5 +1,5 @@
 import React, { Suspense, useState } from 'react';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, MotionConfig } from 'framer-motion';
 import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Navigation from './components/layout/Navigation';
 import Footer from './components/layout/Footer';
@@ -16,7 +16,6 @@ import MindMate from './components/ai/MindMate';
 import NotFoundPage from './components/pages/NotFoundPage';
 import { GlobalLoading } from './components/ui/Skeletons';
 import { BookmarkProvider } from './context/BookmarkContext';
-import { AuthProvider } from './context/AuthContext';
 import SEO from './components/SEO';
 import SkipLink from './components/ui/SkipLink';
 import ProtectedRoute from './components/auth/ProtectedRoute';
@@ -36,6 +35,7 @@ const ProviderProfile = React.lazy(() => import('./components/pages/ProviderProf
 const ToolsPage = React.lazy(() => import('./components/pages/ToolsPage'));
 const MoodJournal = React.lazy(() => import('./components/tools/MoodJournal'));
 const SleepArchitect = React.lazy(() => import('./components/tools/SleepArchitect'));
+const PsychageAIPage = React.lazy(() => import('./pages/tools/MindMate'));
 const CategoryPage = React.lazy(() => import('./components/pages/CategoryPage'));
 const SearchResults = React.lazy(() => import('./components/pages/SearchResults'));
 const ClarityScoreTool = React.lazy(() => import('./components/pages/ClarityScoreTool'));
@@ -43,6 +43,8 @@ const AboutPage = React.lazy(() => import('./components/pages/AboutPage'));
 const ContactPage = React.lazy(() => import('./components/pages/ContactPage'));
 const LegalPage = React.lazy(() => import('./components/pages/LegalPages'));
 const CrisisPage = React.lazy(() => import('./components/pages/CrisisPage'));
+const NavigatorPage = React.lazy(() => import('./components/pages/NavigatorPage'));
+const CrisisResourcesScreen = React.lazy(() => import('./components/screens/CrisisResourcesScreen'));
 
 // Auth Pages
 const LoginPage = React.lazy(() => import('./pages/auth/LoginPage'));
@@ -79,7 +81,7 @@ const App: React.FC = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     return (
-        <AuthProvider>
+        <MotionConfig reducedMotion="user">
             <BookmarkProvider>
                 <SkipLink />
                 {isLoading && <Preloader onComplete={() => setIsLoading(false)} />}
@@ -88,7 +90,7 @@ const App: React.FC = () => {
                 <CustomCursor />
 
                 {!isLoading && (
-                    <div className="min-h-screen bg-[#fafaf9] font-sans text-gray-900 overflow-x-hidden flex flex-col transition-colors duration-300">
+                    <div className="min-h-screen bg-background font-sans text-gray-900 overflow-x-hidden flex flex-col transition-colors duration-300">
                         <Navigation />
 
                         <main id="main-content" className="flex-grow w-full outline-none pb-24" tabIndex={-1}>
@@ -159,6 +161,9 @@ const App: React.FC = () => {
                                         <Route path="/tools" element={<PageTransition><ToolsPage /></PageTransition>} />
                                         <Route path="/tools/mood-journal" element={<PageTransition><MoodJournal /></PageTransition>} />
                                         <Route path="/tools/sleep-architect" element={<PageTransition><SleepArchitect /></PageTransition>} />
+                                        <Route path="/tools/mindmate" element={<PageTransition><PsychageAIPage /></PageTransition>} />
+                                        <Route path="/tools/symptom-navigator" element={<PageTransition><NavigatorPage /></PageTransition>} />
+                                        <Route path="/tools/symptom-navigator/crisis" element={<PageTransition><CrisisResourcesScreen /></PageTransition>} />
                                         <Route path="/category/:category" element={<PageTransition><CategoryPage /></PageTransition>} />
                                         <Route path="/search" element={<PageTransition><SearchResults /></PageTransition>} />
                                         <Route path="/clarity-score" element={<PageTransition><ClarityScoreTool /></PageTransition>} />
@@ -167,6 +172,8 @@ const App: React.FC = () => {
                                         <Route path="/legal/privacy" element={<PageTransition><LegalPage type="privacy" /></PageTransition>} />
                                         <Route path="/legal/terms" element={<PageTransition><LegalPage type="terms" /></PageTransition>} />
                                         <Route path="/crisis" element={<PageTransition><CrisisPage /></PageTransition>} />
+                                        <Route path="/navigator" element={<PageTransition><NavigatorPage /></PageTransition>} />
+                                        <Route path="/navigator/crisis" element={<PageTransition><CrisisResourcesScreen /></PageTransition>} />
                                         <Route path="/providers/register" element={<PageTransition><ProviderRegistrationPage /></PageTransition>} />
 
                                         {/* Auth Routes */}
@@ -284,7 +291,7 @@ const App: React.FC = () => {
                     </div>
                 )}
             </BookmarkProvider>
-        </AuthProvider>
+        </MotionConfig>
     );
 };
 

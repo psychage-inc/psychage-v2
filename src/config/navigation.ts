@@ -8,28 +8,28 @@ export const navigationConfig = {
                         id: 'conditions',
                         label: 'Mental Health Conditions',
                         description: 'Anxiety, depression, ADHD...',
-                        href: '/learn/conditions',
+                        href: '/learn?filter=condition',
                         icon: 'brain'
                     },
                     {
                         id: 'wellness',
                         label: 'Wellness & Lifestyle',
                         description: 'Sleep, nutrition, exercise',
-                        href: '/learn/wellness',
+                        href: '/learn?filter=wellness',
                         icon: 'leaf'
                     },
                     {
                         id: 'work',
                         label: 'Work & Life',
                         description: 'Burnout, boundaries, growth',
-                        href: '/learn/work-life',
+                        href: '/learn?filter=life',
                         icon: 'briefcase'
                     },
                     {
                         id: 'treatment',
                         label: 'Treatment & Therapy',
                         description: 'Types of therapy, finding help',
-                        href: '/learn/treatment',
+                        href: '/learn?filter=therapy',
                         icon: 'heart'
                     },
                 ]
@@ -50,9 +50,17 @@ export const navigationConfig = {
                         id: 'clarity',
                         label: 'Clarity Score',
                         description: 'Cognitive assessment',
-                        href: '/tools/clarity-score',
+                        href: '/clarity-score',
                         icon: 'chart',
                         cta: 'Take Assessment'
+                    },
+                    {
+                        id: 'symptom-navigator',
+                        label: 'Symptom Navigator',
+                        description: 'Interactive symptom checker',
+                        href: '/tools/symptom-navigator',
+                        icon: 'brain',
+                        cta: 'Start Navigation'
                     }
                 ]
             },
@@ -72,6 +80,14 @@ export const navigationConfig = {
                         description: 'Optimize your sleep',
                         href: '/tools/sleep-architect',
                         icon: 'moon'
+                    },
+                    {
+                        id: 'mindmate',
+                        label: 'MindMate AI',
+                        description: 'AI mental health companion',
+                        href: '/tools/mindmate',
+                        icon: 'brain',
+                        cta: 'Chat Now'
                     }
                 ]
             }
@@ -79,7 +95,9 @@ export const navigationConfig = {
 
         quickActions: [
             { label: 'All Tools', href: '/tools' },
-            { label: 'Clarity Score', href: '/tools/clarity-score' },
+            { label: 'Clarity Score', href: '/clarity-score' },
+            { label: 'Symptom Navigator', href: '/tools/symptom-navigator' },
+            { label: 'MindMate AI', href: '/tools/mindmate' },
             { label: 'Mood Journal', href: '/tools/mood-journal' },
         ]
     }

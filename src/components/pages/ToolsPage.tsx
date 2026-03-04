@@ -60,13 +60,17 @@ const ToolsPage: React.FC = () => {
             case 1: return '/clarity-score';
             case 2: return '/tools/mood-journal';
             case 3: return '/tools/sleep-architect';
+            case 4: return '#'; // Breathwork - Coming soon
             case 5: return '/find-care';
+            case 6: return '/crisis';
+            case 7: return '/tools/symptom-navigator';
+            case 8: return '/tools/mindmate';
             default: return '#'; // Coming soon
         }
     };
 
     const isComingSoon = (toolId: number) => {
-        return ![1, 2, 3, 5].includes(toolId);
+        return ![1, 2, 3, 5, 6, 7, 8].includes(toolId);
     };
 
     if (isLoading) return <div className="min-h-screen bg-gray-50 pt-32 text-center">Loading...</div>;

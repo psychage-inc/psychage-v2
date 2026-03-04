@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "npm run verify:routes && tsc && vite build",
     "preview": "vite preview",
     "lint": "ESLINT_USE_FLAT_CONFIG=false eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "format": "prettier --write .",
@@ -26,7 +26,8 @@
     "ai:ingest:dry": "tsx scripts/ingest-sanity.ts --dry-run --limit=5",
     "verify:backend": "tsx scripts/verify-api-endpoints.ts",
     "verify:fallback": "tsx scripts/test-fallback-behavior.ts",
-    "verify:deployment": "tsx scripts/verify-deployment.ts"
+    "verify:deployment": "tsx scripts/verify-deployment.ts",
+    "verify:routes": "tsx scripts/verify-routes.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.78.0",

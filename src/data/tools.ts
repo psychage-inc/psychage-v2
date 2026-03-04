@@ -62,5 +62,23 @@ export const tools: Tool[] = [
     category: "Emergency",
     color: "red",
     features: ["24/7 Hotlines", "Safety plan", "Local resources"]
+  },
+  {
+    id: 7,
+    name: "Symptom Navigator",
+    description: "Interactive tool to explore symptoms and find potential mental health conditions with clinical guidance.",
+    iconName: "BrainCircuit",
+    category: "Assessment",
+    color: "indigo",
+    features: ["Symptom matching", "Condition insights", "Clinical resources"]
+  },
+  {
+    id: 8,
+    name: "MindMate AI",
+    description: "AI-powered mental health companion for personalized guidance, coping strategies, and emotional support.",
+    iconName: "BrainCircuit",
+    category: "AI Support",
+    color: "teal",
+    features: ["24/7 availability", "Evidence-based", "Conversational AI"]
   }
 ];

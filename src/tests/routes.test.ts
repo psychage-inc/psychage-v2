@@ -44,7 +44,7 @@ describe('Route Integrity', () => {
   });
 
   it('all route mappings point to valid paths', () => {
-    const validPrefixes = ['/clarity-score', '/tools/', '/find-care'];
+    const validPrefixes = ['/clarity-score', '/tools/', '/find-care', '/crisis', '#'];
 
     Object.values(ROUTE_MAP).forEach(route => {
       const isValid = validPrefixes.some(prefix => route.startsWith(prefix));

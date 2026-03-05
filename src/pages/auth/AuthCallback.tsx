@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '@/lib/supabaseClient';
-import { tokenStorage } from '@/lib/api';
 import { Loader2 } from 'lucide-react';
 import MeshGradient from '@/components/ui/MeshGradient';
 
@@ -23,12 +22,6 @@ const AuthCallback: React.FC = () => {
                 }
 
                 if (data.session) {
-                    // Store the tokens
-                    tokenStorage.setTokens({
-                        access_token: data.session.access_token,
-                        refresh_token: data.session.refresh_token,
-                    });
-
                     // Determine where to redirect based on user metadata
                     const userRole = data.session.user?.user_metadata?.role || 'patient';
 

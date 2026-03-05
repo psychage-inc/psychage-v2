@@ -1,20 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate, useSearchParams } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Lock, ArrowLeft, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Lock, ArrowLeft, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Label } from '@/components/ui/Label';
 import { Display, Text } from '@/components/ui/Typography';
 import { Alert, AlertDescription } from '@/components/ui/Alert';
-import { api } from '../../lib/api';
+import { supabase } from '@/lib/supabaseClient';
 import { cn } from '@/lib/utils';
 import MeshGradient from '@/components/ui/MeshGradient';
 import InteractiveCard from '@/components/ui/InteractiveCard';
 
 const UpdatePasswordPage = () => {
-    const [searchParams] = useSearchParams();
-    const token = searchParams.get('token');
     const navigate = useNavigate();
 
     const [password, setPassword] = useState('');
@@ -22,42 +20,122 @@ const UpdatePasswordPage = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const [isSuccess, setIsSuccess] = useState(false);
+    const [isReady, setIsReady] = useState(false);
+    const [isCheckingSession, setIsCheckingSession] = useState(true);
 
     useEffect(() => {
-        if (!token) {
-            setError("Invalid or missing reset token.");
-        }
-    }, [token]);
+        let mounted = true;
+        let pollTimer: ReturnType<typeof setInterval> | null = null;
+
+        // Check if the URL contains recovery indicators (hash fragment from
+        // Supabase implicit flow, or code param from PKCE flow).
+        const hash = window.location.hash;
+        const search = window.location.search;
+        const hasRecoveryParams =
+            hash.includes('type=recovery') ||
+            hash.includes('access_token') ||
+            search.includes('code=');
+
+        const markReady = () => {
+            if (!mounted) return;
+            setIsReady(true);
+            setIsCheckingSession(false);
+            setError(null);
+            if (pollTimer) clearInterval(pollTimer);
+        };
+
+        // Listen for auth state changes. The PASSWORD_RECOVERY event fires when
+        // Supabase processes the recovery token, but depending on timing it may
+        // arrive as SIGNED_IN instead (the global AuthContext listener may
+        // consume the event first). Accept both.
+        const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+            if (!mounted) return;
+            if ((event === 'PASSWORD_RECOVERY' || event === 'SIGNED_IN') && session) {
+                markReady();
+            }
+        });
+
+        // The PASSWORD_RECOVERY event may have fired before this listener
+        // registered (Supabase processes hash/code during client init). Poll
+        // getSession() to catch that case. Use 500ms intervals up to 5s.
+        const checkSession = async () => {
+            const { data: { session } } = await supabase.auth.getSession();
+            if (session) {
+                markReady();
+                return true;
+            }
+            return false;
+        };
+
+        // Immediate check
+        checkSession().then((found) => {
+            if (found || !mounted) return;
+
+            if (!hasRecoveryParams) {
+                // No recovery indicators in URL — user navigated here directly
+                if (mounted) {
+                    setError('Invalid or expired reset link. Please request a new password reset.');
+                    setIsCheckingSession(false);
+                }
+                return;
+            }
+
+            // Recovery params present — poll while Supabase exchanges them
+            let attempts = 0;
+            const MAX_ATTEMPTS = 10; // 10 × 500ms = 5 seconds
+            pollTimer = setInterval(async () => {
+                attempts++;
+                const found = await checkSession();
+                if (found || !mounted) {
+                    if (pollTimer) clearInterval(pollTimer);
+                    return;
+                }
+                if (attempts >= MAX_ATTEMPTS) {
+                    if (pollTimer) clearInterval(pollTimer);
+                    if (mounted) {
+                        setError('Invalid or expired reset link. Please request a new password reset.');
+                        setIsCheckingSession(false);
+                    }
+                }
+            }, 500);
+        });
+
+        return () => {
+            mounted = false;
+            if (pollTimer) clearInterval(pollTimer);
+            subscription.unsubscribe();
+        };
+    }, []);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setError(null);
 
-        if (!token) {
-            setError("Missing reset token");
-            return;
-        }
-
         if (password !== confirmPassword) {
-            setError("Passwords do not match");
+            setError('Passwords do not match');
             return;
         }
 
         if (password.length < 8) {
-            setError("Password must be at least 8 characters long");
+            setError('Password must be at least 8 characters long');
             return;
         }
 
         setIsLoading(true);
 
         try {
-            const response = await api.auth.confirmPasswordReset(token, password);
-            if (response.success) {
-                setIsSuccess(true);
-                // Optional: redirect after few seconds
-                setTimeout(() => navigate('/login', { state: { message: 'Password updated successfully. Please log in.' } }), 3000);
+            const { error: updateError } = await supabase.auth.updateUser({ password });
+
+            if (updateError) {
+                setError(updateError.message);
             } else {
-                setError(response.error || 'Failed to update password');
+                setIsSuccess(true);
+                // Sign out so the user logs in fresh with the new password
+                await supabase.auth.signOut();
+                setTimeout(
+                    () => navigate('/login', { state: { message: 'Password updated successfully. Please log in.' } }),
+                    3000,
+                );
             }
         } catch (err) {
             setError(err instanceof Error ? err.message : 'An unexpected error occurred');
@@ -69,6 +147,20 @@ const UpdatePasswordPage = () => {
     const isPasswordValid = password.length >= 8;
     const hasNumber = /\d/.test(password);
 
+    // Loading state while Supabase processes the recovery token
+    if (isCheckingSession) {
+        return (
+            <div className="min-h-screen flex items-center justify-center px-4 py-12 bg-background relative overflow-hidden">
+                <MeshGradient className="opacity-60" />
+                <div className="absolute inset-0 bg-background/20 backdrop-blur-[1px] pointer-events-none" />
+                <div className="text-center relative z-10 space-y-4">
+                    <Loader2 className="w-10 h-10 mx-auto text-primary animate-spin" />
+                    <Text className="text-text-secondary">Verifying your reset link...</Text>
+                </div>
+            </div>
+        );
+    }
+
     if (isSuccess) {
         return (
             <div className="min-h-screen flex items-center justify-center px-4 py-12 bg-background relative overflow-hidden">
@@ -78,7 +170,7 @@ const UpdatePasswordPage = () => {
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
+                    transition={{ duration: 0.5, ease: 'easeOut' }}
                     className="w-full max-w-md relative z-10"
                 >
                     <InteractiveCard
@@ -118,7 +210,7 @@ const UpdatePasswordPage = () => {
             <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
+                transition={{ duration: 0.5, ease: 'easeOut' }}
                 className="w-full max-w-md relative z-10"
             >
                 <div className="mb-8">
@@ -158,7 +250,14 @@ const UpdatePasswordPage = () => {
                         {error && (
                             <Alert variant="destructive" className="animate-in slide-in-from-top-2">
                                 <AlertCircle className="h-4 w-4" />
-                                <AlertDescription>{error}</AlertDescription>
+                                <AlertDescription>
+                                    {error}
+                                    {!isReady && (
+                                        <Link to="/reset-password" className="block mt-2 underline text-sm">
+                                            Request a new reset link
+                                        </Link>
+                                    )}
+                                </AlertDescription>
                             </Alert>
                         )}
 
@@ -172,7 +271,7 @@ const UpdatePasswordPage = () => {
                                     className="pl-11 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
-                                    disabled={isLoading}
+                                    disabled={isLoading || !isReady}
                                 />
                                 <Lock className="absolute left-3.5 top-3.5 h-5 w-5 text-text-tertiary group-focus-within:text-primary transition-colors" />
                             </div>
@@ -206,7 +305,7 @@ const UpdatePasswordPage = () => {
                                     className="pl-11 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
                                     value={confirmPassword}
                                     onChange={(e) => setConfirmPassword(e.target.value)}
-                                    disabled={isLoading}
+                                    disabled={isLoading || !isReady}
                                 />
                                 <Lock className="absolute left-3.5 top-3.5 h-5 w-5 text-text-tertiary group-focus-within:text-primary transition-colors" />
                             </div>
@@ -217,7 +316,7 @@ const UpdatePasswordPage = () => {
                             className="w-full h-12 text-base font-semibold shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all duration-300"
                             size="lg"
                             isLoading={isLoading}
-                            disabled={!!error && error !== "Passwords do not match" && !token}
+                            disabled={!isReady}
                         >
                             Update Password
                         </Button>

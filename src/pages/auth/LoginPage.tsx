@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Mail, Lock, AlertCircle, ArrowRight } from 'lucide-react';
+import { Mail, Lock, AlertCircle, ArrowRight, CheckCircle2 } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Label } from '@/components/ui/Label';
@@ -19,9 +19,20 @@ const LoginPage = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const [oauthLoading, setOauthLoading] = useState<'google' | 'apple' | null>(null);
+    const [infoMessage, setInfoMessage] = useState<string | null>(null);
 
     // Get the page they were trying to visit, or default to appropriate dashboard
     const from = location.state?.from?.pathname;
+
+    // Display messages passed via navigation state (e.g., from signup or password reset)
+    useEffect(() => {
+        const msg = location.state?.message;
+        if (msg) {
+            setInfoMessage(msg);
+            // Clear navigation state so message doesn't persist on reload
+            window.history.replaceState({}, '');
+        }
+    }, [location.state?.message]);
 
     const handleGoogleSignIn = async () => {
         setOauthLoading('google');
@@ -86,7 +97,13 @@ const LoginPage = () => {
                 const errorMessage = result.error || 'Login failed';
                 const lowerError = errorMessage.toLowerCase();
 
-                if (lowerError.includes('invalid') || lowerError.includes('credentials') || lowerError.includes('password')) {
+                if (import.meta.env.DEV) {
+                    console.warn('[Auth Debug] Supabase login error:', errorMessage);
+                }
+
+                if (lowerError.includes('email not confirmed') || lowerError.includes('not confirmed')) {
+                    setError('Your email address has not been confirmed. Please check your inbox for a confirmation link.');
+                } else if (lowerError.includes('invalid') || lowerError.includes('credentials') || lowerError.includes('password')) {
                     setError('Invalid email or password. Please check your credentials and try again.');
                 } else if (lowerError.includes('not found') || lowerError.includes('no user') || lowerError.includes('does not exist')) {
                     setError('No account found with this email. Would you like to sign up?');
@@ -150,6 +167,13 @@ const LoginPage = () => {
                     className="p-8 md:p-10 border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl"
                 >
                     <form onSubmit={handleSubmit} className="space-y-6">
+                        {infoMessage && (
+                            <Alert className="animate-in slide-in-from-top-2 border-emerald-500/30 bg-emerald-500/10">
+                                <CheckCircle2 className="h-4 w-4 text-emerald-500" />
+                                <AlertDescription className="text-emerald-400">{infoMessage}</AlertDescription>
+                            </Alert>
+                        )}
+
                         {error && (
                             <Alert variant="destructive" className="animate-in slide-in-from-top-2">
                                 <AlertCircle className="h-4 w-4" />

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Smile, Moon, BrainCircuit, Compass, Bookmark } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { hoverLift } from '@/lib/animations';
 import type { MoodEntry } from '@/services/moodService';
 import type { SleepEntry } from '@/services/sleepService';
 
@@ -31,7 +32,7 @@ function generateActions(props: SmartActionsHubProps): SmartAction[] {
     if (!props.todayMood) {
         actions.push({
             id: 'log-mood',
-            icon: <Smile size={18} />,
+            icon: <Smile size={16} />,
             label: "Log today's mood",
             description: 'How are you feeling right now?',
             linkTo: '#mood-checkin',
@@ -43,7 +44,7 @@ function generateActions(props: SmartActionsHubProps): SmartAction[] {
     if (!props.todaySleep) {
         actions.push({
             id: 'log-sleep',
-            icon: <Moon size={18} />,
+            icon: <Moon size={16} />,
             label: 'How did you sleep?',
             description: "Log last night's sleep",
             linkTo: '/tools/sleep-architect',
@@ -59,7 +60,7 @@ function generateActions(props: SmartActionsHubProps): SmartAction[] {
     if (daysSinceClarity >= 7) {
         actions.push({
             id: 'clarity-checkin',
-            icon: <BrainCircuit size={18} />,
+            icon: <BrainCircuit size={16} />,
             label: daysSinceClarity === Infinity ? 'Take your first check-in' : 'Weekly check-in',
             description: daysSinceClarity === Infinity
                 ? 'Measure your cognitive wellness'
@@ -73,7 +74,7 @@ function generateActions(props: SmartActionsHubProps): SmartAction[] {
     if (props.navigatorCount === 0) {
         actions.push({
             id: 'explore-navigator',
-            icon: <Compass size={18} />,
+            icon: <Compass size={16} />,
             label: 'Explore Symptom Navigator',
             description: 'Learn about patterns in your experiences',
             linkTo: '/tools/symptom-navigator',
@@ -85,7 +86,7 @@ function generateActions(props: SmartActionsHubProps): SmartAction[] {
     if (props.bookmarkCount > 0) {
         actions.push({
             id: 'check-bookmarks',
-            icon: <Bookmark size={18} />,
+            icon: <Bookmark size={16} />,
             label: 'Check saved articles',
             description: `${props.bookmarkCount} saved item${props.bookmarkCount !== 1 ? 's' : ''}`,
             linkTo: '/dashboard/bookmarks',
@@ -113,27 +114,28 @@ const SmartActionsHub: React.FC<SmartActionsHubProps> = (props) => {
 
     return (
         <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.05 }}
+            transition={{ delay: 0.06, duration: 0.35 }}
         >
-            <div className="flex gap-3 overflow-x-auto pb-1 scrollbar-hide">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 {actions.map((action, idx) => {
                     const content = (
                         <motion.div
-                            initial={{ opacity: 0, x: -10 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: 0.05 + idx * 0.05 }}
-                            className="p-4 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md
-                                       hover:bg-white/10 transition-all group cursor-pointer h-full"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 0.08 + idx * 0.04 }}
+                            {...hoverLift}
+                            className="p-4 rounded-xl border border-white/[0.08] bg-white/[0.03]
+                                       hover:bg-white/[0.07] hover:border-white/[0.14] transition-all duration-200 group cursor-pointer h-full"
                         >
-                            <div className={cn('w-9 h-9 rounded-xl flex items-center justify-center mb-3', action.color)}>
+                            <div className={cn('w-8 h-8 rounded-lg flex items-center justify-center mb-2.5', action.color)}>
                                 {action.icon}
                             </div>
-                            <p className="font-medium text-text-primary text-sm group-hover:text-primary transition-colors">
+                            <p className="font-medium text-text-primary text-sm leading-snug group-hover:text-primary transition-colors">
                                 {action.label}
                             </p>
-                            <p className="text-xs text-text-tertiary mt-1">{action.description}</p>
+                            <p className="text-xs text-text-tertiary/70 mt-1 leading-relaxed">{action.description}</p>
                         </motion.div>
                     );
 
@@ -142,7 +144,7 @@ const SmartActionsHub: React.FC<SmartActionsHubProps> = (props) => {
                             <button
                                 key={action.id}
                                 onClick={() => handleClick(action.linkTo)}
-                                className="flex-shrink-0 flex-1 min-w-[180px] text-left"
+                                className="text-left"
                             >
                                 {content}
                             </button>
@@ -150,7 +152,7 @@ const SmartActionsHub: React.FC<SmartActionsHubProps> = (props) => {
                     }
 
                     return (
-                        <Link key={action.id} to={action.linkTo} className="flex-shrink-0 flex-1 min-w-[180px]">
+                        <Link key={action.id} to={action.linkTo}>
                             {content}
                         </Link>
                     );

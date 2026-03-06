@@ -1,5 +1,6 @@
 import { Tool } from '../types/models';
 import api from '../lib/api';
+import { withFallback } from '../lib/withFallback';
 import { useMemo } from 'react';
 
 // Fallback to mock data if API fails
@@ -28,45 +29,38 @@ function mapToTool(data: ToolRow): Tool {
 }
 
 export const toolService = {
-    getAll: async (): Promise<Tool[]> => {
-        try {
-            const response = await api.tools.getAll();
-            if (!response.success || !response.data) {
-                console.warn('API returned no data, using mock tools');
-                return mockTools as unknown as Tool[];
-            }
-            return (response.data as ToolRow[]).map(mapToTool);
-        } catch (error) {
-            console.error('Failed to fetch tools from API, using mock data:', error);
-            return mockTools as unknown as Tool[];
-        }
-    },
+    getAll: async (): Promise<Tool[]> =>
+        withFallback(
+            async () => {
+                const response = await api.tools.getAll();
+                if (!response.success || !response.data) return mockTools as unknown as Tool[];
+                return (response.data as ToolRow[]).map(mapToTool);
+            },
+            mockTools as unknown as Tool[],
+            'toolService.getAll'
+        ),
 
-    getById: async (id: number): Promise<Tool | undefined> => {
-        try {
-            const response = await api.tools.getById(id);
-            if (!response.success || !response.data) {
-                return (mockTools as unknown as Tool[]).find(t => t.id === id);
-            }
-            return mapToTool(response.data as ToolRow);
-        } catch (error) {
-            console.error('Failed to fetch tool from API, using mock data:', error);
-            return (mockTools as unknown as Tool[]).find(t => t.id === id);
-        }
-    },
+    getById: async (id: number): Promise<Tool | undefined> =>
+        withFallback(
+            async () => {
+                const response = await api.tools.getById(id);
+                if (!response.success || !response.data) return (mockTools as unknown as Tool[]).find(t => t.id === id);
+                return mapToTool(response.data as ToolRow);
+            },
+            () => (mockTools as unknown as Tool[]).find(t => t.id === id),
+            'toolService.getById'
+        ),
 
-    getByCategory: async (category: string): Promise<Tool[]> => {
-        try {
-            const response = await api.tools.getByCategory(category);
-            if (!response.success || !response.data) {
-                return (mockTools as unknown as Tool[]).filter(t => t.category.toLowerCase() === category.toLowerCase());
-            }
-            return (response.data as ToolRow[]).map(mapToTool);
-        } catch (error) {
-            console.error('Failed to fetch tools by category from API, using mock data:', error);
-            return (mockTools as unknown as Tool[]).filter(t => t.category.toLowerCase() === category.toLowerCase());
-        }
-    }
+    getByCategory: async (category: string): Promise<Tool[]> =>
+        withFallback(
+            async () => {
+                const response = await api.tools.getByCategory(category);
+                if (!response.success || !response.data) return (mockTools as unknown as Tool[]).filter(t => t.category.toLowerCase() === category.toLowerCase());
+                return (response.data as ToolRow[]).map(mapToTool);
+            },
+            () => (mockTools as unknown as Tool[]).filter(t => t.category.toLowerCase() === category.toLowerCase()),
+            'toolService.getByCategory'
+        ),
 };
 
 // Hook wrapper for React components

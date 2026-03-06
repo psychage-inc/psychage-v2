@@ -17,7 +17,7 @@ export const SymptomDetailsProgress: React.FC<SymptomDetailsProgressProps> = ({
     return (
         <div className={cn("space-y-2", className)}>
             <div className="flex items-center justify-between text-sm">
-                <span className="text-charcoal-200 font-medium">
+                <span className="text-text-secondary font-medium">
                     Progress
                 </span>
                 <span className="text-teal-400 font-semibold">
@@ -25,7 +25,7 @@ export const SymptomDetailsProgress: React.FC<SymptomDetailsProgressProps> = ({
                 </span>
             </div>
             <div
-                className="w-full h-2 bg-white/10 rounded-full overflow-hidden shadow-inner"
+                className="w-full h-2 bg-surface-hover/50 rounded-full overflow-hidden shadow-inner"
                 role="progressbar"
                 aria-valuenow={current}
                 aria-valuemin={0}

@@ -77,7 +77,7 @@ export const EnhancedProgressBar: React.FC<EnhancedProgressBarProps> = ({
     return (
         <>
             <div
-                className="fixed top-0 left-0 right-0 bg-charcoal-950/90 backdrop-blur-md border-b border-white/5 z-50"
+                className="fixed top-0 left-0 right-0 bg-background/90 backdrop-blur-md border-b border-border z-50"
                 role="navigation"
                 aria-label="Navigator progress"
             >
@@ -107,8 +107,8 @@ export const EnhancedProgressBar: React.FC<EnhancedProgressBarProps> = ({
                                         onClick={() => isClickable && handleStepClick(step.id)}
                                         disabled={!isClickable}
                                         className={cn(
-                                            "flex items-center gap-2 px-3 py-1.5 rounded-lg transition-all duration-300 group",
-                                            isClickable && "hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 cursor-pointer",
+                                            "flex items-center gap-2 px-2 sm:px-3 py-2 rounded-lg transition-all duration-300 group min-h-[44px] min-w-[44px] justify-center sm:justify-start",
+                                            isClickable && "hover:bg-surface-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 cursor-pointer",
                                             !isClickable && "cursor-default"
                                         )}
                                         aria-label={`${step.label}. ${isCurrent ? 'Current step' : isCompleted ? 'Completed' : 'Not started'}`}
@@ -117,10 +117,10 @@ export const EnhancedProgressBar: React.FC<EnhancedProgressBarProps> = ({
                                         {/* Step indicator */}
                                         <motion.div
                                             className={cn(
-                                                "flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 border-2",
+                                                "flex-shrink-0 w-8 h-8 sm:w-7 sm:h-7 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 border-2",
                                                 isCompleted && !isCurrent && "bg-teal-500/20 border-teal-500 text-teal-400",
                                                 isCurrent && "bg-teal-500 border-teal-500 text-white shadow-[0_0_10px_rgba(20,184,166,0.5)]",
-                                                !isCompleted && !isCurrent && "bg-charcoal-800 border-white/20 text-charcoal-400"
+                                                !isCompleted && !isCurrent && "bg-surface-hover border-border-hover text-text-tertiary"
                                             )}
                                             animate={newlyCompleted.has(step.id) ? {
                                                 boxShadow: [
@@ -142,10 +142,10 @@ export const EnhancedProgressBar: React.FC<EnhancedProgressBarProps> = ({
                                         <span
                                             className={cn(
                                                 "hidden sm:inline text-sm font-medium transition-colors whitespace-nowrap",
-                                                isCurrent && "text-white font-semibold",
+                                                isCurrent && "text-text-primary font-semibold",
                                                 isCompleted && !isCurrent && "text-teal-300",
-                                                !isCompleted && !isCurrent && "text-charcoal-400",
-                                                isClickable && "group-hover:text-white"
+                                                !isCompleted && !isCurrent && "text-text-tertiary",
+                                                isClickable && "group-hover:text-text-primary"
                                             )}
                                         >
                                             {step.shortLabel}
@@ -154,7 +154,7 @@ export const EnhancedProgressBar: React.FC<EnhancedProgressBarProps> = ({
 
                                     {/* Connector line */}
                                     {index < visibleSteps.length - 1 && (
-                                        <div className="hidden md:block flex-1 h-0.5 bg-white/10 relative overflow-hidden">
+                                        <div className="hidden md:block flex-1 h-0.5 bg-surface-hover/50 relative overflow-hidden">
                                             <motion.div
                                                 className="absolute inset-y-0 left-0 bg-teal-500/50"
                                                 initial={{ width: 0 }}

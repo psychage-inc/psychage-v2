@@ -1,13 +1,13 @@
 import React from 'react';
 import { cn } from '../../lib/utils';
 
-/** Dark-theme skeleton primitive matching the Navigator's glass-morphism style. */
+/** Theme-aware skeleton primitive matching the Navigator's glass-morphism style. */
 const NavSkeleton: React.FC<{ className?: string }> = ({ className }) => (
     <div
-        className={cn('animate-pulse rounded-md', className)}
+        className={cn('animate-pulse rounded-md bg-surface-hover/50', className)}
         style={{
             backgroundImage:
-                'linear-gradient(90deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.05) 100%)',
+                'linear-gradient(90deg, var(--navigator-glass-bg) 0%, var(--navigator-glass-border) 50%, var(--navigator-glass-bg) 100%)',
             backgroundSize: '200% 100%',
         }}
     />
@@ -69,9 +69,24 @@ export const SkeletonSymptomList: React.FC = () => (
     </div>
 );
 
+/** Matches DurationSeverityScreen: symptom card + question cards. */
+export const SkeletonSymptomDetails: React.FC = () => (
+    <div className="max-w-3xl mx-auto py-8 px-4 sm:px-6">
+        <NavSkeleton className="h-9 w-2/3 rounded-lg mb-3" />
+        <NavSkeleton className="h-5 w-1/2 rounded mb-6" />
+        <NavSkeleton className="h-2 w-full rounded-full mb-8" />
+        <NavSkeleton className="h-24 w-full rounded-2xl mb-6" />
+        <div className="space-y-6">
+            {[0, 1, 2].map(i => (
+                <NavSkeleton key={i} className="h-32 w-full rounded-2xl" />
+            ))}
+        </div>
+    </div>
+);
+
 /** Matches ResultCard layout. */
 export const SkeletonResultCard: React.FC = () => (
-    <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10">
+    <div className="bg-surface/50 backdrop-blur-xl rounded-2xl p-6 border border-border">
         <div className="flex items-center justify-between mb-4">
             <NavSkeleton className="h-7 w-48 rounded" />
             <div className="flex gap-1">

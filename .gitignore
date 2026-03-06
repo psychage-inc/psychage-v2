@@ -36,3 +36,7 @@ storybook-static
 # Test reports
 playwright-report
 test-results
+
+# Drawbridge (visual annotation tool)
+.moat/
+.claude/

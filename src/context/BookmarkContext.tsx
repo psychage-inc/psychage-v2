@@ -11,13 +11,14 @@ export { BookmarkContext };
 
 export const BookmarkProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [bookmarks, setBookmarks] = useState<(string | number)[]>(() => {
-    const saved = localStorage.getItem('psychage_bookmarks');
-    if (saved) {
-      try {
-        return JSON.parse(saved);
-      } catch (e) {
-        console.error("Failed to parse bookmarks from storage", e);
+    try {
+      const saved = localStorage.getItem('psychage_bookmarks');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed)) return parsed;
       }
+    } catch (e) {
+      console.error('Failed to parse bookmarks from storage', e);
     }
     return [];
   });
@@ -28,7 +29,11 @@ export const BookmarkProvider: React.FC<{ children: ReactNode }> = ({ children }
         ? prev.filter(b => b !== id)
         : [...prev, id];
 
-      localStorage.setItem('psychage_bookmarks', JSON.stringify(newBookmarks));
+      try {
+        localStorage.setItem('psychage_bookmarks', JSON.stringify(newBookmarks));
+      } catch {
+        // QuotaExceededError — degrade gracefully, state still updates in memory
+      }
       return newBookmarks;
     });
   };

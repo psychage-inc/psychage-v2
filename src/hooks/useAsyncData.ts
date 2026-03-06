@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, DependencyList } from 'react';
+import { useState, useEffect, useCallback, useRef, DependencyList } from 'react';
 import { AppError, handleApiError } from '@/utils/errorHandling';
 
 interface AsyncState<T> {
@@ -22,6 +22,7 @@ export function useAsyncData<T>(
     options: UseAsyncDataOptions = {}
 ): AsyncState<T> & { refetch: () => Promise<void>; reset: () => void } {
     const { immediate = true, onSuccess, onError } = options;
+    const mountedRef = useRef(true);
 
     const [state, setState] = useState<AsyncState<T>>({
         data: null,
@@ -29,14 +30,22 @@ export function useAsyncData<T>(
         error: null
     });
 
+    // Track mount status to prevent setState after unmount
+    useEffect(() => {
+        mountedRef.current = true;
+        return () => { mountedRef.current = false; };
+    }, []);
+
     const fetchData = useCallback(async (): Promise<void> => {
         setState(prev => ({ ...prev, loading: true, error: null }));
 
         try {
             const result = await fetcher();
+            if (!mountedRef.current) return;
             setState({ data: result, loading: false, error: null });
             onSuccess?.(result);
         } catch (err) {
+            if (!mountedRef.current) return;
             const appError = handleApiError(err);
             console.error('Data fetch failed:', appError);
             setState({ data: null, loading: false, error: appError });

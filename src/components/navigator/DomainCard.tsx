@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Activity, Brain, Heart, Zap, LucideIcon, CheckCircle2 } from 'lucide-react';
 import { cn } from '../../lib/utils';
 import { SymptomDomain } from '../../lib/navigator/types';
@@ -37,13 +38,17 @@ export const DomainCard: React.FC<DomainCardProps> = ({
     const Gradient = DOMAIN_GRADIENTS[domain];
 
     return (
+        <motion.div
+            animate={isSelected ? { scale: [1, 1.03, 1] } : undefined}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
+        >
         <InteractiveCard
             onClick={() => onToggle(domain)}
             className={cn(
-                "w-full text-left p-6 transition-all duration-500 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal-900 cursor-pointer overflow-hidden relative rounded-2xl backdrop-blur-xl",
+                "w-full text-left p-6 transition-all duration-300 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 focus-visible:ring-offset-background cursor-pointer overflow-hidden relative rounded-2xl backdrop-blur-xl",
                 isSelected
                     ? "bg-teal-900/30 border border-teal-400/50 shadow-[0_0_30px_rgba(20,184,166,0.15)]"
-                    : "bg-white/5 border border-white/10 hover:border-white/20 hover:bg-white/10 shadow-lg"
+                    : "bg-surface/50 border border-border hover:border-border-hover hover:bg-surface-hover shadow-lg"
             )}
             role="button"
             aria-pressed={isSelected}
@@ -81,7 +86,7 @@ export const DomainCard: React.FC<DomainCardProps> = ({
                         "p-3 rounded-xl transition-colors duration-300 backdrop-blur-sm",
                         isSelected
                             ? "bg-teal-500/20 text-teal-300 border border-teal-500/30"
-                            : "bg-white/5 text-charcoal-300 border border-white/5 group-hover:bg-white/10 group-hover:text-charcoal-100"
+                            : "bg-surface/50 text-text-secondary border border-border group-hover:bg-surface-hover group-hover:text-text-primary"
                     )}>
                         <Icon className="w-8 h-8" strokeWidth={1.5} />
                     </div>
@@ -95,19 +100,20 @@ export const DomainCard: React.FC<DomainCardProps> = ({
                 </div>
 
                 <h3 className={cn(
-                    "font-serif text-xl font-medium mb-2 transition-colors",
-                    isSelected ? "text-white" : "text-charcoal-100"
+                    "font-display text-xl font-medium mb-2 transition-colors",
+                    isSelected ? "text-white" : "text-text-primary"
                 )}>
                     {title}
                 </h3>
 
                 <p className={cn(
                     "text-sm leading-relaxed transition-colors",
-                    isSelected ? "text-teal-50" : "text-charcoal-300"
+                    isSelected ? "text-teal-50" : "text-text-secondary"
                 )}>
                     {description}
                 </p>
             </div>
         </InteractiveCard>
+        </motion.div>
     );
 };

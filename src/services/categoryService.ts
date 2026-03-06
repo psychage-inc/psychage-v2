@@ -1,5 +1,6 @@
 import { Category } from '../types/models';
 import { supabase } from '../lib/supabaseClient';
+import { queryWithFallback, queryOneWithFallback } from '../lib/withFallback';
 import { useMemo } from 'react';
 
 // Fallback to mock data if API fails or for development
@@ -7,53 +8,29 @@ import { categories as mockCategories } from '../data/categories';
 import { iconMap, defaultIcon } from './categoryIconMapper';
 
 export const categoryService = {
-    getAll: async (): Promise<Category[]> => {
-        try {
-            const { data, error } = await supabase
-                .from('categories')
-                .select('*');
+    getAll: async (): Promise<Category[]> =>
+        queryWithFallback(
+            () => supabase.from('categories').select('*'),
+            (row: DBCategory) => mapToCategory(row),
+            mockCategories,
+            'categoryService.getAll'
+        ),
 
-            if (error) throw error;
-            return (data as unknown as DBCategory[] || []).map(mapToCategory);
-        } catch (error) {
-            console.error('Failed to fetch categories from Supabase, using mock data:', error);
-            return mockCategories;
-        }
-    },
+    getBySlug: async (slug: string): Promise<Category | undefined> =>
+        queryOneWithFallback(
+            () => supabase.from('categories').select('*').eq('slug', slug).single(),
+            (row: DBCategory) => mapToCategory(row),
+            () => mockCategories.find(c => c.slug === slug),
+            'categoryService.getBySlug'
+        ),
 
-    getBySlug: async (slug: string): Promise<Category | undefined> => {
-        try {
-            const { data, error } = await supabase
-                .from('categories')
-                .select('*')
-                .eq('slug', slug)
-                .single();
-
-            if (error) {
-                if (error.code === 'PGRST116') return undefined; // Not found
-                throw error;
-            }
-            return mapToCategory(data as unknown as DBCategory);
-        } catch (error) {
-            console.error('Failed to fetch category from Supabase, using mock data:', error);
-            return mockCategories.find(c => c.slug === slug);
-        }
-    },
-
-    getByGroup: async (group: string): Promise<Category[]> => {
-        try {
-            const { data, error } = await supabase
-                .from('categories')
-                .select('*')
-                .eq('group', group);
-
-            if (error) throw error;
-            return (data as unknown as DBCategory[] || []).map(mapToCategory);
-        } catch (error) {
-            console.error('Failed to fetch categories by group from Supabase, using mock data:', error);
-            return mockCategories.filter(c => c.group === group);
-        }
-    }
+    getByGroup: async (group: string): Promise<Category[]> =>
+        queryWithFallback(
+            () => supabase.from('categories').select('*').eq('group', group),
+            (row: DBCategory) => mapToCategory(row),
+            () => mockCategories.filter(c => c.group === group),
+            'categoryService.getByGroup'
+        ),
 };
 
 interface DBCategory {

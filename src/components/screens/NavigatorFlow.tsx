@@ -105,6 +105,25 @@ export const NavigatorFlow: React.FC = () => {
         return () => window.removeEventListener('popstate', handlePopState);
     }, [state.currentStep, state.selectedSymptoms.size, state.selectedDomains.length, dispatch]);
 
+    // Keyboard shortcut: Escape to go back one step (not on welcome/processing)
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key !== 'Escape') return;
+            const step = state.currentStep as NavigatorStep;
+            if (step === 'welcome' || step === 'processing') return;
+            // Don't interfere when a dialog/modal is open
+            if (document.querySelector('[role="alertdialog"], [role="dialog"]')) return;
+
+            const currentIndex = STEP_ORDER.indexOf(step);
+            if (currentIndex > 0) {
+                e.preventDefault();
+                dispatch({ type: 'SET_STEP', payload: STEP_ORDER[currentIndex - 1] });
+            }
+        };
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [state.currentStep, dispatch]);
+
     // Handle step navigation from enhanced progress bar
     const handleStepClick = (targetStep: NavigatorStep) => {
         // Clear results if navigating away from results

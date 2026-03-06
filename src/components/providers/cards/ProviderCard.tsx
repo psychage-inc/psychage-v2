@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { MapPin, Video, Users, Building2, Phone, Mail, Globe, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Badge from '@/components/ui/Badge';
+import { hoverLift } from '@/lib/animations';
 import type { ProviderCardData } from '@/lib/providers/types';
 import { VerificationBadge } from '../shared/VerificationBadge';
 import { SpecialtyTag } from '../shared/SpecialtyTag';
@@ -42,7 +43,7 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
 
   return (
     <motion.div
-      whileHover={{ y: -4 }}
+      {...hoverLift}
       className={`bg-white dark:bg-gray-900 rounded-2xl p-5 border shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full group ${
         provider.tier === 'premium'
           ? 'border-l-4 border-l-amber-400 border-t-gray-100 border-r-gray-100 border-b-gray-100 dark:border-l-amber-500 dark:border-t-gray-800 dark:border-r-gray-800 dark:border-b-gray-800'

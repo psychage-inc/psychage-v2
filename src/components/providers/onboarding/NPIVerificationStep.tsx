@@ -7,7 +7,7 @@ import { useNPIVerification } from '@/hooks/useNPIVerification';
 import type { NPIVerificationResult } from '@/lib/providers/types';
 
 interface NPIVerificationStepProps {
-  onVerified: (result: NPIVerificationResult) => void;
+  onVerified: (result: NPIVerificationResult, npiNumber: string) => void;
   label?: string;
   description?: string;
 }
@@ -26,7 +26,7 @@ const NPIVerificationStep: React.FC<NPIVerificationStepProps> = ({
     if (!isValidFormat) return;
     const verificationResult = await verify(npiInput);
     if (verificationResult.verified) {
-      onVerified(verificationResult);
+      onVerified(verificationResult, npiInput);
     }
   };
 

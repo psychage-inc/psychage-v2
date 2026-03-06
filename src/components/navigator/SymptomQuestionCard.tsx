@@ -20,23 +20,23 @@ export const SymptomQuestionCard: React.FC<SymptomQuestionCardProps> = ({
     return (
         <div
             className={cn(
-                "relative rounded-3xl transition-all duration-700 overflow-hidden outline-none backdrop-blur-2xl",
+                "relative rounded-3xl transition-all duration-500 overflow-hidden outline-none backdrop-blur-2xl",
                 isActive
-                    ? "bg-white/10 border border-teal-400/50 shadow-[0_0_40px_rgba(20,184,166,0.2)]"
+                    ? "bg-surface-hover/50 border border-teal-400/50 shadow-[0_0_40px_rgba(20,184,166,0.2)]"
                     : isCompleted
-                        ? "bg-white/5 border border-white/10 opacity-70 hover:opacity-100 transition-opacity"
-                        : "bg-white/5 border border-transparent opacity-40 pointer-events-none" // Upcoming
+                        ? "bg-surface/50 border border-border opacity-70 hover:opacity-100 transition-opacity"
+                        : "bg-surface/50 border border-transparent opacity-40 pointer-events-none" // Upcoming
             )}
             aria-current={isActive ? "step" : undefined}
             aria-hidden={!isActive && !isCompleted ? true : undefined}
         >
             <div className={cn("p-6 sm:p-8", !isActive && "pointer-events-none")}>
                 <div className="mb-6">
-                    <h3 className="text-xl sm:text-2xl font-serif font-medium text-white mb-2">
+                    <h3 className="text-xl sm:text-2xl font-display font-medium text-text-primary mb-2">
                         {title}
                     </h3>
                     {description && (
-                        <p className="text-charcoal-300">
+                        <p className="text-text-secondary">
                             {description}
                         </p>
                     )}

@@ -62,13 +62,13 @@ const CustomTooltip = ({ active, payload, label }: { active?: boolean; payload?:
     if (!active || !payload || !payload.length) return null;
 
     return (
-        <div className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-md p-3 rounded-xl border border-gray-100 dark:border-gray-700 shadow-xl">
-            <p className="font-bold text-gray-900 dark:text-gray-100 text-sm mb-1.5">{label}</p>
+        <div className="bg-surface/95 backdrop-blur-lg p-3 rounded-xl border border-white/[0.1] shadow-xl">
+            <p className="font-semibold text-text-primary text-xs mb-1.5 tracking-tight">{label}</p>
             {payload.map((item, idx) => {
                 const config = METRIC_CONFIG.find(m => m.dataKey === item.dataKey);
                 return (
                     <p key={idx} className="text-xs font-medium flex items-center gap-1.5" style={{ color: item.color }}>
-                        <span className="w-2 h-2 rounded-full inline-block" style={{ backgroundColor: item.color }} />
+                        <span className="w-1.5 h-1.5 rounded-full inline-block" style={{ backgroundColor: item.color }} />
                         {config?.label}: {config?.format(item.value) ?? item.value}
                     </p>
                 );
@@ -107,23 +107,26 @@ const MultiMetricChart: React.FC<MultiMetricChartProps> = ({ data, availableMetr
 
     return (
         <div className="w-full h-full min-h-[350px] flex flex-col">
-            <div className="flex items-center justify-between mb-6 flex-wrap gap-2">
-                <h3 className="font-bold text-text-primary text-lg">Wellness Trends</h3>
+            <div className="flex items-center justify-between mb-5 flex-wrap gap-2">
+                <div>
+                    <h3 className="font-semibold text-text-primary text-sm tracking-tight">Wellness Trends</h3>
+                    <p className="text-xs text-text-tertiary/70 mt-0.5">Last 7 days</p>
+                </div>
                 <div className="flex gap-2">
                     {visibleMetrics.map(metric => (
                         <button
                             key={metric.key}
                             onClick={() => toggleMetric(metric.key)}
                             className={cn(
-                                'px-3 py-1.5 rounded-full text-xs font-medium transition-all border flex items-center gap-1.5',
+                                'px-3 py-2 rounded-lg text-xs font-medium transition-all border flex items-center gap-1.5 min-h-[36px]',
                                 activeMetrics.has(metric.key)
                                     ? `${metric.activeBg} ${metric.activeText} ${metric.activeBorder}`
-                                    : 'bg-surface-hover text-text-tertiary border-transparent hover:text-text-secondary'
+                                    : 'bg-transparent text-text-tertiary/60 border-white/[0.06] hover:text-text-secondary hover:border-white/[0.12]'
                             )}
                         >
                             <span
-                                className="w-2 h-2 rounded-full inline-block"
-                                style={{ backgroundColor: activeMetrics.has(metric.key) ? metric.color : '#6b7280' }}
+                                className="w-2 h-2 rounded-full inline-block transition-colors"
+                                style={{ backgroundColor: activeMetrics.has(metric.key) ? metric.color : 'rgba(107,114,128,0.4)' }}
                             />
                             {metric.label}
                         </button>

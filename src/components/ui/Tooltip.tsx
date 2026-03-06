@@ -1,11 +1,6 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { clsx, type ClassValue } from 'clsx';
-import { twMerge } from 'tailwind-merge';
-
-function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
-}
+import React from 'react';
+import * as TooltipPrimitive from '@radix-ui/react-tooltip';
+import { cn } from '@/lib/utils';
 
 interface TooltipProps {
   content: string;
@@ -15,49 +10,42 @@ interface TooltipProps {
   delay?: number;
 }
 
-const Tooltip: React.FC<TooltipProps> = ({ 
-  content, 
-  children, 
-  position = 'bottom', 
+const Tooltip: React.FC<TooltipProps> = ({
+  content,
+  children,
+  position = 'bottom',
   className,
-  delay = 0.4 
+  delay = 0.4
 }) => {
-  const [isVisible, setIsVisible] = useState(false);
+  // Radix expects milliseconds
+  const delayMs = delay < 10 ? delay * 1000 : delay;
 
   return (
-    <div 
-      className={cn("relative flex items-center justify-center", className)}
-      onMouseEnter={() => setIsVisible(true)}
-      onMouseLeave={() => setIsVisible(false)}
-      onFocus={() => setIsVisible(true)}
-      onBlur={() => setIsVisible(false)}
-    >
-      {children}
-      <AnimatePresence>
-        {isVisible && (
-          <motion.div
-            initial={{ opacity: 0, y: position === 'top' ? 4 : -4, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 0.2, delay: delay, ease: "easeOut" }}
+    <TooltipPrimitive.Provider delayDuration={delayMs}>
+      <TooltipPrimitive.Root>
+        <TooltipPrimitive.Trigger asChild>
+          <span className={cn("inline-flex items-center justify-center", className)}>
+            {children}
+          </span>
+        </TooltipPrimitive.Trigger>
+        <TooltipPrimitive.Portal>
+          <TooltipPrimitive.Content
+            side={position === 'top' ? 'top' : 'bottom'}
+            sideOffset={8}
             className={cn(
-              "absolute left-1/2 -translate-x-1/2 z-[150]",
-              "px-3 py-1.5 bg-gray-900/95 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-wider rounded-lg shadow-xl whitespace-nowrap pointer-events-none border border-white/10",
-              position === 'top' ? "bottom-full mb-2" : "top-full mt-2"
+              "z-[150] px-3 py-1.5 rounded-lg shadow-xl whitespace-nowrap pointer-events-none",
+              "bg-gray-900/95 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-wider",
+              "border border-white/10",
+              "transition-opacity duration-200 ease-out",
+              "data-[state=delayed-open]:opacity-100 data-[state=closed]:opacity-0"
             )}
           >
             {content}
-            {/* Arrow */}
-            <div 
-              className={cn(
-                "absolute left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-900/95 border-l border-t border-white/10 rotate-45",
-                position === 'top' ? "bottom-[-5px] -mb-px border-l-0 border-t-0 border-r border-b" : "top-[-5px] -mt-px"
-              )} 
-            />
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+            <TooltipPrimitive.Arrow className="fill-gray-900/95" />
+          </TooltipPrimitive.Content>
+        </TooltipPrimitive.Portal>
+      </TooltipPrimitive.Root>
+    </TooltipPrimitive.Provider>
   );
 };
 

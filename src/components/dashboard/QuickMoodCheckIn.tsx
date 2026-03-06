@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Smile, ArrowRight } from 'lucide-react';
-import InteractiveCard from '@/components/ui/InteractiveCard';
 import Button from '@/components/ui/Button';
 import { useToast } from '@/context/ToastContext';
 import { moodService, type MoodEntry } from '@/services/moodService';
@@ -59,19 +58,21 @@ const QuickMoodCheckIn: React.FC<QuickMoodCheckInProps> = ({ userId, todayEntry,
 
     return (
         <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.08 }}
+            transition={{ delay: 0.1, duration: 0.35 }}
             id="mood-checkin"
         >
-            <InteractiveCard className="p-6 bg-white/5 border-white/10 backdrop-blur-md">
+            <div className="p-5 rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-md">
                 <div className="flex items-center justify-between mb-4">
-                    <h3 className="font-bold text-text-primary flex items-center gap-2 text-lg">
-                        <Smile size={20} className="text-amber-400" />
-                        How are you feeling?
-                    </h3>
+                    <div className="flex items-center gap-2">
+                        <Smile size={18} className="text-amber-400" />
+                        <h3 className="font-semibold text-text-primary text-sm tracking-tight">
+                            How are you feeling?
+                        </h3>
+                    </div>
                     {todayEntry && (
-                        <span className="text-xs text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20">
+                        <span className="text-[10px] text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20 font-medium">
                             Logged today
                         </span>
                     )}
@@ -79,21 +80,21 @@ const QuickMoodCheckIn: React.FC<QuickMoodCheckInProps> = ({ userId, todayEntry,
 
                 {!todayEntry ? (
                     <>
-                        <div className="flex justify-between gap-2 mb-4">
+                        <div className="flex justify-between gap-2 mb-3">
                             {MOOD_OPTIONS.map(option => (
                                 <motion.button
                                     key={option.value}
                                     onClick={() => handleSelect(option.value)}
-                                    whileTap={{ scale: 0.9 }}
+                                    whileTap={{ scale: 0.92 }}
                                     className={cn(
-                                        'flex-1 flex flex-col items-center gap-1.5 p-3 rounded-2xl transition-all border',
+                                        'flex-1 flex flex-col items-center gap-1.5 py-2.5 px-2 rounded-xl transition-all border',
                                         selectedMood === option.value
-                                            ? 'bg-primary/15 border-primary/40 ring-2 ring-primary/20'
-                                            : 'bg-surface-hover border-white/5 hover:bg-surface-active hover:border-white/10'
+                                            ? 'bg-primary/12 border-primary/30 ring-1 ring-primary/20'
+                                            : 'bg-white/[0.03] border-white/[0.06] hover:bg-white/[0.06] hover:border-white/[0.1]'
                                     )}
                                 >
-                                    <span className="text-2xl">{option.emoji}</span>
-                                    <span className="text-[10px] text-text-secondary font-medium">{option.label}</span>
+                                    <span className="text-xl">{option.emoji}</span>
+                                    <span className="text-[10px] text-text-tertiary font-medium">{option.label}</span>
                                 </motion.button>
                             ))}
                         </div>
@@ -111,7 +112,7 @@ const QuickMoodCheckIn: React.FC<QuickMoodCheckInProps> = ({ userId, todayEntry,
                                         placeholder="Add a note (optional)"
                                         value={notes}
                                         onChange={e => setNotes(e.target.value)}
-                                        className="w-full bg-surface-hover border border-border rounded-xl p-3 text-sm text-text-primary placeholder:text-text-tertiary resize-none h-20 mb-3 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/40"
+                                        className="w-full bg-white/[0.03] border border-white/[0.08] rounded-xl p-3 text-sm text-text-primary placeholder:text-text-tertiary/50 resize-none h-20 mb-3 focus:outline-none focus:ring-1 focus:ring-primary/30 focus:border-primary/30"
                                         maxLength={500}
                                     />
                                     <div className="flex items-center gap-3">
@@ -125,7 +126,7 @@ const QuickMoodCheckIn: React.FC<QuickMoodCheckInProps> = ({ userId, todayEntry,
                                         </Button>
                                         <button
                                             onClick={() => { setShowNotes(false); setSelectedMood(null); }}
-                                            className="text-xs text-text-tertiary hover:text-text-secondary transition-colors"
+                                            className="text-xs text-text-tertiary/60 hover:text-text-secondary transition-colors"
                                         >
                                             Cancel
                                         </button>
@@ -135,24 +136,24 @@ const QuickMoodCheckIn: React.FC<QuickMoodCheckInProps> = ({ userId, todayEntry,
                         </AnimatePresence>
                     </>
                 ) : (
-                    <div className="flex items-center gap-3 p-3 bg-surface-hover rounded-2xl">
-                        <span className="text-3xl">
+                    <div className="flex items-center gap-3 p-3 bg-white/[0.04] rounded-xl">
+                        <span className="text-2xl">
                             {MOOD_OPTIONS.find(m => m.value === todayEntry.value)?.emoji || '\u{1F610}'}
                         </span>
                         <div>
-                            <p className="text-sm font-medium text-text-primary">
+                            <p className="text-[13px] font-medium text-text-primary">
                                 {MOOD_OPTIONS.find(m => m.value === todayEntry.value)?.label || 'Logged'}
                             </p>
-                            <p className="text-xs text-text-tertiary">
+                            <p className="text-[11px] text-text-tertiary/60">
                                 {format(new Date(todayEntry.created_at), 'h:mm a')}
                             </p>
                         </div>
-                        <Link to="/tools/mood-journal" className="ml-auto text-xs text-primary hover:underline flex items-center gap-1">
-                            View Journal <ArrowRight size={12} />
+                        <Link to="/tools/mood-journal" className="ml-auto text-[11px] text-primary/80 hover:text-primary flex items-center gap-1 transition-colors">
+                            View Journal <ArrowRight size={11} />
                         </Link>
                     </div>
                 )}
-            </InteractiveCard>
+            </div>
         </motion.div>
     );
 };

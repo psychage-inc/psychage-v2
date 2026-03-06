@@ -56,9 +56,9 @@ function mapToProvider(data: DBProvider): Provider {
         languages: data.languages_spoken || [],
         approach: typeof data.treatment_approaches === 'string' ? data.treatment_approaches : (data.treatment_approaches?.[0] || ''),
         yearsExperience: data.years_of_experience || 0,
-        isVideoVisit: true,
+        isVideoVisit: false,
         status: data.verification_status,
-        email: 'provider@example.com'
+        email: ''
     };
 }
 
@@ -118,7 +118,11 @@ export const providerService = {
                 query = query.eq('verification_status', 'verified');
             }
             if (params?.search) {
-                query = query.or(`full_name.ilike.%${params.search}%,bio.ilike.%${params.search}%`);
+                // Sanitize to prevent PostgREST filter injection via .or() string interpolation
+                const sanitized = params.search.replace(/[%_.*,()\\]/g, '');
+                if (sanitized) {
+                    query = query.or(`full_name.ilike.%${sanitized}%,bio.ilike.%${sanitized}%`);
+                }
             }
 
             // Apply pagination — always bounded

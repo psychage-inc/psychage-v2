@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { AlertCircle, RefreshCw } from 'lucide-react';
+import { StaggerList, StaggerItem, ScrollReveal } from '@/components/motion';
 import UserSidebar from './UserSidebar';
 import Button from '@/components/ui/Button';
 import SEO from '@/components/SEO';
@@ -26,43 +26,43 @@ import RecentActivityCard from '@/components/dashboard/RecentActivityCard';
 
 // Dashboard loading skeleton
 const DashboardSkeleton: React.FC = () => (
-    <div className="space-y-6">
+    <div className="flex flex-col gap-8">
         {/* Welcome card skeleton */}
-        <div className="bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl p-8 h-48 animate-pulse" />
+        <div className="bg-gradient-to-r from-primary/15 to-secondary/15 rounded-3xl p-8 h-44 animate-pulse" />
 
         {/* Smart actions skeleton */}
-        <div className="flex gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {[1, 2, 3].map(i => (
-                <div key={i} className="flex-1 h-28 bg-surface rounded-2xl border border-border animate-pulse" />
+                <div key={i} className="h-28 bg-white/[0.03] rounded-2xl border border-white/[0.06] animate-pulse" />
             ))}
         </div>
 
         {/* Mood check-in skeleton */}
-        <div className="bg-surface rounded-3xl p-6 h-32 border border-border animate-pulse" />
+        <div className="bg-white/[0.03] rounded-2xl p-6 h-28 border border-white/[0.06] animate-pulse" />
 
         {/* Snapshot cards skeleton */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[1, 2, 3].map(i => (
-                <div key={i} className="bg-surface rounded-3xl p-6 h-40 border border-border animate-pulse">
-                    <div className="h-4 w-20 bg-gray-200 rounded mb-4" />
-                    <div className="h-10 w-16 bg-gray-200 rounded mb-3" />
-                    <div className="h-3 w-24 bg-gray-200 rounded" />
+                <div key={i} className="bg-white/[0.03] rounded-2xl p-6 h-40 border border-white/[0.06] animate-pulse">
+                    <div className="h-4 w-20 bg-white/[0.08] rounded mb-4" />
+                    <div className="h-10 w-16 bg-white/[0.08] rounded mb-3" />
+                    <div className="h-3 w-24 bg-white/[0.06] rounded" />
                 </div>
             ))}
         </div>
 
         {/* Chart skeleton */}
-        <div className="bg-surface rounded-3xl p-8 h-96 border border-border animate-pulse" />
+        <div className="bg-white/[0.03] rounded-2xl p-8 h-96 border border-white/[0.06] animate-pulse" />
     </div>
 );
 
 // Error state component
 const DashboardError: React.FC<{ message: string; onRetry: () => void }> = ({ message, onRetry }) => (
-    <div className="bg-red-50 border border-red-200 rounded-2xl p-6 flex items-start gap-4">
-        <AlertCircle size={24} className="text-red-500 shrink-0 mt-0.5" />
+    <div className="bg-red-500/5 border border-red-500/20 rounded-2xl p-6 flex items-start gap-4">
+        <AlertCircle size={22} className="text-red-400 shrink-0 mt-0.5" />
         <div className="flex-grow">
-            <h3 className="font-bold text-red-700 mb-1">Unable to load dashboard</h3>
-            <p className="text-sm text-red-600 mb-4">{message}</p>
+            <h3 className="font-semibold text-red-400 mb-1 text-sm tracking-tight">Unable to load dashboard</h3>
+            <p className="text-sm text-red-400/70 mb-4">{message}</p>
             <Button variant="outline" size="sm" onClick={onRetry} leftIcon={<RefreshCw size={14} />}>
                 Try Again
             </Button>
@@ -266,7 +266,7 @@ const UserDashboard: React.FC = () => {
     if (sleepHistory.length > 0) availableMetrics.push('sleep');
 
     return (
-        <div className="min-h-screen bg-background pt-24 pb-20 px-6 relative">
+        <div className="min-h-screen bg-background pt-24 pb-20 px-4 sm:px-6 relative">
             {/* Background Mesh */}
             <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
                 <MeshGradient className="opacity-[0.15]" />
@@ -285,7 +285,7 @@ const UserDashboard: React.FC = () => {
                     </div>
 
                     {/* Main Content */}
-                    <div className="lg:col-span-3 space-y-6">
+                    <div className="lg:col-span-3">
                         {/* Loading State */}
                         {isLoading && <DashboardSkeleton />}
 
@@ -296,80 +296,78 @@ const UserDashboard: React.FC = () => {
 
                         {/* Content */}
                         {!isLoading && !error && (
-                            <>
-                                {/* Welcome Card */}
-                                <motion.div
-                                    initial={{ opacity: 0, y: 10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                >
+                            <StaggerList className="flex flex-col gap-8">
+                                {/* ── Hero: Welcome ── */}
+                                <StaggerItem>
                                     <InteractiveCard
-                                        className="bg-gradient-to-r from-primary/80 to-secondary/80 rounded-3xl p-8 text-white shadow-2xl shadow-primary/20 border-white/20"
-                                        spotlightColor="rgba(255, 255, 255, 0.2)"
+                                        className="bg-gradient-to-br from-primary/80 via-primary/70 to-secondary/80 rounded-3xl p-8 pb-7 text-white shadow-2xl shadow-primary/15 border-white/20"
+                                        spotlightColor="rgba(255, 255, 255, 0.15)"
                                     >
-                                        <h2 className="text-3xl font-display font-bold mb-3">Welcome back, {firstName}!</h2>
-                                        <p className="text-white/90 mb-8 max-w-xl text-lg leading-relaxed mix-blend-plus-lighter">
-                                            {stats?.streak && stats.streak > 0
-                                                ? `You've maintained your Clarity Score for ${stats.streak} weeks. Keep it up!`
-                                                : "Take a moment to check in with yourself today. Your mental health matters."}
+                                        <p className="text-white/60 text-xs font-medium tracking-widest uppercase mb-2">
+                                            {format(new Date(), 'EEEE, MMMM d')}
                                         </p>
-                                        <div className="flex gap-4">
-                                            <Link to="/clarity-score">
-                                                <Button variant="secondary" className="bg-white text-primary border-transparent hover:bg-white/90 shadow-lg shadow-black/10">
-                                                    Check In Now
-                                                </Button>
-                                            </Link>
-                                        </div>
+                                        <h2 className="text-2xl sm:text-3xl font-display font-bold mb-2 tracking-tight">
+                                            Welcome back, {firstName}
+                                        </h2>
+                                        <p className="text-white/70 mb-6 max-w-lg text-sm leading-relaxed">
+                                            {stats?.streak && stats.streak > 0
+                                                ? `${stats.streak}-week Clarity streak. Keep the momentum going.`
+                                                : 'Check in with yourself today. Small steps build lasting awareness.'}
+                                        </p>
+                                        <Link to="/clarity-score">
+                                            <Button variant="secondary" className="bg-white/95 text-primary border-transparent hover:bg-white shadow-lg shadow-black/10 font-semibold text-sm">
+                                                Check In Now
+                                            </Button>
+                                        </Link>
                                     </InteractiveCard>
-                                </motion.div>
+                                </StaggerItem>
 
-                                {/* Smart Actions Hub */}
-                                <SmartActionsHub
-                                    todayMood={todayMood}
-                                    todaySleep={todaySleep}
-                                    lastClarityDate={stats?.lastAssessed || null}
-                                    navigatorCount={navigatorCount}
-                                    bookmarkCount={bookmarkCount}
-                                />
-
-                                {/* Quick Mood Check-In */}
-                                {user?.id && (
-                                    <QuickMoodCheckIn
-                                        userId={user.id}
-                                        todayEntry={todayMood}
-                                        onMoodLogged={handleMoodLogged}
+                                {/* ── Action Layer: Quick actions + mood ── */}
+                                <StaggerItem className="flex flex-col gap-5">
+                                    <SmartActionsHub
+                                        todayMood={todayMood}
+                                        todaySleep={todaySleep}
+                                        lastClarityDate={stats?.lastAssessed || null}
+                                        navigatorCount={navigatorCount}
+                                        bookmarkCount={bookmarkCount}
                                     />
-                                )}
 
-                                {/* Wellness Snapshot Cards */}
-                                <WellnessSnapshotCards
-                                    moodStats={moodStats}
-                                    sleepStats={sleepStats}
-                                    clarityStats={stats}
-                                />
+                                    {user?.id && (
+                                        <QuickMoodCheckIn
+                                            userId={user.id}
+                                            todayEntry={todayMood}
+                                            onMoodLogged={handleMoodLogged}
+                                        />
+                                    )}
+                                </StaggerItem>
 
-                                {/* Multi-Metric Trends Chart */}
-                                <motion.div
-                                    initial={{ opacity: 0, y: 10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.25 }}
-                                >
-                                    <InteractiveCard className="p-8 bg-white/5 border-white/10 backdrop-blur-md min-h-[400px]">
+                                {/* ── Data Layer: Snapshots + trends ── */}
+                                <StaggerItem className="flex flex-col gap-5">
+                                    <WellnessSnapshotCards
+                                        moodStats={moodStats}
+                                        sleepStats={sleepStats}
+                                        clarityStats={stats}
+                                    />
+
+                                    <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-md p-6 sm:p-8 min-h-[280px] sm:min-h-[350px] lg:min-h-[400px]">
                                         <MultiMetricChart
                                             data={chartData}
                                             availableMetrics={availableMetrics}
                                         />
-                                    </InteractiveCard>
-                                </motion.div>
+                                    </div>
+                                </StaggerItem>
 
-                                {/* Navigator + Activity bottom row */}
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <NavigatorAwarenessCard
-                                        totalExplorations={navigatorCount}
-                                        lastExplorationDate={navigatorLastDate}
-                                    />
-                                    <RecentActivityCard activity={activity} />
-                                </div>
-                            </>
+                                {/* ── Discovery Layer: Navigator + activity ── */}
+                                <ScrollReveal variant="slideUp">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                        <NavigatorAwarenessCard
+                                            totalExplorations={navigatorCount}
+                                            lastExplorationDate={navigatorLastDate}
+                                        />
+                                        <RecentActivityCard activity={activity} />
+                                    </div>
+                                </ScrollReveal>
+                            </StaggerList>
                         )}
                     </div>
                 </div>

@@ -28,24 +28,24 @@ export const SymptomCategory: React.FC<SymptomCategoryProps> = ({
     const [isExpanded, setIsExpanded] = useState(initiallyExpanded);
 
     return (
-        <div className="border border-white/10 rounded-2xl overflow-hidden bg-white/5 backdrop-blur-xl shadow-lg transition-all duration-500">
+        <div className="border border-border rounded-2xl overflow-hidden bg-surface/50 backdrop-blur-xl shadow-lg transition-all duration-500">
             <button
                 onClick={() => setIsExpanded(!isExpanded)}
-                className="w-full flex items-center justify-between p-5 focus-visible:outline-none focus-visible:bg-white/10 hover:bg-white/5 transition-all duration-300"
+                className="w-full flex items-center justify-between p-5 focus-visible:outline-none focus-visible:bg-surface-hover hover:bg-surface-hover/50 transition-all duration-300"
                 aria-expanded={isExpanded}
             >
                 <div className="flex items-center gap-3">
-                    <h3 className="font-serif text-lg font-medium text-white transition-colors">
+                    <h3 className="font-display text-lg font-medium text-text-primary transition-colors">
                         {title}
                     </h3>
-                    <span className="bg-white/10 text-charcoal-200 border border-white/5 text-xs font-semibold px-2.5 py-1 rounded-full backdrop-blur-sm">
+                    <span className="bg-surface-hover/50 text-text-secondary border border-border text-xs font-semibold px-2.5 py-1 rounded-full backdrop-blur-sm">
                         {count}
                     </span>
                 </div>
                 <motion.div
                     animate={{ rotate: isExpanded ? 180 : 0 }}
                     transition={{ duration: 0.2 }}
-                    className="text-charcoal-400 group-hover:text-teal-400 transition-colors"
+                    className="text-text-tertiary group-hover:text-teal-400 transition-colors"
                 >
                     <ChevronDown className="w-5 h-5" />
                 </motion.div>
@@ -59,18 +59,18 @@ export const SymptomCategory: React.FC<SymptomCategoryProps> = ({
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
-                        <div className="p-5 pt-0 border-t border-white/5">
+                        <div className="p-5 pt-0 border-t border-border">
                             {/* Category Actions */}
                             {(onSelectAll || onClearAll) && (
-                                <div className="flex gap-2 mt-4 mb-3">
+                                <div className="flex gap-3 mt-4 mb-3">
                                     {onSelectAll && (
                                         <button
                                             type="button"
                                             onClick={onSelectAll}
-                                            className="flex items-center gap-1.5 text-xs text-teal-400 hover:text-teal-300 bg-teal-500/10 hover:bg-teal-500/20 px-3 py-1.5 rounded-md border border-teal-500/30 hover:border-teal-400/50 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal-900"
+                                            className="flex items-center gap-2 text-sm text-teal-400 hover:text-teal-300 bg-teal-500/10 hover:bg-teal-500/20 px-4 py-2.5 rounded-lg border border-teal-500/30 hover:border-teal-400/50 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 focus-visible:ring-offset-2 focus-visible:ring-offset-background min-h-[44px]"
                                             disabled={selectedCount === count}
                                         >
-                                            <CheckSquare className="w-3.5 h-3.5" />
+                                            <CheckSquare className="w-4 h-4" />
                                             Select all
                                         </button>
                                     )}
@@ -78,9 +78,9 @@ export const SymptomCategory: React.FC<SymptomCategoryProps> = ({
                                         <button
                                             type="button"
                                             onClick={onClearAll}
-                                            className="flex items-center gap-1.5 text-xs text-charcoal-300 hover:text-white bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded-md border border-white/10 hover:border-white/20 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal-900"
+                                            className="flex items-center gap-2 text-sm text-text-secondary hover:text-text-primary bg-surface-hover/50 hover:bg-surface-hover px-4 py-2.5 rounded-lg border border-border hover:border-border-hover transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 focus-visible:ring-offset-2 focus-visible:ring-offset-background min-h-[44px]"
                                         >
-                                            <XSquare className="w-3.5 h-3.5" />
+                                            <XSquare className="w-4 h-4" />
                                             Clear selected
                                         </button>
                                     )}

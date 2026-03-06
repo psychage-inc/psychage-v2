@@ -126,7 +126,7 @@ const ClarityJournal: React.FC = () => {
             icon={Sun}
             title="Daily Check-In"
             subtitle={todayCheckIn ? 'Completed today' : 'Not yet today'}
-            route="/tools/clarity-journal/daily-checkin"
+            route="/tools/clarity-journal/daily"
             completed={!!todayCheckIn}
           />
           <QuickActionCard
@@ -139,7 +139,7 @@ const ClarityJournal: React.FC = () => {
             icon={ShieldCheck}
             title="Safety Plan"
             subtitle="Your crisis plan"
-            route="/tools/clarity-journal/wellness-toolbox"
+            route="/tools/clarity-journal/toolbox"
             accent="red"
           />
         </div>

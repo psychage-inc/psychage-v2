@@ -2,81 +2,54 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Card } from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
-import SEO from '@/components/SEO';
+import Badge from '@/components/ui/Badge';
+import {
+    ArrowLeft, MapPin, Mail, Shield, Calendar,
+    CheckCircle, XCircle, Ban, Save
+} from 'lucide-react';
 import { providerService } from '@/services/providerService';
 import { Provider } from '@/types/models';
-import AdminSidebar from './AdminSidebar';
-import { motion, AnimatePresence } from 'framer-motion';
-import { format } from 'date-fns';
-import {
-    ArrowLeft,
-    User,
-    Mail,
-    MapPin,
-    Phone,
-    Calendar,
-    Shield,
-    CheckCircle,
-    XCircle,
-    Ban,
-    FileText,
-    ExternalLink,
-    Clock,
-    AlertTriangle,
-    Award,
-    Briefcase,
-    GraduationCap,
-    Building
-} from 'lucide-react';
-
-interface ProviderDetails extends Omit<Provider, 'education'> {
-    phone?: string;
-    created_at?: string;
-    verified_at?: string;
-    license_number?: string;
-    license_state?: string;
-    license_expiry?: string;
-    npi_number?: string;
-    title?: string; // Extended field for admin
-    education?: string[] | Array<{
-        degree: string;
-        institution: string;
-        year: string;
-    }>;
-    certifications?: Array<{
-        name: string;
-        issuer: string;
-        year: string;
-    }>;
-    documents?: Array<{
-        type: string;
-        url: string;
-        verified: boolean;
-    }>;
-    verification_notes?: string;
-}
+import { useToast } from '@/context/ToastContext';
+import { api } from '@/lib/api';
+import AdminLayout from './components/AdminLayout';
+import AdminErrorBanner from './components/AdminErrorBanner';
+import StatusBadge from './components/StatusBadge';
+import AdminConfirmModal from './components/AdminConfirmModal';
 
 const ProviderDetailAdmin: React.FC = () => {
-    const { id } = useParams();
+    const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
-    const [provider, setProvider] = useState<ProviderDetails | null>(null);
+    const toast = useToast();
+    const [provider, setProvider] = useState<Provider | null>(null);
     const [isLoading, setIsLoading] = useState(true);
-    const [isUpdating, setIsUpdating] = useState(false);
+    const [error, setError] = useState<string | null>(null);
+
+    // Notes
     const [verificationNotes, setVerificationNotes] = useState('');
-    const [showConfirmModal, setShowConfirmModal] = useState<'approve' | 'reject' | 'suspend' | null>(null);
+    const [isSavingNotes, setIsSavingNotes] = useState(false);
+    const [notesSaved, setNotesSaved] = useState(false);
+
+    // Confirmation modal
+    const [modalState, setModalState] = useState<{
+        isOpen: boolean;
+        action: 'active' | 'rejected' | 'suspended';
+    }>({ isOpen: false, action: 'active' });
+    const [isUpdating, setIsUpdating] = useState(false);
 
     const fetchProvider = useCallback(async () => {
         if (!id) return;
         setIsLoading(true);
+        setError(null);
         try {
             const data = await providerService.getById(id);
             if (data) {
-                const providerData = data as unknown as ProviderDetails;
-                setProvider(providerData);
-                setVerificationNotes(providerData.verification_notes || '');
+                setProvider(data);
+            } else {
+                setError('Provider not found.');
             }
-        } catch (error) {
-            console.error('Failed to fetch provider:', error);
+        } catch (err) {
+            console.error("Failed to fetch provider", err);
+            setError('Failed to load provider details.');
         } finally {
             setIsLoading(false);
         }
@@ -86,462 +59,259 @@ const ProviderDetailAdmin: React.FC = () => {
         fetchProvider();
     }, [fetchProvider]);
 
-    const handleStatusUpdate = async (newStatus: string) => {
+    const handleSaveNotes = async () => {
+        if (!id) return;
+        setIsSavingNotes(true);
+        try {
+            await api.admin.saveProviderNotes(id, verificationNotes);
+            setNotesSaved(true);
+            setTimeout(() => setNotesSaved(false), 3000);
+        } catch (err) {
+            console.error("Failed to save notes", err);
+            toast.error('Failed to save verification notes.');
+        } finally {
+            setIsSavingNotes(false);
+        }
+    };
+
+    const handleStatusUpdate = async (reason?: string) => {
         if (!id) return;
         setIsUpdating(true);
         try {
-            await providerService.updateProviderStatus(id, newStatus);
-            // Update local state
-            setProvider(prev => prev ? { ...prev, status: newStatus } : null);
-            setShowConfirmModal(null);
-        } catch (error) {
-            console.error('Failed to update status:', error);
+            await api.admin.updateProviderStatusWithReason(id, modalState.action, reason);
+            setModalState(s => ({ ...s, isOpen: false }));
+            toast.success(`Provider ${modalState.action === 'active' ? 'approved' : modalState.action} successfully.`);
+            fetchProvider();
+        } catch (err) {
+            console.error("Failed to update status", err);
+            toast.error('Failed to update provider status. Please try again.');
         } finally {
             setIsUpdating(false);
         }
     };
 
-    const getStatusBadge = (status?: string) => {
-        const styles = {
-            pending: 'bg-amber-100 text-amber-700 border-amber-200',
-            active: 'bg-green-100 text-green-700 border-green-200',
-            suspended: 'bg-red-100 text-red-700 border-red-200',
-            rejected: 'bg-gray-100 text-gray-700 border-gray-200',
-        };
-        return (
-            <span className={`px-3 py-1 rounded-full text-sm font-medium border uppercase ${styles[status as keyof typeof styles] || styles.pending}`}>
-                {status || 'pending'}
-            </span>
-        );
+    const getModalConfig = () => {
+        const name = provider?.name || 'this provider';
+        switch (modalState.action) {
+            case 'active':
+                return { title: 'Approve Provider', description: `Approve ${name} and make their profile visible?`, confirmText: 'Approve', confirmColor: 'green' as const, reasonRequired: false, showReason: false };
+            case 'rejected':
+                return { title: 'Reject Provider', description: `Reject ${name}? A reason is required.`, confirmText: 'Reject', confirmColor: 'red' as const, reasonRequired: true, showReason: true };
+            case 'suspended':
+                return { title: 'Suspend Provider', description: `Suspend ${name}? A reason is required.`, confirmText: 'Suspend', confirmColor: 'amber' as const, reasonRequired: true, showReason: true };
+        }
     };
+
+    const modalConfig = getModalConfig();
 
     if (isLoading) {
         return (
-            <div className="min-h-screen bg-background pt-24 pb-20 px-6">
-                <SEO title="Provider Details | Admin" />
-                <div className="container mx-auto max-w-[1400px]">
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-                        <div className="lg:col-span-3">
-                            <AdminSidebar />
-                        </div>
-                        <div className="lg:col-span-9">
-                            <div className="animate-pulse space-y-6">
-                                <div className="h-8 bg-surface-hover rounded w-1/3" />
-                                <div className="h-64 bg-surface-hover rounded-2xl" />
-                                <div className="h-48 bg-surface-hover rounded-2xl" />
+            <AdminLayout title="Provider Details">
+                <div className="space-y-6">
+                    <div className="h-8 w-32 bg-surface-hover animate-pulse rounded" />
+                    <Card className="p-8">
+                        <div className="flex gap-6">
+                            <div className="w-20 h-20 bg-surface-hover rounded-full animate-pulse" />
+                            <div className="space-y-3 flex-1">
+                                <div className="h-6 w-48 bg-surface-hover rounded animate-pulse" />
+                                <div className="h-4 w-32 bg-surface-hover rounded animate-pulse" />
+                                <div className="h-4 w-64 bg-surface-hover rounded animate-pulse" />
                             </div>
                         </div>
-                    </div>
+                    </Card>
                 </div>
-            </div>
+            </AdminLayout>
         );
     }
 
-    if (!provider) {
+    if (error || !provider) {
         return (
-            <div className="min-h-screen bg-background pt-24 pb-20 px-6">
-                <SEO title="Provider Not Found | Admin" />
-                <div className="container mx-auto max-w-[1400px]">
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-                        <div className="lg:col-span-3">
-                            <AdminSidebar />
-                        </div>
-                        <div className="lg:col-span-9">
-                            <Card className="p-12 text-center">
-                                <AlertTriangle size={48} className="mx-auto mb-4 text-amber-500" />
-                                <h2 className="text-2xl font-bold text-text-primary mb-2">Provider Not Found</h2>
-                                <p className="text-text-secondary mb-6">
-                                    The provider you're looking for doesn't exist or has been removed.
-                                </p>
-                                <Button onClick={() => navigate('/admin/providers')}>
-                                    Back to Providers
-                                </Button>
-                            </Card>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <AdminLayout title="Provider Details">
+                <AdminErrorBanner message={error || 'Provider not found'} onRetry={fetchProvider} />
+                <Button variant="outline" onClick={() => navigate('/admin/providers')} leftIcon={<ArrowLeft size={16} />}>
+                    Back to Providers
+                </Button>
+            </AdminLayout>
         );
     }
+
+    const status = provider.status || 'pending';
 
     return (
-        <div className="min-h-screen bg-background pt-24 pb-20 px-6">
-            <SEO title={`${provider.name} | Provider Verification`} />
-            <div className="container mx-auto max-w-[1400px]">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-                    {/* Sidebar */}
-                    <div className="lg:col-span-3">
-                        <AdminSidebar />
-                    </div>
+        <AdminLayout title="Provider Details" seoTitle={`${provider.name} | Admin`}>
+            <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => navigate('/admin/providers')}
+                leftIcon={<ArrowLeft size={16} />}
+                className="-mt-4"
+            >
+                Back to Providers
+            </Button>
 
-                    {/* Main Content */}
-                    <div className="lg:col-span-9 space-y-6">
-                        {/* Header */}
-                        <div className="flex items-center justify-between">
-                            <button
-                                onClick={() => navigate('/admin/providers')}
-                                className="flex items-center gap-2 text-text-secondary hover:text-text-primary transition-colors"
-                            >
-                                <ArrowLeft size={20} />
-                                Back to Providers
-                            </button>
-                            {getStatusBadge(provider.status)}
+            {/* Provider Header */}
+            <Card className="p-8">
+                <div className="flex flex-col md:flex-row gap-6">
+                    {provider.image ? (
+                        <img src={provider.image} alt={provider.name} className="w-20 h-20 rounded-full object-cover shrink-0" />
+                    ) : (
+                        <div className="w-20 h-20 rounded-full bg-surface-hover flex items-center justify-center text-text-tertiary text-2xl font-bold shrink-0">
+                            {provider.name.charAt(0)}
                         </div>
-
-                        {/* Provider Profile Card */}
-                        <Card className="p-8">
-                            <div className="flex flex-col md:flex-row gap-6">
-                                {/* Avatar */}
-                                <div className="flex-shrink-0">
-                                    {provider.image ? (
-                                        <img
-                                            src={provider.image}
-                                            alt={provider.name}
-                                            className="w-32 h-32 rounded-2xl object-cover"
-                                        />
-                                    ) : (
-                                        <div className="w-32 h-32 rounded-2xl bg-primary/10 flex items-center justify-center">
-                                            <User size={48} className="text-primary" />
-                                        </div>
-                                    )}
-                                </div>
-
-                                {/* Basic Info */}
-                                <div className="flex-1">
-                                    <h1 className="text-2xl font-bold text-text-primary mb-1">{provider.name}</h1>
-                                    {provider.title && (
-                                        <p className="text-lg text-text-secondary mb-4">{provider.title}</p>
-                                    )}
-
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                        {provider.email && (
-                                            <div className="flex items-center gap-2 text-sm text-text-secondary">
-                                                <Mail size={16} className="text-primary" />
-                                                <a href={`mailto:${provider.email}`} className="hover:text-primary">
-                                                    {provider.email}
-                                                </a>
-                                            </div>
-                                        )}
-                                        {provider.phone && (
-                                            <div className="flex items-center gap-2 text-sm text-text-secondary">
-                                                <Phone size={16} className="text-primary" />
-                                                {provider.phone}
-                                            </div>
-                                        )}
-                                        {provider.location && (
-                                            <div className="flex items-center gap-2 text-sm text-text-secondary">
-                                                <MapPin size={16} className="text-primary" />
-                                                {provider.location}
-                                            </div>
-                                        )}
-                                        {provider.created_at && (
-                                            <div className="flex items-center gap-2 text-sm text-text-secondary">
-                                                <Calendar size={16} className="text-primary" />
-                                                Applied: {format(new Date(provider.created_at), 'MMM d, yyyy')}
-                                            </div>
-                                        )}
-                                    </div>
-
-                                    {/* Specialties */}
-                                    {provider.specialties && provider.specialties.length > 0 && (
-                                        <div className="mt-4">
-                                            <div className="flex flex-wrap gap-2">
-                                                {provider.specialties.map((spec, i) => (
-                                                    <span
-                                                        key={i}
-                                                        className="px-3 py-1 bg-surface-hover rounded-full text-sm text-text-secondary"
-                                                    >
-                                                        {spec}
-                                                    </span>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
-
-                            {/* Bio */}
-                            {provider.bio && (
-                                <div className="mt-6 pt-6 border-t border-border">
-                                    <h3 className="font-bold text-text-primary mb-2">About</h3>
-                                    <p className="text-text-secondary">{provider.bio}</p>
-                                </div>
-                            )}
-                        </Card>
-
-                        {/* Credentials Section */}
-                        <Card className="p-8">
-                            <h2 className="text-xl font-bold text-text-primary mb-6 flex items-center gap-2">
-                                <Shield size={20} className="text-primary" />
-                                Credentials & Verification
-                            </h2>
-
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                {/* License Info */}
-                                <div className="space-y-4">
-                                    <h3 className="font-bold text-text-primary flex items-center gap-2">
-                                        <Award size={16} />
-                                        License Information
-                                    </h3>
-                                    <div className="bg-surface-hover rounded-xl p-4 space-y-3">
-                                        <div className="flex justify-between">
-                                            <span className="text-sm text-text-secondary">License Number</span>
-                                            <span className="text-sm font-medium text-text-primary">
-                                                {provider.license_number || 'Not provided'}
-                                            </span>
-                                        </div>
-                                        <div className="flex justify-between">
-                                            <span className="text-sm text-text-secondary">License State</span>
-                                            <span className="text-sm font-medium text-text-primary">
-                                                {provider.license_state || 'Not provided'}
-                                            </span>
-                                        </div>
-                                        <div className="flex justify-between">
-                                            <span className="text-sm text-text-secondary">Expiration</span>
-                                            <span className="text-sm font-medium text-text-primary">
-                                                {provider.license_expiry
-                                                    ? format(new Date(provider.license_expiry), 'MMM d, yyyy')
-                                                    : 'Not provided'}
-                                            </span>
-                                        </div>
-                                        {provider.npi_number && (
-                                            <div className="flex justify-between">
-                                                <span className="text-sm text-text-secondary">NPI Number</span>
-                                                <span className="text-sm font-medium text-text-primary">
-                                                    {provider.npi_number}
-                                                </span>
-                                            </div>
-                                        )}
-                                    </div>
-                                </div>
-
-                                {/* Education */}
-                                <div className="space-y-4">
-                                    <h3 className="font-bold text-text-primary flex items-center gap-2">
-                                        <GraduationCap size={16} />
-                                        Education
-                                    </h3>
-                                    <div className="bg-surface-hover rounded-xl p-4">
-                                        {provider.education && provider.education.length > 0 ? (
-                                            <ul className="space-y-3">
-                                                {provider.education.map((edu, i) => (
-                                                    <li key={i} className="flex items-start gap-2">
-                                                        <Building size={14} className="mt-1 text-primary shrink-0" />
-                                                        <div>
-                                                            {typeof edu === 'string' ? (
-                                                                <p className="text-sm font-medium text-text-primary">{edu}</p>
-                                                            ) : (
-                                                                <>
-                                                                    <p className="text-sm font-medium text-text-primary">{edu.degree}</p>
-                                                                    <p className="text-xs text-text-secondary">
-                                                                        {edu.institution} • {edu.year}
-                                                                    </p>
-                                                                </>
-                                                            )}
-                                                        </div>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        ) : (
-                                            <p className="text-sm text-text-secondary">No education information provided</p>
-                                        )}
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Certifications */}
-                            {provider.certifications && provider.certifications.length > 0 && (
-                                <div className="mt-6">
-                                    <h3 className="font-bold text-text-primary mb-4 flex items-center gap-2">
-                                        <Briefcase size={16} />
-                                        Certifications
-                                    </h3>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                        {provider.certifications.map((cert, i) => (
-                                            <div key={i} className="bg-surface-hover rounded-xl p-4 flex items-start gap-3">
-                                                <CheckCircle size={20} className="text-green-500 shrink-0 mt-0.5" />
-                                                <div>
-                                                    <p className="font-medium text-text-primary">{cert.name}</p>
-                                                    <p className="text-sm text-text-secondary">
-                                                        {cert.issuer} • {cert.year}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            )}
-
-                            {/* Documents */}
-                            {provider.documents && provider.documents.length > 0 && (
-                                <div className="mt-6 pt-6 border-t border-border">
-                                    <h3 className="font-bold text-text-primary mb-4 flex items-center gap-2">
-                                        <FileText size={16} />
-                                        Submitted Documents
-                                    </h3>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                        {provider.documents.map((doc, i) => (
-                                            <a
-                                                key={i}
-                                                href={doc.url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="flex items-center justify-between bg-surface-hover rounded-xl p-4 hover:bg-surface transition-colors group"
-                                            >
-                                                <div className="flex items-center gap-3">
-                                                    <FileText size={20} className="text-primary" />
-                                                    <span className="font-medium text-text-primary capitalize">{doc.type}</span>
-                                                </div>
-                                                <div className="flex items-center gap-2">
-                                                    {doc.verified ? (
-                                                        <CheckCircle size={16} className="text-green-500" />
-                                                    ) : (
-                                                        <Clock size={16} className="text-amber-500" />
-                                                    )}
-                                                    <ExternalLink size={16} className="text-text-secondary group-hover:text-primary" />
-                                                </div>
-                                            </a>
-                                        ))}
-                                    </div>
-                                </div>
-                            )}
-                        </Card>
-
-                        {/* Verification Notes */}
-                        <Card className="p-8">
-                            <h2 className="text-xl font-bold text-text-primary mb-4">Verification Notes</h2>
-                            <textarea
-                                value={verificationNotes}
-                                onChange={(e) => setVerificationNotes(e.target.value)}
-                                placeholder="Add notes about the verification process..."
-                                className="w-full h-32 px-4 py-3 bg-surface-hover border border-border rounded-xl resize-none focus:outline-none focus:ring-2 focus:ring-primary text-text-primary placeholder-text-tertiary"
-                            />
-                        </Card>
-
-                        {/* Action Buttons */}
-                        <Card className="p-8">
-                            <h2 className="text-xl font-bold text-text-primary mb-4">Actions</h2>
-                            <div className="flex flex-wrap gap-4">
-                                {(provider.status === 'pending' || !provider.status) && (
-                                    <>
-                                        <Button
-                                            onClick={() => setShowConfirmModal('approve')}
-                                            className="bg-green-600 hover:bg-green-700"
-                                            leftIcon={<CheckCircle size={18} />}
-                                        >
-                                            Approve Provider
-                                        </Button>
-                                        <Button
-                                            variant="outline"
-                                            onClick={() => setShowConfirmModal('reject')}
-                                            className="border-red-300 text-red-600 hover:bg-red-50"
-                                            leftIcon={<XCircle size={18} />}
-                                        >
-                                            Reject Application
-                                        </Button>
-                                    </>
-                                )}
-                                {provider.status === 'active' && (
-                                    <Button
-                                        variant="outline"
-                                        onClick={() => setShowConfirmModal('suspend')}
-                                        className="border-amber-300 text-amber-600 hover:bg-amber-50"
-                                        leftIcon={<Ban size={18} />}
-                                    >
-                                        Suspend Provider
-                                    </Button>
-                                )}
-                                {(provider.status === 'suspended' || provider.status === 'rejected') && (
-                                    <Button
-                                        onClick={() => setShowConfirmModal('approve')}
-                                        className="bg-green-600 hover:bg-green-700"
-                                        leftIcon={<CheckCircle size={18} />}
-                                    >
-                                        Re-activate Provider
-                                    </Button>
-                                )}
-                            </div>
-                        </Card>
+                    )}
+                    <div className="flex-1">
+                        <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-3">
+                            <h2 className="text-2xl font-display font-bold text-text-primary">{provider.name}</h2>
+                            <StatusBadge status={status} />
+                        </div>
+                        <div className="space-y-1.5 text-sm text-text-secondary">
+                            <div className="flex items-center gap-2"><Mail size={14} /> {provider.email || 'No email provided'}</div>
+                            <div className="flex items-center gap-2"><MapPin size={14} /> {provider.location || 'No location'}</div>
+                            <div className="flex items-center gap-2"><Shield size={14} /> {provider.role || 'Provider'}</div>
+                            <div className="flex items-center gap-2"><Calendar size={14} /> {provider.yearsExperience} years experience</div>
+                        </div>
                     </div>
+
+                    {/* Action Buttons */}
+                    <div className="flex flex-col gap-2 shrink-0">
+                        {status === 'pending' && (
+                            <>
+                                <Button size="sm" className="bg-green-600 hover:bg-green-700 text-white border-none" onClick={() => setModalState({ isOpen: true, action: 'active' })} leftIcon={<CheckCircle size={16} />}>
+                                    Approve
+                                </Button>
+                                <Button size="sm" className="bg-red-600 hover:bg-red-700 text-white border-none" onClick={() => setModalState({ isOpen: true, action: 'rejected' })} leftIcon={<XCircle size={16} />}>
+                                    Reject
+                                </Button>
+                            </>
+                        )}
+                        {status === 'active' && (
+                            <Button size="sm" className="bg-amber-600 hover:bg-amber-700 text-white border-none" onClick={() => setModalState({ isOpen: true, action: 'suspended' })} leftIcon={<Ban size={16} />}>
+                                Suspend
+                            </Button>
+                        )}
+                        {(status === 'suspended' || status === 'rejected') && (
+                            <Button size="sm" className="bg-green-600 hover:bg-green-700 text-white border-none" onClick={() => setModalState({ isOpen: true, action: 'active' })} leftIcon={<CheckCircle size={16} />}>
+                                Re-activate
+                            </Button>
+                        )}
+                    </div>
+                </div>
+            </Card>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* Credentials & Specialties */}
+                <Card className="p-8">
+                    <h3 className="text-lg font-bold text-text-primary mb-4">Credentials & Specialties</h3>
+                    <div className="space-y-4">
+                        <div>
+                            <label className="text-sm font-bold text-text-secondary mb-1 block">Specialties</label>
+                            <div className="flex flex-wrap gap-2">
+                                {provider.specialties.length > 0 ? (
+                                    provider.specialties.map((s, i) => (
+                                        <Badge key={i} variant="teal">{s}</Badge>
+                                    ))
+                                ) : (
+                                    <span className="text-sm text-text-tertiary">None listed</span>
+                                )}
+                            </div>
+                        </div>
+                        <div>
+                            <label className="text-sm font-bold text-text-secondary mb-1 block">Education</label>
+                            {provider.education.filter(Boolean).length > 0 ? (
+                                <ul className="list-disc list-inside text-sm text-text-secondary space-y-1">
+                                    {provider.education.filter(Boolean).map((e, i) => <li key={i}>{e}</li>)}
+                                </ul>
+                            ) : (
+                                <span className="text-sm text-text-tertiary">Not provided</span>
+                            )}
+                        </div>
+                        <div>
+                            <label className="text-sm font-bold text-text-secondary mb-1 block">Languages</label>
+                            <div className="flex flex-wrap gap-2">
+                                {provider.languages.length > 0 ? (
+                                    provider.languages.map((l, i) => (
+                                        <Badge key={i} variant="neutral">{l}</Badge>
+                                    ))
+                                ) : (
+                                    <span className="text-sm text-text-tertiary">Not specified</span>
+                                )}
+                            </div>
+                        </div>
+                        <div>
+                            <label className="text-sm font-bold text-text-secondary mb-1 block">Treatment Approach</label>
+                            <p className="text-sm text-text-secondary">{provider.approach || 'Not specified'}</p>
+                        </div>
+                        <div>
+                            <label className="text-sm font-bold text-text-secondary mb-1 block">Insurance</label>
+                            <div className="flex flex-wrap gap-2">
+                                {provider.insurance.length > 0 ? (
+                                    provider.insurance.map((ins, i) => (
+                                        <Badge key={i} variant="outline">{ins}</Badge>
+                                    ))
+                                ) : (
+                                    <span className="text-sm text-text-tertiary">Not specified</span>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                </Card>
+
+                {/* Bio & Verification Notes */}
+                <div className="space-y-8">
+                    <Card className="p-8">
+                        <h3 className="text-lg font-bold text-text-primary mb-4">Bio</h3>
+                        <p className="text-sm text-text-secondary leading-relaxed">
+                            {provider.bio || 'No bio provided.'}
+                        </p>
+                    </Card>
+
+                    <Card className="p-8">
+                        <h3 className="text-lg font-bold text-text-primary mb-4">Verification Notes</h3>
+                        <textarea
+                            value={verificationNotes}
+                            onChange={(e) => {
+                                setVerificationNotes(e.target.value);
+                                setNotesSaved(false);
+                            }}
+                            placeholder="Add internal notes about this provider's verification (e.g., credential check status, NPI verification)..."
+                            rows={5}
+                            className="w-full rounded-lg border border-border bg-surface px-3 py-2 text-sm placeholder:text-text-tertiary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 transition-all duration-200 resize-none mb-3"
+                        />
+                        <div className="flex items-center gap-3">
+                            <Button
+                                size="sm"
+                                variant="primary"
+                                onClick={handleSaveNotes}
+                                isLoading={isSavingNotes}
+                                disabled={!verificationNotes.trim()}
+                                leftIcon={isSavingNotes ? undefined : <Save size={14} />}
+                            >
+                                Save Notes
+                            </Button>
+                            {notesSaved && (
+                                <span className="text-sm text-green-600 flex items-center gap-1">
+                                    <CheckCircle size={14} /> Saved
+                                </span>
+                            )}
+                        </div>
+                    </Card>
                 </div>
             </div>
 
-            {/* Confirmation Modal */}
-            <AnimatePresence>
-                {showConfirmModal && (
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
-                        onClick={() => setShowConfirmModal(null)}
-                    >
-                        <motion.div
-                            initial={{ scale: 0.95, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            exit={{ scale: 0.95, opacity: 0 }}
-                            className="bg-surface rounded-2xl p-8 max-w-md w-full shadow-2xl border border-border"
-                            onClick={(e) => e.stopPropagation()}
-                        >
-                            <div className="text-center">
-                                <div className={`w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center ${
-                                    showConfirmModal === 'approve'
-                                        ? 'bg-green-100'
-                                        : showConfirmModal === 'reject'
-                                        ? 'bg-red-100'
-                                        : 'bg-amber-100'
-                                }`}>
-                                    {showConfirmModal === 'approve' && <CheckCircle size={32} className="text-green-600" />}
-                                    {showConfirmModal === 'reject' && <XCircle size={32} className="text-red-600" />}
-                                    {showConfirmModal === 'suspend' && <Ban size={32} className="text-amber-600" />}
-                                </div>
-
-                                <h3 className="text-xl font-bold text-text-primary mb-2">
-                                    {showConfirmModal === 'approve' && 'Approve Provider?'}
-                                    {showConfirmModal === 'reject' && 'Reject Application?'}
-                                    {showConfirmModal === 'suspend' && 'Suspend Provider?'}
-                                </h3>
-
-                                <p className="text-text-secondary mb-6">
-                                    {showConfirmModal === 'approve' &&
-                                        'This will allow the provider to appear in search results and accept patients.'}
-                                    {showConfirmModal === 'reject' &&
-                                        'This will permanently reject the application. The provider will be notified.'}
-                                    {showConfirmModal === 'suspend' &&
-                                        'This will temporarily hide the provider from search results and prevent new patient connections.'}
-                                </p>
-
-                                <div className="flex gap-3 justify-center">
-                                    <Button
-                                        variant="outline"
-                                        onClick={() => setShowConfirmModal(null)}
-                                        disabled={isUpdating}
-                                    >
-                                        Cancel
-                                    </Button>
-                                    <Button
-                                        onClick={() => handleStatusUpdate(
-                                            showConfirmModal === 'approve' ? 'active' :
-                                            showConfirmModal === 'reject' ? 'rejected' : 'suspended'
-                                        )}
-                                        disabled={isUpdating}
-                                        className={
-                                            showConfirmModal === 'approve'
-                                                ? 'bg-green-600 hover:bg-green-700'
-                                                : showConfirmModal === 'reject'
-                                                ? 'bg-red-600 hover:bg-red-700'
-                                                : 'bg-amber-600 hover:bg-amber-700'
-                                        }
-                                    >
-                                        {isUpdating ? 'Processing...' : 'Confirm'}
-                                    </Button>
-                                </div>
-                            </div>
-                        </motion.div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-        </div>
+            <AdminConfirmModal
+                isOpen={modalState.isOpen}
+                onClose={() => setModalState(s => ({ ...s, isOpen: false }))}
+                onConfirm={handleStatusUpdate}
+                title={modalConfig.title}
+                description={modalConfig.description}
+                confirmText={modalConfig.confirmText}
+                confirmColor={modalConfig.confirmColor}
+                isLoading={isUpdating}
+                showReasonField={modalConfig.showReason}
+                reasonRequired={modalConfig.reasonRequired}
+                reasonPlaceholder={`Reason for ${modalState.action === 'rejected' ? 'rejection' : 'suspension'}...`}
+            />
+        </AdminLayout>
     );
 };
 

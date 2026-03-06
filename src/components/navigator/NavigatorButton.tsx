@@ -26,9 +26,9 @@ export const NavigatorButton = React.forwardRef<HTMLButtonElement, NavigatorButt
 
     const variants = {
         primary: "bg-teal-600/90 hover:bg-teal-500 text-white shadow-[0_0_20px_rgba(20,184,166,0.3)] hover:shadow-[0_0_30px_rgba(20,184,166,0.5)] border border-teal-400/30",
-        secondary: "bg-white/5 hover:bg-white/10 text-white border border-white/10 backdrop-blur-md shadow-lg",
-        outline: "border border-white/20 bg-transparent hover:bg-white/5 text-white focus-visible:ring-white/50",
-        ghost: "bg-transparent hover:bg-white/5 text-teal-400 hover:text-teal-300",
+        secondary: "bg-surface/50 hover:bg-surface-hover/50 text-text-primary border border-border backdrop-blur-md shadow-lg",
+        outline: "border border-border-hover bg-transparent hover:bg-surface-hover/50 text-text-primary focus-visible:ring-white/50",
+        ghost: "bg-transparent hover:bg-surface-hover/50 text-teal-400 hover:text-teal-300",
         danger: "bg-crisis-red/90 text-white hover:bg-crisis-red shadow-[0_0_20px_rgba(239,68,68,0.3)] hover:shadow-[0_0_30px_rgba(239,68,68,0.5)] border border-red-400/30",
     };
 
@@ -56,7 +56,7 @@ export const NavigatorButton = React.forwardRef<HTMLButtonElement, NavigatorButt
         >
             {/* Subtle inner glow for primary buttons */}
             {(variant === 'primary' || variant === 'danger') && (
-                <div className="absolute inset-0 rounded-lg pointer-events-none border border-white/20 mix-blend-overlay"></div>
+                <div className="absolute inset-0 rounded-lg pointer-events-none border border-border-hover mix-blend-overlay"></div>
             )}
             {/* Shimmer effect on hover */}
             <div className="absolute inset-0 -translate-x-full group-hover:animate-shimmer bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none" />

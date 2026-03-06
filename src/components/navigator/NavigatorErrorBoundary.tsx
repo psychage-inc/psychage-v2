@@ -60,7 +60,7 @@ export class NavigatorErrorBoundary extends Component<Props, State> {
         if (this.state.hasError) {
             return (
                 <div className="min-h-screen bg-background flex items-center justify-center px-4 py-12">
-                    <div className="max-w-2xl w-full bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl overflow-hidden">
+                    <div className="max-w-2xl w-full bg-surface/50 backdrop-blur-xl rounded-2xl border border-border shadow-2xl overflow-hidden">
                         {/* Error strip */}
                         <div className="h-2 bg-crisis-red"></div>
 
@@ -71,10 +71,10 @@ export class NavigatorErrorBoundary extends Component<Props, State> {
                                     <ShieldAlert className="w-8 h-8 text-crisis-red" aria-hidden="true" />
                                 </div>
                                 <div className="flex-1">
-                                    <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white mb-3">
+                                    <h2 className="text-2xl sm:text-3xl font-display font-bold text-text-primary mb-3">
                                         Something went wrong
                                     </h2>
-                                    <p className="text-charcoal-200 leading-relaxed">
+                                    <p className="text-text-secondary leading-relaxed">
                                         An unexpected error occurred in the Symptom Navigator. You can try restarting below.
                                     </p>
                                 </div>
@@ -82,12 +82,12 @@ export class NavigatorErrorBoundary extends Component<Props, State> {
 
                             {/* Error details (in development only) */}
                             {process.env.NODE_ENV === 'development' && this.state.error && (
-                                <div className="mb-6 p-4 bg-charcoal-900/50 rounded-lg border border-white/5 overflow-auto">
+                                <div className="mb-6 p-4 bg-surface/50 rounded-lg border border-border overflow-auto">
                                     <p className="text-sm font-mono text-crisis-red mb-2 font-semibold">
                                         {this.state.error.name}: {this.state.error.message}
                                     </p>
                                     {this.state.error.stack && (
-                                        <pre className="text-xs text-charcoal-400 overflow-x-auto">
+                                        <pre className="text-xs text-text-tertiary overflow-x-auto">
                                             {this.state.error.stack}
                                         </pre>
                                     )}
@@ -131,7 +131,7 @@ export class NavigatorErrorBoundary extends Component<Props, State> {
                             </div>
 
                             {/* Help text */}
-                            <p className="mt-6 text-sm text-charcoal-400 text-center">
+                            <p className="mt-6 text-sm text-text-tertiary text-center">
                                 If this problem persists, please try refreshing the page or contact support.
                             </p>
                         </div>

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { MapPin, Calendar, ShieldCheck, CreditCard, Video, Clock } from 'lucide-react';
 import { Provider } from '../../types/models';
 import Badge from '../ui/Badge';
+import { hoverLift } from '../../lib/animations';
 import Button from '../ui/Button';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -25,7 +26,7 @@ const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
 
   return (
     <motion.div
-      whileHover={{ y: -4 }}
+      {...hoverLift}
       className="bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl hover:border-teal-100 dark:hover:border-teal-900 transition-all duration-300 flex flex-col h-full group"
     >
       <div className="flex items-start gap-4 mb-4">

@@ -10,7 +10,7 @@ export const DisclaimerCard: React.FC<DisclaimerCardProps> = ({ className }) => 
     return (
         <div
             className={cn(
-                "bg-charcoal-50 dark:bg-charcoal-800/50 rounded-lg p-5 border border-charcoal-200 dark:border-charcoal-700",
+                "bg-surface/50 rounded-lg p-5 border border-border",
                 className
             )}
             role="region"
@@ -21,13 +21,13 @@ export const DisclaimerCard: React.FC<DisclaimerCardProps> = ({ className }) => 
                     <ShieldAlert className="w-6 h-6" aria-hidden="true" />
                 </div>
                 <div className="space-y-2">
-                    <div className="font-serif text-lg text-charcoal-900 dark:text-charcoal-100 font-medium" role="heading" aria-level={2}>
+                    <div className="font-display text-lg text-text-primary font-medium" role="heading" aria-level={2}>
                         Not Medical Advice
                     </div>
-                    <p className="text-sm text-charcoal-600 dark:text-charcoal-300 leading-relaxed">
+                    <p className="text-sm text-text-secondary leading-relaxed">
                         The Symptom Navigator is an educational tool designed to help you understand your experiences and find relevant resources. It is <strong className="font-semibold">not a diagnostic tool</strong> and cannot replace professional medical or mental health advice.
                     </p>
-                    <p className="text-sm text-charcoal-600 dark:text-charcoal-300 leading-relaxed">
+                    <p className="text-sm text-text-secondary leading-relaxed">
                         If you are in immediate danger or experiencing a medical emergency, please call your local emergency services immediately.
                     </p>
                 </div>

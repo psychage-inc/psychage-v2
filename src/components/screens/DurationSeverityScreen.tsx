@@ -11,6 +11,7 @@ import { SymptomReviewPanel, ReviewSymptom } from '../navigator/SymptomReviewPan
 import { ConfirmDialog } from '../ui/ConfirmDialog';
 import { ShieldAlert, SkipForward, Zap } from 'lucide-react';
 import { SYMPTOM_DEFAULTS, SYMPTOM_DETAIL_UX_THRESHOLD } from '../../lib/navigator/defaults';
+import { SkeletonSymptomDetails } from '../navigator/NavigatorSkeletons';
 
 export const DurationSeverityScreen: React.FC = () => {
     const { state, dispatch, announcePolite } = useNavigator();
@@ -33,12 +34,7 @@ export const DurationSeverityScreen: React.FC = () => {
     }, [knowledgeBase, selectedSymptoms]);
 
     if (isLoading) {
-        return (
-            <div className="flex flex-col items-center justify-center min-h-[50vh] space-y-4" aria-busy="true" aria-live="polite">
-                <div className="w-8 h-8 border-4 border-teal-500/30 border-t-teal-500 rounded-full animate-spin" />
-                <p className="text-charcoal-200 font-medium tracking-wide">Loading...</p>
-            </div>
-        );
+        return <SkeletonSymptomDetails />;
     }
 
     if (error) {
@@ -48,8 +44,8 @@ export const DurationSeverityScreen: React.FC = () => {
                     <ShieldAlert className="w-8 h-8 text-crisis-red" />
                 </div>
                 <div>
-                    <h3 className="text-2xl font-serif text-white mb-2">Notice</h3>
-                    <p className="text-charcoal-200 max-w-md">{error}</p>
+                    <h3 className="text-2xl font-display text-text-primary mb-2">Notice</h3>
+                    <p className="text-text-secondary max-w-md">{error}</p>
                 </div>
                 <NavigatorButton
                     variant="outline"
@@ -64,8 +60,8 @@ export const DurationSeverityScreen: React.FC = () => {
     if (symptomsArray.length === 0) {
         return (
             <div className="flex flex-col items-center justify-center min-h-[50vh] space-y-6 text-center px-4" role="alert">
-                <h3 className="text-2xl font-serif text-white mb-2">No symptoms selected</h3>
-                <p className="text-charcoal-200 max-w-md">You haven't selected any symptoms to provide details for.</p>
+                <h3 className="text-2xl font-display text-text-primary mb-2">No symptoms selected</h3>
+                <p className="text-text-secondary max-w-md">You haven't selected any symptoms to provide details for.</p>
                 <NavigatorButton
                     variant="primary"
                     onClick={() => dispatch({ type: 'SET_STEP', payload: 'symptoms' })}
@@ -205,7 +201,7 @@ export const DurationSeverityScreen: React.FC = () => {
             <div className="mb-8 relative space-y-6">
                 <div className="absolute -inset-x-8 -inset-y-8 bg-teal-500/10 blur-3xl rounded-full opacity-50 pointer-events-none" />
                 <div className="relative z-10">
-                    <h2 className="text-3xl sm:text-4xl font-serif text-text-primary mb-4 drop-shadow-[0_2px_10px_rgba(255,255,255,0.1)]">
+                    <h2 className="text-3xl sm:text-4xl font-display text-text-primary mb-4 drop-shadow-[0_2px_10px_rgba(255,255,255,0.1)]">
                         Let's understand more
                     </h2>
                     <p className="text-lg text-text-secondary">
@@ -240,9 +236,9 @@ export const DurationSeverityScreen: React.FC = () => {
                         exit={{ opacity: 0, x: -20, transition: { duration: 0.2 } }}
                         className="space-y-6"
                     >
-                        <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl shadow-lg relative overflow-hidden group hover:border-white/20 transition-all duration-500">
+                        <div className="p-6 rounded-2xl bg-surface/50 border border-border backdrop-blur-xl shadow-lg relative overflow-hidden group hover:border-border-hover transition-all duration-500">
                             <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-transparent pointer-events-none opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
-                            <h3 className="font-serif text-2xl text-teal-300 mb-2 relative z-10 drop-shadow-md">
+                            <h3 className="font-display text-2xl text-teal-300 mb-2 relative z-10 drop-shadow-md">
                                 Regarding: {currentSymptom.details?.name}
                             </h3>
                             <p className="text-text-secondary relative z-10">
@@ -295,7 +291,7 @@ export const DurationSeverityScreen: React.FC = () => {
             </div>
 
             {/* Floating Bottom Action Bar */}
-            <div className="fixed bottom-0 left-0 right-0 bg-background/80 backdrop-blur-2xl border-t border-white/10 p-4 pb-8 sm:p-6 sm:pb-8 z-30 shadow-[0_-10px_40px_rgba(0,0,0,0.3)]">
+            <div className="fixed bottom-0 left-0 right-0 bg-background/80 backdrop-blur-2xl border-t border-border p-4 sm:p-6 z-30 shadow-[0_-10px_40px_rgba(0,0,0,0.3)]" style={{ paddingBottom: 'max(env(safe-area-inset-bottom, 0px), 1rem)' }}>
                 <div className="max-w-3xl mx-auto space-y-3">
                     {/* Skip/Defaults Row - only shown for enhanced UX */}
                     {showEnhancedUX && (

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Check } from 'lucide-react';
@@ -24,9 +24,16 @@ const DailyCheckIn: React.FC = () => {
   const [oneSentence, setOneSentence] = useState('');
   const [tags, setTags] = useState<string[]>([]);
   const [saved, setSaved] = useState(false);
+  const justSaved = useRef(false);
 
   // Load existing entry for selected date
   useEffect(() => {
+    // Skip resetting form right after a save — the data change from addCheckIn
+    // would otherwise immediately reset `saved` and flash away the success screen
+    if (justSaved.current) {
+      justSaved.current = false;
+      return;
+    }
     const existing = data.dailyCheckIns.find(e => e.date === date);
     if (existing) {
       setMood(existing.mood);
@@ -65,6 +72,7 @@ const DailyCheckIn: React.FC = () => {
       createdAt: nowISO(),
       updatedAt: nowISO(),
     };
+    justSaved.current = true;
     addCheckIn(entry);
     setSaved(true);
   };

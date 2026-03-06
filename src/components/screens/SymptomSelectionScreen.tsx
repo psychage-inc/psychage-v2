@@ -11,6 +11,7 @@ import { ContentLanguageNotice } from '../navigator/ContentLanguageNotice';
 import { Symptom, SymptomCategory as CategoryType } from '../../lib/navigator/types';
 import { ShieldAlert, SearchX } from 'lucide-react';
 import { useDebounce } from '../../hooks/useDebounce';
+import { SkeletonSymptomList } from '../navigator/NavigatorSkeletons';
 
 export const SymptomSelectionScreen: React.FC = () => {
     const { t } = useTranslation();
@@ -21,14 +22,9 @@ export const SymptomSelectionScreen: React.FC = () => {
     // Debounced announcement to prevent screen reader spam (WCAG 4.1.3)
     const debouncedAnnounce = useDebounce(announcePolite, 300);
 
-    // Handle loading state
+    // Handle loading state — show skeleton that mirrors final layout
     if (state.isLoading) {
-        return (
-            <div className="flex flex-col items-center justify-center min-h-[50vh] space-y-4" aria-busy="true" aria-live="polite">
-                <div className="w-8 h-8 border-4 border-teal-500/30 border-t-teal-500 rounded-full animate-spin" />
-                <p className="text-charcoal-300 font-medium tracking-wide">Loading symptoms...</p>
-            </div>
-        );
+        return <SkeletonSymptomList />;
     }
 
     // Handle error state
@@ -39,8 +35,8 @@ export const SymptomSelectionScreen: React.FC = () => {
                     <ShieldAlert className="w-8 h-8 text-crisis-red" />
                 </div>
                 <div>
-                    <h3 className="text-2xl font-serif text-white mb-2">We encountered an issue</h3>
-                    <p className="text-charcoal-300 max-w-md">{state.error}</p>
+                    <h3 className="text-2xl font-display text-text-primary mb-2">We encountered an issue</h3>
+                    <p className="text-text-secondary max-w-md">{state.error}</p>
                 </div>
                 <NavigatorButton
                     variant="outline"
@@ -56,8 +52,8 @@ export const SymptomSelectionScreen: React.FC = () => {
     if (!knowledgeBase) {
         return (
             <div className="flex flex-col items-center justify-center min-h-[50vh] space-y-6 text-center px-4">
-                <h3 className="text-2xl font-serif text-white mb-2">Knowledge Base Unavailable</h3>
-                <p className="text-charcoal-300 max-w-md">The symptom data is currently not available. Please try again later.</p>
+                <h3 className="text-2xl font-display text-text-primary mb-2">Knowledge Base Unavailable</h3>
+                <p className="text-text-secondary max-w-md">The symptom data is currently not available. Please try again later.</p>
                 <NavigatorButton
                     variant="outline"
                     onClick={() => dispatch({ type: 'RESET_FLOW' })}
@@ -153,15 +149,15 @@ export const SymptomSelectionScreen: React.FC = () => {
         <div className="max-w-3xl mx-auto py-8 px-4 sm:px-6 relative">
             <div className="mb-8">
                 <ContentLanguageNotice />
-                <h2 className="text-3xl sm:text-4xl font-serif font-medium text-white mb-4">
+                <h2 className="text-3xl sm:text-4xl font-display font-medium text-text-primary mb-4">
                     {t('navigator.symptom_selection.title')}
                 </h2>
-                <p className="text-lg text-charcoal-300">
+                <p className="text-lg text-text-secondary">
                     {t('navigator.symptom_selection.subtitle')}
                 </p>
             </div>
 
-            <div className="sticky top-16 lg:top-24 z-20 bg-charcoal-950/80 backdrop-blur-xl pb-4 pt-4 -mx-4 px-4 sm:-mx-6 sm:px-6 border-b border-white/5 shadow-sm">
+            <div className="sticky top-16 lg:top-24 z-20 bg-background/80 backdrop-blur-xl pb-4 pt-4 -mx-4 px-4 sm:-mx-6 sm:px-6 border-b border-border shadow-sm">
                 <SymptomSearch
                     value={searchQuery}
                     onChange={setSearchQuery}
@@ -179,15 +175,15 @@ export const SymptomSelectionScreen: React.FC = () => {
 
             <div className="space-y-6 mt-6 pb-36 sm:pb-40">
                 {Object.keys(groupedSymptoms).length === 0 ? (
-                    <div className="text-center py-16 px-6 bg-white/5 backdrop-blur-sm rounded-2xl border-2 border-dashed border-white/10 space-y-5 max-w-xl mx-auto">
-                        <div className="w-16 h-16 mx-auto bg-charcoal-800/50 rounded-full flex items-center justify-center border border-white/5">
-                            <SearchX className="w-8 h-8 text-charcoal-400" aria-hidden="true" />
+                    <div className="text-center py-16 px-6 bg-surface/50 backdrop-blur-sm rounded-2xl border-2 border-dashed border-border space-y-5 max-w-xl mx-auto">
+                        <div className="w-16 h-16 mx-auto bg-surface-hover/50 rounded-full flex items-center justify-center border border-border">
+                            <SearchX className="w-8 h-8 text-text-tertiary" aria-hidden="true" />
                         </div>
                         <div className="space-y-2">
-                            <p className="text-white font-semibold text-lg">
+                            <p className="text-text-primary font-semibold text-lg">
                                 No symptoms match "{searchQuery}"
                             </p>
-                            <p className="text-charcoal-300 text-sm leading-relaxed">
+                            <p className="text-text-secondary text-sm leading-relaxed">
                                 Try using fewer words, a different term, or check your spelling. This tool includes {knowledgeBase?.symptoms.length || 82} symptoms across 12 categories.
                             </p>
                         </div>
@@ -195,7 +191,7 @@ export const SymptomSelectionScreen: React.FC = () => {
                             <button
                                 type="button"
                                 onClick={() => setSearchQuery('')}
-                                className="px-5 py-2.5 text-teal-400 hover:text-teal-300 hover:bg-teal-500/10 font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal-900 transition-colors rounded-lg border border-teal-500/30 hover:border-teal-400/50"
+                                className="px-5 py-2.5 text-teal-400 hover:text-teal-300 hover:bg-teal-500/10 font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-colors rounded-lg border border-teal-500/30 hover:border-teal-400/50"
                             >
                                 Clear search
                             </button>
@@ -205,7 +201,7 @@ export const SymptomSelectionScreen: React.FC = () => {
                                     setSearchQuery('');
                                     dispatch({ type: 'SELECT_ALL_DOMAINS' });
                                 }}
-                                className="px-5 py-2.5 text-charcoal-200 hover:text-white hover:bg-white/10 font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal-900 transition-colors rounded-lg border border-white/10 hover:border-white/20"
+                                className="px-5 py-2.5 text-text-secondary hover:text-text-primary hover:bg-surface-hover font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-colors rounded-lg border border-border hover:border-border-hover"
                             >
                                 Show all symptoms
                             </button>
@@ -241,16 +237,16 @@ export const SymptomSelectionScreen: React.FC = () => {
             </div>
 
             {/* Floating Bottom Action Bar */}
-            <div className="fixed bottom-0 left-0 right-0 bg-charcoal-950/80 backdrop-blur-xl border-t border-white/10 p-4 pb-safe sm:p-6 sm:pb-safe z-30 shadow-[0_-10px_40px_rgba(0,0,0,0.5)] transform translate-y-0 pb-8 sm:pb-8">
+            <div className="fixed bottom-0 left-0 right-0 bg-background/80 backdrop-blur-xl border-t border-border p-4 sm:p-6 z-30 shadow-[0_-10px_40px_rgba(0,0,0,0.3)]" style={{ paddingBottom: 'max(env(safe-area-inset-bottom, 0px), 1rem)' }}>
                 <div className="max-w-3xl mx-auto flex items-center justify-between gap-3">
-                    <div className="bg-white/5 border border-white/10 px-4 py-2 rounded-full backdrop-blur-md">
-                        <p className="text-charcoal-200 font-medium tracking-wide" aria-live="polite" aria-atomic="true">
+                    <div className="bg-surface/50 border border-border px-4 py-2 rounded-full backdrop-blur-md">
+                        <p className="text-text-secondary font-medium tracking-wide" aria-live="polite" aria-atomic="true">
                             <motion.span
                                 key={selectedCount}
                                 initial={{ scale: 1 }}
                                 animate={{ scale: [1, 1.15, 1] }}
                                 transition={{ duration: 0.2, ease: "easeOut" }}
-                                className="text-white font-bold inline-block"
+                                className="text-text-primary font-bold inline-block"
                             >
                                 {selectedCount}
                             </motion.span>{' '}

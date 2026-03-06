@@ -41,7 +41,7 @@ export const SeveritySlider: React.FC<SeveritySliderProps> = ({
                     animate={{ left: `${percentage}%` }}
                     transition={{ type: "spring", stiffness: 300, damping: 25 }}
                 >
-                    <span className="text-charcoal-900 font-bold text-sm">{localValue}</span>
+                    <span className="text-text-primary font-bold text-sm">{localValue}</span>
                 </motion.div>
 
                 <input
@@ -51,12 +51,12 @@ export const SeveritySlider: React.FC<SeveritySliderProps> = ({
                     step="1"
                     value={localValue}
                     onChange={handleChange}
-                    className="w-full appearance-none bg-transparent cursor-pointer relative z-20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 rounded-full"
+                    className="w-full appearance-none bg-transparent cursor-pointer relative z-20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 rounded-full touch-none"
                     aria-label="Severity scale from 1 to 10"
                 />
 
                 {/* Custom Track */}
-                <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 h-2 bg-white/10 rounded-full overflow-hidden pointer-events-none z-0">
+                <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 h-3 bg-surface-hover/50 rounded-full overflow-hidden pointer-events-none z-0">
                     <div
                         className="absolute top-0 left-0 bottom-0 bg-gradient-to-r from-teal-400 to-indigo-500 rounded-full"
                         style={{ width: `${percentage}%` }}
@@ -64,7 +64,7 @@ export const SeveritySlider: React.FC<SeveritySliderProps> = ({
                 </div>
             </div>
 
-            <div className="flex justify-between items-center text-sm font-medium text-charcoal-400">
+            <div className="flex justify-between items-center text-sm font-medium text-text-tertiary">
                 <span>{minLabel}</span>
                 <span>{maxLabel}</span>
             </div>
@@ -74,27 +74,33 @@ export const SeveritySlider: React.FC<SeveritySliderProps> = ({
         /* Hide default thumb but keep accessible */
         input[type=range]::-webkit-slider-thumb {
           -webkit-appearance: none;
-          height: 24px;
-          width: 24px;
+          height: 28px;
+          width: 28px;
           border-radius: 50%;
           background: white;
-          border: 2px solid theme('colors.indigo.500');
+          border: 2px solid #6366f1;
           box-shadow: 0 0 12px rgba(99, 102, 241, 0.6);
           cursor: pointer;
-          margin-top: -11px;
+          margin-top: -10px;
         }
         input[type=range]::-moz-range-thumb {
-          height: 24px;
-          width: 24px;
+          height: 28px;
+          width: 28px;
           border-radius: 50%;
           background: white;
-          border: 2px solid theme('colors.indigo.500');
+          border: 2px solid #6366f1;
           box-shadow: 0 0 12px rgba(99, 102, 241, 0.6);
           cursor: pointer;
         }
         input[type=range]::-webkit-slider-runnable-track {
           width: 100%;
-          height: 2px;
+          height: 8px;
+          cursor: pointer;
+          background: transparent;
+        }
+        input[type=range]::-moz-range-track {
+          width: 100%;
+          height: 8px;
           cursor: pointer;
           background: transparent;
         }

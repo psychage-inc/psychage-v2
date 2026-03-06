@@ -23,22 +23,22 @@ export const ProviderQuestions: React.FC<ProviderQuestionsProps> = ({ questions 
     if (!questions || questions.length === 0) return null;
 
     return (
-        <div className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 shadow-lg overflow-hidden relative group">
+        <div className="bg-surface/50 backdrop-blur-xl rounded-2xl border border-border shadow-lg overflow-hidden relative group">
             <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-transparent pointer-events-none" />
 
-            <div className="px-6 py-5 border-b border-white/10 flex items-center justify-between relative z-10 bg-white/5">
+            <div className="px-6 py-5 border-b border-border flex items-center justify-between relative z-10 bg-surface/50">
                 <div className="flex items-center gap-3">
-                    <div className="p-2 bg-white/10 rounded-lg text-teal-400 border border-white/5">
+                    <div className="p-2 bg-surface-hover/50 rounded-lg text-teal-400 border border-border">
                         <ClipboardList className="w-5 h-5" />
                     </div>
-                    <h3 className="font-serif text-lg font-medium text-text-primary">
+                    <h3 className="font-display text-lg font-medium text-text-primary">
                         Questions for your Provider
                     </h3>
                 </div>
 
                 <button
                     onClick={handleCopy}
-                    className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium text-text-secondary hover:text-text-primary hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-teal-500/50 transition-colors border border-transparent hover:border-white/10"
+                    className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium text-text-secondary hover:text-text-primary hover:bg-surface-hover focus:outline-none focus:ring-2 focus:ring-teal-500/50 transition-colors border border-transparent hover:border-border"
                     aria-label={copied ? "Copied to clipboard" : "Copy questions"}
                 >
                     <AnimatePresence mode="wait">
@@ -72,7 +72,7 @@ export const ProviderQuestions: React.FC<ProviderQuestionsProps> = ({ questions 
             </div>
 
             <div className="p-6 relative z-10">
-                <p className="text-sm text-text-secondary mb-4 pb-4 border-b border-white/10">
+                <p className="text-sm text-text-secondary mb-4 pb-4 border-b border-border">
                     Consider bringing these questions to your next mental health appointment or doctor's visit to help guide the conversation:
                 </p>
 

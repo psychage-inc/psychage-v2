@@ -111,8 +111,8 @@ export const ProcessingScreen: React.FC = () => {
                     <ShieldAlert className="w-8 h-8 text-crisis-red" />
                 </div>
                 <div>
-                    <h3 className="text-2xl font-serif text-white mb-2">Processing Error</h3>
-                    <p className="text-charcoal-300 max-w-md">{processingError}</p>
+                    <h3 className="text-2xl font-display text-text-primary mb-2">Processing Error</h3>
+                    <p className="text-text-secondary max-w-md">{processingError}</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3">
                     <NavigatorButton

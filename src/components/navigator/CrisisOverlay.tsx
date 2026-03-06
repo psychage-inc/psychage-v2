@@ -60,7 +60,7 @@ export const CrisisOverlay: React.FC = () => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="fixed inset-0 bg-charcoal-900/60 backdrop-blur-sm z-[100]"
+                        className="fixed inset-0 bg-background/60 backdrop-blur-sm z-[100]"
                         aria-hidden="true"
                     />
 
@@ -73,7 +73,7 @@ export const CrisisOverlay: React.FC = () => {
                                 animate={{ opacity: 1, scale: 1, y: 0 }}
                                 exit={{ opacity: 0, scale: 0.95, y: 20 }}
                                 transition={{ type: "spring", damping: 25, stiffness: 300 }}
-                                className="relative bg-charcoal-900/90 backdrop-blur-xl rounded-2xl text-left overflow-hidden shadow-[0_0_40px_rgba(239,68,68,0.15)] transform transition-all sm:my-8 sm:max-w-2xl w-full border border-crisis-red/20"
+                                className="relative bg-background/90 backdrop-blur-xl rounded-2xl text-left overflow-hidden shadow-[0_0_40px_rgba(239,68,68,0.15)] transform transition-all sm:my-8 sm:max-w-2xl w-full border border-crisis-red/20"
                                 role="alertdialog"
                                 aria-modal="true"
                                 aria-labelledby="crisis-modal-title"
@@ -92,15 +92,15 @@ export const CrisisOverlay: React.FC = () => {
                                         <div className="mt-4 text-center sm:mt-0 sm:ml-4 sm:text-left">
                                             <h3
                                                 ref={headingRef}
-                                                className="text-2xl font-serif font-bold text-white drop-shadow-sm"
+                                                className="text-2xl font-display font-bold text-text-primary drop-shadow-sm"
                                                 id="crisis-modal-title"
                                                 tabIndex={-1}
                                             >
                                                 Important Safety Information
                                             </h3>
                                             <div className="mt-3">
-                                                <p id="crisis-modal-desc" className="text-base text-charcoal-200 leading-relaxed">
-                                                    Based on your responses, we noticed symptoms that may require immediate attention or support. <strong className="font-semibold text-white">You don't have to go through this alone.</strong> Please consider reaching out to one of the resources below.
+                                                <p id="crisis-modal-desc" className="text-base text-text-secondary leading-relaxed">
+                                                    Based on your responses, we noticed symptoms that may require immediate attention or support. <strong className="font-semibold text-text-primary">You don't have to go through this alone.</strong> Please consider reaching out to one of the resources below.
                                                 </p>
                                             </div>
                                         </div>
@@ -108,7 +108,7 @@ export const CrisisOverlay: React.FC = () => {
 
                                     {/* Crisis Resources List */}
                                     <div className="mt-8 space-y-4">
-                                        <h4 className="text-sm font-semibold uppercase tracking-wider text-charcoal-300 mb-2">
+                                        <h4 className="text-sm font-semibold uppercase tracking-wider text-text-secondary mb-2">
                                             Available Support ({detectedRegion || 'International'})
                                         </h4>
                                         {resources.map((resource) => (

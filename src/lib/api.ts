@@ -60,6 +60,54 @@ export interface ProviderProfile {
   specialities?: string[];
 }
 
+// Admin types
+export interface AdminStats {
+  users: number;
+  pendingProviders: number;
+  alerts: number;
+  activeSessions: number;
+}
+
+export interface AdminActivityLog {
+  id: string;
+  created_at: string;
+  action: string;
+  user_id?: string;
+  details: string | Record<string, unknown>;
+}
+
+export interface AdminAuditLog {
+  id: string;
+  created_at: string;
+  user_id?: string;
+  action: string;
+  details: string | Record<string, unknown>;
+}
+
+export interface AdminReport {
+  id: string;
+  created_at: string;
+  type: 'content' | 'user' | 'system';
+  subject?: string;
+  description?: string;
+  status: 'pending' | 'investigating' | 'resolved';
+  reporter_id?: string;
+  reporter_email?: string;
+  resolution_notes?: string;
+  resolved_at?: string;
+}
+
+export interface AdminUser {
+  id: string;
+  email: string;
+  display_name: string;
+  avatar_url?: string;
+  role: 'patient' | 'provider' | 'admin';
+  status: 'active' | 'inactive' | 'suspended';
+  created_at: string;
+  last_active?: string;
+}
+
 // Token management
 export const tokenStorage = {
   getAccessToken: (): string | null => {
@@ -105,7 +153,8 @@ export class ApiError extends Error {
 // Core fetch wrapper
 async function fetchApi<T>(
   endpoint: string,
-  options: RequestInit = {}
+  options: RequestInit = {},
+  _isRetry = false
 ): Promise<ApiResponse<T>> {
   const url = `${API_URL}${endpoint}`;
 
@@ -130,12 +179,12 @@ async function fetchApi<T>(
     const data = await response.json();
 
     if (!response.ok) {
-      // Handle 401 - try to refresh token
-      if (response.status === 401 && tokenStorage.getRefreshToken()) {
+      // Handle 401 - try to refresh token (only once to prevent infinite loop)
+      if (response.status === 401 && !_isRetry && tokenStorage.getRefreshToken()) {
         const refreshed = await refreshAccessToken();
         if (refreshed) {
           // Retry the original request with new token
-          return fetchApi<T>(endpoint, options);
+          return fetchApi<T>(endpoint, options, true);
         }
       }
 
@@ -378,8 +427,8 @@ export const api = {
 
   // Admin endpoints
   admin: {
-    getStats: () => api.get<Record<string, unknown>>('/api/admin/stats'),
-    getRecentActivity: () => api.get<Record<string, unknown>[]>('/api/admin/activity'),
+    getStats: () => api.get<AdminStats>('/api/admin/stats'),
+    getRecentActivity: () => api.get<AdminActivityLog[]>('/api/admin/activity'),
     getProviders: (params?: { status?: string; page?: number; limit?: number }) => {
       const searchParams = new URLSearchParams();
       if (params?.status) searchParams.set('status', params.status);
@@ -394,9 +443,26 @@ export const api = {
       const searchParams = new URLSearchParams();
       if (params?.page) searchParams.set('page', params.page.toString());
       if (params?.limit) searchParams.set('limit', params.limit.toString());
-      return api.get<unknown[]>(`/api/admin/audit-logs?${searchParams.toString()}`);
+      return api.get<AdminAuditLog[]>(`/api/admin/audit-logs?${searchParams.toString()}`);
     },
-    getReports: (type: string) => api.get<Record<string, unknown>>(`/api/admin/reports?type=${type}`)
+    getReports: (type: string) => api.get<AdminReport[]>(`/api/admin/reports?type=${encodeURIComponent(type)}`),
+    getReport: (id: string) => api.get<AdminReport>(`/api/admin/reports/${id}`),
+    updateReportStatus: (id: string, status: string, notes?: string) =>
+      api.post(`/api/admin/reports/${id}/status`, { status, notes }),
+    getUsers: (params?: { role?: string; page?: number; limit?: number; search?: string }) => {
+      const searchParams = new URLSearchParams();
+      if (params?.role) searchParams.set('role', params.role);
+      if (params?.page) searchParams.set('page', params.page.toString());
+      if (params?.limit) searchParams.set('limit', params.limit.toString());
+      if (params?.search) searchParams.set('search', params.search);
+      return api.get<AdminUser[]>(`/api/admin/users?${searchParams.toString()}`);
+    },
+    updateUserStatus: (id: string, status: string) =>
+      api.post(`/api/admin/users/${id}/status`, { status }),
+    saveProviderNotes: (id: string | number, notes: string) =>
+      api.post(`/api/admin/providers/${id}/notes`, { notes }),
+    updateProviderStatusWithReason: (id: string | number, status: string, reason?: string) =>
+      api.post(`/api/admin/providers/${id}/status`, { status, reason }),
   },
 
   // Mood tracking endpoints
@@ -430,7 +496,7 @@ export const api = {
 
     getById: (id: number) => api.get<unknown>(`/api/tools/${id}`),
 
-    getByCategory: (category: string) => api.get<unknown[]>(`/api/tools?category=${category}`),
+    getByCategory: (category: string) => api.get<unknown[]>(`/api/tools?category=${encodeURIComponent(category)}`),
   },
 
   // Symptoms endpoints
@@ -472,7 +538,7 @@ export const api = {
       api.post<void>('/api/user/activity', { action_type: actionType, resource_type: resourceType, resource_id: resourceId, metadata }),
 
     getByType: (actionType: string, limit?: number) =>
-      api.get<unknown[]>(`/api/user/activity?action_type=${actionType}${limit ? `&limit=${limit}` : ''}`),
+      api.get<unknown[]>(`/api/user/activity?action_type=${encodeURIComponent(actionType)}${limit ? `&limit=${limit}` : ''}`),
 
     getStats: () => api.get<unknown>('/api/user/activity/stats'),
   },

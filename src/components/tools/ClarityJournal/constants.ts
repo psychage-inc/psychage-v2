@@ -154,7 +154,7 @@ export const JOURNAL_SECTIONS: SectionMeta[] = [
     icon: 'Sun',
     frequency: 'Every day',
     time: '2-5 min',
-    route: '/tools/clarity-journal/daily-checkin',
+    route: '/tools/clarity-journal/daily',
   },
   {
     id: 'weekly-screening',
@@ -164,7 +164,7 @@ export const JOURNAL_SECTIONS: SectionMeta[] = [
     icon: 'ClipboardCheck',
     frequency: 'Once a week',
     time: '3-5 min',
-    route: '/tools/clarity-journal/weekly-screening',
+    route: '/tools/clarity-journal/screening',
   },
   {
     id: 'thought-record',
@@ -184,7 +184,7 @@ export const JOURNAL_SECTIONS: SectionMeta[] = [
     icon: 'Activity',
     frequency: '2-3x per week',
     time: '2-3 min',
-    route: '/tools/clarity-journal/behavioral-activation',
+    route: '/tools/clarity-journal/activation',
   },
   {
     id: 'trigger-log',
@@ -194,7 +194,7 @@ export const JOURNAL_SECTIONS: SectionMeta[] = [
     icon: 'Map',
     frequency: 'As needed + monthly review',
     time: '5-15 min',
-    route: '/tools/clarity-journal/trigger-log',
+    route: '/tools/clarity-journal/triggers',
   },
   {
     id: 'wellness-toolbox',
@@ -204,7 +204,7 @@ export const JOURNAL_SECTIONS: SectionMeta[] = [
     icon: 'ShieldCheck',
     frequency: 'Fill once, update as needed',
     time: '15-20 min',
-    route: '/tools/clarity-journal/wellness-toolbox',
+    route: '/tools/clarity-journal/toolbox',
   },
   {
     id: 'weekly-reflection',
@@ -214,7 +214,7 @@ export const JOURNAL_SECTIONS: SectionMeta[] = [
     icon: 'BookOpen',
     frequency: 'Once a week',
     time: '5-10 min',
-    route: '/tools/clarity-journal/weekly-reflection',
+    route: '/tools/clarity-journal/reflection',
   },
 ];
 

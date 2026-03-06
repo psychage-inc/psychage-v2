@@ -139,6 +139,10 @@ function buildRedFlagMessage(symptomName: string, level: RedFlagLevel): string {
         `The experience you described ("${symptomName}") is worth monitoring. ` +
         'Consider discussing this with a healthcare provider at your next visit.'
       );
+    default: {
+      const _exhaustive: never = level;
+      return `The experience you described ("${symptomName}") is worth discussing with a healthcare provider. ${_exhaustive}`;
+    }
   }
 }
 
@@ -166,5 +170,9 @@ function buildSeverityFlagMessage(
         `You rated "${symptomName}" at an elevated intensity (${severity}/10). ` +
         'Consider discussing this with a healthcare provider.'
       );
+    default: {
+      const _exhaustive: never = level;
+      return `You rated "${symptomName}" at intensity ${severity}/10. Consider consulting a healthcare provider. ${_exhaustive}`;
+    }
   }
 }

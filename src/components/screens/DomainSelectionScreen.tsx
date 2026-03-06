@@ -50,10 +50,10 @@ export const DomainSelectionScreen: React.FC = () => {
     return (
         <div className="max-w-3xl mx-auto py-8 px-4 sm:px-6">
             <div className="mb-10 text-center">
-                <h2 className="text-3xl sm:text-4xl font-serif font-medium text-white mb-4 drop-shadow-sm">
+                <h2 className="text-3xl sm:text-4xl font-display font-medium text-text-primary mb-4 drop-shadow-sm">
                     What brings you here today?
                 </h2>
-                <p className="text-lg text-charcoal-300">
+                <p className="text-lg text-text-secondary">
                     Select the areas where you are experiencing the most noticeable changes or challenges. You can select more than one.
                 </p>
             </div>
@@ -77,11 +77,11 @@ export const DomainSelectionScreen: React.FC = () => {
                 ))}
             </div>
 
-            <div className="flex flex-col-reverse sm:flex-row items-center justify-between gap-4 mt-8 pt-8 border-t border-white/10">
+            <div className="flex flex-col-reverse sm:flex-row items-center justify-between gap-4 mt-8 pt-8 border-t border-border">
                 <NavigatorButton
                     variant="ghost"
                     onClick={handleSelectAll}
-                    className="w-full sm:w-auto text-charcoal-400 hover:text-white transition-colors"
+                    className="w-full sm:w-auto text-text-tertiary hover:text-text-primary transition-colors"
                 >
                     Not sure? Explore all symptoms
                 </NavigatorButton>

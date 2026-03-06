@@ -37,8 +37,8 @@ const RELEVANCE_CONFIG = {
     minimal: {
         filledDots: 0,
         totalDots: 4,
-        colorClass: 'text-charcoal-400',
-        bgColorClass: 'bg-charcoal-400',
+        colorClass: 'text-text-tertiary',
+        bgColorClass: 'bg-gray-400',
         label: 'Less likely'
     }
 };
@@ -56,7 +56,7 @@ export const RelevanceDots: React.FC<RelevanceDotsProps> = ({ level, className }
                             "w-2 h-2 rounded-full",
                             i < config.filledDots
                                 ? config.bgColorClass
-                                : "bg-charcoal-300 dark:bg-charcoal-700"
+                                : "bg-gray-300 dark:bg-gray-600"
                         )}
                     />
                 ))}

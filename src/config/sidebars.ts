@@ -1,4 +1,4 @@
-import { LayoutDashboard, History, Bookmark, Settings, Users, BarChart3, UserSquare2, ShieldAlert, FileText } from 'lucide-react';
+import { LayoutDashboard, History, Bookmark, Settings, Users, BarChart3, UserSquare2, UserCircle, ShieldAlert, FileText } from 'lucide-react';
 
 export const patientSidebarItems = [
     { icon: LayoutDashboard, label: 'Dashboard', path: '/dashboard' },
@@ -17,6 +17,7 @@ export const providerSidebarItems = [
 export const adminSidebarItems = [
     { icon: LayoutDashboard, label: 'Dashboard', path: '/admin' },
     { icon: Users, label: 'Providers', path: '/admin/providers' },
-    { icon: ShieldAlert, label: 'Audit Logs', path: '/admin/audit' },
+    { icon: UserCircle, label: 'Users', path: '/admin/users' },
     { icon: FileText, label: 'Reports', path: '/admin/reports' },
+    { icon: ShieldAlert, label: 'Audit Logs', path: '/admin/audit' },
 ];

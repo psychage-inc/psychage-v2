@@ -10,7 +10,8 @@ import { CrisisResourceCard } from '../navigator/CrisisResourceCard';
 import { ConfirmDialog } from '../ui/ConfirmDialog';
 import { generateProviderQuestions } from '../../lib/navigator/providerQuestions';
 import { useReducedMotion } from '../../hooks/useReducedMotion';
-import { staggerContainer, slideUp } from '../../lib/animations';
+import { staggerContainer, staggerItem, slideUp, spark } from '../../lib/animations';
+import { SkeletonResultCard } from '../navigator/NavigatorSkeletons';
 
 export const ResultsScreen: React.FC = () => {
     const { state, dispatch, announcePolite } = useNavigator();
@@ -50,9 +51,10 @@ export const ResultsScreen: React.FC = () => {
 
     if (isLoading) {
         return (
-            <div className="flex flex-col items-center justify-center min-h-[50vh] space-y-4" aria-busy="true" aria-live="polite">
-                <div className="w-8 h-8 border-4 border-teal-500/30 border-t-teal-500 rounded-full animate-spin" />
-                <p className="text-charcoal-200 font-medium tracking-wide">Loading your insights...</p>
+            <div className="max-w-4xl mx-auto py-8 px-4 sm:px-6 space-y-4" aria-busy="true" aria-live="polite">
+                <SkeletonResultCard />
+                <SkeletonResultCard />
+                <SkeletonResultCard />
             </div>
         );
     }
@@ -64,8 +66,8 @@ export const ResultsScreen: React.FC = () => {
                     <ShieldAlert className="w-8 h-8 text-crisis-red" />
                 </div>
                 <div>
-                    <h3 className="text-2xl font-serif text-white mb-2">Notice</h3>
-                    <p className="text-charcoal-200 max-w-md">{error || "Unable to load results. Please try again."}</p>
+                    <h3 className="text-2xl font-display text-text-primary mb-2">Notice</h3>
+                    <p className="text-text-secondary max-w-md">{error || "Unable to load results. Please try again."}</p>
                 </div>
                 <NavigatorButton
                     variant="outline"
@@ -127,14 +129,23 @@ export const ResultsScreen: React.FC = () => {
             <div className="text-center mb-8 relative">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-teal-500/20 blur-[50px] rounded-full pointer-events-none" />
                 <motion.div
-                    initial={{ scale: 0.5, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 0.4, ease: 'easeOut' }}
+                    variants={spark}
+                    initial="hidden"
+                    animate="visible"
                     className="flex justify-center mb-4 relative z-10"
                 >
-                    <CheckCircle2 className="w-10 h-10 text-teal-400 drop-shadow-[0_0_12px_rgba(45,212,191,0.4)]" />
+                    <div className="relative">
+                        <CheckCircle2 className="w-10 h-10 text-teal-400 drop-shadow-[0_0_12px_rgba(45,212,191,0.4)]" />
+                        {/* Success ring pulse */}
+                        <motion.div
+                            className="absolute inset-0 rounded-full border-2 border-teal-400/60"
+                            initial={{ scale: 1, opacity: 0.8 }}
+                            animate={{ scale: 2, opacity: 0 }}
+                            transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}
+                        />
+                    </div>
                 </motion.div>
-                <h2 className="text-3xl sm:text-4xl font-serif text-text-primary mb-4 drop-shadow-[0_2px_10px_rgba(255,255,255,0.1)] relative z-10">
+                <h2 className="text-3xl sm:text-4xl font-display text-text-primary mb-4 drop-shadow-[0_2px_10px_rgba(255,255,255,0.1)] relative z-10">
                     Your Insights
                 </h2>
                 <p className="text-lg text-text-secondary max-w-2xl mx-auto relative z-10">
@@ -157,7 +168,7 @@ export const ResultsScreen: React.FC = () => {
                                 <div className="flex items-start gap-4 ml-2">
                                     <ShieldAlert className="w-8 h-8 text-crisis-red flex-shrink-0 drop-shadow-[0_0_8px_rgba(239,68,68,0.6)]" />
                                     <div>
-                                        <h3 className="text-xl font-serif font-semibold text-text-primary mb-2">
+                                        <h3 className="text-xl font-display font-semibold text-text-primary mb-2">
                                             Prioritizing Your Safety
                                         </h3>
                                         <p className="text-text-secondary mb-6 max-w-2xl leading-relaxed">
@@ -176,34 +187,32 @@ export const ResultsScreen: React.FC = () => {
 
                     {/* Recommended Matches */}
                     <motion.section variants={slideUp} className="relative z-10">
-                        <h3 className="text-2xl font-serif font-medium text-text-primary mb-6 drop-shadow-sm">
+                        <h3 className="text-2xl font-display font-medium text-text-primary mb-6 drop-shadow-sm">
                             Relevant Profiles
                         </h3>
-                        <div className="space-y-4">
-                            {matchResults.map((match, i) => (
+                        <motion.div variants={staggerContainer} initial="hidden" animate="visible" className="space-y-4">
+                            {matchResults.map((match) => (
                                 <motion.div
                                     key={match.condition_id}
-                                    initial={{ opacity: 0, y: 16 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.1 + (i * 0.12), duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+                                    variants={staggerItem}
                                 >
                                     <ResultCard result={match} />
                                 </motion.div>
                             ))}
                             {matchResults.length === 0 && (
-                                <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 text-center border border-white/10 shadow-lg relative overflow-hidden">
-                                    <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
+                                <div className="bg-surface/50 backdrop-blur-xl rounded-2xl p-8 text-center border border-border shadow-lg relative overflow-hidden">
+                                    <div className="absolute inset-0 bg-gradient-to-br from-surface-hover/50 to-transparent pointer-events-none" />
                                     <p className="text-text-secondary font-medium tracking-wide relative z-10">
                                         We couldn't find a strong match for your specific combination of symptoms, but your experience is still valid.
                                     </p>
                                 </div>
                             )}
-                        </div>
+                        </motion.div>
                     </motion.section>
 
                     {/* Next Steps */}
                     <motion.section variants={slideUp} className="relative z-10">
-                        <h3 className="text-2xl font-serif font-medium text-text-primary mb-6 drop-shadow-sm">
+                        <h3 className="text-2xl font-display font-medium text-text-primary mb-6 drop-shadow-sm">
                             Suggested Next Steps
                         </h3>
                         <NextStepCards steps={nextSteps} />
@@ -213,7 +222,7 @@ export const ResultsScreen: React.FC = () => {
                         <ProviderQuestions questions={questions} />
                     </motion.section>
 
-                    <motion.div variants={slideUp} className="flex justify-center pt-8 border-t border-white/10 relative z-10">
+                    <motion.div variants={slideUp} className="flex justify-center pt-8 border-t border-border relative z-10">
                         <NavigatorButton variant="outline" onClick={handleResetClick}>
                             Start Over
                         </NavigatorButton>

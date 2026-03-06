@@ -1,5 +1,6 @@
 import { Question } from '../types/models';
 import { supabase } from '../lib/supabaseClient';
+import { queryWithFallback } from '../lib/withFallback';
 import { useMemo } from 'react';
 
 // Fallback to mock data if Supabase fails
@@ -19,20 +20,13 @@ export interface AssessmentResult {
 }
 
 export const assessmentService = {
-    getQuestions: async (): Promise<Question[]> => {
-        try {
-            const { data, error } = await supabase
-                .from('assessment_questions')
-                .select('*')
-                .order('sort_order', { ascending: true });
-
-            if (error) throw error;
-            return (data || []).map(mapToQuestion);
-        } catch (error) {
-            console.error('Failed to fetch assessment questions from Supabase, using mock data:', error);
-            return mockQuestions as unknown as Question[];
-        }
-    },
+    getQuestions: async (): Promise<Question[]> =>
+        queryWithFallback(
+            () => supabase.from('assessment_questions').select('*').order('sort_order', { ascending: true }),
+            mapToQuestion,
+            mockQuestions as unknown as Question[],
+            'assessmentService.getQuestions'
+        ),
 
     submitAssessment: async (answers: Record<number, number>, userId?: string): Promise<AssessmentResult> => {
         try {
@@ -60,6 +54,13 @@ export const assessmentService = {
 
             // Normalize to 0-100 scale (inverted - higher is better)
             const maxPossible = questionCount * 3;
+            if (maxPossible === 0) {
+                return {
+                    score: 0,
+                    breakdown,
+                    recommendations: ['Unable to calculate score. Please retake the assessment.']
+                };
+            }
             const normalizedScore = Math.round(((maxPossible - totalScore) / maxPossible) * 100);
             const recommendations = generateRecommendations(breakdown);
 
@@ -101,28 +102,19 @@ export const assessmentService = {
         }
     },
 
-    getHistory: async (userId: string): Promise<AssessmentResult[]> => {
-        try {
-            const { data, error } = await supabase
-                .from('assessment_results')
-                .select('*')
-                .eq('user_id', userId)
-                .order('created_at', { ascending: false });
-
-            if (error) throw error;
-
-            return (data || []).map(item => ({
+    getHistory: async (userId: string): Promise<AssessmentResult[]> =>
+        queryWithFallback(
+            () => supabase.from('assessment_results').select('*').eq('user_id', userId).order('created_at', { ascending: false }),
+            (item: { id: string; score: number; breakdown: AssessmentResult['breakdown']; recommendations: string[]; created_at: string }) => ({
                 id: item.id,
                 score: item.score,
                 breakdown: item.breakdown,
                 recommendations: item.recommendations || [],
                 created_at: item.created_at
-            }));
-        } catch (error) {
-            console.error('Failed to fetch assessment history:', error);
-            return [];
-        }
-    },
+            }),
+            [],
+            'assessmentService.getHistory'
+        ),
 
     getStats: async (userId: string): Promise<{ averageScore: number; totalAssessments: number; latestScore: number | null; trend: 'up' | 'down' | 'stable' }> => {
         try {

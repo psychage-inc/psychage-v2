@@ -1,18 +1,37 @@
-import React, { useRef, useMemo } from 'react';
+import React, { useRef, Component, ReactNode } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Points, PointMaterial } from '@react-three/drei';
 import * as random from 'maath/random/dist/maath-random.esm';
 import { useState } from 'react';
-// Note: We might need to adjust imports if 'maath' or 'next-themes' are not installed or used differently. 
-// Checking package.json earlier showed 'maath' is installed. 'next-themes' might not be, so I'll check or make it adaptive. 
-// Actually package.json showed 'maath' and 'three' and '@react-three/fiber' and '@react-three/drei'.
-// It did NOT show 'next-themes', but 'tailwind-merge' etc. I will use a prop or class-based theme detection if needed, or just default colors that work in both.
+
+/** Silent error boundary — renders nothing on crash so the page stays usable. */
+class Canvas3DErrorBoundary extends Component<{ children: ReactNode }, { hasError: boolean }> {
+    state = { hasError: false };
+    static getDerivedStateFromError() {
+        return { hasError: true };
+    }
+    componentDidCatch(error: Error) {
+        console.warn('[Hero3D] WebGL/Three.js failed to initialise — falling back to gradient-only background.', error.message);
+    }
+    render() {
+        return this.state.hasError ? null : this.props.children;
+    }
+}
+
+function isWebGLAvailable(): boolean {
+    try {
+        const canvas = document.createElement('canvas');
+        return !!(canvas.getContext('webgl2') || canvas.getContext('webgl'));
+    } catch {
+        return false;
+    }
+}
 
 const ParticleField = (props: any) => {
     const ref = useRef<any>();
     const [sphere] = useState(() => random.inSphere(new Float32Array(5000), { radius: 1.5 }));
 
-    useFrame((state, delta) => {
+    useFrame((_state, delta) => {
         if (ref.current) {
             ref.current.rotation.x -= delta / 10;
             ref.current.rotation.y -= delta / 15;
@@ -24,7 +43,7 @@ const ParticleField = (props: any) => {
             <Points ref={ref} positions={sphere} stride={3} frustumCulled={false} {...props}>
                 <PointMaterial
                     transparent
-                    color="#0d9488" // Teal-600
+                    color="#0d9488"
                     size={0.005}
                     sizeAttenuation={true}
                     depthWrite={false}
@@ -35,12 +54,18 @@ const ParticleField = (props: any) => {
 };
 
 const Hero3D: React.FC<{ className?: string }> = ({ className }) => {
+    const [webGLSupported] = useState(isWebGLAvailable);
+
+    if (!webGLSupported) return null;
+
     return (
-        <div className={`w-full h-full absolute inset-0 -z-10 ${className}`}>
-            <Canvas camera={{ position: [0, 0, 1] }}>
-                <ParticleField />
-            </Canvas>
-        </div>
+        <Canvas3DErrorBoundary>
+            <div className={`w-full h-full absolute inset-0 -z-10 ${className}`}>
+                <Canvas camera={{ position: [0, 0, 1] }}>
+                    <ParticleField />
+                </Canvas>
+            </div>
+        </Canvas3DErrorBoundary>
     );
 };
 

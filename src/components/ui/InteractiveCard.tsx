@@ -5,40 +5,42 @@ interface InteractiveCardProps extends HTMLMotionProps<"div"> {
     children: React.ReactNode;
     className?: string;
     spotlightColor?: string;
+    pressable?: boolean;
 }
 
 const InteractiveCard: React.FC<InteractiveCardProps> = ({
     children,
     className = "",
     spotlightColor = "rgba(255, 255, 255, 0.1)",
+    pressable = false,
     ...props
 }) => {
     const divRef = useRef<HTMLDivElement>(null);
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [opacity, setOpacity] = useState(0);
 
-    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
         if (!divRef.current) return;
 
         const rect = divRef.current.getBoundingClientRect();
         setPosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
     };
 
-    const handleMouseEnter = () => {
+    const handlePointerEnter = () => {
         setOpacity(1);
     };
 
-    const handleMouseLeave = () => {
+    const handlePointerLeave = () => {
         setOpacity(0);
     };
 
     return (
         <motion.div
             ref={divRef}
-            onMouseMove={handleMouseMove}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            whileTap={{ scale: 0.98 }}
+            onPointerMove={handlePointerMove}
+            onPointerEnter={handlePointerEnter}
+            onPointerLeave={handlePointerLeave}
+            whileTap={pressable ? { scale: 0.98 } : undefined}
             className={`relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md transition-all duration-300 ${className}`}
             {...props}
         >

@@ -1,6 +1,7 @@
 import React, { Suspense, useState } from 'react';
 import { AnimatePresence, MotionConfig } from 'framer-motion';
 import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import { Toaster } from 'sonner';
 import Navigation from './components/layout/Navigation';
 import Footer from './components/layout/Footer';
 import HeroSection from './components/home/HeroSection';
@@ -14,6 +15,7 @@ import QuickTopics from './components/home/QuickTopics';
 import ToolsSection from './components/home/ToolsSection';
 import MindMate from './components/ai/MindMate';
 import NotFoundPage from './components/pages/NotFoundPage';
+import ErrorBoundary from './components/error/ErrorBoundary';
 import { GlobalLoading } from './components/ui/Skeletons';
 import { BookmarkProvider } from './context/BookmarkContext';
 import { ProviderLookupsProvider } from './context/ProviderLookupsContext';
@@ -79,8 +81,11 @@ const AssessmentHistory = React.lazy(() => import('./pages/dashboard/AssessmentH
 // Admin Dashboard
 const AdminDashboard = React.lazy(() => import('./pages/admin/AdminDashboard'));
 const ProviderManagement = React.lazy(() => import('./pages/admin/ProviderManagement'));
+const ProviderDetailAdmin = React.lazy(() => import('./pages/admin/ProviderDetailAdmin'));
 const AuditLogPage = React.lazy(() => import('./pages/admin/AuditLogPage'));
 const ReportsPage = React.lazy(() => import('./pages/admin/ReportsPage'));
+const ReportDetailPage = React.lazy(() => import('./pages/admin/ReportDetailPage'));
+const UserManagementPage = React.lazy(() => import('./pages/admin/UserManagementPage'));
 
 // Provider Dashboard
 const ProviderDashboard = React.lazy(() => import('./pages/provider/ProviderDashboard'));
@@ -111,6 +116,21 @@ const App: React.FC = () => {
                         <Navigation />
 
                         <main id="main-content" className="flex-grow w-full outline-none pb-24" tabIndex={-1}>
+                            <ErrorBoundary
+                                resetKeys={[location.pathname]}
+                                fallback={(error, reset) => (
+                                    <div className="flex flex-col items-center justify-center py-24 px-6 text-center">
+                                        <div className="w-16 h-16 bg-red-100 dark:bg-red-900/30 text-red-500 rounded-2xl flex items-center justify-center mb-6 text-2xl">!</div>
+                                        <h2 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-2">This page encountered an error</h2>
+                                        <p className="text-gray-500 dark:text-gray-400 mb-1 max-w-md">Something went wrong loading this page. Try again or navigate to another page.</p>
+                                        {error && <p className="text-xs font-mono text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 px-3 py-1.5 rounded mt-2 mb-4">{error.message}</p>}
+                                        <div className="flex gap-3 mt-4">
+                                            <button onClick={reset} className="px-4 py-2 text-sm font-medium bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg hover:opacity-90 transition-opacity">Try Again</button>
+                                            <button onClick={() => window.location.href = '/'} className="px-4 py-2 text-sm font-medium border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">Return Home</button>
+                                        </div>
+                                    </div>
+                                )}
+                            >
                             <Suspense fallback={<GlobalLoading />}>
                                 <AnimatePresence mode="wait">
                                     <Routes location={location} key={location.pathname}>
@@ -274,10 +294,31 @@ const App: React.FC = () => {
                                                 </RoleGuard>
                                             </ProtectedRoute>
                                         } />
+                                        <Route path="/admin/providers/:id" element={
+                                            <ProtectedRoute>
+                                                <RoleGuard allowedRoles={['admin']}>
+                                                    <PageTransition><ProviderDetailAdmin /></PageTransition>
+                                                </RoleGuard>
+                                            </ProtectedRoute>
+                                        } />
+                                        <Route path="/admin/users" element={
+                                            <ProtectedRoute>
+                                                <RoleGuard allowedRoles={['admin']}>
+                                                    <PageTransition><UserManagementPage /></PageTransition>
+                                                </RoleGuard>
+                                            </ProtectedRoute>
+                                        } />
                                         <Route path="/admin/reports" element={
                                             <ProtectedRoute>
                                                 <RoleGuard allowedRoles={['admin']}>
                                                     <PageTransition><ReportsPage /></PageTransition>
+                                                </RoleGuard>
+                                            </ProtectedRoute>
+                                        } />
+                                        <Route path="/admin/reports/:id" element={
+                                            <ProtectedRoute>
+                                                <RoleGuard allowedRoles={['admin']}>
+                                                    <PageTransition><ReportDetailPage /></PageTransition>
                                                 </RoleGuard>
                                             </ProtectedRoute>
                                         } />
@@ -320,11 +361,26 @@ const App: React.FC = () => {
                                     </Routes>
                                 </AnimatePresence>
                             </Suspense>
+                            </ErrorBoundary>
                         </main>
 
                         <Footer />
 
                         <MindMate />
+
+                        <Toaster
+                            position="bottom-right"
+                            toastOptions={{
+                                className: 'font-sans',
+                                style: {
+                                    borderRadius: 'var(--radius-lg)',
+                                    border: '1px solid var(--color-border)',
+                                    background: 'var(--color-surface)',
+                                    color: 'var(--color-text-primary)',
+                                },
+                            }}
+                            closeButton
+                        />
                     </div>
                 )}
               </ProviderLookupsProvider>

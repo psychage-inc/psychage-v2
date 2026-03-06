@@ -1,6 +1,6 @@
 import { useProviderLookups } from '@/context/ProviderLookupsContext';
 
-interface FilterOptions {
+export interface ProviderFilters {
   providerTypes: ReturnType<typeof useProviderLookups>['providerTypes'];
   specialties: ReturnType<typeof useProviderLookups>['specialties'];
   conditionSpecialties: ReturnType<typeof useProviderLookups>['conditionSpecialties'];
@@ -12,7 +12,7 @@ interface FilterOptions {
 }
 
 interface UseProviderFiltersReturn {
-  filters: FilterOptions;
+  filters: ProviderFilters;
   isLoading: boolean;
   error: string | null;
 }

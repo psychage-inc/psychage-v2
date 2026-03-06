@@ -26,7 +26,7 @@ export const WelcomeScreen: React.FC = () => {
                 </svg>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl font-serif text-text-primary mb-6 drop-shadow-[0_2px_10px_rgba(255,255,255,0.1)]">
+            <h1 className="text-4xl sm:text-5xl font-display text-text-primary mb-6 drop-shadow-[0_2px_10px_rgba(255,255,255,0.1)]">
                 Understand your experience. <br />
                 <span className="text-teal-400 drop-shadow-[0_0_10px_rgba(45,212,191,0.3)]">Find your path forward.</span>
             </h1>
@@ -39,7 +39,7 @@ export const WelcomeScreen: React.FC = () => {
             {isLoading && (
                 <div className="flex flex-col items-center gap-4 mb-12">
                     <Loader2 className="w-8 h-8 text-teal-400 animate-spin" />
-                    <p className="text-sm text-charcoal-200 font-medium">
+                    <p className="text-sm text-text-secondary font-medium">
                         Loading symptom library...
                     </p>
                 </div>
@@ -50,10 +50,10 @@ export const WelcomeScreen: React.FC = () => {
                 <div className="flex flex-col items-center gap-4 mb-12 p-6 bg-crisis-red/5 border border-crisis-red/20 rounded-xl max-w-md">
                     <AlertCircle className="w-8 h-8 text-crisis-red" />
                     <div className="text-center">
-                        <p className="text-sm text-white font-semibold mb-2">
+                        <p className="text-sm text-text-primary font-semibold mb-2">
                             Unable to Load
                         </p>
-                        <p className="text-xs text-charcoal-200 mb-4">
+                        <p className="text-xs text-text-secondary mb-4">
                             {error}
                         </p>
                         <NavigatorButton

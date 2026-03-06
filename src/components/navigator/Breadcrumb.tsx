@@ -45,7 +45,7 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({ currentStep, onStepClick
                         <React.Fragment key={step.id}>
                             {index > 0 && (
                                 <ChevronRight
-                                    className="w-4 h-4 text-charcoal-600 flex-shrink-0"
+                                    className="w-4 h-4 text-text-tertiary flex-shrink-0"
                                     aria-hidden="true"
                                 />
                             )}
@@ -56,8 +56,8 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({ currentStep, onStepClick
                                         onClick={() => handleStepClick(step)}
                                         className={cn(
                                             "text-sm sm:text-base font-medium transition-colors px-2 py-1 rounded-md",
-                                            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal-900",
-                                            "hover:bg-white/5",
+                                            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+                                            "hover:bg-surface-hover/50",
                                             isCompleted && "text-teal-400 hover:text-teal-300"
                                         )}
                                         aria-label={`Go back to ${step.label}`}
@@ -68,8 +68,8 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({ currentStep, onStepClick
                                     <span
                                         className={cn(
                                             "text-sm sm:text-base font-medium px-2 py-1 rounded-md",
-                                            isCurrent && "text-white bg-white/10 font-semibold",
-                                            !isCurrent && !isCompleted && "text-charcoal-500"
+                                            isCurrent && "text-text-primary bg-surface-hover/50 font-semibold",
+                                            !isCurrent && !isCompleted && "text-text-tertiary"
                                         )}
                                         aria-current={isCurrent ? "step" : undefined}
                                     >

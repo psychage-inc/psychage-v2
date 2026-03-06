@@ -32,10 +32,10 @@ export const DurationPicker: React.FC<DurationPickerProps> = ({ value, onChange 
                         whileTap={{ scale: 0.98 }}
                         onClick={() => onChange(option.value)}
                         className={cn(
-                            "p-4 rounded-2xl border text-left transition-all duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 backdrop-blur-xl",
+                            "p-4 rounded-2xl border text-left transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 backdrop-blur-xl",
                             isSelected
                                 ? "border-teal-400/50 bg-teal-900/40 text-teal-100 font-medium shadow-[0_0_25px_rgba(20,184,166,0.25)]"
-                                : "border-white/10 bg-white/5 text-charcoal-300 hover:border-white/20 hover:text-white hover:bg-white/10 shadow-lg"
+                                : "border-border bg-surface/50 text-text-secondary hover:border-border-hover hover:text-text-primary hover:bg-surface-hover/50 shadow-lg"
                         )}
                     >
                         {option.label}

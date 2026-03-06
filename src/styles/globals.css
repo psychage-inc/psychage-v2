@@ -6,8 +6,45 @@
 
 @layer base {
     :root {
-        /* Map tokens to semantic variables if needed, or use tokens directly in tailwind config */
-        /* We already mapped tokens in tailwind.config.js to var(--color-name) which are defined in tokens.css */
+        /* shadcn/ui compatible CSS variables — mapped to Psychage tokens */
+        --background: var(--color-background);
+        --foreground: var(--color-text-primary);
+        --card: var(--color-surface);
+        --card-foreground: var(--color-text-primary);
+        --primary: var(--color-primary);
+        --primary-foreground: #ffffff;
+        --secondary: var(--color-surface-hover);
+        --secondary-foreground: var(--color-text-primary);
+        --muted: var(--color-surface-hover);
+        --muted-foreground: var(--color-text-secondary);
+        --accent: var(--color-surface-hover);
+        --accent-foreground: var(--color-text-primary);
+        --destructive: #ef4444;
+        --destructive-foreground: #ffffff;
+        --border: var(--color-border);
+        --input: var(--color-border);
+        --ring: var(--color-primary);
+        --radius: 0.75rem;
+    }
+
+    .dark {
+        --background: var(--color-background);
+        --foreground: var(--color-text-primary);
+        --card: var(--color-surface);
+        --card-foreground: var(--color-text-primary);
+        --primary: var(--color-primary);
+        --primary-foreground: #ffffff;
+        --secondary: var(--color-surface-hover);
+        --secondary-foreground: var(--color-text-primary);
+        --muted: var(--color-surface-hover);
+        --muted-foreground: var(--color-text-secondary);
+        --accent: var(--color-surface-hover);
+        --accent-foreground: var(--color-text-primary);
+        --destructive: #f87171;
+        --destructive-foreground: #ffffff;
+        --border: var(--color-border);
+        --input: var(--color-border);
+        --ring: var(--color-primary);
     }
 
     body {
@@ -49,6 +86,15 @@
 
 
 @layer utilities {
+
+    /* Touch target minimum — WCAG 2.5.8 */
+    .min-h-touch {
+        min-height: 2.75rem; /* 44px */
+    }
+
+    .min-w-touch {
+        min-width: 2.75rem; /* 44px */
+    }
 
     /* Glassmorphism - Adaptive */
     .glass {

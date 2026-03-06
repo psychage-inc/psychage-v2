@@ -127,4 +127,21 @@ export const breadcrumbConfig: Record<string, BreadcrumbItem[]> = {
         { label: 'Providers', href: '/admin/providers' },
         { label: ':name' } // Dynamic from provider data
     ],
+    '/admin/users': [
+        { label: 'Admin Dashboard', href: '/admin' },
+        { label: 'Users' }
+    ],
+    '/admin/reports': [
+        { label: 'Admin Dashboard', href: '/admin' },
+        { label: 'Reports' }
+    ],
+    '/admin/reports/:id': [
+        { label: 'Admin Dashboard', href: '/admin' },
+        { label: 'Reports', href: '/admin/reports' },
+        { label: 'Report Details' }
+    ],
+    '/admin/audit': [
+        { label: 'Admin Dashboard', href: '/admin' },
+        { label: 'Audit Logs' }
+    ],
 };

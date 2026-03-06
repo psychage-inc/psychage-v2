@@ -13,7 +13,7 @@ export const CrisisStickyBanner: React.FC = () => {
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: 100, opacity: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="fixed bottom-0 left-0 right-0 bg-charcoal-950/95 backdrop-blur-md border-t border-crisis-red/30 z-40 shadow-[0_-10px_30px_rgba(0,0,0,0.5)]"
+                    className="fixed bottom-0 left-0 right-0 bg-background/95 backdrop-blur-md border-t border-crisis-red/30 z-40 shadow-[0_-10px_30px_rgba(0,0,0,0.5)]"
                     style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
                     role="region"
                     aria-label="Crisis support resources"
@@ -28,7 +28,7 @@ export const CrisisStickyBanner: React.FC = () => {
                                 </div>
                                 <a
                                     href="tel:988"
-                                    className="text-xs text-crisis-red hover:text-red-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-crisis-red focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal-950 rounded"
+                                    className="text-xs text-crisis-red hover:text-red-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-crisis-red focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded"
                                 >
                                     Tap to call now
                                 </a>
@@ -37,10 +37,10 @@ export const CrisisStickyBanner: React.FC = () => {
                         <button
                             type="button"
                             onClick={() => setIsDismissed(true)}
-                            className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
+                            className="flex-shrink-0 w-11 h-11 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
                             aria-label="Dismiss crisis banner"
                         >
-                            <X className="w-4 h-4 text-charcoal-300" />
+                            <X className="w-4 h-4 text-text-secondary" />
                         </button>
                     </div>
 
@@ -57,17 +57,17 @@ export const CrisisStickyBanner: React.FC = () => {
                             <div className="flex items-center gap-4">
                                 <a
                                     href="tel:988"
-                                    className="text-sm font-semibold text-crisis-red hover:text-red-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-crisis-red focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal-950 rounded px-2 py-1"
+                                    className="text-sm font-semibold text-crisis-red hover:text-red-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-crisis-red focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded px-2 py-1"
                                 >
                                     Call Now
                                 </a>
                                 <button
                                     type="button"
                                     onClick={() => setIsDismissed(true)}
-                                    className="w-6 h-6 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
+                                    className="w-11 h-11 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
                                     aria-label="Dismiss crisis banner"
                                 >
-                                    <X className="w-3 h-3 text-charcoal-300" />
+                                    <X className="w-3 h-3 text-text-secondary" />
                                 </button>
                             </div>
                         </div>

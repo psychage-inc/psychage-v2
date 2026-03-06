@@ -6,6 +6,7 @@ import {
     Users, Sparkles, MessageCircle, LifeBuoy
 } from 'lucide-react';
 
+/** @deprecated Use `getCategoryIcon()` or `getCategoryTheme()` from `@/config/categoryThemes` instead. */
 // Icon mapper for Supabase categories
 export const iconMap: Record<string, React.ReactNode> = {
     'anxiety': <CloudRain size={24} />,

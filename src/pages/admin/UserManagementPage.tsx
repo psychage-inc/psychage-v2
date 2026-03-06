@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
-import { UserCircle } from 'lucide-react';
+import { UserCircle, UserPlus, X, Mail } from 'lucide-react';
 import { format } from 'date-fns';
 import AdminLayout from './components/AdminLayout';
 import AdminFilterBar from './components/AdminFilterBar';
@@ -9,6 +9,10 @@ import AdminErrorBanner from './components/AdminErrorBanner';
 import StatusBadge from './components/StatusBadge';
 import { useAdminSearch } from '@/hooks/useAdminSearch';
 import { type ColumnDef } from '@tanstack/react-table';
+import Button from '@/components/ui/Button';
+import { Input } from '@/components/ui/Input';
+import { Label } from '@/components/ui/Label';
+import { api } from '@/lib/api';
 
 interface AdminUser {
     id: string;
@@ -46,6 +50,36 @@ const UserManagementPage: React.FC = () => {
     const [error, setError] = useState<string | null>(null);
     const [roleFilter, setRoleFilter] = useState('all');
     const { searchTerm, debouncedSearchTerm, setSearchTerm } = useAdminSearch();
+
+    // Invite admin modal state
+    const [showInviteModal, setShowInviteModal] = useState(false);
+    const [inviteEmail, setInviteEmail] = useState('');
+    const [inviteDisplayName, setInviteDisplayName] = useState('');
+    const [inviteLoading, setInviteLoading] = useState(false);
+    const [inviteError, setInviteError] = useState<string | null>(null);
+    const [inviteSuccess, setInviteSuccess] = useState(false);
+
+    const handleInviteAdmin = async (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!inviteEmail.trim()) return;
+
+        setInviteLoading(true);
+        setInviteError(null);
+        try {
+            await api.admin.inviteAdmin(inviteEmail.trim(), inviteDisplayName.trim());
+            setInviteSuccess(true);
+            setInviteEmail('');
+            setInviteDisplayName('');
+            setTimeout(() => {
+                setShowInviteModal(false);
+                setInviteSuccess(false);
+            }, 2000);
+        } catch (err) {
+            setInviteError(err instanceof Error ? err.message : 'Failed to send invite');
+        } finally {
+            setInviteLoading(false);
+        }
+    };
 
     const fetchUsers = useCallback(async () => {
         setIsLoading(true);
@@ -155,6 +189,90 @@ const UserManagementPage: React.FC = () => {
     return (
         <AdminLayout title="User Management" seoTitle="Users | Admin">
             {error && <AdminErrorBanner message={error} onRetry={fetchUsers} />}
+
+            {/* Invite Admin Button */}
+            <div className="flex justify-end mb-4">
+                <Button
+                    size="sm"
+                    leftIcon={<UserPlus className="w-4 h-4" />}
+                    onClick={() => { setShowInviteModal(true); setInviteError(null); setInviteSuccess(false); }}
+                >
+                    Invite Admin
+                </Button>
+            </div>
+
+            {/* Invite Admin Modal */}
+            {showInviteModal && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+                    <div className="bg-surface border border-border rounded-2xl shadow-2xl w-full max-w-md mx-4 p-6">
+                        <div className="flex items-center justify-between mb-6">
+                            <h3 className="text-xl font-display font-bold text-text-primary">Invite New Admin</h3>
+                            <button
+                                onClick={() => setShowInviteModal(false)}
+                                className="p-1 rounded-lg hover:bg-surface-hover transition-colors"
+                                aria-label="Close"
+                            >
+                                <X className="w-5 h-5 text-text-tertiary" />
+                            </button>
+                        </div>
+
+                        {inviteSuccess ? (
+                            <div className="text-center py-8">
+                                <div className="w-16 h-16 mx-auto rounded-full bg-teal-500/10 flex items-center justify-center mb-4">
+                                    <Mail className="w-8 h-8 text-teal-500" />
+                                </div>
+                                <p className="text-lg font-bold text-text-primary mb-1">Invite Sent</p>
+                                <p className="text-text-secondary text-sm">They&apos;ll receive an email to set up their account.</p>
+                            </div>
+                        ) : (
+                            <form onSubmit={handleInviteAdmin} className="space-y-4">
+                                <div>
+                                    <Label htmlFor="invite-email">Email Address</Label>
+                                    <Input
+                                        id="invite-email"
+                                        type="email"
+                                        placeholder="admin@example.com"
+                                        value={inviteEmail}
+                                        onChange={(e) => setInviteEmail(e.target.value)}
+                                        required
+                                    />
+                                </div>
+                                <div>
+                                    <Label htmlFor="invite-name">Display Name</Label>
+                                    <Input
+                                        id="invite-name"
+                                        type="text"
+                                        placeholder="Jane Doe"
+                                        value={inviteDisplayName}
+                                        onChange={(e) => setInviteDisplayName(e.target.value)}
+                                    />
+                                </div>
+                                {inviteError && (
+                                    <p className="text-sm text-error">{inviteError}</p>
+                                )}
+                                <div className="flex gap-3 pt-2">
+                                    <Button
+                                        type="button"
+                                        variant="ghost"
+                                        className="flex-1"
+                                        onClick={() => setShowInviteModal(false)}
+                                    >
+                                        Cancel
+                                    </Button>
+                                    <Button
+                                        type="submit"
+                                        className="flex-1"
+                                        isLoading={inviteLoading}
+                                        disabled={!inviteEmail.trim()}
+                                    >
+                                        Send Invite
+                                    </Button>
+                                </div>
+                            </form>
+                        )}
+                    </div>
+                </div>
+            )}
 
             <AdminFilterBar
                 searchValue={searchTerm}

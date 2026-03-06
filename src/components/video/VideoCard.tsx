@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Play } from 'lucide-react';
 import { Video } from '../../data/videos';
+import { getCategoryTheme } from '../../config/categoryThemes';
 
 const VIDEO_PLACEHOLDER = '/images/videos/video-placeholder.svg';
 
@@ -11,6 +12,8 @@ interface VideoCardProps {
 
 const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
   const [imageError, setImageError] = useState(false);
+  const categorySlug = video.category.toLowerCase().replace(/\s+&\s+/g, '-').replace(/\s+/g, '-');
+  const catTheme = getCategoryTheme(categorySlug);
   // Format seconds to MM:SS
   const formatDuration = (seconds: number) => {
     const minutes = Math.floor(seconds / 60);
@@ -97,7 +100,7 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
         <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 font-medium">
           <span aria-label={`${formatViews(video.views)} views`}>{formatViews(video.views)} views</span>
           <span className="mx-2 text-gray-300 dark:text-gray-600" aria-hidden="true">•</span>
-          <span className="text-teal-600 dark:text-teal-400">{video.category}</span>
+          <span className={`${catTheme.classes.text} ${catTheme.classes.textDark}`}>{video.category}</span>
         </div>
       </div>
     </motion.div>

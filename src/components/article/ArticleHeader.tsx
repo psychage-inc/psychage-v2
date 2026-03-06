@@ -4,6 +4,7 @@ import { Article } from '../../types';
 import Badge from '../ui/Badge';
 import { useBookmarks } from '../../context/BookmarkContext';
 import Breadcrumbs from '../ui/Breadcrumbs';
+import { getCategoryBadgeClasses } from '../../config/categoryThemes';
 
 interface ArticleHeaderProps {
   article: Article;
@@ -27,7 +28,7 @@ const ArticleHeader: React.FC<ArticleHeaderProps> = ({ article }) => {
       </div>
 
       <div className="mb-8">
-        <Badge variant="teal" className="mb-6">{article.category.name}</Badge>
+        <Badge variant="neutral" className={`mb-6 ${getCategoryBadgeClasses(article.category.slug)}`}>{article.category.name}</Badge>
         <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-gray-900 leading-[1.1] mb-6 dark:text-white">
           {article.title}
         </h1>

@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Heart, Phone, MessageSquare, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { resolveCountry, getResourcesForCountry } from '@/lib/crisis';
 
 interface CrisisOverlayProps {
   isOpen: boolean;
@@ -9,6 +10,15 @@ interface CrisisOverlayProps {
 }
 
 export const CrisisOverlay: React.FC<CrisisOverlayProps> = ({ isOpen, onClose }) => {
+  const { hotline, textResource } = useMemo(() => {
+    const country = resolveCountry();
+    const result = getResourcesForCountry(country);
+    return {
+      hotline: result.all_resources.find((r) => r.phone && r.type === 'hotline') ?? null,
+      textResource: result.all_resources.find((r) => r.type === 'text' && r.text_instruction) ?? null,
+    };
+  }, []);
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -58,31 +68,37 @@ export const CrisisOverlay: React.FC<CrisisOverlayProps> = ({ isOpen, onClose })
 
             {/* Resources */}
             <div className="px-6 py-6 space-y-3">
-              <a
-                href="tel:988"
-                className="flex items-center gap-4 p-4 bg-teal-50 rounded-xl hover:bg-teal-100 transition-colors group"
-              >
-                <div className="w-10 h-10 bg-teal-100 rounded-full flex items-center justify-center group-hover:bg-teal-200 transition-colors">
-                  <Phone size={20} className="text-teal-700" />
-                </div>
-                <div className="flex-1">
-                  <p className="font-semibold text-gray-900">988 Suicide & Crisis Lifeline</p>
-                  <p className="text-sm text-gray-500">Call or text 988 — available 24/7</p>
-                </div>
-              </a>
+              {hotline && (
+                <a
+                  href={`tel:${hotline.phone!.replace(/[^0-9+]/g, '')}`}
+                  className="flex items-center gap-4 p-4 bg-teal-50 rounded-xl hover:bg-teal-100 transition-colors group"
+                >
+                  <div className="w-10 h-10 bg-teal-100 rounded-full flex items-center justify-center group-hover:bg-teal-200 transition-colors">
+                    <Phone size={20} className="text-teal-700" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="font-semibold text-gray-900">{hotline.name}</p>
+                    <p className="text-sm text-gray-500">
+                      Call {hotline.phone} — {hotline.hours}
+                    </p>
+                  </div>
+                </a>
+              )}
 
-              <a
-                href="sms:741741?body=HOME"
-                className="flex items-center gap-4 p-4 bg-indigo-50 rounded-xl hover:bg-indigo-100 transition-colors group"
-              >
-                <div className="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center group-hover:bg-indigo-200 transition-colors">
-                  <MessageSquare size={20} className="text-indigo-700" />
-                </div>
-                <div className="flex-1">
-                  <p className="font-semibold text-gray-900">Crisis Text Line</p>
-                  <p className="text-sm text-gray-500">Text HOME to 741741</p>
-                </div>
-              </a>
+              {textResource && (
+                <a
+                  href={`sms:${textResource.text_instruction?.match(/\d+/)?.[0] ?? ''}?body=HOME`}
+                  className="flex items-center gap-4 p-4 bg-indigo-50 rounded-xl hover:bg-indigo-100 transition-colors group"
+                >
+                  <div className="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center group-hover:bg-indigo-200 transition-colors">
+                    <MessageSquare size={20} className="text-indigo-700" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="font-semibold text-gray-900">{textResource.name}</p>
+                    <p className="text-sm text-gray-500">{textResource.text_instruction}</p>
+                  </div>
+                </a>
+              )}
 
               <Link
                 to="/crisis"

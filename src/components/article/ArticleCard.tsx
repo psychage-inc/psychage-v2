@@ -6,6 +6,7 @@ import { Article } from '../../types';
 import { NoiseTexture } from '../home/hero/HeroAssets';
 import { useBookmarks } from '../../context/BookmarkContext';
 import InteractiveCard from '../ui/InteractiveCard';
+import { getCategoryTheme, getCategoryBadgeClasses } from '../../config/categoryThemes';
 
 interface ArticleCardProps {
   article: Article;
@@ -25,7 +26,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, onClick }) => {
     <InteractiveCard
       className="group h-full flex flex-col cursor-pointer border-white/5 bg-white/5 backdrop-blur-sm dark:bg-white/5 dark:border-white/5 hover:border-primary/20 hover:bg-white/10 transition-all duration-300"
       onClick={onClick}
-      spotlightColor="rgba(20, 184, 166, 0.15)"
+      spotlightColor={getCategoryTheme(article.category.slug).classes.spotlight}
     >
       {/* Texture Overlay */}
       <NoiseTexture opacity={0.03} />
@@ -42,7 +43,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, onClick }) => {
 
         {/* Category Badge - Floating */}
         <div className="absolute top-4 left-4 z-10">
-          <Badge variant="neutral" className="bg-white/90 backdrop-blur-sm dark:bg-black/80 text-gray-900 dark:text-white border-0 shadow-sm">
+          <Badge variant="neutral" className={`backdrop-blur-sm border-0 shadow-sm ${getCategoryBadgeClasses(article.category.slug)}`}>
             {article.category.name}
           </Badge>
         </div>

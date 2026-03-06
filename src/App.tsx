@@ -1,22 +1,19 @@
 import React, { Suspense, useState } from 'react';
-import { AnimatePresence, MotionConfig } from 'framer-motion';
+import { MotionConfig } from 'framer-motion';
 import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { Toaster } from 'sonner';
 import Navigation from './components/layout/Navigation';
 import Footer from './components/layout/Footer';
 import HeroSection from './components/home/HeroSection';
-import ProviderDirectorySection from './components/home/ProviderDirectorySection';
-import SymptomCheckerSection from './components/home/SymptomCheckerSection';
-import NewsletterSection from './components/home/NewsletterSection';
-import VideoShowcaseSection from './components/home/VideoShowcaseSection';
-import TopicHubSection from './components/home/TopicHubSection';
+import ProductShowcase from './components/home/ProductShowcase';
 import HowItWorksSection from './components/home/HowItWorksSection';
-import QuickTopics from './components/home/QuickTopics';
-import ToolsSection from './components/home/ToolsSection';
+import FeatureSpotlight from './components/home/FeatureSpotlight';
+import ContentPreview from './components/home/ContentPreview';
+import TrustSection from './components/home/TrustSection';
+import NewsletterSection from './components/home/NewsletterSection';
 import MindMate from './components/ai/MindMate';
 import NotFoundPage from './components/pages/NotFoundPage';
 import ErrorBoundary from './components/error/ErrorBoundary';
-import { GlobalLoading } from './components/ui/Skeletons';
 import { BookmarkProvider } from './context/BookmarkContext';
 import { ProviderLookupsProvider } from './context/ProviderLookupsContext';
 import SEO from './components/SEO';
@@ -50,7 +47,7 @@ const ClarityScoreTool = React.lazy(() => import('./components/pages/ClarityScor
 const AboutPage = React.lazy(() => import('./components/pages/AboutPage'));
 const ContactPage = React.lazy(() => import('./components/pages/ContactPage'));
 const LegalPage = React.lazy(() => import('./components/pages/LegalPages'));
-const CrisisPage = React.lazy(() => import('./components/pages/PsychageCrisisV2'));
+const CrisisPage = React.lazy(() => import('./components/pages/CrisisPage'));
 const NavigatorPage = React.lazy(() => import('./components/pages/NavigatorPage'));
 const ThoughtReframer = React.lazy(() => import('./components/tools/ThoughtReframer'));
 const ClarityJournal = React.lazy(() => import('./components/tools/ClarityJournal'));
@@ -86,6 +83,7 @@ const AuditLogPage = React.lazy(() => import('./pages/admin/AuditLogPage'));
 const ReportsPage = React.lazy(() => import('./pages/admin/ReportsPage'));
 const ReportDetailPage = React.lazy(() => import('./pages/admin/ReportDetailPage'));
 const UserManagementPage = React.lazy(() => import('./pages/admin/UserManagementPage'));
+const AdminOnboarding = React.lazy(() => import('./pages/admin/AdminOnboarding'));
 
 // Provider Dashboard
 const ProviderDashboard = React.lazy(() => import('./pages/provider/ProviderDashboard'));
@@ -96,6 +94,13 @@ const ProviderPatients = React.lazy(() => import('./pages/provider/ProviderPatie
 // Provider Registration (legacy — kept for admin reference only)
 
 // --- MAIN APP COMPONENT ---
+
+/** Lightweight Suspense fallback — only shown on first-ever load of a lazy chunk */
+const RouteLoadingIndicator = () => (
+    <div className="flex items-center justify-center min-h-[60vh]">
+        <div className="w-8 h-8 rounded-full border-2 border-gray-200 border-t-teal-500 animate-spin" />
+    </div>
+);
 
 const App: React.FC = () => {
     const location = useLocation();
@@ -131,59 +136,17 @@ const App: React.FC = () => {
                                     </div>
                                 )}
                             >
-                            <Suspense fallback={<GlobalLoading />}>
-                                <AnimatePresence mode="wait">
-                                    <Routes location={location} key={location.pathname}>
+                            <Suspense fallback={<RouteLoadingIndicator />}>
+                                    <Routes location={location}>
                                         <Route path="/" element={
                                             <PageTransition>
-                                                <SEO title="Psychage | Mental Health Education & Tools" description="The first adaptive operating system for mental health. Measure, analyze, and optimize your cognitive state in real-time." />
+                                                <SEO title="Psychage | Understand Your Mind" description="Free, evidence-based mental health tools, assessments, and resources. Understand your mind — privately and on your terms." />
                                                 <HeroSection />
-
+                                                <ProductShowcase />
                                                 <HowItWorksSection />
-
-                                                {/* Quick Access Topics */}
-                                                <QuickTopics />
-
-                                                {/* Interactive Tools */}
-                                                <ToolsSection />
-
-                                                {/* Content Hubs */}
-                                                <TopicHubSection
-                                                    categoryId="anxiety"
-                                                    title="Mastering Anxiety"
-                                                    description="Evidence-based strategies to calm your mind and body."
-                                                    className="bg-white"
-                                                />
-
-                                                <VideoShowcaseSection />
-
-                                                {/* Core Services */}
-                                                <SymptomCheckerSection />
-                                                <ProviderDirectorySection />
-
-                                                <TopicHubSection
-                                                    categoryId="wellness"
-                                                    title="Holistic Wellness"
-                                                    description="Nutrition, movement, and lifestyle habits for optimal mental health."
-                                                    invert={true}
-                                                />
-
-                                                <TopicHubSection
-                                                    categoryId="mindfulness"
-                                                    title="Mindfulness & Meditation"
-                                                    description="Practices to stay present and reduce stress in a busy world."
-                                                    className="bg-white"
-                                                    showVideos={false}
-                                                />
-
-                                                <TopicHubSection
-                                                    categoryId="workplace"
-                                                    title="Workplace Mental Health"
-                                                    description="Navigating burnout, boundaries, and professional growth."
-                                                    showVideos={false}
-                                                    invert={true}
-                                                />
-
+                                                <FeatureSpotlight />
+                                                <ContentPreview />
+                                                <TrustSection />
                                                 <NewsletterSection />
                                             </PageTransition>
                                         } />
@@ -268,6 +231,15 @@ const App: React.FC = () => {
                                             <ProtectedRoute>
                                                 <RoleGuard allowedRoles={['patient', 'admin']}>
                                                     <PageTransition><AssessmentHistory /></PageTransition>
+                                                </RoleGuard>
+                                            </ProtectedRoute>
+                                        } />
+
+                                        {/* Admin Onboarding */}
+                                        <Route path="/admin/onboarding" element={
+                                            <ProtectedRoute>
+                                                <RoleGuard allowedRoles={['admin']}>
+                                                    <AdminOnboarding />
                                                 </RoleGuard>
                                             </ProtectedRoute>
                                         } />
@@ -359,7 +331,6 @@ const App: React.FC = () => {
                                             </PageTransition>
                                         } />
                                     </Routes>
-                                </AnimatePresence>
                             </Suspense>
                             </ErrorBoundary>
                         </main>

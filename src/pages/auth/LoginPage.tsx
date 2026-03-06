@@ -10,6 +10,7 @@ import { useAuth } from '../../context/AuthContext';
 import { Alert, AlertDescription } from '@/components/ui/Alert';
 import MeshGradient from '@/components/ui/MeshGradient';
 import InteractiveCard from '@/components/ui/InteractiveCard';
+import { supabase } from '@/lib/supabaseClient';
 
 const LoginPage = () => {
     const [email, setEmail] = useState('');
@@ -85,6 +86,35 @@ const LoginPage = () => {
             const result = await login(email, password);
 
             if (result.success) {
+                // Check if admin needs onboarding
+                const { data: { user: authUser } } = await supabase.auth.getUser();
+                const role = authUser?.user_metadata?.role;
+
+                if (role === 'admin') {
+                    // Try to check onboarding status (fail-open if column doesn't exist)
+                    let needsOnboarding = false;
+                    try {
+                        const { data: profile, error: profileError } = await supabase
+                            .from('profiles')
+                            .select('onboarding_completed_at')
+                            .eq('id', authUser!.id)
+                            .single();
+
+                        if (!profileError && profile && !profile.onboarding_completed_at) {
+                            needsOnboarding = true;
+                        }
+                    } catch {
+                        // Column may not exist yet — skip onboarding check
+                    }
+
+                    if (needsOnboarding) {
+                        navigate('/admin/onboarding', { replace: true });
+                    } else {
+                        navigate(from || '/admin', { replace: true });
+                    }
+                    return;
+                }
+
                 // If we have a specific destination, go there
                 if (from) {
                     navigate(from, { replace: true });

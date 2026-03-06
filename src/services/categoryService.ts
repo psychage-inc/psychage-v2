@@ -1,11 +1,12 @@
+import React from 'react';
 import { Category } from '../types/models';
 import { supabase } from '../lib/supabaseClient';
 import { queryWithFallback, queryOneWithFallback } from '../lib/withFallback';
 import { useMemo } from 'react';
+import { getCategoryTheme } from '../config/categoryThemes';
 
 // Fallback to mock data if API fails or for development
 import { categories as mockCategories } from '../data/categories';
-import { iconMap, defaultIcon } from './categoryIconMapper';
 
 export const categoryService = {
     getAll: async (): Promise<Category[]> =>
@@ -44,16 +45,16 @@ interface DBCategory {
 }
 
 function mapToCategory(data: DBCategory): Category {
+    const theme = getCategoryTheme(data.slug);
     return {
         id: data.id,
         name: data.name,
         slug: data.slug,
         description: data.description,
-        group: data.group as Category['group'], // optimize: validate against enum
+        group: data.group as Category['group'],
         image: data.image,
-        color: data.color,
-        // Map icon from slug or fallback to default Brain icon
-        icon: iconMap[data.slug] || defaultIcon,
+        color: theme.classes.bg,
+        icon: React.createElement(theme.icon, { size: 24 }),
         subTopics: []
     };
 }

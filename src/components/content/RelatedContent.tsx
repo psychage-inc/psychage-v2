@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, BookOpen } from 'lucide-react';
 import { Article } from '../../types/models';
+import { getCategoryClasses } from '../../config/categoryThemes';
 
 interface RelatedContentProps {
     articles: Article[];
@@ -25,7 +26,7 @@ const RelatedContent: React.FC<RelatedContentProps> = ({ articles, title = "Rela
                         className="group bg-white p-4 rounded-xl border border-gray-100 hover:border-teal-200 hover:shadow-md transition-all flex flex-col justify-between"
                     >
                         <div>
-                            <span className="text-xs font-bold text-teal-600 uppercase tracking-wider mb-2 block">
+                            <span className={`text-xs font-bold uppercase tracking-wider mb-2 block ${getCategoryClasses(article.category.slug).text} ${getCategoryClasses(article.category.slug).textDark}`}>
                                 {article.category.name}
                             </span>
                             <h4 className="font-bold text-gray-900 group-hover:text-teal-700 transition-colors mb-2 line-clamp-2">

@@ -6,7 +6,7 @@ export const ContentLanguageNotice: React.FC = () => {
     const { t, i18n } = useTranslation();
 
     // Only show notice if current language is not English
-    if (i18n.language === 'en' || i18n.language.startsWith('en-')) {
+    if (!i18n.language || i18n.language === 'en' || i18n.language.startsWith('en-')) {
         return null;
     }
 

@@ -4,6 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import { Category } from '../../types';
 import { NoiseTexture } from '../home/hero/HeroAssets';
 import InteractiveCard from '../ui/InteractiveCard';
+import { getCategoryTheme } from '../../config/categoryThemes';
 
 interface CategoryCardProps {
     category: Category;
@@ -15,7 +16,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ category, onClick }) => {
         <InteractiveCard
             className="group h-full flex flex-col cursor-pointer border-white/5 bg-white/5 backdrop-blur-sm dark:bg-white/5 dark:border-white/5 hover:border-primary/20 hover:bg-white/10 transition-all duration-300"
             onClick={onClick}
-            spotlightColor="rgba(20, 184, 166, 0.15)" // Teal spotlight
+            spotlightColor={getCategoryTheme(category.slug).classes.spotlight}
         >
             <NoiseTexture opacity={0.03} />
 

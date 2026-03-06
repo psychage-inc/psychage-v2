@@ -28,7 +28,23 @@ const AuthCallback: React.FC = () => {
                     if (userRole === 'provider') {
                         navigate('/provider/dashboard', { replace: true });
                     } else if (userRole === 'admin') {
-                        navigate('/admin', { replace: true });
+                        // Check if admin has completed onboarding (fail-open if column missing)
+                        let needsOnboarding = false;
+                        const { data: profile, error: profileError } = await supabase
+                            .from('profiles')
+                            .select('onboarding_completed_at')
+                            .eq('id', data.session.user.id)
+                            .single();
+
+                        if (!profileError && profile && !profile.onboarding_completed_at) {
+                            needsOnboarding = true;
+                        }
+
+                        if (needsOnboarding) {
+                            navigate('/admin/onboarding', { replace: true });
+                        } else {
+                            navigate('/admin', { replace: true });
+                        }
                     } else {
                         navigate('/dashboard', { replace: true });
                     }

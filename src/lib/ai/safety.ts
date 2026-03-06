@@ -13,61 +13,34 @@ import type {
   LLMProvider,
   LLMMessage,
 } from './types';
+import {
+  getResourcesForCountry,
+  type CrisisResource as CanonicalResource,
+} from '@/lib/crisis';
 
 // =============================================================================
-// Crisis Resources Database
+// Crisis Resources — Delegate to canonical engine
 // =============================================================================
 
-const GLOBAL_CRISIS_RESOURCES: CrisisResource[] = [
-  {
-    name: '988 Suicide & Crisis Lifeline',
-    contact: '988',
-    type: 'phone',
-    description: 'Call or text 988 for 24/7 suicide and crisis support',
-    region: 'US',
-    available_24_7: true,
-  },
-  {
-    name: 'Crisis Text Line',
-    contact: 'Text HOME to 741741',
-    type: 'text',
-    description: 'Free 24/7 crisis counseling via text message',
-    region: 'US',
-    available_24_7: true,
-  },
-  {
-    name: 'Samaritans',
-    contact: '116 123',
-    type: 'phone',
-    description: 'Free 24/7 emotional support for anyone in distress',
-    region: 'GB',
-    available_24_7: true,
-  },
-  {
-    name: 'Kids Help Phone',
-    contact: '1-800-668-6868',
-    type: 'phone',
-    description: '24/7 counselling and information service for young people',
-    region: 'CA',
-    available_24_7: true,
-  },
-  {
-    name: 'Lifeline Australia',
-    contact: '13 11 14',
-    type: 'phone',
-    description: '24/7 crisis support and suicide prevention',
-    region: 'AU',
-    available_24_7: true,
-  },
-  {
-    name: 'Find A Helpline',
-    contact: 'https://findahelpline.com',
-    type: 'website',
-    description: 'Find crisis helplines in your country',
+/**
+ * Convert canonical crisis resources to the AI-specific CrisisResource format.
+ */
+function toAICrisisResource(r: CanonicalResource): CrisisResource {
+  const contact = r.phone ?? r.text_instruction ?? r.chat_url ?? r.web_url ?? '';
+  return {
+    name: r.name,
+    contact,
+    type: r.type === 'hotline' ? 'phone' : r.type === 'text' ? 'text' : r.type === 'chat' ? 'chat' : 'website',
+    description: r.notes ?? `${r.hours} crisis support`,
     region: 'GLOBAL',
-    available_24_7: true,
-  },
-];
+    available_24_7: r.hours.includes('24/7'),
+  };
+}
+
+function buildGlobalResources(region?: string): CrisisResource[] {
+  const result = getResourcesForCountry(region ?? 'US');
+  return result.all_resources.map(toAICrisisResource);
+}
 
 // =============================================================================
 // Keyword-Based Pre-Check (Layer 0 — instant, no LLM needed)
@@ -237,7 +210,7 @@ function buildAction(level: SafetyLevel): SafetyAction {
     case 'CRISIS':
       return {
         type: 'CRISIS_RESPONSE',
-        resources: GLOBAL_CRISIS_RESOURCES,
+        resources: buildGlobalResources(),
       };
     case 'URGENT':
       return { type: 'REDIRECT_TO_PROFESSIONAL' };
@@ -492,18 +465,5 @@ export function generateCrisisResponse(
 }
 
 export function getCrisisResourcesForRegion(region?: string): CrisisResource[] {
-  if (!region) {
-    // Return US resources + global
-    return GLOBAL_CRISIS_RESOURCES.filter(
-      (r) => r.region === 'US' || r.region === 'GLOBAL'
-    );
-  }
-
-  const regionUpper = region.toUpperCase();
-  const regionSpecific = GLOBAL_CRISIS_RESOURCES.filter(
-    (r) => r.region === regionUpper
-  );
-  const global = GLOBAL_CRISIS_RESOURCES.filter((r) => r.region === 'GLOBAL');
-
-  return regionSpecific.length > 0 ? [...regionSpecific, ...global] : [...GLOBAL_CRISIS_RESOURCES.filter((r) => r.region === 'US'), ...global];
+  return buildGlobalResources(region);
 }

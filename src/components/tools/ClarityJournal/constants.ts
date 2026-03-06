@@ -227,7 +227,7 @@ export const PRIVACY_NOTICE =
   'Your journal data never leaves your device. Psychage cannot see, access, or store anything you write here.';
 
 export const CRISIS_MESSAGE =
-  'If you are in crisis right now: Call or text 988 (US) or visit findahelpline.com for crisis resources worldwide. You can also visit psychage.com/crisis.';
+  'If you are in crisis right now: Visit findahelpline.com for crisis resources worldwide, or go to psychage.com/crisis for your country-specific helplines and safety planning.';
 
 export const ELEVATED_SCORE_MESSAGE = (domain: string, weeks: number) =>
   `Your ${domain} score has been elevated for ${weeks} week${weeks > 1 ? 's' : ''}. This might be a good time to talk to a mental health professional.`;

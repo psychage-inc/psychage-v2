@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect, useCallback } from 'react';
+import React, { useContext, useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { AuthContext, AuthState, AuthContextType } from './AuthContextDefinition';
 import { supabase } from '../lib/supabaseClient';
 import type { User as SupabaseUser } from '@supabase/supabase-js';
@@ -16,22 +16,33 @@ function mapSupabaseUser(supabaseUser: SupabaseUser | null) {
   };
 }
 
+/** Returns true if two User objects have identical field values */
+function usersEqual(a: ReturnType<typeof mapSupabaseUser>, b: ReturnType<typeof mapSupabaseUser>): boolean {
+  if (a === b) return true;
+  if (!a || !b) return false;
+  return a.id === b.id && a.email === b.email && a.role === b.role
+    && a.display_name === b.display_name && a.avatar_url === b.avatar_url;
+}
+
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [state, setState] = useState<AuthState>({
     user: null,
     isLoading: true,
     isAuthenticated: false,
   });
+  const userRef = useRef<ReturnType<typeof mapSupabaseUser>>(null);
 
   // Check for existing session on mount and set up auth state listener
   useEffect(() => {
     // Get initial session
     supabase.auth.getSession().then(({ data: { session } }) => {
-      const user = mapSupabaseUser(session?.user ?? null);
+      const mapped = mapSupabaseUser(session?.user ?? null);
+      const stableUser = usersEqual(mapped, userRef.current) ? userRef.current : mapped;
+      userRef.current = stableUser;
       setState({
-        user,
+        user: stableUser,
         isLoading: false,
-        isAuthenticated: !!user,
+        isAuthenticated: !!stableUser,
       });
     });
 
@@ -39,11 +50,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
-      const user = mapSupabaseUser(session?.user ?? null);
+      const mapped = mapSupabaseUser(session?.user ?? null);
+      const stableUser = usersEqual(mapped, userRef.current) ? userRef.current : mapped;
+      userRef.current = stableUser;
       setState({
-        user,
+        user: stableUser,
         isLoading: false,
-        isAuthenticated: !!user,
+        isAuthenticated: !!stableUser,
       });
     });
 
@@ -62,9 +75,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       }
 
       if (data.user) {
-        const user = mapSupabaseUser(data.user);
+        const mapped = mapSupabaseUser(data.user);
+        const stableUser = usersEqual(mapped, userRef.current) ? userRef.current : mapped;
+        userRef.current = stableUser;
         setState({
-          user,
+          user: stableUser,
           isLoading: false,
           isAuthenticated: true,
         });
@@ -131,10 +146,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     try {
       const { data: { user: supabaseUser } } = await supabase.auth.getUser();
       if (supabaseUser) {
-        const user = mapSupabaseUser(supabaseUser);
+        const mapped = mapSupabaseUser(supabaseUser);
+        const stableUser = usersEqual(mapped, userRef.current) ? userRef.current : mapped;
+        userRef.current = stableUser;
         setState(prev => ({
           ...prev,
-          user,
+          user: stableUser,
           isAuthenticated: true,
         }));
       }
@@ -196,7 +213,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  const value: AuthContextType = {
+  const value = useMemo<AuthContextType>(() => ({
     ...state,
     login,
     signup,
@@ -205,7 +222,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     requestPasswordReset,
     signInWithGoogle,
     signInWithApple,
-  };
+  }), [state, login, signup, logout, refreshUser, requestPasswordReset, signInWithGoogle, signInWithApple]);
 
   return (
     <AuthContext.Provider value={value}>

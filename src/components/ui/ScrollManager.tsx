@@ -55,9 +55,9 @@ export const ScrollManager = () => {
     prevPathnameRef.current = pathname;
     prevSearchRef.current = search;
 
-    // Delay for route changes so the exit animation (200ms) finishes first.
+    // Small delay for route changes to let React finish rendering the new route.
     // Same-page hash changes scroll immediately.
-    const delay = isPathChange ? 250 : 0;
+    const delay = isPathChange ? 50 : 0;
 
     const timeouts: ReturnType<typeof setTimeout>[] = [];
 

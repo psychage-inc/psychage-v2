@@ -13,6 +13,7 @@ import Button from '../components/ui/Button';
 import { Display, Text } from '../components/ui/Typography';
 import MeshGradient from '../components/ui/MeshGradient';
 import InteractiveCard from '../components/ui/InteractiveCard';
+import { getCategoryBadgeClasses } from '../config/categoryThemes';
 
 const LearnPage: React.FC = () => {
     const navigate = useNavigate();
@@ -286,7 +287,7 @@ const LearnPage: React.FC = () => {
                                                         {article.title}
                                                     </h3>
                                                     <div className="flex items-center text-xs text-text-secondary">
-                                                        <span className="bg-white/10 px-2 py-0.5 rounded text-[10px] uppercase font-bold mr-2">{article.category.name}</span>
+                                                        <span className={`px-2 py-0.5 rounded text-[10px] uppercase font-bold mr-2 ${getCategoryBadgeClasses(article.category.slug)}`}>{article.category.name}</span>
                                                         <span>{article.readTime} min read</span>
                                                     </div>
                                                 </div>

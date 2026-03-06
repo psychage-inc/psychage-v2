@@ -463,6 +463,8 @@ export const api = {
       api.post(`/api/admin/providers/${id}/notes`, { notes }),
     updateProviderStatusWithReason: (id: string | number, status: string, reason?: string) =>
       api.post(`/api/admin/providers/${id}/status`, { status, reason }),
+    inviteAdmin: (email: string, displayName: string) =>
+      api.post<{ success: boolean }>('/api/admin/invite', { email, display_name: displayName }),
   },
 
   // Mood tracking endpoints

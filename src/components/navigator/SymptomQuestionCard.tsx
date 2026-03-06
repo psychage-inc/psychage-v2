@@ -25,9 +25,10 @@ export const SymptomQuestionCard: React.FC<SymptomQuestionCardProps> = ({
                     ? "bg-white/10 border border-teal-400/50 shadow-[0_0_40px_rgba(20,184,166,0.2)]"
                     : isCompleted
                         ? "bg-white/5 border border-white/10 opacity-70 hover:opacity-100 transition-opacity"
-                        : "bg-white/5 border border-transparent opacity-30 pointer-events-none filter blur-[2px]" // Upcoming
+                        : "bg-white/5 border border-transparent opacity-40 pointer-events-none" // Upcoming
             )}
             aria-current={isActive ? "step" : undefined}
+            aria-hidden={!isActive && !isCompleted ? true : undefined}
         >
             <div className={cn("p-6 sm:p-8", !isActive && "pointer-events-none")}>
                 <div className="mb-6">

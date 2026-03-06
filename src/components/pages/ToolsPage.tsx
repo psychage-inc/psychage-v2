@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { toolService } from '../../services/toolService';
 import { Tool } from '../../types/models';
-import { BrainCircuit, PenTool, Moon, Wind, Users, ShieldAlert, ArrowRight, Search, Filter, LucideIcon } from 'lucide-react';
+import { BrainCircuit, PenTool, Moon, Wind, Users, ShieldAlert, Lightbulb, NotebookPen, ArrowRight, Search, Filter, LucideIcon } from 'lucide-react';
 import Button from '../ui/Button';
 import SEO from '../SEO';
 import Breadcrumbs from '../ui/Breadcrumbs';
@@ -14,7 +14,9 @@ const iconMap: Record<string, LucideIcon> = {
     Moon,
     Wind,
     Users,
-    ShieldAlert
+    ShieldAlert,
+    Lightbulb,
+    NotebookPen
 };
 
 const colorVariants: Record<string, string> = {
@@ -61,16 +63,18 @@ const ToolsPage: React.FC = () => {
             case 2: return '/tools/mood-journal';
             case 3: return '/tools/sleep-architect';
             case 4: return '#'; // Breathwork - Coming soon
-            case 5: return '/find-care';
+            case 5: return '/providers';
             case 6: return '/crisis';
             case 7: return '/tools/symptom-navigator';
             case 8: return '/tools/mindmate';
+            case 9: return '/tools/thought-reframer';
+            case 10: return '/tools/clarity-journal';
             default: return '#'; // Coming soon
         }
     };
 
     const isComingSoon = (toolId: number) => {
-        return ![1, 2, 3, 5, 6, 7, 8].includes(toolId);
+        return ![1, 2, 3, 5, 6, 7, 8, 9, 10].includes(toolId);
     };
 
     if (isLoading) return <div className="min-h-screen bg-gray-50 pt-32 text-center">Loading...</div>;

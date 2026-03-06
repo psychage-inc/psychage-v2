@@ -118,7 +118,7 @@ const ResultsAnalysis: React.FC<ResultsProps> = ({ selectedIds }) => {
                         <div className="bg-surface border border-border rounded-3xl p-12 text-center">
                             <p className="text-text-secondary">We couldn't find a specific condition matching your symptoms, but talking to a professional is always a good first step.</p>
                             <div className="mt-6">
-                                <Link to="/find-care">
+                                <Link to="/providers">
                                     <Button>Find a Provider</Button>
                                 </Link>
                             </div>

@@ -1,30 +1,18 @@
-export interface Review {
-  id: string;
-  user: string;
-  date: string;
-  rating: number;
-  comment: string;
-}
-
 export interface Provider {
   id: number;
   name: string;
   role: string;
   image: string;
-  rating: number;
-  reviews: number;
   specialties: string[];
   location: string;
   availability: string;
   insurance: string[];
   verified: boolean;
-  // New fields for profile
   bio: string;
   education: string[];
   languages: string[];
   approach: string;
   yearsExperience: number;
-  reviewsList: Review[];
   nextAvailable?: string;
   isVideoVisit?: boolean;
 }
@@ -35,8 +23,6 @@ export const providers: Provider[] = [
     name: "Dr. Sarah Chen",
     role: "Clinical Psychologist, PhD",
     image: "/images/authors/author-female-1.svg",
-    rating: 4.9,
-    reviews: 127,
     specialties: ["Anxiety", "Depression", "CBT", "Stress Management"],
     location: "San Francisco, CA (Hybrid)",
     availability: "Available this week",
@@ -53,30 +39,12 @@ export const providers: Provider[] = [
     ],
     nextAvailable: "Tomorrow, 10:00 AM",
     isVideoVisit: true,
-    reviewsList: [
-      {
-        id: "r1",
-        user: "Michael R.",
-        date: "2 weeks ago",
-        rating: 5,
-        comment: "Dr. Chen is incredibly empathetic and practical. She helped me navigate a very difficult career transition with clarity."
-      },
-      {
-        id: "r2",
-        user: "Jessica L.",
-        date: "1 month ago",
-        rating: 5,
-        comment: "I've seen several therapists, but Dr. Chen's CBT approach finally gave me the tools I needed to manage my panic attacks."
-      }
-    ]
   },
   {
     id: 2,
     name: "Dr. Marcus Rivera",
     role: "Psychiatrist, MD",
     image: "/images/authors/author-male-1.svg",
-    rating: 4.8,
-    reviews: 84,
     specialties: ["Medication Management", "ADHD", "Bipolar Disorder"],
     location: "New York, NY (Virtual)",
     availability: "Next opening: Feb 12",
@@ -93,23 +61,12 @@ export const providers: Provider[] = [
     ],
     nextAvailable: "Feb 12, 2:00 PM",
     isVideoVisit: true,
-    reviewsList: [
-      {
-        id: "r3",
-        user: "David K.",
-        date: "3 weeks ago",
-        rating: 5,
-        comment: "Dr. Rivera really listens. He didn't just rush to prescribe; he took the time to understand my full history."
-      }
-    ]
   },
   {
     id: 3,
     name: "Elena Rostova, LMFT",
     role: "Licensed Marriage & Family Therapist",
     image: "/images/authors/author-female-2.svg",
-    rating: 5.0,
-    reviews: 42,
     specialties: ["Relationships", "Trauma", "Family Dynamics", "Couples Therapy"],
     location: "Chicago, IL (In-person)",
     availability: "Accepting new patients",
@@ -124,23 +81,12 @@ export const providers: Provider[] = [
       "BA in Sociology, University of Chicago"
     ],
     isVideoVisit: false,
-    reviewsList: [
-      {
-        id: "r4",
-        user: "Sarah & Tom",
-        date: "1 month ago",
-        rating: 5,
-        comment: "Elena saved our marriage. Her ability to mediate and help us hear each other was transformative."
-      }
-    ]
   },
   {
     id: 4,
     name: "James Wilson, LCSW",
     role: "Licensed Clinical Social Worker",
     image: "/images/authors/author-male-2.svg",
-    rating: 4.7,
-    reviews: 156,
     specialties: ["Addiction", "Grief", "Men's Issues", "Trauma"],
     location: "Austin, TX (Hybrid)",
     availability: "Available tomorrow",
@@ -156,15 +102,12 @@ export const providers: Provider[] = [
     ],
     nextAvailable: "Tomorrow, 9:00 AM",
     isVideoVisit: true,
-    reviewsList: []
   },
   {
     id: 5,
     name: "Dr. Amara Okeke",
     role: "Clinical Psychologist, PsyD",
     image: "/images/authors/author-female-3.svg",
-    rating: 4.9,
-    reviews: 93,
     specialties: ["Cultural Identity", "Stress", "Workplace Burnout", "Anxiety"],
     location: "Seattle, WA (Virtual)",
     availability: "Available this week",
@@ -180,15 +123,12 @@ export const providers: Provider[] = [
     ],
     nextAvailable: "Thursday, 4:00 PM",
     isVideoVisit: true,
-    reviewsList: []
   },
   {
     id: 6,
     name: "Thomas Anderson",
     role: "Holistic Therapist",
     image: "/images/authors/author-male-3.svg",
-    rating: 4.6,
-    reviews: 28,
     specialties: ["Mindfulness", "Somatic Experiencing", "Anxiety", "Holistic Health"],
     location: "Denver, CO (In-person)",
     availability: "Waitlist",
@@ -203,6 +143,5 @@ export const providers: Provider[] = [
       "Certified Somatic Experiencing Practitioner"
     ],
     isVideoVisit: false,
-    reviewsList: []
   }
 ];

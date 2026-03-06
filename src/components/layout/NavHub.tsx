@@ -55,7 +55,7 @@ const NavHub: React.FC<NavHubProps> = ({ isOpen, onClose }) => {
       textColor: "text-rose-900",
       icon: Heart,
       items: [
-        { label: "Find a Provider", desc: "Therapist match", href: "/find-care" },
+        { label: "Find a Provider", desc: "Therapist match", href: "/providers" },
         { label: "Community", desc: "Peer support", href: "/about" },
         { label: "Crisis Resources", desc: "Immediate help", href: "/crisis" },
       ]

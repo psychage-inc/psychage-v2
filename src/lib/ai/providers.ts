@@ -151,7 +151,7 @@ export function extractProviderCriteria(
 
 export function formatProviderSuggestion(suggestion: ProviderSuggestion): string {
   if (suggestion.providers.length === 0) {
-    return "I wasn't able to find providers matching your criteria in our directory. You can browse all providers at [Find Care](/find-care), or try broadening your search criteria.";
+    return "I wasn't able to find providers matching your criteria in our directory. You can browse all providers at [Find Care](/providers), or try broadening your search criteria.";
   }
 
   const lines = [
@@ -179,7 +179,7 @@ export function formatProviderSuggestion(suggestion: ProviderSuggestion): string
   }
 
   lines.push(
-    'You can view full profiles and more providers at [Find Care](/find-care).'
+    'You can view full profiles and more providers at [Find Care](/providers).'
   );
 
   return lines.join('\n');

@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { Logo } from './Logo';
 
 const LOADING_SHOWN_KEY = 'psychage_loading_shown';
 
@@ -67,11 +68,7 @@ export const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
                             transition={{ duration: 0.8, ease: "easeOut" }}
                             className="mb-8"
                         >
-                            <img
-                                src="/images/logo.png"
-                                alt="Psychage"
-                                className="w-32 md:w-48 h-auto object-contain"
-                            />
+                            <Logo className="w-32 md:w-48 h-auto text-[#1A1A1A] dark:text-white" />
                         </motion.div>
 
                         {/* Loading Line */}
@@ -154,14 +151,13 @@ export const LoadingScreenWipe = ({ onComplete }: { onComplete: () => void }) =>
             {/* Content Container */}
             <div className="relative z-10 flex flex-col items-center">
                 <div className="flex items-center justify-center">
-                    <motion.img
-                        src="/images/logo.png"
-                        alt="Psychage"
-                        className="w-48 md:w-64 h-auto object-contain"
+                    <motion.div
                         initial={{ opacity: 0, scale: 0.8, filter: "blur(10px)" }}
                         animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
                         transition={{ duration: 0.6, ease: "easeOut" }}
-                    />
+                    >
+                        <Logo className="w-48 md:w-64 h-auto text-[#1A1A1A] dark:text-white" />
+                    </motion.div>
                 </div>
 
                 {/* Tagline / Subtitle */}

@@ -157,12 +157,12 @@ const ClarityScoreTool: React.FC = () => {
         if (score >= 50) return {
             text: "You're experiencing moderate stress. It might be helpful to talk to someone.",
             action: "Browse our directory to find a therapist who fits your needs.",
-            link: "/find-care"
+            link: "/providers"
         };
         return {
             text: "Your clarity score suggests you may be overwhelmed. Professional support is recommended.",
             action: "Connect with a specialist immediately.",
-            link: "/find-care"
+            link: "/providers"
         };
     };
 

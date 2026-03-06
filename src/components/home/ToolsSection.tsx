@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, PenTool, Moon, BrainCircuit, Activity, Wind, Users, ShieldAlert, LucideIcon } from 'lucide-react';
+import { ArrowRight, PenTool, Moon, BrainCircuit, Activity, Wind, Users, ShieldAlert, Lightbulb, LucideIcon } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import { useToolService } from '@/services/toolService';
 import { Tool } from '@/types/models';
@@ -18,6 +18,7 @@ const iconMap: Record<string, LucideIcon> = {
     Users,
     ShieldAlert,
     Activity,
+    Lightbulb,
 };
 
 // Color scheme mapping for tool cards
@@ -36,10 +37,12 @@ const getToolLink = (toolId: number) => {
         case 2: return '/tools/mood-journal';
         case 3: return '/tools/sleep-architect';
         case 4: return '#'; // Breathwork - Coming soon
-        case 5: return '/find-care';
+        case 5: return '/providers';
         case 6: return '/crisis';
         case 7: return '/tools/symptom-navigator';
         case 8: return '/tools/mindmate';
+        case 9: return '/tools/thought-reframer';
+        case 10: return '/tools/clarity-journal';
         default: return '#';
     }
 };

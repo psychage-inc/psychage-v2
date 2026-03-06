@@ -1,11 +1,15 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { motion, AnimatePresence, LayoutGroup } from 'framer-motion';
 import { Search, Menu, ChevronDown, User, X, LogOut, LayoutDashboard, Settings } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import NavMenu from './NavMenu';
 import MobileMenu from './MobileMenu';
 import Button from '../ui/Button';
+import { Logo } from '../ui/Logo';
 import { useAuth } from '../../context/AuthContext';
+import { navigationConfig } from '../../config/navigation';
+import { useNavPermissions } from '../../hooks/useNavPermissions';
+import type { NavItem } from '../../types/navigation';
 
 const Navigation: React.FC = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -23,6 +27,19 @@ const Navigation: React.FC = () => {
     const navigate = useNavigate();
     const { user, isAuthenticated, logout } = useAuth();
     const userMenuRef = useRef<HTMLDivElement>(null);
+    const { filterNavItems, filterMegaMenu } = useNavPermissions();
+
+    // Filter navigation items based on permissions
+    const primaryNavItems = useMemo(() => {
+        return navigationConfig.primary
+            .map(item => filterMegaMenu(item))
+            .filter((item): item is NavItem => item !== null);
+    }, [filterMegaMenu]);
+
+    const authItems = useMemo(() =>
+        filterNavItems(navigationConfig.auth),
+        [filterNavItems]
+    );
 
     useEffect(() => {
         const handleScroll = () => {
@@ -66,12 +83,6 @@ const Navigation: React.FC = () => {
             setTimeout(() => searchInputRef.current?.focus(), 100);
         }
     }, [isSearchOpen]);
-
-    const navLinks = [
-        { name: 'Learn', hasMenu: true },
-        { name: 'Tools', hasMenu: true },
-        { name: 'Find Providers', hasMenu: false, href: '/find-care' }
-    ];
 
     const getDashboardPath = () => {
         if (!user) return '/login';
@@ -144,59 +155,55 @@ const Navigation: React.FC = () => {
                 >
                     {/* Logo */}
                     <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigate('/')}>
-                        <img
-                            src="/images/logo.png"
-                            alt="Psychage Logo"
-                            className="h-12 w-auto object-contain"
-                        />
+                        <Logo className="h-12 w-auto text-[#1A1A1A] dark:text-white" />
                     </div>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden md:flex items-center gap-1">
+                    <nav className="hidden md:flex items-center gap-1" role="navigation" aria-label="Main navigation">
                         <LayoutGroup>
-                            {navLinks.map((link) => (
-                                <div key={link.name} className="relative">
-                                    {link.hasMenu ? (
+                            {primaryNavItems.map((navItem) => (
+                                <div key={navItem.id} className="relative">
+                                    {navItem.type === 'mega-menu' ? (
                                         <button
-                                            onMouseEnter={() => { handleMouseEnter(link.name); setHoveredLink(link.name); }}
-                                            className={`relative px-4 py-2 rounded-full text-sm font-bold transition-colors duration-200 flex items-center gap-1.5 z-10 ${activeTab === link.name || hoveredLink === link.name
+                                            onMouseEnter={() => { handleMouseEnter(navItem.label); setHoveredLink(navItem.label); }}
+                                            className={`relative px-4 py-2 rounded-full text-sm font-bold transition-colors duration-200 flex items-center gap-1.5 z-10 ${activeTab === navItem.label || hoveredLink === navItem.label
                                                 ? 'text-gray-900'
                                                 : 'text-gray-600'
                                                 }`}
-                                            aria-expanded={activeTab === link.name}
+                                            aria-expanded={activeTab === navItem.label}
                                             aria-haspopup="menu"
-                                            aria-label={`${link.name} menu`}
+                                            aria-label={`${navItem.label} menu`}
                                         >
-                                            {activeTab === link.name && (
+                                            {activeTab === navItem.label && (
                                                 <motion.div
                                                     layoutId="nav-bg"
                                                     className="absolute inset-0 bg-gray-100 rounded-full -z-10"
                                                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                                                 />
                                             )}
-                                            {link.name}
+                                            {navItem.label}
                                             <ChevronDown
                                                 size={14}
-                                                className={`transition-transform duration-200 ${activeTab === link.name ? 'rotate-180' : ''}`}
+                                                className={`transition-transform duration-200 ${activeTab === navItem.label ? 'rotate-180' : ''}`}
                                                 aria-hidden="true"
                                             />
                                         </button>
                                     ) : (
                                         <div
-                                            onMouseEnter={() => { handleMouseEnter(''); setHoveredLink(link.name); }}
+                                            onMouseEnter={() => { handleMouseEnter(''); setHoveredLink(navItem.label); }}
                                         >
                                             <button
-                                                onClick={() => navigate(link.href!)}
-                                                className={`relative px-4 py-2 rounded-full text-sm font-bold transition-colors duration-200 z-10 ${hoveredLink === link.name ? 'text-gray-900' : 'text-gray-600'}`}
+                                                onClick={() => navigate(navItem.type === 'link' ? navItem.href : '/')}
+                                                className={`relative px-4 py-2 rounded-full text-sm font-bold transition-colors duration-200 z-10 ${hoveredLink === navItem.label ? 'text-gray-900' : 'text-gray-600'}`}
                                             >
-                                                {hoveredLink === link.name && (
+                                                {hoveredLink === navItem.label && (
                                                     <motion.div
                                                         layoutId="nav-bg"
                                                         className="absolute inset-0 bg-gray-100 rounded-full -z-10"
                                                         transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                                                     />
                                                 )}
-                                                {link.name}
+                                                {navItem.label}
                                             </button>
                                         </div>
                                     )}
@@ -262,6 +269,7 @@ const Navigation: React.FC = () => {
                                                 exit={{ opacity: 0, y: 10, scale: 0.95 }}
                                                 transition={{ duration: 0.1 }}
                                                 className="absolute right-0 top-full mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden py-1 z-[60]"
+                                                role="menu"
                                             >
                                                 <div className="px-4 py-3 border-b border-gray-100">
                                                     <p className="text-sm font-medium text-gray-900 truncate">{user?.display_name || 'User'}</p>
@@ -270,6 +278,7 @@ const Navigation: React.FC = () => {
                                                 <button
                                                     onClick={() => { navigate(getDashboardPath()); setIsUserMenuOpen(false); }}
                                                     className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 flex items-center gap-2"
+                                                    role="menuitem"
                                                 >
                                                     <LayoutDashboard size={16} />
                                                     Dashboard
@@ -277,6 +286,7 @@ const Navigation: React.FC = () => {
                                                 <button
                                                     onClick={() => { navigate('/dashboard/settings'); setIsUserMenuOpen(false); }}
                                                     className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 flex items-center gap-2"
+                                                    role="menuitem"
                                                 >
                                                     <Settings size={16} />
                                                     Settings
@@ -285,6 +295,7 @@ const Navigation: React.FC = () => {
                                                 <button
                                                     onClick={handleLogout}
                                                     className="w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-red-50 flex items-center gap-2"
+                                                    role="menuitem"
                                                 >
                                                     <LogOut size={16} />
                                                     Sign Out
@@ -296,23 +307,31 @@ const Navigation: React.FC = () => {
                             </>
                         ) : (
                             <>
-                                {/* Login Button */}
-                                <button
-                                    onClick={() => navigate('/login')}
-                                    onMouseEnter={() => handleMouseEnter('')}
-                                    className="hidden md:flex px-4 py-2 rounded-full text-sm font-bold text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all"
-                                >
-                                    Sign In
-                                </button>
+                                {/* Auth buttons from filtered config */}
+                                {authItems.map((authItem) => {
+                                    if (authItem.type !== 'link') return null;
+                                    const isGetStarted = authItem.id === 'signup';
 
-                                {/* Get Started Button */}
-                                <Button
-                                    className="hidden md:flex rounded-full px-6 h-10 bg-teal-600 hover:bg-teal-700 text-white shadow-lg shadow-teal-900/20 border-none font-bold text-sm ml-2"
-                                    onClick={() => navigate('/signup')}
-                                    onMouseEnter={() => handleMouseEnter('')}
-                                >
-                                    Get Started
-                                </Button>
+                                    return isGetStarted ? (
+                                        <Button
+                                            key={authItem.id}
+                                            className={`hidden md:flex rounded-full px-6 h-10 ${authItem.className || 'bg-teal-600 hover:bg-teal-700 text-white'} shadow-lg shadow-teal-900/20 border-none font-bold text-sm ml-2`}
+                                            onClick={() => navigate(authItem.href)}
+                                            onMouseEnter={() => handleMouseEnter('')}
+                                        >
+                                            {authItem.label}
+                                        </Button>
+                                    ) : (
+                                        <button
+                                            key={authItem.id}
+                                            onClick={() => navigate(authItem.href)}
+                                            onMouseEnter={() => handleMouseEnter('')}
+                                            className="hidden md:flex px-4 py-2 rounded-full text-sm font-bold text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all"
+                                        >
+                                            {authItem.label}
+                                        </button>
+                                    );
+                                })}
                             </>
                         )}
 
@@ -372,7 +391,7 @@ const Navigation: React.FC = () => {
                         >
                             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                                 <NavMenu
-                                    activeTab={activeTab}
+                                    activeMenuItem={primaryNavItems.find(item => item.label === activeTab) || null}
                                     onMouseLeave={() => { }} // Handled by wrapper
                                     onCategorySelect={(category) => {
                                         navigate(`/category/${category}`);

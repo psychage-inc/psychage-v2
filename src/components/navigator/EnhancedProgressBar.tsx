@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
 import { cn } from '../../lib/utils';
@@ -19,6 +19,22 @@ export const EnhancedProgressBar: React.FC<EnhancedProgressBarProps> = ({
 }) => {
     const [showJumpConfirm, setShowJumpConfirm] = useState(false);
     const [targetStep, setTargetStep] = useState<NavigatorStep | null>(null);
+    const [newlyCompleted, setNewlyCompleted] = useState<Set<NavigatorStep>>(new Set());
+    const prevCompletedRef = useRef<Set<NavigatorStep>>(new Set());
+
+    // Detect newly completed steps for pulse animation
+    useEffect(() => {
+        const fresh = new Set<NavigatorStep>();
+        completedSteps.forEach(step => {
+            if (!prevCompletedRef.current.has(step)) fresh.add(step);
+        });
+        if (fresh.size > 0) {
+            setNewlyCompleted(fresh);
+            const timer = setTimeout(() => setNewlyCompleted(new Set()), 700);
+            return () => clearTimeout(timer);
+        }
+        prevCompletedRef.current = new Set(completedSteps);
+    }, [completedSteps]);
 
     const currentStepNum = getStepNumber(currentStep);
     const totalSteps = getTotalSteps();
@@ -99,20 +115,28 @@ export const EnhancedProgressBar: React.FC<EnhancedProgressBarProps> = ({
                                         aria-current={isCurrent ? 'step' : undefined}
                                     >
                                         {/* Step indicator */}
-                                        <div
+                                        <motion.div
                                             className={cn(
                                                 "flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 border-2",
                                                 isCompleted && !isCurrent && "bg-teal-500/20 border-teal-500 text-teal-400",
                                                 isCurrent && "bg-teal-500 border-teal-500 text-white shadow-[0_0_10px_rgba(20,184,166,0.5)]",
                                                 !isCompleted && !isCurrent && "bg-charcoal-800 border-white/20 text-charcoal-400"
                                             )}
+                                            animate={newlyCompleted.has(step.id) ? {
+                                                boxShadow: [
+                                                    '0 0 0 0 rgba(20,184,166,0)',
+                                                    '0 0 0 8px rgba(20,184,166,0.3)',
+                                                    '0 0 0 0 rgba(20,184,166,0)',
+                                                ],
+                                            } : undefined}
+                                            transition={{ duration: 0.6, ease: 'easeOut' }}
                                         >
                                             {isCompleted && !isCurrent ? (
                                                 <Check className="w-4 h-4" />
                                             ) : (
                                                 stepNum
                                             )}
-                                        </div>
+                                        </motion.div>
 
                                         {/* Step label */}
                                         <span

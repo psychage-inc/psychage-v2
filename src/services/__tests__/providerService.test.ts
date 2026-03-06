@@ -58,14 +58,11 @@ vi.mock('@/data/providers', () => ({
             location: 'New York, NY',
             insurance: ['Blue Cross'],
             verified: true,
-            rating: 4.5,
-            reviews: 10,
             bio: 'Test bio',
             education: ['MD'],
             languages: ['English'],
             approach: 'CBT',
             yearsExperience: 10,
-            reviewsList: [],
             isVideoVisit: true,
             status: 'active',
             email: 'test@example.com'
@@ -125,27 +122,6 @@ describe('providerService', () => {
         });
     });
 
-    describe('submitReview', () => {
-        it('should queue review locally when API fails', async () => {
-            const result = await providerService.submitReview(1, {
-                rating: 5,
-                comment: 'Great provider!'
-            });
-
-            expect(result).toHaveProperty('success');
-        });
-
-        it('should validate rating is within range', async () => {
-            const result = await providerService.submitReview(1, {
-                rating: 5,
-                comment: 'Test review'
-            });
-
-            // Should succeed or fail gracefully
-            expect(typeof result.success).toBe('boolean');
-        });
-    });
-
     describe('toggleFavorite', () => {
         it('should return favorited status', async () => {
             const result = await providerService.toggleFavorite(1);
@@ -160,10 +136,10 @@ describe('providerService', () => {
         });
     });
 
-    describe('verifyProvider', () => {
+    describe('updateProviderStatus', () => {
         it('should return success status', async () => {
-            const result = await providerService.verifyProvider(1, 'active');
-            expect(result).toHaveProperty('success');
+            const result = await providerService.updateProviderStatus(1, 'active');
+            expect(typeof result).toBe('boolean');
         });
     });
 });

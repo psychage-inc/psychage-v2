@@ -342,7 +342,7 @@ const ArticlePage: React.FC = () => {
                                 <div className="relative z-10">
                                     <h4 className="font-bold text-lg text-primary mb-2">Need professional help?</h4>
                                     <p className="text-sm text-text-secondary mb-4">Connect with licensed therapists who understand what you're going through.</p>
-                                    <Button size="sm" className="w-full shadow-lg shadow-primary/20" onClick={() => navigate('/find-care')}>Find a Provider</Button>
+                                    <Button size="sm" className="w-full shadow-lg shadow-primary/20" onClick={() => navigate('/providers')}>Find a Provider</Button>
                                 </div>
                                 <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/10 rounded-full blur-xl" />
                             </Card>

@@ -1,32 +1,20 @@
 import React from 'react';
 
-export interface Review {
-    id: string;
-    user: string;
-    date: string;
-    rating: number;
-    comment: string;
-}
-
 export interface Provider {
     id: number | string;
     name: string;
     role: string;
     image: string;
-    rating: number;
-    reviews: number;
     specialties: string[];
     location: string;
     availability: string;
     insurance: string[];
     verified: boolean;
-    // New fields for profile
     bio: string;
     education: string[];
     languages: string[];
     approach: string;
     yearsExperience: number;
-    reviewsList: Review[];
     nextAvailable?: string;
     isVideoVisit?: boolean;
     status?: string; // e.g., 'pending', 'active', 'suspended', 'rejected'

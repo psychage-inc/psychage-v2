@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Star, MapPin, Calendar, ShieldCheck, CreditCard, Video, Clock } from 'lucide-react';
+import { MapPin, Calendar, ShieldCheck, CreditCard, Video, Clock } from 'lucide-react';
 import { Provider } from '../../types/models';
 import Badge from '../ui/Badge';
 import Button from '../ui/Button';
@@ -49,18 +49,12 @@ const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
         </div>
 
         <div>
-          <Link to={`/find-care/provider/${provider.id}`} className="hover:underline decoration-teal-500 decoration-2 underline-offset-2">
+          <Link to={`/providers/${provider.id}`} className="hover:underline decoration-teal-500 decoration-2 underline-offset-2">
             <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white leading-tight">
               {provider.name}
             </h3>
           </Link>
           <p className="text-sm text-gray-500 dark:text-gray-400 font-medium mb-1">{provider.role}</p>
-          <div className="flex items-center gap-1 text-xs font-bold text-amber-500">
-            <Star size={12} fill="currentColor" />
-            <span>{provider.rating}</span>
-            <span className="text-gray-300 dark:text-gray-600 mx-1">•</span>
-            <span className="text-gray-400 dark:text-gray-500 font-medium underline decoration-gray-200 dark:decoration-gray-700">{provider.reviews} reviews</span>
-          </div>
         </div>
       </div>
 
@@ -114,7 +108,7 @@ const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
 
       <div className="flex gap-3 mt-auto">
         <Button
-          onClick={() => navigate(`/find-care/provider/${provider.id}`)}
+          onClick={() => navigate(`/providers/${provider.id}`)}
           className="flex-1 h-10 text-sm font-bold bg-teal-600 hover:bg-teal-700 text-white"
         >
           View Profile

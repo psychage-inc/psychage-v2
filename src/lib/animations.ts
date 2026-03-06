@@ -52,3 +52,29 @@ export const glassCardHover = {
         transition: { duration: 0.3, ease: "easeOut" }
     }
 };
+
+/** Direction-aware slide for Navigator step transitions.
+ *  Pass `custom={1}` for forward, `custom={-1}` for backward. */
+export const navigatorSlide = {
+    enter: (direction: number) => ({
+        x: direction > 0 ? 60 : -60,
+        opacity: 0,
+    }),
+    center: {
+        x: 0,
+        opacity: 1,
+        transition: { duration: 0.35, ease: [0.4, 0, 0.2, 1] },
+    },
+    exit: (direction: number) => ({
+        x: direction > 0 ? -60 : 60,
+        opacity: 0,
+        transition: { duration: 0.25, ease: [0.4, 0, 0.2, 1] },
+    }),
+};
+
+/** Reduced-motion variant — fade only, no slide. */
+export const navigatorFade = {
+    enter: { opacity: 0 },
+    center: { opacity: 1, transition: { duration: 0.2 } },
+    exit: { opacity: 0, transition: { duration: 0.15 } },
+};

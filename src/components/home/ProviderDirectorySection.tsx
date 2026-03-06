@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Star, MapPin, ArrowRight, ShieldCheck } from 'lucide-react';
+import { MapPin, ArrowRight, ShieldCheck } from 'lucide-react';
 import { Card } from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
 import { Display, Text } from '@/components/ui/Typography';
@@ -8,9 +8,11 @@ import { staggerContainer, slideUp } from '@/lib/animations';
 import { useProviderService } from '@/services/providerService';
 import { Provider } from '@/types/models';
 import { SkeletonProviderCard } from '@/components/ui/Skeletons';
+import { Link, useNavigate } from 'react-router-dom';
 
 const ProviderDirectorySection: React.FC = () => {
     const providerService = useProviderService();
+    const navigate = useNavigate();
     const [providers, setProviders] = useState<Provider[]>([]);
     const [loading, setLoading] = useState(true);
 
@@ -40,7 +42,7 @@ const ProviderDirectorySection: React.FC = () => {
                                 <span className="text-gray-400">right now.</span>
                             </Display>
                             <Text className="text-lg text-gray-500 max-w-xl">
-                                Connect with top-rated mental health professionals tailored to your specific needs.
+                                Connect with verified mental health professionals tailored to your specific needs.
                             </Text>
                         </div>
                     </div>
@@ -74,10 +76,15 @@ const ProviderDirectorySection: React.FC = () => {
                             <span className="text-gray-400">right now.</span>
                         </Display>
                         <Text className="text-lg text-gray-500 max-w-xl">
-                            Connect with top-rated mental health professionals tailored to your specific needs. Verified reviews, transparent pricing.
+                            Connect with verified mental health professionals tailored to your specific needs. NPI-verified credentials you can trust.
                         </Text>
                     </div>
-                    <Button variant="outline" rightIcon={<ArrowRight size={18} />} className="hidden md:flex">
+                    <Button
+                        variant="outline"
+                        rightIcon={<ArrowRight size={18} />}
+                        className="hidden md:flex"
+                        onClick={() => navigate('/providers')}
+                    >
                         View All Providers
                     </Button>
                 </div>
@@ -105,25 +112,28 @@ const ProviderDirectorySection: React.FC = () => {
                                     )}
                                 </div>
                                 <div className="p-6">
-                                    <div className="flex justify-between items-start mb-2">
-                                        <div>
-                                            <h3 className="font-bold text-lg text-gray-900">{provider.name}</h3>
-                                            <p className="text-sm text-teal-600 font-medium">{provider.role}</p>
-                                        </div>
-                                        <div className="flex items-center gap-1 bg-amber-50 px-2 py-1 rounded-md border border-amber-100">
-                                            <Star size={14} className="text-amber-500 fill-amber-500" />
-                                            <span className="text-xs font-bold text-amber-700">{provider.rating}</span>
-                                        </div>
+                                    <div className="mb-2">
+                                        <h3 className="font-bold text-lg text-gray-900">{provider.name}</h3>
+                                        <p className="text-sm text-teal-600 font-medium">{provider.role}</p>
                                     </div>
-                                    <div className="flex items-center gap-2 text-gray-500 text-sm mb-6">
+                                    <div className="flex items-center gap-2 text-gray-500 text-sm mb-4">
                                         <MapPin size={14} />
                                         <span>{provider.location}</span>
-                                        <span className="mx-1">•</span>
-                                        <span>{provider.reviews} reviews</span>
                                     </div>
-                                    <Button variant="secondary" className="w-full justify-center">
-                                        Book Consultation
-                                    </Button>
+                                    {provider.specialties.length > 0 && (
+                                        <div className="flex flex-wrap gap-1.5 mb-6">
+                                            {provider.specialties.slice(0, 3).map(s => (
+                                                <span key={s} className="px-2 py-0.5 bg-teal-50 text-teal-700 text-xs font-medium rounded-full">
+                                                    {s}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    )}
+                                    <Link to={`/providers/${provider.id}`}>
+                                        <Button variant="secondary" className="w-full justify-center">
+                                            View Profile
+                                        </Button>
+                                    </Link>
                                 </div>
                             </Card>
                         </motion.div>
@@ -131,7 +141,12 @@ const ProviderDirectorySection: React.FC = () => {
                 </motion.div>
 
                 <div className="mt-8 md:hidden">
-                    <Button variant="outline" rightIcon={<ArrowRight size={18} />} className="w-full justify-center">
+                    <Button
+                        variant="outline"
+                        rightIcon={<ArrowRight size={18} />}
+                        className="w-full justify-center"
+                        onClick={() => navigate('/providers')}
+                    >
                         View All Providers
                     </Button>
                 </div>

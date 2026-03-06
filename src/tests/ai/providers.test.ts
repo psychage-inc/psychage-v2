@@ -106,7 +106,7 @@ describe('Provider Suggestion Formatting', () => {
     expect(formatted).toContain('Psychologist');
     expect(formatted).toContain('depression');
     expect(formatted).toContain('Telehealth available');
-    expect(formatted).toContain('[Find Care](/find-care)');
+    expect(formatted).toContain('[Find Care](/providers)');
   });
 
   it('should handle empty results', () => {
@@ -118,7 +118,7 @@ describe('Provider Suggestion Formatting', () => {
 
     const formatted = formatProviderSuggestion(suggestion);
     expect(formatted).toContain('wasn\'t able to find');
-    expect(formatted).toContain('[Find Care](/find-care)');
+    expect(formatted).toContain('[Find Care](/providers)');
   });
 
   it('should show total matches count', () => {

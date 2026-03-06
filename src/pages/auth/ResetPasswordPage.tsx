@@ -26,9 +26,10 @@ const ResetPasswordPage = () => {
 
             if (result.success) {
                 setIsSubmitted(true);
+            } else {
+                setError(result.error || 'Failed to send reset instructions. Please try again.');
             }
         } catch {
-            // Error handled by AuthContext
             setError('An unexpected error occurred. Please try again.');
         }
     };

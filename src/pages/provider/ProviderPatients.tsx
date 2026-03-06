@@ -220,13 +220,13 @@ const ProviderPatients: React.FC = () => {
                                     <p className="text-sm font-medium text-text-primary mb-1">Your Profile Link</p>
                                     <div className="flex items-center gap-2">
                                         <code className="text-xs text-text-secondary bg-surface-hover px-2 py-1 rounded flex-1 truncate">
-                                            {window.location.origin}/find-care/provider/me
+                                            {window.location.origin}/providers/me
                                         </code>
                                         <Button
                                             variant="outline"
                                             size="sm"
                                             onClick={() => {
-                                                navigator.clipboard.writeText(`${window.location.origin}/find-care/provider/me`);
+                                                navigator.clipboard.writeText(`${window.location.origin}/providers/me`);
                                             }}
                                         >
                                             Copy

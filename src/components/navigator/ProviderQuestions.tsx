@@ -1,6 +1,6 @@
 import React from 'react';
 import { ClipboardList, Copy, CheckCircle2 } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface ProviderQuestionsProps {
     questions: string[];
@@ -41,17 +41,33 @@ export const ProviderQuestions: React.FC<ProviderQuestionsProps> = ({ questions 
                     className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium text-text-secondary hover:text-text-primary hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-teal-500/50 transition-colors border border-transparent hover:border-white/10"
                     aria-label={copied ? "Copied to clipboard" : "Copy questions"}
                 >
-                    {copied ? (
-                        <>
-                            <CheckCircle2 className="w-4 h-4" />
-                            <span>Copied</span>
-                        </>
-                    ) : (
-                        <>
-                            <Copy className="w-4 h-4" />
-                            <span>Copy</span>
-                        </>
-                    )}
+                    <AnimatePresence mode="wait">
+                        {copied ? (
+                            <motion.span
+                                key="copied"
+                                initial={{ scale: 0.5, opacity: 0 }}
+                                animate={{ scale: 1, opacity: 1 }}
+                                exit={{ scale: 0.5, opacity: 0 }}
+                                transition={{ duration: 0.15 }}
+                                className="flex items-center gap-2 text-teal-400"
+                            >
+                                <CheckCircle2 className="w-4 h-4" />
+                                Copied
+                            </motion.span>
+                        ) : (
+                            <motion.span
+                                key="copy"
+                                initial={{ scale: 0.5, opacity: 0 }}
+                                animate={{ scale: 1, opacity: 1 }}
+                                exit={{ scale: 0.5, opacity: 0 }}
+                                transition={{ duration: 0.15 }}
+                                className="flex items-center gap-2"
+                            >
+                                <Copy className="w-4 h-4" />
+                                Copy
+                            </motion.span>
+                        )}
+                    </AnimatePresence>
                 </button>
             </div>
 

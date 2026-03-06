@@ -1,17 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { TrendingUp, Calendar, ArrowRight, BrainCircuit, AlertCircle, RefreshCw } from 'lucide-react';
+import { AlertCircle, RefreshCw } from 'lucide-react';
 import UserSidebar from './UserSidebar';
 import Button from '@/components/ui/Button';
 import SEO from '@/components/SEO';
 import { useAuth } from '@/context/AuthContext';
 import { api } from '@/lib/api';
-import { format } from 'date-fns';
+import { format, subDays } from 'date-fns';
 import InteractiveCard from '@/components/ui/InteractiveCard';
 import MeshGradient from '@/components/ui/MeshGradient';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
-import AnalyticsChart from '@/components/dashboard/AnalyticsChart';
+import { moodService, type MoodEntry, type MoodStats } from '@/services/moodService';
+import { sleepService, type SleepEntry, type SleepStats } from '@/services/sleepService';
+import { bookmarkService } from '@/services/bookmarkService';
+import { supabase } from '@/lib/supabaseClient';
+
+// New dashboard components
+import SmartActionsHub from '@/components/dashboard/SmartActionsHub';
+import QuickMoodCheckIn from '@/components/dashboard/QuickMoodCheckIn';
+import WellnessSnapshotCards, { type DashboardStats } from '@/components/dashboard/WellnessSnapshotCards';
+import MultiMetricChart, { type ChartDataPoint } from '@/components/dashboard/MultiMetricChart';
+import NavigatorAwarenessCard from '@/components/dashboard/NavigatorAwarenessCard';
+import RecentActivityCard from '@/components/dashboard/RecentActivityCard';
 
 // Dashboard loading skeleton
 const DashboardSkeleton: React.FC = () => (
@@ -19,30 +30,29 @@ const DashboardSkeleton: React.FC = () => (
         {/* Welcome card skeleton */}
         <div className="bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl p-8 h-48 animate-pulse" />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Score card skeleton */}
-            <div className="bg-surface rounded-3xl p-8 h-52 border border-border animate-pulse">
-                <div className="h-4 w-32 bg-gray-200 rounded mb-4" />
-                <div className="h-16 w-24 bg-gray-200 rounded mb-6" />
-                <div className="h-3 w-full bg-gray-200 rounded" />
-            </div>
-
-            {/* Activity card skeleton */}
-            <div className="bg-surface rounded-3xl p-8 h-52 border border-border animate-pulse">
-                <div className="h-4 w-32 bg-gray-200 rounded mb-6" />
-                <div className="space-y-4">
-                    {[1, 2, 3].map(i => (
-                        <div key={i} className="flex items-center gap-4">
-                            <div className="w-10 h-10 rounded-full bg-gray-200" />
-                            <div className="flex-grow">
-                                <div className="h-3 w-32 bg-gray-200 rounded mb-2" />
-                                <div className="h-2 w-20 bg-gray-100 rounded" />
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
+        {/* Smart actions skeleton */}
+        <div className="flex gap-3">
+            {[1, 2, 3].map(i => (
+                <div key={i} className="flex-1 h-28 bg-surface rounded-2xl border border-border animate-pulse" />
+            ))}
         </div>
+
+        {/* Mood check-in skeleton */}
+        <div className="bg-surface rounded-3xl p-6 h-32 border border-border animate-pulse" />
+
+        {/* Snapshot cards skeleton */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {[1, 2, 3].map(i => (
+                <div key={i} className="bg-surface rounded-3xl p-6 h-40 border border-border animate-pulse">
+                    <div className="h-4 w-20 bg-gray-200 rounded mb-4" />
+                    <div className="h-10 w-16 bg-gray-200 rounded mb-3" />
+                    <div className="h-3 w-24 bg-gray-200 rounded" />
+                </div>
+            ))}
+        </div>
+
+        {/* Chart skeleton */}
+        <div className="bg-surface rounded-3xl p-8 h-96 border border-border animate-pulse" />
     </div>
 );
 
@@ -60,60 +70,200 @@ const DashboardError: React.FC<{ message: string; onRetry: () => void }> = ({ me
     </div>
 );
 
-interface DashboardStats {
-    streak: number;
-    latestScore: number;
-    lastAssessed: string;
-    change: number;
-}
-
 interface DashboardActivity {
     type: 'assessment' | 'appointment';
     title: string;
     date: string;
 }
 
+/**
+ * Merge clarity, mood, and sleep data into a unified chart data array.
+ * Groups by date (MMM d format), averages multiple entries per day.
+ */
+function mergeChartData(
+    clarityHistory: { date: string; score: number }[],
+    moodEntries: MoodEntry[],
+    sleepEntries: SleepEntry[]
+): ChartDataPoint[] {
+    const dateMap = new Map<string, { clarityScores: number[]; moods: number[]; sleepHours: number[] }>();
+
+    const ensureDate = (key: string) => {
+        if (!dateMap.has(key)) dateMap.set(key, { clarityScores: [], moods: [], sleepHours: [] });
+        return dateMap.get(key)!;
+    };
+
+    clarityHistory.forEach(h => {
+        ensureDate(h.date).clarityScores.push(h.score);
+    });
+
+    moodEntries.forEach(e => {
+        const key = format(new Date(e.created_at), 'MMM d');
+        ensureDate(key).moods.push(e.value);
+    });
+
+    sleepEntries.forEach(e => {
+        const key = format(new Date(e.date || e.created_at), 'MMM d');
+        ensureDate(key).sleepHours.push(e.hours);
+    });
+
+    const avg = (arr: number[]) => arr.length > 0 ? arr.reduce((a, b) => a + b, 0) / arr.length : undefined;
+
+    // Sort entries chronologically. We build a date-to-order map from the last 7 days.
+    const last7 = Array.from({ length: 7 }, (_, i) => format(subDays(new Date(), 6 - i), 'MMM d'));
+
+    return last7
+        .filter(d => dateMap.has(d))
+        .map(d => {
+            const entry = dateMap.get(d)!;
+            const point: ChartDataPoint = { date: d };
+            const cs = avg(entry.clarityScores);
+            const m = avg(entry.moods);
+            const sh = avg(entry.sleepHours);
+            if (cs !== undefined) point.clarityScore = Math.round(cs);
+            if (m !== undefined) point.mood = Math.round(m * 10) / 10;
+            if (sh !== undefined) point.sleepHours = Math.round(sh * 10) / 10;
+            return point;
+        });
+}
+
 const UserDashboard: React.FC = () => {
     const { user } = useAuth();
+
+    // Existing state
     const [stats, setStats] = useState<DashboardStats | null>(null);
     const [activity, setActivity] = useState<DashboardActivity[]>([]);
-    const [history, setHistory] = useState<any[]>([]);
+    const [clarityHistory, setClarityHistory] = useState<{ date: string; score: number }[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
-    const fetchData = async () => {
+    // New state for enhanced dashboard
+    const [moodStats, setMoodStats] = useState<MoodStats | null>(null);
+    const [sleepStats, setSleepStats] = useState<SleepStats | null>(null);
+    const [todayMood, setTodayMood] = useState<MoodEntry | null>(null);
+    const [todaySleep, setTodaySleep] = useState<SleepEntry | null>(null);
+    const [moodHistory, setMoodHistory] = useState<MoodEntry[]>([]);
+    const [sleepHistory, setSleepHistory] = useState<SleepEntry[]>([]);
+    const [navigatorCount, setNavigatorCount] = useState<number>(0);
+    const [navigatorLastDate, setNavigatorLastDate] = useState<string | null>(null);
+    const [bookmarkCount, setBookmarkCount] = useState<number>(0);
+
+    const fetchData = useCallback(async () => {
+        if (!user?.id) return;
+
         setIsLoading(true);
         setError(null);
+
+        const today = new Date().toISOString().split('T')[0];
+        const sevenDaysAgo = subDays(new Date(), 7).toISOString().split('T')[0];
+
         try {
-            const [statsRes, activityRes, historyRes] = await Promise.all([
+            const [
+                statsRes, activityRes, historyRes,
+                moodStatsRes, sleepStatsRes,
+                latestMoodRes, latestSleepRes,
+                moodRangeRes, sleepRangeRes,
+                navigatorRes, bookmarksRes
+            ] = await Promise.all([
+                // Existing 3 calls
                 api.clarityScore.getStats().catch(() => ({ success: false, data: null })),
                 api.user.getActivity().catch(() => ({ success: false, data: [] })),
-                api.clarityScore.getHistory().catch(() => ({ success: false, data: [] }))
+                api.clarityScore.getHistory().catch(() => ({ success: false, data: [] })),
+                // Mood & sleep stats
+                moodService.getStats(user.id).catch(() => null),
+                sleepService.getStats(user.id).catch(() => null),
+                // Latest entries (to check "logged today")
+                moodService.getEntries(user.id, 1).catch(() => []),
+                sleepService.getEntries(user.id, 1).catch(() => []),
+                // Date-range entries for chart
+                moodService.getEntriesByDateRange(user.id, sevenDaysAgo, new Date().toISOString()).catch(() => []),
+                sleepService.getEntriesByDateRange(user.id, sevenDaysAgo, new Date().toISOString()).catch(() => []),
+                // Navigator metadata (count + latest date)
+                (async () => {
+                    try {
+                        const res = await supabase
+                            .from('navigator_saved_results')
+                            .select('created_at', { count: 'exact' })
+                            .eq('user_id', user.id)
+                            .order('created_at', { ascending: false })
+                            .limit(1);
+                        return { count: res.count ?? 0, latest: res.data?.[0]?.created_at ?? null };
+                    } catch {
+                        return { count: 0, latest: null };
+                    }
+                })(),
+                // Bookmarks count
+                bookmarkService.getAll(user.id).then(b => b.length).catch(() => 0),
             ]);
 
+            // Existing data
             if (statsRes.success) setStats(statsRes.data);
             if (activityRes.success) setActivity(activityRes.data || []);
             if (historyRes.success && Array.isArray(historyRes.data)) {
-                setHistory(historyRes.data.map((item: any) => ({
-                    date: format(new Date(item.created_at || item.date || new Date()), 'MMM d'),
-                    score: item.score || 0
-                })).reverse().slice(0, 7).reverse()); // Last 7 entries
+                setClarityHistory(
+                    historyRes.data.map((item: { created_at?: string; date?: string; score?: number }) => ({
+                        date: format(new Date(item.created_at || item.date || new Date()), 'MMM d'),
+                        score: item.score || 0,
+                    })).reverse().slice(0, 7).reverse()
+                );
             }
+
+            // Mood data
+            if (moodStatsRes) setMoodStats(moodStatsRes);
+            if (Array.isArray(latestMoodRes) && latestMoodRes.length > 0) {
+                const latest = latestMoodRes[0];
+                if (latest.created_at.startsWith(today)) {
+                    setTodayMood(latest);
+                }
+            }
+            if (Array.isArray(moodRangeRes)) setMoodHistory(moodRangeRes);
+
+            // Sleep data
+            if (sleepStatsRes) setSleepStats(sleepStatsRes);
+            if (Array.isArray(latestSleepRes) && latestSleepRes.length > 0) {
+                const latest = latestSleepRes[0];
+                if (latest.date === today || latest.created_at?.startsWith(today)) {
+                    setTodaySleep(latest);
+                }
+            }
+            if (Array.isArray(sleepRangeRes)) setSleepHistory(sleepRangeRes);
+
+            // Navigator
+            if (navigatorRes) {
+                setNavigatorCount(navigatorRes.count);
+                setNavigatorLastDate(navigatorRes.latest);
+            }
+
+            // Bookmarks
+            setBookmarkCount(bookmarksRes);
         } catch (err) {
-            console.error("Failed to fetch dashboard data", err);
-            setError("Unable to load dashboard data. Please check your connection and try again.");
+            console.error('Failed to fetch dashboard data', err);
+            setError('Unable to load dashboard data. Please check your connection and try again.');
         } finally {
             setIsLoading(false);
         }
-    };
+    }, [user?.id]);
 
     useEffect(() => {
         fetchData();
-    }, []);
+    }, [fetchData]);
+
+    // Handle mood logged from QuickMoodCheckIn
+    const handleMoodLogged = (entry: MoodEntry) => {
+        setTodayMood(entry);
+        // Light refresh of mood stats
+        if (user?.id) {
+            moodService.getStats(user.id).then(s => { if (s) setMoodStats(s); }).catch(() => {});
+        }
+    };
 
     const firstName = user?.display_name?.split(' ')[0] || 'Member';
-    const latestScore = stats?.latestScore || 0;
-    const lastAssessed = stats?.lastAssessed ? format(new Date(stats.lastAssessed), 'MMM d, yyyy') : 'Never';
+
+    // Build chart data
+    const chartData = mergeChartData(clarityHistory, moodHistory, sleepHistory);
+    const availableMetrics: ('clarity' | 'mood' | 'sleep')[] = [];
+    if (clarityHistory.length > 0) availableMetrics.push('clarity');
+    if (moodHistory.length > 0) availableMetrics.push('mood');
+    if (sleepHistory.length > 0) availableMetrics.push('sleep');
 
     return (
         <div className="min-h-screen bg-background pt-24 pb-20 px-6 relative">
@@ -123,8 +273,6 @@ const UserDashboard: React.FC = () => {
             </div>
 
             <SEO title="Dashboard | Psychage" />
-
-
 
             <div className="container mx-auto max-w-7xl relative z-10">
                 <Breadcrumbs className="mb-6 px-2" />
@@ -174,104 +322,53 @@ const UserDashboard: React.FC = () => {
                                     </InteractiveCard>
                                 </motion.div>
 
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    {/* Latest Score */}
-                                    <motion.div
-                                        initial={{ opacity: 0, y: 10 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: 0.1 }}
-                                        className="h-full"
-                                    >
-                                        <InteractiveCard className="p-8 flex flex-col justify-between h-full bg-white/5 border-white/10 backdrop-blur-md">
-                                            <div className="flex items-start justify-between mb-6">
-                                                <div>
-                                                    <h3 className="font-bold text-text-primary flex items-center gap-2 text-lg">
-                                                        <BrainCircuit size={20} className="text-primary" />
-                                                        Latest Clarity Score
-                                                    </h3>
-                                                    <p className="text-xs text-text-secondary mt-1">Last assessed: {lastAssessed}</p>
-                                                </div>
-                                                {stats?.change !== undefined && (
-                                                    <div className={`px-3 py-1 rounded-full text-xs font-bold font-mono border ${stats.change >= 0
-                                                        ? 'bg-emerald-500/10 text-emerald-500 border-emerald-500/20'
-                                                        : 'bg-rose-500/10 text-rose-500 border-rose-500/20'
-                                                        }`}>
-                                                        {stats.change > 0 ? '+' : ''}{stats.change}%
-                                                    </div>
-                                                )}
-                                            </div>
+                                {/* Smart Actions Hub */}
+                                <SmartActionsHub
+                                    todayMood={todayMood}
+                                    todaySleep={todaySleep}
+                                    lastClarityDate={stats?.lastAssessed || null}
+                                    navigatorCount={navigatorCount}
+                                    bookmarkCount={bookmarkCount}
+                                />
 
-                                            <div className="flex items-end gap-3 mb-6">
-                                                <span className="text-6xl font-display font-bold text-text-primary tracking-tighter">{latestScore}</span>
-                                                <span className="text-sm text-text-secondary font-medium mb-3">/ 100</span>
-                                            </div>
-                                            <div className="w-full bg-surface-hover h-3 rounded-full overflow-hidden border border-white/5">
-                                                <div className="bg-gradient-to-r from-primary to-secondary h-full rounded-full transition-all duration-1000 shadow-[0_0_10px_rgba(20,184,166,0.5)]" style={{ width: `${latestScore}%` }} />
-                                            </div>
-                                        </InteractiveCard>
-                                    </motion.div>
+                                {/* Quick Mood Check-In */}
+                                {user?.id && (
+                                    <QuickMoodCheckIn
+                                        userId={user.id}
+                                        todayEntry={todayMood}
+                                        onMoodLogged={handleMoodLogged}
+                                    />
+                                )}
 
-                                    {/* Activity */}
-                                    <motion.div
-                                        initial={{ opacity: 0, y: 10 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: 0.2 }}
-                                        className="h-full"
-                                    >
-                                        <InteractiveCard className="p-8 h-full bg-white/5 border-white/10 backdrop-blur-md">
-                                            <h3 className="font-bold text-text-primary mb-6 flex items-center gap-2 text-lg">
-                                                <TrendingUp size={20} className="text-accent-rose" />
-                                                Recent Activity
-                                            </h3>
+                                {/* Wellness Snapshot Cards */}
+                                <WellnessSnapshotCards
+                                    moodStats={moodStats}
+                                    sleepStats={sleepStats}
+                                    clarityStats={stats}
+                                />
 
-                                            {activity.length > 0 ? (
-                                                <div className="space-y-4">
-                                                    {activity.slice(0, 3).map((item, idx) => (
-                                                        <div key={idx} className="flex items-center gap-4 text-sm group p-3 rounded-2xl hover:bg-white/5 transition-colors cursor-default">
-                                                            <div className="w-10 h-10 rounded-full bg-surface-hover border border-white/10 flex items-center justify-center text-text-secondary shrink-0 group-hover:text-primary group-hover:border-primary/30 transition-colors">
-                                                                {item.type === 'assessment' ? <BrainCircuit size={16} /> : <Calendar size={16} />}
-                                                            </div>
-                                                            <div className="flex-grow">
-                                                                <p className="font-medium text-text-primary group-hover:text-primary transition-colors">{item.title}</p>
-                                                                <p className="text-xs text-text-tertiary">{item.date ? format(new Date(item.date), 'MMM d, h:mm a') : ''}</p>
-                                                            </div>
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            ) : (
-                                                <div className="text-center py-8 text-text-tertiary text-sm flex flex-col items-center justify-center h-40 border border-dashed border-white/10 rounded-2xl bg-black/5">
-                                                    <p>No recent activity.</p>
-                                                    <p className="text-xs mt-1">Time to get started!</p>
-                                                </div>
-                                            )}
-                                            <Button variant="ghost" className="w-full mt-6 text-xs text-text-secondary hover:text-primary">
-                                                View All Activity <ArrowRight size={12} className="ml-1" />
-                                            </Button>
-                                        </InteractiveCard>
-                                    </motion.div>
-                                </div>
-
-                                {/* Analytics Chart */}
+                                {/* Multi-Metric Trends Chart */}
                                 <motion.div
                                     initial={{ opacity: 0, y: 10 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.3 }}
+                                    transition={{ delay: 0.25 }}
                                 >
                                     <InteractiveCard className="p-8 bg-white/5 border-white/10 backdrop-blur-md min-h-[400px]">
-                                        <AnalyticsChart
-                                            data={history.length > 0 ? history : [
-                                                { date: 'Mon', score: 65 },
-                                                { date: 'Tue', score: 68 },
-                                                { date: 'Wed', score: 72 },
-                                                { date: 'Thu', score: 70 },
-                                                { date: 'Fri', score: 75 },
-                                                { date: 'Sat', score: 78 },
-                                                { date: 'Sun', score: 82 },
-                                            ]}
-                                            title="Clarity Score Trends"
+                                        <MultiMetricChart
+                                            data={chartData}
+                                            availableMetrics={availableMetrics}
                                         />
                                     </InteractiveCard>
                                 </motion.div>
+
+                                {/* Navigator + Activity bottom row */}
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <NavigatorAwarenessCard
+                                        totalExplorations={navigatorCount}
+                                        lastExplorationDate={navigatorLastDate}
+                                    />
+                                    <RecentActivityCard activity={activity} />
+                                </div>
                             </>
                         )}
                     </div>

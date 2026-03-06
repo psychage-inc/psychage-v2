@@ -48,13 +48,7 @@ export const DomainSelectionScreen: React.FC = () => {
     };
 
     return (
-        <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-            className="max-w-3xl mx-auto py-8 px-4 sm:px-6"
-        >
+        <div className="max-w-3xl mx-auto py-8 px-4 sm:px-6">
             <div className="mb-10 text-center">
                 <h2 className="text-3xl sm:text-4xl font-serif font-medium text-white mb-4 drop-shadow-sm">
                     What brings you here today?
@@ -101,6 +95,6 @@ export const DomainSelectionScreen: React.FC = () => {
                     Continue
                 </NavigatorButton>
             </div>
-        </motion.div>
+        </div>
     );
 };

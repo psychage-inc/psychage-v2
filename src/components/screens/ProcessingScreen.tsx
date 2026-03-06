@@ -52,11 +52,21 @@ export const ProcessingScreen: React.FC = () => {
 
         // Run the engine synchronously (client-side, ~1-2ms)
         const userInputs = Array.from(selectedSymptoms.values());
-        const engineResults: NavigatorResults = runSymptomNavigator(
-            userInputs,
-            knowledgeBase,
-            detectedRegion ?? undefined
-        );
+
+        let engineResults: NavigatorResults;
+        try {
+            engineResults = runSymptomNavigator(
+                userInputs,
+                knowledgeBase,
+                detectedRegion ?? undefined
+            );
+        } catch (err) {
+            console.error('[Navigator] Engine error:', err);
+            const errorMsg = 'We encountered an issue analyzing your symptoms. Please try again or adjust your selections.';
+            setProcessingError(errorMsg);
+            announceAssertive(errorMsg);
+            return;
+        }
 
         // Reconcile crisis: engine may detect severity-threshold flags
         // not caught during symptom selection (inherent-only check)
@@ -93,10 +103,7 @@ export const ProcessingScreen: React.FC = () => {
     // Error state: show accessible error UI with recovery options (WCAG 4.1.3)
     if (processingError) {
         return (
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
+            <div
                 className="max-w-xl mx-auto py-24 px-4 sm:px-6 flex flex-col items-center justify-center min-h-[50vh] text-center space-y-6"
                 role="alert"
             >
@@ -121,17 +128,12 @@ export const ProcessingScreen: React.FC = () => {
                         Start Over
                     </NavigatorButton>
                 </div>
-            </motion.div>
+            </div>
         );
     }
 
     return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="max-w-xl mx-auto py-24 px-4 sm:px-6 flex flex-col items-center justify-center min-h-[50vh] text-center"
-        >
+        <div className="max-w-xl mx-auto py-24 px-4 sm:px-6 flex flex-col items-center justify-center min-h-[50vh] text-center">
             <div className="relative w-24 h-24 mb-10">
                 <svg className="animate-spin-slow w-full h-full text-white/5" viewBox="0 0 100 100">
                     <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="8" />
@@ -169,6 +171,6 @@ export const ProcessingScreen: React.FC = () => {
             <p className="mt-4 text-sm text-text-secondary">
                 Please wait a moment while we prepare your personalized insights.
             </p>
-        </motion.div>
+        </div>
     );
 };

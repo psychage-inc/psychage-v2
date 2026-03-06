@@ -201,13 +201,7 @@ export const DurationSeverityScreen: React.FC = () => {
     };
 
     return (
-        <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-            className="max-w-3xl mx-auto py-8 px-4 sm:px-6 relative pb-36 sm:pb-40"
-        >
+        <div className="max-w-3xl mx-auto py-8 px-4 sm:px-6 relative pb-36 sm:pb-40">
             <div className="mb-8 relative space-y-6">
                 <div className="absolute -inset-x-8 -inset-y-8 bg-teal-500/10 blur-3xl rounded-full opacity-50 pointer-events-none" />
                 <div className="relative z-10">
@@ -361,6 +355,6 @@ export const DurationSeverityScreen: React.FC = () => {
                 cancelText="Stay Here"
                 variant="default"
             />
-        </motion.div>
+        </div>
     );
 };

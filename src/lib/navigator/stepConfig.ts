@@ -55,7 +55,7 @@ export const STEP_CONFIGS: Record<NavigatorStep, StepConfig> = {
  * Returns the step configuration for a given step ID
  */
 export function getStepConfig(stepId: NavigatorStep): StepConfig {
-    return STEP_CONFIGS[stepId];
+    return STEP_CONFIGS[stepId] ?? STEP_CONFIGS.welcome;
 }
 
 /**

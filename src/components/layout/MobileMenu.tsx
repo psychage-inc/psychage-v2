@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ArrowRight, ChevronRight, LogOut, User, ChevronDown, HeartHandshake } from 'lucide-react';
 import ThemeToggle from '../ui/ThemeToggle';
+import { Logo } from '../ui/Logo';
 import { useAuth } from '../../context/AuthContext';
 import { useNavigate, Link } from 'react-router-dom';
 import { navigationConfig } from '../../config/navigation';
 import { useNavigation } from '../../hooks/useNavigation';
+import { useNavPermissions } from '../../hooks/useNavPermissions';
+import type { NavItem } from '../../types/navigation';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -18,8 +21,21 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onNavigateGene
   const navigate = useNavigate();
   const { getDashboardConfig } = useNavigation();
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
+  const { filterNavItems, filterMegaMenu } = useNavPermissions();
 
   const dashboardConfig = getDashboardConfig();
+
+  // Filter navigation items based on permissions
+  const primaryNavItems = useMemo(() => {
+    return navigationConfig.primary
+      .map(item => filterMegaMenu(item))
+      .filter((item): item is NavItem => item !== null);
+  }, [filterMegaMenu]);
+
+  const authItems = useMemo(() =>
+    filterNavItems(navigationConfig.auth),
+    [filterNavItems]
+  );
 
   const handleNav = (path: string) => {
     onClose();
@@ -60,11 +76,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onNavigateGene
             {/* Header */}
             <div className="p-6 flex items-center justify-between border-b border-gray-100 dark:border-gray-800">
               <div className="flex items-center gap-2">
-                <img
-                  src="/images/logo.png"
-                  alt="Psychage"
-                  className="h-10 w-auto object-contain"
-                />
+                <Logo className="h-10 w-auto text-[#1A1A1A] dark:text-white" />
                 {isAuthenticated && (
                   <div className="ml-2 px-2 py-0.5 bg-gray-100 rounded-md text-xs font-semibold text-gray-600 capitalize">
                     {user?.role}
@@ -98,75 +110,86 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onNavigateGene
               </Link>
 
               {/* Accordion Sections */}
-              {Object.entries(navigationConfig).map(([key, section]) => (
-                <div key={key} className="border-b border-gray-100 dark:border-gray-800 last:border-0 pb-2 mb-2">
-                  <button
-                    onClick={() => toggleSection(key)}
-                    className="w-full flex items-center justify-between py-3 text-lg font-bold text-gray-800 dark:text-gray-200"
-                    aria-expanded={expandedSection === key}
-                    aria-controls={`mobile-section-${key}`}
+              {primaryNavItems.map((navItem) => {
+                // Only render mega menus in accordion, regular links go at the bottom
+                if (navItem.type !== 'mega-menu') return null;
+
+                return (
+                  <div key={navItem.id} className="border-b border-gray-100 dark:border-gray-800 last:border-0 pb-2 mb-2">
+                    <button
+                      onClick={() => toggleSection(navItem.id)}
+                      className="w-full flex items-center justify-between py-3 text-lg font-bold text-gray-800 dark:text-gray-200"
+                      aria-expanded={expandedSection === navItem.id}
+                      aria-controls={`mobile-section-${navItem.id}`}
+                    >
+                      <span>{navItem.label}</span>
+                      <ChevronDown
+                        size={20}
+                        className={`transition-transform duration-200 ${expandedSection === navItem.id ? 'rotate-180 text-teal-600' : 'text-gray-400'}`}
+                        aria-hidden="true"
+                      />
+                    </button>
+                    <AnimatePresence>
+                      {expandedSection === navItem.id && (
+                        <motion.div
+                          id={`mobile-section-${navItem.id}`}
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="pl-4 pb-4 space-y-3">
+                            {navItem.sections.map((subSection, idx) => (
+                              <div key={idx} className="space-y-2">
+                                {subSection.items.map(item => (
+                                  <Link
+                                    key={item.href}
+                                    to={item.href}
+                                    onClick={() => handleNav(item.href)}
+                                    className="block text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-teal-600 dark:hover:text-teal-400 py-1"
+                                  >
+                                    {item.label}
+                                  </Link>
+                                ))}
+                              </div>
+                            ))}
+                            {navItem.quickActions && (
+                              <div className="pt-2 border-t border-gray-100 dark:border-gray-800 space-y-2">
+                                {navItem.quickActions.map(action => (
+                                  <Link
+                                    key={action.href}
+                                    to={action.href}
+                                    onClick={() => handleNav(action.href)}
+                                    className="flex items-center text-sm font-semibold text-teal-600 dark:text-teal-400"
+                                  >
+                                    {action.label} <ChevronRight size={14} />
+                                  </Link>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                );
+              })}
+
+              {/* Regular link items (non-mega-menu) */}
+              {primaryNavItems.map((navItem) => {
+                if (navItem.type !== 'link') return null;
+
+                return (
+                  <Link
+                    key={navItem.id}
+                    to={navItem.href}
+                    onClick={() => handleNav(navItem.href)}
+                    className="py-3 text-lg font-bold text-gray-800 dark:text-gray-200 border-b border-gray-100 dark:border-gray-800 mb-2 block"
                   >
-                    <span className="capitalize">{key}</span>
-                    <ChevronDown
-                      size={20}
-                      className={`transition-transform duration-200 ${expandedSection === key ? 'rotate-180 text-teal-600' : 'text-gray-400'}`}
-                      aria-hidden="true"
-                    />
-                  </button>
-                  <AnimatePresence>
-                    {expandedSection === key && (
-                      <motion.div
-                        id={`mobile-section-${key}`}
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        className="overflow-hidden"
-                      >
-                        <div className="pl-4 pb-4 space-y-3">
-                          {section.sections.map((subSection, idx) => (
-                            <div key={idx} className="space-y-2">
-                              {subSection.items.map(item => (
-                                <Link
-                                  key={item.href}
-                                  to={item.href}
-                                  onClick={() => handleNav(item.href)}
-                                  className="block text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-teal-600 dark:hover:text-teal-400 py-1"
-                                >
-                                  {item.label}
-                                </Link>
-                              ))}
-                            </div>
-                          ))}
-                          {section.quickActions && (
-                            <div className="pt-2 border-t border-gray-100 dark:border-gray-800 space-y-2">
-                              {section.quickActions.map(action => (
-                                <Link
-                                  key={action.href}
-                                  to={action.href}
-                                  onClick={() => handleNav(action.href)}
-                                  className="flex items-center text-sm font-semibold text-teal-600 dark:text-teal-400"
-                                >
-                                  {action.label} <ChevronRight size={14} />
-                                </Link>
-                              ))}
-                            </div>
-                          )}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              ))}
-
-              <Link
-                to="/find-care"
-                onClick={() => handleNav('/find-care')}
-                className="py-3 text-lg font-bold text-gray-800 dark:text-gray-200 border-b border-gray-100 dark:border-gray-800 mb-2 block"
-              >
-                Find Providers
-              </Link>
-
-
+                    {navItem.label}
+                  </Link>
+                );
+              })}
 
             </nav>
 
@@ -189,18 +212,27 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onNavigateGene
                 </>
               ) : (
                 <>
-                  <button
-                    onClick={() => handleNav('/login')}
-                    className="w-full py-3.5 px-4 bg-white border border-gray-200 text-gray-900 rounded-xl font-bold hover:bg-gray-50 transition-all flex justify-center items-center gap-2"
-                  >
-                    <User size={18} /> Sign In
-                  </button>
-                  <button
-                    onClick={() => handleNav('/signup')}
-                    className="w-full py-3.5 px-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl font-bold shadow-lg shadow-gray-900/20 active:scale-[0.98] transition-all flex justify-center items-center gap-2"
-                  >
-                    Get Started <ArrowRight size={18} />
-                  </button>
+                  {/* Auth buttons from filtered config */}
+                  {authItems.map((authItem) => {
+                    if (authItem.type !== 'link') return null;
+                    const isSignup = authItem.id === 'signup';
+
+                    return (
+                      <button
+                        key={authItem.id}
+                        onClick={() => handleNav(authItem.href)}
+                        className={`w-full py-3.5 px-4 rounded-xl font-bold transition-all flex justify-center items-center gap-2 ${
+                          isSignup
+                            ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900 shadow-lg shadow-gray-900/20 active:scale-[0.98]'
+                            : 'bg-white border border-gray-200 text-gray-900 hover:bg-gray-50'
+                        }`}
+                      >
+                        {!isSignup && <User size={18} />}
+                        {authItem.label}
+                        {isSignup && <ArrowRight size={18} />}
+                      </button>
+                    );
+                  })}
                 </>
               )}
             </div>

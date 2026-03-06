@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, Mail, Lock, User, ArrowRight, Github, Chrome, Sparkles, AlertCircle, CheckCircle } from 'lucide-react';
 import Button from '../ui/Button';
 import { useAuth } from '../../context/AuthContext';
+import { Logo } from '../ui/Logo';
 
 interface AuthModalProps {
     isOpen: boolean;
@@ -113,11 +114,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                             <div className="p-8 relative z-10">
                                 <div className="flex items-center justify-between mb-8">
                                     <div className="flex items-center gap-2">
-                                        <img
-                                            src="/images/logo.png"
-                                            alt="Psychage"
-                                            className="h-10 w-auto object-contain"
-                                        />
+                                        <Logo className="h-10 w-auto text-[#1A1A1A] dark:text-white" />
                                         <h2 className="text-2xl font-display font-bold text-gray-900 dark:text-white">
                                             {view === 'login' ? 'Welcome back' : view === 'signup' ? 'Join the Journey' : 'Reset password'}
                                         </h2>

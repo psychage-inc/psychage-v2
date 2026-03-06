@@ -9,7 +9,7 @@ import { NavigatorButton } from '../navigator/NavigatorButton';
 import { SafetyBanner } from '../navigator/SafetyBanner';
 import { ContentLanguageNotice } from '../navigator/ContentLanguageNotice';
 import { Symptom, SymptomCategory as CategoryType } from '../../lib/navigator/types';
-import { ShieldAlert } from 'lucide-react';
+import { ShieldAlert, SearchX } from 'lucide-react';
 import { useDebounce } from '../../hooks/useDebounce';
 
 export const SymptomSelectionScreen: React.FC = () => {
@@ -150,13 +150,7 @@ export const SymptomSelectionScreen: React.FC = () => {
     };
 
     return (
-        <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-            className="max-w-3xl mx-auto py-8 px-4 sm:px-6 relative"
-        >
+        <div className="max-w-3xl mx-auto py-8 px-4 sm:px-6 relative">
             <div className="mb-8">
                 <ContentLanguageNotice />
                 <h2 className="text-3xl sm:text-4xl font-serif font-medium text-white mb-4">
@@ -187,7 +181,7 @@ export const SymptomSelectionScreen: React.FC = () => {
                 {Object.keys(groupedSymptoms).length === 0 ? (
                     <div className="text-center py-16 px-6 bg-white/5 backdrop-blur-sm rounded-2xl border-2 border-dashed border-white/10 space-y-5 max-w-xl mx-auto">
                         <div className="w-16 h-16 mx-auto bg-charcoal-800/50 rounded-full flex items-center justify-center border border-white/5">
-                            <span className="text-3xl" role="img" aria-label="Search">🔍</span>
+                            <SearchX className="w-8 h-8 text-charcoal-400" aria-hidden="true" />
                         </div>
                         <div className="space-y-2">
                             <p className="text-white font-semibold text-lg">
@@ -275,6 +269,6 @@ export const SymptomSelectionScreen: React.FC = () => {
                     </NavigatorButton>
                 </div>
             </div>
-        </motion.div>
+        </div>
     );
 };

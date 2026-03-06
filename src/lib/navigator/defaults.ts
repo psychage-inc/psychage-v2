@@ -6,8 +6,8 @@ import { UserDuration, UserFrequency } from './types';
  */
 export const SYMPTOM_DEFAULTS = {
     severity: 5, // Moderate on 1-10 scale
-    duration: 'weeks' as UserDuration, // Weeks timeframe
-    frequency: 'several_days' as UserFrequency // Several days per week
+    duration: '2_to_4_weeks' as UserDuration, // Weeks timeframe
+    frequency: 'sometimes' as UserFrequency // Moderate frequency
 } as const;
 
 /**

@@ -75,7 +75,7 @@ export class NavigatorErrorBoundary extends Component<Props, State> {
                                         Something went wrong
                                     </h2>
                                     <p className="text-charcoal-200 leading-relaxed">
-                                        An unexpected error occurred in the Symptom Navigator. Your progress is safe, and you have several options to continue.
+                                        An unexpected error occurred in the Symptom Navigator. You can try restarting below.
                                     </p>
                                 </div>
                             </div>

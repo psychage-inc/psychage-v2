@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { useNavigator } from '../../context/NavigatorContext';
 import { NavigatorButton } from '../navigator/NavigatorButton';
 import { DisclaimerCard } from '../navigator/DisclaimerCard';
@@ -20,13 +19,7 @@ export const WelcomeScreen: React.FC = () => {
     const canStart = !isLoading && !error && knowledgeBase !== null;
 
     return (
-        <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5, ease: 'easeOut' }}
-            className="max-w-2xl mx-auto py-12 px-4 sm:px-6 flex flex-col items-center text-center"
-        >
+        <div className="max-w-2xl mx-auto py-12 px-4 sm:px-6 flex flex-col items-center text-center">
             <div className="w-20 h-20 bg-teal-900/30 rounded-2xl flex items-center justify-center mb-8 transform -rotate-3 border border-teal-500/30 shadow-[0_0_30px_rgba(20,184,166,0.15)] backdrop-blur-sm">
                 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-teal-400 drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]">
                     <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
@@ -89,6 +82,6 @@ export const WelcomeScreen: React.FC = () => {
             )}
 
             <DisclaimerCard className="w-full text-left bg-transparent shadow-none" />
-        </motion.div>
+        </div>
     );
 };

@@ -14,10 +14,12 @@ const ROUTE_MAP: Record<number, string> = {
   2: '/tools/mood-journal',
   3: '/tools/sleep-architect',
   4: '#', // Breathwork - Coming soon
-  5: '/find-care',
+  5: '/providers',
   6: '/crisis',
   7: '/tools/symptom-navigator',
-  8: '/tools/mindmate'
+  8: '/tools/mindmate',
+  9: '/tools/thought-reframer',
+  10: '/tools/clarity-journal'
 };
 
 const getToolLink = (toolId: number): string => {
@@ -44,7 +46,7 @@ describe('Route Integrity', () => {
   });
 
   it('all route mappings point to valid paths', () => {
-    const validPrefixes = ['/clarity-score', '/tools/', '/find-care', '/crisis', '#'];
+    const validPrefixes = ['/clarity-score', '/tools/', '/providers', '/crisis', '#'];
 
     Object.values(ROUTE_MAP).forEach(route => {
       const isValid = validPrefixes.some(prefix => route.startsWith(prefix));

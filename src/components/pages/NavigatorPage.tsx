@@ -1,24 +1,51 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { NavigatorProvider, useNavigator } from '../../context/NavigatorContext';
 import { NavigatorFlow } from '../screens/NavigatorFlow';
 import { NavigatorErrorBoundary } from '../navigator/NavigatorErrorBoundary';
 import SEO from '../SEO';
+import type { NavigatorStep } from '../../lib/navigator/stepConfig';
+
+/** Steps that represent stable, user-interactive states (not transient ones). */
+const STABLE_STEPS = new Set<string>(['welcome', 'domains', 'symptoms', 'details', 'results']);
 
 const NavigatorFlowWithErrorBoundary: React.FC = () => {
     const navigate = useNavigate();
-    const { dispatch } = useNavigator();
+    const { state, dispatch, wasRestored, wasCorrupted, announcePolite } = useNavigator();
+    const lastStableStepRef = useRef<NavigatorStep>('welcome');
+    const announcedRef = useRef(false);
+
+    // Track the last stable step the user was on
+    useEffect(() => {
+        if (STABLE_STEPS.has(state.currentStep)) {
+            lastStableStepRef.current = state.currentStep as NavigatorStep;
+        }
+    }, [state.currentStep]);
+
+    // Announce restored/corrupted state once
+    useEffect(() => {
+        if (announcedRef.current) return;
+        if (wasRestored) {
+            announcedRef.current = true;
+            announcePolite('Your previous session has been restored.');
+        } else if (wasCorrupted) {
+            announcedRef.current = true;
+            announcePolite('Your previous session data was invalid and has been cleared.');
+        }
+    }, [wasRestored, wasCorrupted, announcePolite]);
 
     const handleReset = () => {
         dispatch({ type: 'RESET_FLOW' });
     };
 
     const handleGoBack = () => {
-        // Navigate to previous step if possible
-        dispatch({ type: 'SET_STEP', payload: 'welcome' });
+        // Return to the last stable step the user was on, not always welcome
+        const target = lastStableStepRef.current;
+        dispatch({ type: 'SET_STEP', payload: target === 'processing' ? 'details' : target });
     };
 
     const handleExit = () => {
+        dispatch({ type: 'RESET_FLOW' });
         navigate('/');
     };
 

@@ -26,8 +26,6 @@ interface DBProvider {
     full_name: string;
     role?: string;
     profile_photo_url?: string;
-    rating?: number;
-    reviews_count?: number;
     specialties?: string[];
     practice_city?: string;
     practice_state?: string;
@@ -47,9 +45,7 @@ function mapToProvider(data: DBProvider): Provider {
         id: data.id,
         name: data.full_name,
         role: data.role || 'Provider',
-        image: data.profile_photo_url,
-        rating: Number(data.rating || 0),
-        reviews: data.reviews_count || 0,
+        image: data.profile_photo_url || '',
         specialties: data.specialties || [],
         location: `${data.practice_city || ''}, ${data.practice_state || ''}`.replace(/^, |, $/g, ''),
         availability: data.is_accepting_patients ? 'Available' : 'Full',
@@ -60,7 +56,6 @@ function mapToProvider(data: DBProvider): Provider {
         languages: data.languages_spoken || [],
         approach: typeof data.treatment_approaches === 'string' ? data.treatment_approaches : (data.treatment_approaches?.[0] || ''),
         yearsExperience: data.years_of_experience || 0,
-        reviewsList: [],
         isVideoVisit: true,
         status: data.verification_status,
         email: 'provider@example.com'
@@ -126,15 +121,13 @@ export const providerService = {
                 query = query.or(`full_name.ilike.%${params.search}%,bio.ilike.%${params.search}%`);
             }
 
-            // Apply pagination
-            if (params?.limit) {
-                const start = params.page ? (params.page - 1) * params.limit : 0;
-                query = query.range(start, start + params.limit - 1);
-            }
+            // Apply pagination — always bounded
+            const limit = params?.limit || 50;
+            const start = params?.page ? (params.page - 1) * limit : 0;
+            query = query.range(start, start + limit - 1);
 
-            // Order by rating and verification
-            query = query.order('verification_status', { ascending: false })
-                         .order('rating', { ascending: false });
+            // Order by verification status
+            query = query.order('verification_status', { ascending: false });
 
             const { data, error } = await query;
 
@@ -191,7 +184,8 @@ export const providerService = {
             const { data, error } = await supabase
                 .from('providers')
                 .select('practice_state')
-                .not('practice_state', 'is', null);
+                .not('practice_state', 'is', null)
+                .limit(200);
 
             if (error || !data || data.length === 0) {
                 console.warn('No locations from database, using mock data');
@@ -215,7 +209,8 @@ export const providerService = {
         try {
             const { data, error } = await supabase
                 .from('providers')
-                .select('specialties');
+                .select('specialties')
+                .limit(200);
 
             if (error || !data || data.length === 0) {
                 console.warn('No specializations from database, using mock data');
@@ -251,7 +246,8 @@ export const providerService = {
         try {
             const { data, error } = await supabase
                 .from('providers')
-                .select('insurance');
+                .select('insurance')
+                .limit(200);
 
             if (error || !data || data.length === 0) {
                 console.warn('No insurance data from database, using mock data');
@@ -376,47 +372,6 @@ export const providerService = {
     },
 
     /**
-     * Submit a review for a provider
-     */
-    submitReview: async (providerId: number | string, data: { rating: number; comment: string }): Promise<{ success: boolean; error?: string }> => {
-        try {
-            const { data: { user } } = await supabase.auth.getUser();
-            if (!user) {
-                return { success: false, error: 'User not authenticated' };
-            }
-
-            const { error } = await supabase
-                .from('provider_reviews')
-                .insert({
-                    provider_id: providerId,
-                    user_id: user.id,
-                    rating: data.rating,
-                    comment: data.comment,
-                    created_at: new Date().toISOString(),
-                });
-
-            if (error) {
-                console.error('Error submitting review:', error);
-                // Queue locally for later sync if DB unavailable
-                const queueKey = 'psychage_review_queue';
-                const existingQueue = JSON.parse(localStorage.getItem(queueKey) || '[]');
-                existingQueue.push({
-                    providerId,
-                    ...data,
-                    queuedAt: new Date().toISOString()
-                });
-                localStorage.setItem(queueKey, JSON.stringify(existingQueue));
-                return { success: true, error: 'Review saved locally. Will sync when connection is restored.' };
-            }
-
-            return { success: true };
-        } catch (error) {
-            console.error('Failed to submit review:', error);
-            return { success: false, error: 'Failed to submit review. Please try again.' };
-        }
-    },
-
-    /**
      * Get all providers for admin panel (includes pending/suspended)
      */
     getAdminProviders: async (filter?: string): Promise<Provider[]> => {
@@ -424,7 +379,8 @@ export const providerService = {
             let query = supabase
                 .from('providers')
                 .select('*')
-                .order('created_at', { ascending: false });
+                .order('created_at', { ascending: false })
+                .limit(50);
 
             if (filter && filter !== 'all') {
                 query = query.eq('status', filter);

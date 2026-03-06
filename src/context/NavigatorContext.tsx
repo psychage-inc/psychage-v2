@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useReducer, useEffect, ReactNode, useRef } from 'react';
+import React, { createContext, useContext, useReducer, useEffect, ReactNode, useRef, useCallback } from 'react';
 import {
     KnowledgeBase,
     NavigatorResults,
@@ -8,6 +8,8 @@ import {
     UserFrequency
 } from '../lib/navigator/types';
 import { NavigatorAnalytics } from '../lib/navigator/analytics';
+import { mockKnowledgeBase } from '../data/mock_knowledge_base';
+import { saveNavigatorState, loadNavigatorState, clearNavigatorState, hasRawNavigatorState } from '../lib/navigator/storage';
 
 // Define the shape of our state
 export interface NavigatorState {
@@ -47,7 +49,14 @@ type NavigatorAction =
     | { type: 'SET_RESULTS'; payload: NavigatorResults }
     | { type: 'SET_REGION'; payload: string }
     | { type: 'ANNOUNCE'; payload: { message: string; mode: 'polite' | 'assertive' } }
-    | { type: 'RESET_FLOW' };
+    | { type: 'RESET_FLOW' }
+    | { type: 'RESTORE_STATE'; payload: {
+        currentStep: NavigatorState['currentStep'];
+        selectedDomains: string[];
+        selectedSymptoms: Map<string, UserSymptomInput>;
+        crisisAcknowledged: boolean;
+        ageGatePassed: boolean;
+    } };
 
 // Initial State
 const initialState: NavigatorState = {
@@ -142,6 +151,7 @@ function navigatorReducer(state: NavigatorState, action: NavigatorAction): Navig
             };
 
         case 'RESET_FLOW':
+            clearNavigatorState();
             return {
                 ...initialState,
                 knowledgeBase: state.knowledgeBase,
@@ -152,10 +162,23 @@ function navigatorReducer(state: NavigatorState, action: NavigatorAction): Navig
                 detectedRegion: state.detectedRegion,
             };
 
+        case 'RESTORE_STATE':
+            return {
+                ...state,
+                currentStep: action.payload.currentStep,
+                selectedDomains: action.payload.selectedDomains,
+                selectedSymptoms: action.payload.selectedSymptoms,
+                crisisAcknowledged: action.payload.crisisAcknowledged,
+                ageGatePassed: action.payload.ageGatePassed,
+            };
+
         default:
             return state;
     }
 }
+
+// Steps that represent stable, user-interactive states (persisted to storage)
+const PERSISTABLE_STEPS = new Set(['domains', 'symptoms', 'details', 'results']);
 
 // Context creation
 const NavigatorContext = createContext<{
@@ -164,6 +187,8 @@ const NavigatorContext = createContext<{
     announcePolite: (message: string) => void;
     announceAssertive: (message: string) => void;
     prefetchKnowledgeBase: () => void;
+    wasRestored: boolean;
+    wasCorrupted: boolean;
 } | undefined>(undefined);
 
 // Define regions mapping
@@ -180,46 +205,32 @@ const detectRegion = (): string => {
     return 'DEFAULT'; // International fallback
 };
 
-// Prefetch state tracking (module-level to prevent duplicate fetches)
-let prefetchPromise: Promise<KnowledgeBase> | null = null;
+// Cache to avoid re-processing on re-renders
 let prefetchCache: KnowledgeBase | null = null;
 
 async function fetchKnowledgeBaseData(): Promise<KnowledgeBase> {
     if (prefetchCache) return prefetchCache;
-    if (prefetchPromise) return prefetchPromise;
 
-    prefetchPromise = (async () => {
-        try {
-            const mockDataUrl = '/api/navigator/knowledge-base';
-            const res = await fetch(mockDataUrl);
-            if (res.ok) {
-                const data = await res.json();
-                prefetchCache = data;
-                return data;
-            } else {
-                throw new Error('Could not load knowledge base');
-            }
-        } catch (error) {
-            console.warn('Prefetch failed, will try fallback on demand...', error);
-            const module = await import('../data/mock_knowledge_base');
-            prefetchCache = module.mockKnowledgeBase;
-            return prefetchCache;
-        }
-    })();
-
-    return prefetchPromise;
+    // Use bundled knowledge base directly — no fetch needed in client-only Vite app.
+    // The mock KB is comprehensive (106 symptoms, 45 conditions, 448 mappings)
+    // and is bundled by Vite, eliminating network latency and path issues.
+    prefetchCache = mockKnowledgeBase;
+    return prefetchCache;
 }
 
 export const NavigatorProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const [state, dispatch] = useReducer(navigatorReducer, initialState);
     const analyticsRef = useRef<NavigatorAnalytics | null>(null);
+    const saveTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+    const restoredRef = useRef(false);
+    const corruptedRef = useRef(false);
 
     const announcePolite = (message: string) => dispatch({ type: 'ANNOUNCE', payload: { message, mode: 'polite' } });
     const announceAssertive = (message: string) => dispatch({ type: 'ANNOUNCE', payload: { message, mode: 'assertive' } });
 
     // Prefetch function (can be called on hover/focus)
     const prefetchKnowledgeBase = () => {
-        if (!state.knowledgeBase && !prefetchPromise) {
+        if (!state.knowledgeBase && !prefetchCache) {
             fetchKnowledgeBaseData().catch(() => {
                 // Silently fail prefetch - will retry on actual navigation
             });
@@ -236,6 +247,29 @@ export const NavigatorProvider: React.FC<{ children: ReactNode }> = ({ children 
             analyticsRef.current = new NavigatorAnalytics(state.sessionHash, state.sessionHash);
         }
 
+        // Attempt to restore persisted state
+        const hadRawData = hasRawNavigatorState();
+        const persisted = loadNavigatorState();
+        if (persisted) {
+            const restoredStep = persisted.currentStep === 'processing'
+                ? 'details' as NavigatorState['currentStep']
+                : persisted.currentStep as NavigatorState['currentStep'];
+            dispatch({
+                type: 'RESTORE_STATE',
+                payload: {
+                    currentStep: restoredStep,
+                    selectedDomains: persisted.selectedDomains,
+                    selectedSymptoms: new Map(persisted.selectedSymptoms),
+                    crisisAcknowledged: persisted.crisisAcknowledged,
+                    ageGatePassed: persisted.ageGatePassed,
+                },
+            });
+            restoredRef.current = true;
+        } else if (hadRawData) {
+            // Had data but it was invalid/expired — corrupted state was cleared
+            corruptedRef.current = true;
+        }
+
         const loadKnowledgeBase = async () => {
             try {
                 const data = await fetchKnowledgeBaseData();
@@ -249,6 +283,20 @@ export const NavigatorProvider: React.FC<{ children: ReactNode }> = ({ children 
 
         loadKnowledgeBase();
     }, [state.sessionHash]);
+
+    // Debounced save to localStorage on state changes
+    useEffect(() => {
+        if (!PERSISTABLE_STEPS.has(state.currentStep)) return;
+
+        if (saveTimeoutRef.current) clearTimeout(saveTimeoutRef.current);
+        saveTimeoutRef.current = setTimeout(() => {
+            saveNavigatorState(state);
+        }, 500);
+
+        return () => {
+            if (saveTimeoutRef.current) clearTimeout(saveTimeoutRef.current);
+        };
+    }, [state.currentStep, state.selectedDomains, state.selectedSymptoms, state.crisisAcknowledged, state.ageGatePassed]);
 
     // Track step transitions
     useEffect(() => {
@@ -279,7 +327,11 @@ export const NavigatorProvider: React.FC<{ children: ReactNode }> = ({ children 
     }, [state.currentStep, state.results, state.selectedSymptoms.size]);
 
     return (
-        <NavigatorContext.Provider value={{ state, dispatch, announcePolite, announceAssertive, prefetchKnowledgeBase }}>
+        <NavigatorContext.Provider value={{
+            state, dispatch, announcePolite, announceAssertive, prefetchKnowledgeBase,
+            wasRestored: restoredRef.current,
+            wasCorrupted: corruptedRef.current,
+        }}>
             {children}
         </NavigatorContext.Provider>
     );

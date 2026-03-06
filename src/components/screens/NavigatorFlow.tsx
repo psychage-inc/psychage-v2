@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { AnimatePresence } from 'framer-motion';
+import React, { useEffect, useState, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigator } from '../../context/NavigatorContext';
 
 import { WelcomeScreen } from './WelcomeScreen';
@@ -15,13 +15,24 @@ import { LiveRegion } from '../a11y/LiveRegion';
 import MeshGradient from '../ui/MeshGradient';
 import type { NavigatorStep } from '../../lib/navigator/stepConfig';
 import { getStepConfig } from '../../lib/navigator/stepConfig';
+import { navigatorSlide, navigatorFade } from '../../lib/animations';
+import { useReducedMotion } from '../../hooks/useReducedMotion';
+
+const STEP_ORDER: NavigatorStep[] = ['welcome', 'domains', 'symptoms', 'details', 'processing', 'results'];
 
 export const NavigatorFlow: React.FC = () => {
     const { state, dispatch, announcePolite } = useNavigator();
+    const prefersReducedMotion = useReducedMotion();
 
     const [politeMsg, setPoliteMsg] = useState('');
     const [assertiveMsg, setAssertiveMsg] = useState('');
     const [completedSteps, setCompletedSteps] = useState<Set<NavigatorStep>>(new Set());
+
+    // Direction tracking for step transitions
+    const previousStepRef = useRef<NavigatorStep>(state.currentStep as NavigatorStep);
+    const directionRef = useRef<1 | -1>(1);
+    const containerRef = useRef<HTMLDivElement>(null);
+    const variants = prefersReducedMotion ? navigatorFade : navigatorSlide;
 
     // Handle announcements from context
     useEffect(() => {
@@ -36,25 +47,40 @@ export const NavigatorFlow: React.FC = () => {
         }
     }, [state.liveAnnouncement]);
 
-    // Announce step transitions and track completed steps
+    // Announce step transitions, track completed steps, compute direction, manage focus
     useEffect(() => {
-        const stepConfig = getStepConfig(state.currentStep as NavigatorStep);
+        const currentStep = state.currentStep as NavigatorStep;
+        const stepConfig = getStepConfig(currentStep);
         announcePolite(stepConfig.label);
 
-        // Mark previous steps as completed when advancing
-        const stepOrder: NavigatorStep[] = ['welcome', 'domains', 'symptoms', 'details', 'processing', 'results'];
-        const currentIndex = stepOrder.indexOf(state.currentStep as NavigatorStep);
+        // Compute direction (forward = 1, backward = -1)
+        const prevIndex = STEP_ORDER.indexOf(previousStepRef.current);
+        const currIndex = STEP_ORDER.indexOf(currentStep);
+        if (currIndex !== prevIndex) {
+            directionRef.current = currIndex > prevIndex ? 1 : -1;
+        }
+        previousStepRef.current = currentStep;
 
-        if (currentIndex > 0) {
+        // Mark previous steps as completed when advancing
+        if (currIndex > 0) {
             const newCompleted = new Set(completedSteps);
-            for (let i = 0; i < currentIndex; i++) {
-                newCompleted.add(stepOrder[i]);
+            for (let i = 0; i < currIndex; i++) {
+                newCompleted.add(STEP_ORDER[i]);
             }
             setCompletedSteps(newCompleted);
         }
 
         // Push state to history on step change
         window.history.pushState({ navigatorStep: state.currentStep }, '');
+
+        // Focus management: move focus to new screen heading after transition
+        requestAnimationFrame(() => {
+            const heading = containerRef.current?.querySelector('h1, h2');
+            if (heading instanceof HTMLElement) {
+                heading.setAttribute('tabindex', '-1');
+                heading.focus({ preventScroll: true });
+            }
+        });
     }, [state.currentStep, announcePolite]);
 
     // Handle browser back/forward navigation
@@ -66,11 +92,10 @@ export const NavigatorFlow: React.FC = () => {
                                state.selectedDomains.length > 0;
 
             if (hasProgress && state.currentStep !== 'welcome') {
-                const stepOrder: NavigatorStep[] = ['welcome', 'domains', 'symptoms', 'details', 'processing', 'results'];
-                const currentIndex = stepOrder.indexOf(state.currentStep as NavigatorStep);
+                const currentIndex = STEP_ORDER.indexOf(state.currentStep as NavigatorStep);
 
                 if (currentIndex > 0) {
-                    const previousStep = stepOrder[currentIndex - 1];
+                    const previousStep = STEP_ORDER[currentIndex - 1];
                     dispatch({ type: 'SET_STEP', payload: previousStep });
                 }
             }
@@ -99,7 +124,7 @@ export const NavigatorFlow: React.FC = () => {
                 <MeshGradient className="opacity-40" />
             </div>
 
-            <div className="relative z-10 w-full h-full">
+            <div ref={containerRef} className="relative z-10 w-full h-full">
                 {/* Enhanced Progress Bar with clickable navigation */}
                 {state.currentStep !== 'welcome' && (
                     <EnhancedProgressBar
@@ -109,13 +134,22 @@ export const NavigatorFlow: React.FC = () => {
                     />
                 )}
 
-                <AnimatePresence mode="wait">
-                    {state.currentStep === 'welcome' && <WelcomeScreen key="welcome" />}
-                    {state.currentStep === 'domains' && <DomainSelectionScreen key="domains" />}
-                    {state.currentStep === 'symptoms' && <SymptomSelectionScreen key="symptoms" />}
-                    {state.currentStep === 'details' && <DurationSeverityScreen key="details" />}
-                    {state.currentStep === 'processing' && <ProcessingScreen key="processing" />}
-                    {state.currentStep === 'results' && <ResultsScreen key="results" />}
+                <AnimatePresence mode="wait" custom={directionRef.current}>
+                    <motion.div
+                        key={state.currentStep}
+                        custom={directionRef.current}
+                        variants={variants}
+                        initial="enter"
+                        animate="center"
+                        exit="exit"
+                    >
+                        {state.currentStep === 'welcome' && <WelcomeScreen />}
+                        {state.currentStep === 'domains' && <DomainSelectionScreen />}
+                        {state.currentStep === 'symptoms' && <SymptomSelectionScreen />}
+                        {state.currentStep === 'details' && <DurationSeverityScreen />}
+                        {state.currentStep === 'processing' && <ProcessingScreen />}
+                        {state.currentStep === 'results' && <ResultsScreen />}
+                    </motion.div>
                 </AnimatePresence>
 
                 <CrisisOverlay />

@@ -1,17 +1,24 @@
 import React from 'react';
-import { ArrowRight, ChevronRight, ExternalLink, Zap, Brain, Leaf, Briefcase, Heart, BarChart3, Edit, Moon } from 'lucide-react';
+import {
+  ArrowRight, ChevronRight, ExternalLink, Zap,
+  Brain, Leaf, Briefcase, Heart, BarChart3, Edit, Moon,
+  // Learn category icons (semantic system)
+  Library, Cloud, ShieldCheck, Stethoscope, HeartPulse,
+  Star, Target, Users, Home, UserPlus, Smartphone, Globe
+} from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { navigationConfig } from '../../config/navigation';
+import type { NavItem } from '../../types/navigation';
 
 interface NavMenuProps {
-  activeTab: string | null;
+  activeMenuItem: NavItem | null;
   onMouseLeave: () => void;
   onCategorySelect?: (category: string) => void;
   onNavigateGeneric?: (view: string) => void;
 }
 
 const iconMap: Record<string, React.ElementType> = {
+  // Tools menu icons (existing)
   brain: Brain,
   leaf: Leaf,
   briefcase: Briefcase,
@@ -19,69 +26,58 @@ const iconMap: Record<string, React.ElementType> = {
   chart: BarChart3,
   edit: Edit,
   moon: Moon,
+
+  // Learn category icons (semantic system)
+  'library': Library,              // Browse All
+  'cloud': Cloud,                  // Depression & Grief
+  'shield-check': ShieldCheck,     // Trauma & Healing
+  'stethoscope': Stethoscope,      // Mental Health Conditions
+  'heart-pulse': HeartPulse,       // Emotional Regulation
+  'star': Star,                    // Self-Worth
+  'target': Target,                // Habits & Motivation
+  'users': Users,                  // Relationships
+  'home': Home,                    // Family & Parenting
+  'user-plus': UserPlus,           // Loneliness & Connection
+  'smartphone': Smartphone,        // Digital Life
+  'globe': Globe,                  // Cultural Perspectives
+
   default: Zap
 };
 
-const NavMenu: React.FC<NavMenuProps> = ({ activeTab, onMouseLeave, onNavigateGeneric }) => {
-  if (!activeTab) return null;
+const NavMenu: React.FC<NavMenuProps> = ({ activeMenuItem, onMouseLeave, onNavigateGeneric }) => {
+  if (!activeMenuItem || activeMenuItem.type !== 'mega-menu') return null;
 
-  const sectionKey = activeTab.toLowerCase();
-  const currentSection = navigationConfig[sectionKey as keyof typeof navigationConfig];
-
-  if (!currentSection) return null;
-
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.05
-      }
-    }
-  };
-
-  const itemAnim = {
-    hidden: { opacity: 0, y: 10 },
-    show: { opacity: 1, y: 0 }
-  };
+  const menu = activeMenuItem;
 
   return (
-    <div className="w-full" onMouseLeave={onMouseLeave}>
+    <div className="w-full" onMouseLeave={onMouseLeave} role="menu">
       <div className="flex flex-col md:flex-row gap-8">
         {/* LEFT PANEL: MAIN GRID */}
         <div className="flex-grow">
           <div className="flex items-center justify-between mb-6">
             <span className="text-[11px] font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-teal-500 animate-pulse" />
-              {activeTab} Module
+              {menu.label} Module
             </span>
           </div>
 
-          <motion.div
-            variants={container}
-            initial="hidden"
-            animate="show"
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
-          >
-            {currentSection.sections?.map((section, idx) => (
-              <motion.div
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {menu.sections?.map((section, idx) => (
+              <div
                 key={idx}
                 className="space-y-4"
-                variants={{
-                  hidden: { opacity: 0 },
-                  show: { opacity: 1, transition: { staggerChildren: 0.05 } }
-                }}
               >
                 <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider">{section.title}</h3>
                 <div className="grid gap-4">
                   {section.items.map((item) => {
                     const Icon = iconMap[item.icon] || iconMap.default;
                     return (
-                      <motion.div key={item.id} variants={itemAnim}>
+                      <div key={item.id}>
                         <Link
                           to={item.href}
                           onClick={() => onNavigateGeneric?.(item.href)}
                           className="group relative flex items-start gap-4 p-3 rounded-2xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-200"
+                          role="menuitem"
                         >
                           <div className="w-10 h-10 shrink-0 rounded-xl bg-white dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700 p-2 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center text-teal-600">
                             <Icon size={20} />
@@ -93,13 +89,13 @@ const NavMenu: React.FC<NavMenuProps> = ({ activeTab, onMouseLeave, onNavigateGe
                             <p className="text-xs text-gray-500 mt-0.5">{item.description}</p>
                           </div>
                         </Link>
-                      </motion.div>
+                      </div>
                     )
                   })}
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
 
         {/* RIGHT PANEL: SIDEBAR & UTILITIES */}
@@ -113,12 +109,13 @@ const NavMenu: React.FC<NavMenuProps> = ({ activeTab, onMouseLeave, onNavigateGe
               Quick Actions
             </h4>
             <ul className="space-y-1">
-              {currentSection.quickActions?.map((action, idx) => (
+              {menu.quickActions?.map((action, idx) => (
                 <li key={idx}>
                   <Link
                     to={action.href}
                     onClick={() => onNavigateGeneric?.(action.href)}
                     className="flex items-center justify-between py-2 px-3 -mx-3 rounded-lg text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-teal-700 dark:hover:text-teal-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all group"
+                    role="menuitem"
                   >
                     <span>{action.label}</span>
                     <ChevronRight size={14} className="text-gray-400 group-hover:text-teal-500" />

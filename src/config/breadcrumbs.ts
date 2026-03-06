@@ -31,6 +31,55 @@ export const breadcrumbConfig: Record<string, BreadcrumbItem[]> = {
         { label: 'Tools', href: '/tools' },
         { label: 'Mood Journal' }
     ],
+    '/tools/clarity-journal': [
+        { label: 'Tools', href: '/tools' },
+        { label: 'Clarity Journal' }
+    ],
+    '/tools/clarity-journal/daily': [
+        { label: 'Tools', href: '/tools' },
+        { label: 'Clarity Journal', href: '/tools/clarity-journal' },
+        { label: 'Daily Check-In' }
+    ],
+    '/tools/clarity-journal/screening': [
+        { label: 'Tools', href: '/tools' },
+        { label: 'Clarity Journal', href: '/tools/clarity-journal' },
+        { label: 'Weekly Screening' }
+    ],
+    '/tools/clarity-journal/thought-record': [
+        { label: 'Tools', href: '/tools' },
+        { label: 'Clarity Journal', href: '/tools/clarity-journal' },
+        { label: 'Thought Record' }
+    ],
+    '/tools/clarity-journal/activation': [
+        { label: 'Tools', href: '/tools' },
+        { label: 'Clarity Journal', href: '/tools/clarity-journal' },
+        { label: 'Behavioral Activation' }
+    ],
+    '/tools/clarity-journal/triggers': [
+        { label: 'Tools', href: '/tools' },
+        { label: 'Clarity Journal', href: '/tools/clarity-journal' },
+        { label: 'Trigger Log' }
+    ],
+    '/tools/clarity-journal/toolbox': [
+        { label: 'Tools', href: '/tools' },
+        { label: 'Clarity Journal', href: '/tools/clarity-journal' },
+        { label: 'Wellness Toolbox' }
+    ],
+    '/tools/clarity-journal/reflection': [
+        { label: 'Tools', href: '/tools' },
+        { label: 'Clarity Journal', href: '/tools/clarity-journal' },
+        { label: 'Weekly Reflection' }
+    ],
+    '/tools/clarity-journal/history': [
+        { label: 'Tools', href: '/tools' },
+        { label: 'Clarity Journal', href: '/tools/clarity-journal' },
+        { label: 'History' }
+    ],
+    '/tools/clarity-journal/insights': [
+        { label: 'Tools', href: '/tools' },
+        { label: 'Clarity Journal', href: '/tools/clarity-journal' },
+        { label: 'Insights' }
+    ],
 
     // Dashboard sections
     '/dashboard': [{ label: 'Dashboard' }],

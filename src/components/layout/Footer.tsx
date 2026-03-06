@@ -12,6 +12,7 @@ import {
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import CrisisBanner from './CrisisBanner';
+import { Logo } from '../ui/Logo';
 
 // interface FooterProps { }
 
@@ -43,7 +44,7 @@ const Footer: React.FC = () => {
     if (view === 'home') return '/';
     if (view === 'category' && id) return `/category/${id}`;
     if (view === 'clarity-score') return '/clarity-score';
-    if (view === 'find-care') return '/find-care';
+    if (view === 'find-care' || view === 'providers') return '/providers';
     if (view === 'about') return '/about';
     if (view === 'contact') return '/contact';
     if (view === 'privacy') return '/legal/privacy';
@@ -61,7 +62,7 @@ const Footer: React.FC = () => {
     ],
     popular: [
       { name: 'Clarity Score™', view: 'clarity-score' },
-      { name: 'Find a Provider', view: 'find-care' },
+      { name: 'Find a Provider', view: 'providers' },
       { name: 'Articles', view: 'learn' },
       { name: 'Tools', view: 'tools' },
     ],
@@ -71,7 +72,8 @@ const Footer: React.FC = () => {
     ],
     connect: [
       { name: 'Contact Support', view: 'contact' },
-      { name: 'Crisis Resources', view: 'contact' },
+      { name: 'Crisis Resources', view: 'crisis' },
+      { name: 'For Providers', view: 'for-providers' },
     ]
   };
 
@@ -100,11 +102,7 @@ const Footer: React.FC = () => {
             viewport={{ once: true }}
             className="max-w-4xl"
           >
-            <img
-              src="/images/logo.png"
-              alt="Psychage"
-              className="h-20 w-auto mb-8 object-contain"
-            />
+            <Logo className="h-20 w-auto mb-8 text-[#1A1A1A] dark:text-white" />
             <h2 className="font-display font-bold text-5xl md:text-8xl tracking-tight leading-[0.9] mb-8 text-gray-900">
               Mental health <br />
               <span className="text-gray-500">is just health.</span>

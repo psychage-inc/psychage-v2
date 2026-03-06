@@ -5,17 +5,10 @@ import Button from '../ui/Button';
 import Breadcrumbs from '../ui/Breadcrumbs';
 import { useNavigate } from 'react-router-dom';
 
-interface BedtimeResult {
-    time: string;
-    cycles: number;
-    label: string;
-    hours: number;
-}
-
 const SleepArchitect: React.FC = () => {
     const navigate = useNavigate();
     const [wakeTime, setWakeTime] = useState('07:00');
-    const [calculatedBedtimes, setCalculatedBedtimes] = useState<BedtimeResult[]>([]);
+    const [calculatedBedtimes, setCalculatedBedtimes] = useState<string[]>([]);
     const [hygieneScore, setHygieneScore] = useState(0);
     const [checkedHabits, setCheckedHabits] = useState<string[]>([]);
 
@@ -27,20 +20,16 @@ const SleepArchitect: React.FC = () => {
         // Calculate 4, 5, and 6 sleep cycles (90 mins each) backwards
         // + 15 mins to fall asleep
         const cycles = [6, 5, 4];
-        const times: BedtimeResult[] = cycles.map(cycle => {
-            const totalMinutes = (cycle * 90) + 15; // Total sleep time + fall asleep time
-            const bedtime = new Date(wakeDate.getTime() - (totalMinutes * 60 * 1000));
-            const sleepHours = (cycle * 90) / 60; // Convert minutes to hours
-
+        const times = cycles.map(cycle => {
+            const bedtime = new Date(wakeDate.getTime() - (cycle * 90 * 60 * 1000) - (15 * 60 * 1000));
             return {
                 time: bedtime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
                 cycles: cycle,
-                label: cycle === 5 ? 'Recommended' : cycle === 6 ? 'Optimal' : 'Minimum',
-                hours: sleepHours
+                label: cycle === 5 ? 'Recommended' : cycle === 6 ? 'Optimal' : 'Minimum'
             };
         });
 
-        setCalculatedBedtimes(times);
+        setCalculatedBedtimes(times.map(t => t.time));
     };
 
     const habits = [
@@ -113,31 +102,16 @@ const SleepArchitect: React.FC = () => {
                                 >
                                     <h3 className="font-bold text-gray-900">You should fall asleep at:</h3>
                                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                        {calculatedBedtimes.map((bedtime, i) => {
-                                            const isRecommended = bedtime.label === 'Recommended';
-                                            return (
-                                                <div
-                                                    key={i}
-                                                    className={`p-4 rounded-2xl text-center border-2 ${
-                                                        isRecommended
-                                                            ? 'border-indigo-500 bg-indigo-50'
-                                                            : 'border-gray-100 bg-white'
-                                                    }`}
-                                                >
-                                                    <div className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">
-                                                        {bedtime.hours} Hours ({bedtime.label})
-                                                    </div>
-                                                    <div className={`text-xl font-bold ${
-                                                        isRecommended ? 'text-indigo-600' : 'text-gray-900'
-                                                    }`}>
-                                                        {bedtime.time}
-                                                    </div>
-                                                    <div className="text-xs text-gray-500 mt-1">
-                                                        {bedtime.cycles} cycles
-                                                    </div>
+                                        {calculatedBedtimes.map((time, i) => (
+                                            <div key={i} className={`p-4 rounded-2xl text-center border-2 ${i === 1 ? 'border-indigo-500 bg-indigo-50' : 'border-gray-100 bg-white'}`}>
+                                                <div className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">
+                                                    {i === 0 ? '9 Hours' : i === 1 ? '7.5 Hours' : '6 Hours'}
                                                 </div>
-                                            );
-                                        })}
+                                                <div className={`text-xl font-bold ${i === 1 ? 'text-indigo-600' : 'text-gray-900'}`}>
+                                                    {time}
+                                                </div>
+                                            </div>
+                                        ))}
                                     </div>
                                     <p className="text-xs text-center text-gray-400 mt-4">
                                         *Includes 15 minutes to fall asleep

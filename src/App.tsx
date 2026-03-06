@@ -16,6 +16,7 @@ import MindMate from './components/ai/MindMate';
 import NotFoundPage from './components/pages/NotFoundPage';
 import { GlobalLoading } from './components/ui/Skeletons';
 import { BookmarkProvider } from './context/BookmarkContext';
+import { ProviderLookupsProvider } from './context/ProviderLookupsContext';
 import SEO from './components/SEO';
 import SkipLink from './components/ui/SkipLink';
 import ProtectedRoute from './components/auth/ProtectedRoute';
@@ -30,8 +31,13 @@ const LearnPage = React.lazy(() => import('./pages/LearnPage'));
 const ArticleCategoryPage = React.lazy(() => import('./pages/ArticleCategoryPage'));
 const ArticleDetail = React.lazy(() => import('./components/pages/ArticleDetail'));
 const VideoDetail = React.lazy(() => import('./components/pages/VideoDetail'));
-const ProviderDirectory = React.lazy(() => import('./components/pages/ProviderDirectory'));
-const ProviderProfile = React.lazy(() => import('./components/pages/ProviderProfile'));
+// Provider Directory V2
+const ProvidersLandingPage = React.lazy(() => import('./pages/providers/ProvidersLandingPage'));
+const ProviderSearchPage = React.lazy(() => import('./pages/providers/ProviderSearchPage'));
+const ProviderProfilePage = React.lazy(() => import('./pages/providers/ProviderProfilePage'));
+const ForProvidersLandingPage = React.lazy(() => import('./pages/providers/ForProvidersLandingPage'));
+const ProviderApplyPage = React.lazy(() => import('./pages/providers/ProviderApplyPage'));
+const ProviderClaimPage = React.lazy(() => import('./pages/providers/ProviderClaimPage'));
 const ToolsPage = React.lazy(() => import('./components/pages/ToolsPage'));
 const MoodJournal = React.lazy(() => import('./components/tools/MoodJournal'));
 const SleepArchitect = React.lazy(() => import('./components/tools/SleepArchitect'));
@@ -42,8 +48,19 @@ const ClarityScoreTool = React.lazy(() => import('./components/pages/ClarityScor
 const AboutPage = React.lazy(() => import('./components/pages/AboutPage'));
 const ContactPage = React.lazy(() => import('./components/pages/ContactPage'));
 const LegalPage = React.lazy(() => import('./components/pages/LegalPages'));
-const CrisisPage = React.lazy(() => import('./components/pages/CrisisPage'));
+const CrisisPage = React.lazy(() => import('./components/pages/PsychageCrisisV2'));
 const NavigatorPage = React.lazy(() => import('./components/pages/NavigatorPage'));
+const ThoughtReframer = React.lazy(() => import('./components/tools/ThoughtReframer'));
+const ClarityJournal = React.lazy(() => import('./components/tools/ClarityJournal'));
+const ClarityJournalDailyCheckIn = React.lazy(() => import('./components/tools/ClarityJournal/sections/DailyCheckIn'));
+const ClarityJournalWeeklyScreening = React.lazy(() => import('./components/tools/ClarityJournal/sections/WeeklyScreening'));
+const ClarityJournalThoughtRecord = React.lazy(() => import('./components/tools/ClarityJournal/sections/ThoughtRecord'));
+const ClarityJournalBehavioralActivation = React.lazy(() => import('./components/tools/ClarityJournal/sections/BehavioralActivation'));
+const ClarityJournalTriggerLog = React.lazy(() => import('./components/tools/ClarityJournal/sections/TriggerLog'));
+const ClarityJournalWellnessToolbox = React.lazy(() => import('./components/tools/ClarityJournal/sections/WellnessToolbox'));
+const ClarityJournalWeeklyReflection = React.lazy(() => import('./components/tools/ClarityJournal/sections/WeeklyReflection'));
+const ClarityJournalHistory = React.lazy(() => import('./components/tools/ClarityJournal/sections/JournalHistory'));
+const ClarityJournalInsights = React.lazy(() => import('./components/tools/ClarityJournal/sections/JournalInsights'));
 const CrisisResourcesScreen = React.lazy(() => import('./components/screens/CrisisResourcesScreen'));
 
 // Auth Pages
@@ -71,8 +88,7 @@ const ProviderProfileEditor = React.lazy(() => import('./pages/provider/Provider
 const ProviderAnalytics = React.lazy(() => import('./pages/provider/ProviderAnalytics'));
 const ProviderPatients = React.lazy(() => import('./pages/provider/ProviderPatients'));
 
-// Provider Registration
-const ProviderRegistrationPage = React.lazy(() => import('./pages/connect/ProviderRegistrationPage'));
+// Provider Registration (legacy — kept for admin reference only)
 
 // --- MAIN APP COMPONENT ---
 
@@ -83,6 +99,7 @@ const App: React.FC = () => {
     return (
         <MotionConfig reducedMotion="user">
             <BookmarkProvider>
+              <ProviderLookupsProvider>
                 <SkipLink />
                 {isLoading && <Preloader onComplete={() => setIsLoading(false)} />}
 
@@ -156,14 +173,34 @@ const App: React.FC = () => {
                                         <Route path="/learn/:categorySlug" element={<PageTransition><ArticleCategoryPage /></PageTransition>} />
                                         <Route path="/learn/article/:id" element={<PageTransition><ArticleDetail /></PageTransition>} />
                                         <Route path="/watch/:id" element={<PageTransition><VideoDetail /></PageTransition>} />
-                                        <Route path="/find-care" element={<PageTransition><ProviderDirectory /></PageTransition>} />
-                                        <Route path="/find-care/provider/:id" element={<PageTransition><ProviderProfile /></PageTransition>} />
+                                        {/* Provider Directory V2 */}
+                                        <Route path="/providers" element={<PageTransition><ProvidersLandingPage /></PageTransition>} />
+                                        <Route path="/providers/search" element={<PageTransition><ProviderSearchPage /></PageTransition>} />
+                                        <Route path="/providers/:id" element={<PageTransition><ProviderProfilePage /></PageTransition>} />
+                                        <Route path="/for-providers" element={<PageTransition><ForProvidersLandingPage /></PageTransition>} />
+                                        <Route path="/for-providers/apply" element={<PageTransition><ProviderApplyPage /></PageTransition>} />
+                                        <Route path="/for-providers/claim" element={<PageTransition><ProviderClaimPage /></PageTransition>} />
+
+                                        {/* Legacy provider redirects */}
+                                        <Route path="/find-care" element={<Navigate to="/providers" replace />} />
+                                        <Route path="/find-care/provider/:id" element={<Navigate to="/providers" replace />} />
                                         <Route path="/tools" element={<PageTransition><ToolsPage /></PageTransition>} />
                                         <Route path="/tools/mood-journal" element={<PageTransition><MoodJournal /></PageTransition>} />
                                         <Route path="/tools/sleep-architect" element={<PageTransition><SleepArchitect /></PageTransition>} />
                                         <Route path="/tools/mindmate" element={<PageTransition><PsychageAIPage /></PageTransition>} />
                                         <Route path="/tools/symptom-navigator" element={<PageTransition><NavigatorPage /></PageTransition>} />
                                         <Route path="/tools/symptom-navigator/crisis" element={<PageTransition><CrisisResourcesScreen /></PageTransition>} />
+                                        <Route path="/tools/thought-reframer" element={<PageTransition><ThoughtReframer /></PageTransition>} />
+                                        <Route path="/tools/clarity-journal" element={<PageTransition><ClarityJournal /></PageTransition>} />
+                                        <Route path="/tools/clarity-journal/daily" element={<PageTransition><ClarityJournalDailyCheckIn /></PageTransition>} />
+                                        <Route path="/tools/clarity-journal/screening" element={<PageTransition><ClarityJournalWeeklyScreening /></PageTransition>} />
+                                        <Route path="/tools/clarity-journal/thought-record" element={<PageTransition><ClarityJournalThoughtRecord /></PageTransition>} />
+                                        <Route path="/tools/clarity-journal/activation" element={<PageTransition><ClarityJournalBehavioralActivation /></PageTransition>} />
+                                        <Route path="/tools/clarity-journal/triggers" element={<PageTransition><ClarityJournalTriggerLog /></PageTransition>} />
+                                        <Route path="/tools/clarity-journal/toolbox" element={<PageTransition><ClarityJournalWellnessToolbox /></PageTransition>} />
+                                        <Route path="/tools/clarity-journal/reflection" element={<PageTransition><ClarityJournalWeeklyReflection /></PageTransition>} />
+                                        <Route path="/tools/clarity-journal/history" element={<PageTransition><ClarityJournalHistory /></PageTransition>} />
+                                        <Route path="/tools/clarity-journal/insights" element={<PageTransition><ClarityJournalInsights /></PageTransition>} />
                                         <Route path="/category/:category" element={<PageTransition><CategoryPage /></PageTransition>} />
                                         <Route path="/search" element={<PageTransition><SearchResults /></PageTransition>} />
                                         <Route path="/clarity-score" element={<PageTransition><ClarityScoreTool /></PageTransition>} />
@@ -174,7 +211,7 @@ const App: React.FC = () => {
                                         <Route path="/crisis" element={<PageTransition><CrisisPage /></PageTransition>} />
                                         <Route path="/navigator" element={<PageTransition><NavigatorPage /></PageTransition>} />
                                         <Route path="/navigator/crisis" element={<PageTransition><CrisisResourcesScreen /></PageTransition>} />
-                                        <Route path="/providers/register" element={<PageTransition><ProviderRegistrationPage /></PageTransition>} />
+                                        <Route path="/providers/register" element={<Navigate to="/for-providers/apply" replace />} />
 
                                         {/* Auth Routes */}
                                         <Route path="/login" element={<PageTransition><LoginPage /></PageTransition>} />
@@ -290,6 +327,7 @@ const App: React.FC = () => {
                         <MindMate />
                     </div>
                 )}
+              </ProviderLookupsProvider>
             </BookmarkProvider>
         </MotionConfig>
     );

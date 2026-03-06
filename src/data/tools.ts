@@ -80,5 +80,23 @@ export const tools: Tool[] = [
     category: "AI Support",
     color: "teal",
     features: ["24/7 availability", "Evidence-based", "Conversational AI"]
+  },
+  {
+    id: 9,
+    name: "Thought Reframer",
+    description: "Challenge negative thought patterns with a guided CBT-based exercise trusted by therapists worldwide.",
+    iconName: "Lightbulb",
+    category: "Self-Care",
+    color: "amber",
+    features: ["CBT-based", "7-step exercise", "Thought history"]
+  },
+  {
+    id: 10,
+    name: "Clarity Journal",
+    description: "A structured, evidence-based journal with mood tracking, screening tools, behavioral activation, and more. All data stays on your device.",
+    iconName: "NotebookPen",
+    category: "Self-Care",
+    color: "teal",
+    features: ["Privacy-first", "7 journal sections", "Trend insights"]
   }
 ];

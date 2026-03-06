@@ -1,17 +1,14 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  AlertTriangle,
   BarChart2,
   Phone,
   ChevronRight,
-  CheckCircle2,
-  RefreshCw,
-  TrendingUp,
   ShieldAlert,
   ExternalLink,
   MessageCircle,
-  ArrowRight,
+  Save,
+  CheckCircle2,
 } from 'lucide-react';
 import Button from '../ui/Button';
 import { Link } from 'react-router-dom';
@@ -20,8 +17,6 @@ import {
   QUESTIONS,
   DOMAINS,
   calculateClarityScore,
-  getScoreLabel,
-  getScoreTierColor,
   getRecommendations,
   checkCrisisPattern,
 } from '../../lib/clarity';
@@ -30,12 +25,23 @@ import type {
   ClarityHistoryItem,
   Recommendation,
 } from '../../lib/clarity';
+import ClarityResultsDashboard from '../tools/ClarityScore/results/ClarityResultsDashboard';
+import AuthGate from '../auth/AuthGate';
+import { useAuth } from '@/context/AuthContext';
+import { useToast } from '@/context/ToastContext';
+import { clarityScoreService } from '@/services/clarityScoreService';
 
 const STORAGE_KEY = 'psychage_clarity_progress';
 const HISTORY_KEY = 'psychage_clarity_history';
 
 const ClarityScoreTool: React.FC = () => {
+  const { isAuthenticated } = useAuth();
+  const { addToast } = useToast();
+
   // --- State ---
+  const [saving, setSaving] = useState(false);
+  const [saved, setSaved] = useState(false);
+
   const [step, setStep] = useState<'intro' | 'questions' | 'calculating' | 'results'>(() => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
@@ -90,6 +96,34 @@ const ClarityScoreTool: React.FC = () => {
   });
 
   const crisisContinueRef = useRef<HTMLButtonElement>(null);
+
+  // --- Load history from Supabase when authenticated ---
+  useEffect(() => {
+    if (isAuthenticated) {
+      clarityScoreService.getHistory(10).then(setHistory).catch(() => {
+        // Fall back to localStorage (already loaded)
+      });
+    }
+  }, [isAuthenticated]);
+
+  // --- Save to Dashboard handler ---
+  const handleSaveToDashboard = useCallback(async () => {
+    if (!results || saving || saved) return;
+    setSaving(true);
+    try {
+      const { success } = await clarityScoreService.saveResult(results, answers);
+      if (success) {
+        setSaved(true);
+        addToast('success', 'Clarity Score saved to your dashboard!');
+      } else {
+        addToast('error', 'Failed to save score. Please try again.');
+      }
+    } catch {
+      addToast('error', 'Failed to save score. Please try again.');
+    } finally {
+      setSaving(false);
+    }
+  }, [results, answers, saving, saved, addToast]);
 
   // --- Persist progress ---
   useEffect(() => {
@@ -188,6 +222,8 @@ const ClarityScoreTool: React.FC = () => {
     setResults(null);
     setRecommendations([]);
     setHasCrisisTriggered(false);
+    setSaved(false);
+    setSaving(false);
     localStorage.removeItem(STORAGE_KEY);
   };
 
@@ -304,7 +340,7 @@ const ClarityScoreTool: React.FC = () => {
         )}
       </AnimatePresence>
 
-      <div className="max-w-2xl mx-auto">
+      <div className={`mx-auto ${step === 'results' ? 'max-w-5xl' : 'max-w-2xl'}`}>
         <AnimatePresence mode="wait">
           {/* ========== INTRO ========== */}
           {step === 'intro' && (
@@ -478,205 +514,54 @@ const ClarityScoreTool: React.FC = () => {
           {step === 'results' && results && (
             <motion.div
               key="results"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="space-y-6"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
             >
-              {/* Score Hero */}
-              <div className="bg-white dark:bg-gray-900 rounded-3xl overflow-hidden shadow-2xl shadow-gray-200/50 dark:shadow-none border border-gray-100 dark:border-gray-800">
-                <div className="bg-gray-900 dark:bg-black text-white p-12 text-center relative overflow-hidden">
-                  <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-teal-500/20 to-transparent" />
-                  <div className="relative z-10">
-                    <p className="text-gray-400 font-bold tracking-wider uppercase text-sm mb-4">
-                      Your Clarity Score
-                    </p>
-                    <div className="text-8xl font-display font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
-                      {results.totalScore}
-                    </div>
-                    <div
-                      className={`inline-flex items-center gap-2 px-4 py-2 rounded-full backdrop-blur-md border text-sm font-semibold ${
-                        results.tier === 'thriving'
-                          ? 'bg-emerald-500/20 border-emerald-500/30 text-emerald-400'
-                          : results.tier === 'balanced'
-                            ? 'bg-teal-500/20 border-teal-500/30 text-teal-400'
-                            : results.tier === 'struggling'
-                              ? 'bg-amber-500/20 border-amber-500/30 text-amber-400'
-                              : results.tier === 'distressed'
-                                ? 'bg-orange-500/20 border-orange-500/30 text-orange-400'
-                                : 'bg-red-500/20 border-red-500/30 text-red-400'
-                      }`}
-                    >
-                      <CheckCircle2 size={16} />
-                      {results.label}
-                    </div>
-                  </div>
-                </div>
+              <ClarityResultsDashboard
+                results={results}
+                recommendations={recommendations}
+                history={history}
+                onRetake={resetAssessment}
+              />
 
-                {/* Domain Breakdown */}
-                <div className="p-8 md:p-10">
-                  <h3 className="font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-                    <BarChart2 size={20} className="text-teal-500" />
-                    Dimension Breakdown
-                  </h3>
-                  <div className="space-y-5">
-                    {DOMAINS.map((domain) => {
-                      const score =
-                        results.domainScores[domain.key];
-                      const pct = (score / 20) * 100;
-                      return (
-                        <div key={domain.id}>
-                          <div className="flex justify-between text-sm mb-1.5">
-                            <span className="font-medium text-gray-700 dark:text-gray-300">
-                              {domain.name}
-                            </span>
-                            <span className="font-bold text-gray-900 dark:text-white">
-                              {Math.round(score)}/20
-                            </span>
-                          </div>
-                          <div className="h-3 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
-                            <motion.div
-                              className={`h-full rounded-full ${domain.bgColor}`}
-                              initial={{ width: 0 }}
-                              animate={{ width: `${pct}%` }}
-                              transition={{
-                                duration: 0.8,
-                                delay: domain.id * 0.1,
-                              }}
-                            />
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              </div>
-
-              {/* Strengths & Growth Areas */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-100 dark:border-gray-800 shadow-sm">
-                  <div className="flex items-center gap-2 mb-4">
-                    <div className="w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
-                      <CheckCircle2 size={18} />
-                    </div>
-                    <h3 className="font-bold text-gray-900 dark:text-white">
-                      Core Strengths
-                    </h3>
-                  </div>
-                  <ul className="space-y-3">
-                    {results.strengths.map((s, i) => (
-                      <li
-                        key={i}
-                        className="flex items-start gap-3 text-sm text-gray-600 dark:text-gray-300"
-                      >
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" />
-                        <span>
-                          Your <strong>{s}</strong> is a source of strength
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-100 dark:border-gray-800 shadow-sm">
-                  <div className="flex items-center gap-2 mb-4">
-                    <div className="w-8 h-8 rounded-full bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center text-amber-600 dark:text-amber-400">
-                      <TrendingUp size={18} />
-                    </div>
-                    <h3 className="font-bold text-gray-900 dark:text-white">
-                      Growth Opportunities
-                    </h3>
-                  </div>
-                  <ul className="space-y-3">
-                    {results.growthAreas.map((g, i) => (
-                      <li
-                        key={i}
-                        className="flex items-start gap-3 text-sm text-gray-600 dark:text-gray-300"
-                      >
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" />
-                        <span>
-                          Your <strong>{g}</strong> could use some attention
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              {/* Recommendations */}
-              {recommendations.length > 0 && (
-                <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 md:p-8 border border-gray-100 dark:border-gray-800 shadow-sm">
-                  <h3 className="font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-                    <ArrowRight size={20} className="text-teal-500" />
-                    What You Can Do
-                  </h3>
-                  <div className="space-y-4">
-                    {recommendations.map((rec, i) => (
-                      <div
-                        key={i}
-                        className="bg-teal-50 dark:bg-teal-900/20 rounded-xl p-5 border border-teal-100 dark:border-teal-800"
-                      >
-                        <p className="text-sm font-medium text-teal-900 dark:text-teal-200 mb-3">
-                          {rec.text}
-                        </p>
-                        <Link to={rec.link}>
-                          <Button
-                            size="sm"
-                            className="bg-teal-600 hover:bg-teal-700 text-white border-none"
-                          >
-                            {rec.linkLabel}
-                          </Button>
-                        </Link>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* Clinical Flags */}
-              {results.flags.length > 0 && (
-                <div className="bg-amber-50 dark:bg-amber-900/10 rounded-2xl p-6 border border-amber-200 dark:border-amber-800">
-                  <div className="flex items-center gap-2 mb-3">
-                    <AlertTriangle
-                      size={18}
-                      className="text-amber-600 dark:text-amber-400"
-                    />
-                    <h3 className="font-bold text-amber-900 dark:text-amber-200 text-sm">
-                      Clinical Indicators
-                    </h3>
-                  </div>
-                  <ul className="space-y-1.5">
-                    {results.flags.map((flag, i) => (
-                      <li
-                        key={i}
-                        className="text-sm text-amber-800 dark:text-amber-300"
-                      >
-                        {flag}
-                      </li>
-                    ))}
-                  </ul>
-                  <p className="text-xs text-amber-600 dark:text-amber-400 mt-3">
-                    These are not diagnoses. Consider discussing with a
-                    healthcare provider.
-                  </p>
-                </div>
-              )}
-
-              {/* Disclaimer */}
-              <p className="text-center text-xs text-gray-400 dark:text-gray-500 px-4">
-                The Clarity Score is a wellness snapshot, not a clinical
-                assessment or diagnosis. It does not replace professional care.
-                If you are in crisis, call or text 988.
-              </p>
-
-              {/* Retake */}
-              <div className="text-center pt-4">
-                <button
-                  onClick={resetAssessment}
-                  className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 font-medium flex items-center justify-center gap-2 mx-auto transition-colors"
+              {/* Save to Dashboard — AuthGate wraps the save button */}
+              <div className="mt-6">
+                <AuthGate
+                  inline
+                  message="Sign in to save your Clarity Score and track your progress over time."
                 >
-                  <RefreshCw size={16} />
-                  Retake Assessment
-                </button>
+                  <button
+                    onClick={handleSaveToDashboard}
+                    disabled={saving || saved}
+                    className={`w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm transition-all shadow-sm ${
+                      saved
+                        ? 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 cursor-default'
+                        : 'bg-teal-600 hover:bg-teal-700 text-white shadow-teal-600/20 disabled:opacity-60'
+                    }`}
+                  >
+                    {saved ? (
+                      <>
+                        <CheckCircle2 size={18} />
+                        Saved to Dashboard
+                      </>
+                    ) : saving ? (
+                      <>
+                        <motion.div
+                          className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full"
+                          animate={{ rotate: 360 }}
+                          transition={{ duration: 0.8, repeat: Infinity, ease: 'linear' }}
+                        />
+                        Saving...
+                      </>
+                    ) : (
+                      <>
+                        <Save size={18} />
+                        Save to Dashboard
+                      </>
+                    )}
+                  </button>
+                </AuthGate>
               </div>
             </motion.div>
           )}

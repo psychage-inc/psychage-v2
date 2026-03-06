@@ -11,7 +11,7 @@
 
 import { describe, it, expect, beforeAll } from 'vitest';
 import { runSymptomNavigator } from '@/lib/navigator/engine';
-import { calculateConditionScore, rankAndDiversify, scoreAllConditions } from '@/lib/navigator/scoring';
+import { calculateConditionScore } from '@/lib/navigator/scoring';
 import { normalizeSymptoms, DEFAULT_MATCHING_CONFIG } from '@/lib/navigator/utils';
 import type {
   KnowledgeBase,
@@ -563,6 +563,29 @@ describe('Scoring Engine — Condition Matching', () => {
       const score = calculateConditionScore(normalized, mde, scoringConfig);
 
       expect(score.capped_score).toBeLessThanOrEqual(0.75);
+    });
+  });
+
+  // ─── Engine Performance ───────────────────────────────────────────────────
+
+  describe('Engine performance', () => {
+    it('completes in under 50ms for a typical 6-symptom input', () => {
+      const inputs: UserSymptomInput[] = [
+        { symptom_id: 'MOD_001', severity: 7, duration: '1_to_3_months', frequency: 'often' },
+        { symptom_id: 'MOD_003', severity: 6, duration: '2_to_4_weeks', frequency: 'often' },
+        { symptom_id: 'ENR_001', severity: 6, duration: '1_to_3_months', frequency: 'always' },
+        { symptom_id: 'ANX_001', severity: 7, duration: '3_to_6_months', frequency: 'often' },
+        { symptom_id: 'SLP_001', severity: 5, duration: '2_to_4_weeks', frequency: 'often' },
+        { symptom_id: 'COG_001', severity: 5, duration: '2_to_4_weeks', frequency: 'sometimes' },
+      ];
+
+      const start = performance.now();
+      runSymptomNavigator(inputs, kb);
+      const elapsed = performance.now() - start;
+
+      // Engine should run in ~1-3ms. 50ms threshold gives 10-25x headroom
+      // for slow CI machines while still catching algorithmic regressions.
+      expect(elapsed).toBeLessThan(50);
     });
   });
 });

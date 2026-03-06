@@ -49,7 +49,7 @@ describe('Phase 4 Expansion — Classic Presentations', () => {
       const topThreeIds = results.results.slice(0, 3).map(r => r.condition_id);
 
       expect(topThreeIds).toContain('NPD');
-      expect(results.results[0].score).toBeLessThanOrEqual(0.75); // Confidence cap
+      expect(results.results[0].relevance_score).toBeLessThanOrEqual(0.75); // Confidence cap
     });
   });
 
@@ -68,7 +68,7 @@ describe('Phase 4 Expansion — Classic Presentations', () => {
       const topThreeIds = results.results.slice(0, 3).map(r => r.condition_id);
 
       expect(topThreeIds).toContain('ASPD');
-      expect(results.results[0].score).toBeLessThanOrEqual(0.75);
+      expect(results.results[0].relevance_score).toBeLessThanOrEqual(0.75);
     });
   });
 
@@ -87,7 +87,7 @@ describe('Phase 4 Expansion — Classic Presentations', () => {
       const topThreeIds = results.results.slice(0, 3).map(r => r.condition_id);
 
       expect(topThreeIds).toContain('CPTSD');
-      expect(results.results[0].score).toBeLessThanOrEqual(0.75);
+      expect(results.results[0].relevance_score).toBeLessThanOrEqual(0.75);
     });
   });
 
@@ -106,7 +106,7 @@ describe('Phase 4 Expansion — Classic Presentations', () => {
       expect(results.results[0].condition_id).toBe('DID');
       expect(results.safety.has_urgent).toBe(true); // PRC_008 triggers URGENT
       expect(results.safety.should_halt).toBe(false); // URGENT doesn't halt, only CRISIS does
-      expect(results.results[0].score).toBeLessThanOrEqual(0.75);
+      expect(results.results[0].relevance_score).toBeLessThanOrEqual(0.75);
     });
   });
 
@@ -128,7 +128,7 @@ describe('Phase 4 Expansion — Classic Presentations', () => {
       const topThreeIds = results.results.slice(0, 3).map(r => r.condition_id);
 
       expect(topThreeIds).toContain('DPD');
-      expect(results.results[0].score).toBeLessThanOrEqual(0.75);
+      expect(results.results[0].relevance_score).toBeLessThanOrEqual(0.75);
     });
   });
 
@@ -146,7 +146,7 @@ describe('Phase 4 Expansion — Classic Presentations', () => {
       const topThreeIds = results.results.slice(0, 3).map(r => r.condition_id);
 
       expect(topThreeIds).toContain('SZPD');
-      expect(results.results[0].score).toBeLessThanOrEqual(0.75);
+      expect(results.results[0].relevance_score).toBeLessThanOrEqual(0.75);
     });
   });
 
@@ -163,7 +163,7 @@ describe('Phase 4 Expansion — Classic Presentations', () => {
       const resultIds = results.results.map(r => r.condition_id);
 
       expect(resultIds).toContain('OSDD');
-      expect(results.results[0].score).toBeLessThanOrEqual(0.75);
+      expect(results.results[0].relevance_score).toBeLessThanOrEqual(0.75);
     });
   });
 
@@ -182,7 +182,7 @@ describe('Phase 4 Expansion — Classic Presentations', () => {
       const topThreeIds = results.results.slice(0, 3).map(r => r.condition_id);
 
       expect(topThreeIds).toContain('ASD_ACUTE');
-      expect(results.results[0].score).toBeLessThanOrEqual(0.75);
+      expect(results.results[0].relevance_score).toBeLessThanOrEqual(0.75);
     });
   });
 
@@ -199,7 +199,7 @@ describe('Phase 4 Expansion — Classic Presentations', () => {
       const topThreeIds = results.results.slice(0, 3).map(r => r.condition_id);
 
       expect(topThreeIds).toContain('TTM');
-      expect(results.results[0].score).toBeLessThanOrEqual(0.75);
+      expect(results.results[0].relevance_score).toBeLessThanOrEqual(0.75);
     });
   });
 
@@ -216,7 +216,7 @@ describe('Phase 4 Expansion — Classic Presentations', () => {
       const topThreeIds = results.results.slice(0, 3).map(r => r.condition_id);
 
       expect(topThreeIds).toContain('SPD_EXCOR');
-      expect(results.results[0].score).toBeLessThanOrEqual(0.75);
+      expect(results.results[0].relevance_score).toBeLessThanOrEqual(0.75);
     });
   });
 
@@ -238,7 +238,7 @@ describe('Phase 4 Expansion — Classic Presentations', () => {
       const topThreeIds = results.results.slice(0, 3).map(r => r.condition_id);
 
       expect(topThreeIds).toContain('IED');
-      expect(results.results[0].score).toBeLessThanOrEqual(0.75);
+      expect(results.results[0].relevance_score).toBeLessThanOrEqual(0.75);
     });
   });
 
@@ -256,7 +256,7 @@ describe('Phase 4 Expansion — Classic Presentations', () => {
       const topThreeIds = results.results.slice(0, 3).map(r => r.condition_id);
 
       expect(topThreeIds).toContain('HYPER');
-      expect(results.results[0].score).toBeLessThanOrEqual(0.75);
+      expect(results.results[0].relevance_score).toBeLessThanOrEqual(0.75);
     });
   });
 
@@ -273,7 +273,7 @@ describe('Phase 4 Expansion — Classic Presentations', () => {
       const topThreeIds = results.results.slice(0, 3).map(r => r.condition_id);
 
       expect(topThreeIds).toContain('ARFID');
-      expect(results.results[0].score).toBeLessThanOrEqual(0.75);
+      expect(results.results[0].relevance_score).toBeLessThanOrEqual(0.75);
     });
   });
 
@@ -292,7 +292,7 @@ describe('Phase 4 Expansion — Classic Presentations', () => {
       const topThreeIds = results.results.slice(0, 3).map(r => r.condition_id);
 
       expect(topThreeIds).toContain('CYC');
-      expect(results.results[0].score).toBeLessThanOrEqual(0.75);
+      expect(results.results[0].relevance_score).toBeLessThanOrEqual(0.75);
     });
   });
 });
@@ -323,7 +323,7 @@ describe('Phase 4 Expansion — Collision & Differentiation', () => {
       const bpdResult = results.results.find(r => r.condition_id === 'BPD');
 
       if (npdResult && bpdResult) {
-        expect(npdResult.score).toBeGreaterThan(bpdResult.score);
+        expect(npdResult.relevance_score).toBeGreaterThan(bpdResult.relevance_score);
       }
     });
 
@@ -340,7 +340,7 @@ describe('Phase 4 Expansion — Collision & Differentiation', () => {
       const npdResult = results.results.find(r => r.condition_id === 'NPD');
 
       if (bpdResult && npdResult) {
-        expect(bpdResult.score).toBeGreaterThan(npdResult.score);
+        expect(bpdResult.relevance_score).toBeGreaterThan(npdResult.relevance_score);
       }
     });
   });
@@ -363,7 +363,7 @@ describe('Phase 4 Expansion — Collision & Differentiation', () => {
       const ptsdResult = results.results.find(r => r.condition_id === 'PTSD');
 
       if (cptsdResult && ptsdResult) {
-        expect(cptsdResult.score).toBeGreaterThan(ptsdResult.score);
+        expect(cptsdResult.relevance_score).toBeGreaterThan(ptsdResult.relevance_score);
       }
     });
   });
@@ -382,7 +382,7 @@ describe('Phase 4 Expansion — Collision & Differentiation', () => {
       const dpdrResult = results.results.find(r => r.condition_id === 'DPDR');
 
       if (didResult && dpdrResult) {
-        expect(didResult.score).toBeGreaterThan(dpdrResult.score);
+        expect(didResult.relevance_score).toBeGreaterThan(dpdrResult.relevance_score);
       }
     });
 
@@ -399,7 +399,7 @@ describe('Phase 4 Expansion — Collision & Differentiation', () => {
       const didResult = results.results.find(r => r.condition_id === 'DID');
 
       if (dpdrResult && didResult) {
-        expect(dpdrResult.score).toBeGreaterThan(didResult.score);
+        expect(dpdrResult.relevance_score).toBeGreaterThan(didResult.relevance_score);
       }
     });
   });
@@ -418,7 +418,7 @@ describe('Phase 4 Expansion — Collision & Differentiation', () => {
       const iedResult = results.results.find(r => r.condition_id === 'IED');
 
       if (aspdResult && iedResult) {
-        expect(aspdResult.score).toBeGreaterThan(iedResult.score);
+        expect(aspdResult.relevance_score).toBeGreaterThan(iedResult.relevance_score);
       }
     });
 
@@ -435,7 +435,7 @@ describe('Phase 4 Expansion — Collision & Differentiation', () => {
       const aspdResult = results.results.find(r => r.condition_id === 'ASPD');
 
       if (iedResult && aspdResult) {
-        expect(iedResult.score).toBeGreaterThan(aspdResult.score);
+        expect(iedResult.relevance_score).toBeGreaterThan(aspdResult.relevance_score);
       }
     });
   });
@@ -454,7 +454,7 @@ describe('Phase 4 Expansion — Collision & Differentiation', () => {
       const avpdResult = results.results.find(r => r.condition_id === 'AVPD');
 
       if (dpdResult && avpdResult) {
-        expect(dpdResult.score).toBeGreaterThan(avpdResult.score);
+        expect(dpdResult.relevance_score).toBeGreaterThan(avpdResult.relevance_score);
       }
     });
 
@@ -471,7 +471,7 @@ describe('Phase 4 Expansion — Collision & Differentiation', () => {
       const dpdResult = results.results.find(r => r.condition_id === 'DPD');
 
       if (avpdResult && dpdResult) {
-        expect(avpdResult.score).toBeGreaterThan(dpdResult.score);
+        expect(avpdResult.relevance_score).toBeGreaterThan(dpdResult.relevance_score);
       }
     });
   });
@@ -490,7 +490,7 @@ describe('Phase 4 Expansion — Collision & Differentiation', () => {
       const avpdResult = results.results.find(r => r.condition_id === 'AVPD');
 
       if (szpdResult && avpdResult) {
-        expect(szpdResult.score).toBeGreaterThan(avpdResult.score);
+        expect(szpdResult.relevance_score).toBeGreaterThan(avpdResult.relevance_score);
       }
     });
   });
@@ -510,7 +510,7 @@ describe('Phase 4 Expansion — Collision & Differentiation', () => {
       const mdeResult = results.results.find(r => r.condition_id === 'MDE');
 
       if (hyperResult && mdeResult) {
-        expect(hyperResult.score).toBeGreaterThan(mdeResult.score);
+        expect(hyperResult.relevance_score).toBeGreaterThan(mdeResult.relevance_score);
       }
     });
   });
@@ -529,7 +529,7 @@ describe('Phase 4 Expansion — Collision & Differentiation', () => {
       const anResult = results.results.find(r => r.condition_id === 'AN');
 
       if (arfidResult && anResult) {
-        expect(arfidResult.score).toBeGreaterThan(anResult.score);
+        expect(arfidResult.relevance_score).toBeGreaterThan(anResult.relevance_score);
       }
     });
   });
@@ -549,7 +549,7 @@ describe('Phase 4 Expansion — Collision & Differentiation', () => {
       const bipResult = results.results.find(r => r.condition_id === 'BIP');
 
       if (cycResult && bipResult) {
-        expect(cycResult.score).toBeGreaterThan(bipResult.score);
+        expect(cycResult.relevance_score).toBeGreaterThan(bipResult.relevance_score);
       }
     });
   });
@@ -703,7 +703,7 @@ describe('Phase 4 Expansion — Confidence Cap', () => {
       const npdResult = results.results.find(r => r.condition_id === 'NPD');
 
       expect(npdResult).toBeDefined();
-      expect(npdResult!.score).toBeLessThanOrEqual(0.75);
+      expect(npdResult!.relevance_score).toBeLessThanOrEqual(0.75);
     });
   });
 
@@ -722,7 +722,7 @@ describe('Phase 4 Expansion — Confidence Cap', () => {
       const didResult = results.results.find(r => r.condition_id === 'DID');
 
       expect(didResult).toBeDefined();
-      expect(didResult!.score).toBeLessThanOrEqual(0.75);
+      expect(didResult!.relevance_score).toBeLessThanOrEqual(0.75);
     });
   });
 
@@ -735,8 +735,7 @@ describe('Phase 4 Expansion — Confidence Cap', () => {
         const condition = kb.conditions.find(c => c.id === conditionId);
         if (!condition) return;
 
-        const mappings = kb.symptomMappings.filter(m => m.condition_id === conditionId);
-        const inputs: UserSymptomInput[] = mappings.map(mapping => ({
+        const inputs: UserSymptomInput[] = condition.symptom_mappings.map(mapping => ({
           symptom_id: mapping.symptom_id,
           severity: 10,
           duration: 'more_than_1_year',
@@ -747,7 +746,7 @@ describe('Phase 4 Expansion — Confidence Cap', () => {
         const result = results.results.find(r => r.condition_id === conditionId);
 
         if (result) {
-          expect(result.score).toBeLessThanOrEqual(0.75);
+          expect(result.relevance_score).toBeLessThanOrEqual(0.75);
         }
       });
     });

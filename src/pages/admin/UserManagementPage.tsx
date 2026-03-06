@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { UserCircle, UserPlus, X, Mail } from 'lucide-react';
 import { format } from 'date-fns';
 import AdminLayout from './components/AdminLayout';
@@ -13,6 +14,7 @@ import Button from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Label } from '@/components/ui/Label';
 import { api } from '@/lib/api';
+import { getUsers as fetchUsersFromService } from '@/services/adminService';
 
 interface AdminUser {
     id: string;
@@ -30,18 +32,6 @@ const roleFilters = [
     { key: 'patient', label: 'Patient' },
     { key: 'provider', label: 'Provider' },
     { key: 'admin', label: 'Admin' },
-];
-
-// TODO: Wire to api.admin.getUsers() or direct Supabase query on profiles table
-const MOCK_USERS: AdminUser[] = [
-    { id: 'usr-001', email: 'alice@example.com', display_name: 'Alice Johnson', role: 'patient', status: 'active', created_at: '2025-08-15T10:00:00Z', last_active: '2026-03-05T14:30:00Z' },
-    { id: 'usr-002', email: 'bob@example.com', display_name: 'Bob Smith', avatar_url: '', role: 'provider', status: 'active', created_at: '2025-09-20T08:00:00Z', last_active: '2026-03-04T09:15:00Z' },
-    { id: 'usr-003', email: 'carol@example.com', display_name: 'Carol Davis', role: 'patient', status: 'active', created_at: '2025-10-01T12:00:00Z', last_active: '2026-02-28T17:45:00Z' },
-    { id: 'usr-004', email: 'dave@example.com', display_name: 'Dave Wilson', role: 'admin', status: 'active', created_at: '2025-06-01T08:00:00Z', last_active: '2026-03-06T08:00:00Z' },
-    { id: 'usr-005', email: 'eve@example.com', display_name: 'Eve Martinez', role: 'patient', status: 'inactive', created_at: '2025-11-10T15:00:00Z', last_active: '2026-01-05T11:20:00Z' },
-    { id: 'usr-006', email: 'frank@example.com', display_name: 'Frank Thompson', role: 'provider', status: 'suspended', created_at: '2025-12-20T09:00:00Z', last_active: '2026-02-10T16:00:00Z' },
-    { id: 'usr-007', email: 'grace@example.com', display_name: 'Grace Lee', role: 'patient', status: 'active', created_at: '2026-01-05T14:00:00Z', last_active: '2026-03-06T07:30:00Z' },
-    { id: 'usr-008', email: 'henry@example.com', display_name: 'Henry Brown', role: 'patient', status: 'active', created_at: '2026-01-15T11:00:00Z', last_active: '2026-03-03T19:00:00Z' },
 ];
 
 const UserManagementPage: React.FC = () => {
@@ -85,9 +75,8 @@ const UserManagementPage: React.FC = () => {
         setIsLoading(true);
         setError(null);
         try {
-            // TODO: Wire to api.admin.getUsers() or direct Supabase query
-            await new Promise(resolve => setTimeout(resolve, 400));
-            setUsers(MOCK_USERS);
+            const data = await fetchUsersFromService();
+            setUsers(data);
         } catch (err) {
             console.error("Failed to fetch users", err);
             setError('Failed to load users. Please try again.');
@@ -134,7 +123,9 @@ const UserManagementPage: React.FC = () => {
                             </div>
                         )}
                         <div>
-                            <div className="font-bold text-text-primary">{u.display_name}</div>
+                            <Link to={`/admin/users/${u.id}`} className="font-bold text-text-primary hover:text-primary transition-colors">
+                                {u.display_name}
+                            </Link>
                             <div className="text-xs text-text-secondary">{u.email}</div>
                         </div>
                     </div>

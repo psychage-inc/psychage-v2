@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '@/lib/supabaseClient';
 import { Loader2 } from 'lucide-react';
-import MeshGradient from '@/components/ui/MeshGradient';
-
 const AuthCallback: React.FC = () => {
     const navigate = useNavigate();
     const [error, setError] = useState<string | null>(null);
@@ -26,7 +24,7 @@ const AuthCallback: React.FC = () => {
                     const userRole = data.session.user?.user_metadata?.role || 'patient';
 
                     if (userRole === 'provider') {
-                        navigate('/provider/dashboard', { replace: true });
+                        navigate('/provider', { replace: true });
                     } else if (userRole === 'admin') {
                         // Check if admin has completed onboarding (fail-open if column missing)
                         let needsOnboarding = false;
@@ -64,9 +62,7 @@ const AuthCallback: React.FC = () => {
 
     return (
         <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background">
-            <MeshGradient className="opacity-60" />
-
-            <div className="text-center relative z-10">
+                        <div className="text-center relative z-10">
                 {error ? (
                     <div className="space-y-4">
                         <div className="w-16 h-16 mx-auto rounded-full bg-red-500/10 flex items-center justify-center">

@@ -8,7 +8,6 @@ import SEO from '@/components/SEO';
 import { api } from '@/lib/api';
 import { Article, Provider } from '@/types/models';
 import { motion, AnimatePresence } from 'framer-motion';
-import MeshGradient from '@/components/ui/MeshGradient';
 import { cn } from '@/lib/utils';
 
 const BookmarksPage: React.FC = () => {
@@ -93,8 +92,7 @@ const BookmarksPage: React.FC = () => {
 
             {/* Background Mesh */}
             <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-                <MeshGradient className="opacity-[0.05]" />
-            </div>
+                            </div>
 
             <div className="container mx-auto max-w-[1200px] relative z-10">
                 <h1 className="text-3xl font-display font-bold text-text-primary mb-8 px-2">My Bookmarks</h1>

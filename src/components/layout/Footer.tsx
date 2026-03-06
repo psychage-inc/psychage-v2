@@ -9,10 +9,9 @@ import {
   Globe,
   ArrowUp
 } from 'lucide-react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import CrisisBanner from './CrisisBanner';
-import { Logo } from '../ui/Logo';
 
 // interface FooterProps { }
 
@@ -25,16 +24,6 @@ interface FooterLink {
 const Footer: React.FC = () => {
   const footerRef = useRef<HTMLDivElement>(null);
   const currentYear = new Date().getFullYear();
-
-
-  // Scroll animations for parallax effect
-  const { scrollYProgress } = useScroll({
-    target: footerRef,
-    offset: ["start end", "end end"]
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], [-100, 0]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -102,7 +91,6 @@ const Footer: React.FC = () => {
             viewport={{ once: true }}
             className="max-w-4xl"
           >
-            <Logo className="h-20 w-auto mb-8 text-[#1A1A1A] dark:text-white" />
             <h2 className="font-display font-bold text-5xl md:text-8xl tracking-tight leading-[0.9] mb-8 text-gray-900">
               Mental health <br />
               <span className="text-gray-500">is just health.</span>
@@ -208,15 +196,12 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      {/* Interactive Watermark */}
-      <motion.div
-        style={{ y, opacity }}
-        className="w-full flex justify-center items-end select-none pointer-events-none mt-[-5vw] overflow-hidden"
-      >
-        <h1 className="font-display font-black text-[24vw] leading-[0.7] text-transparent bg-clip-text bg-gradient-to-b from-gray-50 via-gray-50 to-white tracking-tighter opacity-50 whitespace-nowrap">
+      {/* Footer Watermark - large brand anchor like hims.com */}
+      <div className="w-full flex justify-center items-end select-none pointer-events-none pb-4">
+        <h1 className="font-display font-black text-[20vw] leading-none text-gray-200 dark:text-gray-800 tracking-tighter whitespace-nowrap">
           psychage
         </h1>
-      </motion.div>
+      </div>
     </footer >
   );
 };

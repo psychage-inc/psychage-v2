@@ -118,7 +118,7 @@ const MoodJournal: React.FC = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50 pt-24 pb-12 px-6">
+        <div className="min-h-screen bg-white pt-24 pb-12 px-6">
             {view === 'new' ? (
                 <MoodWizard onComplete={handleSaveWizard} onCancel={() => setView('history')} />
             ) : (
@@ -176,7 +176,7 @@ const MoodJournal: React.FC = () => {
                                             <div key={entry.id} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all group">
                                                 <div className="flex justify-between items-start mb-4">
                                                     <div className="flex items-center gap-3">
-                                                        <div className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold ${getMoodColor(entry.mood)}`}>
+                                                        <div className={`w-12 h-12 rounded-2xl flex items-center justify-center text-white font-bold text-lg shadow-md ${getMoodColor(entry.mood)}`}>
                                                             {entry.mood}
                                                         </div>
                                                         <div>

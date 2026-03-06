@@ -162,7 +162,7 @@ export const searchService = {
             if (response.success && response.data) {
                 return response.data as Article[];
             }
-        } catch (error) {
+        } catch {
             console.warn('[SearchService] Backend article search failed, using local search');
         }
 
@@ -183,7 +183,7 @@ export const searchService = {
             if (response.success && response.data) {
                 return response.data as Provider[];
             }
-        } catch (error) {
+        } catch {
             console.warn('[SearchService] Backend provider search failed, using local search');
         }
 

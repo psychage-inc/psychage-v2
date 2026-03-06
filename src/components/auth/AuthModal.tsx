@@ -4,6 +4,8 @@ import { X, Mail, Lock, User, ArrowRight, Github, Chrome, Sparkles, AlertCircle,
 import Button from '../ui/Button';
 import { useAuth } from '../../context/AuthContext';
 import { Logo } from '../ui/Logo';
+import ConsentCheckboxes, { ConsentState, defaultConsentState, isConsentValid } from '../privacy/ConsentCheckboxes';
+import { consentService } from '../../services/consentService';
 
 interface AuthModalProps {
     isOpen: boolean;
@@ -22,6 +24,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [displayName, setDisplayName] = useState('');
+    const [consent, setConsent] = useState<ConsentState>(defaultConsentState);
 
     const { login, signup, requestPasswordReset } = useAuth();
 
@@ -31,6 +34,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
         setEmail('');
         setPassword('');
         setDisplayName('');
+        setConsent(defaultConsentState);
         setError(null);
         setSuccessMessage(null);
     };
@@ -56,10 +60,24 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                     setError(result.error || 'Failed to sign in. Please check your credentials.');
                 }
             } else if (view === 'signup') {
-                const result = await signup(email, password, displayName || undefined);
+                if (!isConsentValid(consent)) {
+                    setError('Please accept all required consents to create your account.');
+                    setIsLoading(false);
+                    return;
+                }
+                const result = await signup(email, password, displayName || undefined, 'patient', {
+                    age_verified: consent.ageVerified,
+                    consent_version: 'v1.0',
+                });
                 if (result.success) {
+                    await consentService.logBulkConsent([
+                        { type: 'terms_of_service', granted: true },
+                        { type: 'privacy_policy', granted: true },
+                        { type: 'data_processing', granted: consent.dataProcessingAccepted },
+                        { type: 'age_verification', granted: consent.ageVerified },
+                        { type: 'newsletter', granted: consent.newsletterOptIn },
+                    ]);
                     setSuccessMessage('Account created! Please check your email to verify your account.');
-                    // Don't close modal - show success message
                 } else {
                     setError(result.error || 'Failed to create account. Please try again.');
                 }
@@ -220,6 +238,12 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                                             >
                                                 Forgot password?
                                             </button>
+                                        </div>
+                                    )}
+
+                                    {view === 'signup' && (
+                                        <div className="pt-1">
+                                            <ConsentCheckboxes consent={consent} onChange={setConsent} compact />
                                         </div>
                                     )}
 

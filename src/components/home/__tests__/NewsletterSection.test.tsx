@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import NewsletterSection from '../NewsletterSection';
 
@@ -31,25 +32,25 @@ describe('NewsletterSection', () => {
     });
 
     it('should render heading', () => {
-        render(<NewsletterSection />);
-        expect(screen.getByText(/exceed every expectation/i)).toBeInTheDocument();
+        render(<MemoryRouter><NewsletterSection /></MemoryRouter>);
+        expect(screen.getByText(/start understanding your mind today/i)).toBeInTheDocument();
     });
 
     it('should render email input', () => {
-        render(<NewsletterSection />);
-        expect(screen.getByPlaceholderText(/enter your email/i)).toBeInTheDocument();
+        render(<MemoryRouter><NewsletterSection /></MemoryRouter>);
+        expect(screen.getByPlaceholderText('your@email.com')).toBeInTheDocument();
     });
 
     it('should render subscribe button', () => {
-        render(<NewsletterSection />);
+        render(<MemoryRouter><NewsletterSection /></MemoryRouter>);
         expect(screen.getByText('Subscribe')).toBeInTheDocument();
     });
 
     it('should show success message after subscribing', async () => {
         mockSubscribe.mockResolvedValue({ success: true });
-        render(<NewsletterSection />);
+        render(<MemoryRouter><NewsletterSection /></MemoryRouter>);
 
-        const input = screen.getByPlaceholderText(/enter your email/i);
+        const input = screen.getByPlaceholderText('your@email.com');
         fireEvent.change(input, { target: { value: 'test@example.com' } });
         fireEvent.submit(input.closest('form')!);
 
@@ -60,19 +61,19 @@ describe('NewsletterSection', () => {
 
     it('should show error state on failure', async () => {
         mockSubscribe.mockRejectedValue(new Error('fail'));
-        render(<NewsletterSection />);
+        render(<MemoryRouter><NewsletterSection /></MemoryRouter>);
 
-        const input = screen.getByPlaceholderText(/enter your email/i);
+        const input = screen.getByPlaceholderText('your@email.com');
         fireEvent.change(input, { target: { value: 'test@example.com' } });
         fireEvent.submit(input.closest('form')!);
 
         await waitFor(() => {
-            expect(screen.getByText('Try Again')).toBeInTheDocument();
+            expect(screen.getByText('Retry')).toBeInTheDocument();
         });
     });
 
-    it('should show subscriber count text', () => {
-        render(<NewsletterSection />);
-        expect(screen.getByText(/50,000/)).toBeInTheDocument();
+    it('should show newsletter description text', () => {
+        render(<MemoryRouter><NewsletterSection /></MemoryRouter>);
+        expect(screen.getByText(/weekly mental health insights/i)).toBeInTheDocument();
     });
 });

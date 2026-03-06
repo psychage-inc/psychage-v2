@@ -32,14 +32,14 @@ const SafetyBanner: React.FC<SafetyBannerProps> = ({ onDismiss }) => {
   }, []);
 
   useEffect(() => {
-    if (timeLeft > 0 && !canDismiss) {
-      const interval = setInterval(() => {
-        setTimeLeft(prev => Math.max(0, prev - 1));
-      }, 1000);
+    if (canDismiss) return;
 
-      return () => clearInterval(interval);
-    }
-  }, [timeLeft, canDismiss]);
+    const interval = setInterval(() => {
+      setTimeLeft(prev => Math.max(0, prev - 1));
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [canDismiss]);
 
   return (
     <motion.div

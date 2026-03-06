@@ -7,10 +7,8 @@
 
 import type {
   ConditionWithMappings,
-  CrisisResource,
   CrisisResourcesByRegion,
   KnowledgeBase,
-  MatchingConfig,
   Symptom,
   SymptomCategory,
   SymptomDomain,
@@ -20,7 +18,7 @@ import { DEFAULT_MATCHING_CONFIG } from '@/lib/navigator/utils';
 // ─── Known Red Flag IDs ──────────────────────────────────────────────────────
 
 export const CRISIS_SYMPTOM_IDS = ['COG_008', 'COG_009', 'COG_010', 'CPG_004'];
-export const URGENT_SYMPTOM_IDS = ['PRC_004', 'PRC_007'];
+export const URGENT_SYMPTOM_IDS = ['PRC_004', 'PRC_007', 'PRC_008'];
 
 // ─── Symptom Factory ─────────────────────────────────────────────────────────
 
@@ -213,6 +211,53 @@ function createAllTestSymptoms(): Symptom[] {
 
     // ─── New Energy (physical) ──────────────────────────────────────────
     createTestSymptom({ id: 'ENR_006', domain: 'physical', category: 'energy', name: 'Seasonal energy and mood changes', synonyms: ['seasonal changes', 'winter blues', 'seasonal pattern'] }),
+
+    // ═══════════════════════════════════════════════════════════════════════
+    // PHASE 4 EXPANSION — New Symptoms
+    // ═══════════════════════════════════════════════════════════════════════
+
+    // ─── Identity/Self-Image (behavioral) — Phase 4 ─────────────────────
+    createTestSymptom({ id: 'IDN_005', domain: 'behavioral', category: 'identity_self_image', name: 'Grandiosity', synonyms: ['inflated self-importance', 'superiority', 'grandiose beliefs'] }),
+    createTestSymptom({ id: 'IDN_006', domain: 'behavioral', category: 'identity_self_image', name: 'Lack of empathy', synonyms: ['empathy deficit', 'inability to empathize', 'callousness'] }),
+    createTestSymptom({ id: 'IDN_007', domain: 'behavioral', category: 'identity_self_image', name: 'Need for admiration', synonyms: ['attention seeking', 'validation seeking', 'admiration craving'] }),
+    createTestSymptom({ id: 'IDN_008', domain: 'behavioral', category: 'identity_self_image', name: 'Submissiveness', synonyms: ['excessive compliance', 'inability to disagree', 'deferential'] }),
+
+    // ─── Emotional Regulation (emotional) — Phase 4 ─────────────────────
+    createTestSymptom({ id: 'EMR_007', domain: 'emotional', category: 'emotional_regulation', name: 'Chronic emptiness', synonyms: ['persistent void', 'emotional vacuum', 'inner emptiness'] }),
+    createTestSymptom({ id: 'EMR_008', domain: 'emotional', category: 'emotional_regulation', name: 'Inability to conform to social norms', synonyms: ['norm violation', 'rule breaking', 'disregard for rules'] }),
+
+    // ─── Mood (emotional) — Phase 4 ─────────────────────────────────────
+    createTestSymptom({ id: 'MOD_010', domain: 'emotional', category: 'mood', name: 'Hypomania', synonyms: ['mild mania', 'elevated mood episodes', 'subthreshold mania'] }),
+    createTestSymptom({ id: 'MOD_011', domain: 'emotional', category: 'mood', name: 'Envy', synonyms: ['jealousy', 'envious feelings', 'covetousness'] }),
+
+    // ─── Cognition (cognitive) — Phase 4 ────────────────────────────────
+    createTestSymptom({ id: 'COG_013', domain: 'cognitive', category: 'cognition', name: 'Emotional dysregulation', synonyms: ['difficulty regulating emotions', 'emotional instability', 'affect dysregulation'] }),
+
+    // ─── Activity Level (behavioral) — Phase 4 ──────────────────────────
+    createTestSymptom({ id: 'ACT_009', domain: 'behavioral', category: 'activity_level', name: 'Reckless behavior', synonyms: ['recklessness', 'dangerous choices', 'disregard for safety'], severity_red_flag_threshold: 8, severity_red_flag_level: 'WATCH' }),
+    createTestSymptom({ id: 'ACT_010', domain: 'behavioral', category: 'activity_level', name: 'Lying or manipulation', synonyms: ['deceitfulness', 'manipulative behavior', 'pathological lying'] }),
+
+    // ─── Perception (cognitive) — Phase 4 ───────────────────────────────
+    createTestSymptom({ id: 'PRC_008', domain: 'cognitive', category: 'perception', name: 'Identity switching', synonyms: ['alter switching', 'identity shifts', 'personality switching'], is_red_flag: true, red_flag_level: 'URGENT' }),
+    createTestSymptom({ id: 'PRC_009', domain: 'cognitive', category: 'perception', name: 'Dissociative amnesia', synonyms: ['memory gaps', 'lost time', 'blackouts'], severity_red_flag_threshold: 7, severity_red_flag_level: 'URGENT' }),
+    createTestSymptom({ id: 'PRC_010', domain: 'cognitive', category: 'perception', name: 'Detachment from surroundings', synonyms: ['environmental detachment', 'feeling disconnected', 'surreal surroundings'] }),
+
+    // ─── Coping (behavioral) — Phase 4 ──────────────────────────────────
+    createTestSymptom({ id: 'CPG_013', domain: 'behavioral', category: 'coping', name: 'Hair pulling', synonyms: ['trichotillomania', 'pulling hair out', 'hair pulling urge'] }),
+    createTestSymptom({ id: 'CPG_014', domain: 'behavioral', category: 'coping', name: 'Skin picking', synonyms: ['excoriation', 'picking at skin', 'skin picking urge'] }),
+    createTestSymptom({ id: 'CPG_015', domain: 'behavioral', category: 'coping', name: 'Explosive anger episodes', synonyms: ['rage outbursts', 'explosive outbursts', 'uncontrollable anger'], severity_red_flag_threshold: 8, severity_red_flag_level: 'WATCH' }),
+
+    // ─── Social (behavioral) — Phase 4 ──────────────────────────────────
+    createTestSymptom({ id: 'SOC_009', domain: 'behavioral', category: 'social', name: 'Emotional detachment from relationships', synonyms: ['relational indifference', 'social indifference', 'interpersonal detachment'] }),
+
+    // ─── Sleep (physical) — Phase 4 ─────────────────────────────────────
+    createTestSymptom({ id: 'SLP_006', domain: 'physical', category: 'sleep', name: 'Excessive daytime sleepiness', synonyms: ['daytime drowsiness', 'constant sleepiness', 'hypersomnia'], severity_red_flag_threshold: 8, severity_red_flag_level: 'WATCH' }),
+    createTestSymptom({ id: 'SLP_007', domain: 'physical', category: 'sleep', name: 'Sleep inertia', synonyms: ['difficulty waking', 'groggy upon waking', 'sleep drunkenness'] }),
+    createTestSymptom({ id: 'SLP_008', domain: 'physical', category: 'sleep', name: 'Long sleep duration', synonyms: ['sleeping too long', 'extended sleep', 'prolonged sleep'] }),
+
+    // ─── Appetite/Weight (physical) — Phase 4 ───────────────────────────
+    createTestSymptom({ id: 'APT_005', domain: 'physical', category: 'appetite_weight', name: 'Sensory-based food avoidance', synonyms: ['texture aversion', 'food texture sensitivity', 'sensory food issues'], severity_red_flag_threshold: 7, severity_red_flag_level: 'WATCH' }),
+    createTestSymptom({ id: 'APT_006', domain: 'physical', category: 'appetite_weight', name: 'Fear of aversive food consequences', synonyms: ['choking fear', 'fear of vomiting from food', 'food phobia'], severity_red_flag_threshold: 7, severity_red_flag_level: 'WATCH' }),
   ];
 }
 
@@ -1575,6 +1620,574 @@ function createAllTestConditions(): ConditionWithMappings[] {
         { symptom_id: 'SOC_002', weight: 1, role: 'associated' },
         { symptom_id: 'ACT_002', weight: 1, role: 'associated' },
         { symptom_id: 'BDY_001', weight: 1, role: 'associated' },
+      ],
+      red_flags: [],
+    },
+
+    // ═══════════════════════════════════════════════════════════════════════
+    // PHASE 4 EXPANSION — 14 New Conditions
+    // ═══════════════════════════════════════════════════════════════════════
+
+    // ─────────────────────────────────────────────────────────────────────
+    // TIER 4: Personality Disorders
+    // ─────────────────────────────────────────────────────────────────────
+
+    // 32. NPD — Narcissistic Personality Disorder (10 mappings)
+    {
+      id: 'NPD',
+      name: 'Narcissistic Personality Patterns',
+      full_name: 'Narcissistic Personality Disorder',
+      category: 'personality',
+      description_for_user:
+        'A pattern of grandiosity, need for admiration, and lack of empathy. ' +
+        'These patterns are pervasive and can significantly affect relationships.',
+      minimum_duration: '1_year',
+      minimum_duration_display: 'At least 1 year',
+      minimum_symptoms_for_relevance: 4,
+      always_recommend_professional: true,
+      guide_path: '/learn/personality',
+      coping_path: '/tools/mood-journal',
+      provider_questions: [
+        'Could my interpersonal patterns indicate narcissistic traits?',
+        'What therapies address narcissistic personality patterns?',
+      ],
+      clinical_notes: 'DSM-5-TR 301.81. ICD-11 6D11.0.',
+      is_active: true,
+      version: '1.0.0',
+      symptom_mappings: [
+        // Core (weight 3)
+        { symptom_id: 'IDN_005', weight: 3, role: 'core' },   // Grandiosity
+        { symptom_id: 'IDN_006', weight: 3, role: 'core' },   // Lack of empathy
+        { symptom_id: 'IDN_007', weight: 3, role: 'core' },   // Need for admiration
+        { symptom_id: 'SOC_003', weight: 3, role: 'core' },   // Relationship difficulties
+        // Common (weight 2)
+        { symptom_id: 'EMR_002', weight: 2, role: 'common' }, // Irritability
+        { symptom_id: 'MOD_011', weight: 2, role: 'common' }, // Envy
+        { symptom_id: 'ANX_004', weight: 2, role: 'common' }, // Social anxiety (fragile self-esteem)
+        // Associated (weight 1)
+        { symptom_id: 'IDN_004', weight: 1, role: 'associated' }, // Splitting/black-and-white thinking
+        { symptom_id: 'PRC_006', weight: 1, role: 'associated' }, // Paranoid thinking
+        { symptom_id: 'ACT_010', weight: 1, role: 'associated' }, // Lying/manipulation
+      ],
+      red_flags: [],
+    },
+
+    // 33. ASPD — Antisocial Personality Disorder (10 mappings)
+    {
+      id: 'ASPD',
+      name: 'Antisocial Personality Patterns',
+      full_name: 'Antisocial Personality Disorder',
+      category: 'personality',
+      description_for_user:
+        'A pattern of disregard for and violation of the rights of others, often with impulsivity and deceit. ' +
+        'Professional evaluation can help understand these patterns.',
+      minimum_duration: '1_year',
+      minimum_duration_display: 'At least 1 year',
+      minimum_symptoms_for_relevance: 4,
+      always_recommend_professional: true,
+      guide_path: '/learn/personality',
+      coping_path: '/tools/mood-journal',
+      provider_questions: [
+        'Could my behavioral patterns indicate antisocial traits?',
+        'What treatments are available for antisocial personality patterns?',
+      ],
+      clinical_notes: 'DSM-5-TR 301.7. ICD-11 6D11.2.',
+      is_active: true,
+      version: '1.0.0',
+      symptom_mappings: [
+        // Core (weight 3)
+        { symptom_id: 'EMR_008', weight: 3, role: 'core' },   // Inability to conform to norms
+        { symptom_id: 'ACT_009', weight: 3, role: 'core' },   // Reckless behavior
+        { symptom_id: 'ACT_010', weight: 3, role: 'core' },   // Lying/manipulation
+        { symptom_id: 'IDN_006', weight: 3, role: 'core' },   // Lack of empathy
+        // Common (weight 2)
+        { symptom_id: 'EMR_002', weight: 2, role: 'common' }, // Irritability
+        { symptom_id: 'CPG_003', weight: 2, role: 'common' }, // Substance use
+        { symptom_id: 'ACT_004', weight: 2, role: 'common' }, // Impulsivity
+        // Associated (weight 1)
+        { symptom_id: 'SOC_006', weight: 1, role: 'associated' }, // Relationship conflict
+        { symptom_id: 'CPG_015', weight: 1, role: 'associated' }, // Explosive anger
+        { symptom_id: 'SOC_003', weight: 1, role: 'associated' }, // Relationship difficulties
+      ],
+      red_flags: [],
+    },
+
+    // 34. DPD — Dependent Personality Disorder (9 mappings)
+    {
+      id: 'DPD',
+      name: 'Dependent Personality Patterns',
+      full_name: 'Dependent Personality Disorder',
+      category: 'personality',
+      description_for_user:
+        'A pervasive and excessive need to be taken care of, leading to submissive and clinging behavior. ' +
+        'Therapy can help develop greater independence and self-confidence.',
+      minimum_duration: '1_year',
+      minimum_duration_display: 'At least 1 year',
+      minimum_symptoms_for_relevance: 4,
+      always_recommend_professional: false,
+      guide_path: '/learn/personality',
+      coping_path: '/tools/mood-journal',
+      provider_questions: [
+        'Could my need for reassurance indicate dependent personality patterns?',
+        'What therapies help develop greater independence?',
+      ],
+      clinical_notes: 'DSM-5-TR 301.6. ICD-11 6D10.',
+      is_active: true,
+      version: '1.0.0',
+      symptom_mappings: [
+        // Core (weight 3)
+        { symptom_id: 'IDN_008', weight: 3, role: 'core' },   // Submissiveness
+        { symptom_id: 'SOC_005', weight: 3, role: 'core' },   // Dependence on others
+        { symptom_id: 'IDN_002', weight: 3, role: 'core' },   // Fear of abandonment
+        { symptom_id: 'ANX_004', weight: 3, role: 'core' },   // Social anxiety
+        // Common (weight 2)
+        { symptom_id: 'MOD_007', weight: 2, role: 'common' }, // Low self-esteem
+        { symptom_id: 'ANX_001', weight: 2, role: 'common' }, // Excessive worry
+        // Associated (weight 1)
+        { symptom_id: 'SOC_003', weight: 1, role: 'associated' }, // Relationship difficulties
+        { symptom_id: 'MOD_001', weight: 1, role: 'associated' }, // Sadness
+        { symptom_id: 'COG_006', weight: 1, role: 'associated' }, // Indecisiveness
+      ],
+      red_flags: [],
+    },
+
+    // 35. SZPD — Schizoid Personality Disorder (9 mappings)
+    {
+      id: 'SZPD',
+      name: 'Schizoid Personality Patterns',
+      full_name: 'Schizoid Personality Disorder',
+      category: 'personality',
+      description_for_user:
+        'A pattern of detachment from social relationships and a restricted range of emotional expression. ' +
+        'Understanding these patterns can help clarify personal needs and preferences.',
+      minimum_duration: '1_year',
+      minimum_duration_display: 'At least 1 year',
+      minimum_symptoms_for_relevance: 3,
+      always_recommend_professional: false,
+      guide_path: '/learn/personality',
+      coping_path: '/tools/mood-journal',
+      provider_questions: [
+        'Could my social preferences indicate schizoid personality patterns?',
+        'Is my emotional detachment a concern?',
+      ],
+      clinical_notes: 'DSM-5-TR 301.20. ICD-11 6D10.',
+      is_active: true,
+      version: '1.0.0',
+      symptom_mappings: [
+        // Core (weight 3)
+        { symptom_id: 'SOC_009', weight: 3, role: 'core' },   // Emotional detachment from relationships
+        { symptom_id: 'MOD_004', weight: 3, role: 'core' },   // Emotional numbness
+        { symptom_id: 'SOC_001', weight: 3, role: 'core' },   // Social withdrawal
+        { symptom_id: 'MOD_003', weight: 3, role: 'core' },   // Loss of interest
+        // Common (weight 2)
+        { symptom_id: 'EMR_007', weight: 2, role: 'common' }, // Chronic emptiness
+        { symptom_id: 'MOD_007', weight: 2, role: 'common' }, // Low self-esteem
+        // Associated (weight 1)
+        { symptom_id: 'SOC_002', weight: 1, role: 'associated' }, // Avoiding social situations
+        { symptom_id: 'ACT_003', weight: 1, role: 'associated' }, // Difficulty maintaining routines
+        { symptom_id: 'ENR_001', weight: 1, role: 'associated' }, // Fatigue
+      ],
+      red_flags: [],
+    },
+
+    // ─────────────────────────────────────────────────────────────────────
+    // TIER 4: Trauma/Dissociative
+    // ─────────────────────────────────────────────────────────────────────
+
+    // 36. CPTSD — Complex PTSD (12 mappings)
+    {
+      id: 'CPTSD',
+      name: 'Complex Trauma Response',
+      full_name: 'Complex Post-Traumatic Stress Disorder',
+      category: 'trauma',
+      description_for_user:
+        'In addition to classic trauma symptoms, complex PTSD includes difficulties with emotional regulation, ' +
+        'self-concept, and relationships — often arising from prolonged or repeated trauma.',
+      minimum_duration: '6_months',
+      minimum_duration_display: 'At least 6 months',
+      minimum_symptoms_for_relevance: 4,
+      always_recommend_professional: true,
+      guide_path: '/learn/conditions/complex-ptsd',
+      coping_path: '/learn/coping/trauma-strategies',
+      provider_questions: [
+        'Could my symptoms indicate complex trauma?',
+        'What is the difference between PTSD and complex PTSD?',
+        'What therapies are most effective for complex trauma?',
+      ],
+      clinical_notes: 'ICD-11 6B41. Not in DSM-5-TR as separate diagnosis but recognized clinically. Requires PTSD symptoms plus disturbances in self-organization.',
+      is_active: true,
+      version: '1.0.0',
+      symptom_mappings: [
+        // Core (weight 3)
+        { symptom_id: 'EMR_003', weight: 3, role: 'core' },   // Flashbacks
+        { symptom_id: 'COG_013', weight: 3, role: 'core' },   // Emotional dysregulation
+        { symptom_id: 'IDN_001', weight: 3, role: 'core' },   // Unstable identity
+        { symptom_id: 'SOC_003', weight: 3, role: 'core' },   // Relationship difficulties
+        // Common (weight 2)
+        { symptom_id: 'ANX_005', weight: 2, role: 'common' }, // Hypervigilance
+        { symptom_id: 'EMR_006', weight: 2, role: 'common' }, // Shame
+        { symptom_id: 'CPG_001', weight: 2, role: 'common' }, // Avoidance
+        { symptom_id: 'MOD_004', weight: 2, role: 'common' }, // Emotional numbness
+        // Associated (weight 1)
+        { symptom_id: 'SLP_004', weight: 1, role: 'associated' }, // Nightmares
+        { symptom_id: 'SLP_001', weight: 1, role: 'associated' }, // Insomnia
+        { symptom_id: 'SOC_001', weight: 1, role: 'associated' }, // Social withdrawal
+        { symptom_id: 'MOD_002', weight: 1, role: 'associated' }, // Hopelessness
+      ],
+      red_flags: [
+        { symptom_id: 'COG_008', note: 'Self-harm ideation may co-occur with complex trauma' },
+        { symptom_id: 'COG_009', note: 'Suicidal ideation requires immediate crisis intervention' },
+      ],
+    },
+
+    // 37. DID — Dissociative Identity Disorder (6 mappings)
+    {
+      id: 'DID',
+      name: 'Dissociative Identity',
+      full_name: 'Dissociative Identity Disorder',
+      category: 'dissociative',
+      description_for_user:
+        'A complex condition involving disruption of identity characterized by two or more distinct personality states. ' +
+        'Professional evaluation and specialized treatment are strongly recommended.',
+      minimum_duration: '3_months',
+      minimum_duration_display: 'At least 3 months',
+      minimum_symptoms_for_relevance: 2,
+      always_recommend_professional: true,
+      guide_path: '/learn/dissociation',
+      coping_path: '/tools/mood-journal',
+      provider_questions: [
+        'Could my experiences indicate dissociative identity disorder?',
+        'What specialized treatments are available for DID?',
+        'How can I find a dissociation specialist?',
+      ],
+      clinical_notes: 'DSM-5-TR 300.14. ICD-11 6B64. Requires disruption of identity with two or more distinct personality states.',
+      is_active: true,
+      version: '1.0.0',
+      symptom_mappings: [
+        // Core (weight 3)
+        { symptom_id: 'PRC_008', weight: 3, role: 'core' },   // Identity switching (URGENT red flag)
+        { symptom_id: 'PRC_009', weight: 3, role: 'core' },   // Dissociative amnesia
+        { symptom_id: 'COG_004', weight: 3, role: 'core' },   // Memory problems
+        { symptom_id: 'PRC_002', weight: 3, role: 'core' },   // Depersonalization
+        // Common (weight 2)
+        { symptom_id: 'EMR_003', weight: 2, role: 'common' }, // Flashbacks
+        // Associated (weight 1)
+        { symptom_id: 'PRC_001', weight: 1, role: 'associated' }, // Derealization
+      ],
+      red_flags: [
+        { symptom_id: 'PRC_008', note: 'Identity switching requires urgent specialized evaluation' },
+      ],
+    },
+
+    // 38. OSDD — Other Specified Dissociative Disorder (7 mappings)
+    {
+      id: 'OSDD',
+      name: 'Other Dissociative Experiences',
+      full_name: 'Other Specified Dissociative Disorder',
+      category: 'dissociative',
+      description_for_user:
+        'Dissociative experiences that cause significant distress but do not fully meet criteria for a specific ' +
+        'dissociative disorder. Professional evaluation can help clarify these experiences.',
+      minimum_duration: '1_month',
+      minimum_duration_display: 'At least 1 month',
+      minimum_symptoms_for_relevance: 2,
+      always_recommend_professional: true,
+      guide_path: '/learn/dissociation',
+      coping_path: '/tools/mood-journal',
+      provider_questions: [
+        'Could my dissociative experiences indicate OSDD?',
+        'What is the difference between OSDD and DID?',
+      ],
+      clinical_notes: 'DSM-5-TR 300.15. ICD-11 6B6Y. Subthreshold dissociative presentations.',
+      is_active: true,
+      version: '1.0.0',
+      symptom_mappings: [
+        // Core (weight 3)
+        { symptom_id: 'PRC_009', weight: 3, role: 'core' },   // Dissociative amnesia
+        { symptom_id: 'PRC_002', weight: 3, role: 'core' },   // Depersonalization
+        { symptom_id: 'PRC_001', weight: 3, role: 'core' },   // Derealization
+        // Common (weight 2)
+        { symptom_id: 'COG_004', weight: 2, role: 'common' }, // Memory problems
+        { symptom_id: 'EMR_003', weight: 2, role: 'common' }, // Flashbacks
+        // Associated (weight 1)
+        { symptom_id: 'EMR_005', weight: 1, role: 'associated' }, // Feeling detached
+        { symptom_id: 'MOD_004', weight: 1, role: 'associated' }, // Emotional numbness
+      ],
+      red_flags: [],
+    },
+
+    // 39. ASD_ACUTE — Acute Stress Disorder (9 mappings)
+    {
+      id: 'ASD_ACUTE',
+      name: 'Acute Stress Response',
+      full_name: 'Acute Stress Disorder',
+      category: 'trauma',
+      description_for_user:
+        'A short-term condition that can develop after exposure to a traumatic event, lasting from 3 days to 1 month. ' +
+        'Early intervention can prevent progression to PTSD.',
+      minimum_duration: '1_week',
+      minimum_duration_display: '3 days to 1 month after trauma',
+      minimum_symptoms_for_relevance: 3,
+      always_recommend_professional: true,
+      guide_path: '/learn/conditions/acute-stress',
+      coping_path: '/learn/coping/trauma-strategies',
+      provider_questions: [
+        'Could my reaction to a recent event be acute stress disorder?',
+        'How can early treatment prevent PTSD?',
+      ],
+      clinical_notes: 'DSM-5-TR 308.3. ICD-11 QE84. Duration 3 days to 1 month post-trauma.',
+      is_active: true,
+      version: '1.0.0',
+      symptom_mappings: [
+        // Core (weight 3)
+        { symptom_id: 'EMR_003', weight: 3, role: 'core' },   // Flashbacks
+        { symptom_id: 'ANX_005', weight: 3, role: 'core' },   // Hypervigilance
+        { symptom_id: 'CPG_001', weight: 3, role: 'core' },   // Avoidance
+        { symptom_id: 'PRC_009', weight: 3, role: 'core' },   // Dissociative amnesia
+        // Common (weight 2)
+        { symptom_id: 'SLP_004', weight: 2, role: 'common' }, // Nightmares
+        { symptom_id: 'PRC_001', weight: 2, role: 'common' }, // Derealization
+        { symptom_id: 'PRC_002', weight: 2, role: 'common' }, // Depersonalization
+        // Associated (weight 1)
+        { symptom_id: 'EMR_002', weight: 1, role: 'associated' }, // Irritability
+        { symptom_id: 'COG_001', weight: 1, role: 'associated' }, // Difficulty concentrating
+      ],
+      red_flags: [],
+    },
+
+    // ─────────────────────────────────────────────────────────────────────
+    // TIER 5: OCD/Impulse Control
+    // ─────────────────────────────────────────────────────────────────────
+
+    // 40. TTM — Trichotillomania (7 mappings)
+    {
+      id: 'TTM',
+      name: 'Hair-Pulling',
+      full_name: 'Trichotillomania (Hair-Pulling Disorder)',
+      category: 'obsessive_compulsive',
+      description_for_user:
+        'Recurrent pulling out of hair resulting in hair loss, despite repeated attempts to stop. ' +
+        'Behavioral therapies like habit reversal training are effective treatments.',
+      minimum_duration: '3_months',
+      minimum_duration_display: 'At least 3 months',
+      minimum_symptoms_for_relevance: 2,
+      always_recommend_professional: false,
+      guide_path: '/learn/conditions/trichotillomania',
+      coping_path: '/tools/mood-journal',
+      provider_questions: [
+        'Could my hair-pulling be trichotillomania?',
+        'What is habit reversal training?',
+      ],
+      clinical_notes: 'DSM-5-TR 312.39. ICD-11 6B25.0. Body-focused repetitive behavior disorder.',
+      is_active: true,
+      version: '1.0.0',
+      symptom_mappings: [
+        // Core (weight 3)
+        { symptom_id: 'CPG_013', weight: 3, role: 'core' },   // Hair pulling
+        { symptom_id: 'ANX_001', weight: 3, role: 'core' },   // Worry/tension
+        { symptom_id: 'CPG_002', weight: 3, role: 'core' },   // Compulsive behaviors
+        // Common (weight 2)
+        { symptom_id: 'EMR_006', weight: 2, role: 'common' }, // Shame
+        { symptom_id: 'ANX_006', weight: 2, role: 'common' }, // Fear of losing control
+        // Associated (weight 1)
+        { symptom_id: 'SOC_002', weight: 1, role: 'associated' }, // Avoiding social situations
+        { symptom_id: 'MOD_007', weight: 1, role: 'associated' }, // Low self-esteem
+      ],
+      red_flags: [],
+    },
+
+    // 41. SPD_EXCOR — Excoriation (Skin-Picking) Disorder (7 mappings)
+    {
+      id: 'SPD_EXCOR',
+      name: 'Skin-Picking',
+      full_name: 'Excoriation (Skin-Picking) Disorder',
+      category: 'obsessive_compulsive',
+      description_for_user:
+        'Recurrent picking at skin resulting in skin lesions, despite repeated attempts to stop. ' +
+        'Behavioral therapies like habit reversal training are effective treatments.',
+      minimum_duration: '3_months',
+      minimum_duration_display: 'At least 3 months',
+      minimum_symptoms_for_relevance: 2,
+      always_recommend_professional: false,
+      guide_path: '/learn/conditions/excoriation',
+      coping_path: '/tools/mood-journal',
+      provider_questions: [
+        'Could my skin-picking be excoriation disorder?',
+        'What treatments are available for skin-picking?',
+      ],
+      clinical_notes: 'DSM-5-TR 698.4. ICD-11 6B25.1. Body-focused repetitive behavior disorder.',
+      is_active: true,
+      version: '1.0.0',
+      symptom_mappings: [
+        // Core (weight 3)
+        { symptom_id: 'CPG_014', weight: 3, role: 'core' },   // Skin picking
+        { symptom_id: 'ANX_001', weight: 3, role: 'core' },   // Worry/tension
+        { symptom_id: 'CPG_002', weight: 3, role: 'core' },   // Compulsive behaviors
+        // Common (weight 2)
+        { symptom_id: 'EMR_006', weight: 2, role: 'common' }, // Shame
+        { symptom_id: 'ANX_006', weight: 2, role: 'common' }, // Fear of losing control
+        // Associated (weight 1)
+        { symptom_id: 'SOC_002', weight: 1, role: 'associated' }, // Avoiding social situations
+        { symptom_id: 'MOD_007', weight: 1, role: 'associated' }, // Low self-esteem
+      ],
+      red_flags: [],
+    },
+
+    // 42. IED — Intermittent Explosive Disorder (8 mappings)
+    {
+      id: 'IED',
+      name: 'Intermittent Explosive Disorder',
+      full_name: 'Intermittent Explosive Disorder',
+      category: 'obsessive_compulsive',
+      description_for_user:
+        'Recurrent behavioral outbursts representing a failure to control aggressive impulses. ' +
+        'The outbursts are out of proportion to the situation and may be followed by remorse.',
+      minimum_duration: '3_months',
+      minimum_duration_display: 'At least 3 months',
+      minimum_symptoms_for_relevance: 2,
+      always_recommend_professional: true,
+      guide_path: '/learn/conditions/impulse-control',
+      coping_path: '/tools/mood-journal',
+      provider_questions: [
+        'Could my explosive outbursts indicate IED?',
+        'What treatments help manage explosive anger?',
+      ],
+      clinical_notes: 'DSM-5-TR 312.34. ICD-11 6C73. Requires recurrent outbursts over 3 months.',
+      is_active: true,
+      version: '1.0.0',
+      symptom_mappings: [
+        // Core (weight 3)
+        { symptom_id: 'CPG_015', weight: 3, role: 'core' },   // Explosive anger
+        { symptom_id: 'EMR_002', weight: 3, role: 'core' },   // Irritability
+        { symptom_id: 'ACT_004', weight: 3, role: 'core' },   // Impulsivity
+        // Common (weight 2)
+        { symptom_id: 'SOC_006', weight: 2, role: 'common' }, // Relationship conflict
+        { symptom_id: 'MOD_006', weight: 2, role: 'common' }, // Guilt
+        // Associated (weight 1)
+        { symptom_id: 'SOC_003', weight: 1, role: 'associated' }, // Relationship difficulties
+        { symptom_id: 'ACT_009', weight: 1, role: 'associated' }, // Reckless behavior
+        { symptom_id: 'ENR_002', weight: 1, role: 'associated' }, // Restlessness
+      ],
+      red_flags: [],
+    },
+
+    // ─────────────────────────────────────────────────────────────────────
+    // TIER 6: Extensions
+    // ─────────────────────────────────────────────────────────────────────
+
+    // 43. HYPER — Hypersomnolence Disorder (8 mappings)
+    {
+      id: 'HYPER',
+      name: 'Hypersomnolence',
+      full_name: 'Hypersomnolence Disorder',
+      category: 'sleep',
+      description_for_user:
+        'Excessive sleepiness despite a main sleep period lasting at least 7 hours. ' +
+        'Characterized by difficulty waking, daytime sleepiness, or prolonged nonrestorative naps.',
+      minimum_duration: '3_months',
+      minimum_duration_display: 'At least 3 months',
+      minimum_symptoms_for_relevance: 2,
+      always_recommend_professional: true,
+      guide_path: '/learn/conditions/hypersomnolence',
+      coping_path: '/tools/sleep-architect',
+      provider_questions: [
+        'Could my excessive sleepiness indicate hypersomnolence disorder?',
+        'Should I have a sleep study?',
+      ],
+      clinical_notes: 'DSM-5-TR 780.54. ICD-11 7A20. Requires excessive sleepiness at least 3 times/week for 3+ months.',
+      is_active: true,
+      version: '1.0.0',
+      symptom_mappings: [
+        // Core (weight 3)
+        { symptom_id: 'SLP_006', weight: 3, role: 'core' },   // Excessive daytime sleepiness
+        { symptom_id: 'SLP_008', weight: 3, role: 'core' },   // Long sleep duration
+        { symptom_id: 'SLP_007', weight: 3, role: 'core' },   // Sleep inertia
+        // Common (weight 2)
+        { symptom_id: 'ENR_001', weight: 2, role: 'common' }, // Fatigue
+        { symptom_id: 'COG_003', weight: 2, role: 'common' }, // Brain fog
+        // Associated (weight 1)
+        { symptom_id: 'COG_001', weight: 1, role: 'associated' }, // Difficulty concentrating
+        { symptom_id: 'MOD_003', weight: 1, role: 'associated' }, // Loss of interest
+        { symptom_id: 'ACT_002', weight: 1, role: 'associated' }, // Neglecting responsibilities
+      ],
+      red_flags: [],
+    },
+
+    // 44. ARFID — Avoidant/Restrictive Food Intake Disorder (7 mappings)
+    {
+      id: 'ARFID',
+      name: 'Avoidant/Restrictive Eating',
+      full_name: 'Avoidant/Restrictive Food Intake Disorder',
+      category: 'eating',
+      description_for_user:
+        'An eating disturbance based on sensory sensitivity, fear of aversive consequences of eating, or lack of interest ' +
+        'in food — not driven by body image concerns. Professional evaluation is recommended.',
+      minimum_duration: '1_month',
+      minimum_duration_display: 'At least 1 month',
+      minimum_symptoms_for_relevance: 2,
+      always_recommend_professional: true,
+      guide_path: '/learn/conditions/arfid',
+      coping_path: '/tools/mood-journal',
+      provider_questions: [
+        'Could my food avoidance be ARFID?',
+        'How is ARFID different from anorexia?',
+        'What treatments are available for ARFID?',
+      ],
+      clinical_notes: 'DSM-5-TR 307.59. ICD-11 6B83. Distinguished from AN by absence of body image disturbance.',
+      is_active: true,
+      version: '1.0.0',
+      symptom_mappings: [
+        // Core (weight 3)
+        { symptom_id: 'APT_005', weight: 3, role: 'core' },   // Sensory-based food avoidance
+        { symptom_id: 'APT_006', weight: 3, role: 'core' },   // Fear of aversive consequences
+        { symptom_id: 'APT_001', weight: 3, role: 'core' },   // Loss of appetite
+        // Common (weight 2)
+        { symptom_id: 'ANX_001', weight: 2, role: 'common' }, // Worry about eating
+        { symptom_id: 'APT_003', weight: 2, role: 'common' }, // Weight changes
+        // Associated (weight 1)
+        { symptom_id: 'ENR_001', weight: 1, role: 'associated' }, // Fatigue
+        { symptom_id: 'SOC_001', weight: 1, role: 'associated' }, // Social withdrawal (around food)
+      ],
+      red_flags: [],
+    },
+
+    // 45. CYC — Cyclothymic Disorder (10 mappings)
+    {
+      id: 'CYC',
+      name: 'Cyclothymia',
+      full_name: 'Cyclothymic Disorder',
+      category: 'mood',
+      description_for_user:
+        'A chronic pattern of mood instability involving numerous periods of hypomanic and depressive symptoms ' +
+        'that do not meet criteria for full manic or depressive episodes.',
+      minimum_duration: '2_years',
+      minimum_duration_display: 'At least 2 years',
+      minimum_symptoms_for_relevance: 3,
+      always_recommend_professional: false,
+      guide_path: '/learn/conditions/cyclothymia',
+      coping_path: '/tools/mood-journal',
+      provider_questions: [
+        'Could my mood cycling be cyclothymia?',
+        'How is cyclothymia different from bipolar disorder?',
+        'What treatments are effective for cyclothymic patterns?',
+      ],
+      clinical_notes: 'DSM-5-TR 301.13. ICD-11 6A62. Chronic fluctuating mood for at least 2 years with numerous hypomanic and depressive periods.',
+      is_active: true,
+      version: '1.0.0',
+      symptom_mappings: [
+        // Core (weight 3)
+        { symptom_id: 'MOD_010', weight: 3, role: 'core' },   // Hypomania
+        { symptom_id: 'MOD_001', weight: 3, role: 'core' },   // Sadness
+        { symptom_id: 'EMR_001', weight: 3, role: 'core' },   // Mood swings
+        { symptom_id: 'ENR_001', weight: 3, role: 'core' },   // Fatigue
+        // Common (weight 2)
+        { symptom_id: 'SLP_001', weight: 2, role: 'common' }, // Insomnia
+        { symptom_id: 'COG_002', weight: 2, role: 'common' }, // Racing thoughts
+        { symptom_id: 'SLP_002', weight: 2, role: 'common' }, // Oversleeping
+        // Associated (weight 1)
+        { symptom_id: 'COG_001', weight: 1, role: 'associated' }, // Difficulty concentrating
+        { symptom_id: 'MOD_003', weight: 1, role: 'associated' }, // Loss of interest
+        { symptom_id: 'SOC_003', weight: 1, role: 'associated' }, // Relationship difficulties
       ],
       red_flags: [],
     },

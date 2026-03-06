@@ -10,3 +10,4 @@ export interface BaseProps {
 }
 
 export * from './models';
+export * from './admin';

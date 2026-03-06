@@ -267,7 +267,7 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
 
   // Desktop: sidebar
   return (
-    <aside className="w-[280px] flex-shrink-0 hidden lg:block">
+    <aside className="w-[280px] flex-shrink-0 hidden">{/* Hidden: re-enable when filters are refined */}
       <div className="sticky top-28 bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 p-5 max-h-[calc(100vh-8rem)] overflow-y-auto">
         <h3 className="font-display font-bold text-sm text-gray-900 dark:text-white mb-5 flex items-center gap-2">
           <SlidersHorizontal size={16} />

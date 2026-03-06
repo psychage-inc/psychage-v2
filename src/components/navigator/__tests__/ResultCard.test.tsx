@@ -51,10 +51,10 @@ describe('ResultCard', () => {
 
     it('expands to show all symptoms when toggle button clicked', async () => {
         const user = userEvent.setup();
-        render(<ResultCard result={mockResult} />);
+        const { container } = render(<ResultCard result={mockResult} />);
 
-        // Click the expand button
-        const expandButton = screen.getByRole('button', { name: /show all 5/i });
+        // Target the native <button> element (not the Card div[role=button])
+        const expandButton = container.querySelector('button[aria-expanded]') as HTMLElement;
         await user.click(expandButton);
 
         // All symptoms should now be visible
@@ -70,14 +70,14 @@ describe('ResultCard', () => {
 
     it('collapses back when toggle button clicked again', async () => {
         const user = userEvent.setup();
-        render(<ResultCard result={mockResult} />);
+        const { container } = render(<ResultCard result={mockResult} />);
 
         // Expand
-        const expandButton = screen.getByRole('button', { name: /show all 5/i });
+        const expandButton = container.querySelector('button[aria-expanded]') as HTMLElement;
         await user.click(expandButton);
 
         // Collapse
-        const collapseButton = screen.getByRole('button', { name: /show less/i });
+        const collapseButton = container.querySelector('button[aria-expanded]') as HTMLElement;
         await user.click(collapseButton);
 
         // Should be back to showing only 3
@@ -88,14 +88,13 @@ describe('ResultCard', () => {
 
     it('has correct aria-expanded state', async () => {
         const user = userEvent.setup();
-        render(<ResultCard result={mockResult} />);
+        const { container } = render(<ResultCard result={mockResult} />);
 
-        const toggleButton = screen.getByRole('button', { name: /show all 5/i });
+        const toggleButton = container.querySelector('button[aria-expanded]') as HTMLElement;
         expect(toggleButton).toHaveAttribute('aria-expanded', 'false');
 
         await user.click(toggleButton);
-        const collapseButton = screen.getByRole('button', { name: /show less/i });
-        expect(collapseButton).toHaveAttribute('aria-expanded', 'true');
+        expect(toggleButton).toHaveAttribute('aria-expanded', 'true');
     });
 
     it('does not show expand button when 3 or fewer symptoms', () => {
@@ -120,8 +119,9 @@ describe('ResultCard', () => {
 
         render(<ResultCard result={mockResult} onClick={handleClick} />);
 
-        const card = screen.getByRole('button');
-        await user.click(card);
+        // Card is the first button in the DOM
+        const buttons = screen.getAllByRole('button');
+        await user.click(buttons[0]);
 
         expect(handleClick).toHaveBeenCalled();
     });
@@ -132,8 +132,9 @@ describe('ResultCard', () => {
 
         render(<ResultCard result={mockResult} onClick={handleClick} />);
 
-        const card = screen.getByRole('button');
-        card.focus();
+        // Card is the first button in the DOM
+        const buttons = screen.getAllByRole('button');
+        buttons[0].focus();
 
         await user.keyboard('{Enter}');
         expect(handleClick).toHaveBeenCalled();

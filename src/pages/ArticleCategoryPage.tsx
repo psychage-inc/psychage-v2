@@ -7,8 +7,6 @@ import { articleService } from '../services/articleService';
 import { categoryService } from '../services/categoryService';
 import { Article, Category } from '../types/models';
 import ArticleCard from '../components/article/ArticleCard';
-import MeshGradient from '../components/ui/MeshGradient';
-
 const ArticleCategoryPage: React.FC = () => {
     const { categorySlug } = useParams<{ categorySlug: string }>();
     const navigate = useNavigate();
@@ -45,8 +43,7 @@ const ArticleCategoryPage: React.FC = () => {
     if (!category) {
         return (
             <div className="min-h-screen flex flex-col items-center justify-center bg-background">
-                <MeshGradient className="opacity-20" />
-                <h1 className="text-2xl font-bold text-text-primary mb-4 z-10">Category not found</h1>
+                                <h1 className="text-2xl font-bold text-text-primary mb-4 z-10">Category not found</h1>
                 <button
                     onClick={() => navigate('/learn')}
                     className="text-primary font-bold hover:underline z-10"
@@ -70,9 +67,7 @@ const ArticleCategoryPage: React.FC = () => {
 
             {/* Hero Section */}
             <section className={`relative pt-32 pb-20 px-6 min-h-[50vh] flex flex-col justify-center overflow-hidden`}>
-                <MeshGradient className="opacity-40 pointer-events-none" />
-
-                {/* Category specific ambient glow */}
+                                {/* Category specific ambient glow */}
                 <div className={`absolute top-0 left-1/2 -translate-x-1/2 w-full h-full ${category.color} opacity-10 blur-[100px] pointer-events-none`} />
 
                 <div className="container mx-auto max-w-7xl relative z-10">

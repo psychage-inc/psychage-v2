@@ -13,8 +13,7 @@
 
 import { describe, it, expect, beforeAll, vi } from 'vitest';
 import { runSymptomNavigator } from '@/lib/navigator/engine';
-import { calculateConditionScore, rankAndDiversify, scoreAllConditions } from '@/lib/navigator/scoring';
-import { normalizeSymptoms, DEFAULT_MATCHING_CONFIG } from '@/lib/navigator/utils';
+import { normalizeSymptoms } from '@/lib/navigator/utils';
 import { screenRedFlags } from '@/lib/navigator/safety';
 import type {
   KnowledgeBase,

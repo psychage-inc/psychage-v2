@@ -2,6 +2,8 @@
 // All types, constants, and distortion data
 
 export type ReframerMode = 'guided' | 'quick';
+export type ReframeTone = 'gentle' | 'direct' | 'compassionate' | 'evidence-based';
+export type ReframeStyle = 'balanced' | 'alternative' | 'self-compassion' | 'action-focused';
 
 export interface EmotionRating {
   name: string;
@@ -18,7 +20,11 @@ export interface ThoughtRecord {
   distortions: string[]; // distortion IDs
   evidenceFor: string;
   evidenceAgainst: string;
+  tone: ReframeTone;
+  reframingStyle: ReframeStyle;
   balancedThought: string;
+  actionableStep: string;
+  mantra: string;
   emotionsAfter: EmotionRating[];
   completed: boolean;
 }
@@ -145,6 +151,74 @@ export const CRISIS_KEYWORDS: string[] = [
   'me tuer', 'me suicider', 'envie de mourir',
 ];
 
+export interface ToneOption {
+  id: ReframeTone;
+  label: string;
+  description: string;
+  prompt: string;
+}
+
+export interface StyleOption {
+  id: ReframeStyle;
+  label: string;
+  description: string;
+  prompt: string;
+}
+
+export const REFRAME_TONES: ToneOption[] = [
+  {
+    id: 'gentle',
+    label: 'Gentle',
+    description: 'Warm and understanding',
+    prompt: 'Try writing as if you\'re comforting a close friend — soft, warm, and understanding.',
+  },
+  {
+    id: 'direct',
+    label: 'Direct',
+    description: 'Clear and honest',
+    prompt: 'Be straightforward with yourself. What\'s the plain truth of the matter?',
+  },
+  {
+    id: 'compassionate',
+    label: 'Compassionate',
+    description: 'Kind self-talk',
+    prompt: 'Speak to yourself with the kindness you\'d offer someone you care about deeply.',
+  },
+  {
+    id: 'evidence-based',
+    label: 'Evidence-Based',
+    description: 'Logical and factual',
+    prompt: 'Focus on what the objective facts and evidence actually tell you.',
+  },
+];
+
+export const REFRAME_STYLES: StyleOption[] = [
+  {
+    id: 'balanced',
+    label: 'Balanced Thought',
+    description: 'Weigh both sides fairly',
+    prompt: 'Write a thought that acknowledges both the difficult parts and the parts you might be overlooking.',
+  },
+  {
+    id: 'alternative',
+    label: 'Alternative View',
+    description: 'A different explanation',
+    prompt: 'What\'s another way to interpret this situation that you haven\'t considered?',
+  },
+  {
+    id: 'self-compassion',
+    label: 'Self-Compassion',
+    description: 'Be kind to yourself',
+    prompt: 'What would you say to yourself if you were being truly kind and forgiving?',
+  },
+  {
+    id: 'action-focused',
+    label: 'Action-Focused',
+    description: 'What you can do next',
+    prompt: 'Instead of dwelling on the thought, what constructive step can you take from here?',
+  },
+];
+
 export const DEFAULT_THOUGHT_RECORD: Omit<ThoughtRecord, 'id' | 'createdAt'> = {
   mode: 'guided',
   situation: '',
@@ -153,7 +227,11 @@ export const DEFAULT_THOUGHT_RECORD: Omit<ThoughtRecord, 'id' | 'createdAt'> = {
   distortions: [],
   evidenceFor: '',
   evidenceAgainst: '',
+  tone: 'gentle',
+  reframingStyle: 'balanced',
   balancedThought: '',
+  actionableStep: '',
+  mantra: '',
   emotionsAfter: [],
   completed: false,
 };

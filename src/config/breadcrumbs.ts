@@ -80,6 +80,10 @@ export const breadcrumbConfig: Record<string, BreadcrumbItem[]> = {
         { label: 'Clarity Journal', href: '/tools/clarity-journal' },
         { label: 'Insights' }
     ],
+    '/tools/thought-reframer': [
+        { label: 'Tools', href: '/tools' },
+        { label: 'Thought Reframer' }
+    ],
 
     // Dashboard sections
     '/dashboard': [{ label: 'Dashboard' }],
@@ -143,5 +147,22 @@ export const breadcrumbConfig: Record<string, BreadcrumbItem[]> = {
     '/admin/audit': [
         { label: 'Admin Dashboard', href: '/admin' },
         { label: 'Audit Logs' }
+    ],
+    '/admin/analytics': [
+        { label: 'Admin Dashboard', href: '/admin' },
+        { label: 'Analytics' }
+    ],
+    '/admin/content': [
+        { label: 'Admin Dashboard', href: '/admin' },
+        { label: 'Content' }
+    ],
+    '/admin/settings': [
+        { label: 'Admin Dashboard', href: '/admin' },
+        { label: 'Settings' }
+    ],
+    '/admin/users/:id': [
+        { label: 'Admin Dashboard', href: '/admin' },
+        { label: 'Users', href: '/admin/users' },
+        { label: 'User Details' }
     ],
 };

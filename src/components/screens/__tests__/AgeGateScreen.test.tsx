@@ -82,8 +82,9 @@ describe('UnderageNoticeScreen', () => {
     it('suggests talking to trusted adults', () => {
         render(<UnderageNoticeScreen onBack={vi.fn()} />);
 
-        expect(screen.getByText(/parent/i)).toBeInTheDocument();
-        expect(screen.getByText(/guardian/i)).toBeInTheDocument();
-        expect(screen.getByText(/school counselor/i)).toBeInTheDocument();
+        // "parent" may appear in multiple places — verify at least one exists
+        expect(screen.getAllByText(/parent/i).length).toBeGreaterThanOrEqual(1);
+        expect(screen.getAllByText(/guardian/i).length).toBeGreaterThanOrEqual(1);
+        expect(screen.getAllByText(/school counselor/i).length).toBeGreaterThanOrEqual(1);
     });
 });

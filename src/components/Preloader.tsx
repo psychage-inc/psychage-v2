@@ -16,6 +16,7 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const animationRef = useRef<AnimationItem | null>(null);
     const hasCompleted = useRef(false);
+    const exitTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
     const onCompleteRef = useRef(onComplete);
     onCompleteRef.current = onComplete;
 
@@ -67,7 +68,7 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
             setProgress(100);
 
             // Wait briefly at 100% before exiting
-            setTimeout(() => {
+            exitTimeoutRef.current = setTimeout(() => {
                 setPhase('exiting');
                 sessionStorage.setItem(STORAGE_KEY, 'true');
             }, 500);
@@ -78,6 +79,7 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
         return () => {
             anim.destroy();
             animationRef.current = null;
+            if (exitTimeoutRef.current) clearTimeout(exitTimeoutRef.current);
         };
     }, [phase]);
 
@@ -88,13 +90,16 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
             if (!hasCompleted.current) {
                 hasCompleted.current = true;
                 setProgress(100);
-                setTimeout(() => {
+                exitTimeoutRef.current = setTimeout(() => {
                     setPhase('exiting');
                     sessionStorage.setItem(STORAGE_KEY, 'true');
                 }, 500);
             }
         }, 5000);
-        return () => clearTimeout(timeout);
+        return () => {
+            clearTimeout(timeout);
+            if (exitTimeoutRef.current) clearTimeout(exitTimeoutRef.current);
+        };
     }, [phase]);
 
     // Exit-phase: fade out then signal completion

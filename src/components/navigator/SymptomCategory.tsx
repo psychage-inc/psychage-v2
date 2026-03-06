@@ -28,7 +28,7 @@ export const SymptomCategory: React.FC<SymptomCategoryProps> = ({
     const [isExpanded, setIsExpanded] = useState(initiallyExpanded);
 
     return (
-        <div className="border border-border rounded-2xl overflow-hidden bg-surface/50 backdrop-blur-xl shadow-lg transition-all duration-500">
+        <div className="border border-border rounded-2xl overflow-hidden bg-surface/50 backdrop-blur-xl transition-all duration-500">
             <button
                 onClick={() => setIsExpanded(!isExpanded)}
                 className="w-full flex items-center justify-between p-5 focus-visible:outline-none focus-visible:bg-surface-hover hover:bg-surface-hover/50 transition-all duration-300"

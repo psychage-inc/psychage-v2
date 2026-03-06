@@ -1,6 +1,6 @@
 import React, { Suspense, useState } from 'react';
 import { MotionConfig } from 'framer-motion';
-import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import { Routes, Route, useLocation, useNavigate, Navigate } from 'react-router-dom';
 import { Toaster } from 'sonner';
 import Navigation from './components/layout/Navigation';
 import Footer from './components/layout/Footer';
@@ -9,9 +9,9 @@ import ProductShowcase from './components/home/ProductShowcase';
 import HowItWorksSection from './components/home/HowItWorksSection';
 import FeatureSpotlight from './components/home/FeatureSpotlight';
 import ContentPreview from './components/home/ContentPreview';
-import TrustSection from './components/home/TrustSection';
 import NewsletterSection from './components/home/NewsletterSection';
 import MindMate from './components/ai/MindMate';
+import CookieConsent from './components/ui/CookieConsent';
 import NotFoundPage from './components/pages/NotFoundPage';
 import ErrorBoundary from './components/error/ErrorBoundary';
 import { BookmarkProvider } from './context/BookmarkContext';
@@ -72,6 +72,7 @@ const AuthCallback = React.lazy(() => import('./pages/auth/AuthCallback'));
 // User Dashboard
 const UserDashboard = React.lazy(() => import('./pages/dashboard/UserDashboard'));
 const AccountSettings = React.lazy(() => import('./pages/dashboard/AccountSettings'));
+const PrivacySettings = React.lazy(() => import('./pages/dashboard/PrivacySettings'));
 const BookmarksPage = React.lazy(() => import('./pages/dashboard/BookmarksPage'));
 const AssessmentHistory = React.lazy(() => import('./pages/dashboard/AssessmentHistory'));
 
@@ -84,6 +85,10 @@ const ReportsPage = React.lazy(() => import('./pages/admin/ReportsPage'));
 const ReportDetailPage = React.lazy(() => import('./pages/admin/ReportDetailPage'));
 const UserManagementPage = React.lazy(() => import('./pages/admin/UserManagementPage'));
 const AdminOnboarding = React.lazy(() => import('./pages/admin/AdminOnboarding'));
+const AdminAnalyticsPage = React.lazy(() => import('./pages/admin/AdminAnalyticsPage'));
+const AdminContentPage = React.lazy(() => import('./pages/admin/AdminContentPage'));
+const AdminSettingsPage = React.lazy(() => import('./pages/admin/AdminSettingsPage'));
+const AdminUserDetailPage = React.lazy(() => import('./pages/admin/AdminUserDetailPage'));
 
 // Provider Dashboard
 const ProviderDashboard = React.lazy(() => import('./pages/provider/ProviderDashboard'));
@@ -104,6 +109,7 @@ const RouteLoadingIndicator = () => (
 
 const App: React.FC = () => {
     const location = useLocation();
+    const navigate = useNavigate();
     const [isLoading, setIsLoading] = useState(true);
 
     return (
@@ -120,7 +126,7 @@ const App: React.FC = () => {
                     <div className="min-h-screen bg-background font-sans text-gray-900 overflow-x-hidden flex flex-col transition-colors duration-300">
                         <Navigation />
 
-                        <main id="main-content" className="flex-grow w-full outline-none pb-24" tabIndex={-1}>
+                        <main id="main-content" className={`flex-grow w-full outline-none pb-24 ${location.pathname !== '/' ? 'pt-20' : ''}`} tabIndex={-1}>
                             <ErrorBoundary
                                 resetKeys={[location.pathname]}
                                 fallback={(error, reset) => (
@@ -131,7 +137,7 @@ const App: React.FC = () => {
                                         {error && <p className="text-xs font-mono text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 px-3 py-1.5 rounded mt-2 mb-4">{error.message}</p>}
                                         <div className="flex gap-3 mt-4">
                                             <button onClick={reset} className="px-4 py-2 text-sm font-medium bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg hover:opacity-90 transition-opacity">Try Again</button>
-                                            <button onClick={() => window.location.href = '/'} className="px-4 py-2 text-sm font-medium border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">Return Home</button>
+                                            <button onClick={() => navigate('/', { replace: true })} className="px-4 py-2 text-sm font-medium border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">Return Home</button>
                                         </div>
                                     </div>
                                 )}
@@ -146,7 +152,6 @@ const App: React.FC = () => {
                                                 <HowItWorksSection />
                                                 <FeatureSpotlight />
                                                 <ContentPreview />
-                                                <TrustSection />
                                                 <NewsletterSection />
                                             </PageTransition>
                                         } />
@@ -226,6 +231,13 @@ const App: React.FC = () => {
                                                 </RoleGuard>
                                             </ProtectedRoute>
                                         } />
+                                        <Route path="/dashboard/privacy" element={
+                                            <ProtectedRoute>
+                                                <RoleGuard allowedRoles={['patient', 'admin']}>
+                                                    <PageTransition><PrivacySettings /></PageTransition>
+                                                </RoleGuard>
+                                            </ProtectedRoute>
+                                        } />
                                         <Route path="/dashboard/assessments" element={<Navigate to="/dashboard/history" replace />} />
                                         <Route path="/dashboard/history" element={
                                             <ProtectedRoute>
@@ -294,6 +306,34 @@ const App: React.FC = () => {
                                                 </RoleGuard>
                                             </ProtectedRoute>
                                         } />
+                                        <Route path="/admin/analytics" element={
+                                            <ProtectedRoute>
+                                                <RoleGuard allowedRoles={['admin']}>
+                                                    <PageTransition><AdminAnalyticsPage /></PageTransition>
+                                                </RoleGuard>
+                                            </ProtectedRoute>
+                                        } />
+                                        <Route path="/admin/content" element={
+                                            <ProtectedRoute>
+                                                <RoleGuard allowedRoles={['admin']}>
+                                                    <PageTransition><AdminContentPage /></PageTransition>
+                                                </RoleGuard>
+                                            </ProtectedRoute>
+                                        } />
+                                        <Route path="/admin/settings" element={
+                                            <ProtectedRoute>
+                                                <RoleGuard allowedRoles={['admin']}>
+                                                    <PageTransition><AdminSettingsPage /></PageTransition>
+                                                </RoleGuard>
+                                            </ProtectedRoute>
+                                        } />
+                                        <Route path="/admin/users/:id" element={
+                                            <ProtectedRoute>
+                                                <RoleGuard allowedRoles={['admin']}>
+                                                    <PageTransition><AdminUserDetailPage /></PageTransition>
+                                                </RoleGuard>
+                                            </ProtectedRoute>
+                                        } />
 
                                         {/* Protected Routes: Provider Dashboard */}
                                         <Route path="/provider" element={
@@ -338,6 +378,7 @@ const App: React.FC = () => {
                         <Footer />
 
                         <MindMate />
+                        <CookieConsent />
 
                         <Toaster
                             position="bottom-right"

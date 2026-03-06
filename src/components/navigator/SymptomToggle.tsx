@@ -21,8 +21,8 @@ export const SymptomToggle: React.FC<SymptomToggleProps> = ({ symptom, isSelecte
             className={cn(
                 "w-full text-left p-4 rounded-xl border transition-all duration-300 relative overflow-hidden group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 backdrop-blur-xl",
                 isSelected
-                    ? "bg-teal-900/30 border-teal-400/50 shadow-[0_0_20px_rgba(20,184,166,0.2)]"
-                    : "bg-surface/50 border-border hover:border-border-hover hover:bg-surface-hover/50 shadow-lg"
+                    ? "bg-gradient-to-br from-teal-500 to-teal-600 border-teal-500 shadow-md"
+                    : "bg-surface/50 border-border hover:border-border-hover hover:bg-surface-hover/50"
             )}
             aria-pressed={isSelected}
         >
@@ -31,7 +31,7 @@ export const SymptomToggle: React.FC<SymptomToggleProps> = ({ symptom, isSelecte
                     className={cn(
                         "flex-shrink-0 w-6 h-6 mt-0.5 rounded-full border flex items-center justify-center transition-colors",
                         isSelected
-                            ? "bg-teal-500 border-teal-500 text-white shadow-[0_0_10px_rgba(20,184,166,0.5)]"
+                            ? "bg-white border-white text-teal-600"
                             : "border-border-hover group-hover:border-border-hover bg-surface/50"
                     )}
                     aria-hidden="true"
@@ -54,7 +54,7 @@ export const SymptomToggle: React.FC<SymptomToggleProps> = ({ symptom, isSelecte
                             query={searchQuery}
                             className={cn(
                                 "mt-1 text-sm leading-relaxed transition-colors block",
-                                isSelected ? "text-teal-50/80" : "text-text-tertiary group-hover:text-text-secondary"
+                                isSelected ? "text-white/90" : "text-text-tertiary group-hover:text-text-secondary"
                             )}
                         />
                     )}

@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigator } from '../../context/NavigatorContext';
 import { NavigatorButton } from '../navigator/NavigatorButton';
@@ -12,11 +12,15 @@ import { ConfirmDialog } from '../ui/ConfirmDialog';
 import { ShieldAlert, SkipForward, Zap } from 'lucide-react';
 import { SYMPTOM_DEFAULTS, SYMPTOM_DETAIL_UX_THRESHOLD } from '../../lib/navigator/defaults';
 import { SkeletonSymptomDetails } from '../navigator/NavigatorSkeletons';
+import { cn } from '../../lib/utils';
+
+type QuestionType = 'severity' | 'duration' | 'frequency';
 
 export const DurationSeverityScreen: React.FC = () => {
     const { state, dispatch, announcePolite } = useNavigator();
     const { knowledgeBase, selectedSymptoms, isLoading, error } = state;
     const [currentSymptomIndex, setCurrentSymptomIndex] = useState(0);
+    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [completedSymptoms, setCompletedSymptoms] = useState<Set<string>>(new Set());
     const [showBackConfirm, setShowBackConfirm] = useState(false);
 
@@ -32,6 +36,11 @@ export const DurationSeverityScreen: React.FC = () => {
 
         return symptoms;
     }, [knowledgeBase, selectedSymptoms]);
+
+    // Reset question sub-index when symptom changes
+    useEffect(() => {
+        setCurrentQuestionIndex(0);
+    }, [currentSymptomIndex]);
 
     if (isLoading) {
         return <SkeletonSymptomDetails />;
@@ -85,7 +94,46 @@ export const DurationSeverityScreen: React.FC = () => {
         }));
     }, [symptomsArray, completedSymptoms]);
 
-    // Determine readiness of current symptom questions
+    // Compute applicable questions for current symptom
+    const currentQuestions: QuestionType[] = useMemo(() => {
+        const details = currentSymptom?.details;
+        if (!details) return [];
+        const questions: QuestionType[] = [];
+        if (details.ask_severity) questions.push('severity');
+        if (details.ask_duration) questions.push('duration');
+        if (details.ask_frequency) questions.push('frequency');
+        return questions;
+    }, [currentSymptom]);
+
+    // Paginate when >2 questions per symptom
+    const shouldPaginate = currentQuestions.length > 2;
+    const visibleQuestions: QuestionType[] = shouldPaginate
+        ? [currentQuestions[currentQuestionIndex]]
+        : currentQuestions;
+
+    // Check if current visible question is answered
+    const isCurrentQuestionAnswered = (): boolean => {
+        const s = selectedSymptoms.get(currentSymptom.symptom_id);
+        if (!s) return false;
+
+        if (shouldPaginate) {
+            const q = currentQuestions[currentQuestionIndex];
+            if (q === 'severity' && s.severity === undefined) return false;
+            if (q === 'duration' && s.duration === undefined) return false;
+            if (q === 'frequency' && s.frequency === undefined) return false;
+            return true;
+        }
+
+        // Non-paginated: check all questions
+        const details = currentSymptom.details;
+        if (!details) return false;
+        if (details.ask_severity && s.severity === undefined) return false;
+        if (details.ask_duration && s.duration === undefined) return false;
+        if (details.ask_frequency && s.frequency === undefined) return false;
+        return true;
+    };
+
+    // Determine readiness of current symptom questions (all questions)
     const isCurrentComplete = () => {
         const s = selectedSymptoms.get(currentSymptom.symptom_id);
         if (!s) return false;
@@ -101,6 +149,13 @@ export const DurationSeverityScreen: React.FC = () => {
     };
 
     const handleNextSymptom = () => {
+        // If paginated and not on last sub-question, advance sub-question
+        if (shouldPaginate && currentQuestionIndex < currentQuestions.length - 1) {
+            setCurrentQuestionIndex(prev => prev + 1);
+            announcePolite(`Question ${currentQuestionIndex + 2} of ${currentQuestions.length}`);
+            return;
+        }
+
         // Mark current as completed
         setCompletedSymptoms(prev => new Set(prev).add(currentSymptom.symptom_id));
 
@@ -171,6 +226,13 @@ export const DurationSeverityScreen: React.FC = () => {
     };
 
     const handleBack = () => {
+        // If paginated and not on first sub-question, go back one sub-question
+        if (shouldPaginate && currentQuestionIndex > 0) {
+            setCurrentQuestionIndex(prev => prev - 1);
+            announcePolite('Returned to previous question');
+            return;
+        }
+
         if (currentSymptomIndex > 0) {
             setCurrentSymptomIndex(prev => prev - 1);
             announcePolite(`Returned to previous symptom`);
@@ -236,7 +298,7 @@ export const DurationSeverityScreen: React.FC = () => {
                         exit={{ opacity: 0, x: -20, transition: { duration: 0.2 } }}
                         className="space-y-6"
                     >
-                        <div className="p-6 rounded-2xl bg-surface/50 border border-border backdrop-blur-xl shadow-lg relative overflow-hidden group hover:border-border-hover transition-all duration-500">
+                        <div className="p-6 rounded-2xl bg-surface/50 border border-border backdrop-blur-xl relative overflow-hidden group hover:border-border-hover transition-all duration-500">
                             <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-transparent pointer-events-none opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
                             <h3 className="font-display text-2xl text-teal-300 mb-2 relative z-10 drop-shadow-md">
                                 Regarding: {currentSymptom.details?.name}
@@ -246,52 +308,84 @@ export const DurationSeverityScreen: React.FC = () => {
                             </p>
                         </div>
 
-                        {currentSymptom.details?.ask_severity && (
-                            <SymptomQuestionCard
-                                title="How severe is this symptom?"
-                                description="On a scale from 1 (mild) to 10 (intense or disruptive), how would you rate it?"
-                                isActive={true}
-                                isCompleted={selectedSymptoms.get(currentSymptom.symptom_id)?.severity !== undefined}
-                            >
-                                <SeveritySlider
-                                    value={selectedSymptoms.get(currentSymptom.symptom_id)?.severity || 5}
-                                    onChange={(val) => updateDetail('severity', val)}
-                                />
-                            </SymptomQuestionCard>
+                        {/* Sub-progress dots when paginated */}
+                        {shouldPaginate && (
+                            <div className="flex items-center justify-center gap-2 text-sm text-text-secondary">
+                                {currentQuestions.map((_, i) => (
+                                    <div
+                                        key={i}
+                                        className={cn(
+                                            'w-2 h-2 rounded-full transition-colors duration-200',
+                                            i === currentQuestionIndex
+                                                ? 'bg-teal-500'
+                                                : i < currentQuestionIndex
+                                                    ? 'bg-teal-500/50'
+                                                    : 'bg-surface-hover'
+                                        )}
+                                    />
+                                ))}
+                                <span className="ml-2 text-text-tertiary">
+                                    Question {currentQuestionIndex + 1} of {currentQuestions.length}
+                                </span>
+                            </div>
                         )}
 
-                        {currentSymptom.details?.ask_duration && (
-                            <SymptomQuestionCard
-                                title="How long have you been experiencing this?"
-                                isActive={true}
-                                isCompleted={selectedSymptoms.get(currentSymptom.symptom_id)?.duration !== undefined}
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                key={shouldPaginate ? `${currentSymptom.symptom_id}-q${currentQuestionIndex}` : currentSymptom.symptom_id}
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -10, transition: { duration: 0.15 } }}
+                                className="space-y-6"
                             >
-                                <DurationPicker
-                                    value={selectedSymptoms.get(currentSymptom.symptom_id)?.duration}
-                                    onChange={(val) => updateDetail('duration', val)}
-                                />
-                            </SymptomQuestionCard>
-                        )}
+                                {visibleQuestions.includes('severity') && (
+                                    <SymptomQuestionCard
+                                        title="How severe is this symptom?"
+                                        description="On a scale from 1 (mild) to 10 (intense or disruptive), how would you rate it?"
+                                        isActive={true}
+                                        isCompleted={selectedSymptoms.get(currentSymptom.symptom_id)?.severity !== undefined}
+                                    >
+                                        <SeveritySlider
+                                            value={selectedSymptoms.get(currentSymptom.symptom_id)?.severity || 5}
+                                            onChange={(val) => updateDetail('severity', val)}
+                                        />
+                                    </SymptomQuestionCard>
+                                )}
 
-                        {currentSymptom.details?.ask_frequency && (
-                            <SymptomQuestionCard
-                                title="How often does this happen?"
-                                isActive={true}
-                                isCompleted={selectedSymptoms.get(currentSymptom.symptom_id)?.frequency !== undefined}
-                            >
-                                <FrequencyPicker
-                                    value={selectedSymptoms.get(currentSymptom.symptom_id)?.frequency}
-                                    onChange={(val) => updateDetail('frequency', val)}
-                                />
-                            </SymptomQuestionCard>
-                        )}
+                                {visibleQuestions.includes('duration') && (
+                                    <SymptomQuestionCard
+                                        title="How long have you been experiencing this?"
+                                        isActive={true}
+                                        isCompleted={selectedSymptoms.get(currentSymptom.symptom_id)?.duration !== undefined}
+                                    >
+                                        <DurationPicker
+                                            value={selectedSymptoms.get(currentSymptom.symptom_id)?.duration}
+                                            onChange={(val) => updateDetail('duration', val)}
+                                        />
+                                    </SymptomQuestionCard>
+                                )}
+
+                                {visibleQuestions.includes('frequency') && (
+                                    <SymptomQuestionCard
+                                        title="How often does this happen?"
+                                        isActive={true}
+                                        isCompleted={selectedSymptoms.get(currentSymptom.symptom_id)?.frequency !== undefined}
+                                    >
+                                        <FrequencyPicker
+                                            value={selectedSymptoms.get(currentSymptom.symptom_id)?.frequency}
+                                            onChange={(val) => updateDetail('frequency', val)}
+                                        />
+                                    </SymptomQuestionCard>
+                                )}
+                            </motion.div>
+                        </AnimatePresence>
 
                     </motion.div>
                 </AnimatePresence>
             </div>
 
             {/* Floating Bottom Action Bar */}
-            <div className="fixed bottom-0 left-0 right-0 bg-background/80 backdrop-blur-2xl border-t border-border p-4 sm:p-6 z-30 shadow-[0_-10px_40px_rgba(0,0,0,0.3)]" style={{ paddingBottom: 'max(env(safe-area-inset-bottom, 0px), 1rem)' }}>
+            <div className="fixed bottom-0 left-0 right-0 bg-background/90 backdrop-blur-2xl border-t border-border p-4 sm:p-6 z-[65]" style={{ paddingBottom: 'max(env(safe-area-inset-bottom, 0px), 1rem)' }}>
                 <div className="max-w-3xl mx-auto space-y-3">
                     {/* Skip/Defaults Row - only shown for enhanced UX */}
                     {showEnhancedUX && (
@@ -332,10 +426,14 @@ export const DurationSeverityScreen: React.FC = () => {
                         <NavigatorButton
                             size="lg"
                             onClick={handleNextSymptom}
-                            isDisabled={!isCurrentComplete()}
+                            isDisabled={!isCurrentQuestionAnswered()}
                             className="flex-1 sm:flex-none sm:min-w-[200px] text-sm sm:text-base px-4 py-2 sm:py-3"
                         >
-                            {isLastSymptom ? "Analyze Results" : `Next (${currentSymptomIndex + 1}/${symptomsArray.length})`}
+                            {shouldPaginate && currentQuestionIndex < currentQuestions.length - 1
+                                ? 'Next Question'
+                                : isLastSymptom
+                                    ? 'Analyze Results'
+                                    : `Next (${currentSymptomIndex + 1}/${symptomsArray.length})`}
                         </NavigatorButton>
                     </div>
                 </div>

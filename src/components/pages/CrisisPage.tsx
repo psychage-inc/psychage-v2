@@ -1,17 +1,16 @@
 import { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import {
-  Heart,
   Phone,
   MessageSquare,
   Globe,
-  AlertTriangle,
   ArrowLeft,
   ExternalLink,
   ChevronDown,
   Search,
   Shield,
   MapPin,
+  FileText,
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import SEO from '../SEO';
@@ -23,7 +22,7 @@ import {
   searchCountries,
   COUNTRY_DATABASE,
 } from '@/lib/crisis';
-import type { ResolvedCrisisResult, CrisisResource, CountryEntry } from '@/lib/crisis';
+import type { ResolvedCrisisResult, CrisisResource } from '@/lib/crisis';
 
 // ─── Resource Action Card ──────────────────────────────────────────────
 function ResourceCard({
@@ -235,7 +234,6 @@ const CrisisPage: React.FC = () => {
 
   const { country, primary_resource, all_resources, emergency_number, fallback_used } = result;
 
-  // Separate phone-callable resources from directory-only resources
   const callableResources = all_resources.filter((r) => r.phone !== null);
   const directoryResources = all_resources.filter(
     (r) => r.phone === null && r.web_url !== null
@@ -248,7 +246,7 @@ const CrisisPage: React.FC = () => {
         description="If you're in crisis or need immediate support, you're not alone. Free, confidential help is available 24/7."
       />
 
-      <div className="container mx-auto max-w-4xl px-6 relative z-10">
+      <div className="container mx-auto max-w-5xl px-6 relative z-10">
         {/* Back button */}
         <button
           onClick={() => navigate(-1)}
@@ -265,9 +263,6 @@ const CrisisPage: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-10"
         >
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-rose-100 dark:bg-rose-900/30 text-rose-600 dark:text-rose-400 mb-6">
-            <Heart size={40} aria-hidden="true" />
-          </div>
           <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">
             You Are Not Alone
           </h1>
@@ -278,103 +273,92 @@ const CrisisPage: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Country indicator + switcher */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.05 }}
-          className="flex items-center justify-between mb-6"
-        >
-          <div className="flex items-center gap-2 text-sm text-text-secondary">
-            <MapPin size={14} />
-            <span>
-              Showing resources for{' '}
-              <strong className="text-text-primary">
-                {country.country_name}
-              </strong>
-            </span>
-            {fallback_used && (
-              <span className="text-xs text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/30 px-2 py-0.5 rounded-full">
-                Using global directory
+        {/* Bento Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+          {/* Emergency Call — Large prominent card */}
+          <motion.a
+            href={`tel:${(primary_resource?.phone || emergency_number).replace(/\s/g, '')}`}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.05 }}
+            className="md:col-span-1 bg-rose-600 dark:bg-rose-700 rounded-2xl p-8 text-white hover:bg-rose-700 dark:hover:bg-rose-800 transition-colors shadow-lg shadow-rose-600/20 cursor-pointer group"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className="bg-white/20 p-3 rounded-full">
+                <Phone size={24} />
+              </div>
+              <span className="text-sm font-medium text-rose-100 uppercase tracking-wider">
+                Emergency Line
               </span>
-            )}
-          </div>
-          <CountrySelector
-            currentIso2={countryCode}
-            onSelect={handleCountryChange}
-          />
-        </motion.div>
+            </div>
+            <p className="text-3xl md:text-4xl font-bold mb-2 group-hover:underline">
+              {primary_resource?.phone || emergency_number}
+            </p>
+            <p className="text-rose-100 text-sm">
+              {primary_resource?.name || `Emergency Services — ${country.country_name}`}
+            </p>
+            <p className="text-rose-200/70 text-xs mt-2">Tap to call now</p>
+          </motion.a>
 
-        {/* Emergency banner */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-2xl p-6 mb-8"
-        >
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-4 text-center md:text-left">
-              <div className="bg-amber-100 dark:bg-amber-900 p-3 rounded-full text-amber-600 dark:text-amber-400 hidden md:block shrink-0">
-                <AlertTriangle size={24} aria-hidden="true" />
+          {/* Country + location card */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="bg-teal-600 dark:bg-teal-700 rounded-2xl p-6 border border-teal-500 dark:border-teal-600 flex flex-col justify-between"
+          >
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <MapPin size={16} className="text-white/80" />
+                <span className="text-sm font-medium text-white/70 uppercase tracking-wider">
+                  Your Location
+                </span>
               </div>
-              <div>
-                <h2 className="font-bold text-lg text-gray-900 dark:text-white mb-1">
-                  Need immediate help?
-                </h2>
-                <p className="text-gray-600 dark:text-gray-300 text-sm md:text-base">
-                  {primary_resource?.phone ? (
-                    <>
-                      Call{' '}
-                      <span className="font-semibold text-gray-900 dark:text-white">
-                        {primary_resource.phone}
-                      </span>{' '}
-                      ({primary_resource.name})
-                    </>
-                  ) : (
-                    <>
-                      Call emergency services at{' '}
-                      <span className="font-semibold text-gray-900 dark:text-white">
-                        {emergency_number}
-                      </span>
-                    </>
-                  )}
+              <p className="text-2xl font-bold text-white mb-1">
+                {country.country_name}
+              </p>
+              {fallback_used && (
+                <p className="text-xs text-teal-100/80 mb-2">
+                  Using global directory — select your country below for local resources
                 </p>
+              )}
+              <p className="text-sm text-white/70">
+                Emergency: <strong className="text-white">{emergency_number}</strong>
+              </p>
+            </div>
+            <div className="mt-4">
+              <CountrySelector
+                currentIso2={countryCode}
+                onSelect={handleCountryChange}
+              />
+            </div>
+          </motion.div>
+
+          {/* Primary resource detail card (if different from emergency) */}
+          {primary_resource && primary_resource.phone !== emergency_number && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15 }}
+              className="md:col-span-2 bg-white dark:bg-gray-900 rounded-2xl p-6 border-2 border-rose-200 dark:border-rose-800"
+            >
+              <div className="flex items-center gap-2 mb-3">
+                <Shield size={16} className="text-rose-500" />
+                <span className="text-sm font-medium text-text-secondary uppercase tracking-wider">
+                  Primary Crisis Line
+                </span>
               </div>
-            </div>
+              <ResourceCard resource={primary_resource} prominent />
+            </motion.div>
+          )}
+        </div>
 
-            <div className="flex items-center gap-3 shrink-0">
-              {primary_resource?.phone && (
-                <a
-                  href={`tel:${primary_resource.phone.replace(/\s/g, '')}`}
-                >
-                  <Button
-                    leftIcon={<Phone size={16} />}
-                    className="bg-amber-500 hover:bg-amber-600 text-white shadow-lg shadow-amber-500/20"
-                  >
-                    Call {primary_resource.phone}
-                  </Button>
-                </a>
-              )}
-              {!primary_resource?.phone && (
-                <a href={`tel:${emergency_number.replace(/\s/g, '')}`}>
-                  <Button
-                    leftIcon={<Phone size={16} />}
-                    className="bg-amber-500 hover:bg-amber-600 text-white shadow-lg shadow-amber-500/20"
-                  >
-                    Call {emergency_number}
-                  </Button>
-                </a>
-              )}
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Crisis resources */}
+        {/* Crisis resources list */}
         {callableResources.length > 0 && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.15 }}
+            transition={{ delay: 0.2 }}
             className="space-y-3 mb-8"
           >
             <h2 className="text-sm font-semibold text-text-secondary uppercase tracking-wider">
@@ -386,22 +370,18 @@ const CrisisPage: React.FC = () => {
           </motion.div>
         )}
 
-        {/* Emergency services */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="mb-8"
-        >
-          <a
+        {/* Bottom grid: Emergency + International + Safety plan */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+          {/* Emergency services card */}
+          <motion.a
             href={`tel:${emergency_number.replace(/\s/g, '')}`}
-            className="flex items-center gap-4 p-4 rounded-xl bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800 hover:bg-red-100 dark:hover:bg-red-900/30 transition-colors"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.25 }}
+            className="flex items-center gap-4 p-5 rounded-2xl bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800 hover:bg-red-100 dark:hover:bg-red-900/30 transition-colors"
           >
-            <div className="bg-red-100 dark:bg-red-900/50 p-2 rounded-full">
-              <Phone
-                size={20}
-                className="text-red-600 dark:text-red-400"
-              />
+            <div className="bg-red-100 dark:bg-red-900/50 p-3 rounded-full shrink-0">
+              <Phone size={20} className="text-red-600 dark:text-red-400" />
             </div>
             <div>
               <p className="font-bold text-red-900 dark:text-red-200 text-lg">
@@ -411,15 +391,38 @@ const CrisisPage: React.FC = () => {
                 Emergency Services — {country.country_name}
               </p>
             </div>
-          </a>
-        </motion.div>
+          </motion.a>
+
+          {/* Safety plan card */}
+          <motion.a
+            href="https://suicidepreventionlifeline.org/wp-content/uploads/2016/08/Brown_StanleySafetyPlanTemplate.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="flex items-center gap-4 p-5 rounded-2xl bg-teal-50 dark:bg-teal-950/20 border border-teal-200 dark:border-teal-800 hover:bg-teal-100 dark:hover:bg-teal-900/30 transition-colors"
+          >
+            <div className="bg-teal-100 dark:bg-teal-900/50 p-3 rounded-full shrink-0">
+              <FileText size={20} className="text-teal-600 dark:text-teal-400" />
+            </div>
+            <div>
+              <p className="font-bold text-teal-900 dark:text-teal-200">
+                Create a Safety Plan
+              </p>
+              <p className="text-sm text-teal-700 dark:text-teal-300">
+                Prepare for difficult moments with coping strategies and contacts
+              </p>
+            </div>
+          </motion.a>
+        </div>
 
         {/* International directories */}
         {directoryResources.length > 0 && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.25 }}
+            transition={{ delay: 0.35 }}
             className="bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-200 dark:border-gray-800 mb-8"
           >
             <h2 className="text-lg font-bold text-text-primary mb-4 flex items-center gap-2">
@@ -438,45 +441,11 @@ const CrisisPage: React.FC = () => {
           </motion.div>
         )}
 
-        {/* Safety plan callout */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="bg-teal-50 dark:bg-teal-950/20 border border-teal-200 dark:border-teal-800 rounded-2xl p-6 mb-8"
-        >
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-            <div>
-              <h3 className="font-bold text-teal-900 dark:text-teal-200 mb-1">
-                Create a Safety Plan
-              </h3>
-              <p className="text-sm text-teal-700 dark:text-teal-300">
-                A safety plan helps you prepare for difficult moments when
-                you're calm. It includes warning signs, coping strategies, and
-                people to contact.
-              </p>
-            </div>
-            <a
-              href="https://suicidepreventionlifeline.org/wp-content/uploads/2016/08/Brown_StanleySafetyPlanTemplate.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button
-                variant="outline"
-                rightIcon={<ExternalLink size={14} />}
-                className="whitespace-nowrap border-teal-300 dark:border-teal-700 text-teal-700 dark:text-teal-300 hover:bg-teal-100 dark:hover:bg-teal-900/30"
-              >
-                Safety Plan Template
-              </Button>
-            </a>
-          </div>
-        </motion.div>
-
         {/* Disclaimer */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.35 }}
+          transition={{ delay: 0.4 }}
           className="text-center text-text-tertiary text-sm space-y-2"
         >
           <p>

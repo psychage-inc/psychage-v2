@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { NavigatorResultItem } from '../../lib/navigator/types';
 import { RelevanceDots } from './RelevanceDots';
 import { cn } from '../../lib/utils';
-import InteractiveCard from '../ui/InteractiveCard';
+import { Card } from '../ui/Card';
 
 interface ResultCardProps {
     result: NavigatorResultItem;
@@ -19,9 +19,11 @@ export const ResultCard: React.FC<ResultCardProps> = ({ result, onClick }) => {
         setIsExpanded(!isExpanded);
     };
     return (
-        <InteractiveCard
+        <Card
+            variant="glass"
+            hoverEffect={true}
             onClick={onClick}
-            className="w-full text-left bg-surface/50 border-border p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-6 group hover:border-teal-500/40 hover:bg-surface-hover/50 transition-all duration-300 shadow-lg hover:shadow-[0_0_30px_rgba(20,184,166,0.15)] backdrop-blur-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 focus-visible:ring-offset-2 focus-visible:ring-offset-background cursor-pointer rounded-2xl relative overflow-hidden"
+            className="w-full text-left p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-6 group hover:border-teal-500/40 cursor-pointer rounded-2xl relative overflow-hidden"
             role="button"
             tabIndex={0}
             onKeyDown={(e: React.KeyboardEvent) => {
@@ -31,10 +33,6 @@ export const ResultCard: React.FC<ResultCardProps> = ({ result, onClick }) => {
                 }
             }}
         >
-            {/* Ambient Hover Glow */}
-            <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none -z-10" />
-            <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-border group-hover:ring-teal-400/30 transition-all duration-300 pointer-events-none -z-10" />
-
             <div className="flex-1 space-y-3 relative z-10">
                 <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                     <h3 className="font-display text-2xl font-semibold text-text-primary group-hover:text-teal-300 transition-colors">
@@ -132,6 +130,6 @@ export const ResultCard: React.FC<ResultCardProps> = ({ result, onClick }) => {
                     <ChevronRight className="w-5 h-5" />
                 </div>
             </div>
-        </InteractiveCard>
+        </Card>
     );
 };

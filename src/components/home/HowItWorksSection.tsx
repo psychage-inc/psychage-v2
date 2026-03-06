@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Compass, Sparkles, ArrowRight, Lock } from 'lucide-react';
+import { Compass, Lightbulb, Rocket, ArrowRight, Lock } from 'lucide-react';
 import InteractiveCard from '../ui/InteractiveCard';
 import { useNavigate } from 'react-router-dom';
 
@@ -12,13 +12,13 @@ const steps = [
         color: 'from-teal-400 to-emerald-500',
     },
     {
-        icon: Sparkles,
+        icon: Lightbulb,
         title: 'Get personalized insights',
         description: 'AI-powered analysis processed on your device gives you a clear picture of where you stand.',
         color: 'from-indigo-400 to-purple-500',
     },
     {
-        icon: ArrowRight,
+        icon: Rocket,
         title: 'Take your next step',
         description: 'Actionable recommendations, matched providers, and learning paths tailored to your results.',
         color: 'from-amber-400 to-orange-500',
@@ -65,7 +65,7 @@ const HowItWorksSection: React.FC = () => {
                             <InteractiveCard className="h-full bg-white dark:bg-slate-900 border-slate-200/60 dark:border-slate-800 shadow-sm hover:shadow-md">
                                 <div className="p-8 flex flex-col items-center text-center h-full">
                                     <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${step.color} p-3.5 text-white shadow-lg mb-6 flex items-center justify-center`}>
-                                        <step.icon className="w-7 h-7" />
+                                        <step.icon className="w-7 h-7" strokeWidth={1.5} />
                                     </div>
                                     <h3 className="text-lg font-display font-semibold text-slate-900 dark:text-white mb-3">
                                         {step.title}

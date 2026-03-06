@@ -8,6 +8,12 @@ interface ErrorFallbackProps {
 }
 
 const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorBoundary }) => {
+  // Use window.location instead of useNavigate() — this component may render
+  // outside BrowserRouter when the outer ErrorBoundary in index.tsx catches errors.
+  const handleGoHome = () => {
+    window.location.href = '/';
+  };
+
   return (
     <div className="min-h-screen bg-background flex items-center justify-center p-6">
       <div className="max-w-md w-full text-center">
@@ -36,7 +42,7 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorBoundary
           )}
 
           <Button
-            onClick={() => window.location.href = '/'}
+            onClick={handleGoHome}
             variant="outline"
             className="w-full"
             leftIcon={<Home size={18} />}

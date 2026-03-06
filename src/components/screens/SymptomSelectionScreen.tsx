@@ -22,6 +22,43 @@ export const SymptomSelectionScreen: React.FC = () => {
     // Debounced announcement to prevent screen reader spam (WCAG 4.1.3)
     const debouncedAnnounce = useDebounce(announcePolite, 300);
 
+    // All hooks must be called before any early returns (React rules of hooks)
+    // Filter symptoms based on search query AND selected domains
+    const filteredSymptoms = useMemo(() => {
+        if (!knowledgeBase) return [];
+        let symptoms = knowledgeBase.symptoms;
+
+        // Filter by domain
+        if (selectedDomains.length > 0) {
+            symptoms = symptoms.filter(s => selectedDomains.includes(s.domain));
+        }
+
+        // Filter by search
+        if (searchQuery.trim()) {
+            const q = searchQuery.toLowerCase();
+            symptoms = symptoms.filter(s =>
+                s.name.toLowerCase().includes(q) ||
+                s.description?.toLowerCase().includes(q) ||
+                s.synonyms?.some(syn => syn.toLowerCase().includes(q))
+            );
+        }
+
+        return symptoms;
+    }, [knowledgeBase, selectedDomains, searchQuery]);
+
+    // Group symptoms by category
+    const groupedSymptoms = useMemo(() => {
+        const groups: Record<string, Symptom[]> = {};
+        filteredSymptoms.forEach(symptom => {
+            const category = symptom.category;
+            if (!groups[category]) {
+                groups[category] = [];
+            }
+            groups[category].push(symptom);
+        });
+        return groups;
+    }, [filteredSymptoms]);
+
     // Handle loading state — show skeleton that mirrors final layout
     if (state.isLoading) {
         return <SkeletonSymptomList />;
@@ -63,41 +100,6 @@ export const SymptomSelectionScreen: React.FC = () => {
             </div>
         );
     }
-
-    // Filter symptoms based on search query AND selected domains
-    const filteredSymptoms = useMemo(() => {
-        let symptoms = knowledgeBase.symptoms;
-
-        // Filter by domain
-        if (selectedDomains.length > 0) {
-            symptoms = symptoms.filter(s => selectedDomains.includes(s.domain));
-        }
-
-        // Filter by search
-        if (searchQuery.trim()) {
-            const q = searchQuery.toLowerCase();
-            symptoms = symptoms.filter(s =>
-                s.name.toLowerCase().includes(q) ||
-                s.description?.toLowerCase().includes(q) ||
-                s.synonyms?.some(syn => syn.toLowerCase().includes(q))
-            );
-        }
-
-        return symptoms;
-    }, [knowledgeBase.symptoms, selectedDomains, searchQuery]);
-
-    // Group symptoms by category
-    const groupedSymptoms = useMemo(() => {
-        const groups: Record<string, Symptom[]> = {};
-        filteredSymptoms.forEach(symptom => {
-            const category = symptom.category;
-            if (!groups[category]) {
-                groups[category] = [];
-            }
-            groups[category].push(symptom);
-        });
-        return groups;
-    }, [filteredSymptoms]);
 
     const handleToggleSymptom = (id: string) => {
         dispatch({ type: 'TOGGLE_SYMPTOM', payload: id });
@@ -157,7 +159,7 @@ export const SymptomSelectionScreen: React.FC = () => {
                 </p>
             </div>
 
-            <div className="sticky top-16 lg:top-24 z-20 bg-background/80 backdrop-blur-xl pb-4 pt-4 -mx-4 px-4 sm:-mx-6 sm:px-6 border-b border-border shadow-sm">
+            <div className="sticky top-16 lg:top-24 z-20 bg-background pb-4 pt-4 -mx-4 px-4 sm:-mx-6 sm:px-6 border-b border-border">
                 <SymptomSearch
                     value={searchQuery}
                     onChange={setSearchQuery}
@@ -237,19 +239,13 @@ export const SymptomSelectionScreen: React.FC = () => {
             </div>
 
             {/* Floating Bottom Action Bar */}
-            <div className="fixed bottom-0 left-0 right-0 bg-background/80 backdrop-blur-xl border-t border-border p-4 sm:p-6 z-30 shadow-[0_-10px_40px_rgba(0,0,0,0.3)]" style={{ paddingBottom: 'max(env(safe-area-inset-bottom, 0px), 1rem)' }}>
+            <div className="fixed bottom-0 left-0 right-0 bg-background border-t border-border p-4 sm:p-6 z-[65]" style={{ paddingBottom: 'max(env(safe-area-inset-bottom, 0px), 1rem)' }}>
                 <div className="max-w-3xl mx-auto flex items-center justify-between gap-3">
-                    <div className="bg-surface/50 border border-border px-4 py-2 rounded-full backdrop-blur-md">
+                    <div className="bg-surface border border-border px-4 py-2 rounded-lg">
                         <p className="text-text-secondary font-medium tracking-wide" aria-live="polite" aria-atomic="true">
-                            <motion.span
-                                key={selectedCount}
-                                initial={{ scale: 1 }}
-                                animate={{ scale: [1, 1.15, 1] }}
-                                transition={{ duration: 0.2, ease: "easeOut" }}
-                                className="text-text-primary font-bold inline-block"
-                            >
+                            <span className="text-text-primary font-bold inline-block">
                                 {selectedCount}
-                            </motion.span>{' '}
+                            </span>{' '}
                             <span className="inline sm:inline">{t('navigator.symptom_selection.symptoms_selected', { count: selectedCount })}</span>
                         </p>
                     </div>

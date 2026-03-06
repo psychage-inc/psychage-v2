@@ -1,7 +1,40 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import CrisisResources from '../CrisisResources';
+
+// Mock crisis module to return known US resources
+vi.mock('@/lib/crisis', () => ({
+    resolveCountry: () => 'US',
+    getResourcesForCountry: () => ({
+        country: { country_name: 'United States', iso2: 'US' },
+        emergency_number: '911',
+        all_resources: [
+            {
+                name: '988 Suicide & Crisis Lifeline',
+                type: 'hotline',
+                phone: '988',
+                verification_status: 'verified',
+                source_priority: 1,
+            },
+            {
+                name: 'Crisis Text Line',
+                type: 'text',
+                text_instruction: 'Text HOME to 741741',
+                chat_url: 'sms:741741',
+                verification_status: 'verified',
+                source_priority: 1,
+            },
+            {
+                name: 'SAMHSA Treatment Locator',
+                type: 'web',
+                web_url: 'https://findtreatment.gov',
+                verification_status: 'verified',
+                source_priority: 2,
+            },
+        ],
+    }),
+}));
 
 describe('CrisisResources', () => {
     it('should render crisis heading', () => {
@@ -12,19 +45,19 @@ describe('CrisisResources', () => {
     it('should display 988 lifeline', () => {
         render(<CrisisResources />);
         expect(screen.getByText('988')).toBeInTheDocument();
-        expect(screen.getByText(/suicide & crisis lifeline/i)).toBeInTheDocument();
+        expect(screen.getByText(/988 Suicide & Crisis Lifeline/i)).toBeInTheDocument();
     });
 
     it('should display crisis text line', () => {
         render(<CrisisResources />);
-        expect(screen.getByText(/text home to 741741/i)).toBeInTheDocument();
-        expect(screen.getByText(/crisis text line/i)).toBeInTheDocument();
+        expect(screen.getByText(/Text HOME to 741741/i)).toBeInTheDocument();
+        expect(screen.getByText(/Crisis Text Line/i)).toBeInTheDocument();
     });
 
-    it('should display FindTreatment.gov', () => {
+    it('should display treatment locator', () => {
         render(<CrisisResources />);
-        expect(screen.getByText('FindTreatment.gov')).toBeInTheDocument();
-        expect(screen.getByText(/treatment locator/i)).toBeInTheDocument();
+        expect(screen.getByText(/Visit website/i)).toBeInTheDocument();
+        expect(screen.getByText(/SAMHSA Treatment Locator/i)).toBeInTheDocument();
     });
 
     it('should render tel:988 link', () => {
@@ -33,15 +66,9 @@ describe('CrisisResources', () => {
         expect(link).toHaveAttribute('href', 'tel:988');
     });
 
-    it('should render sms link for crisis text line', () => {
+    it('should render external treatment locator link with noopener', () => {
         render(<CrisisResources />);
-        const link = screen.getByRole('link', { name: /text home/i });
-        expect(link).toHaveAttribute('href', 'sms:741741');
-    });
-
-    it('should render external FindTreatment link with noopener', () => {
-        render(<CrisisResources />);
-        const link = screen.getByRole('link', { name: /findtreatment/i });
+        const link = screen.getByRole('link', { name: /SAMHSA/i });
         expect(link).toHaveAttribute('href', 'https://findtreatment.gov');
         expect(link).toHaveAttribute('rel', expect.stringContaining('noopener'));
         expect(link).toHaveAttribute('target', '_blank');

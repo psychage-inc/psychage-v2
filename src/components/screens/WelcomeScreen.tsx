@@ -13,7 +13,7 @@ export const WelcomeScreen: React.FC = () => {
     };
 
     const handleRetry = () => {
-        window.location.reload();
+        dispatch({ type: 'RESET_FLOW' });
     };
 
     const canStart = !isLoading && !error && knowledgeBase !== null;

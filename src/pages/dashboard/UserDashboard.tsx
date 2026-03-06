@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { AlertCircle, RefreshCw } from 'lucide-react';
-import { StaggerList, StaggerItem, ScrollReveal } from '@/components/motion';
 import UserSidebar from './UserSidebar';
 import Button from '@/components/ui/Button';
 import SEO from '@/components/SEO';
@@ -9,7 +8,6 @@ import { useAuth } from '@/context/AuthContext';
 import { api } from '@/lib/api';
 import { format, subDays } from 'date-fns';
 import InteractiveCard from '@/components/ui/InteractiveCard';
-import MeshGradient from '@/components/ui/MeshGradient';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { moodService, type MoodEntry, type MoodStats } from '@/services/moodService';
 import { sleepService, type SleepEntry, type SleepStats } from '@/services/sleepService';
@@ -17,6 +15,7 @@ import { bookmarkService } from '@/services/bookmarkService';
 import { supabase } from '@/lib/supabaseClient';
 
 // New dashboard components
+import WellnessAlertBanner from '@/components/dashboard/WellnessAlertBanner';
 import SmartActionsHub from '@/components/dashboard/SmartActionsHub';
 import QuickMoodCheckIn from '@/components/dashboard/QuickMoodCheckIn';
 import WellnessSnapshotCards, { type DashboardStats } from '@/components/dashboard/WellnessSnapshotCards';
@@ -252,7 +251,7 @@ const UserDashboard: React.FC = () => {
         setTodayMood(entry);
         // Light refresh of mood stats
         if (user?.id) {
-            moodService.getStats(user.id).then(s => { if (s) setMoodStats(s); }).catch(() => {});
+            moodService.getStats(user.id).then(s => { if (s) setMoodStats(s); }).catch(() => { });
         }
     };
 
@@ -267,11 +266,6 @@ const UserDashboard: React.FC = () => {
 
     return (
         <div className="min-h-screen bg-background pt-24 pb-20 px-4 sm:px-6 relative">
-            {/* Background Mesh */}
-            <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-                <MeshGradient className="opacity-[0.15]" />
-            </div>
-
             <SEO title="Dashboard | Psychage" />
 
             <div className="container mx-auto max-w-7xl relative z-10">
@@ -296,34 +290,36 @@ const UserDashboard: React.FC = () => {
 
                         {/* Content */}
                         {!isLoading && !error && (
-                            <StaggerList className="flex flex-col gap-8">
+                            <div className="flex flex-col gap-8">
                                 {/* ── Hero: Welcome ── */}
-                                <StaggerItem>
-                                    <InteractiveCard
-                                        className="bg-gradient-to-br from-primary/80 via-primary/70 to-secondary/80 rounded-3xl p-8 pb-7 text-white shadow-2xl shadow-primary/15 border-white/20"
-                                        spotlightColor="rgba(255, 255, 255, 0.15)"
-                                    >
-                                        <p className="text-white/60 text-xs font-medium tracking-widest uppercase mb-2">
+                                <div>
+                                    <div className="bg-surface rounded-2xl p-8 pb-7 border border-border shadow-sm">
+                                        <p className="text-text-tertiary text-xs font-medium tracking-widest uppercase mb-2">
                                             {format(new Date(), 'EEEE, MMMM d')}
                                         </p>
-                                        <h2 className="text-2xl sm:text-3xl font-display font-bold mb-2 tracking-tight">
+                                        <h2 className="text-2xl sm:text-3xl font-display font-bold mb-2 tracking-tight text-text-primary">
                                             Welcome back, {firstName}
                                         </h2>
-                                        <p className="text-white/70 mb-6 max-w-lg text-sm leading-relaxed">
+                                        <p className="text-text-secondary mb-6 max-w-lg text-sm leading-relaxed">
                                             {stats?.streak && stats.streak > 0
                                                 ? `${stats.streak}-week Clarity streak. Keep the momentum going.`
                                                 : 'Check in with yourself today. Small steps build lasting awareness.'}
                                         </p>
                                         <Link to="/clarity-score">
-                                            <Button variant="secondary" className="bg-white/95 text-primary border-transparent hover:bg-white shadow-lg shadow-black/10 font-semibold text-sm">
+                                            <Button variant="primary" className="font-semibold text-sm rounded-lg px-6 h-10">
                                                 Check In Now
                                             </Button>
                                         </Link>
-                                    </InteractiveCard>
-                                </StaggerItem>
+                                    </div>
+                                </div>
+
+                                {/* ── Wellness Alerts ── */}
+                                <div>
+                                    <WellnessAlertBanner />
+                                </div>
 
                                 {/* ── Action Layer: Quick actions + mood ── */}
-                                <StaggerItem className="flex flex-col gap-5">
+                                <div className="flex flex-col gap-5">
                                     <SmartActionsHub
                                         todayMood={todayMood}
                                         todaySleep={todaySleep}
@@ -339,26 +335,26 @@ const UserDashboard: React.FC = () => {
                                             onMoodLogged={handleMoodLogged}
                                         />
                                     )}
-                                </StaggerItem>
+                                </div>
 
                                 {/* ── Data Layer: Snapshots + trends ── */}
-                                <StaggerItem className="flex flex-col gap-5">
+                                <div className="flex flex-col gap-5">
                                     <WellnessSnapshotCards
                                         moodStats={moodStats}
                                         sleepStats={sleepStats}
                                         clarityStats={stats}
                                     />
 
-                                    <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-md p-6 sm:p-8 min-h-[280px] sm:min-h-[350px] lg:min-h-[400px]">
+                                    <div className="rounded-2xl border border-border bg-surface shadow-sm p-6 sm:p-8 min-h-[280px] sm:min-h-[350px] lg:min-h-[400px]">
                                         <MultiMetricChart
                                             data={chartData}
                                             availableMetrics={availableMetrics}
                                         />
                                     </div>
-                                </StaggerItem>
+                                </div>
 
                                 {/* ── Discovery Layer: Navigator + activity ── */}
-                                <ScrollReveal variant="slideUp">
+                                <div>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                                         <NavigatorAwarenessCard
                                             totalExplorations={navigatorCount}
@@ -366,8 +362,8 @@ const UserDashboard: React.FC = () => {
                                         />
                                         <RecentActivityCard activity={activity} />
                                     </div>
-                                </ScrollReveal>
-                            </StaggerList>
+                                </div>
+                            </div>
                         )}
                     </div>
                 </div>

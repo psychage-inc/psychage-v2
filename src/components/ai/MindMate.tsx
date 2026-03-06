@@ -1,7 +1,10 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Send, Sparkles, Bot, AlertTriangle, Phone, Trash2, MapPin } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
+import { useAuth } from '@/context/AuthContext';
+import { chatPersistenceService } from '@/services/chatPersistenceService';
+import { consentService } from '@/services/consentService';
 
 interface Message {
     id: string;
@@ -12,37 +15,94 @@ interface Message {
 }
 
 const STORAGE_KEY = 'psychage_ai_chat_history';
+const SESSION_KEY = 'psychage_ai_session_id';
+
+function getOrCreateSessionId(): string {
+    let sessionId = sessionStorage.getItem(SESSION_KEY);
+    if (!sessionId) {
+        sessionId = crypto.randomUUID();
+        sessionStorage.setItem(SESSION_KEY, sessionId);
+    }
+    return sessionId;
+}
+
+const INIT_MESSAGE: Message = {
+    id: 'init',
+    sender: 'ai',
+    text: "Hi! I'm Psychage AI, your mental health education companion. How can I help you today?",
+    type: 'text'
+};
 
 const MindMate: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [inputText, setInputText] = useState('');
     const location = useLocation();
+    const { user, isAuthenticated } = useAuth();
+
+    // Supabase conversation tracking
+    const conversationIdRef = useRef<string | null>(null);
+    const chatConsentRef = useRef<boolean>(false);
+    const hasHydrated = useRef(false);
 
     const [messages, setMessages] = useState<Message[]>(() => {
         const saved = localStorage.getItem(STORAGE_KEY);
         if (saved) {
             try { return JSON.parse(saved); } catch { }
         }
-        return [{
-            id: 'init',
-            sender: 'ai',
-            text: "Hi! I'm Psychage AI, your mental health education companion. How can I help you today?",
-            type: 'text'
-        }];
+        return [INIT_MESSAGE];
     });
 
     const [isTyping, setIsTyping] = useState(false);
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
-    // Persist chat
+    // Check consent and hydrate from Supabase when authenticated
+    useEffect(() => {
+        if (!isAuthenticated || !user || hasHydrated.current) return;
+        hasHydrated.current = true;
+
+        const hydrate = async () => {
+            const hasConsent = await consentService.checkConsent('ai_chat_history');
+            chatConsentRef.current = hasConsent;
+
+            if (!hasConsent) return;
+
+            const sessionId = getOrCreateSessionId();
+            const conversation = await chatPersistenceService.getOrCreateConversation(sessionId, user.id);
+            if (!conversation) return;
+
+            conversationIdRef.current = conversation.id;
+
+            // Load existing messages from Supabase
+            const dbMessages = await chatPersistenceService.loadConversation(conversation.id);
+            if (dbMessages.length > 0) {
+                const hydrated: Message[] = dbMessages.map(m => ({
+                    id: m.id,
+                    sender: m.role === 'user' ? 'user' : 'ai',
+                    text: m.content,
+                    type: 'text',
+                }));
+                setMessages([INIT_MESSAGE, ...hydrated]);
+            }
+        };
+
+        hydrate().catch(console.error);
+    }, [isAuthenticated, user]);
+
+    // Persist chat to localStorage
     useEffect(() => {
         if (messages.length > 0) localStorage.setItem(STORAGE_KEY, JSON.stringify(messages));
     }, [messages]);
 
+    // Save a message to Supabase (fire-and-forget)
+    const persistMessage = useCallback((role: 'user' | 'assistant', content: string) => {
+        if (!chatConsentRef.current || !conversationIdRef.current) return;
+        chatPersistenceService.saveMessage(conversationIdRef.current, role, content).catch(console.error);
+    }, []);
+
     const scrollToBottom = () => messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
     useEffect(() => scrollToBottom(), [messages, isOpen, isTyping]);
 
-    const clearChat = () => {
+    const clearChat = async () => {
         setMessages([{
             id: Date.now().toString(),
             sender: 'ai',
@@ -50,6 +110,20 @@ const MindMate: React.FC = () => {
             type: 'text'
         }]);
         localStorage.removeItem(STORAGE_KEY);
+
+        // Also deactivate the Supabase conversation
+        if (conversationIdRef.current && chatConsentRef.current) {
+            await chatPersistenceService.deleteConversation(conversationIdRef.current).catch(console.error);
+            conversationIdRef.current = null;
+
+            // Create a new session for subsequent messages
+            if (user) {
+                const newSessionId = crypto.randomUUID();
+                sessionStorage.setItem(SESSION_KEY, newSessionId);
+                const conv = await chatPersistenceService.getOrCreateConversation(newSessionId, user.id);
+                if (conv) conversationIdRef.current = conv.id;
+            }
+        }
     };
 
     const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
@@ -72,6 +146,9 @@ const MindMate: React.FC = () => {
         setMessages(prev => [...prev, userMsg]);
         setInputText('');
         setIsTyping(true);
+
+        // Dual-write user message to Supabase
+        persistMessage('user', inputText);
 
         try {
             const { GoogleGenAI } = await import('@google/genai');
@@ -120,6 +197,9 @@ const MindMate: React.FC = () => {
             }
 
             setMessages(prev => [...prev, aiMsg]);
+
+            // Dual-write AI response to Supabase
+            persistMessage('assistant', aiMsg.text);
         } catch (error) {
             console.error("AI Error:", error);
             setMessages(prev => [...prev, {
@@ -163,52 +243,46 @@ const MindMate: React.FC = () => {
                         exit={{ opacity: 0, y: 50, scale: 0.9 }}
                         className="fixed bottom-6 right-6 z-[100] w-[90vw] md:w-[400px] h-[600px] max-h-[80vh] flex flex-col font-sans"
                     >
-                        {/* Glassmorphic Container */}
-                        <div className="absolute inset-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-2xl rounded-3xl shadow-2xl border border-white/20 dark:border-white/5" />
+                        {/* Clean Container */}
+                        <div className="absolute inset-0 bg-white dark:bg-slate-950 rounded-3xl shadow-2xl shadow-black/10 border border-gray-200 dark:border-gray-800" />
 
-                        {/* Header */}
-                        <div className="relative z-10 p-4 border-b border-gray-100 dark:border-gray-800 flex items-center justify-between">
+                        {/* Header — minimal */}
+                        <div className="relative z-10 px-5 py-4 border-b border-gray-100 dark:border-gray-800 flex items-center justify-between">
                             <div className="flex items-center gap-3">
-                                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-teal-100 to-emerald-100 dark:from-teal-900 dark:to-emerald-900 flex items-center justify-center text-teal-600 dark:text-teal-400 shadow-inner">
-                                    <Bot size={20} />
+                                <div className="w-8 h-8 rounded-xl bg-teal-50 dark:bg-teal-900/30 flex items-center justify-center">
+                                    <Sparkles size={16} className="text-teal-600 dark:text-teal-400" />
                                 </div>
-                                <div>
-                                    <h3 className="font-bold text-gray-900 dark:text-gray-100">Psychage AI</h3>
-                                    <div className="flex items-center gap-1.5 opacity-60">
-                                        <MapPin size={10} />
-                                        <span className="text-[10px] uppercase tracking-wider">{location.pathname === '/' ? 'Home' : location.pathname.replace('/', '')}</span>
-                                    </div>
-                                </div>
+                                <span className="font-display font-semibold text-sm text-gray-900 dark:text-gray-100">Psychage AI</span>
                             </div>
                             <div className="flex gap-1">
-                                <button onClick={clearChat} className="p-2 hover:bg-black/5 dark:hover:bg-white/10 rounded-full transition-colors text-gray-400">
-                                    <Trash2 size={18} />
+                                <button onClick={clearChat} className="p-1.5 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors text-gray-400">
+                                    <Trash2 size={16} />
                                 </button>
-                                <button onClick={() => setIsOpen(false)} className="p-2 hover:bg-black/5 dark:hover:bg-white/10 rounded-full transition-colors text-gray-500">
-                                    <X size={20} />
+                                <button onClick={() => setIsOpen(false)} className="p-1.5 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors text-gray-400">
+                                    <X size={16} />
                                 </button>
                             </div>
                         </div>
 
-                        {/* Messages */}
-                        <div className="relative z-10 flex-grow overflow-y-auto p-4 space-y-4 scroll-smooth">
+                        {/* Messages — Claude-style centered */}
+                        <div className="relative z-10 flex-grow overflow-y-auto px-5 py-5 space-y-5 scroll-smooth">
                             {messages.map((msg) => (
                                 <motion.div
-                                    initial={{ opacity: 0, y: 10 }}
+                                    initial={{ opacity: 0, y: 8 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     key={msg.id}
                                     className={`flex gap-3 ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                                 >
                                     {msg.sender === 'ai' && (
-                                        <div className="w-8 h-8 rounded-full bg-teal-50 dark:bg-teal-900/30 flex items-center justify-center shrink-0 mt-1">
-                                            <Sparkles size={14} className="text-teal-600 dark:text-teal-400" />
+                                        <div className="w-7 h-7 rounded-lg bg-teal-50 dark:bg-teal-900/30 flex items-center justify-center shrink-0 mt-0.5">
+                                            <Sparkles size={12} className="text-teal-600 dark:text-teal-400" />
                                         </div>
                                     )}
-                                    <div className={`max-w-[85%] p-4 rounded-2xl text-sm leading-relaxed shadow-sm ${msg.sender === 'user'
-                                            ? 'bg-teal-600 text-white rounded-br-sm'
+                                    <div className={`max-w-[80%] text-sm leading-relaxed ${msg.sender === 'user'
+                                            ? 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-4 py-3 rounded-2xl rounded-br-md'
                                             : msg.type === 'crisis'
-                                                ? 'bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-200 border border-red-200 dark:border-red-800'
-                                                : 'bg-white dark:bg-slate-800 text-gray-700 dark:text-gray-200 border border-gray-100 dark:border-gray-700 rounded-bl-sm'
+                                                ? 'bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-200 border border-red-200 dark:border-red-800 px-4 py-3 rounded-2xl'
+                                                : 'text-gray-700 dark:text-gray-300 pt-0.5'
                                         }`}>
                                         {msg.type === 'crisis' && (
                                             <div className="flex items-center gap-2 font-bold mb-2 text-red-600 dark:text-red-400">
@@ -227,36 +301,36 @@ const MindMate: React.FC = () => {
                             ))}
                             {isTyping && (
                                 <div className="flex gap-3">
-                                    <div className="w-8 h-8 rounded-full bg-teal-50 dark:bg-teal-900/30 flex items-center justify-center shrink-0">
-                                        <Sparkles size={14} className="text-teal-600 dark:text-teal-400" />
+                                    <div className="w-7 h-7 rounded-lg bg-teal-50 dark:bg-teal-900/30 flex items-center justify-center shrink-0">
+                                        <Sparkles size={12} className="text-teal-600 dark:text-teal-400" />
                                     </div>
-                                    <div className="bg-white dark:bg-slate-800 p-4 rounded-2xl rounded-bl-sm border border-gray-100 dark:border-gray-700 flex gap-1 items-center">
-                                        <span className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" />
-                                        <span className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce delay-100" />
-                                        <span className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce delay-200" />
+                                    <div className="flex gap-1 items-center pt-1">
+                                        <span className="w-1.5 h-1.5 bg-gray-300 rounded-full animate-bounce" />
+                                        <span className="w-1.5 h-1.5 bg-gray-300 rounded-full animate-bounce [animation-delay:100ms]" />
+                                        <span className="w-1.5 h-1.5 bg-gray-300 rounded-full animate-bounce [animation-delay:200ms]" />
                                     </div>
                                 </div>
                             )}
                             <div ref={messagesEndRef} />
                         </div>
 
-                        {/* Input */}
-                        <div className="relative z-10 p-4 border-t border-gray-100 dark:border-gray-800 bg-white/50 dark:bg-slate-900/50">
+                        {/* Input — clean border style */}
+                        <div className="relative z-10 px-4 pb-4 pt-2">
                             <div className="relative">
                                 <input
                                     type="text"
                                     value={inputText}
                                     onChange={(e) => setInputText(e.target.value)}
                                     onKeyDown={(e) => e.key === 'Enter' && handleSend()}
-                                    placeholder="Type a message..."
-                                    className="w-full pl-4 pr-12 py-3.5 bg-white dark:bg-slate-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none text-sm shadow-sm transition-all dark:text-white"
+                                    placeholder="Message Psychage AI..."
+                                    className="w-full pl-4 pr-12 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-2xl focus:ring-2 focus:ring-teal-500/30 focus:border-teal-400 outline-none text-sm transition-all dark:text-white placeholder-gray-400"
                                 />
                                 <button
                                     onClick={handleSend}
                                     disabled={!inputText.trim()}
-                                    className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-teal-600 hover:bg-teal-700 text-white rounded-lg disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                                    className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-gray-900 dark:bg-white hover:bg-gray-800 dark:hover:bg-gray-100 text-white dark:text-gray-900 rounded-xl disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
                                 >
-                                    <Send size={16} />
+                                    <Send size={14} />
                                 </button>
                             </div>
                         </div>

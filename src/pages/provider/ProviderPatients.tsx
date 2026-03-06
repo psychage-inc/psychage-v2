@@ -62,21 +62,18 @@ const ProviderPatients: React.FC = () => {
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
 
-    const handleViewProfile = (patient: Patient) => {
-        // In a real app, this would navigate to patient detail page
-        console.log('Viewing patient:', patient.id);
+    const handleViewProfile = (_patient: Patient) => {
+        // Patient detail view — planned for future release
         setActiveMenu(null);
     };
 
-    const handleSendMessage = (patient: Patient) => {
-        // In a real app, this would open messaging interface
-        console.log('Sending message to:', patient.id);
+    const handleSendMessage = (_patient: Patient) => {
+        // Messaging interface — planned for future release
         setActiveMenu(null);
     };
 
-    const handleScheduleAppointment = (patient: Patient) => {
-        // In a real app, this would open scheduling modal
-        console.log('Scheduling appointment for:', patient.id);
+    const handleScheduleAppointment = (_patient: Patient) => {
+        // Scheduling modal — planned for future release
         setActiveMenu(null);
     };
 

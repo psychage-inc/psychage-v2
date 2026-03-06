@@ -2,6 +2,19 @@ import { renderHook, act } from '@testing-library/react';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { BookmarkProvider, useBookmarks } from '../BookmarkContext';
 
+// Mock AuthContext — BookmarkProvider calls useAuth() internally
+vi.mock('../AuthContext', () => ({
+    useAuth: () => ({
+        isAuthenticated: false,
+        user: null,
+        session: null,
+        loading: false,
+        signIn: vi.fn(),
+        signOut: vi.fn(),
+        signUp: vi.fn(),
+    }),
+}));
+
 describe('BookmarkContext', () => {
     beforeEach(() => {
         localStorage.clear();

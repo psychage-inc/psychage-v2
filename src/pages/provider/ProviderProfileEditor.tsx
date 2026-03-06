@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import ProviderSidebar from './ProviderSidebar';
 import { Card } from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
@@ -9,6 +10,7 @@ import { api } from '@/lib/api';
 import { Loader2 } from 'lucide-react';
 
 const ProviderProfileEditor: React.FC = () => {
+    const navigate = useNavigate();
     const [isLoading, setIsLoading] = useState(true);
     const [isSaving, setIsSaving] = useState(false);
     const [formData, setFormData] = useState({
@@ -154,7 +156,7 @@ const ProviderProfileEditor: React.FC = () => {
                                         <Button
                                             type="button"
                                             variant="outline"
-                                            onClick={() => window.location.reload()}
+                                            onClick={() => navigate('/provider')}
                                         >
                                             Cancel
                                         </Button>

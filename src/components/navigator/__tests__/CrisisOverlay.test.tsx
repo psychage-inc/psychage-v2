@@ -96,13 +96,14 @@ describe('CrisisOverlay Accessibility & Focus Trap', () => {
         expect(understandButton).toHaveFocus();
     });
 
-    it('should close on Escape key and call dispatch', async () => {
+    it('should focus acknowledge button on Escape key (not close)', async () => {
         const user = userEvent.setup();
         renderOverlay(true);
 
         await user.keyboard('{Escape}');
 
-        expect(mockDispatch).toHaveBeenCalledWith({ type: 'ACKNOWLEDGE_CRISIS' });
+        // Escape focuses the acknowledge button instead of closing (acknowledgment is required)
+        expect(mockAnnounceAssertive).toHaveBeenCalledWith("Please acknowledge to continue.");
     });
 
     it('should announce assertively when opened', () => {

@@ -44,7 +44,7 @@ export const StepReview: React.FC<StepProps> = ({ data, onSave }) => {
                 )}
             </div>
 
-            <button onClick={onSave} className="w-full max-w-md mx-auto block py-4 bg-gray-900 text-white rounded-full font-semibold text-lg hover:bg-black transition-colors focus:ring-4 focus:ring-gray-900/20 shadow-xl">
+            <button onClick={onSave} className="w-full max-w-md mx-auto block py-4 bg-teal-600 text-white rounded-full font-semibold text-lg hover:bg-teal-700 transition-colors focus:ring-4 focus:ring-teal-500/20 shadow-xl shadow-teal-600/20">
                 Save Entry
             </button>
         </div>

@@ -19,8 +19,8 @@ export const Logo: React.FC<LogoProps> = ({ className = "h-12 w-auto text-[#1A1A
         `}
             </style>
         </defs>
-        <text x="50%" y="70" textAnchor="middle" className="futura-text" fill="currentColor">
-            PSYCHAGE
+        <text x="50%" y="70" textAnchor="middle" className="futura-text">
+            <tspan fill="#0D9488">PSY</tspan><tspan fill="currentColor">CHAGE</tspan>
         </text>
     </svg>
 );

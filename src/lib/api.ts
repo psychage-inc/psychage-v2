@@ -7,7 +7,7 @@
  * - Type-safe responses
  */
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+const API_URL = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? 'http://localhost:3000' : '');
 
 // Token storage keys
 const ACCESS_TOKEN_KEY = 'psychage_access_token';

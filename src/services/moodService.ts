@@ -224,7 +224,7 @@ export const moodService = {
                 entries.map(e => new Date(e.created_at).toISOString().split('T')[0])
             );
             let streakDays = 0;
-            let currentDate = new Date();
+            const currentDate = new Date();
             currentDate.setHours(0, 0, 0, 0);
 
             while (uniqueDates.has(currentDate.toISOString().split('T')[0])) {

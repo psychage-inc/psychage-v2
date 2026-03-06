@@ -29,21 +29,21 @@ export const FrequencyPicker: React.FC<FrequencyPickerProps> = ({ value, onChang
                         whileTap={{ scale: 0.98 }}
                         onClick={() => onChange(option.value)}
                         className={cn(
-                            "p-4 rounded-2xl border text-left transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 group flex items-start gap-4 backdrop-blur-xl",
+                            "p-4 sm:p-5 rounded-2xl border text-left transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 group flex items-start gap-4 backdrop-blur-xl",
                             isSelected
-                                ? "border-teal-400/50 bg-teal-900/40 shadow-[0_0_25px_rgba(20,184,166,0.25)]"
-                                : "border-border bg-surface/50 hover:border-border-hover hover:bg-surface-hover/50 shadow-lg"
+                                ? "border-teal-500 bg-gradient-to-br from-teal-500 to-teal-600 shadow-md"
+                                : "border-border bg-surface/50 hover:border-border-hover hover:bg-surface-hover/50"
                         )}
                     >
                         <div
                             className={cn(
                                 "flex-shrink-0 w-5 h-5 mt-0.5 rounded-full border-2 flex items-center justify-center transition-colors",
                                 isSelected
-                                    ? "border-teal-500"
+                                    ? "border-white"
                                     : "border-border-hover group-hover:border-border-hover"
                             )}
                         >
-                            {isSelected && <div className="w-2.5 h-2.5 rounded-full bg-teal-500 shadow-[0_0_8px_rgba(20,184,166,0.8)]" />}
+                            {isSelected && <div className="w-2.5 h-2.5 rounded-full bg-white" />}
                         </div>
 
                         <div>
@@ -53,7 +53,10 @@ export const FrequencyPicker: React.FC<FrequencyPickerProps> = ({ value, onChang
                             )}>
                                 {option.label}
                             </p>
-                            <p className="text-sm mt-0.5 text-text-tertiary group-hover:text-text-secondary transition-colors">
+                            <p className={cn(
+                                "text-sm mt-0.5 transition-colors",
+                                isSelected ? "text-white/80" : "text-text-tertiary group-hover:text-text-secondary"
+                            )}>
                                 {option.description}
                             </p>
                         </div>

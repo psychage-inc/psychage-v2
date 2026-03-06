@@ -7,21 +7,22 @@ import { NavigatorButton } from '../navigator/NavigatorButton';
 import { ShieldAlert } from 'lucide-react';
 
 // Processing animation configuration
-const PROCESSING_STEPS = [
+// Timing budget: PROCESSING_STEPS.length × STEP_INTERVAL_MS + FINAL_DELAY_MS ≤ 2500ms
+// The engine itself runs in ~1-3ms (client-side, synchronous). These delays exist solely
+// for UX feedback — giving users confidence that analysis occurred. Keep total ≤ 2.5s.
+export const PROCESSING_STEPS = [
     "Analyzing symptom patterns...",
     "Cross-referencing knowledge base...",
     "Evaluating severity markers...",
-    "Synthesizing results..."
 ];
 
 // Timing constants (in milliseconds)
-const STEP_INTERVAL_MS = 1200;
-const FINAL_DELAY_MS = 1000;
+export const STEP_INTERVAL_MS = 650;
+export const FINAL_DELAY_MS = 300;
 const KB_STALENESS_MINUTES = 30;
 const KB_STALE_MS = KB_STALENESS_MINUTES * 60 * 1000;
 
 // Animation constants (in seconds for Framer Motion)
-const BREATH_ANIM_SECONDS = 2;
 const TEXT_TRANSITION_SECONDS = 0.3;
 
 export const ProcessingScreen: React.FC = () => {
@@ -29,6 +30,7 @@ export const ProcessingScreen: React.FC = () => {
     const [currentStep, setCurrentStep] = useState(0);
     const [processingError, setProcessingError] = useState<string | null>(null);
     const hasRun = useRef(false);
+    const finalTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     useEffect(() => {
         // Guard: only run engine once (React 18 StrictMode double-invokes effects)
@@ -89,7 +91,7 @@ export const ProcessingScreen: React.FC = () => {
                 announcePolite(PROCESSING_STEPS[step]);
             } else {
                 clearInterval(interval);
-                setTimeout(() => {
+                finalTimeoutRef.current = setTimeout(() => {
                     // SET_RESULTS before SET_STEP so ResultsScreen has data on render
                     dispatch({ type: 'SET_RESULTS', payload: engineResults });
                     dispatch({ type: 'SET_STEP', payload: 'results' });
@@ -97,7 +99,10 @@ export const ProcessingScreen: React.FC = () => {
             }
         }, STEP_INTERVAL_MS);
 
-        return () => clearInterval(interval);
+        return () => {
+            clearInterval(interval);
+            if (finalTimeoutRef.current) clearTimeout(finalTimeoutRef.current);
+        };
     }, []); // eslint-disable-line react-hooks/exhaustive-deps — run once on mount
 
     // Error state: show accessible error UI with recovery options (WCAG 4.1.3)
@@ -132,28 +137,68 @@ export const ProcessingScreen: React.FC = () => {
         );
     }
 
+    const totalSteps = PROCESSING_STEPS.length;
+    const progress = Math.round(((currentStep + 1) / totalSteps) * 100);
+
+    // SVG progress ring constants
+    const RING_RADIUS = 44;
+    const RING_CIRCUMFERENCE = 2 * Math.PI * RING_RADIUS;
+    const strokeOffset = RING_CIRCUMFERENCE - (progress / 100) * RING_CIRCUMFERENCE;
+
     return (
-        <div className="max-w-xl mx-auto py-24 px-4 sm:px-6 flex flex-col items-center justify-center min-h-[50vh] text-center">
-            <div className="relative w-24 h-24 mb-10">
-                <svg className="animate-spin-slow w-full h-full text-white/5" viewBox="0 0 100 100">
-                    <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="8" />
-                </svg>
-                <svg className="animate-spin w-full h-full text-teal-500/80 absolute top-0 left-0 drop-shadow-[0_0_15px_rgba(20,184,166,0.6)]" viewBox="0 0 100 100">
-                    <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="8" strokeDasharray="100 200" strokeLinecap="round" />
+        <div className="max-w-xl mx-auto py-24 px-4 sm:px-6 flex flex-col items-center justify-center min-h-[60vh] text-center">
+            {/* Progress ring with percentage */}
+            <div className="relative w-28 h-28 mb-8">
+                <svg className="w-full h-full -rotate-90" viewBox="0 0 100 100">
+                    <circle
+                        cx="50" cy="50" r={RING_RADIUS}
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="6"
+                        className="text-surface-hover/50"
+                    />
+                    <motion.circle
+                        cx="50" cy="50" r={RING_RADIUS}
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="6"
+                        strokeLinecap="round"
+                        strokeDasharray={RING_CIRCUMFERENCE}
+                        animate={{ strokeDashoffset: strokeOffset }}
+                        transition={{ duration: 0.5, ease: 'easeOut' }}
+                        className="text-teal-500"
+                    />
                 </svg>
                 <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-8 h-8 rounded-full bg-teal-900/30 border border-teal-500/30 flex items-center justify-center shadow-[inset_0_0_10px_rgba(20,184,166,0.2)] backdrop-blur-sm">
-                        {/* Simple breathing dot inner */}
-                        <motion.div
-                            animate={{ scale: [1, 1.2, 1], opacity: [0.7, 1, 0.7] }}
-                            transition={{ repeat: Infinity, duration: BREATH_ANIM_SECONDS, ease: "easeInOut" }}
-                            className="w-3 h-3 bg-teal-400 rounded-full shadow-[0_0_10px_rgba(45,212,191,0.8)]"
-                        />
-                    </div>
+                    <motion.span
+                        key={progress}
+                        initial={{ opacity: 0.6, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.3 }}
+                        className="text-2xl font-bold font-display tabular-nums text-text-primary"
+                    >
+                        {progress}%
+                    </motion.span>
                 </div>
             </div>
 
-            <div className="h-8 overflow-hidden relative w-full">
+            {/* Step dots */}
+            <div className="flex items-center gap-2.5 mb-6">
+                {PROCESSING_STEPS.map((_, i) => (
+                    <motion.div
+                        key={i}
+                        animate={{
+                            backgroundColor: i <= currentStep ? 'rgb(20 184 166)' : 'rgb(var(--color-surface-hover) / 0.5)',
+                            scale: i === currentStep ? 1.3 : 1,
+                        }}
+                        transition={{ duration: 0.3 }}
+                        className="w-2 h-2 rounded-full"
+                    />
+                ))}
+            </div>
+
+            {/* Step text */}
+            <div className="h-8 overflow-hidden relative w-full mb-3">
                 <AnimatePresence mode="wait">
                     <motion.p
                         key={currentStep}
@@ -161,15 +206,24 @@ export const ProcessingScreen: React.FC = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: TEXT_TRANSITION_SECONDS }}
-                        className="text-lg font-medium text-text-primary absolute inset-0 font-mono tracking-tight drop-shadow-[0_2px_10px_rgba(255,255,255,0.1)]"
+                        className="text-base font-medium text-text-primary absolute inset-0"
                     >
                         {PROCESSING_STEPS[currentStep]}
                     </motion.p>
                 </AnimatePresence>
             </div>
 
-            <p className="mt-4 text-sm text-text-secondary">
-                Please wait a moment while we prepare your personalized insights.
+            {/* Thin progress bar */}
+            <div className="w-full max-w-xs h-1 rounded-full bg-surface-hover/50 overflow-hidden mb-5">
+                <motion.div
+                    className="h-full rounded-full bg-gradient-to-r from-teal-500 to-teal-400"
+                    animate={{ width: `${progress}%` }}
+                    transition={{ duration: 0.5, ease: 'easeOut' }}
+                />
+            </div>
+
+            <p className="text-sm text-text-secondary">
+                Please wait while we prepare your personalized insights.
             </p>
         </div>
     );

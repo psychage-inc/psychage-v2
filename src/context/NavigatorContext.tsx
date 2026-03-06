@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useReducer, useEffect, ReactNode, useRef, useCallback } from 'react';
+import React, { createContext, useContext, useReducer, useEffect, useMemo, ReactNode, useRef, useCallback } from 'react';
 import {
     KnowledgeBase,
     NavigatorResults,
@@ -225,17 +225,17 @@ export const NavigatorProvider: React.FC<{ children: ReactNode }> = ({ children 
     const restoredRef = useRef(false);
     const corruptedRef = useRef(false);
 
-    const announcePolite = (message: string) => dispatch({ type: 'ANNOUNCE', payload: { message, mode: 'polite' } });
-    const announceAssertive = (message: string) => dispatch({ type: 'ANNOUNCE', payload: { message, mode: 'assertive' } });
+    const announcePolite = useCallback((message: string) => dispatch({ type: 'ANNOUNCE', payload: { message, mode: 'polite' } }), []);
+    const announceAssertive = useCallback((message: string) => dispatch({ type: 'ANNOUNCE', payload: { message, mode: 'assertive' } }), []);
 
     // Prefetch function (can be called on hover/focus)
-    const prefetchKnowledgeBase = () => {
-        if (!state.knowledgeBase && !prefetchCache) {
+    const prefetchKnowledgeBase = useCallback(() => {
+        if (!prefetchCache) {
             fetchKnowledgeBaseData().catch(() => {
                 // Silently fail prefetch - will retry on actual navigation
             });
         }
-    };
+    }, []);
 
     // Initial setup & KB fetch
     useEffect(() => {
@@ -282,7 +282,8 @@ export const NavigatorProvider: React.FC<{ children: ReactNode }> = ({ children 
         };
 
         loadKnowledgeBase();
-    }, [state.sessionHash]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     // Debounced save to localStorage on state changes
     useEffect(() => {
@@ -326,12 +327,14 @@ export const NavigatorProvider: React.FC<{ children: ReactNode }> = ({ children 
         }
     }, [state.currentStep, state.results, state.selectedSymptoms.size]);
 
+    const contextValue = useMemo(() => ({
+        state, dispatch, announcePolite, announceAssertive, prefetchKnowledgeBase,
+        wasRestored: restoredRef.current,
+        wasCorrupted: corruptedRef.current,
+    }), [state, announcePolite, announceAssertive, prefetchKnowledgeBase]);
+
     return (
-        <NavigatorContext.Provider value={{
-            state, dispatch, announcePolite, announceAssertive, prefetchKnowledgeBase,
-            wasRestored: restoredRef.current,
-            wasCorrupted: corruptedRef.current,
-        }}>
+        <NavigatorContext.Provider value={contextValue}>
             {children}
         </NavigatorContext.Provider>
     );

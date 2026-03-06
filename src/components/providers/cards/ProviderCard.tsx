@@ -13,8 +13,8 @@ interface ProviderCardProps {
 }
 
 const FallbackAvatar: React.FC<{ name: string; className?: string }> = ({ name, className }) => (
-  <div className={`bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center ${className}`}>
-    <span className="text-white font-bold text-xl">
+  <div className={`bg-gradient-to-br from-teal-500 to-teal-700 flex items-center justify-center shadow-md shadow-teal-500/20 ${className}`}>
+    <span className="text-white font-bold text-lg tracking-wide">
       {name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase()}
     </span>
   </div>
@@ -44,9 +44,9 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
   return (
     <motion.div
       {...hoverLift}
-      className={`bg-white dark:bg-gray-900 rounded-2xl p-5 border shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full group ${
+      className={`bg-white dark:bg-gray-900 rounded-2xl p-6 border shadow-sm hover:shadow-lg hover:border-teal-200 dark:hover:border-teal-800/60 transition-all duration-300 flex flex-col h-full group ${
         provider.tier === 'premium'
-          ? 'border-l-4 border-l-amber-400 border-t-gray-100 border-r-gray-100 border-b-gray-100 dark:border-l-amber-500 dark:border-t-gray-800 dark:border-r-gray-800 dark:border-b-gray-800'
+          ? 'border-l-4 border-l-amber-400 border-t-gray-100 border-r-gray-100 border-b-gray-100 dark:border-l-amber-500 dark:border-t-gray-800 dark:border-r-gray-800 dark:border-b-gray-800 ring-1 ring-amber-100 dark:ring-amber-900/20'
           : 'border-gray-100 dark:border-gray-800'
       }`}
     >

@@ -11,7 +11,6 @@ import CategoryCard from '../components/articles/CategoryCard';
 import ArticleCard from '../components/article/ArticleCard';
 import Button from '../components/ui/Button';
 import { Display, Text } from '../components/ui/Typography';
-import MeshGradient from '../components/ui/MeshGradient';
 import InteractiveCard from '../components/ui/InteractiveCard';
 import { getCategoryBadgeClasses } from '../config/categoryThemes';
 
@@ -98,48 +97,26 @@ const LearnPage: React.FC = () => {
 
             {/* Hero Section */}
             <section className="relative pt-32 pb-20 px-6 min-h-[60vh] flex flex-col justify-center overflow-hidden">
-                <MeshGradient className="opacity-40 pointer-events-none" />
-
                 <div className="container mx-auto max-w-7xl relative z-10">
                     <div className="max-w-4xl mx-auto text-center">
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-text-primary text-sm font-bold uppercase tracking-wider mb-8 shadow-sm"
-                        >
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface border border-border text-text-primary text-sm font-bold uppercase tracking-wider mb-8 shadow-sm">
                             <BookOpen size={16} className="text-primary" />
                             <span>Knowledge Base</span>
-                        </motion.div>
+                        </div>
 
-                        <motion.h1
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.1 }}
-                            className="text-5xl md:text-7xl font-display font-bold mb-6 text-text-primary leading-tight"
-                        >
-                            Understanding the <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 via-purple-500 to-teal-500 animate-gradient bg-[length:200%_auto]">
-                                Mind & Soul
+                        <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 text-text-primary leading-tight">
+                            Mental Health <br />
+                            <span className="text-primary">
+                                Education & Guides
                             </span>
-                        </motion.h1>
+                        </h1>
 
-                        <motion.p
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.2 }}
-                            className="text-xl text-text-secondary mb-12 max-w-2xl mx-auto leading-relaxed"
-                        >
-                            Explore expert-reviewed articles, practical guides, and the latest research on mental health and wellness.
-                        </motion.p>
+                        <p className="text-xl text-text-secondary mb-12 max-w-2xl mx-auto leading-relaxed">
+                            Explore expert-reviewed articles, practical guides, and the latest research on emotional well-being.
+                        </p>
 
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.3 }}
-                            className="max-w-2xl mx-auto relative group"
-                        >
-                            <div className="absolute -inset-1 bg-gradient-to-r from-teal-500 to-purple-600 rounded-2xl opacity-20 group-hover:opacity-30 blur transition duration-500"></div>
-                            <div className="relative flex items-center bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden focus-within:ring-2 focus-within:ring-primary/50 transition-all">
+                        <div className="max-w-2xl mx-auto relative group">
+                            <div className="relative flex items-center bg-surface border border-border rounded-xl shadow-sm focus-within:ring-2 focus-within:ring-primary/50 transition-all overflow-hidden">
                                 <Search className="absolute left-4 text-text-tertiary" size={24} />
                                 <input
                                     type="text"
@@ -149,7 +126,7 @@ const LearnPage: React.FC = () => {
                                     className="w-full pl-14 pr-4 py-5 bg-transparent text-text-primary placeholder-text-tertiary outline-none text-lg font-medium"
                                 />
                             </div>
-                        </motion.div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -182,11 +159,9 @@ const LearnPage: React.FC = () => {
             </section>
 
             {/* Categories Grid */}
-            <section className="px-6 mb-24 relative">
-                <div className="absolute inset-0 bg-surface-subtle/30 -skew-y-3 transform origin-top-left -z-10 h-full w-full" />
-
-                <div className="container mx-auto max-w-7xl py-12">
-                    <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-6">
+            <section className="px-6 mb-24 relative pt-8 border-t border-border mt-8">
+                <div className="container mx-auto max-w-7xl">
+                    <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
                         <div className="flex items-center gap-3">
                             <Filter className="text-primary" size={24} />
                             <h2 className="text-3xl font-display font-bold text-text-primary">Browse by Topic</h2>
@@ -205,9 +180,9 @@ const LearnPage: React.FC = () => {
                                 <button
                                     key={filter.id}
                                     onClick={() => setActiveFilter(filter.id)}
-                                    className={`whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-bold transition-all border ${activeFilter === filter.id
-                                        ? 'bg-primary text-white border-primary shadow-lg shadow-primary/25 scale-105'
-                                        : 'bg-white/5 text-text-secondary border-white/10 hover:bg-white/10 hover:border-white/20'
+                                    className={`whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition-colors border ${activeFilter === filter.id
+                                        ? 'bg-primary text-white border-primary'
+                                        : 'bg-surface text-text-secondary border-border hover:bg-surface-hover hover:text-text-primary'
                                         }`}
                                 >
                                     {filter.label}
@@ -227,10 +202,10 @@ const LearnPage: React.FC = () => {
                                     <motion.div
                                         key={category.id}
                                         layout
-                                        initial={{ opacity: 0, scale: 0.9 }}
-                                        animate={{ opacity: 1, scale: 1 }}
-                                        exit={{ opacity: 0, scale: 0.9 }}
-                                        transition={{ duration: 0.3 }}
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 0 }}
+                                        transition={{ duration: 0.2 }}
                                         className="h-full"
                                     >
                                         <CategoryCard
@@ -247,14 +222,14 @@ const LearnPage: React.FC = () => {
             {/* Recent & Popular Split */}
             <section className="px-6 mb-24">
                 <div className="container mx-auto max-w-7xl">
-                    <div className="grid lg:grid-cols-3 gap-12">
+                    <div className="grid lg:grid-cols-3 gap-8">
                         {/* Recent Articles (2 cols) */}
-                        <div className="lg:col-span-2 space-y-8">
+                        <div className="lg:col-span-2 space-y-6">
                             <div className="flex items-center gap-3 mb-6">
                                 <BookOpen className="text-secondary" size={24} />
                                 <h2 className="text-3xl font-display font-bold text-text-primary">Recent Articles</h2>
                             </div>
-                            <div className="grid md:grid-cols-2 gap-8">
+                            <div className="grid md:grid-cols-2 gap-6">
                                 {recentArticles.map((article) => (
                                     <div key={article.id} className="h-full">
                                         <ArticleCard
@@ -304,26 +279,24 @@ const LearnPage: React.FC = () => {
             {/* CTA Banner */}
             <section className="px-6 mb-20">
                 <div className="container mx-auto max-w-7xl">
-                    <InteractiveCard className="relative overflow-hidden p-8 md:p-16 border-primary/20 bg-gradient-to-br from-primary/10 via-surface to-surface">
-                        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/4 pointer-events-none" />
-
-                        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
+                    <div className="rounded-2xl border border-border bg-surface p-8 md:p-12 shadow-sm">
+                        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                             <div className="max-w-2xl text-center md:text-left">
-                                <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-text-primary">Unsure where to start?</h2>
-                                <p className="text-lg text-text-secondary mb-0 leading-relaxed">
+                                <h2 className="text-2xl md:text-3xl font-display font-bold mb-3 text-text-primary">Unsure where to start?</h2>
+                                <p className="text-text-secondary leading-relaxed">
                                     Take our scientifically-backed Clarity Score assessment to get a personalized mental health baseline and tailored recommendations.
                                 </p>
                             </div>
                             <Button
-                                size="xl"
-                                className="shrink-0 shadow-xl shadow-primary/20 bg-primary hover:bg-primary-hover text-white rounded-full px-8 py-4 h-auto text-lg"
-                                rightIcon={<ArrowRight size={20} />}
+                                variant="primary"
+                                className="shrink-0 h-11 px-6 rounded-lg font-semibold"
+                                rightIcon={<ArrowRight size={18} />}
                                 onClick={() => navigate('/clarity-score')}
                             >
                                 Take Clarity Score
                             </Button>
                         </div>
-                    </InteractiveCard>
+                    </div>
                 </div>
             </section>
         </div>

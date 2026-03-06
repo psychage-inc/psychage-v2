@@ -1,25 +1,83 @@
-import React from 'react';
-import { ArrowRight, Save, RotateCcw, CheckCircle2 } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowRight, Save, RotateCcw, CheckCircle2, Copy, Check, Sparkles, Target } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import type { ThoughtRecord } from '../types';
-import { COGNITIVE_DISTORTIONS } from '../types';
+import { COGNITIVE_DISTORTIONS, REFRAME_TONES, REFRAME_STYLES } from '../types';
 
 interface CompletionScreenProps {
   data: ThoughtRecord;
+  updateData: (updates: Partial<ThoughtRecord>) => void;
   onSave: () => void;
   onStartAnother: () => void;
   saved: boolean;
 }
 
+const MANTRA_SUGGESTIONS = [
+  'This feeling is temporary, not permanent.',
+  'I am doing my best with what I have right now.',
+  'One setback does not define my story.',
+  'I can hold space for difficulty and still move forward.',
+  'My thoughts are not facts — they are guesses.',
+  'I am allowed to be imperfect.',
+];
+
 export const CompletionScreen: React.FC<CompletionScreenProps> = ({
   data,
+  updateData,
   onSave,
   onStartAnother,
   saved,
 }) => {
+  const [copied, setCopied] = useState(false);
+
   const distortionNames = data.distortions
     .map(id => COGNITIVE_DISTORTIONS.find(d => d.id === id)?.name)
     .filter(Boolean);
+
+  const toneName = REFRAME_TONES.find(t => t.id === data.tone)?.label ?? 'Gentle';
+  const styleName = REFRAME_STYLES.find(s => s.id === data.reframingStyle)?.label ?? 'Balanced Thought';
+
+  const handleCopy = async () => {
+    const lines = [
+      `Thought Reframer — ${new Date(data.createdAt).toLocaleDateString()}`,
+      '',
+      `Situation: ${data.situation}`,
+      '',
+      `Original thought: "${data.automaticThought}"`,
+      `Balanced thought: "${data.balancedThought}"`,
+      '',
+      `Patterns identified: ${distortionNames.join(', ')}`,
+      `Approach: ${toneName} / ${styleName}`,
+    ];
+    if (data.evidenceFor) lines.push('', `Evidence for: ${data.evidenceFor}`);
+    if (data.evidenceAgainst) lines.push(`Evidence against: ${data.evidenceAgainst}`);
+    if (data.actionableStep) lines.push('', `Next step: ${data.actionableStep}`);
+    if (data.mantra) lines.push(`Mantra: ${data.mantra}`);
+
+    try {
+      await navigator.clipboard.writeText(lines.join('\n'));
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // Fallback for older browsers
+      const textarea = document.createElement('textarea');
+      textarea.value = lines.join('\n');
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
+  };
+
+  const pickRandomMantra = () => {
+    const unused = MANTRA_SUGGESTIONS.filter(m => m !== data.mantra);
+    const pick = unused[Math.floor(Math.random() * unused.length)];
+    updateData({ mantra: pick });
+  };
 
   return (
     <div className="flex flex-col items-center w-full">
@@ -35,7 +93,7 @@ export const CompletionScreen: React.FC<CompletionScreenProps> = ({
       </p>
 
       {/* Summary card */}
-      <div className="w-full max-w-md bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden mb-8">
+      <div className="w-full max-w-md bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden mb-6">
         {/* Situation */}
         <div className="px-5 py-4 border-b border-gray-50">
           <p className="text-xs text-gray-400 mb-1">Situation</p>
@@ -57,7 +115,7 @@ export const CompletionScreen: React.FC<CompletionScreenProps> = ({
           </div>
         </div>
 
-        {/* Distortions */}
+        {/* Distortions + approach */}
         <div className="px-5 py-3 border-b border-gray-50">
           <p className="text-xs text-gray-400 mb-2">Patterns identified</p>
           <div className="flex flex-wrap gap-1.5">
@@ -70,7 +128,33 @@ export const CompletionScreen: React.FC<CompletionScreenProps> = ({
               </span>
             ))}
           </div>
+          <div className="flex gap-1.5 mt-2">
+            <span className="px-2.5 py-1 bg-gray-50 text-gray-500 rounded-full text-xs">
+              {toneName}
+            </span>
+            <span className="px-2.5 py-1 bg-gray-50 text-gray-500 rounded-full text-xs">
+              {styleName}
+            </span>
+          </div>
         </div>
+
+        {/* Evidence (if present) */}
+        {(data.evidenceFor || data.evidenceAgainst) && (
+          <div className="px-5 py-3 border-b border-gray-50 grid grid-cols-2 gap-3">
+            {data.evidenceFor && (
+              <div>
+                <p className="text-xs text-gray-400 mb-1">Evidence for</p>
+                <p className="text-xs text-gray-600 line-clamp-3">{data.evidenceFor}</p>
+              </div>
+            )}
+            {data.evidenceAgainst && (
+              <div>
+                <p className="text-xs text-gray-400 mb-1">Evidence against</p>
+                <p className="text-xs text-gray-600 line-clamp-3">{data.evidenceAgainst}</p>
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Emotion changes */}
         <div className="px-5 py-4">
@@ -111,8 +195,48 @@ export const CompletionScreen: React.FC<CompletionScreenProps> = ({
         </div>
       </div>
 
+      {/* Actionable next step */}
+      <div className="w-full max-w-md mb-4">
+        <div className="flex items-center gap-2 mb-2">
+          <Target size={14} className="text-amber-500" />
+          <p className="text-sm text-gray-700 font-medium">What's one small step you can take next?</p>
+        </div>
+        <textarea
+          value={data.actionableStep}
+          onChange={e => updateData({ actionableStep: e.target.value })}
+          placeholder="e.g., Ask my manager for specific feedback so I know what to improve..."
+          rows={2}
+          className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-sm text-gray-900 placeholder-gray-400 resize-none focus:outline-none focus:ring-2 focus:ring-amber-500/20 focus:border-amber-300 transition-all"
+          aria-label="Write an actionable next step"
+        />
+      </div>
+
+      {/* Mantra / reminder */}
+      <div className="w-full max-w-md mb-8">
+        <div className="flex items-center justify-between mb-2">
+          <div className="flex items-center gap-2">
+            <Sparkles size={14} className="text-purple-500" />
+            <p className="text-sm text-gray-700 font-medium">A mantra to carry with you</p>
+          </div>
+          <button
+            onClick={pickRandomMantra}
+            className="text-xs text-purple-600 hover:text-purple-700 font-medium transition-colors"
+          >
+            Suggest one
+          </button>
+        </div>
+        <input
+          type="text"
+          value={data.mantra}
+          onChange={e => updateData({ mantra: e.target.value })}
+          placeholder="Write a short reminder, or tap 'Suggest one'..."
+          className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500/20 focus:border-purple-300 transition-all"
+          aria-label="Write a personal mantra or reminder"
+        />
+      </div>
+
       {/* Actions */}
-      <div className="flex flex-col sm:flex-row gap-3 w-full max-w-md mb-6">
+      <div className="flex flex-col sm:flex-row gap-3 w-full max-w-md mb-4">
         {!saved ? (
           <button
             onClick={onSave}
@@ -135,6 +259,24 @@ export const CompletionScreen: React.FC<CompletionScreenProps> = ({
           Start Another
         </button>
       </div>
+
+      {/* Copy result */}
+      <button
+        onClick={handleCopy}
+        className="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-700 transition-colors mb-6"
+      >
+        {copied ? (
+          <>
+            <Check size={16} className="text-teal-500" />
+            <span className="text-teal-600">Copied to clipboard</span>
+          </>
+        ) : (
+          <>
+            <Copy size={16} />
+            Copy result
+          </>
+        )}
+      </button>
 
       <Link
         to="/tools"

@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
-import { api, type AdminAuditLog } from '@/lib/api';
+import type { AdminAuditLog } from '@/lib/api';
+import { getAuditLogs as fetchAuditLogs } from '@/services/adminService';
 import { format } from 'date-fns';
 import { FileText, User, ChevronDown, ChevronUp } from 'lucide-react';
 import AdminLayout from './components/AdminLayout';
@@ -51,10 +52,8 @@ const AuditLogPage: React.FC = () => {
         setIsLoading(true);
         setError(null);
         try {
-            const response = await api.admin.getAuditLogs();
-            if (response.success && response.data) {
-                setLogs(response.data);
-            }
+            const data = await fetchAuditLogs();
+            setLogs(data);
         } catch (err) {
             console.error("Failed to fetch audit logs", err);
             setError('Failed to load audit logs. Please try again.');

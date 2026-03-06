@@ -1,11 +1,11 @@
 import React, { useMemo } from 'react';
-import { AlertCircle, Phone, MessageSquare, ExternalLink } from 'lucide-react';
+import { Phone, MessageSquare, ExternalLink, MapPin, HeartHandshake } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Button from '../ui/Button';
 import { resolveCountry, getResourcesForCountry } from '@/lib/crisis';
 
 const CrisisBanner: React.FC = () => {
-  const { primaryPhone, primaryLabel, textAction, textLabel } = useMemo(() => {
+  const { primaryPhone, primaryLabel, textAction, countryName } = useMemo(() => {
     const country = resolveCountry();
     const result = getResourcesForCountry(country);
 
@@ -23,48 +23,58 @@ const CrisisBanner: React.FC = () => {
       primaryPhone: phone,
       primaryLabel: label,
       textAction: text?.text_instruction ?? null,
-      textLabel: text?.name ?? null,
+      countryName: result.country.country_name,
     };
   }, []);
 
   const callHref = `tel:${primaryPhone.replace(/[^0-9+]/g, '')}`;
 
   return (
-    <div className="bg-amber-50 border-t border-b border-amber-100 p-6 relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-300 to-amber-500" />
-      <div className="container mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-6 px-4">
-        <div className="flex items-center gap-4 text-center md:text-left">
-          <div className="bg-amber-100 p-3 rounded-full text-amber-600 hidden md:block shrink-0">
-            <AlertCircle size={24} />
+    <div className="bg-white border-b border-gray-100 py-3 px-4 relative">
+      <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-teal-400 via-teal-500 to-teal-400" />
+      <div className="container mx-auto max-w-7xl flex flex-col sm:flex-row items-center justify-between gap-3">
+        {/* Left: icon + message */}
+        <div className="flex items-center gap-3 text-center sm:text-left min-w-0">
+          <div className="bg-teal-50 p-2 rounded-lg text-teal-600 hidden sm:flex shrink-0">
+            <HeartHandshake size={18} />
           </div>
-          <div>
-            <h3 className="font-display font-bold text-lg text-gray-900 mb-1">
-              Need immediate help?
-            </h3>
-            <p className="text-gray-600 text-sm md:text-base">
-              You are not alone. Call{' '}
-              <span className="font-semibold text-gray-900">{primaryPhone}</span>
-              {' '}({primaryLabel}).
-            </p>
+          <div className="flex items-center gap-2 flex-wrap text-sm">
+            <span className="text-gray-500 font-medium">
+              24/7 Support
+            </span>
+            <span className="text-gray-300 hidden sm:inline">|</span>
+            <span className="text-gray-900 font-semibold">
+              {primaryPhone}
+            </span>
+            <span className="text-gray-400">
+              ({primaryLabel})
+            </span>
           </div>
         </div>
 
+        {/* Right: country + actions */}
         <div className="flex items-center gap-3 shrink-0">
+          <span className="hidden md:flex items-center gap-1.5 text-xs text-gray-400 font-medium border border-gray-100 rounded-full px-3 py-1">
+            <MapPin size={12} />
+            {countryName}
+          </span>
+
           <Button
             variant="secondary"
             size="sm"
-            leftIcon={<Phone size={16} />}
-            className="bg-amber-500 hover:bg-amber-600 border-transparent shadow-amber-500/20 text-white"
+            leftIcon={<Phone size={14} />}
+            className="bg-teal-600 hover:bg-teal-700 border-transparent text-white shadow-sm text-xs"
             onClick={() => window.open(callHref)}
           >
-            Call {primaryPhone}
+            Call Now
           </Button>
+
           {textAction ? (
             <Button
               variant="outline"
               size="sm"
-              leftIcon={<MessageSquare size={16} />}
-              className="bg-white border-amber-200 text-amber-700 hover:bg-amber-50 hover:border-amber-300"
+              leftIcon={<MessageSquare size={14} />}
+              className="bg-white border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 text-xs"
               onClick={() => {
                 const num = textAction.match(/\d+/)?.[0];
                 if (num) window.open(`sms:${num}`);
@@ -77,10 +87,10 @@ const CrisisBanner: React.FC = () => {
               <Button
                 variant="outline"
                 size="sm"
-                leftIcon={<ExternalLink size={16} />}
-                className="bg-white border-amber-200 text-amber-700 hover:bg-amber-50 hover:border-amber-300"
+                leftIcon={<ExternalLink size={14} />}
+                className="bg-white border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 text-xs"
               >
-                Crisis Resources
+                Resources
               </Button>
             </Link>
           )}

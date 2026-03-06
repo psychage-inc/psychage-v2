@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
-
-import { motion } from 'framer-motion';
+import React, { useState, useEffect, useCallback } from 'react';
+import { cn } from '../../lib/utils';
 
 interface SeveritySliderProps {
     value?: number;
@@ -9,11 +8,46 @@ interface SeveritySliderProps {
     maxLabel?: string;
 }
 
+const SEVERITY_LABELS: Record<number, string> = {
+    1: 'Very Mild',
+    2: 'Mild',
+    3: 'Mild',
+    4: 'Moderate',
+    5: 'Moderate',
+    6: 'Moderate',
+    7: 'Significant',
+    8: 'Significant',
+    9: 'Severe',
+    10: 'Severe',
+};
+
+const getSegmentColor = (segmentValue: number, selectedValue: number): string => {
+    if (segmentValue > selectedValue) return 'bg-surface-hover/50 border-border';
+    if (selectedValue <= 3) return 'bg-teal-500 border-teal-500';
+    if (selectedValue <= 6) return 'bg-teal-600 border-teal-600';
+    if (selectedValue <= 8) return 'bg-amber-500 border-amber-500';
+    return 'bg-red-500 border-red-500';
+};
+
+const getValueColor = (val: number): string => {
+    if (val <= 3) return 'text-teal-500';
+    if (val <= 6) return 'text-teal-600';
+    if (val <= 8) return 'text-amber-500';
+    return 'text-red-500';
+};
+
+const getLabelColor = (val: number): string => {
+    if (val <= 3) return 'text-teal-400';
+    if (val <= 6) return 'text-teal-500';
+    if (val <= 8) return 'text-amber-400';
+    return 'text-red-400';
+};
+
 export const SeveritySlider: React.FC<SeveritySliderProps> = ({
     value = 5,
     onChange,
-    minLabel = "Mild",
-    maxLabel = "Severe"
+    minLabel = 'Mild',
+    maxLabel = 'Severe',
 }) => {
     const [localValue, setLocalValue] = useState(value);
 
@@ -21,90 +55,100 @@ export const SeveritySlider: React.FC<SeveritySliderProps> = ({
         setLocalValue(value);
     }, [value]);
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const val = parseInt(e.target.value, 10);
-        setLocalValue(val);
-        onChange(val);
-    };
+    const handleSelect = useCallback(
+        (val: number) => {
+            setLocalValue(val);
+            onChange(val);
+        },
+        [onChange]
+    );
 
-    // Convert value to 0-100 format for the gradient track
-    const percentage = ((localValue - 1) / 9) * 100;
+    const handleKeyDown = useCallback(
+        (e: React.KeyboardEvent) => {
+            let newVal = localValue;
+            if (e.key === 'ArrowRight' || e.key === 'ArrowUp') {
+                e.preventDefault();
+                newVal = Math.min(10, localValue + 1);
+            } else if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') {
+                e.preventDefault();
+                newVal = Math.max(1, localValue - 1);
+            } else if (e.key === 'Home') {
+                e.preventDefault();
+                newVal = 1;
+            } else if (e.key === 'End') {
+                e.preventDefault();
+                newVal = 10;
+            }
+            if (newVal !== localValue) {
+                handleSelect(newVal);
+            }
+        },
+        [localValue, handleSelect]
+    );
 
     return (
-        <div className="w-full space-y-6">
-            <div className="relative pt-6 pb-2">
-                {/* Value tooltip */}
-                <motion.div
-                    className="absolute top-0 -translate-x-1/2 w-8 h-8 bg-teal-500 rounded-lg flex items-center justify-center shadow-[0_0_15px_rgba(20,184,166,0.5)] z-10 before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:border-4 before:border-transparent before:border-t-teal-500"
-                    style={{ left: `${percentage}%` }}
-                    initial={false}
-                    animate={{ left: `${percentage}%` }}
-                    transition={{ type: "spring", stiffness: 300, damping: 25 }}
+        <div className="w-full space-y-5">
+            {/* Value display */}
+            <div className="text-center">
+                <div
+                    className={cn(
+                        'text-5xl font-bold font-display tabular-nums transition-colors duration-200',
+                        getValueColor(localValue)
+                    )}
                 >
-                    <span className="text-text-primary font-bold text-sm">{localValue}</span>
-                </motion.div>
-
-                <input
-                    type="range"
-                    min="1"
-                    max="10"
-                    step="1"
-                    value={localValue}
-                    onChange={handleChange}
-                    className="w-full appearance-none bg-transparent cursor-pointer relative z-20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 rounded-full touch-none"
-                    aria-label="Severity scale from 1 to 10"
-                />
-
-                {/* Custom Track */}
-                <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 h-3 bg-surface-hover/50 rounded-full overflow-hidden pointer-events-none z-0">
-                    <div
-                        className="absolute top-0 left-0 bottom-0 bg-gradient-to-r from-teal-400 to-indigo-500 rounded-full"
-                        style={{ width: `${percentage}%` }}
-                    />
+                    {localValue}
+                </div>
+                <div
+                    className={cn(
+                        'text-sm font-medium mt-1 transition-colors duration-200',
+                        getLabelColor(localValue)
+                    )}
+                >
+                    {SEVERITY_LABELS[localValue]}
                 </div>
             </div>
 
-            <div className="flex justify-between items-center text-sm font-medium text-text-tertiary">
+            {/* Segmented buttons */}
+            <div
+                role="radiogroup"
+                aria-label="Severity scale from 1 to 10"
+                className="flex gap-1.5 sm:gap-2"
+                onKeyDown={handleKeyDown}
+            >
+                {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => {
+                    const isSelected = num === localValue;
+                    const isFilled = num <= localValue;
+
+                    return (
+                        <button
+                            key={num}
+                            role="radio"
+                            aria-checked={isSelected}
+                            aria-label={`${num} - ${SEVERITY_LABELS[num]}`}
+                            tabIndex={isSelected ? 0 : -1}
+                            onClick={() => handleSelect(num)}
+                            className={cn(
+                                'flex-1 aspect-square max-w-[44px] rounded-lg border text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-1',
+                                isFilled
+                                    ? cn(
+                                          getSegmentColor(num, localValue),
+                                          'text-white'
+                                      )
+                                    : 'bg-surface-hover/50 border-border text-text-tertiary hover:border-border-hover hover:text-text-secondary',
+                                isSelected && 'ring-2 ring-offset-1 ring-offset-background ring-white/50 scale-110'
+                            )}
+                        >
+                            {num}
+                        </button>
+                    );
+                })}
+            </div>
+
+            {/* Min/Max labels */}
+            <div className="flex justify-between items-center text-sm font-medium text-text-tertiary px-1">
                 <span>{minLabel}</span>
                 <span>{maxLabel}</span>
             </div>
-
-            <style dangerouslySetInnerHTML={{
-                __html: `
-        /* Hide default thumb but keep accessible */
-        input[type=range]::-webkit-slider-thumb {
-          -webkit-appearance: none;
-          height: 28px;
-          width: 28px;
-          border-radius: 50%;
-          background: white;
-          border: 2px solid #6366f1;
-          box-shadow: 0 0 12px rgba(99, 102, 241, 0.6);
-          cursor: pointer;
-          margin-top: -10px;
-        }
-        input[type=range]::-moz-range-thumb {
-          height: 28px;
-          width: 28px;
-          border-radius: 50%;
-          background: white;
-          border: 2px solid #6366f1;
-          box-shadow: 0 0 12px rgba(99, 102, 241, 0.6);
-          cursor: pointer;
-        }
-        input[type=range]::-webkit-slider-runnable-track {
-          width: 100%;
-          height: 8px;
-          cursor: pointer;
-          background: transparent;
-        }
-        input[type=range]::-moz-range-track {
-          width: 100%;
-          height: 8px;
-          cursor: pointer;
-          background: transparent;
-        }
-      `}} />
         </div>
     );
 };

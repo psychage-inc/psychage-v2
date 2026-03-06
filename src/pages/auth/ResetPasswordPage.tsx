@@ -8,7 +8,6 @@ import { Label } from '@/components/ui/Label';
 import { Display, Text } from '@/components/ui/Typography';
 import { Alert, AlertDescription } from '@/components/ui/Alert';
 import { useAuth } from '../../context/AuthContext';
-import MeshGradient from '@/components/ui/MeshGradient';
 import InteractiveCard from '@/components/ui/InteractiveCard';
 
 const ResetPasswordPage = () => {
@@ -37,9 +36,7 @@ const ResetPasswordPage = () => {
     return (
         <div className="min-h-screen flex items-center justify-center px-4 py-12 bg-background relative overflow-hidden">
             {/* Dynamic Background */}
-            <MeshGradient className="opacity-60" />
-
-            <div className="absolute inset-0 bg-background/20 backdrop-blur-[1px] pointer-events-none" />
+                        <div className="absolute inset-0 bg-background/20 backdrop-blur-[1px] pointer-events-none" />
 
             <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}

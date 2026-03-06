@@ -21,9 +21,7 @@ import type {
 } from '@/lib/navigator/types';
 import {
   createTestKnowledgeBase,
-  createTestSymptom,
   CRISIS_SYMPTOM_IDS,
-  URGENT_SYMPTOM_IDS,
 } from './test-helpers';
 
 describe('Safety Screening — Red Flag Detection', () => {

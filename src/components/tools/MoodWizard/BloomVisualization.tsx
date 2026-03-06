@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 
 interface BloomProps {
@@ -6,49 +6,88 @@ interface BloomProps {
 }
 
 export const BloomVisualization: React.FC<BloomProps> = ({ valence }) => {
-    // Map valence to colors
-    const getColor = () => {
-        if (valence <= 3) return ['#94a3b8', '#64748b']; // Slate/Unpleasant
-        if (valence <= 7) return ['#5eead4', '#2dd4bf']; // Teal/Neutral
-        return ['#fdba74', '#f97316']; // Orange/Pleasant
-    };
+    const colors = useMemo(() => {
+        if (valence <= 3) return { primary: '#94a3b8', secondary: '#64748b', glow: 'rgba(148,163,184,0.3)' };
+        if (valence <= 7) return { primary: '#5eead4', secondary: '#14b8a6', glow: 'rgba(94,234,212,0.3)' };
+        return { primary: '#fdba74', secondary: '#f97316', glow: 'rgba(253,186,116,0.3)' };
+    }, [valence]);
 
-    const colors = getColor();
-    const scale = 0.8 + (valence / 10) * 0.4; // 0.8 to 1.2
+    const scale = 0.8 + (valence / 10) * 0.4;
+    const gradientId = `bloom-gradient-${Math.round(valence)}`;
 
     return (
         <div className="relative w-64 h-64 mx-auto flex items-center justify-center my-12 pointer-events-none">
+            {/* Outer ambient glow */}
             <motion.div
                 animate={{
-                    scale: [scale, scale * 1.05, scale],
-                    rotate: [0, 90, 180, 270, 360],
+                    scale: [scale * 1.2, scale * 1.3, scale * 1.2],
+                    opacity: [0.15, 0.25, 0.15],
                 }}
-                transition={{
-                    duration: 20,
-                    repeat: Infinity,
-                    ease: "linear"
-                }}
-                className="absolute inset-0 rounded-full mix-blend-multiply filter blur-3xl opacity-70"
-                style={{ backgroundColor: colors[0] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute inset-0 rounded-full blur-3xl"
+                style={{ backgroundColor: colors.glow }}
             />
+
+            {/* SVG organic shapes */}
+            <motion.svg
+                viewBox="0 0 200 200"
+                className="absolute inset-0 w-full h-full"
+                animate={{ rotate: [0, 360] }}
+                transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+            >
+                <defs>
+                    <radialGradient id={gradientId} cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stopColor={colors.primary} stopOpacity="0.6" />
+                        <stop offset="70%" stopColor={colors.secondary} stopOpacity="0.2" />
+                        <stop offset="100%" stopColor={colors.secondary} stopOpacity="0" />
+                    </radialGradient>
+                </defs>
+                <motion.ellipse
+                    cx="100" cy="100"
+                    animate={{
+                        rx: [70 * scale, 80 * scale, 70 * scale],
+                        ry: [60 * scale, 65 * scale, 60 * scale],
+                    }}
+                    transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+                    fill={`url(#${gradientId})`}
+                />
+            </motion.svg>
+
+            {/* Second organic layer, counter-rotating */}
+            <motion.svg
+                viewBox="0 0 200 200"
+                className="absolute inset-0 w-full h-full"
+                animate={{ rotate: [360, 0] }}
+                transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+            >
+                <motion.ellipse
+                    cx="100" cy="100"
+                    animate={{
+                        rx: [55 * scale, 65 * scale, 55 * scale],
+                        ry: [70 * scale, 75 * scale, 70 * scale],
+                    }}
+                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                    fill={colors.primary}
+                    opacity={0.2}
+                    className="blur-sm"
+                />
+            </motion.svg>
+
+            {/* Blurred background layer */}
             <motion.div
                 animate={{
-                    scale: [scale * 1.1, scale, scale * 1.1],
-                    rotate: [360, 270, 180, 90, 0],
+                    scale: [scale, scale * 1.08, scale],
                 }}
-                transition={{
-                    duration: 15,
-                    repeat: Infinity,
-                    ease: "linear"
-                }}
-                className="absolute inset-0 rounded-full mix-blend-multiply filter blur-2xl opacity-60"
-                style={{ backgroundColor: colors[1] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute inset-4 rounded-full mix-blend-multiply filter blur-2xl opacity-40"
+                style={{ backgroundColor: colors.primary }}
             />
+
             {/* Central core */}
             <motion.div
-                animate={{ scale: [1, 1.05, 1] }}
+                animate={{ scale: [1, 1.04, 1] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute w-32 h-32 rounded-full bg-white/40 backdrop-blur-md shadow-inner border border-white/50 flex items-center justify-center"
+                className="absolute w-28 h-28 rounded-full bg-white/50 backdrop-blur-xl shadow-inner border border-white/60 flex items-center justify-center"
             >
                 <FaceIcon valence={valence} />
             </motion.div>
@@ -57,17 +96,10 @@ export const BloomVisualization: React.FC<BloomProps> = ({ valence }) => {
 };
 
 const FaceIcon = ({ valence }: { valence: number }) => {
-    // Map valence 1-10 to a smile curve
-    // For valence 5 (neutral), smileAmount is 0 (flat line)
-    // For valence 10 (happy), smileAmount is positive (curve down)
-    // For valence 1 (sad), smileAmount is negative (curve up)
     const smileAmount = (valence - 5.5) * 8;
-
-    // We adjust the base Y so the mouth stays roughly centered
     const baseY = 65 - (smileAmount * 0.2);
     const d = `M 30 ${baseY} Q 50 ${baseY + smileAmount} 70 ${baseY}`;
 
-    // Get color based on valence
     const getColor = () => {
         if (valence <= 3) return 'text-slate-600';
         if (valence <= 7) return 'text-teal-700';
@@ -75,7 +107,7 @@ const FaceIcon = ({ valence }: { valence: number }) => {
     };
 
     return (
-        <svg viewBox="0 0 100 100" className={`w-16 h-16 opacity-70 transition-colors duration-500 ${getColor()}`}>
+        <svg viewBox="0 0 100 100" className={`w-14 h-14 opacity-70 transition-colors duration-500 ${getColor()}`}>
             <circle cx="32" cy="40" r="5" fill="currentColor" />
             <circle cx="68" cy="40" r="5" fill="currentColor" />
             <path d={d} stroke="currentColor" strokeWidth="6" strokeLinecap="round" fill="none" className="transition-all duration-300" />

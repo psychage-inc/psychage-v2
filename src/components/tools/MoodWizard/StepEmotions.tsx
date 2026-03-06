@@ -40,7 +40,7 @@ export const StepEmotions: React.FC<StepProps> = ({ data, updateData, onNext }) 
             <button
                 onClick={onNext}
                 disabled={data.emotions.length === 0}
-                className="w-full max-w-md mx-auto block py-4 bg-gray-900 text-white rounded-full font-semibold text-lg hover:bg-black transition-colors focus:ring-4 focus:ring-gray-900/20 disabled:opacity-50 disabled:cursor-not-allowed shadow-md"
+                className="w-full max-w-md mx-auto block py-4 bg-teal-600 text-white rounded-full font-semibold text-lg hover:bg-teal-700 transition-colors focus:ring-4 focus:ring-teal-500/20 disabled:opacity-50 disabled:cursor-not-allowed shadow-md shadow-teal-600/20"
             >
                 Next
             </button>

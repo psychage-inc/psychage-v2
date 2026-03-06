@@ -55,7 +55,7 @@ export function useGeolocation(): UseGeolocationReturn {
         setState(prev => ({ ...prev, isLoading: false, error: errorMessage }));
       },
       {
-        enableHighAccuracy: false,
+        enableHighAccuracy: true,
         timeout: 10000,
         maximumAge: 300000, // Cache for 5 minutes
       }

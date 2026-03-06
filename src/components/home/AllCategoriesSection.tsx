@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { categoryService } from '../../services/categoryService';
@@ -13,22 +13,24 @@ const AllCategoriesSection: React.FC = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
+    const loadCategories = useCallback(async () => {
+        try {
+            setError(null);
+            setLoading(true);
+            const cats = await categoryService.getAll();
+            setCategories(cats);
+        } catch (err) {
+            console.error('Failed to load categories:', err);
+            setError('Unable to load categories. Please try again later.');
+        } finally {
+            setLoading(false);
+        }
+    }, []);
+
     // Fetch categories on mount
     useEffect(() => {
-        const loadCategories = async () => {
-            try {
-                setLoading(true);
-                const cats = await categoryService.getAll();
-                setCategories(cats);
-            } catch (err) {
-                console.error('Failed to load categories:', err);
-                setError('Unable to load categories. Please try again later.');
-            } finally {
-                setLoading(false);
-            }
-        };
         loadCategories();
-    }, []);
+    }, [loadCategories]);
 
     const groups = [
         { id: 'all', label: 'All Categories' },
@@ -121,7 +123,7 @@ const AllCategoriesSection: React.FC = () => {
                     <div className="text-center py-20 bg-red-50 dark:bg-red-900/20 rounded-3xl border border-red-200 dark:border-red-800">
                         <p className="text-red-600 dark:text-red-400 mb-4">{error}</p>
                         <button
-                            onClick={() => window.location.reload()}
+                            onClick={loadCategories}
                             className="px-6 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium transition-colors"
                         >
                             Retry

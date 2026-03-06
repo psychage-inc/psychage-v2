@@ -1,35 +1,73 @@
 import React from 'react';
+import { TrendingUp, Calendar, Activity, Hash } from 'lucide-react';
 
-// Adapt to existing MoodEntry Type defined in MoodJournal
 interface LightweightInsightsProps {
     entries: { id: string; date: string; mood: number; emotions: string[] }[];
 }
 
 export const LightweightInsights: React.FC<LightweightInsightsProps> = ({ entries }) => {
-    const last7 = [...entries].slice(0, 7).reverse(); // Mutates array without copy, so use [...entries]
+    const last7 = [...entries].slice(0, 7).reverse();
 
-    // Calculate SVG points based on 100x40 grid (mood 1-10 -> y: 40-0)
     const points = last7.map((entry, i) => {
         const x = last7.length > 1 ? (i / (last7.length - 1)) * 100 : 50;
         const y = 40 - ((entry.mood / 10) * 40);
         return `${x},${y}`;
     }).join(' ');
 
-    const recentEmotions = Array.from(new Set(entries.flatMap(e => e.emotions))).slice(0, 4);
+    const avgMood = entries.length ? (entries.reduce((sum, e) => sum + e.mood, 0) / entries.length) : 0;
+    const recentEmotions = Array.from(new Set(entries.flatMap(e => e.emotions))).slice(0, 5);
+
+    // Calculate streak
+    const getStreak = () => {
+        if (entries.length === 0) return 0;
+        let streak = 1;
+        for (let i = 1; i < entries.length; i++) {
+            const curr = new Date(entries[i - 1].date);
+            const prev = new Date(entries[i].date);
+            const diffDays = Math.floor((curr.getTime() - prev.getTime()) / (1000 * 60 * 60 * 24));
+            if (diffDays <= 1) streak++;
+            else break;
+        }
+        return streak;
+    };
+
+    const streak = getStreak();
+
+    const getMoodLabel = (val: number) => {
+        if (val >= 8) return { label: 'Great', color: 'text-teal-600' };
+        if (val >= 6) return { label: 'Good', color: 'text-emerald-600' };
+        if (val >= 4) return { label: 'Okay', color: 'text-amber-600' };
+        return { label: 'Low', color: 'text-rose-600' };
+    };
+
+    const moodInfo = getMoodLabel(avgMood);
 
     return (
-        <div className="bg-white/80 backdrop-blur-md rounded-3xl p-5 sm:p-6 border border-gray-100 shadow-sm">
-            <h3 className="font-display font-semibold text-lg text-gray-900 mb-6">Insights</h3>
-
-            {/* Mini Trendline */}
-            <div className="mb-6">
-                <p className="text-sm text-gray-500 mb-3">Recent Trend</p>
-                <div className="h-16 w-full relative pt-2">
+        <div className="space-y-4">
+            {/* Trend Card */}
+            <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+                <div className="flex items-center gap-2 mb-4">
+                    <div className="w-8 h-8 rounded-xl bg-teal-50 flex items-center justify-center">
+                        <TrendingUp size={16} className="text-teal-600" />
+                    </div>
+                    <h3 className="font-display font-semibold text-gray-900">Mood Trend</h3>
+                </div>
+                <div className="h-14 w-full relative">
                     {last7.length > 1 ? (
                         <svg viewBox="0 -5 100 50" className="w-full h-full overflow-visible" preserveAspectRatio="none">
+                            <defs>
+                                <linearGradient id="trendGradient" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stopColor="#14b8a6" stopOpacity="0.2" />
+                                    <stop offset="100%" stopColor="#14b8a6" stopOpacity="0" />
+                                </linearGradient>
+                            </defs>
+                            <polygon
+                                fill="url(#trendGradient)"
+                                points={`0,40 ${points} 100,40`}
+                            />
                             <polyline
                                 fill="none"
-                                stroke="#0f172a"
+                                stroke="#0d9488"
                                 strokeWidth="2.5"
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
@@ -38,34 +76,55 @@ export const LightweightInsights: React.FC<LightweightInsightsProps> = ({ entrie
                             {last7.map((e, i) => {
                                 const x = (i / (last7.length - 1)) * 100;
                                 const y = 40 - ((e.mood / 10) * 40);
-                                return <circle key={i} cx={x} cy={y} r="3" fill="#0f172a" />;
+                                return <circle key={i} cx={x} cy={y} r="3" fill="#0d9488" />;
                             })}
                         </svg>
                     ) : (
-                        <p className="text-xs text-gray-400">Log more to see trend</p>
+                        <p className="text-xs text-gray-400 pt-4">Log more entries to see your trend</p>
                     )}
                 </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 mb-4">
-                <div>
-                    <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold">Entries</p>
-                    <p className="text-xl sm:text-2xl font-semibold text-gray-900">{entries.length}</p>
-                </div>
-                <div>
-                    <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold">Avg Mood</p>
-                    <p className="text-xl sm:text-2xl font-semibold text-gray-900">
-                        {entries.length ? (entries.reduce((sum, e) => sum + e.mood, 0) / entries.length).toFixed(1) : '-'}
+            {/* Stats Grid */}
+            <div className="grid grid-cols-2 gap-3">
+                <div className="bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+                    <div className="flex items-center gap-1.5 mb-2">
+                        <Activity size={14} className="text-gray-400" />
+                        <p className="text-xs text-gray-500 font-medium">Avg Mood</p>
+                    </div>
+                    <p className="text-2xl font-bold text-gray-900">
+                        {entries.length ? avgMood.toFixed(1) : '-'}
                     </p>
+                    {entries.length > 0 && (
+                        <p className={`text-xs font-semibold mt-0.5 ${moodInfo.color}`}>{moodInfo.label}</p>
+                    )}
+                </div>
+
+                <div className="bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+                    <div className="flex items-center gap-1.5 mb-2">
+                        <Calendar size={14} className="text-gray-400" />
+                        <p className="text-xs text-gray-500 font-medium">Streak</p>
+                    </div>
+                    <p className="text-2xl font-bold text-gray-900">{streak}</p>
+                    <p className="text-xs text-gray-400 mt-0.5">{streak === 1 ? 'day' : 'days'}</p>
+                </div>
+
+                <div className="bg-white rounded-2xl p-4 border border-gray-100 shadow-sm col-span-2">
+                    <div className="flex items-center gap-1.5 mb-2">
+                        <Hash size={14} className="text-gray-400" />
+                        <p className="text-xs text-gray-500 font-medium">Total Entries</p>
+                    </div>
+                    <p className="text-2xl font-bold text-gray-900">{entries.length}</p>
                 </div>
             </div>
 
-            <div>
-                <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-3">Top Emotions / Impacts</p>
+            {/* Top Emotions */}
+            <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+                <p className="text-xs text-gray-500 font-medium uppercase tracking-wider mb-3">Top Emotions</p>
                 <div className="flex flex-wrap gap-2">
                     {recentEmotions.length ? recentEmotions.map(e => (
-                        <span key={e} className="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-full">{e}</span>
-                    )) : <span className="text-xs text-gray-400">No data</span>}
+                        <span key={e} className="px-3 py-1.5 bg-gray-50 text-gray-700 text-xs font-medium rounded-full border border-gray-100">{e}</span>
+                    )) : <span className="text-xs text-gray-400">No data yet</span>}
                 </div>
             </div>
         </div>

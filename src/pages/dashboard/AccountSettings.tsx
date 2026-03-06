@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import UserSidebar from './UserSidebar';
 import InteractiveCard from '@/components/ui/InteractiveCard';
 import Button from '@/components/ui/Button';
-import MeshGradient from '@/components/ui/MeshGradient';
 import { User, Mail, MapPin, Camera, Lock, AlertCircle, CheckCircle, Save, X } from 'lucide-react';
 import SEO from '@/components/SEO';
 import { useAuth } from '@/context/AuthContext';
@@ -176,8 +175,7 @@ const ProfileSettings: React.FC = () => {
 
             {/* Subtle Background */}
             <div className="fixed inset-0 z-0 pointer-events-none">
-                <MeshGradient className="opacity-30" />
-            </div>
+                            </div>
 
             <div className="container mx-auto max-w-[1200px] relative z-10">
                 <motion.div

@@ -1,6 +1,7 @@
 import React from 'react';
 import { ClipboardList, Copy, CheckCircle2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Card } from '../ui/Card';
 
 interface ProviderQuestionsProps {
     questions: string[];
@@ -23,7 +24,7 @@ export const ProviderQuestions: React.FC<ProviderQuestionsProps> = ({ questions 
     if (!questions || questions.length === 0) return null;
 
     return (
-        <div className="bg-surface/50 backdrop-blur-xl rounded-2xl border border-border shadow-lg overflow-hidden relative group">
+        <Card variant="glass" className="overflow-hidden relative group p-0">
             <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-transparent pointer-events-none" />
 
             <div className="px-6 py-5 border-b border-border flex items-center justify-between relative z-10 bg-surface/50">
@@ -83,18 +84,18 @@ export const ProviderQuestions: React.FC<ProviderQuestionsProps> = ({ questions 
                             initial={{ opacity: 0, x: -10 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: index * 0.1 }}
-                            className="flex gap-4 group"
+                            className="flex gap-4 group/item"
                         >
-                            <span className="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-teal-500/20 text-teal-300 border border-teal-500/30 text-xs font-semibold mt-0.5 group-hover:bg-teal-500/30 transition-colors">
+                            <span className="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-teal-500/20 text-teal-300 border border-teal-500/30 text-xs font-semibold mt-0.5 group-hover/item:bg-teal-500/30 transition-colors">
                                 {index + 1}
                             </span>
-                            <p className="text-text-primary leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity">
+                            <p className="text-text-primary leading-relaxed opacity-90 group-hover/item:opacity-100 transition-opacity">
                                 {question}
                             </p>
                         </motion.li>
                     ))}
                 </ul>
             </div>
-        </div>
+        </Card>
     );
 };

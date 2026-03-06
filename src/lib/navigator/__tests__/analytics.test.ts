@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { NavigatorAnalytics } from '../analytics';
 
 describe('NavigatorAnalytics', () => {
@@ -7,8 +7,13 @@ describe('NavigatorAnalytics', () => {
     const flowId = 'test-flow-456';
 
     beforeEach(() => {
+        vi.useFakeTimers();
         analytics = new NavigatorAnalytics(sessionId, flowId);
         vi.clearAllMocks();
+    });
+
+    afterEach(() => {
+        vi.useRealTimers();
     });
 
     it('tracks step view with correct data', () => {

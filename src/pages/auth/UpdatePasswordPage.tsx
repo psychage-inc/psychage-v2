@@ -9,7 +9,6 @@ import { Display, Text } from '@/components/ui/Typography';
 import { Alert, AlertDescription } from '@/components/ui/Alert';
 import { supabase } from '@/lib/supabaseClient';
 import { cn } from '@/lib/utils';
-import MeshGradient from '@/components/ui/MeshGradient';
 import InteractiveCard from '@/components/ui/InteractiveCard';
 
 const UpdatePasswordPage = () => {
@@ -151,8 +150,7 @@ const UpdatePasswordPage = () => {
     if (isCheckingSession) {
         return (
             <div className="min-h-screen flex items-center justify-center px-4 py-12 bg-background relative overflow-hidden">
-                <MeshGradient className="opacity-60" />
-                <div className="absolute inset-0 bg-background/20 backdrop-blur-[1px] pointer-events-none" />
+                                <div className="absolute inset-0 bg-background/20 backdrop-blur-[1px] pointer-events-none" />
                 <div className="text-center relative z-10 space-y-4">
                     <Loader2 className="w-10 h-10 mx-auto text-primary animate-spin" />
                     <Text className="text-text-secondary">Verifying your reset link...</Text>
@@ -164,8 +162,7 @@ const UpdatePasswordPage = () => {
     if (isSuccess) {
         return (
             <div className="min-h-screen flex items-center justify-center px-4 py-12 bg-background relative overflow-hidden">
-                <MeshGradient className="opacity-60" />
-                <div className="absolute inset-0 bg-background/20 backdrop-blur-[1px] pointer-events-none" />
+                                <div className="absolute inset-0 bg-background/20 backdrop-blur-[1px] pointer-events-none" />
 
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
@@ -203,9 +200,7 @@ const UpdatePasswordPage = () => {
     return (
         <div className="min-h-screen flex items-center justify-center px-4 py-12 bg-background relative overflow-hidden">
             {/* Dynamic Background */}
-            <MeshGradient className="opacity-60" />
-
-            <div className="absolute inset-0 bg-background/20 backdrop-blur-[1px] pointer-events-none" />
+                        <div className="absolute inset-0 bg-background/20 backdrop-blur-[1px] pointer-events-none" />
 
             <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}

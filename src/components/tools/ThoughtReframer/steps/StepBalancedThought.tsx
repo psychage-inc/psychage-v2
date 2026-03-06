@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronDown, ArrowRight } from 'lucide-react';
 import type { ThoughtRecord, EmotionRating } from '../types';
+import { REFRAME_TONES, REFRAME_STYLES } from '../types';
 
 interface StepProps {
   data: ThoughtRecord;
@@ -31,6 +32,9 @@ export const StepBalancedThought: React.FC<StepProps> = ({ data, updateData, onN
     });
   };
 
+  const selectedTone = REFRAME_TONES.find(t => t.id === data.tone) ?? REFRAME_TONES[0];
+  const selectedStyle = REFRAME_STYLES.find(s => s.id === data.reframingStyle) ?? REFRAME_STYLES[0];
+
   const canProceed = data.balancedThought.trim().length > 0;
 
   return (
@@ -38,9 +42,60 @@ export const StepBalancedThought: React.FC<StepProps> = ({ data, updateData, onN
       <h2 className="font-display text-3xl md:text-4xl font-semibold text-gray-900 text-center mb-3">
         What's a more balanced way to see this?
       </h2>
-      <p className="text-gray-500 text-center mb-8 max-w-md">
+      <p className="text-gray-500 text-center mb-6 max-w-md">
         Using the evidence from both sides, write a thought that's realistic — not overly positive, not overly negative. Just balanced.
       </p>
+
+      {/* Tone selector */}
+      <div className="w-full max-w-lg mb-4">
+        <p className="text-xs text-gray-500 font-medium mb-2 text-center">Choose your tone:</p>
+        <div className="flex flex-wrap justify-center gap-2">
+          {REFRAME_TONES.map(tone => (
+            <button
+              key={tone.id}
+              onClick={() => updateData({ tone: tone.id })}
+              aria-pressed={data.tone === tone.id}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                data.tone === tone.id
+                  ? 'bg-gray-900 text-white shadow-md'
+                  : 'bg-white/60 text-gray-600 hover:bg-white border border-white/40 shadow-sm'
+              } focus:outline-none focus:ring-2 focus:ring-gray-900/20`}
+              title={tone.description}
+            >
+              {tone.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Style selector */}
+      <div className="w-full max-w-lg mb-5">
+        <p className="text-xs text-gray-500 font-medium mb-2 text-center">Reframing approach:</p>
+        <div className="flex flex-wrap justify-center gap-2">
+          {REFRAME_STYLES.map(style => (
+            <button
+              key={style.id}
+              onClick={() => updateData({ reframingStyle: style.id })}
+              aria-pressed={data.reframingStyle === style.id}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                data.reframingStyle === style.id
+                  ? 'bg-teal-600 text-white shadow-md'
+                  : 'bg-white/60 text-gray-600 hover:bg-white border border-white/40 shadow-sm'
+              } focus:outline-none focus:ring-2 focus:ring-teal-500/20`}
+              title={style.description}
+            >
+              {style.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Contextual guidance based on selections */}
+      <div className="w-full max-w-md bg-teal-50/50 border border-teal-100 rounded-xl p-3 mb-6 text-center">
+        <p className="text-xs text-teal-600 italic leading-relaxed">
+          {selectedTone.prompt} {selectedStyle.prompt}
+        </p>
+      </div>
 
       {/* Side-by-side comparison */}
       <div className="w-full max-w-lg grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
@@ -48,11 +103,6 @@ export const StepBalancedThought: React.FC<StepProps> = ({ data, updateData, onN
         <div className="bg-rose-50 border border-rose-100 rounded-2xl p-4">
           <p className="text-xs text-rose-400 font-medium mb-2">Original thought</p>
           <p className="text-sm text-rose-800 italic">"{data.automaticThought}"</p>
-        </div>
-
-        {/* Arrow (desktop only) */}
-        <div className="hidden sm:flex items-center justify-center absolute left-1/2 -translate-x-1/2 pointer-events-none" aria-hidden="true">
-          {/* This is intentionally hidden on mobile where cards stack */}
         </div>
 
         {/* Balanced thought */}

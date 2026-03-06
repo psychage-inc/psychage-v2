@@ -26,7 +26,7 @@ export const SymptomSearch: React.FC<SymptomSearchProps> = ({
                 type="text"
                 value={value}
                 onChange={(e) => onChange(e.target.value)}
-                className="block w-full pl-11 pr-12 py-4 bg-surface/50 border border-border rounded-2xl leading-5 placeholder-text-tertiary focus:outline-none focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/50 transition-all duration-300 text-text-primary shadow-xl backdrop-blur-xl hover:bg-surface-hover/50"
+                className="block w-full pl-11 pr-12 py-4 bg-surface/50 border border-border rounded-2xl leading-5 placeholder-text-tertiary focus:outline-none focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/50 transition-all duration-300 text-text-primary backdrop-blur-xl hover:bg-surface-hover/50"
                 placeholder={placeholder}
                 aria-label="Search symptoms"
             />

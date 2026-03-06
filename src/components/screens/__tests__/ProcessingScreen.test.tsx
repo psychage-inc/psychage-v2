@@ -3,7 +3,7 @@ import React from 'react';
 import { render, screen, cleanup } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ProcessingScreen } from '../ProcessingScreen';
+import { ProcessingScreen, PROCESSING_STEPS, STEP_INTERVAL_MS, FINAL_DELAY_MS } from '../ProcessingScreen';
 import * as NavigatorContextModule from '../../../context/NavigatorContext';
 import * as matchers from '@testing-library/jest-dom/matchers';
 expect.extend(matchers);
@@ -31,7 +31,9 @@ vi.mock('framer-motion', () => ({
             <p className={className} {...props}>
                 {children}
             </p>
-        )
+        ),
+        circle: (props: any) => <circle {...props} />,
+        span: ({ children, ...props }: any) => <span {...props}>{children}</span>,
     },
     AnimatePresence: ({ children }: any) => <>{children}</>
 }));
@@ -43,6 +45,17 @@ vi.mock('../../../lib/navigator/engine', () => ({
         metadata: { timestamp: Date.now() }
     }))
 }));
+
+describe('ProcessingScreen timing budget', () => {
+    it('total animation delay stays within 2500ms budget', () => {
+        const totalMs = PROCESSING_STEPS.length * STEP_INTERVAL_MS + FINAL_DELAY_MS;
+        expect(totalMs).toBeLessThanOrEqual(2500);
+    });
+
+    it('has exactly 3 processing steps', () => {
+        expect(PROCESSING_STEPS).toHaveLength(3);
+    });
+});
 
 describe('ProcessingScreen Error States', () => {
     const mockDispatch = vi.fn();

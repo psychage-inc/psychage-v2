@@ -11,14 +11,16 @@ const mockEntries = [
 ];
 
 describe('LightweightInsights', () => {
-    it('should render Insights heading', () => {
+    it('should render Mood Trend heading', () => {
         render(<LightweightInsights entries={mockEntries} />);
-        expect(screen.getByText('Insights')).toBeInTheDocument();
+        expect(screen.getByText('Mood Trend')).toBeInTheDocument();
     });
 
-    it('should display entry count', () => {
+    it('should display total entry count', () => {
         render(<LightweightInsights entries={mockEntries} />);
-        expect(screen.getByText('4')).toBeInTheDocument();
+        expect(screen.getByText('Total Entries')).toBeInTheDocument();
+        // "4" appears multiple times (entry count + streak), so use getAllByText
+        expect(screen.getAllByText('4').length).toBeGreaterThanOrEqual(1);
     });
 
     it('should display average mood', () => {
@@ -35,10 +37,13 @@ describe('LightweightInsights', () => {
         expect(screen.getByText('Tired')).toBeInTheDocument();
     });
 
-    it('should cap at 4 unique emotions', () => {
+    it('should cap at 5 unique emotions', () => {
         render(<LightweightInsights entries={mockEntries} />);
-        // Should not show Grateful or Sad since unique limit is 4
-        expect(screen.queryByText('Grateful')).not.toBeInTheDocument();
+        // Component uses .slice(0, 5) so up to 5 unique emotions shown
+        // With our data: Happy, Calm, Anxious, Tired, Grateful = 5 unique
+        expect(screen.getByText('Grateful')).toBeInTheDocument();
+        // Sad would be the 6th unique, so it should not appear
+        expect(screen.queryByText('Sad')).not.toBeInTheDocument();
     });
 
     it('should show dash for avg mood with empty entries', () => {
@@ -46,14 +51,14 @@ describe('LightweightInsights', () => {
         expect(screen.getByText('-')).toBeInTheDocument();
     });
 
-    it('should show No data when no emotions', () => {
+    it('should show No data yet when no emotions', () => {
         render(<LightweightInsights entries={[]} />);
-        expect(screen.getByText('No data')).toBeInTheDocument();
+        expect(screen.getByText('No data yet')).toBeInTheDocument();
     });
 
     it('should show prompt when less than 2 entries', () => {
         render(<LightweightInsights entries={[{ id: '1', date: '2026-03-06', mood: 7, emotions: [] }]} />);
-        expect(screen.getByText('Log more to see trend')).toBeInTheDocument();
+        expect(screen.getByText('Log more entries to see your trend')).toBeInTheDocument();
     });
 
     it('should render SVG trendline when 2+ entries', () => {

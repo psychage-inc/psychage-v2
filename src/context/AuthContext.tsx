@@ -39,10 +39,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       const mapped = mapSupabaseUser(session?.user ?? null);
       const stableUser = usersEqual(mapped, userRef.current) ? userRef.current : mapped;
       userRef.current = stableUser;
-      setState({
-        user: stableUser,
-        isLoading: false,
-        isAuthenticated: !!stableUser,
+      setState(prev => {
+        const isAuth = !!stableUser;
+        if (prev.user === stableUser && !prev.isLoading && prev.isAuthenticated === isAuth) {
+          return prev;
+        }
+        return { user: stableUser, isLoading: false, isAuthenticated: isAuth };
       });
     });
 
@@ -53,10 +55,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       const mapped = mapSupabaseUser(session?.user ?? null);
       const stableUser = usersEqual(mapped, userRef.current) ? userRef.current : mapped;
       userRef.current = stableUser;
-      setState({
-        user: stableUser,
-        isLoading: false,
-        isAuthenticated: !!stableUser,
+      setState(prev => {
+        const isAuth = !!stableUser;
+        if (prev.user === stableUser && !prev.isLoading && prev.isAuthenticated === isAuth) {
+          return prev;
+        }
+        return { user: stableUser, isLoading: false, isAuthenticated: isAuth };
       });
     });
 
@@ -95,7 +99,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  const signup = useCallback(async (email: string, password: string, displayName?: string, role: 'patient' | 'provider' = 'patient') => {
+  const signup = useCallback(async (email: string, password: string, displayName?: string, role: 'patient' | 'provider' = 'patient', extraMetadata?: Record<string, unknown>) => {
     try {
       const { data, error } = await supabase.auth.signUp({
         email,
@@ -105,6 +109,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             display_name: displayName,
             full_name: displayName,
             role,
+            ...extraMetadata,
           },
         },
       });
@@ -213,6 +218,23 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
+  const deleteAccount = useCallback(async () => {
+    try {
+      const { privacyService } = await import('../services/privacyService');
+      const result = await privacyService.requestAccountDeletion();
+      if (!result.success) {
+        return { success: false, error: 'Failed to schedule account deletion' };
+      }
+      // Sign out after scheduling deletion
+      await supabase.auth.signOut();
+      setState({ user: null, isLoading: false, isAuthenticated: false });
+      return { success: true };
+    } catch (error) {
+      const message = error instanceof Error ? error.message : 'Failed to delete account';
+      return { success: false, error: message };
+    }
+  }, []);
+
   const value = useMemo<AuthContextType>(() => ({
     ...state,
     login,
@@ -222,7 +244,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     requestPasswordReset,
     signInWithGoogle,
     signInWithApple,
-  }), [state, login, signup, logout, refreshUser, requestPasswordReset, signInWithGoogle, signInWithApple]);
+    deleteAccount,
+  }), [state, login, signup, logout, refreshUser, requestPasswordReset, signInWithGoogle, signInWithApple, deleteAccount]);
 
   return (
     <AuthContext.Provider value={value}>

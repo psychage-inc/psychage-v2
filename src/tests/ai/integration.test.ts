@@ -5,10 +5,7 @@
 import { describe, it, expect, vi } from 'vitest';
 import type {
   LLMProvider,
-  LLMResponse,
-  ChatRequest,
   RetrievalResult,
-  ProviderSuggestion,
 } from '@/lib/ai/types';
 import { classifyInputSafety, validateOutputSafety } from '@/lib/ai/safety';
 import { classifyIntent } from '@/lib/ai/intent';
@@ -115,28 +112,27 @@ describe('End-to-End Pipeline Flow', () => {
 describe('System Prompt Quality', () => {
   it('should contain all critical guardrails', () => {
     expect(SYSTEM_PROMPT).toContain('NEVER diagnose');
-    expect(SYSTEM_PROMPT).toContain('NEVER provide therapeutic advice');
     expect(SYSTEM_PROMPT).toContain('NEVER prescribe');
-    expect(SYSTEM_PROMPT).toContain('NEVER provide false reassurance');
-    expect(SYSTEM_PROMPT).toContain('NEVER dismiss');
-    expect(SYSTEM_PROMPT).toContain('NEVER share information about how to harm');
+    expect(SYSTEM_PROMPT).toContain('NEVER replace professionals');
+    expect(SYSTEM_PROMPT).toContain('NEVER provide means for self-harm');
+    expect(SYSTEM_PROMPT).toContain('ALWAYS identify as AI');
   });
 
-  it('should contain crisis protocol', () => {
-    expect(SYSTEM_PROMPT).toContain('CRISIS PROTOCOL');
-    expect(SYSTEM_PROMPT).toContain('988');
-    expect(SYSTEM_PROMPT).toContain('Acknowledge their pain');
+  it('should contain safety boundaries', () => {
+    expect(SYSTEM_PROMPT).toContain('not a therapist or doctor');
+    expect(SYSTEM_PROMPT).toContain('prioritize user safety');
+    expect(SYSTEM_PROMPT).toContain('crisis resources');
   });
 
   it('should establish identity', () => {
-    expect(SYSTEM_PROMPT).toContain('Psychage AI Help');
-    expect(SYSTEM_PROMPT).toContain('Dr. Lena Dobson');
-    expect(SYSTEM_PROMPT).toContain('Clinical Neuropsychology');
+    expect(SYSTEM_PROMPT).toContain('MindMate');
+    expect(SYSTEM_PROMPT).toContain('mental health education');
+    expect(SYSTEM_PROMPT).toContain('psychage.com');
   });
 
   it('should require citation', () => {
     expect(SYSTEM_PROMPT).toContain('Ground ALL factual claims');
-    expect(SYSTEM_PROMPT).toContain('cite your sources');
+    expect(SYSTEM_PROMPT).toContain('cite sources');
   });
 });
 

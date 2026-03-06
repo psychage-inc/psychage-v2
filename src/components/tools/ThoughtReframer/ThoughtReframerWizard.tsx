@@ -136,6 +136,7 @@ export const ThoughtReframerWizard: React.FC<ThoughtReframerWizardProps> = ({
         return (
           <CompletionScreen
             data={data}
+            updateData={updateData}
             onSave={handleSave}
             onStartAnother={handleStartAnother}
             saved={saved}

@@ -4,7 +4,7 @@
 
 import { describe, it, expect, vi } from 'vitest';
 import { classifyIntent } from '@/lib/ai/intent';
-import type { Message, LLMProvider, LLMResponse } from '@/lib/ai/types';
+import type { Message, LLMProvider } from '@/lib/ai/types';
 
 // =============================================================================
 // Mock LLM Provider

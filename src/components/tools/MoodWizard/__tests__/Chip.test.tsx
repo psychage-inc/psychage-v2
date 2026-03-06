@@ -26,7 +26,9 @@ describe('Chip', () => {
 
     it('should apply selected styles', () => {
         render(<Chip label="Test" selected={true} onClick={vi.fn()} />);
-        expect(screen.getByRole('button')).toHaveClass('bg-gray-900');
+        // Selected state applies shadow-lg and scale-105
+        expect(screen.getByRole('button')).toHaveClass('shadow-lg');
+        expect(screen.getByRole('button')).toHaveClass('scale-105');
     });
 
     it('should call onClick when clicked', () => {

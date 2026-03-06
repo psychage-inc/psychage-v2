@@ -65,7 +65,7 @@ const ContentPreview: React.FC = () => {
                             Learn at your own pace.
                         </h2>
                         <p className="text-lg text-slate-600 dark:text-slate-400 max-w-lg">
-                            50+ evidence-based articles across mental health, wellness, and personal growth. No judgment, just understanding.
+                            Explore our curated library of expert-written articles — from understanding anxiety to building resilience.
                         </p>
                     </div>
                     <Button

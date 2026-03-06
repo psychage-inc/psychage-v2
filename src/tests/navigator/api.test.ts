@@ -9,7 +9,7 @@
  */
 
 import { describe, it, expect } from 'vitest';
-import type { AnalyticsEvent, KnowledgeBase } from '@/lib/navigator/types';
+import type { KnowledgeBase } from '@/lib/navigator/types';
 
 /**
  * NOTE: These tests validate the API contract and payload validation logic.
@@ -24,7 +24,7 @@ import type { AnalyticsEvent, KnowledgeBase } from '@/lib/navigator/types';
 
 describe('Analytics Payload Validation', () => {
   const VALID_EVENT_TYPES = ['started', 'completed', 'crisis_triggered', 'result_clicked', 'provider_clicked'];
-  const VALID_FLAG_LEVELS = ['CRISIS', 'URGENT', 'WATCH', null];
+  const _VALID_FLAG_LEVELS = ['CRISIS', 'URGENT', 'WATCH', null];
   const FORBIDDEN_FIELDS = [
     'symptom_ids', 'symptom_id', 'condition_ids', 'condition_id',
     'user_id', 'email', 'name', 'ip', 'user_agent',

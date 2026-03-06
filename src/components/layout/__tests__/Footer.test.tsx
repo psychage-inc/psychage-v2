@@ -25,10 +25,6 @@ vi.mock('../CrisisBanner', () => ({
     default: () => <div data-testid="crisis-banner">Crisis Banner</div>,
 }));
 
-vi.mock('../../ui/Logo', () => ({
-    Logo: (props: any) => <div {...props} data-testid="logo">Logo</div>,
-}));
-
 describe('Footer', () => {
     const renderFooter = () => render(
         <MemoryRouter>
@@ -46,9 +42,9 @@ describe('Footer', () => {
         expect(screen.getByTestId('crisis-banner')).toBeInTheDocument();
     });
 
-    it('should render logo', () => {
+    it('should render brand watermark', () => {
         renderFooter();
-        expect(screen.getByTestId('logo')).toBeInTheDocument();
+        expect(screen.getByText('psychage')).toBeInTheDocument();
     });
 
     it('should render tagline', () => {

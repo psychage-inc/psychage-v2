@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Mail, Lock, User, CheckCircle2, AlertCircle, ArrowRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Mail, Lock, User, CheckCircle2, AlertCircle, ArrowRight, Globe, Calendar, MessageSquare } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Label } from '@/components/ui/Label';
@@ -9,8 +9,10 @@ import { Display, Text } from '@/components/ui/Typography';
 import { Alert, AlertDescription } from '@/components/ui/Alert';
 import { cn } from '@/lib/utils';
 import { useAuth } from '../../context/AuthContext';
-import MeshGradient from '@/components/ui/MeshGradient';
 import InteractiveCard from '@/components/ui/InteractiveCard';
+import { LogoIcon } from '@/components/ui/LogoIcon';
+import ConsentCheckboxes, { ConsentState, defaultConsentState, isConsentValid } from '@/components/privacy/ConsentCheckboxes';
+import { consentService } from '@/services/consentService';
 
 const SignUpPage = () => {
     const [userType, setUserType] = useState<'patient' | 'provider'>('patient');
@@ -18,15 +20,19 @@ const SignUpPage = () => {
         displayName: '',
         email: '',
         password: '',
-        confirmPassword: ''
+        confirmPassword: '',
+        country: '',
+        age: '',
+        referralSource: ''
     });
     const [error, setError] = useState<string | null>(null);
-    const [termsAccepted, setTermsAccepted] = useState(false);
+    const [passwordFocused, setPasswordFocused] = useState(false);
+    const [consent, setConsent] = useState<ConsentState>(defaultConsentState);
 
     const { signup, isLoading } = useAuth();
     const navigate = useNavigate();
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         setFormData(prev => ({ ...prev, [e.target.id]: e.target.value }));
     };
 
@@ -44,8 +50,8 @@ const SignUpPage = () => {
             return;
         }
 
-        if (!termsAccepted) {
-            setError("You must accept the terms and conditions");
+        if (!isConsentValid(consent)) {
+            setError("Please accept all required consents to create your account.");
             return;
         }
 
@@ -54,12 +60,26 @@ const SignUpPage = () => {
                 formData.email,
                 formData.password,
                 formData.displayName,
-                userType
+                userType,
+                {
+                    age_verified: consent.ageVerified,
+                    consent_version: 'v1.0',
+                    country: formData.country || undefined,
+                    age: formData.age ? parseInt(formData.age, 10) : undefined,
+                    referral_source: formData.referralSource || undefined,
+                }
             );
 
             if (result.success) {
-                // Determine redirect based on role
-                // For now, simplify to sending everyone to login with a success message
+                // Log consents to the audit trail
+                await consentService.logBulkConsent([
+                    { type: 'terms_of_service', granted: true },
+                    { type: 'privacy_policy', granted: true },
+                    { type: 'data_processing', granted: consent.dataProcessingAccepted },
+                    { type: 'age_verification', granted: consent.ageVerified },
+                    { type: 'newsletter', granted: consent.newsletterOptIn },
+                ]);
+
                 navigate('/login', {
                     state: {
                         message: `Account created successfully! Please log in as a ${userType}.`,
@@ -82,9 +102,7 @@ const SignUpPage = () => {
     return (
         <div className="min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden bg-background">
             {/* Dynamic Background */}
-            <MeshGradient className="opacity-60" />
-
-            <div className="absolute inset-0 bg-background/20 backdrop-blur-[1px] pointer-events-none" />
+                        <div className="absolute inset-0 bg-background/20 backdrop-blur-[1px] pointer-events-none" />
 
             <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -100,11 +118,7 @@ const SignUpPage = () => {
                         className="flex justify-center mb-6"
                     >
                         <Link to="/">
-                            <img
-                                src="/images/logo.png"
-                                alt="Psychage"
-                                className="h-20 w-auto object-contain drop-shadow-lg"
-                            />
+                            <LogoIcon className="h-20 w-auto drop-shadow-lg" />
                         </Link>
                     </motion.div>
                     <motion.div
@@ -125,10 +139,10 @@ const SignUpPage = () => {
                 >
                     {/* User Type Toggle */}
                     <div className="flex justify-center mb-8">
-                        <div className="bg-black/20 p-1.5 rounded-2xl inline-flex relative shadow-inner border border-white/5 backdrop-blur-md">
+                        <div className="bg-teal-600 p-1.5 rounded-2xl inline-flex relative shadow-inner border border-white/5 backdrop-blur-md">
                             <div
                                 className={cn(
-                                    "absolute top-1.5 bottom-1.5 w-[calc(50%-6px)] bg-primary/20 border border-primary/30 rounded-xl shadow-[0_0_15px_rgba(20,184,166,0.2)] transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]",
+                                    "absolute top-1.5 bottom-1.5 w-[calc(50%-6px)] bg-white/25 border border-white/30 rounded-xl shadow-[0_0_15px_rgba(20,184,166,0.2)] transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]",
                                     userType === 'patient' ? 'left-1.5' : 'left-[calc(50%+3px)]'
                                 )}
                             />
@@ -136,7 +150,7 @@ const SignUpPage = () => {
                                 onClick={() => setUserType('patient')}
                                 className={cn(
                                     "relative z-10 px-8 py-2.5 rounded-xl text-sm font-semibold transition-colors duration-300 min-w-[140px]",
-                                    userType === 'patient' ? "text-primary-foreground text-white" : "text-text-secondary hover:text-text-primary"
+                                    userType === 'patient' ? "text-white" : "text-white/60 hover:text-white"
                                 )}
                                 type="button"
                             >
@@ -146,7 +160,7 @@ const SignUpPage = () => {
                                 onClick={() => setUserType('provider')}
                                 className={cn(
                                     "relative z-10 px-8 py-2.5 rounded-xl text-sm font-semibold transition-colors duration-300 min-w-[140px]",
-                                    userType === 'provider' ? "text-primary-foreground text-white" : "text-text-secondary hover:text-text-primary"
+                                    userType === 'provider' ? "text-white" : "text-white/60 hover:text-white"
                                 )}
                                 type="button"
                             >
@@ -194,6 +208,75 @@ const SignUpPage = () => {
                             </div>
                         </div>
 
+                        <div className="grid grid-cols-1 gap-5">
+                            <div className="space-y-2">
+                                <Label htmlFor="country" className="text-text-primary ml-1">Country</Label>
+                                <div className="relative group">
+                                    <select
+                                        id="country"
+                                        value={formData.country}
+                                        onChange={handleChange}
+                                        className="flex h-12 w-full rounded-lg border border-border bg-surface pl-11 pr-3 py-2 text-sm ring-offset-background placeholder:text-text-tertiary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 appearance-none cursor-pointer"
+                                    >
+                                        <option value="">Select country</option>
+                                        <option value="US">United States</option>
+                                        <option value="GB">United Kingdom</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="AU">Australia</option>
+                                        <option value="IN">India</option>
+                                        <option value="DE">Germany</option>
+                                        <option value="FR">France</option>
+                                        <option value="BR">Brazil</option>
+                                        <option value="JP">Japan</option>
+                                        <option value="MX">Mexico</option>
+                                        <option value="KR">South Korea</option>
+                                        <option value="NL">Netherlands</option>
+                                        <option value="SE">Sweden</option>
+                                        <option value="ES">Spain</option>
+                                        <option value="IT">Italy</option>
+                                        <option value="OTHER">Other</option>
+                                    </select>
+                                    <Globe className="absolute left-3.5 top-3.5 h-5 w-5 text-text-tertiary group-focus-within:text-primary transition-colors pointer-events-none" />
+                                </div>
+                            </div>
+                            <div className="space-y-2">
+                                <Label htmlFor="age" className="text-text-primary ml-1">Age</Label>
+                                <div className="relative group">
+                                    <Input
+                                        id="age"
+                                        type="number"
+                                        min={13}
+                                        max={120}
+                                        placeholder="Age"
+                                        className="pl-11 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
+                                        value={formData.age}
+                                        onChange={handleChange}
+                                    />
+                                    <Calendar className="absolute left-3.5 top-3.5 h-5 w-5 text-text-tertiary group-focus-within:text-primary transition-colors" />
+                                </div>
+                            </div>
+                            <div className="space-y-2">
+                                <Label htmlFor="referralSource" className="text-text-primary ml-1">How did you hear about us?</Label>
+                                <div className="relative group">
+                                    <select
+                                        id="referralSource"
+                                        value={formData.referralSource}
+                                        onChange={handleChange}
+                                        className="flex h-12 w-full rounded-lg border border-border bg-surface pl-11 pr-3 py-2 text-sm ring-offset-background placeholder:text-text-tertiary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 appearance-none cursor-pointer"
+                                    >
+                                        <option value="">Select an option</option>
+                                        <option value="search_engine">Search Engine</option>
+                                        <option value="social_media">Social Media</option>
+                                        <option value="friend_or_family">Friend or Family</option>
+                                        <option value="healthcare_provider">Healthcare Provider</option>
+                                        <option value="news_or_article">News or Article</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <MessageSquare className="absolute left-3.5 top-3.5 h-5 w-5 text-text-tertiary group-focus-within:text-primary transition-colors pointer-events-none" />
+                                </div>
+                            </div>
+                        </div>
+
                         <div className="space-y-2">
                             <Label htmlFor="password" className="text-text-primary ml-1">Password</Label>
                             <div className="relative group">
@@ -204,27 +287,41 @@ const SignUpPage = () => {
                                     className="pl-11 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
                                     value={formData.password}
                                     onChange={handleChange}
+                                    onFocus={() => setPasswordFocused(true)}
+                                    onBlur={() => setPasswordFocused(false)}
                                 />
                                 <Lock className="absolute left-3.5 top-3.5 h-5 w-5 text-text-tertiary group-focus-within:text-primary transition-colors" />
                             </div>
 
                             {/* Password Strength Indicator */}
-                            <div className="mt-3 space-y-2 px-1">
-                                <div className="flex gap-1.5 h-1.5">
-                                    <div className={cn("flex-1 rounded-full transition-all duration-500", formData.password.length > 0 ? "bg-red-400" : "bg-white/10", isPasswordValid && "bg-emerald-500")}></div>
-                                    <div className={cn("flex-1 rounded-full transition-all duration-500", isPasswordValid ? "bg-emerald-500" : "bg-white/10")}></div>
-                                    <div className={cn("flex-1 rounded-full transition-all duration-500", hasNumber && isPasswordValid ? "bg-emerald-500" : "bg-white/10")}></div>
-                                    <div className={cn("flex-1 rounded-full transition-all duration-500", formData.password.length > 12 ? "bg-emerald-500" : "bg-white/10")}></div>
-                                </div>
-                                <ul className="text-xs text-text-secondary space-y-1 mt-2">
-                                    <li className={cn("flex items-center transition-colors duration-300", isPasswordValid ? "text-emerald-400" : "text-text-tertiary")}>
-                                        <CheckCircle2 className="w-3.5 h-3.5 mr-1.5" /> At least 8 characters
-                                    </li>
-                                    <li className={cn("flex items-center transition-colors duration-300", hasNumber ? "text-emerald-400" : "text-text-tertiary")}>
-                                        <CheckCircle2 className="w-3.5 h-3.5 mr-1.5" /> Contains a number
-                                    </li>
-                                </ul>
-                            </div>
+                            <AnimatePresence>
+                                {passwordFocused && formData.password.length > 0 && (
+                                    <motion.div
+                                        initial={{ opacity: 0, height: 0 }}
+                                        animate={{ opacity: 1, height: 'auto' }}
+                                        exit={{ opacity: 0, height: 0 }}
+                                        transition={{ duration: 0.2, ease: 'easeInOut' }}
+                                        className="overflow-hidden"
+                                    >
+                                        <div className="mt-3 space-y-2 px-1">
+                                            <div className="flex gap-1.5 h-1.5">
+                                                <div className={cn("flex-1 rounded-full transition-all duration-500", formData.password.length > 0 ? "bg-red-400" : "bg-white/10", isPasswordValid && "bg-emerald-500")}></div>
+                                                <div className={cn("flex-1 rounded-full transition-all duration-500", isPasswordValid ? "bg-emerald-500" : "bg-white/10")}></div>
+                                                <div className={cn("flex-1 rounded-full transition-all duration-500", hasNumber && isPasswordValid ? "bg-emerald-500" : "bg-white/10")}></div>
+                                                <div className={cn("flex-1 rounded-full transition-all duration-500", formData.password.length > 12 ? "bg-emerald-500" : "bg-white/10")}></div>
+                                            </div>
+                                            <ul className="text-xs text-text-secondary space-y-1 mt-2">
+                                                <li className={cn("flex items-center transition-colors duration-300", isPasswordValid ? "text-emerald-400" : "text-text-tertiary")}>
+                                                    <CheckCircle2 className="w-3.5 h-3.5 mr-1.5" /> At least 8 characters
+                                                </li>
+                                                <li className={cn("flex items-center transition-colors duration-300", hasNumber ? "text-emerald-400" : "text-text-tertiary")}>
+                                                    <CheckCircle2 className="w-3.5 h-3.5 mr-1.5" /> Contains a number
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
                         </div>
 
                         <div className="space-y-2">
@@ -242,18 +339,8 @@ const SignUpPage = () => {
                             </div>
                         </div>
 
-                        <div className="flex items-start space-x-3 pt-2 ml-1">
-                            <input
-                                id="terms"
-                                type="checkbox"
-                                required
-                                checked={termsAccepted}
-                                onChange={(e) => setTermsAccepted(e.target.checked)}
-                                className="mt-1 h-4 w-4 rounded border-white/20 bg-white/5 text-primary focus:ring-primary focus:ring-offset-0 transition-colors cursor-pointer"
-                            />
-                            <Label htmlFor="terms" className="font-normal text-text-secondary leading-tight cursor-pointer">
-                                I agree to the <Link to="/legal/terms" className="text-primary hover:text-primary-hover hover:underline font-medium">Terms of Service</Link> and <Link to="/legal/privacy" className="text-primary hover:text-primary-hover hover:underline font-medium">Privacy Policy</Link>.
-                            </Label>
+                        <div className="pt-2 ml-1">
+                            <ConsentCheckboxes consent={consent} onChange={setConsent} />
                         </div>
 
                         <Button

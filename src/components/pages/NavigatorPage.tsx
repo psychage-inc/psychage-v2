@@ -67,9 +67,7 @@ const NavigatorPage: React.FC = () => {
                 title="Symptom Navigator | Psychage"
                 description="Understand your symptoms and find clarity with our intelligent, adaptive assessment tool."
             />
-            <div className="pt-16 lg:pt-20"> {/* Offset for navigation bar */}
-                <NavigatorFlowWithErrorBoundary />
-            </div>
+            <NavigatorFlowWithErrorBoundary />
         </NavigatorProvider>
     );
 };

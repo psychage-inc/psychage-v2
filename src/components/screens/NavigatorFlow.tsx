@@ -10,9 +10,8 @@ import { ProcessingScreen } from './ProcessingScreen';
 import { ResultsScreen } from './ResultsScreen';
 import { EnhancedProgressBar } from '../navigator/EnhancedProgressBar';
 import { CrisisOverlay } from '../navigator/CrisisOverlay';
-import { CrisisStickyBanner } from '../navigator/CrisisStickyBanner';
+
 import { LiveRegion } from '../a11y/LiveRegion';
-import MeshGradient from '../ui/MeshGradient';
 import type { NavigatorStep } from '../../lib/navigator/stepConfig';
 import { getStepConfig } from '../../lib/navigator/stepConfig';
 import { navigatorSlide, navigatorFade } from '../../lib/animations';
@@ -140,8 +139,7 @@ export const NavigatorFlow: React.FC = () => {
 
             {/* Immersive Background */}
             <div className="fixed inset-0 z-0 bg-background">
-                <MeshGradient className="opacity-40" />
-            </div>
+                            </div>
 
             <div ref={containerRef} className="relative z-10 w-full h-full">
                 {/* Enhanced Progress Bar with clickable navigation */}
@@ -172,7 +170,6 @@ export const NavigatorFlow: React.FC = () => {
                 </AnimatePresence>
 
                 <CrisisOverlay />
-                <CrisisStickyBanner />
             </div>
         </div>
     );

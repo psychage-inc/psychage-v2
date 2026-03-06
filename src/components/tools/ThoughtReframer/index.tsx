@@ -217,6 +217,18 @@ const ThoughtReframer: React.FC = () => {
                               <p className="text-sm text-gray-600">{record.evidenceAgainst}</p>
                             </div>
                           )}
+                          {record.actionableStep && (
+                            <div>
+                              <p className="text-xs text-amber-500 mb-1">Next step</p>
+                              <p className="text-sm text-gray-600">{record.actionableStep}</p>
+                            </div>
+                          )}
+                          {record.mantra && (
+                            <div>
+                              <p className="text-xs text-purple-500 mb-1">Mantra</p>
+                              <p className="text-sm text-gray-700 italic">"{record.mantra}"</p>
+                            </div>
+                          )}
                           <div className="pt-2">
                             <button
                               onClick={(e) => {

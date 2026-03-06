@@ -18,13 +18,13 @@ describe('Animation Variants', () => {
 
         it('should animate to visible with opacity 1', () => {
             expect(fadeIn.visible.opacity).toBe(1);
-            expect(fadeIn.visible.transition.duration).toBe(0.5);
+            expect(fadeIn.visible.transition.duration).toBe(0.3);
         });
     });
 
     describe('slideUp', () => {
         it('should start hidden below with opacity 0', () => {
-            expect(slideUp.hidden).toEqual({ opacity: 0, y: 20 });
+            expect(slideUp.hidden).toEqual({ opacity: 0, y: 16 });
         });
 
         it('should animate to visible at y=0', () => {
@@ -35,7 +35,7 @@ describe('Animation Variants', () => {
 
     describe('slideDown', () => {
         it('should start hidden above with opacity 0', () => {
-            expect(slideDown.hidden).toEqual({ opacity: 0, y: -20 });
+            expect(slideDown.hidden).toEqual({ opacity: 0, y: -16 });
         });
 
         it('should animate to visible at y=0', () => {
@@ -45,8 +45,8 @@ describe('Animation Variants', () => {
     });
 
     describe('scaleIn', () => {
-        it('should start hidden at 90% scale', () => {
-            expect(scaleIn.hidden).toEqual({ opacity: 0, scale: 0.9 });
+        it('should start hidden at 95% scale', () => {
+            expect(scaleIn.hidden).toEqual({ opacity: 0, scale: 0.95 });
         });
 
         it('should animate to full scale', () => {
@@ -57,8 +57,8 @@ describe('Animation Variants', () => {
 
     describe('staggerContainer', () => {
         it('should stagger children with delay', () => {
-            expect(staggerContainer.visible.transition.staggerChildren).toBe(0.1);
-            expect(staggerContainer.visible.transition.delayChildren).toBe(0.2);
+            expect(staggerContainer.visible.transition.staggerChildren).toBe(0.06);
+            expect(staggerContainer.visible.transition.delayChildren).toBe(0.1);
         });
     });
 

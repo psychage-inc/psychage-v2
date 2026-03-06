@@ -22,7 +22,7 @@ const ROUTE_MAP: Record<number, string> = {
   10: '/tools/clarity-journal'
 };
 
-const getToolLink = (toolId: number): string => {
+const _getToolLink = (toolId: number): string => {
   return ROUTE_MAP[toolId] || '#';
 };
 

@@ -41,6 +41,50 @@
   },
   "navigator": {
     "content_notice": "Algún contenido de síntomas y condiciones puede estar en inglés.",
-    "_comment": "Navigator translations pending - using English fallback for now"
+    "steps": {
+      "welcome": "Welcome",
+      "domains": "Domains",
+      "symptoms": "Symptoms",
+      "details": "Details",
+      "processing": "Processing",
+      "results": "Results"
+    },
+    "symptom_selection": {
+      "title": "Select what you're experiencing",
+      "subtitle": "Choose all the symptoms that apply to you. You can use the search bar to find specific things quickly.",
+      "search_placeholder": "Search symptoms (e.g., sleep, tired, anxious)...",
+      "symptoms_selected": "{{count}} symptom selected",
+      "symptoms_selected_plural": "{{count}} symptoms selected",
+      "continue": "Continue to Details",
+      "no_results": "No symptoms match \"{{query}}\"",
+      "no_results_help": "Try using fewer words, a different term, or check your spelling. This tool includes {{count}} symptoms across 12 categories.",
+      "clear_search": "Clear search",
+      "show_all": "Show all symptoms",
+      "select_all_category": "Select all in {{category}}",
+      "clear_category": "Clear {{category}}",
+      "loading": "Loading symptoms...",
+      "kb_unavailable": "Knowledge Base Unavailable",
+      "kb_unavailable_message": "The symptom data is currently not available. Please try again later."
+    },
+    "results": {
+      "based_on": "Based on:",
+      "show_all": "Show all {{count}}",
+      "show_less": "Show less",
+      "more_symptoms": "+{{count}} more"
+    },
+    "breadcrumb": {
+      "nav_label": "Progress",
+      "go_back_to": "Go back to {{step}}"
+    },
+    "navigation_confirm": {
+      "title": "Navigate back?",
+      "message": "Going back may clear your current progress and results. You'll need to complete the steps again.",
+      "confirm": "Go Back",
+      "cancel": "Stay Here"
+    },
+    "common": {
+      "start_over": "Start Over",
+      "error_title": "We encountered an issue"
+    }
   }
 }

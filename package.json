@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.78.0",
+    "@google/genai": "^1.44.0",
     "@hookform/resolvers": "^5.2.2",
     "@portabletext/react": "^6.0.2",
     "@portabletext/toolkit": "^5.0.1",

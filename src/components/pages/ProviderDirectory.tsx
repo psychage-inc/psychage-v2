@@ -87,7 +87,7 @@ const ProviderDirectory: React.FC = () => {
         });
 
         if (sortBy === 'rating') {
-            filtered = [...filtered].sort((a, b) => b.rating - a.rating);
+            filtered = [...filtered].sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0));
         } else if (sortBy === 'experience') {
             filtered = [...filtered].sort((a, b) => (b.yearsExperience || 0) - (a.yearsExperience || 0));
         }

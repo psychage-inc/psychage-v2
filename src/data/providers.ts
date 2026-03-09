@@ -1,21 +1,4 @@
-export interface Provider {
-  id: number;
-  name: string;
-  role: string;
-  image: string;
-  specialties: string[];
-  location: string;
-  availability: string;
-  insurance: string[];
-  verified: boolean;
-  bio: string;
-  education: string[];
-  languages: string[];
-  approach: string;
-  yearsExperience: number;
-  nextAvailable?: string;
-  isVideoVisit?: boolean;
-}
+import { Provider } from '../types/models';
 
 export const providers: Provider[] = [
   {
@@ -39,6 +22,13 @@ export const providers: Provider[] = [
     ],
     nextAvailable: "Tomorrow, 10:00 AM",
     isVideoVisit: true,
+    rating: 4.9,
+    reviews: 3,
+    reviewsList: [
+      { id: "r1", user: "Alex M.", date: "Feb 2025", rating: 5, comment: "Dr. Chen truly listens and provides practical strategies. Highly recommend." },
+      { id: "r2", user: "Jamie L.", date: "Jan 2025", rating: 5, comment: "Compassionate and insightful. Made me feel heard from the first session." },
+      { id: "r3", user: "Pat R.", date: "Dec 2024", rating: 4, comment: "Very knowledgeable and professional. Helped me manage my anxiety effectively." },
+    ],
   },
   {
     id: 2,
@@ -61,6 +51,12 @@ export const providers: Provider[] = [
     ],
     nextAvailable: "Feb 12, 2:00 PM",
     isVideoVisit: true,
+    rating: 4.8,
+    reviews: 2,
+    reviewsList: [
+      { id: "r4", user: "Morgan T.", date: "Jan 2025", rating: 5, comment: "Excellent psychiatrist. Very thorough and explains everything clearly." },
+      { id: "r5", user: "Casey D.", date: "Nov 2024", rating: 4, comment: "Helped me find the right medication balance. Very attentive." },
+    ],
   },
   {
     id: 3,
@@ -81,6 +77,11 @@ export const providers: Provider[] = [
       "BA in Sociology, University of Chicago"
     ],
     isVideoVisit: false,
+    rating: 4.7,
+    reviews: 1,
+    reviewsList: [
+      { id: "r6", user: "Taylor S.", date: "Feb 2025", rating: 5, comment: "Elena helped us rebuild our communication. We're in a much better place." },
+    ],
   },
   {
     id: 4,
@@ -102,6 +103,12 @@ export const providers: Provider[] = [
     ],
     nextAvailable: "Tomorrow, 9:00 AM",
     isVideoVisit: true,
+    rating: 4.9,
+    reviews: 2,
+    reviewsList: [
+      { id: "r7", user: "Jordan K.", date: "Jan 2025", rating: 5, comment: "James is the real deal. Straight-talking and genuinely cares." },
+      { id: "r8", user: "Riley B.", date: "Dec 2024", rating: 5, comment: "Helped me through the hardest time of my life. Cannot recommend enough." },
+    ],
   },
   {
     id: 5,
@@ -123,6 +130,12 @@ export const providers: Provider[] = [
     ],
     nextAvailable: "Thursday, 4:00 PM",
     isVideoVisit: true,
+    rating: 4.8,
+    reviews: 2,
+    reviewsList: [
+      { id: "r9", user: "Avery N.", date: "Feb 2025", rating: 5, comment: "Dr. Okeke understands the unique pressures of navigating multiple cultures. Life-changing." },
+      { id: "r10", user: "Sam W.", date: "Jan 2025", rating: 4, comment: "Helped me set boundaries at work. Practical and empowering approach." },
+    ],
   },
   {
     id: 6,
@@ -143,5 +156,10 @@ export const providers: Provider[] = [
       "Certified Somatic Experiencing Practitioner"
     ],
     isVideoVisit: false,
+    rating: 4.6,
+    reviews: 1,
+    reviewsList: [
+      { id: "r11", user: "Quinn H.", date: "Jan 2025", rating: 5, comment: "A holistic approach that actually works. I feel more grounded than ever." },
+    ],
   }
 ];

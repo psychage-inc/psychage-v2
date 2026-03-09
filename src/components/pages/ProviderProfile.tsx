@@ -133,11 +133,13 @@ const ProviderProfile: React.FC = () => {
                                     <p className="text-lg text-gray-600 dark:text-gray-300 font-medium mb-4">{provider.role}</p>
 
                                     <div className="flex flex-wrap gap-6 text-sm text-gray-600 dark:text-gray-400 mb-6">
-                                        <div className="flex items-center gap-2">
-                                            <Star className="text-amber-500 fill-amber-500" size={18} />
-                                            <span className="font-bold text-gray-900 dark:text-white">{provider.rating}</span>
-                                            <span className="underline decoration-dotted">({provider.reviews} reviews)</span>
-                                        </div>
+                                        {provider.rating != null && (
+                                            <div className="flex items-center gap-2">
+                                                <Star className="text-amber-500 fill-amber-500" size={18} />
+                                                <span className="font-bold text-gray-900 dark:text-white">{provider.rating}</span>
+                                                <span className="underline decoration-dotted">({provider.reviews ?? 0} reviews)</span>
+                                            </div>
+                                        )}
                                         <div className="flex items-center gap-2">
                                             <MapPin size={18} />
                                             <span>{provider.location}</span>
@@ -198,7 +200,7 @@ const ProviderProfile: React.FC = () => {
                         {/* Reviews Section */}
                         <section className="bg-white dark:bg-gray-900 rounded-3xl p-8 border border-gray-100 dark:border-gray-800 shadow-sm">
                             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-                                Patient Reviews <span className="text-gray-400 text-lg font-normal">({provider.reviews})</span>
+                                Patient Reviews <span className="text-gray-400 text-lg font-normal">({provider.reviews ?? 0})</span>
                             </h2>
 
                             {provider.reviewsList && provider.reviewsList.length > 0 ? (

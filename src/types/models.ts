@@ -1,5 +1,13 @@
 import React from 'react';
 
+export interface ProviderReview {
+    id: string;
+    user: string;
+    date: string;
+    rating: number;
+    comment: string;
+}
+
 export interface Provider {
     id: number | string;
     name: string;
@@ -19,6 +27,9 @@ export interface Provider {
     isVideoVisit?: boolean;
     status?: string; // e.g., 'pending', 'active', 'suspended', 'rejected'
     email?: string;
+    rating?: number;
+    reviews?: number;
+    reviewsList?: ProviderReview[];
 }
 
 export interface TranscriptSegment {

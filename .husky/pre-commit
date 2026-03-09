@@ -1,11 +1,11 @@
-# Check if package-lock.json is in sync with package.json
+# Check if lockfile is in sync with package.json
 if git diff --cached --name-only | grep -q "package.json"; then
   echo "📦 package.json modified, checking lockfile sync..."
 
   # If package.json is staged but lockfile isn't, remind user
-  if ! git diff --cached --name-only | grep -q "package-lock.json"; then
-    echo "⚠️  package.json changed but package-lock.json not staged"
-    echo "   Run 'npm install' and stage the updated lockfile"
+  if ! git diff --cached --name-only | grep -qE "pnpm-lock.yaml|package-lock.json"; then
+    echo "⚠️  package.json changed but lockfile not staged"
+    echo "   Run 'pnpm install' and stage the updated lockfile"
     exit 1
   fi
 

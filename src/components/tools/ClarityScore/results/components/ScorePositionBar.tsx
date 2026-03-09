@@ -1,6 +1,14 @@
 import React from 'react';
 import type { ScoreTier } from '@/lib/clarity/types';
 
+const TIER_DISPLAY: Record<ScoreTier, string> = {
+  thriving: 'thriving',
+  balanced: 'balanced',
+  struggling: 'concerning',
+  distressed: 'distressed',
+  crisis: 'crisis',
+};
+
 interface ScorePositionBarProps {
   score: number;
   maxScore?: number;
@@ -97,7 +105,7 @@ const ScorePositionBar: React.FC<ScorePositionBarProps> = ({
                   : 'text-gray-300 dark:text-gray-600'
               }`}
             >
-              {zone.tier}
+              {TIER_DISPLAY[zone.tier]}
             </span>
           </div>
         ))}

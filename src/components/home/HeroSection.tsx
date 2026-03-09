@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Shield, BookOpen, Sparkles, Lock } from 'lucide-react';
+import { ArrowRight, Shield, BookOpen, Sparkles, Lock, Heart } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Button from '@/components/ui/Button';
 import { useNavigate } from 'react-router-dom';
@@ -15,137 +15,119 @@ const HeroSection: React.FC = () => {
             : { initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] } };
 
     return (
-        <section className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden bg-background pt-20 pb-16">
-            <div className="container mx-auto px-4 relative z-10 grid lg:grid-cols-2 gap-16 items-center w-full max-w-7xl">
+        <section className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden bg-background pt-24 pb-20">
+            {/* Soft ambient background */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute top-20 -left-32 w-96 h-96 bg-teal-100/30 dark:bg-teal-900/10 rounded-full blur-3xl" />
+                <div className="absolute bottom-20 -right-32 w-80 h-80 bg-teal-50/40 dark:bg-teal-950/10 rounded-full blur-3xl" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-50/20 dark:bg-emerald-950/5 rounded-full blur-3xl" />
+            </div>
 
-                {/* Left Column: Messaging */}
-                <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-8">
+            <div className="container mx-auto px-4 relative z-10 max-w-4xl text-center">
 
-                    {/* Headline */}
-                    <motion.div {...animate(0.05)} className="space-y-5 max-w-xl">
-                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold tracking-tight text-text-primary leading-[1.1]">
-                            Actionable mental health insights
-                        </h1>
+                {/* Warm intro badge */}
+                <motion.div {...animate(0)} className="flex justify-center mb-8">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-50 dark:bg-teal-950/40 border border-teal-200/50 dark:border-teal-800/40">
+                        <Heart className="w-4 h-4 text-teal-600 dark:text-teal-400" />
+                        <span className="text-sm font-medium text-teal-700 dark:text-teal-300">Your well-being matters</span>
+                    </div>
+                </motion.div>
 
-                        <p className="text-lg text-text-secondary leading-relaxed max-w-lg mx-auto lg:mx-0">
-                            Complete clinically-validated assessments and track your clarity, mood, and sleep over time—all locally on your device.
-                        </p>
-                    </motion.div>
+                {/* Headline */}
+                <motion.div {...animate(0.05)} className="space-y-6 mb-10">
+                    <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold tracking-tight text-text-primary leading-[1.08]">
+                        Understanding yourself{' '}
+                        <span className="text-teal-600 dark:text-teal-400">is the first step</span>{' '}
+                        toward feeling better.
+                    </h1>
 
-                    {/* CTAs */}
-                    <motion.div {...animate(0.15)} className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto items-center">
-                        <Button
-                            className="h-12 px-8 rounded-lg text-base font-medium bg-primary hover:bg-primary-hover text-white transition-colors"
-                            onClick={() => navigate('/clarity-score')}
-                            rightIcon={<ArrowRight className="w-4 h-4" />}
+                    <p className="text-lg sm:text-xl text-text-secondary leading-relaxed max-w-2xl mx-auto">
+                        Explore how you're feeling with free, private mental health tools — built on clinical frameworks and designed with care. Everything stays on your device.
+                    </p>
+                </motion.div>
+
+                {/* CTA Buttons */}
+                <motion.div {...animate(0.15)} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+                    <Button
+                        className="h-14 px-8 rounded-full text-base bg-teal-600 hover:bg-teal-700 text-white font-bold shadow-lg shadow-teal-600/20 border-none"
+                        rightIcon={<ArrowRight size={18} />}
+                        onClick={() => navigate('/clarity-score')}
+                    >
+                        Explore how you're feeling
+                    </Button>
+                    <Button
+                        variant="outline"
+                        className="h-14 px-8 rounded-full text-base border-border hover:bg-surface-hover text-text-primary font-medium"
+                        rightIcon={<BookOpen size={16} />}
+                        onClick={() => navigate('/tools/symptom-navigator')}
+                    >
+                        I have specific symptoms
+                    </Button>
+                </motion.div>
+
+                {/* Journey cards */}
+                <motion.div {...animate(0.25)} className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto mb-12">
+                    {[
+                        {
+                            icon: Sparkles,
+                            title: 'Clarity Score',
+                            desc: 'A 3-minute check-in to understand your mental baseline',
+                            color: 'text-teal-600 dark:text-teal-400',
+                            bg: 'bg-teal-50 dark:bg-teal-950/30',
+                        },
+                        {
+                            icon: BookOpen,
+                            title: 'Learn & Grow',
+                            desc: 'Expert-written guides on anxiety, mood, resilience, and more',
+                            color: 'text-emerald-600 dark:text-emerald-400',
+                            bg: 'bg-emerald-50 dark:bg-emerald-950/30',
+                        },
+                        {
+                            icon: Shield,
+                            title: 'Completely Private',
+                            desc: 'No accounts needed. Nothing leaves your device — ever',
+                            color: 'text-slate-600 dark:text-slate-400',
+                            bg: 'bg-slate-50 dark:bg-slate-900/50',
+                        },
+                    ].map(({ icon: Icon, title, desc, color, bg }) => (
+                        <div
+                            key={title}
+                            className={`${bg} rounded-2xl p-5 text-left border border-transparent hover:border-border transition-colors`}
                         >
-                            Start Assessment
-                        </Button>
+                            <Icon className={`w-5 h-5 ${color} mb-3`} />
+                            <h3 className="font-display font-semibold text-sm text-text-primary mb-1">{title}</h3>
+                            <p className="text-xs text-text-secondary leading-relaxed">{desc}</p>
+                        </div>
+                    ))}
+                </motion.div>
 
-                        <Button
-                            variant="outline"
-                            className="h-12 px-8 rounded-lg text-base font-medium transition-colors"
-                            onClick={() => navigate('/tools')}
-                        >
-                            View All Tools
-                        </Button>
-                    </motion.div>
+                {/* Trust Strip */}
+                <motion.div {...animate(0.35)} className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-slate-500 dark:text-slate-400">
+                    {[
+                        { icon: Shield, label: 'Free forever' },
+                        { icon: Lock, label: 'Privacy-first' },
+                        { icon: BookOpen, label: 'Evidence-based' },
+                    ].map(({ icon: Icon, label }) => (
+                        <div key={label} className="flex items-center gap-1.5">
+                            <Icon className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" />
+                            <span>{label}</span>
+                        </div>
+                    ))}
+                </motion.div>
 
-                    {/* Trust Strip */}
-                    <motion.div {...animate(0.25)} className="flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-2 text-sm text-slate-500 dark:text-slate-400">
-                        {[
-                            { icon: Shield, label: '100% Free' },
-                            { icon: Lock, label: 'Privacy-first' },
-                            { icon: BookOpen, label: 'Evidence-based' },
-                        ].map(({ icon: Icon, label }) => (
-                            <div key={label} className="flex items-center gap-1.5">
-                                <Icon className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" />
-                                <span>{label}</span>
-                            </div>
-                        ))}
-                    </motion.div>
-                </div>
-
-                {/* Right Column: Product Preview */}
-                <motion.div
-                    initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, scale: 0.95, y: 20 }}
-                    animate={{ opacity: 1, scale: 1, y: 0 }}
-                    transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.8, delay: 0.3, ease: 'easeOut' }}
-                    className="relative flex justify-center lg:justify-end"
-                >
-                    <ProductPreviewCard />
+                {/* Browse link */}
+                <motion.div {...animate(0.4)} className="mt-8">
+                    <button
+                        onClick={() => {
+                            document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                        className="text-sm text-text-tertiary hover:text-primary transition-colors underline underline-offset-4"
+                    >
+                        See how Psychage works
+                    </button>
                 </motion.div>
             </div>
         </section>
-    );
-};
-
-/** Visual product preview card replacing the old coaching insight card */
-const ProductPreviewCard: React.FC = () => {
-    return (
-        <div className="w-full max-w-md mx-auto">
-            {/* Main Card */}
-            <div className="overflow-hidden rounded-2xl bg-surface border border-border shadow-md">
-
-                {/* Card Header */}
-                <div className="px-6 pt-6 pb-4 border-b border-border">
-                    <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 rounded-lg bg-surface-hover flex items-center justify-center">
-                                <Sparkles className="w-5 h-5 text-primary" />
-                            </div>
-                            <div>
-                                <h3 className="font-display font-semibold text-sm text-text-primary">Wellbeing Assessment</h3>
-                                <p className="text-xs text-text-secondary">Your results</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Score Display */}
-                <div className="px-6 pt-6 pb-6">
-                    <div className="text-center mb-8">
-                        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-surface-hover mb-3">
-                            <span className="text-2xl font-display font-bold text-primary">78</span>
-                        </div>
-                        <p className="text-sm font-semibold text-text-primary">Clarity Score</p>
-                        <p className="text-xs text-text-secondary">Above baseline</p>
-                    </div>
-
-                    {/* Metric Bars */}
-                    <div className="space-y-4">
-                        {[
-                            { label: 'Emotional Awareness', value: 82, color: 'bg-primary' },
-                            { label: 'Stress Resilience', value: 65, color: 'bg-primary/80' },
-                            { label: 'Sleep Quality', value: 74, color: 'bg-primary/60' },
-                        ].map((metric) => (
-                            <div key={metric.label} className="space-y-1.5">
-                                <div className="flex justify-between text-xs">
-                                    <span className="font-medium text-text-primary">{metric.label}</span>
-                                    <span className="text-text-secondary">{metric.value}%</span>
-                                </div>
-                                <div className="h-2 w-full bg-surface-hover rounded-full overflow-hidden">
-                                    <motion.div
-                                        initial={{ width: 0 }}
-                                        animate={{ width: `${metric.value}%` }}
-                                        transition={{ duration: 1, ease: 'easeOut' }}
-                                        className={`h-full ${metric.color} rounded-full`}
-                                    />
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Footer */}
-                <div className="px-6 pb-6 pt-2">
-                    <div className="flex items-center gap-2 text-xs text-text-tertiary">
-                        <Lock className="w-3.5 h-3.5 shrink-0" />
-                        <span>Analyzed locally on device</span>
-                    </div>
-                </div>
-            </div>
-        </div>
     );
 };
 

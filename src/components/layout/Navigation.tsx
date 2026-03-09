@@ -240,20 +240,11 @@ const Navigation: React.FC = () => {
 
                         {isAuthenticated ? (
                             <>
-                                {/* Dashboard Button */}
-                                <Button
-                                    className="hidden md:flex rounded-full px-6 h-10 bg-teal-600 hover:bg-teal-700 text-white shadow-lg shadow-teal-900/20 border-none font-bold text-sm ml-2"
-                                    onClick={() => navigate(getDashboardPath())}
-                                    onMouseEnter={() => handleMouseEnter('')}
-                                >
-                                    Dashboard
-                                </Button>
-
                                 {/* User Menu */}
                                 <div className="relative" ref={userMenuRef}>
                                     <button
                                         onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
-                                        className={`hidden md:flex w-10 h-10 rounded-full items-center justify-center transition-all ml-2 ${isUserMenuOpen ? 'bg-gray-100 text-gray-900' : 'text-gray-500 hover:bg-gray-100 hover:text-gray-900'}`}
+                                        className={`hidden md:flex w-10 h-10 rounded-full items-center justify-center transition-all ${isUserMenuOpen ? 'bg-gray-100 text-gray-900' : 'text-gray-500 hover:bg-gray-100 hover:text-gray-900'}`}
                                         aria-label="User menu"
                                         aria-expanded={isUserMenuOpen}
                                         aria-haspopup="menu"

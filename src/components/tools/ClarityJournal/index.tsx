@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sun, ShieldCheck, BookOpen, BarChart3, Clock, Settings2, ChevronRight, Check, Sparkles } from 'lucide-react';
+import {
+  Sun, ShieldCheck, BookOpen, BarChart3, Clock, Settings2, ChevronRight, Check, Sparkles,
+  Smile, FileText, PenLine, Shield,
+} from 'lucide-react';
 import SEO from '@/components/SEO';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import Button from '@/components/ui/Button';
@@ -12,7 +15,7 @@ import TrendChart from './components/TrendChart';
 import ExportImportControls from './components/ExportImportControls';
 import { useClarityJournal } from './hooks/useClarityJournal';
 import { JOURNAL_SECTIONS, PRIVACY_NOTICE } from './constants';
-import { formatDate } from './dates';
+import { formatDate, getToday } from './dates';
 import { Link } from 'react-router-dom';
 
 const ClarityJournal: React.FC = () => {
@@ -21,6 +24,9 @@ const ClarityJournal: React.FC = () => {
     data,
     streak,
     todayCheckIn,
+    todayJournal,
+    todaySections,
+    todaySectionCount,
     updatePreferences,
     exportData,
     importData,
@@ -39,7 +45,7 @@ const ClarityJournal: React.FC = () => {
     updatePreferences({ privacyNoticeDismissed: true });
   };
 
-  // Get last entry dates for section cards
+  // Get last entry dates for V1 section cards
   const getLastEntry = (sectionId: string): string | undefined => {
     switch (sectionId) {
       case 'daily-checkin':
@@ -61,11 +67,26 @@ const ClarityJournal: React.FC = () => {
     }
   };
 
-  // Mood sparkline data for preview
-  const recentMoods = [...data.dailyCheckIns]
+  // Mood sparkline data — combine V1 check-ins + V2 mood data
+  const v1Moods = [...data.dailyCheckIns]
     .sort((a, b) => a.date.localeCompare(b.date))
     .slice(-14)
     .map(c => ({ label: formatDate(c.date), value: c.mood }));
+
+  const v2Moods = [...(data.dailyJournals || [])]
+    .filter(j => j.moodCheckIns.length > 0)
+    .sort((a, b) => a.date.localeCompare(b.date))
+    .slice(-14)
+    .map(j => ({
+      label: formatDate(j.date),
+      value: Math.round(j.moodCheckIns.reduce((s, m) => s + m.overallMood, 0) / j.moodCheckIns.length),
+    }));
+
+  // Merge by date, preferring V2 data
+  const moodMap = new Map<string, { label: string; value: number }>();
+  for (const m of v1Moods) moodMap.set(m.label, m);
+  for (const m of v2Moods) moodMap.set(m.label, m);
+  const recentMoods = [...moodMap.values()].slice(-14);
 
   // Thought record count from ThoughtReframer localStorage
   let thoughtRecordCount = 0;
@@ -74,49 +95,22 @@ const ClarityJournal: React.FC = () => {
     if (raw) thoughtRecordCount = (JSON.parse(raw) as unknown[]).filter((r: any) => r.completed).length;
   } catch { /* ignore */ }
 
-  const quickActions = [
-    {
-      icon: Sun,
-      title: 'Daily Check-In',
-      subtitle: todayCheckIn ? 'Completed today' : 'Not yet today',
-      route: '/tools/clarity-journal/daily',
-      completed: !!todayCheckIn,
-      color: 'teal' as const,
-    },
-    {
-      icon: BookOpen,
-      title: 'Thought Record',
-      subtitle: thoughtRecordCount > 0 ? `${thoughtRecordCount} records` : 'Challenge negative thoughts',
-      route: '/tools/clarity-journal/thought-record',
-      completed: false,
-      color: 'indigo' as const,
-    },
-    {
-      icon: ShieldCheck,
-      title: 'Safety Plan',
-      subtitle: 'Your crisis plan',
-      route: '/tools/clarity-journal/toolbox',
-      completed: false,
-      color: 'rose' as const,
-    },
-  ];
-
-  const colorMap = {
-    teal: { bg: 'bg-teal-50 dark:bg-teal-900/20', icon: 'text-teal-600 dark:text-teal-400', ring: 'ring-teal-500/20' },
-    indigo: { bg: 'bg-indigo-50 dark:bg-indigo-900/20', icon: 'text-indigo-600 dark:text-indigo-400', ring: 'ring-indigo-500/20' },
-    rose: { bg: 'bg-rose-50 dark:bg-rose-900/20', icon: 'text-rose-600 dark:text-rose-400', ring: 'ring-rose-500/20' },
-  };
+  // V2 today's status
+  const hasTodayV2Data = todaySectionCount > 0;
+  const todayLabel = hasTodayV2Data
+    ? `${todaySectionCount} section${todaySectionCount > 1 ? 's' : ''} today`
+    : todayCheckIn ? 'Completed today' : 'Not yet today';
 
   return (
     <div className="min-h-screen bg-[#F5F5F7] dark:bg-[#0a0a0a] pt-24 pb-16 px-4 sm:px-6">
-      <SEO title="Clarity Journal | Psychage" description="A structured, evidence-based journal for tracking your mental health." />
+      <SEO title="Clarity Journal | Psychage" description="A structured, evidence-based journal with therapist reports. Everything stays on your device." />
 
       <div className="container mx-auto max-w-3xl">
         <div className="mb-6">
           <Breadcrumbs />
         </div>
 
-        {/* Header — Apple-style large title */}
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
@@ -129,7 +123,7 @@ const ClarityJournal: React.FC = () => {
                 Clarity Journal
               </h1>
               <p className="text-slate-500 dark:text-slate-400 mt-2 text-lg font-light">
-                Your personal guide to understanding your mind.
+                Your space between sessions.
               </p>
             </div>
             <StreakTracker streak={streak} />
@@ -142,7 +136,7 @@ const ClarityJournal: React.FC = () => {
           onDismiss={handleDismissPrivacy}
         />
 
-        {/* Welcome Banner — frosted glass */}
+        {/* Welcome Banner */}
         <AnimatePresence>
           {showWelcome && (
             <motion.div
@@ -161,42 +155,89 @@ const ClarityJournal: React.FC = () => {
                   <h2 className="font-display font-semibold text-xl text-slate-900 dark:text-white">Welcome to Your Journal</h2>
                 </div>
                 <p className="text-[15px] text-slate-600 dark:text-slate-300 leading-relaxed mb-2">
-                  This journal belongs to you. Pay attention to how you're feeling,
-                  notice what's helping and what isn't, and build a clear picture of your mental health over time.
+                  Your Clarity Journal is a private space to track how you're doing between therapy sessions — or just for yourself.
+                  Everything stays on your device.
+                </p>
+                <p className="text-[15px] text-slate-500 dark:text-slate-400 leading-relaxed mb-2">
+                  Check in with your mood, log activities, note stressors, and complete weekly check-ups.
+                  When you're ready, generate a summary report to share with your therapist.
                 </p>
                 <p className="text-[15px] text-slate-500 dark:text-slate-400 leading-relaxed mb-6">
-                  Start with just the Daily Check-In. Add sections as they feel natural.
+                  <Shield className="w-3.5 h-3.5 inline -mt-0.5 mr-1 text-teal-500" />
+                  Everything you write stays on your device. Psychage never sees your data.
                 </p>
-                <div className="flex gap-3">
-                  <Button
-                    variant="primary"
-                    onClick={handleDismissWelcome}
-                    className="rounded-full h-11 px-7 text-sm font-semibold bg-teal-600 hover:bg-teal-700 shadow-sm"
-                  >
-                    Get Started
-                  </Button>
-                  <Button
-                    variant="outline"
-                    onClick={handleDismissWelcome}
-                    className="rounded-full h-11 px-7 text-sm font-semibold border-slate-200 dark:border-slate-700"
-                  >
-                    Dismiss
-                  </Button>
-                </div>
+                <Button
+                  variant="primary"
+                  onClick={handleDismissWelcome}
+                  className="rounded-full h-11 px-7 text-sm font-semibold bg-teal-600 hover:bg-teal-700 shadow-sm"
+                >
+                  Get Started
+                </Button>
               </div>
             </motion.div>
           )}
         </AnimatePresence>
 
-        {/* Quick Actions — pill-shaped cards */}
+        {/* Today's Entry — prominent CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.08 }}
+          className="mb-6"
+        >
+          <Link
+            to="/tools/clarity-journal/entry"
+            className="group relative overflow-hidden bg-gradient-to-br from-teal-50 to-teal-100/50 dark:from-teal-900/20 dark:to-teal-800/10 backdrop-blur-xl rounded-2xl p-5 border border-teal-200/60 dark:border-teal-700/30 shadow-sm hover:shadow-md transition-all duration-300 block"
+          >
+            <div className="flex items-center gap-4">
+              <div className="w-14 h-14 rounded-2xl bg-teal-600 dark:bg-teal-500 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
+                <Smile className="w-7 h-7 text-white" strokeWidth={1.5} />
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="font-display font-bold text-lg text-slate-900 dark:text-white">Today's Journal</p>
+                <p className="text-sm text-teal-700 dark:text-teal-400 mt-0.5">{todayLabel}</p>
+              </div>
+              <ChevronRight className="w-5 h-5 text-teal-400 group-hover:translate-x-0.5 transition-transform shrink-0" />
+            </div>
+          </Link>
+        </motion.div>
+
+        {/* Quick Actions */}
         <motion.div
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.1 }}
           className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-10"
         >
-          {quickActions.map((action) => {
+          {[
+            {
+              icon: FileText,
+              title: 'Therapist Report',
+              subtitle: 'Generate wellness summary',
+              route: '/tools/clarity-journal/report',
+              color: 'teal' as const,
+            },
+            {
+              icon: BookOpen,
+              title: 'Thought Record',
+              subtitle: thoughtRecordCount > 0 ? `${thoughtRecordCount} records` : 'Challenge negative thoughts',
+              route: '/tools/clarity-journal/thought-record',
+              color: 'indigo' as const,
+            },
+            {
+              icon: ShieldCheck,
+              title: 'Safety Plan',
+              subtitle: 'Your crisis plan',
+              route: '/tools/clarity-journal/toolbox',
+              color: 'rose' as const,
+            },
+          ].map((action) => {
             const Icon = action.icon;
+            const colorMap = {
+              teal: { bg: 'bg-teal-50 dark:bg-teal-900/20', icon: 'text-teal-600 dark:text-teal-400' },
+              indigo: { bg: 'bg-indigo-50 dark:bg-indigo-900/20', icon: 'text-indigo-600 dark:text-indigo-400' },
+              rose: { bg: 'bg-rose-50 dark:bg-rose-900/20', icon: 'text-rose-600 dark:text-rose-400' },
+            };
             const colors = colorMap[action.color];
             return (
               <Link
@@ -206,24 +247,20 @@ const ClarityJournal: React.FC = () => {
               >
                 <div className="flex items-center gap-3.5">
                   <div className={`w-11 h-11 rounded-2xl flex items-center justify-center shrink-0 ${colors.bg} transition-transform duration-300 group-hover:scale-105`}>
-                    {action.completed ? (
-                      <Check className="w-5 h-5 text-teal-600 dark:text-teal-400" />
-                    ) : (
-                      <Icon className={`w-5 h-5 ${colors.icon}`} strokeWidth={1.5} />
-                    )}
+                    <Icon className={`w-5 h-5 ${colors.icon}`} strokeWidth={1.5} />
                   </div>
                   <div className="min-w-0 flex-1">
                     <p className="font-semibold text-[15px] text-slate-900 dark:text-white leading-tight">{action.title}</p>
                     <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5 truncate">{action.subtitle}</p>
                   </div>
-                  <ChevronRight className="w-4 h-4 text-slate-300 dark:text-slate-600 group-hover:text-slate-400 dark:group-hover:text-slate-500 group-hover:translate-x-0.5 transition-all shrink-0" />
+                  <ChevronRight className="w-4 h-4 text-slate-300 dark:text-slate-600 group-hover:text-slate-400 group-hover:translate-x-0.5 transition-all shrink-0" />
                 </div>
               </Link>
             );
           })}
         </motion.div>
 
-        {/* Journal Sections — clean grid with frosted cards */}
+        {/* V1 Journal Sections */}
         <motion.div
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
@@ -274,7 +311,7 @@ const ClarityJournal: React.FC = () => {
           })}
         </motion.div>
 
-        {/* Trends preview — glass card */}
+        {/* Trends preview */}
         {recentMoods.length >= 2 && (
           <motion.div
             initial={{ opacity: 0, y: 8 }}
@@ -286,7 +323,7 @@ const ClarityJournal: React.FC = () => {
           </motion.div>
         )}
 
-        {/* Data Management — minimal accordion */}
+        {/* Data Management */}
         <motion.div
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
@@ -321,6 +358,12 @@ const ClarityJournal: React.FC = () => {
             )}
           </AnimatePresence>
         </motion.div>
+
+        {/* Educational disclaimer */}
+        <p className="text-xs text-slate-400 dark:text-slate-500 text-center mt-8 max-w-md mx-auto leading-relaxed">
+          The Clarity Journal is an educational wellness tool, not a medical record or clinical assessment.
+          All data stays on your device.
+        </p>
       </div>
     </div>
   );

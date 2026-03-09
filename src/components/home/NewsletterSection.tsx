@@ -60,7 +60,7 @@ const NewsletterSection: React.FC = () => {
               Start understanding your mind today.
             </h2>
             <p className="text-teal-100/70 text-lg mb-10 max-w-xl mx-auto">
-              Take a free assessment, explore your symptoms privately, or browse 50+ evidence-based articles. No account required.
+              Take a free assessment, explore your symptoms privately, and start your mental health journey.
             </p>
 
             {/* Primary CTA */}

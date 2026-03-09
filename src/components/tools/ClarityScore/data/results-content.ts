@@ -40,7 +40,7 @@ export const TIER_DESCRIPTIONS: Record<ScoreTier, TierDescription> = {
     consultationLevel: 'optional',
   },
   struggling: {
-    label: 'Struggling',
+    label: 'Concerning',
     range: '40–59',
     description:
       'Noticeable difficulties in several areas. Proactive steps and guided support can make a meaningful difference.',
@@ -49,7 +49,7 @@ export const TIER_DESCRIPTIONS: Record<ScoreTier, TierDescription> = {
     watchFor:
       'Declining scores in any single dimension. Withdrawal from activities or relationships you once valued.',
     professionalGuidance:
-      'Recommended. A therapist can provide tools and strategies tailored to the areas where you are struggling.',
+      'Recommended. A therapist can provide tools and strategies tailored to the areas where you are experiencing difficulty.',
     consultationLevel: 'recommended',
   },
   distressed: {
@@ -389,7 +389,7 @@ export const DIMENSION_CONTENT: Record<
       actions: [
         'Professional support is strongly encouraged at this level',
         'Focus on basic self-care: sleep, nutrition, hygiene',
-        'Let trusted people know you are struggling — accepting help is not weakness',
+        'Let trusted people know you need support — accepting help is not weakness',
       ],
     },
     crisis: {

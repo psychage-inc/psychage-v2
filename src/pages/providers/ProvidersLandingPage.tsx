@@ -2,8 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import {
-  ShieldCheck, BookOpen, Heart, Search as SearchIcon,
-  ArrowRight, Users, MessageCircle, Stethoscope,
+  ShieldCheck, Search as SearchIcon,
+  ArrowRight, UserCheck, MessageCircle, Stethoscope,
+  FlaskConical, Sparkles, Check,
 } from 'lucide-react';
 import SEO from '@/components/SEO';
 import Button from '@/components/ui/Button';
@@ -11,15 +12,15 @@ import { ProviderSearchBar } from '@/components/providers/search/ProviderSearchB
 import { useProviderLookups } from '@/context/ProviderLookupsContext';
 
 const TRUST_INDICATORS = [
-  { icon: Users, label: '5,000+ Providers', description: 'Mental health professionals across the US' },
+  { icon: UserCheck, label: '5,000+ Providers', description: 'Mental health professionals across the US' },
   { icon: ShieldCheck, label: 'Verified Credentials', description: 'NPI-verified professional credentials' },
-  { icon: BookOpen, label: 'Evidence-First', description: 'No ratings or reviews — just verified credentials' },
-  { icon: Heart, label: 'Free to Search', description: 'Always free for people seeking care' },
+  { icon: FlaskConical, label: 'Evidence-First', description: 'No ratings or reviews — just verified credentials' },
+  { icon: Sparkles, label: 'Free to Search', description: 'Always free for people seeking care' },
 ];
 
 const HOW_IT_WORKS = [
   { step: 1, title: 'Search', description: 'Enter your location and what kind of support you need.', icon: SearchIcon },
-  { step: 2, title: 'Review Profiles', description: 'Compare credentials, specialties, and contact information.', icon: BookOpen },
+  { step: 2, title: 'Review Profiles', description: 'Compare credentials, specialties, and contact information.', icon: ShieldCheck },
   { step: 3, title: 'Connect', description: 'Reach out directly by phone, email, or their booking link.', icon: MessageCircle },
 ];
 
@@ -188,11 +189,31 @@ const ProvidersLandingPage: React.FC = () => {
       {/* For Providers CTA */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="bg-gradient-to-br from-gray-900 to-gray-800 dark:from-gray-800 dark:to-gray-900 rounded-3xl p-10 text-white">
-            <h2 className="font-display font-bold text-2xl mb-3">Are you a mental health provider?</h2>
+          <div className="bg-gradient-to-br from-gray-900 to-gray-800 dark:from-gray-800 dark:to-gray-900 rounded-3xl p-10 sm:p-12 text-white">
+            <h2 className="font-display font-bold text-2xl sm:text-3xl mb-3">Grow Your Practice, Reach More Patients</h2>
             <p className="text-gray-300 mb-6 max-w-lg mx-auto">
-              Join thousands of providers on the Psychage directory. Free listing available.
+              Join the Psychage provider directory and connect directly with patients seeking care.
             </p>
+            <div className="flex flex-col items-start gap-3 max-w-md mx-auto mb-8 text-left">
+              <div className="flex items-center gap-3">
+                <div className="w-5 h-5 rounded-full bg-teal-500/20 flex items-center justify-center flex-shrink-0">
+                  <Check size={12} className="text-teal-400" />
+                </div>
+                <span className="text-sm text-gray-300">Free NPI-verified listing — no hidden fees</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-5 h-5 rounded-full bg-teal-500/20 flex items-center justify-center flex-shrink-0">
+                  <Check size={12} className="text-teal-400" />
+                </div>
+                <span className="text-sm text-gray-300">No commissions, no middlemen — patients contact you directly</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-5 h-5 rounded-full bg-teal-500/20 flex items-center justify-center flex-shrink-0">
+                  <Check size={12} className="text-teal-400" />
+                </div>
+                <span className="text-sm text-gray-300">5,000+ providers already listed and growing</span>
+              </div>
+            </div>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link to="/for-providers">
                 <Button className="bg-teal-500 hover:bg-teal-600 text-white font-bold px-8" rightIcon={<ArrowRight size={16} />}>

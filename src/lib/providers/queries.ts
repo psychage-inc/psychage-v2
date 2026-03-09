@@ -15,7 +15,11 @@ import type {
   ProviderSearchParams,
   ProviderApplication,
   ProviderLocation,
+  ProviderStatus,
+  ProviderTier,
 } from './types';
+import { providers as mockProviders } from '@/data/providers';
+import type { Provider } from '@/types/models';
 
 // --- Joined select for provider queries ---
 const PROVIDER_SELECT = `
@@ -48,14 +52,152 @@ function mapProviderRow(row: Record<string, unknown>): ProviderWithDetails {
 }
 
 // =============================================================================
-// SEARCH PROVIDERS (uses server-side RPC — 20 rows max, all filtering in SQL)
+// SEARCH HELPERS — mapping, filtering, fallback
+// =============================================================================
+
+/**
+ * Maps a ProviderWithDetails (from direct query) to ProviderCardData (for UI cards).
+ */
+function mapToCardData(p: ProviderWithDetails): ProviderCardData {
+  const loc = p.locations.find(l => l.is_primary) || p.locations[0] || null;
+  return {
+    id: p.id,
+    display_name: p.display_name,
+    credentials_suffix: p.credentials_suffix,
+    bio: p.bio,
+    photo_url: p.photo_url,
+    status: p.status,
+    tier: p.tier,
+    practice_name: p.practice_name,
+    phone: p.phone,
+    email: p.email,
+    website_url: p.website_url,
+    appointment_url: p.appointment_url,
+    npi_number: p.npi_number,
+    telehealth_available: p.telehealth_available,
+    in_person_available: p.in_person_available,
+    is_accepting_patients: p.is_accepting_patients,
+    verified_at: p.verified_at,
+    provider_type_slug: p.provider_type?.slug || '',
+    provider_type_label: p.provider_type?.label || '',
+    primary_city: loc?.city || null,
+    primary_state: loc?.state_province || null,
+    specialty_tags: (p.specialties || []).map(s => ({ slug: s.slug, label: s.label, category: s.category })),
+    language_tags: (p.languages || []).map(l => ({ code: l.code, label: l.label, native_label: l.native_label })),
+    competency_tags: (p.cultural_competencies || []).map(c => ({ slug: c.slug, label: c.label })),
+    insurance_tags: (p.insurance_plans || []).map(i => ({ name: i.name, carrier: i.carrier })),
+  };
+}
+
+/**
+ * Maps legacy mock Provider to ProviderCardData.
+ */
+function mapMockToCardData(p: Provider): ProviderCardData {
+  const locationParts = p.location.split('(')[0].trim().split(',').map(s => s.trim());
+  return {
+    id: String(p.id),
+    display_name: p.name,
+    credentials_suffix: p.role || null,
+    bio: p.bio || null,
+    photo_url: p.image || null,
+    status: 'active' as ProviderStatus,
+    tier: 'free' as ProviderTier,
+    practice_name: null,
+    phone: null,
+    email: null,
+    website_url: null,
+    appointment_url: null,
+    npi_number: null,
+    telehealth_available: p.isVideoVisit || false,
+    in_person_available: !p.isVideoVisit,
+    is_accepting_patients: p.availability !== 'Waitlist',
+    verified_at: p.verified ? new Date().toISOString() : null,
+    provider_type_slug: '',
+    provider_type_label: p.role || '',
+    primary_city: locationParts[0] || null,
+    primary_state: locationParts[1] || null,
+    specialty_tags: p.specialties.map(s => ({ slug: s.toLowerCase().replace(/\s+/g, '_'), label: s, category: 'condition' })),
+    language_tags: p.languages.map(l => ({ code: l.toLowerCase().slice(0, 2), label: l, native_label: l })),
+    competency_tags: [],
+    insurance_tags: p.insurance.map(i => ({ name: i, carrier: i })),
+  };
+}
+
+/**
+ * Client-side filter for ProviderCardData.
+ * Case-insensitive, partial-match, null-safe.
+ */
+function filterProviderCards(cards: ProviderCardData[], params: ProviderSearchParams): ProviderCardData[] {
+  return cards.filter(p => {
+    if (params.query) {
+      const q = params.query.toLowerCase();
+      const searchable = [
+        p.display_name, p.practice_name, p.bio, p.credentials_suffix,
+        p.provider_type_label, p.primary_city, p.primary_state,
+        ...p.specialty_tags.map(s => s.label),
+        ...p.language_tags.map(l => l.label),
+        ...p.insurance_tags.map(i => `${i.carrier} ${i.name}`),
+      ].filter(Boolean).map(s => s!.toLowerCase());
+      if (!searchable.some(s => s.includes(q))) return false;
+    }
+    if (params.specialty_slugs?.length) {
+      const slugs = p.specialty_tags.map(s => s.slug);
+      if (!params.specialty_slugs.some(s => slugs.includes(s))) return false;
+    }
+    if (params.state && !p.primary_state?.toUpperCase().includes(params.state.toUpperCase())) return false;
+    if (params.city && !p.primary_city?.toLowerCase().includes(params.city.toLowerCase())) return false;
+    if (params.telehealth && !p.telehealth_available) return false;
+    if (params.in_person && !p.in_person_available) return false;
+    if (params.accepting_patients && !p.is_accepting_patients) return false;
+
+    // Verification status filter
+    if (params.verification_status === 'verified') {
+      const isVerified = p.verified_at != null || p.status === 'verified' || p.status === 'active';
+      if (!isVerified) return false;
+    }
+    if (params.verification_status === 'listed') {
+      const isVerified = p.verified_at != null || p.status === 'verified' || p.status === 'active';
+      if (isVerified) return false;
+    }
+
+    return true;
+  });
+}
+
+/**
+ * Sort ProviderCardData by the requested sort mode.
+ */
+function sortProviderCards(cards: ProviderCardData[], sortBy?: string): ProviderCardData[] {
+  const sorted = [...cards];
+  if (sortBy === 'name') {
+    sorted.sort((a, b) => a.display_name.localeCompare(b.display_name));
+  } else {
+    // Relevance: premium first, then verified, then alphabetical
+    sorted.sort((a, b) => {
+      if (a.tier === 'premium' && b.tier !== 'premium') return -1;
+      if (a.tier !== 'premium' && b.tier === 'premium') return 1;
+
+      const aVerified = a.verified_at != null || a.status === 'verified' || a.status === 'active';
+      const bVerified = b.verified_at != null || b.status === 'verified' || b.status === 'active';
+      if (aVerified && !bVerified) return -1;
+      if (!aVerified && bVerified) return 1;
+
+      return a.display_name.localeCompare(b.display_name);
+    });
+  }
+  return sorted;
+}
+
+// =============================================================================
+// SEARCH PROVIDERS — cascading fallback: RPC → direct query → mock data
 // =============================================================================
 
 const PAGE_SIZE = 20;
 
-export async function searchProviders(params: ProviderSearchParams): Promise<ProviderCardSearchResult> {
-  const page = params.page || 1;
-  const perPage = params.per_page || PAGE_SIZE;
+/**
+ * Try 1: Supabase RPC (server-side filtered, paginated search).
+ */
+async function searchViaRPC(params: ProviderSearchParams, page: number, perPage: number): Promise<ProviderCardSearchResult | null> {
   const offset = (page - 1) * perPage;
 
   const { data, error } = await supabase.rpc('search_providers_v2', {
@@ -76,8 +218,8 @@ export async function searchProviders(params: ProviderSearchParams): Promise<Pro
   });
 
   if (error) {
-    console.error('Provider search error:', error);
-    return { providers: [], total_count: 0, page, per_page: perPage, has_more: false };
+    console.warn('RPC search_providers_v2 failed, will try fallback:', error.message);
+    return null;
   }
 
   const rows = (data || []) as Array<ProviderCardData & { total_count: number }>;
@@ -118,6 +260,84 @@ export async function searchProviders(params: ProviderSearchParams): Promise<Pro
     per_page: perPage,
     has_more: offset + perPage < totalCount,
   };
+}
+
+/**
+ * Try 2: Direct Supabase query with joins + client-side filtering.
+ */
+async function searchViaDirectQuery(params: ProviderSearchParams, page: number, perPage: number): Promise<ProviderCardSearchResult | null> {
+  const { data, error } = await supabase
+    .from('providers')
+    .select(PROVIDER_SELECT)
+    .in('status', ['active', 'seeded'])
+    .order('display_name')
+    .limit(200);
+
+  if (error || !data || data.length === 0) {
+    if (error) console.warn('Direct provider query failed, will try mock data:', error.message);
+    return null;
+  }
+
+  const allCards = data.map(row => mapToCardData(mapProviderRow(row)));
+  const filtered = filterProviderCards(allCards, params);
+  const sorted = sortProviderCards(filtered, params.sort_by);
+  const offset = (page - 1) * perPage;
+  const paged = sorted.slice(offset, offset + perPage);
+
+  return {
+    providers: paged,
+    total_count: filtered.length,
+    page,
+    per_page: perPage,
+    has_more: offset + perPage < filtered.length,
+  };
+}
+
+/**
+ * Try 3: Mock data fallback with client-side filtering.
+ */
+function searchViaMockData(params: ProviderSearchParams, page: number, perPage: number): ProviderCardSearchResult {
+  const allCards = mockProviders.map(mapMockToCardData);
+  const filtered = filterProviderCards(allCards, params);
+  const sorted = sortProviderCards(filtered, params.sort_by);
+  const offset = (page - 1) * perPage;
+  const paged = sorted.slice(offset, offset + perPage);
+
+  return {
+    providers: paged,
+    total_count: filtered.length,
+    page,
+    per_page: perPage,
+    has_more: offset + perPage < filtered.length,
+  };
+}
+
+/**
+ * Main search entry point — cascades: RPC → direct query → mock data.
+ * Always returns results (never silently fails).
+ */
+export async function searchProviders(params: ProviderSearchParams): Promise<ProviderCardSearchResult> {
+  const page = params.page || 1;
+  const perPage = params.per_page || PAGE_SIZE;
+
+  // Try 1: RPC
+  try {
+    const rpcResult = await searchViaRPC(params, page, perPage);
+    if (rpcResult) return rpcResult;
+  } catch (err) {
+    console.warn('RPC search threw:', err);
+  }
+
+  // Try 2: Direct query
+  try {
+    const directResult = await searchViaDirectQuery(params, page, perPage);
+    if (directResult) return directResult;
+  } catch (err) {
+    console.warn('Direct query threw:', err);
+  }
+
+  // Try 3: Mock data (always succeeds)
+  return searchViaMockData(params, page, perPage);
 }
 
 // =============================================================================

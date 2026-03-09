@@ -323,31 +323,6 @@ const ScoreGuideTab: React.FC<ScoreGuideTabProps> = ({ currentTier }) => {
         </p>
       </div>
 
-      {/* ─── Disclaimer ─── */}
-      <div className="bg-gray-50 dark:bg-gray-800/50 rounded-2xl p-6">
-        <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-2">
-          Important Limitations
-        </h4>
-        <ul className="space-y-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
-          <li>
-            The Clarity Score is an educational wellness snapshot. It is not a
-            clinical assessment and should not be used for self-diagnosis.
-          </li>
-          <li>
-            Scores are approximations based on a two-week recall window. They
-            reflect a moment in time, not a permanent state.
-          </li>
-          <li>
-            This tool does not replace professional evaluation. If you are
-            experiencing significant distress, please consult a qualified mental
-            health professional.
-          </li>
-          <li>
-            Recommended retake interval: every 2 weeks. Minimum gap between
-            assessments: 7 days.
-          </li>
-        </ul>
-      </div>
     </motion.div>
   );
 };

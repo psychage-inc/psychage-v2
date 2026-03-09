@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, SlidersHorizontal } from 'lucide-react';
+import { SlidersHorizontal, AlertTriangle, RefreshCw } from 'lucide-react';
 import SEO from '@/components/SEO';
 import { useProviderSearch } from '@/hooks/useProviderSearch';
 import { ProviderSearchBar } from '@/components/providers/search/ProviderSearchBar';
@@ -8,7 +8,16 @@ import { ProviderFilterChips } from '@/components/providers/search/ProviderFilte
 import { ProviderResultsGrid } from '@/components/providers/search/ProviderResultsGrid';
 import { ProviderSortDropdown } from '@/components/providers/search/ProviderSortDropdown';
 import { ProviderResultsEmpty } from '@/components/providers/search/ProviderResultsEmpty';
+import { VerificationExplainer } from '@/components/providers/search/VerificationExplainer';
+import { VerificationCTA } from '@/components/providers/search/VerificationCTA';
 import Button from '@/components/ui/Button';
+
+const US_STATE_ABBRS = new Set([
+  'AL','AK','AZ','AR','CA','CO','CT','DE','DC','FL','GA','HI','ID','IL','IN',
+  'IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH',
+  'NJ','NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT',
+  'VT','VA','WA','WV','WI','WY',
+]);
 
 const ProviderSearchPage: React.FC = () => {
   const {
@@ -17,6 +26,7 @@ const ProviderSearchPage: React.FC = () => {
     hasMore,
     isLoading,
     isLoadingMore,
+    error,
     hasSearched,
     params,
     setParams,
@@ -37,11 +47,24 @@ const ProviderSearchPage: React.FC = () => {
     params.in_person ||
     params.accepting_patients ||
     params.state ||
-    params.city
+    params.city ||
+    (params.verification_status && params.verification_status !== 'all')
   );
 
-  const handleSearch = (query: string, _location: string) => {
-    setParams({ query: query || undefined });
+  const handleSearch = (query: string, location: string) => {
+    let city: string | undefined;
+    let state: string | undefined;
+
+    if (location && location !== 'Near me') {
+      const trimmed = location.trim();
+      if (trimmed.length === 2 && US_STATE_ABBRS.has(trimmed.toUpperCase())) {
+        state = trimmed.toUpperCase();
+      } else {
+        city = trimmed;
+      }
+    }
+
+    setParams({ query: query || undefined, city, state });
   };
 
   const handleUseLocation = (lat: number, lng: number) => {
@@ -60,10 +83,31 @@ const ProviderSearchPage: React.FC = () => {
         <div className="mb-6">
           <ProviderSearchBar
             initialQuery={params.query || ''}
+            initialLocation={params.city || params.state || ''}
             onSearch={handleSearch}
             onUseLocation={handleUseLocation}
           />
         </div>
+
+        {/* Verification Explainer */}
+        <div className="mb-6">
+          <VerificationExplainer />
+        </div>
+
+        {/* Error Banner */}
+        {error && (
+          <div className="mb-6 flex items-center gap-3 p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
+            <AlertTriangle size={18} className="text-amber-600 dark:text-amber-400 flex-shrink-0" />
+            <p className="text-sm text-amber-700 dark:text-amber-300 flex-1">{error}</p>
+            <button
+              onClick={() => setParams({})}
+              className="flex items-center gap-1.5 text-xs font-medium text-amber-700 dark:text-amber-300 hover:text-amber-800 dark:hover:text-amber-200 transition-colors"
+            >
+              <RefreshCw size={14} />
+              Retry
+            </button>
+          </div>
+        )}
 
         {/* Filter Chips */}
         {hasActiveFilters && (
@@ -81,25 +125,25 @@ const ProviderSearchPage: React.FC = () => {
           <div className="flex items-center gap-4">
             <p className="text-sm text-gray-500 dark:text-gray-400">
               {isLoading ? 'Searching...' : (
-                !hasSearched
-                  ? 'Search or use filters to find providers'
-                  : totalCount > 0
-                    ? `Showing ${providers.length} of ${totalCount} providers`
-                    : 'No results'
+                totalCount > 0
+                  ? `Showing ${providers.length} of ${totalCount} providers`
+                  : hasSearched ? 'No results' : ''
               )}
             </p>
 
-            {/* Mobile filter button */}
-            <button
-              onClick={() => setMobileFiltersOpen(true)}
-              className="lg:hidden flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50"
-            >
-              <SlidersHorizontal size={16} />
-              Filters
-              {hasActiveFilters && (
-                <span className="w-2 h-2 rounded-full bg-teal-500" />
-              )}
-            </button>
+            {/* Mobile filter button — hidden for now, keep code */}
+            {false && (
+              <button
+                onClick={() => setMobileFiltersOpen(true)}
+                className="lg:hidden flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50"
+              >
+                <SlidersHorizontal size={16} />
+                Filters
+                {hasActiveFilters && (
+                  <span className="w-2 h-2 rounded-full bg-teal-500" />
+                )}
+              </button>
+            )}
           </div>
 
           <ProviderSortDropdown
@@ -111,37 +155,28 @@ const ProviderSearchPage: React.FC = () => {
 
         {/* Main Layout */}
         <div className="flex gap-8">
-          {/* Desktop Sidebar */}
-          <ProviderFilterPanel
-            params={params}
-            onChange={setParams}
-          />
+          {/* Desktop Sidebar — hidden for now, keep code */}
+          {false && (
+            <ProviderFilterPanel
+              params={params}
+              onChange={setParams}
+            />
+          )}
 
-          {/* Mobile Drawer */}
-          <ProviderFilterPanel
-            params={params}
-            onChange={setParams}
-            isMobile={true}
-            isOpen={mobileFiltersOpen}
-            onClose={() => setMobileFiltersOpen(false)}
-          />
+          {/* Mobile Drawer — hidden for now, keep code */}
+          {false && (
+            <ProviderFilterPanel
+              params={params}
+              onChange={setParams}
+              isMobile={true}
+              isOpen={mobileFiltersOpen}
+              onClose={() => setMobileFiltersOpen(false)}
+            />
+          )}
 
           {/* Results */}
           <div className="flex-1 min-w-0">
-            {!hasSearched && !isLoading ? (
-              /* Initial state — no search performed yet */
-              <div className="flex flex-col items-center justify-center py-20 text-center">
-                <div className="w-16 h-16 rounded-full bg-teal-50 dark:bg-teal-900/20 flex items-center justify-center mb-4">
-                  <Search size={28} className="text-teal-500 dark:text-teal-400" />
-                </div>
-                <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-2">
-                  Find a mental health provider
-                </h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400 max-w-md">
-                  Use the search bar above or select filters to browse thousands of verified providers.
-                </p>
-              </div>
-            ) : !isLoading && providers.length === 0 ? (
+            {!isLoading && hasSearched && providers.length === 0 ? (
               <ProviderResultsEmpty
                 onClearFilters={reset}
                 hasFilters={hasActiveFilters}
@@ -166,6 +201,9 @@ const ProviderSearchPage: React.FC = () => {
                     </Button>
                   </div>
                 )}
+
+                {/* Provider CTA */}
+                {providers.length > 0 && !isLoading && <VerificationCTA />}
               </>
             )}
           </div>

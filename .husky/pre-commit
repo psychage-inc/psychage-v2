@@ -1,19 +1,12 @@
-# Check if pnpm-lock.yaml is in sync with package.json
+# Check if package-lock.json is in sync with package.json
 if git diff --cached --name-only | grep -q "package.json"; then
   echo "📦 package.json modified, checking lockfile sync..."
 
   # If package.json is staged but lockfile isn't, remind user
-  if ! git diff --cached --name-only | grep -q "pnpm-lock.yaml"; then
-    echo "⚠️  package.json changed but pnpm-lock.yaml not staged"
-    echo "   Running 'pnpm install' to check sync..."
-
-    pnpm install --frozen-lockfile 2>/dev/null
-    if [ $? -ne 0 ]; then
-      echo ""
-      echo "❌ pnpm-lock.yaml is out of sync with package.json"
-      echo "   Run 'pnpm install' and stage the updated lockfile"
-      exit 1
-    fi
+  if ! git diff --cached --name-only | grep -q "package-lock.json"; then
+    echo "⚠️  package.json changed but package-lock.json not staged"
+    echo "   Run 'npm install' and stage the updated lockfile"
+    exit 1
   fi
 
   echo "✅ Lockfile is in sync"

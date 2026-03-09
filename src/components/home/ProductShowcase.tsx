@@ -80,29 +80,30 @@ const ProductShowcase: React.FC = () => {
                     </p>
                 </motion.div>
 
-                {/* Bento Grid */}
+                {/* Bento Grid / Mobile Carousel */}
                 <motion.div
                     variants={staggerContainer}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4"
+                    className="flex overflow-x-auto pb-8 -mx-6 px-6 snap-x snap-mandatory gap-4 md:grid md:grid-cols-2 lg:grid-cols-6 md:overflow-visible md:pb-0 md:mx-0 md:px-0 scrollbar-hide"
                 >
                     {tools.map((tool, index) => {
                         const Icon = tool.icon;
-                        const isFeatured = index < 2;
-                        // Bento layout: first 2 span 3 cols each, last 3 span 2 cols each
-                        const colSpan = isFeatured ? 'lg:col-span-3' : 'lg:col-span-2';
+                        const isPrimary = index === 0;
+                        // Bento layout: primary spans 6 cols, others span 3 cols each
+                        const colSpan = isPrimary ? 'lg:col-span-6' : 'lg:col-span-3';
 
                         return (
                             <motion.div
                                 key={tool.title}
                                 variants={staggerItem}
-                                className={cn('md:col-span-1', colSpan)}
+                                className={cn('w-[80vw] shrink-0 snap-center md:w-auto md:col-span-1', colSpan)}
                             >
                                 <InteractiveCard
                                     onClick={() => navigate(tool.href)}
                                     spotlightColor={tool.color.spotlight}
+                                    aria-label={`Open ${tool.title} tool`}
                                     className={cn(
                                         'h-full bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl cursor-pointer group transition-all duration-300',
                                         tool.color.accent
@@ -110,7 +111,7 @@ const ProductShowcase: React.FC = () => {
                                 >
                                     <div className={cn(
                                         'relative z-10 flex flex-col h-full overflow-hidden',
-                                        isFeatured ? 'p-8 md:p-10' : 'p-6'
+                                        isPrimary ? 'p-8 md:p-10 lg:flex-row lg:items-center lg:gap-10' : 'p-6 md:p-8'
                                     )}>
                                         {/* Gradient Background Accent */}
                                         <div className={cn(
@@ -122,11 +123,11 @@ const ProductShowcase: React.FC = () => {
                                         <div className={cn(
                                             'relative rounded-2xl flex items-center justify-center shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg',
                                             tool.color.bg,
-                                            isFeatured ? 'w-14 h-14 mb-6' : 'w-12 h-12 mb-4'
+                                            isPrimary ? 'w-16 h-16 mb-6 lg:mb-0 lg:w-20 lg:h-20' : 'w-12 h-12 mb-5'
                                         )}>
                                             <Icon className={cn(
                                                 tool.color.text,
-                                                isFeatured ? 'w-7 h-7' : 'w-6 h-6'
+                                                isPrimary ? 'w-8 h-8 lg:w-10 lg:h-10' : 'w-6 h-6'
                                             )} strokeWidth={1.5} />
                                         </div>
 
@@ -134,13 +135,13 @@ const ProductShowcase: React.FC = () => {
                                         <div className="relative flex-grow min-w-0">
                                             <h3 className={cn(
                                                 'font-display font-bold text-slate-900 dark:text-white mb-2 group-hover:text-teal-700 dark:group-hover:text-teal-400 transition-colors',
-                                                isFeatured ? 'text-xl' : 'text-lg'
+                                                isPrimary ? 'text-2xl lg:text-3xl' : 'text-xl'
                                             )}>
                                                 {tool.title}
                                             </h3>
                                             <p className={cn(
                                                 'text-slate-500 dark:text-slate-400 leading-relaxed',
-                                                isFeatured ? 'text-base' : 'text-sm'
+                                                isPrimary ? 'text-lg max-w-2xl' : 'text-sm'
                                             )}>
                                                 {tool.description}
                                             </p>
@@ -178,6 +179,7 @@ const ProductShowcase: React.FC = () => {
                 >
                     <button
                         onClick={() => navigate('/tools')}
+                        aria-label="View all Psychage tools and assessments"
                         className="inline-flex items-center gap-2 text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors group"
                     >
                         View all tools

@@ -244,10 +244,6 @@ const OverviewTab: React.FC<OverviewTabProps> = ({
               </li>
             ))}
           </ul>
-          <p className="text-xs text-amber-600 dark:text-amber-400 mt-3">
-            These are not diagnoses. Consider discussing with a healthcare
-            provider.
-          </p>
         </div>
       )}
 
@@ -258,20 +254,6 @@ const OverviewTab: React.FC<OverviewTabProps> = ({
         flags={results.flags}
       />
 
-      {/* ─── Disclaimer ─── */}
-      <p className="text-center text-xs text-gray-400 dark:text-gray-500 px-4 leading-relaxed">
-        The Clarity Score is an educational wellness snapshot, not a clinical
-        assessment. It is built on validated research instruments (PHQ-4, WHO-5,
-        UCLA 3-Item Loneliness Scale, PSS-4) and reviewed by Dr. Lena Dobson,
-        Ph.D. in Clinical Neuropsychology. If you are in crisis, please{' '}
-        <Link
-          to="/crisis"
-          className="underline text-red-500 hover:text-red-600"
-        >
-          contact a crisis helpline
-        </Link>{' '}
-        or emergency services immediately.
-      </p>
     </motion.div>
   );
 };

@@ -18,6 +18,14 @@ export const ProviderFilterChips: React.FC<ProviderFilterChipsProps> = ({
 
   const chips: { label: string; onRemove: () => void }[] = [];
 
+  // Verification status
+  if (params.verification_status && params.verification_status !== 'all') {
+    chips.push({
+      label: params.verification_status === 'verified' ? 'Psychage Verified only' : 'Publicly Listed only',
+      onRemove: () => onChange({ verification_status: undefined }),
+    });
+  }
+
   // Query
   if (params.query) {
     chips.push({

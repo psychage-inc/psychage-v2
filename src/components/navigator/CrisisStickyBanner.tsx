@@ -1,9 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Phone, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { resolveCountry, getResourcesForCountry } from '@/lib/crisis';
 
 export const CrisisStickyBanner: React.FC = () => {
     const [isDismissed, setIsDismissed] = useState(false);
+
+    const crisisInfo = useMemo(() => {
+        try {
+            const countryCode = resolveCountry();
+            const result = getResourcesForCountry(countryCode);
+            return {
+                countryName: result.country.country_name,
+                phone: result.primary_resource?.phone || result.emergency_number,
+            };
+        } catch {
+            return { countryName: 'US', phone: '988' };
+        }
+    }, []);
+
+    const telHref = `tel:${crisisInfo.phone.replace(/\s/g, '')}`;
 
     return (
         <AnimatePresence>
@@ -24,10 +40,10 @@ export const CrisisStickyBanner: React.FC = () => {
                             <Phone className="w-5 h-5 text-crisis-red flex-shrink-0 drop-shadow-[0_0_5px_rgba(239,68,68,0.8)]" />
                             <div className="flex-1 min-w-0">
                                 <div className="text-sm font-semibold text-white truncate">
-                                    Crisis? Call 988
+                                    Crisis? Call {crisisInfo.phone}
                                 </div>
                                 <a
-                                    href="tel:988"
+                                    href={telHref}
                                     className="text-xs text-crisis-red hover:text-red-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-crisis-red focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded"
                                 >
                                     Tap to call now
@@ -50,13 +66,13 @@ export const CrisisStickyBanner: React.FC = () => {
                             <div className="flex items-center gap-2">
                                 <Phone className="w-4 h-4 text-crisis-red drop-shadow-[0_0_5px_rgba(239,68,68,0.8)]" />
                                 <span className="text-sm font-medium text-white tracking-wide">
-                                    In crisis? Call or text 988 (US)
+                                    In crisis? Call or text {crisisInfo.phone} ({crisisInfo.countryName})
                                 </span>
                             </div>
 
                             <div className="flex items-center gap-4">
                                 <a
-                                    href="tel:988"
+                                    href={telHref}
                                     className="text-sm font-semibold text-crisis-red hover:text-red-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-crisis-red focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded px-2 py-1"
                                 >
                                     Call Now

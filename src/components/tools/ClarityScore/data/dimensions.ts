@@ -118,8 +118,16 @@ export function getDimensionTier(score: number): ScoreTier {
   return 'crisis';
 }
 
+const TIER_DISPLAY: Record<ScoreTier, string> = {
+  thriving: 'Thriving',
+  balanced: 'Balanced',
+  struggling: 'Concerning',
+  distressed: 'Distressed',
+  crisis: 'Crisis',
+};
+
 /** Human-readable label for a dimension tier */
 export function getDimensionTierLabel(score: number): string {
   const tier = getDimensionTier(score);
-  return tier.charAt(0).toUpperCase() + tier.slice(1);
+  return TIER_DISPLAY[tier];
 }

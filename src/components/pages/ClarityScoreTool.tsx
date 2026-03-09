@@ -4,6 +4,7 @@ import {
   BarChart2,
   Phone,
   ChevronRight,
+  ChevronLeft,
   ShieldAlert,
   ExternalLink,
   MessageCircle,
@@ -24,12 +25,17 @@ import type {
   ClarityScoreResult,
   ClarityHistoryItem,
   Recommendation,
+  DomainKey,
 } from '../../lib/clarity';
 import ClarityResultsDashboard from '../tools/ClarityScore/results/ClarityResultsDashboard';
+import { DIMENSION_META } from '../tools/ClarityScore/data/dimensions';
 import AuthGate from '../auth/AuthGate';
 import { useAuth } from '@/context/AuthContext';
 import { useToast } from '@/context/ToastContext';
 import { clarityScoreService } from '@/services/clarityScoreService';
+
+/** Map domain index → DomainKey for icon lookup */
+const DOMAIN_INDEX_TO_KEY: DomainKey[] = ['emotional', 'vitality', 'social', 'cognitive', 'functioning'];
 
 const STORAGE_KEY = 'psychage_clarity_progress';
 const HISTORY_KEY = 'psychage_clarity_history';
@@ -96,6 +102,7 @@ const ClarityScoreTool: React.FC = () => {
   });
 
   const crisisContinueRef = useRef<HTMLButtonElement>(null);
+  const directionRef = useRef<'forward' | 'backward'>('forward');
 
   // --- Load history from Supabase when authenticated ---
   useEffect(() => {
@@ -152,35 +159,45 @@ const ClarityScoreTool: React.FC = () => {
   const currentQuestion = QUESTIONS[currentIndex];
   const currentDomain = currentQuestion ? DOMAINS[currentQuestion.domainId] : DOMAINS[0];
 
-  // --- Answer handler ---
+  // --- Answer handler (select only, no auto-advance) ---
   const handleAnswer = useCallback(
     (value: number) => {
-      const newAnswers = { ...answers, [currentQuestion.id]: value };
-      setAnswers(newAnswers);
-
-      setTimeout(() => {
-        // Crisis detection: after completing all 4 PHQ-4 items (index 3)
-        if (currentIndex === 3 && !hasCrisisTriggered) {
-          if (checkCrisisPattern(newAnswers)) {
-            setShowCrisisModal(true);
-            setHasCrisisTriggered(true);
-            return;
-          }
-        }
-
-        if (currentIndex < QUESTIONS.length - 1) {
-          setCurrentIndex((prev) => prev + 1);
-        } else {
-          computeResults(newAnswers);
-        }
-      }, 250);
+      setAnswers((prev) => ({ ...prev, [currentQuestion.id]: value }));
     },
-    [currentIndex, answers, hasCrisisTriggered, currentQuestion]
+    [currentQuestion]
   );
+
+  // --- Next handler ---
+  const handleNext = useCallback(() => {
+    // Crisis detection: after completing all 4 PHQ-4 items (navigating past index 3)
+    if (currentIndex === 3 && !hasCrisisTriggered) {
+      if (checkCrisisPattern(answers)) {
+        setShowCrisisModal(true);
+        setHasCrisisTriggered(true);
+        return;
+      }
+    }
+
+    directionRef.current = 'forward';
+    if (currentIndex < QUESTIONS.length - 1) {
+      setCurrentIndex((prev) => prev + 1);
+    } else {
+      computeResults(answers);
+    }
+  }, [currentIndex, answers, hasCrisisTriggered]);
+
+  // --- Previous handler ---
+  const handlePrevious = useCallback(() => {
+    if (currentIndex > 0) {
+      directionRef.current = 'backward';
+      setCurrentIndex((prev) => prev - 1);
+    }
+  }, [currentIndex]);
 
   // --- Crisis modal continue ---
   const handleCrisisContinue = useCallback(() => {
     setShowCrisisModal(false);
+    directionRef.current = 'forward';
     if (currentIndex < QUESTIONS.length - 1) {
       setCurrentIndex((prev) => prev + 1);
     } else {
@@ -357,13 +374,9 @@ const ClarityScoreTool: React.FC = () => {
               <h1 className="font-display font-bold text-4xl md:text-5xl text-gray-900 dark:text-white mb-6">
                 Clarity Score
               </h1>
-              <p className="text-xl text-gray-500 dark:text-gray-400 mb-4 leading-relaxed">
+              <p className="text-xl text-gray-500 dark:text-gray-400 mb-12 leading-relaxed">
                 A structured wellness check-in built on validated psychological
                 instruments. 20 questions, five dimensions, under 3 minutes.
-              </p>
-              <p className="text-sm text-gray-400 dark:text-gray-500 mb-12">
-                This is a wellness snapshot, not a diagnosis or clinical
-                assessment.
               </p>
 
               {history.length > 0 && (
@@ -407,76 +420,124 @@ const ClarityScoreTool: React.FC = () => {
           )}
 
           {/* ========== QUESTIONS ========== */}
-          {step === 'questions' && currentQuestion && (
-            <motion.div
-              key={`question-${currentIndex}`}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              className="bg-white dark:bg-gray-900 rounded-3xl p-8 md:p-12 shadow-xl shadow-gray-200/50 dark:shadow-none border border-gray-100 dark:border-gray-800"
-            >
-              {/* Progress header */}
-              <div className="mb-6 flex justify-between items-center text-sm font-medium text-gray-400">
-                <span>
-                  Question {currentIndex + 1} of {QUESTIONS.length}
-                </span>
-                <span>
-                  {Math.round((currentIndex / QUESTIONS.length) * 100)}%
-                  Complete
-                </span>
-              </div>
+          {step === 'questions' && currentQuestion && (() => {
+            const domainKey = DOMAIN_INDEX_TO_KEY[currentQuestion.domainId];
+            const DomainIcon = DIMENSION_META[domainKey].icon;
+            const isAnswered = answers[currentQuestion.id] !== undefined;
+            const isLastQuestion = currentIndex === QUESTIONS.length - 1;
 
-              {/* Progress bar */}
-              <div className="w-full h-2 bg-gray-100 dark:bg-gray-800 rounded-full mb-8 overflow-hidden">
-                <motion.div
-                  className={`h-full ${getDomainBarColor(currentQuestion.domainId)}`}
-                  initial={{ width: 0 }}
-                  animate={{
-                    width: `${(currentIndex / QUESTIONS.length) * 100}%`,
-                  }}
-                  transition={{ duration: 0.5 }}
-                />
-              </div>
+            return (
+              <motion.div
+                key={`question-${currentIndex}`}
+                initial={{ opacity: 0, x: directionRef.current === 'forward' ? 50 : -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: directionRef.current === 'forward' ? -50 : 50 }}
+                className="bg-white dark:bg-gray-900 rounded-3xl p-8 md:p-12 shadow-xl shadow-gray-200/50 dark:shadow-none border border-gray-100 dark:border-gray-800"
+              >
+                {/* Progress header */}
+                <div className="mb-6 flex justify-between items-center text-sm font-medium text-gray-400">
+                  <span>
+                    Question {currentIndex + 1} of {QUESTIONS.length}
+                  </span>
+                  <span>
+                    {Math.round((currentIndex / QUESTIONS.length) * 100)}%
+                    Complete
+                  </span>
+                </div>
 
-              {/* Domain indicator */}
-              <div className="flex items-center gap-2 mb-2">
-                <span
-                  className={`inline-block w-2.5 h-2.5 rounded-full ${getDomainBarColor(currentQuestion.domainId)}`}
-                />
-                <span
-                  className={`text-sm font-semibold ${currentDomain.color}`}
-                >
-                  {currentDomain.name}
-                </span>
-                <span className="text-xs text-gray-400">
-                  ({currentDomain.description})
-                </span>
-              </div>
+                {/* Progress bar */}
+                <div className="w-full h-2 bg-gray-100 dark:bg-gray-800 rounded-full mb-8 overflow-hidden">
+                  <motion.div
+                    className={`h-full ${getDomainBarColor(currentQuestion.domainId)}`}
+                    initial={{ width: 0 }}
+                    animate={{
+                      width: `${(currentIndex / QUESTIONS.length) * 100}%`,
+                    }}
+                    transition={{ duration: 0.5 }}
+                  />
+                </div>
 
-              {/* Citation / context */}
-              <p className="text-sm text-gray-400 dark:text-gray-500 mb-8 italic">
-                {currentDomain.citation}
-              </p>
-
-              {/* Question text */}
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-10 leading-tight">
-                {currentQuestion.text}
-              </h2>
-
-              {/* Options */}
-              <div className="space-y-3">
-                {currentQuestion.options.map((option, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => handleAnswer(option.value)}
-                    className="w-full text-left p-5 rounded-2xl border-2 border-gray-100 dark:border-gray-800 hover:border-teal-500 dark:hover:border-teal-500 hover:bg-teal-50 dark:hover:bg-teal-900/20 transition-all font-medium text-lg text-gray-700 dark:text-gray-200"
+                {/* Domain banner */}
+                <div className="flex items-center gap-3 mb-4 px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700">
+                  <span
+                    className={`inline-flex items-center justify-center w-10 h-10 rounded-xl ${getDomainBarColor(currentQuestion.domainId)} text-white shrink-0`}
                   >
-                    {option.label}
+                    <DomainIcon size={20} />
+                  </span>
+                  <div>
+                    <span className={`text-lg font-bold ${currentDomain.color}`}>
+                      {currentDomain.name}
+                    </span>
+                    <span className="block text-xs text-gray-400 dark:text-gray-500">
+                      {currentDomain.description}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Timeframe context */}
+                <div className="bg-gray-50 dark:bg-gray-800/50 rounded-xl px-5 py-3 mb-8 border border-gray-200 dark:border-gray-700">
+                  <p className="text-base md:text-lg font-medium text-gray-700 dark:text-gray-300">
+                    {currentDomain.citation}
+                  </p>
+                </div>
+
+                {/* Question text */}
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-10 leading-tight">
+                  {currentQuestion.text}
+                </h2>
+
+                {/* Options */}
+                <div className="space-y-3">
+                  {currentQuestion.options.map((option, idx) => {
+                    const isSelected = answers[currentQuestion.id] === option.value;
+                    return (
+                      <button
+                        key={idx}
+                        onClick={() => handleAnswer(option.value)}
+                        className={`w-full text-left p-5 rounded-2xl border-2 transition-all font-medium text-lg ${
+                          isSelected
+                            ? 'border-teal-500 bg-teal-50 dark:bg-teal-900/20 text-teal-700 dark:text-teal-300'
+                            : 'border-gray-100 dark:border-gray-800 hover:border-teal-500 dark:hover:border-teal-500 hover:bg-teal-50 dark:hover:bg-teal-900/20 text-gray-700 dark:text-gray-200'
+                        }`}
+                      >
+                        {option.label}
+                      </button>
+                    );
+                  })}
+                </div>
+
+                {/* Previous / Next navigation */}
+                <div className="flex items-center justify-between mt-10 pt-6 border-t border-gray-100 dark:border-gray-800">
+                  {currentIndex > 0 ? (
+                    <button
+                      type="button"
+                      onClick={handlePrevious}
+                      className="flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                    >
+                      <ChevronLeft size={18} />
+                      Previous
+                    </button>
+                  ) : (
+                    <div />
+                  )}
+
+                  <button
+                    type="button"
+                    onClick={handleNext}
+                    disabled={!isAnswered}
+                    className={`flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all ${
+                      isAnswered
+                        ? 'bg-teal-600 hover:bg-teal-700 text-white shadow-sm shadow-teal-600/20'
+                        : 'bg-gray-100 dark:bg-gray-800 text-gray-400 dark:text-gray-500 cursor-not-allowed'
+                    }`}
+                  >
+                    {isLastQuestion ? 'Finish' : 'Next'}
+                    <ChevronRight size={18} />
                   </button>
-                ))}
-              </div>
-            </motion.div>
-          )}
+                </div>
+              </motion.div>
+            );
+          })()}
 
           {/* ========== CALCULATING ========== */}
           {step === 'calculating' && (

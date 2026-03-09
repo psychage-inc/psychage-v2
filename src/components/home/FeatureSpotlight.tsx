@@ -16,9 +16,9 @@ const FeatureSpotlight: React.FC = () => {
     return (
         <section className="py-28 px-6 relative overflow-hidden">
             {/* Immersive teal background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-teal-950 via-teal-900 to-slate-900" />
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(20,184,166,0.15),_transparent_50%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(13,148,136,0.1),_transparent_50%)]" />
+            <div className="absolute inset-0 bg-gradient-to-br from-teal-950 via-teal-900 to-teal-800" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(20,184,166,0.2),_transparent_50%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(13,148,136,0.15),_transparent_50%)]" />
 
             <div className="container mx-auto max-w-6xl relative z-10">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">

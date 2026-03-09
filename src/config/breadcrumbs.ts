@@ -80,6 +80,16 @@ export const breadcrumbConfig: Record<string, BreadcrumbItem[]> = {
         { label: 'Clarity Journal', href: '/tools/clarity-journal' },
         { label: 'Insights' }
     ],
+    '/tools/clarity-journal/entry': [
+        { label: 'Tools', href: '/tools' },
+        { label: 'Clarity Journal', href: '/tools/clarity-journal' },
+        { label: 'Daily Entry' }
+    ],
+    '/tools/clarity-journal/report': [
+        { label: 'Tools', href: '/tools' },
+        { label: 'Clarity Journal', href: '/tools/clarity-journal' },
+        { label: 'Therapist Report' }
+    ],
     '/tools/thought-reframer': [
         { label: 'Tools', href: '/tools' },
         { label: 'Thought Reframer' }

@@ -191,6 +191,7 @@ const Footer: React.FC = () => {
               <button className="hover:text-gray-900 transition-colors">Sitemap</button>
               <button className="hover:text-gray-900 transition-colors">Choices</button>
             </div>
+            <p className="max-w-xs md:max-w-md md:text-right text-gray-400">Psychage is an educational tool and does not provide medical advice, diagnosis, or treatment.</p>
             <p>© {currentYear} Psychage Health, Inc.</p>
           </div>
         </div>

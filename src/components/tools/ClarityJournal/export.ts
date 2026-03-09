@@ -19,11 +19,11 @@ export function exportJournalData(): void {
   URL.revokeObjectURL(url);
 }
 
-/** Validate imported data matches expected schema */
+/** Validate imported data matches expected schema (V1 or V2) */
 function isValidJournalData(data: unknown): data is ClarityJournalData {
   if (!data || typeof data !== 'object') return false;
   const d = data as Record<string, unknown>;
-  if (d.version !== 1) return false;
+  if (d.version !== 1 && d.version !== 2) return false;
   if (!Array.isArray(d.dailyCheckIns)) return false;
   if (!Array.isArray(d.weeklyScreenings)) return false;
   if (!Array.isArray(d.behavioralActivation)) return false;
@@ -55,7 +55,7 @@ export function importJournalData(jsonString: string): ClarityJournalData | null
     const mergedReflections = mergeByField(existing.weeklyReflections, imported.weeklyReflections, 'weekStartDate');
 
     const merged: ClarityJournalData = {
-      version: 1,
+      version: 2,
       dailyCheckIns: mergedCheckIns,
       weeklyScreenings: mergedScreenings,
       behavioralActivation: mergedActivation,
@@ -64,7 +64,14 @@ export function importJournalData(jsonString: string): ClarityJournalData | null
       safetyPlan: imported.safetyPlan.length > 0 ? imported.safetyPlan : existing.safetyPlan,
       weeklyReflections: mergedReflections,
       preferences: { ...existing.preferences, ...imported.preferences },
-    };
+      dailyJournals: mergeByField(
+        existing.dailyJournals || [],
+        (imported as any).dailyJournals || [],
+        'date',
+      ),
+      safetyFlags: [...(existing.safetyFlags || []), ...((imported as any).safetyFlags || [])],
+      settings: { ...(existing.settings || {}), ...((imported as any).settings || {}) },
+    } as ClarityJournalData;
 
     saveJournal(merged);
     return merged;

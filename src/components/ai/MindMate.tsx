@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Send, Sparkles, Bot, AlertTriangle, Phone, Trash2, MapPin } from 'lucide-react';
-import { useLocation } from 'react-router-dom';
+import { X, Send, Sparkles, AlertTriangle, Phone, Trash2 } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
 import { chatPersistenceService } from '@/services/chatPersistenceService';
 import { consentService } from '@/services/consentService';
@@ -36,7 +35,6 @@ const INIT_MESSAGE: Message = {
 const MindMate: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [inputText, setInputText] = useState('');
-    const location = useLocation();
     const { user, isAuthenticated } = useAuth();
 
     // Supabase conversation tracking
@@ -126,21 +124,8 @@ const MindMate: React.FC = () => {
         }
     };
 
-    const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
-
     const handleSend = async () => {
         if (!inputText.trim()) return;
-
-        // Check for API Key
-        if (!apiKey) {
-            setMessages(prev => [...prev, {
-                id: Date.now().toString(),
-                sender: 'ai',
-                text: "I'm currently offline (API Key missing). Please check configuration.",
-                type: 'text'
-            }]);
-            return;
-        }
 
         const userMsg: Message = { id: Date.now().toString(), sender: 'user', text: inputText };
         setMessages(prev => [...prev, userMsg]);
@@ -151,50 +136,38 @@ const MindMate: React.FC = () => {
         persistMessage('user', inputText);
 
         try {
-            const { GoogleGenAI } = await import('@google/genai');
-            const genAI = new GoogleGenAI({ apiKey });
-
-            // Context-aware System Instruction
-            const systemContext = `You are Psychage AI, a compassionate and professional mental health education assistant on the Psychage platform.
-            The user is currently visiting: ${location.pathname}.
-            If the user mentions self-harm or suicide, IMMEDIATELY provide the 988 crisis helpline and encourage them to seek professional help.
-            Keep your responses concise, empathetic, and supportive. Use Markdown for formatting.`;
-
-            // Prepare history
-            const history = messages
+            // Build message history for the server-side API
+            const chatHistory = messages
                 .filter(m => m.id !== 'init')
                 .map(m => ({
-                    role: m.sender === 'user' ? 'user' : 'model',
-                    parts: [{ text: m.text }]
+                    role: m.sender === 'user' ? 'user' as const : 'assistant' as const,
+                    content: m.text,
                 }));
+            chatHistory.push({ role: 'user', content: inputText });
 
-            const chat = genAI.chats.create({
-                model: "gemini-1.5-flash",
-                history: history,
-                config: { maxOutputTokens: 500 },
+            const res = await fetch('/api/ai/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    messages: chatHistory,
+                    sessionId: getOrCreateSessionId(),
+                }),
             });
 
-            // Send message with context (prepending context to the user message invisibly or just as part of the prompt)
-            // Since we can't easily set systemInstruction in all SDK versions, we'll prepend it to the prompt if history is empty, 
-            // or just rely on the model's persona. 
-            // Better: Prepend context to the *current* message logic.
+            if (!res.ok) {
+                const errorData = await res.json().catch(() => ({}));
+                throw new Error(errorData.error || `Chat API error: ${res.status}`);
+            }
 
-            const prompt = `[System Context: ${systemContext}] \n\n User Query: ${userMsg.text}`;
-
-            const result = await chat.sendMessage({ message: prompt });
-            const responseText = result.text;
+            const data = await res.json();
+            const responseText: string = data.message || '';
 
             const aiMsg: Message = {
                 id: (Date.now() + 1).toString(),
                 sender: 'ai',
                 text: responseText || "I'm here for you, but I didn't catch that.",
-                type: 'text'
+                type: data.isCrisis || data.safetyLevel === 'CRISIS' ? 'crisis' : 'text',
             };
-
-            // Check for crisis keywords in response (simple heuristic)
-            if (responseText?.toLowerCase().includes("988") || responseText?.toLowerCase().includes("suicide")) {
-                aiMsg.type = 'crisis';
-            }
 
             setMessages(prev => [...prev, aiMsg]);
 
@@ -205,7 +178,7 @@ const MindMate: React.FC = () => {
             setMessages(prev => [...prev, {
                 id: Date.now().toString(),
                 sender: 'ai',
-                text: "I'm having trouble connecting. Please check your internet connection.",
+                text: "I'm having trouble connecting. Please try again in a moment.",
                 type: 'text'
             }]);
         } finally {

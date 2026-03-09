@@ -602,6 +602,141 @@ const conditions: ConditionWithMappings[] = [
         ],
         red_flags: [],
     },
+    // 32. CYC — Cyclothymic Disorder
+    {
+        id: 'CYC', name: 'Cyclothymic Mood Pattern', full_name: 'Cyclothymic Disorder', category: 'mood',
+        description_for_user: 'A pattern of chronic mood fluctuations between periods of mild depression and mild elevation. While less intense than bipolar disorder, these ongoing shifts can affect daily life and relationships.',
+        minimum_duration: '2_years', minimum_duration_display: 'At least 2 years', minimum_symptoms_for_relevance: 3,
+        always_recommend_professional: false, guide_path: '/learn/conditions/cyclothymia', coping_path: '/learn/coping/mood-stability',
+        provider_questions: ['Could my mood ups and downs be cyclothymia?', 'How is cyclothymic disorder different from bipolar disorder?', 'What treatments help stabilize mood fluctuations?'],
+        clinical_notes: 'Based on DSM-5-TR criteria for Cyclothymic Disorder (301.13). ICD-11 6A62.', is_active: true, version: '1.0.0',
+        symptom_mappings: [
+            { symptom_id: 'MOD_008', weight: 3, role: 'core' }, { symptom_id: 'MOD_006', weight: 3, role: 'core' }, { symptom_id: 'ENR_002', weight: 3, role: 'core' },
+            { symptom_id: 'MOD_001', weight: 2, role: 'common' }, { symptom_id: 'SLP_001', weight: 2, role: 'common' }, { symptom_id: 'SLP_003', weight: 2, role: 'common' }, { symptom_id: 'COG_003', weight: 2, role: 'common' }, { symptom_id: 'ENR_001', weight: 2, role: 'common' },
+            { symptom_id: 'MOD_007', weight: 1, role: 'associated' }, { symptom_id: 'ACT_002', weight: 1, role: 'associated' }, { symptom_id: 'ACT_005', weight: 1, role: 'associated' }, { symptom_id: 'SOC_002', weight: 1, role: 'associated' },
+        ],
+        red_flags: [],
+    },
+    // 33. PPD_M — Peripartum/Postpartum Depression
+    {
+        id: 'PPD_M', name: 'Postpartum Depression', full_name: 'Major Depressive Disorder with Peripartum Onset', category: 'mood',
+        description_for_user: 'A pattern of significant mood changes during pregnancy or after childbirth that goes beyond typical adjustment. Many parents experience this, and effective support is available.',
+        minimum_duration: '2_weeks', minimum_duration_display: 'At least 2 weeks', minimum_symptoms_for_relevance: 4,
+        always_recommend_professional: true, guide_path: '/learn/conditions/postpartum-depression', coping_path: '/learn/coping/postpartum-strategies',
+        provider_questions: ['Could what I am feeling be postpartum depression?', 'What treatments are safe during breastfeeding?', 'How can I get support for peripartum mood changes?'],
+        clinical_notes: 'Based on DSM-5-TR Major Depressive Disorder with Peripartum Onset specifier. ICD-11 6E20.', is_active: true, version: '1.0.0',
+        symptom_mappings: [
+            { symptom_id: 'MOD_001', weight: 3, role: 'core' }, { symptom_id: 'MOD_002', weight: 3, role: 'core' }, { symptom_id: 'ANX_001', weight: 3, role: 'core' },
+            { symptom_id: 'SLP_001', weight: 2, role: 'common' }, { symptom_id: 'ENR_001', weight: 2, role: 'common' }, { symptom_id: 'EMR_003', weight: 2, role: 'common' }, { symptom_id: 'MOD_004', weight: 2, role: 'common' }, { symptom_id: 'ANX_007', weight: 2, role: 'common' }, { symptom_id: 'COG_005', weight: 2, role: 'common' },
+            { symptom_id: 'MOD_005', weight: 1, role: 'associated' }, { symptom_id: 'SOC_001', weight: 1, role: 'associated' }, { symptom_id: 'MOD_007', weight: 1, role: 'associated' }, { symptom_id: 'COG_001', weight: 1, role: 'associated' }, { symptom_id: 'APT_001', weight: 1, role: 'associated' },
+        ],
+        red_flags: [{ symptom_id: 'COG_008', note: 'Self-harm ideation in peripartum period requires immediate safety assessment' }, { symptom_id: 'COG_009', note: 'Suicidal ideation in peripartum period requires immediate crisis intervention' }],
+    },
+    // 34. CPTSD — Complex Post-Traumatic Stress Disorder
+    {
+        id: 'CPTSD', name: 'Complex Trauma Response', full_name: 'Complex Post-Traumatic Stress Disorder', category: 'trauma',
+        description_for_user: 'A pattern that can develop after prolonged or repeated traumatic experiences, especially in childhood. Beyond typical trauma responses, it often includes difficulties with emotional regulation, self-perception, and relationships.',
+        minimum_duration: '1_month', minimum_duration_display: 'Following prolonged trauma', minimum_symptoms_for_relevance: 5,
+        always_recommend_professional: true, guide_path: '/learn/conditions/complex-ptsd', coping_path: '/learn/coping/trauma-strategies',
+        provider_questions: ['Could my experiences be related to complex trauma?', 'What is the difference between PTSD and Complex PTSD?', 'What are the best evidence-based treatments for complex trauma?'],
+        clinical_notes: 'Based on ICD-11 criteria for Complex PTSD (6B41). Not a separate diagnosis in DSM-5-TR but recognized clinically.', is_active: true, version: '1.0.0',
+        symptom_mappings: [
+            { symptom_id: 'COG_007', weight: 3, role: 'core' }, { symptom_id: 'PRC_001', weight: 3, role: 'core' }, { symptom_id: 'MOD_008', weight: 3, role: 'core' }, { symptom_id: 'IDN_001', weight: 3, role: 'core' },
+            { symptom_id: 'EMR_004', weight: 2, role: 'common' }, { symptom_id: 'EMR_001', weight: 2, role: 'common' }, { symptom_id: 'MOD_009', weight: 2, role: 'common' }, { symptom_id: 'SOC_003', weight: 2, role: 'common' }, { symptom_id: 'SOC_007', weight: 2, role: 'common' }, { symptom_id: 'PRC_002', weight: 2, role: 'common' },
+            { symptom_id: 'MOD_003', weight: 1, role: 'associated' }, { symptom_id: 'SLP_004', weight: 1, role: 'associated' }, { symptom_id: 'CPG_001', weight: 1, role: 'associated' }, { symptom_id: 'CPG_004', weight: 1, role: 'associated' }, { symptom_id: 'SOC_001', weight: 1, role: 'associated' }, { symptom_id: 'ANX_005', weight: 1, role: 'associated' },
+        ],
+        red_flags: [{ symptom_id: 'COG_008', note: 'Self-harm ideation requires immediate safety assessment' }, { symptom_id: 'COG_009', note: 'Suicidal ideation requires immediate crisis intervention' }],
+    },
+    // 35. ASD_ACUTE — Acute Stress Disorder
+    {
+        id: 'ASD_ACUTE', name: 'Acute Stress Response', full_name: 'Acute Stress Disorder', category: 'trauma',
+        description_for_user: 'An intense stress response that can occur within the first month after a traumatic event. Many people experience this initially, and it often resolves with support, though some may benefit from professional guidance.',
+        minimum_duration: '1_week', minimum_duration_display: '3 days to 1 month after trauma', minimum_symptoms_for_relevance: 4,
+        always_recommend_professional: true, guide_path: '/learn/conditions/acute-stress', coping_path: '/learn/coping/trauma-strategies',
+        provider_questions: ['Is what I am experiencing a normal response to trauma?', 'Could this develop into PTSD?', 'What early interventions help after a traumatic event?'],
+        clinical_notes: 'Based on DSM-5-TR criteria for Acute Stress Disorder (308.3). ICD-11 QE84.', is_active: true, version: '1.0.0',
+        symptom_mappings: [
+            { symptom_id: 'COG_007', weight: 3, role: 'core' }, { symptom_id: 'PRC_001', weight: 3, role: 'core' }, { symptom_id: 'PRC_002', weight: 3, role: 'core' },
+            { symptom_id: 'ANX_005', weight: 2, role: 'common' }, { symptom_id: 'MOD_009', weight: 2, role: 'common' }, { symptom_id: 'SLP_004', weight: 2, role: 'common' }, { symptom_id: 'SLP_001', weight: 2, role: 'common' }, { symptom_id: 'COG_001', weight: 2, role: 'common' },
+            { symptom_id: 'ANX_002', weight: 1, role: 'associated' }, { symptom_id: 'EMR_001', weight: 1, role: 'associated' }, { symptom_id: 'ANX_008', weight: 1, role: 'associated' }, { symptom_id: 'MOD_007', weight: 1, role: 'associated' },
+        ],
+        red_flags: [],
+    },
+    // 36. DID — Dissociative Identity Patterns
+    {
+        id: 'DID', name: 'Dissociative Identity Patterns', full_name: 'Dissociative Identity Disorder', category: 'dissociative',
+        description_for_user: 'A pattern involving the experience of two or more distinct identity states, along with gaps in memory for everyday events. This is often associated with early life trauma and is more common than many people realize.',
+        minimum_duration: '1_month', minimum_duration_display: 'Recurrent experiences', minimum_symptoms_for_relevance: 3,
+        always_recommend_professional: true, guide_path: '/learn/conditions/dissociative-identity', coping_path: '/learn/coping/dissociation-strategies',
+        provider_questions: ['Could my experiences of feeling like different people be related to a dissociative condition?', 'What kind of specialist works with dissociative disorders?', 'How is DID assessed and treated?'],
+        clinical_notes: 'Based on DSM-5-TR criteria for Dissociative Identity Disorder (300.14). ICD-11 6B64.', is_active: true, version: '1.0.0',
+        symptom_mappings: [
+            { symptom_id: 'PRC_002', weight: 3, role: 'core' }, { symptom_id: 'COG_004', weight: 3, role: 'core' }, { symptom_id: 'IDN_001', weight: 3, role: 'core' },
+            { symptom_id: 'COG_007', weight: 2, role: 'common' }, { symptom_id: 'MOD_009', weight: 2, role: 'common' }, { symptom_id: 'SLP_004', weight: 2, role: 'common' }, { symptom_id: 'PRC_005', weight: 2, role: 'common' },
+            { symptom_id: 'EMR_005', weight: 1, role: 'associated' }, { symptom_id: 'SOC_002', weight: 1, role: 'associated' }, { symptom_id: 'MOD_008', weight: 1, role: 'associated' }, { symptom_id: 'BDY_001', weight: 1, role: 'associated' },
+        ],
+        red_flags: [{ symptom_id: 'COG_008', note: 'Self-harm ideation requires immediate safety assessment' }],
+    },
+    // 37. IED — Intermittent Explosive Disorder
+    {
+        id: 'IED', name: 'Explosive Anger Patterns', full_name: 'Intermittent Explosive Disorder', category: 'stress',
+        description_for_user: 'A pattern of repeated, sudden episodes of impulsive, aggressive, or violent behavior that is out of proportion to the situation. Many people feel remorseful afterward and may benefit from learning about anger management approaches.',
+        minimum_duration: '3_months', minimum_duration_display: 'At least 3 months', minimum_symptoms_for_relevance: 2,
+        always_recommend_professional: true, guide_path: '/learn/conditions/intermittent-explosive', coping_path: '/learn/coping/anger-management',
+        provider_questions: ['Could my anger outbursts indicate intermittent explosive disorder?', 'What treatments are most effective for impulsive aggression?', 'Are there medications that help with explosive anger?'],
+        clinical_notes: 'Based on DSM-5-TR criteria for Intermittent Explosive Disorder (312.34). ICD-11 6C73.', is_active: true, version: '1.0.0',
+        symptom_mappings: [
+            { symptom_id: 'EMR_002', weight: 3, role: 'core' }, { symptom_id: 'EMR_001', weight: 3, role: 'core' }, { symptom_id: 'ACT_002', weight: 3, role: 'core' },
+            { symptom_id: 'MOD_007', weight: 2, role: 'common' }, { symptom_id: 'SOC_002', weight: 2, role: 'common' }, { symptom_id: 'MOD_004', weight: 2, role: 'common' },
+            { symptom_id: 'ANX_005', weight: 1, role: 'associated' }, { symptom_id: 'ACT_003', weight: 1, role: 'associated' }, { symptom_id: 'SOC_007', weight: 1, role: 'associated' }, { symptom_id: 'BDY_003', weight: 1, role: 'associated' },
+        ],
+        red_flags: [{ symptom_id: 'COG_010', note: 'Thoughts of harming others require immediate safety assessment' }],
+    },
+    // 38. GRIEF — Normal Grief / Bereavement
+    {
+        id: 'GRIEF', name: 'Grief Response', full_name: 'Normal Grief and Bereavement', category: 'stress',
+        description_for_user: 'A natural emotional response to significant loss. Grief affects everyone differently and there is no single right way to grieve. While painful, most people gradually adjust with time and support.',
+        minimum_duration: '2_weeks', minimum_duration_display: 'Following a loss', minimum_symptoms_for_relevance: 2,
+        always_recommend_professional: false, guide_path: '/learn/conditions/grief', coping_path: '/learn/coping/grief-strategies',
+        provider_questions: ['Is what I am experiencing a normal part of grief?', 'When should I seek professional support for grief?', 'What resources can help me through this loss?'],
+        clinical_notes: 'ICD-11 QE62. Normal bereavement is not a mental disorder but can benefit from support.', is_active: true, version: '1.0.0',
+        symptom_mappings: [
+            { symptom_id: 'MOD_001', weight: 3, role: 'core' }, { symptom_id: 'EMR_006', weight: 3, role: 'core' }, { symptom_id: 'EMR_003', weight: 3, role: 'core' },
+            { symptom_id: 'SLP_001', weight: 2, role: 'common' }, { symptom_id: 'APT_001', weight: 2, role: 'common' }, { symptom_id: 'COG_006', weight: 2, role: 'common' }, { symptom_id: 'SOC_001', weight: 2, role: 'common' },
+            { symptom_id: 'MOD_009', weight: 1, role: 'associated' }, { symptom_id: 'ENR_001', weight: 1, role: 'associated' }, { symptom_id: 'COG_001', weight: 1, role: 'associated' }, { symptom_id: 'MOD_007', weight: 1, role: 'associated' },
+        ],
+        red_flags: [{ symptom_id: 'COG_009', note: 'Suicidal thoughts during grief require immediate crisis support' }],
+    },
+    // 39. GAM — Gambling Disorder
+    {
+        id: 'GAM', name: 'Gambling Concerns', full_name: 'Gambling Disorder', category: 'substance',
+        description_for_user: 'A pattern of persistent gambling behavior that leads to significant distress or problems in daily life. Like substance use concerns, this involves difficulty controlling the behavior despite negative consequences.',
+        minimum_duration: '1_year', minimum_duration_display: 'At least 12 months', minimum_symptoms_for_relevance: 4,
+        always_recommend_professional: true, guide_path: '/learn/conditions/gambling-disorder', coping_path: '/learn/coping/behavioral-addiction',
+        provider_questions: ['Could my gambling habits indicate a gambling disorder?', 'What treatments are available for problem gambling?', 'Are there support groups specifically for gambling?'],
+        clinical_notes: 'Based on DSM-5-TR criteria for Gambling Disorder (312.31). ICD-11 6C50.', is_active: true, version: '1.0.0',
+        symptom_mappings: [
+            { symptom_id: 'ACT_002', weight: 3, role: 'core' }, { symptom_id: 'ACT_005', weight: 3, role: 'core' },
+            { symptom_id: 'ANX_001', weight: 2, role: 'common' }, { symptom_id: 'MOD_001', weight: 2, role: 'common' }, { symptom_id: 'MOD_004', weight: 2, role: 'common' }, { symptom_id: 'SOC_002', weight: 2, role: 'common' },
+            { symptom_id: 'ACT_001', weight: 1, role: 'associated' }, { symptom_id: 'SLP_001', weight: 1, role: 'associated' }, { symptom_id: 'MOD_007', weight: 1, role: 'associated' }, { symptom_id: 'CPG_001', weight: 1, role: 'associated' },
+        ],
+        red_flags: [{ symptom_id: 'COG_009', note: 'Suicidal thoughts in context of gambling losses require immediate crisis support' }],
+    },
+    // 40. IGD — Internet/Gaming Disorder
+    {
+        id: 'IGD', name: 'Internet/Gaming Concerns', full_name: 'Internet Gaming Disorder', category: 'substance',
+        description_for_user: 'A pattern of persistent gaming or internet use that takes priority over other activities and continues despite negative consequences. This is increasingly recognized as a concern that can significantly affect daily functioning.',
+        minimum_duration: '1_year', minimum_duration_display: 'At least 12 months', minimum_symptoms_for_relevance: 5,
+        always_recommend_professional: false, guide_path: '/learn/conditions/gaming-disorder', coping_path: '/learn/coping/behavioral-addiction',
+        provider_questions: ['Could my gaming or internet use be problematic?', 'What is the difference between heavy use and a disorder?', 'What strategies help manage excessive screen time?'],
+        clinical_notes: 'ICD-11 6C51. DSM-5-TR Section III (conditions for further study).', is_active: true, version: '1.0.0',
+        symptom_mappings: [
+            { symptom_id: 'CPG_008', weight: 3, role: 'core' }, { symptom_id: 'ACT_001', weight: 3, role: 'core' },
+            { symptom_id: 'SOC_001', weight: 2, role: 'common' }, { symptom_id: 'SLP_001', weight: 2, role: 'common' }, { symptom_id: 'ENR_005', weight: 2, role: 'common' }, { symptom_id: 'MOD_007', weight: 2, role: 'common' },
+            { symptom_id: 'SOC_002', weight: 1, role: 'associated' }, { symptom_id: 'ENR_001', weight: 1, role: 'associated' }, { symptom_id: 'ACT_002', weight: 1, role: 'associated' }, { symptom_id: 'CPG_006', weight: 1, role: 'associated' }, { symptom_id: 'ANX_005', weight: 1, role: 'associated' },
+        ],
+        red_flags: [],
+    },
 ];
 
 // ─── Exported Knowledge Base ─────────────────────────────────────────────────
@@ -632,9 +767,41 @@ export const mockKnowledgeBase: KnowledgeBase = {
         US: [
             { id: 'cr-us-988', region_code: 'US', name: '988 Suicide & Crisis Lifeline', type: 'hotline', phone: '988', text_instruction: 'Text 988', url: 'https://988lifeline.org', email: null, description: 'Free, confidential support 24/7.', hours: '24/7', languages: ['English', 'Spanish'], priority: 1, condition_specific: null, is_active: true, last_verified: '2026-01-01' },
             { id: 'cr-us-ctl', region_code: 'US', name: 'Crisis Text Line', type: 'text', phone: null, text_instruction: 'Text HOME to 741741', url: 'https://www.crisistextline.org', email: null, description: 'Free crisis counseling via text message.', hours: '24/7', languages: ['English', 'Spanish'], priority: 2, condition_specific: null, is_active: true, last_verified: '2026-01-01' },
+            { id: 'cr-us-samhsa', region_code: 'US', name: 'SAMHSA Helpline', type: 'hotline', phone: '1-800-662-4357', text_instruction: null, url: 'https://www.samhsa.gov/find-help/national-helpline', email: null, description: 'Free treatment referrals and information 24/7.', hours: '24/7', languages: ['English', 'Spanish'], priority: 3, condition_specific: null, is_active: true, last_verified: '2026-01-01' },
+        ],
+        UK: [
+            { id: 'cr-uk-sam', region_code: 'UK', name: 'Samaritans', type: 'hotline', phone: '116 123', text_instruction: null, url: 'https://www.samaritans.org', email: 'jo@samaritans.org', description: 'Free emotional support for anyone in distress.', hours: '24/7', languages: ['English'], priority: 1, condition_specific: null, is_active: true, last_verified: '2026-01-01' },
+            { id: 'cr-uk-shout', region_code: 'UK', name: 'Shout', type: 'text', phone: null, text_instruction: 'Text SHOUT to 85258', url: 'https://giveusashout.org', email: null, description: 'Free, confidential crisis text support.', hours: '24/7', languages: ['English'], priority: 2, condition_specific: null, is_active: true, last_verified: '2026-01-01' },
+        ],
+        CA: [
+            { id: 'cr-ca-988', region_code: 'CA', name: 'Talk Suicide Canada', type: 'hotline', phone: '988', text_instruction: 'Text 988', url: 'https://talksuicide.ca', email: null, description: 'Canada-wide crisis support service.', hours: '24/7', languages: ['English', 'French'], priority: 1, condition_specific: null, is_active: true, last_verified: '2026-01-01' },
+        ],
+        AU: [
+            { id: 'cr-au-lifeline', region_code: 'AU', name: 'Lifeline Australia', type: 'hotline', phone: '13 11 14', text_instruction: 'Text 0477 13 11 14', url: 'https://www.lifeline.org.au', email: null, description: 'Crisis support and suicide prevention.', hours: '24/7', languages: ['English'], priority: 1, condition_specific: null, is_active: true, last_verified: '2026-01-01' },
+            { id: 'cr-au-bb', region_code: 'AU', name: 'Beyond Blue', type: 'hotline', phone: '1300 22 4636', text_instruction: null, url: 'https://www.beyondblue.org.au', email: null, description: 'Support for anxiety, depression, and suicide prevention.', hours: '24/7', languages: ['English'], priority: 2, condition_specific: null, is_active: true, last_verified: '2026-01-01' },
+        ],
+        IN: [
+            { id: 'cr-in-icall', region_code: 'IN', name: 'iCall', type: 'hotline', phone: '9152987821', text_instruction: null, url: 'https://icallhelpline.org', email: null, description: 'Psychosocial helpline by TISS Mumbai.', hours: 'Mon-Sat 8am-10pm IST', languages: ['English', 'Hindi', 'Marathi'], priority: 1, condition_specific: null, is_active: true, last_verified: '2026-01-01' },
+            { id: 'cr-in-vf', region_code: 'IN', name: 'Vandrevala Foundation', type: 'hotline', phone: '1860-2662-345', text_instruction: null, url: 'https://www.vandrevalafoundation.com', email: null, description: 'Mental health helpline.', hours: '24/7', languages: ['English', 'Hindi'], priority: 2, condition_specific: null, is_active: true, last_verified: '2026-01-01' },
+        ],
+        BD: [
+            { id: 'cr-bd-kpr', region_code: 'BD', name: 'Kaan Pete Roi', type: 'hotline', phone: '01779-554391', text_instruction: null, url: 'https://www.kaanpeteroi.com', email: null, description: 'Emotional support helpline for Bangla speakers.', hours: '6pm-10pm BST', languages: ['Bengali', 'English'], priority: 1, condition_specific: null, is_active: true, last_verified: '2026-01-01' },
+        ],
+        DE: [
+            { id: 'cr-de-ts', region_code: 'DE', name: 'Telefonseelsorge', type: 'hotline', phone: '0800 111 0 111', text_instruction: null, url: 'https://www.telefonseelsorge.de', email: null, description: 'Kostenlose Krisenberatung rund um die Uhr.', hours: '24/7', languages: ['German'], priority: 1, condition_specific: null, is_active: true, last_verified: '2026-01-01' },
+        ],
+        FR: [
+            { id: 'cr-fr-sos', region_code: 'FR', name: 'SOS Amitié', type: 'hotline', phone: '09 72 39 40 50', text_instruction: null, url: 'https://www.sos-amitie.com', email: null, description: "Écoute et soutien émotionnel gratuit.", hours: '24/7', languages: ['French'], priority: 1, condition_specific: null, is_active: true, last_verified: '2026-01-01' },
+        ],
+        BR: [
+            { id: 'cr-br-cvv', region_code: 'BR', name: 'CVV — Centro de Valorização da Vida', type: 'hotline', phone: '188', text_instruction: null, url: 'https://www.cvv.org.br', email: null, description: 'Apoio emocional e prevenção do suicídio.', hours: '24/7', languages: ['Portuguese'], priority: 1, condition_specific: null, is_active: true, last_verified: '2026-01-01' },
+        ],
+        ES: [
+            { id: 'cr-es-te', region_code: 'ES', name: 'Teléfono de la Esperanza', type: 'hotline', phone: '717 003 717', text_instruction: null, url: 'https://www.telefonodelaesperanza.org', email: null, description: 'Línea de atención a la conducta suicida.', hours: '24/7', languages: ['Spanish'], priority: 1, condition_specific: null, is_active: true, last_verified: '2026-01-01' },
         ],
         DEFAULT: [
             { id: 'cr-default-bw', region_code: 'DEFAULT', name: 'Befrienders Worldwide', type: 'directory', phone: null, text_instruction: null, url: 'https://www.befrienders.org', email: null, description: 'International directory of emotional support centers.', hours: 'Varies', languages: ['Multiple'], priority: 1, condition_specific: null, is_active: true, last_verified: '2026-01-01' },
+            { id: 'cr-default-iasp', region_code: 'DEFAULT', name: 'IASP Crisis Centres', type: 'directory', phone: null, text_instruction: null, url: 'https://www.iasp.info/resources/Crisis_Centres/', email: null, description: 'International Association for Suicide Prevention — global crisis center directory.', hours: 'Varies', languages: ['Multiple'], priority: 2, condition_specific: null, is_active: true, last_verified: '2026-01-01' },
         ],
     },
 };

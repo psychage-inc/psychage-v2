@@ -66,6 +66,12 @@ export interface ProviderRow {
   telehealth_available: boolean;
   in_person_available: boolean;
   verified_at: string | null;
+  taxonomy_code: string | null;
+  taxonomy_description: string | null;
+  facility_type: string | null;
+  sliding_fee_scale: boolean;
+  emergency_services: boolean;
+  data_last_synced_at: string | null;
   created_at: string;
   updated_at: string;
 }
@@ -98,7 +104,7 @@ export interface ProviderVerification {
 
 export type ProviderStatus = 'seeded' | 'claimed' | 'submitted' | 'verified' | 'active' | 'suspended' | 'rejected';
 export type ProviderTier = 'free' | 'premium';
-export type ProviderSource = 'npi_registry' | 'samhsa' | 'manual' | 'claim';
+export type ProviderSource = 'npi_registry' | 'samhsa' | 'hrsa_hc' | 'manual' | 'claim';
 
 // --- Joined / Enriched Types ---
 
@@ -167,6 +173,7 @@ export interface ProviderSearchParams {
   telehealth?: boolean;
   in_person?: boolean;
   accepting_patients?: boolean;
+  verification_status?: 'all' | 'verified' | 'listed';
   sort_by?: 'relevance' | 'distance' | 'name';
   page?: number;
   per_page?: number;

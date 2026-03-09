@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useNavigator } from '../../context/NavigatorContext';
@@ -18,6 +18,7 @@ export const SymptomSelectionScreen: React.FC = () => {
     const { state, dispatch, announcePolite } = useNavigator();
     const { knowledgeBase, selectedDomains, selectedSymptoms, crisisTriggered } = state;
     const [searchQuery, setSearchQuery] = useState('');
+    const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 
     // Debounced announcement to prevent screen reader spam (WCAG 4.1.3)
     const debouncedAnnounce = useDebounce(announcePolite, 300);
@@ -58,6 +59,14 @@ export const SymptomSelectionScreen: React.FC = () => {
         });
         return groups;
     }, [filteredSymptoms]);
+
+    // Set initial expanded category to the first one
+    const categoryKeys = Object.keys(groupedSymptoms);
+    useEffect(() => {
+        if (categoryKeys.length > 0 && expandedCategory === null) {
+            setExpandedCategory(categoryKeys[0]);
+        }
+    }, [categoryKeys.length]);
 
     // Handle loading state — show skeleton that mirrors final layout
     if (state.isLoading) {
@@ -218,7 +227,8 @@ export const SymptomSelectionScreen: React.FC = () => {
                                 category={category as CategoryType}
                                 title={category.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
                                 count={symptoms.length}
-                                initiallyExpanded={true}
+                                expanded={expandedCategory === category}
+                                onToggle={() => setExpandedCategory(expandedCategory === category ? null : category)}
                                 onSelectAll={() => handleSelectAllInCategory(symptoms)}
                                 onClearAll={() => handleClearCategory(symptoms)}
                                 selectedCount={categorySelectedCount}

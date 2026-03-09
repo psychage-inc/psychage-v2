@@ -26,10 +26,10 @@ export const SymptomToggle: React.FC<SymptomToggleProps> = ({ symptom, isSelecte
             )}
             aria-pressed={isSelected}
         >
-            <div className="flex items-start gap-3">
+            <div className="flex items-center gap-3">
                 <div
                     className={cn(
-                        "flex-shrink-0 w-6 h-6 mt-0.5 rounded-full border flex items-center justify-center transition-colors",
+                        "flex-shrink-0 w-6 h-6 rounded-full border flex items-center justify-center transition-colors",
                         isSelected
                             ? "bg-white border-white text-teal-600"
                             : "border-border-hover group-hover:border-border-hover bg-surface/50"

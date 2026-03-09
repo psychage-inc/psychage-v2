@@ -9,6 +9,8 @@ interface SymptomCategoryProps {
     title: string;
     count: number;
     initiallyExpanded?: boolean;
+    expanded?: boolean;
+    onToggle?: () => void;
     children: React.ReactNode;
     onSelectAll?: () => void;
     onClearAll?: () => void;
@@ -20,17 +22,21 @@ export const SymptomCategory: React.FC<SymptomCategoryProps> = ({
     title,
     count,
     initiallyExpanded = false,
+    expanded,
+    onToggle,
     children,
     onSelectAll,
     onClearAll,
     selectedCount = 0
 }) => {
-    const [isExpanded, setIsExpanded] = useState(initiallyExpanded);
+    const [internalExpanded, setInternalExpanded] = useState(initiallyExpanded);
+    const isControlled = expanded !== undefined;
+    const isExpanded = isControlled ? expanded : internalExpanded;
 
     return (
         <div className="border border-border rounded-2xl overflow-hidden bg-surface/50 backdrop-blur-xl transition-all duration-500">
             <button
-                onClick={() => setIsExpanded(!isExpanded)}
+                onClick={() => isControlled ? onToggle?.() : setInternalExpanded(!internalExpanded)}
                 className="w-full flex items-center justify-between p-5 focus-visible:outline-none focus-visible:bg-surface-hover hover:bg-surface-hover/50 transition-all duration-300"
                 aria-expanded={isExpanded}
             >
@@ -67,7 +73,7 @@ export const SymptomCategory: React.FC<SymptomCategoryProps> = ({
                                         <button
                                             type="button"
                                             onClick={onSelectAll}
-                                            className="flex items-center gap-2 text-sm text-teal-400 hover:text-teal-300 bg-teal-500/10 hover:bg-teal-500/20 px-4 py-2.5 rounded-lg border border-teal-500/30 hover:border-teal-400/50 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 focus-visible:ring-offset-2 focus-visible:ring-offset-background min-h-[44px]"
+                                            className="flex items-center gap-2 text-sm text-teal-400 hover:text-teal-300 bg-teal-500/10 hover:bg-teal-500/20 px-4 py-2.5 rounded-lg border border-teal-500/30 hover:border-teal-400/50 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 focus-visible:ring-offset-2 focus-visible:ring-offset-background min-h-[44px] disabled:opacity-50 disabled:cursor-not-allowed"
                                             disabled={selectedCount === count}
                                         >
                                             <CheckSquare className="w-4 h-4" />

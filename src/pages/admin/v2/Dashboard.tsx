@@ -1,0 +1,260 @@
+import React from 'react';
+import { useQuery } from '@tanstack/react-query';
+import {
+  Users, ClipboardCheck, MessageSquare, ShieldAlert,
+  UserCheck, FileText, TrendingUp, TrendingDown,
+} from 'lucide-react';
+import {
+  ResponsiveContainer, AreaChart, Area, BarChart, Bar,
+  XAxis, YAxis, CartesianGrid, Tooltip, PieChart, Pie, Cell,
+} from 'recharts';
+import { formatDistanceToNow } from 'date-fns';
+import { supabase } from '@/lib/supabaseClient';
+import PageHeader from '@/components/admin/PageHeader';
+import AdminStatusBadge from '@/components/admin/StatusBadge';
+
+// ============================================================
+// Metric Card
+// ============================================================
+
+interface MetricCardProps {
+  icon: React.ElementType;
+  label: string;
+  value: number | string | null;
+  trend?: number;
+  loading?: boolean;
+}
+
+const MetricCard: React.FC<MetricCardProps> = ({ icon: Icon, label, value, trend, loading }) => (
+  <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-5">
+    <div className="flex items-center justify-between mb-3">
+      <div className="w-10 h-10 rounded-lg bg-teal-50 dark:bg-teal-900/20 flex items-center justify-center">
+        <Icon size={20} className="text-teal-600 dark:text-teal-400" />
+      </div>
+      {trend !== undefined && trend !== 0 && (
+        <div className={`flex items-center gap-1 text-xs font-medium ${trend > 0 ? 'text-emerald-600' : 'text-red-500'}`}>
+          {trend > 0 ? <TrendingUp size={14} /> : <TrendingDown size={14} />}
+          {Math.abs(trend)}%
+        </div>
+      )}
+    </div>
+    <p className="text-sm text-gray-500 dark:text-slate-400">{label}</p>
+    {loading ? (
+      <div className="h-8 w-20 bg-gray-100 dark:bg-slate-800 rounded animate-pulse mt-1" />
+    ) : (
+      <p className="text-2xl font-bold text-gray-900 dark:text-white mt-1">
+        {value ?? '\u2014'}
+      </p>
+    )}
+  </div>
+);
+
+// ============================================================
+// Data fetching hooks
+// ============================================================
+
+function useMetrics() {
+  return useQuery({
+    queryKey: ['admin', 'metrics'],
+    queryFn: async () => {
+      const [usersRes, clarityRes, providersRes, contentRes] = await Promise.all([
+        supabase.from('profiles').select('*', { count: 'exact', head: true }),
+        supabase.from('clarity_score_history').select('*', { count: 'exact', head: true }),
+        supabase.from('providers').select('*', { count: 'exact', head: true }).eq('status', 'submitted'),
+        supabase.from('content_documents').select('*', { count: 'exact', head: true }).eq('is_published', true),
+      ]);
+
+      return {
+        totalUsers: usersRes.count,
+        clarityCompletions: clarityRes.count,
+        pendingApplications: providersRes.count,
+        publishedContent: contentRes.count,
+      };
+    },
+    refetchInterval: 60_000,
+  });
+}
+
+function useChartData() {
+  return useQuery({
+    queryKey: ['admin', 'charts'],
+    queryFn: async () => {
+      const thirtyDaysAgo = new Date(Date.now() - 30 * 86400000).toISOString();
+      const { data: registrations } = await supabase
+        .from('profiles')
+        .select('created_at')
+        .gte('created_at', thirtyDaysAgo)
+        .order('created_at', { ascending: true });
+
+      // Group by date
+      const byDate = new Map<string, number>();
+      (registrations || []).forEach((r) => {
+        const date = r.created_at?.split('T')[0] || '';
+        byDate.set(date, (byDate.get(date) || 0) + 1);
+      });
+
+      const userGrowth = Array.from(byDate.entries())
+        .map(([date, count]) => ({ date, count }))
+        .sort((a, b) => a.date.localeCompare(b.date));
+
+      return { userGrowth };
+    },
+  });
+}
+
+function useRecentActivity() {
+  return useQuery({
+    queryKey: ['admin', 'activity'],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from('admin_audit_log')
+        .select('*')
+        .order('created_at', { ascending: false })
+        .limit(20);
+
+      if (error) throw error;
+      return data || [];
+    },
+  });
+}
+
+// ============================================================
+// Charts
+// ============================================================
+
+const CHART_COLORS = ['#0d9488', '#f59e0b', '#ef4444', '#3b82f6', '#8b5cf6'];
+
+const UserGrowthChart: React.FC<{ data: { date: string; count: number }[] }> = ({ data }) => (
+  <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-5">
+    <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-4">User Registrations (30d)</h3>
+    {data.length === 0 ? (
+      <p className="text-sm text-gray-400 py-8 text-center">No data available</p>
+    ) : (
+      <ResponsiveContainer width="100%" height={240}>
+        <AreaChart data={data}>
+          <defs>
+            <linearGradient id="userGrowthGradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#0d9488" stopOpacity={0.3} />
+              <stop offset="95%" stopColor="#0d9488" stopOpacity={0} />
+            </linearGradient>
+          </defs>
+          <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+          <XAxis dataKey="date" tick={{ fontSize: 11 }} tickFormatter={(v) => v.slice(5)} />
+          <YAxis tick={{ fontSize: 11 }} allowDecimals={false} />
+          <Tooltip />
+          <Area type="monotone" dataKey="count" stroke="#0d9488" fill="url(#userGrowthGradient)" strokeWidth={2} />
+        </AreaChart>
+      </ResponsiveContainer>
+    )}
+  </div>
+);
+
+// ============================================================
+// Activity Feed
+// ============================================================
+
+interface AuditEntry {
+  id: string;
+  action: string;
+  resource_type: string;
+  resource_id: string | null;
+  created_at: string;
+}
+
+const actionColors: Record<string, string> = {
+  create: 'bg-emerald-500',
+  update: 'bg-blue-500',
+  delete: 'bg-red-500',
+  publish: 'bg-teal-500',
+  approve: 'bg-green-500',
+  reject: 'bg-red-500',
+  setting_change: 'bg-amber-500',
+};
+
+const ActivityFeed: React.FC<{ entries: AuditEntry[]; loading: boolean }> = ({ entries, loading }) => (
+  <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-5">
+    <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-4">Recent Activity</h3>
+    {loading ? (
+      <div className="space-y-3">
+        {Array.from({ length: 5 }).map((_, i) => (
+          <div key={i} className="flex items-center gap-3">
+            <div className="w-2.5 h-2.5 rounded-full bg-gray-200 animate-pulse" />
+            <div className="h-4 flex-1 bg-gray-100 dark:bg-slate-800 rounded animate-pulse" />
+          </div>
+        ))}
+      </div>
+    ) : entries.length === 0 ? (
+      <p className="text-sm text-gray-400 py-8 text-center">No recent activity</p>
+    ) : (
+      <div className="space-y-3 max-h-[400px] overflow-y-auto">
+        {entries.map((entry) => (
+          <div key={entry.id} className="flex items-start gap-3">
+            <div className={`w-2.5 h-2.5 rounded-full mt-1.5 flex-shrink-0 ${actionColors[entry.action] || 'bg-gray-400'}`} />
+            <div className="flex-1 min-w-0">
+              <p className="text-sm text-gray-700 dark:text-slate-300">
+                <span className="font-medium">{entry.action}</span>
+                {' '}
+                <AdminStatusBadge status={entry.resource_type} />
+                {entry.resource_id && (
+                  <span className="text-gray-400 ml-1">({entry.resource_id})</span>
+                )}
+              </p>
+              <p className="text-xs text-gray-400 dark:text-slate-500 mt-0.5">
+                {formatDistanceToNow(new Date(entry.created_at), { addSuffix: true })}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    )}
+  </div>
+);
+
+// ============================================================
+// Dashboard Page
+// ============================================================
+
+const AdminDashboardV2: React.FC = () => {
+  const { data: metrics, isLoading: metricsLoading } = useMetrics();
+  const { data: chartData, isLoading: chartsLoading } = useChartData();
+  const { data: activity, isLoading: activityLoading } = useRecentActivity();
+
+  return (
+    <div>
+      <PageHeader title="Dashboard" description="Platform overview and key metrics" />
+
+      {/* Metric cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+        <MetricCard icon={Users} label="Total Users" value={metrics?.totalUsers ?? null} loading={metricsLoading} />
+        <MetricCard icon={ClipboardCheck} label="Clarity Completions" value={metrics?.clarityCompletions ?? null} loading={metricsLoading} />
+        <MetricCard icon={MessageSquare} label="AI Conversations (24h)" value={null} loading={metricsLoading} />
+        <MetricCard icon={ShieldAlert} label="Safety Flags (7d)" value={null} loading={metricsLoading} />
+        <MetricCard icon={UserCheck} label="Pending Applications" value={metrics?.pendingApplications ?? null} loading={metricsLoading} />
+        <MetricCard icon={FileText} label="Published Content" value={metrics?.publishedContent ?? null} loading={metricsLoading} />
+      </div>
+
+      {/* Charts */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
+        {chartsLoading ? (
+          <>
+            <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-5 h-[300px] animate-pulse" />
+            <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-5 h-[300px] animate-pulse" />
+          </>
+        ) : (
+          <>
+            <UserGrowthChart data={chartData?.userGrowth || []} />
+            <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-5">
+              <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-4">Safety Flags by Week</h3>
+              <p className="text-sm text-gray-400 py-8 text-center">Data available after Phase 6</p>
+            </div>
+          </>
+        )}
+      </div>
+
+      {/* Activity Feed */}
+      <ActivityFeed entries={activity || []} loading={activityLoading} />
+    </div>
+  );
+};
+
+export default AdminDashboardV2;

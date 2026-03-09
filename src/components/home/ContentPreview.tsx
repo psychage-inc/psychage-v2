@@ -10,9 +10,6 @@ const categories = [
     { slug: 'anxiety', label: 'Anxiety' },
     { slug: 'mood', label: 'Mood' },
     { slug: 'trauma', label: 'Trauma' },
-    { slug: 'wellness', label: 'Wellness' },
-    { slug: 'mindfulness', label: 'Mindfulness' },
-    { slug: 'workplace', label: 'Workplace' },
 ];
 
 const ContentPreview: React.FC = () => {
@@ -28,7 +25,7 @@ const ContentPreview: React.FC = () => {
         articleService.getAll({ category: activeCategory })
             .then(data => {
                 if (!cancelled) {
-                    setArticles(data.slice(0, 4));
+                    setArticles(data.slice(0, 12));
                     setLoading(false);
                 }
             })
@@ -62,10 +59,10 @@ const ContentPreview: React.FC = () => {
                 >
                     <div>
                         <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-3 tracking-tight">
-                            Learn at your own pace.
+                            Understand Your Conditions
                         </h2>
                         <p className="text-lg text-slate-600 dark:text-slate-400 max-w-lg">
-                            Explore our curated library of expert-written articles — from understanding anxiety to building resilience.
+                            Expert-written guides on anxiety, mood disorders, and trauma — helping you recognize patterns and find clarity.
                         </p>
                     </div>
                     <Button
@@ -111,8 +108,8 @@ const ContentPreview: React.FC = () => {
                         transition={{ duration: 0.3 }}
                     >
                         {loading ? (
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                                {[1, 2, 3, 4].map(i => (
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(i => (
                                     <div key={i} className="animate-pulse">
                                         <div className="aspect-[4/3] bg-slate-100 dark:bg-slate-800 rounded-2xl mb-4" />
                                         <div className="h-4 bg-slate-100 dark:bg-slate-800 rounded w-3/4 mb-2" />
@@ -121,7 +118,7 @@ const ContentPreview: React.FC = () => {
                                 ))}
                             </div>
                         ) : articles.length > 0 ? (
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                                 {articles.map((article) => (
                                     <div
                                         key={article.id}

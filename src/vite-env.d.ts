@@ -13,9 +13,6 @@ interface ImportMetaEnv {
   readonly VITE_SANITY_DATASET: string;
   readonly VITE_SANITY_API_VERSION: string;
 
-  // Gemini AI Configuration
-  readonly VITE_GEMINI_API_KEY: string;
-
   // Application Metadata
   readonly VITE_APP_NAME: string;
   readonly VITE_APP_VERSION: string;

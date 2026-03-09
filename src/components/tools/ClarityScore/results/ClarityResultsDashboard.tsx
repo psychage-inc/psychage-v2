@@ -127,9 +127,6 @@ const ClarityResultsDashboard: React.FC<ClarityResultsDashboardProps> = ({
             <div className="hidden md:block w-px h-16 bg-gray-700" />
             <div>
               <TierBadge tier={results.tier} label={results.label} size="lg" />
-              <p className="text-sm text-gray-400 mt-2">
-                Wellness snapshot &middot; Not a diagnosis
-              </p>
             </div>
           </div>
 

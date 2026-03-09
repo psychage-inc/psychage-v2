@@ -22,9 +22,17 @@ const tierBgClasses: Record<ScoreTier, string> = {
   crisis: 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400',
 };
 
+const TIER_DISPLAY: Record<ScoreTier, string> = {
+  thriving: 'Thriving',
+  balanced: 'Balanced',
+  struggling: 'Concerning',
+  distressed: 'Distressed',
+  crisis: 'Crisis',
+};
+
 const TierBadge: React.FC<TierBadgeProps> = ({ tier, label, size = 'md' }) => {
   const colors = getScoreTierColor(tier);
-  const displayLabel = label || tier.charAt(0).toUpperCase() + tier.slice(1);
+  const displayLabel = label || TIER_DISPLAY[tier];
 
   return (
     <span

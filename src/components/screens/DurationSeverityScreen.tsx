@@ -259,8 +259,8 @@ export const DurationSeverityScreen: React.FC = () => {
     };
 
     return (
-        <div className="max-w-3xl mx-auto py-8 px-4 sm:px-6 relative pb-36 sm:pb-40">
-            <div className="mb-8 relative space-y-6">
+        <div className="max-w-3xl mx-auto py-4 sm:py-6 px-3 sm:px-4 relative pb-28 sm:pb-32">
+            <div className="mb-4 sm:mb-6 relative space-y-3">
                 <div className="absolute -inset-x-8 -inset-y-8 bg-teal-500/10 blur-3xl rounded-full opacity-50 pointer-events-none" />
                 <div className="relative z-10">
                     <h2 className="text-3xl sm:text-4xl font-display text-text-primary mb-4 drop-shadow-[0_2px_10px_rgba(255,255,255,0.1)]">
@@ -289,21 +289,20 @@ export const DurationSeverityScreen: React.FC = () => {
                 )}
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-4 sm:space-y-6">
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={currentSymptom.symptom_id}
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: -20, transition: { duration: 0.2 } }}
-                        className="space-y-6"
+                        className="space-y-4"
                     >
-                        <div className="p-6 rounded-2xl bg-surface/50 border border-border backdrop-blur-xl relative overflow-hidden group hover:border-border-hover transition-all duration-500">
-                            <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-transparent pointer-events-none opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
-                            <h3 className="font-display text-2xl text-teal-300 mb-2 relative z-10 drop-shadow-md">
+                        <div className="p-6 rounded-2xl bg-gradient-to-br from-teal-700 to-teal-900 border border-teal-600 shadow-lg relative overflow-hidden">
+                            <h3 className="font-display text-2xl text-white mb-2 drop-shadow-md">
                                 Regarding: {currentSymptom.details?.name}
                             </h3>
-                            <p className="text-text-secondary relative z-10">
+                            <p className="text-white/80">
                                 {currentSymptom.details?.description}
                             </p>
                         </div>

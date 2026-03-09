@@ -5,15 +5,15 @@ import { Link } from 'react-router-dom';
 import Badge from '@/components/ui/Badge';
 import { hoverLift } from '@/lib/animations';
 import type { ProviderCardData } from '@/lib/providers/types';
-import { VerificationBadge } from '../shared/VerificationBadge';
+import { VerificationBadge, isProviderVerified } from '../shared/VerificationBadge';
 import { SpecialtyTag } from '../shared/SpecialtyTag';
 
 interface ProviderCardProps {
   provider: ProviderCardData;
 }
 
-const FallbackAvatar: React.FC<{ name: string; className?: string }> = ({ name, className }) => (
-  <div className={`bg-gradient-to-br from-teal-500 to-teal-700 flex items-center justify-center shadow-md shadow-teal-500/20 ${className}`}>
+const FallbackAvatar: React.FC<{ name: string; muted?: boolean; className?: string }> = ({ name, muted, className }) => (
+  <div className={`bg-gradient-to-br ${muted ? 'from-gray-400 to-gray-500 shadow-gray-400/20' : 'from-teal-500 to-teal-700 shadow-teal-500/20'} flex items-center justify-center shadow-md ${className}`}>
     <span className="text-white font-bold text-lg tracking-wide">
       {name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase()}
     </span>
@@ -21,6 +21,9 @@ const FallbackAvatar: React.FC<{ name: string; className?: string }> = ({ name, 
 );
 
 export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
+  const isVerified = isProviderVerified(provider.status, provider.verified_at);
+  const isSeeded = provider.status === 'seeded' && !isVerified;
+
   const locationText = [provider.primary_city, provider.primary_state].filter(Boolean).join(', ');
 
   // Session format text
@@ -47,7 +50,9 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
       className={`bg-white dark:bg-gray-900 rounded-2xl p-6 border shadow-sm hover:shadow-lg hover:border-teal-200 dark:hover:border-teal-800/60 transition-all duration-300 flex flex-col h-full group ${
         provider.tier === 'premium'
           ? 'border-l-4 border-l-amber-400 border-t-gray-100 border-r-gray-100 border-b-gray-100 dark:border-l-amber-500 dark:border-t-gray-800 dark:border-r-gray-800 dark:border-b-gray-800 ring-1 ring-amber-100 dark:ring-amber-900/20'
-          : 'border-gray-100 dark:border-gray-800'
+          : isVerified
+            ? 'border-l-[3px] border-l-teal-500 border-t-gray-100 border-r-gray-100 border-b-gray-100 dark:border-l-teal-400 dark:border-t-gray-800 dark:border-r-gray-800 dark:border-b-gray-800'
+            : 'border-gray-100 dark:border-gray-800'
       }`}
     >
       {/* Header: Avatar + Name + Credentials */}
@@ -61,7 +66,7 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
               className="w-16 h-16 rounded-full object-cover border-2 border-white dark:border-gray-800 shadow-sm"
             />
           ) : (
-            <FallbackAvatar name={provider.display_name} className="w-16 h-16 rounded-full border-2 border-white dark:border-gray-800 shadow-sm" />
+            <FallbackAvatar name={provider.display_name} muted={isSeeded} className="w-16 h-16 rounded-full border-2 border-white dark:border-gray-800 shadow-sm" />
           )}
         </Link>
 
@@ -166,8 +171,8 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
         </div>
       )}
 
-      {/* Bio preview */}
-      {bioPreview && (
+      {/* Bio preview (hidden for seeded/NPI-only providers) */}
+      {bioPreview && !isSeeded && (
         <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed mb-3 line-clamp-2 italic">
           &ldquo;{bioPreview}&rdquo;
         </p>
@@ -182,40 +187,42 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
           View Full Profile &rarr;
         </Link>
 
-        <div className="flex items-center gap-1.5">
-          {provider.phone && (
-            <a
-              href={`tel:${provider.phone}`}
-              className="w-8 h-8 rounded-full bg-gray-50 dark:bg-gray-800 hover:bg-teal-50 dark:hover:bg-teal-900/20 flex items-center justify-center text-gray-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
-              title="Call"
-              aria-label={`Call ${provider.display_name}`}
-            >
-              <Phone size={14} />
-            </a>
-          )}
-          {provider.email && (
-            <a
-              href={`mailto:${provider.email}`}
-              className="w-8 h-8 rounded-full bg-gray-50 dark:bg-gray-800 hover:bg-teal-50 dark:hover:bg-teal-900/20 flex items-center justify-center text-gray-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
-              title="Email"
-              aria-label={`Email ${provider.display_name}`}
-            >
-              <Mail size={14} />
-            </a>
-          )}
-          {provider.website_url && (
-            <a
-              href={provider.website_url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-8 h-8 rounded-full bg-gray-50 dark:bg-gray-800 hover:bg-teal-50 dark:hover:bg-teal-900/20 flex items-center justify-center text-gray-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
-              title="Website"
-              aria-label={`Visit ${provider.display_name}'s website`}
-            >
-              <Globe size={14} />
-            </a>
-          )}
-        </div>
+        {!isSeeded && (
+          <div className="flex items-center gap-1.5">
+            {provider.phone && (
+              <a
+                href={`tel:${provider.phone}`}
+                className="w-8 h-8 rounded-full bg-gray-50 dark:bg-gray-800 hover:bg-teal-50 dark:hover:bg-teal-900/20 flex items-center justify-center text-gray-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
+                title="Call"
+                aria-label={`Call ${provider.display_name}`}
+              >
+                <Phone size={14} />
+              </a>
+            )}
+            {provider.email && (
+              <a
+                href={`mailto:${provider.email}`}
+                className="w-8 h-8 rounded-full bg-gray-50 dark:bg-gray-800 hover:bg-teal-50 dark:hover:bg-teal-900/20 flex items-center justify-center text-gray-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
+                title="Email"
+                aria-label={`Email ${provider.display_name}`}
+              >
+                <Mail size={14} />
+              </a>
+            )}
+            {provider.website_url && (
+              <a
+                href={provider.website_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full bg-gray-50 dark:bg-gray-800 hover:bg-teal-50 dark:hover:bg-teal-900/20 flex items-center justify-center text-gray-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
+                title="Website"
+                aria-label={`Visit ${provider.display_name}'s website`}
+              >
+                <Globe size={14} />
+              </a>
+            )}
+          </div>
+        )}
       </div>
     </motion.div>
   );

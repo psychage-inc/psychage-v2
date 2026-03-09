@@ -122,7 +122,7 @@ export function getScoreLabel(score: number): {
 } {
   if (score >= 80) return { label: 'Thriving', tier: 'thriving' };
   if (score >= 60) return { label: 'Balanced', tier: 'balanced' };
-  if (score >= 40) return { label: 'Struggling', tier: 'struggling' };
+  if (score >= 40) return { label: 'Concerning', tier: 'struggling' };
   if (score >= 20) return { label: 'Distressed', tier: 'distressed' };
   return { label: 'Crisis', tier: 'crisis' };
 }

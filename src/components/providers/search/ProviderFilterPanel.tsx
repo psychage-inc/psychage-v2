@@ -57,6 +57,25 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
 
   const content = (
     <div className="space-y-6">
+      {/* Verification Status */}
+      <FilterSection title="Verification Status">
+        <RadioItem
+          label="All providers"
+          checked={!params.verification_status || params.verification_status === 'all'}
+          onChange={() => onChange({ verification_status: undefined })}
+        />
+        <RadioItem
+          label="Psychage Verified"
+          checked={params.verification_status === 'verified'}
+          onChange={() => onChange({ verification_status: 'verified' })}
+        />
+        <RadioItem
+          label="Publicly Listed"
+          checked={params.verification_status === 'listed'}
+          onChange={() => onChange({ verification_status: 'listed' })}
+        />
+      </FilterSection>
+
       {/* Location */}
       <FilterSection title="Location">
         <select
@@ -267,7 +286,7 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
 
   // Desktop: sidebar
   return (
-    <aside className="w-[280px] flex-shrink-0 hidden">{/* Hidden: re-enable when filters are refined */}
+    <aside className="w-[280px] flex-shrink-0 hidden lg:block">
       <div className="sticky top-28 bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 p-5 max-h-[calc(100vh-8rem)] overflow-y-auto">
         <h3 className="font-display font-bold text-sm text-gray-900 dark:text-white mb-5 flex items-center gap-2">
           <SlidersHorizontal size={16} />
@@ -292,6 +311,20 @@ const FilterSection: React.FC<{ title: string; children: React.ReactNode }> = ({
     <h4 className="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-3">{title}</h4>
     <div className="space-y-2">{children}</div>
   </div>
+);
+
+const RadioItem: React.FC<{ label: string; checked: boolean; onChange: () => void }> = ({ label, checked, onChange }) => (
+  <label className="flex items-center gap-2.5 cursor-pointer group">
+    <input
+      type="radio"
+      checked={checked}
+      onChange={onChange}
+      className="w-4 h-4 border-gray-300 dark:border-gray-600 text-teal-600 focus:ring-teal-500 focus:ring-offset-0"
+    />
+    <span className="text-sm text-gray-600 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
+      {label}
+    </span>
+  </label>
 );
 
 const CheckboxItem: React.FC<{ label: string; sublabel?: string; checked: boolean; onChange: () => void }> = ({ label, sublabel, checked, onChange }) => (

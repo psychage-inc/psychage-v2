@@ -41,3 +41,8 @@ test-results
 # Drawbridge (visual annotation tool)
 .moat/
 .claude/
+
+# Data pipeline (large downloaded/generated files)
+data-pipeline/data/
+data-pipeline/output_data/
+data-pipeline/venv/

@@ -22,7 +22,7 @@ const DEFAULT_PER_PAGE = 20;
 
 /**
  * Manages provider search state with URL param sync, debounced queries, and pagination.
- * Does NOT auto-fetch on mount unless URL params are present.
+ * Auto-fetches on mount to show providers immediately.
  */
 export function useProviderSearch(): UseProviderSearchReturn {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -50,16 +50,10 @@ export function useProviderSearch(): UseProviderSearchReturn {
     telehealth: searchParams.get('telehealth') === 'true' ? true : undefined,
     in_person: searchParams.get('in_person') === 'true' ? true : undefined,
     accepting_patients: searchParams.get('accepting') === 'true' ? true : undefined,
+    verification_status: (searchParams.get('verified') as ProviderSearchParams['verification_status']) || undefined,
     sort_by: (searchParams.get('sort') as ProviderSearchParams['sort_by']) || 'relevance',
     per_page: DEFAULT_PER_PAGE,
   };
-
-  // Check if any search-relevant params exist in URL
-  const hasUrlParams = !!(
-    params.query || params.specialty_slugs || params.provider_type_ids ||
-    params.language_ids || params.competency_ids || params.insurance_plan_ids ||
-    params.state || params.city || params.telehealth || params.in_person || params.accepting_patients
-  );
 
   // Execute search
   const executeSearch = useCallback(async (searchPage: number, append: boolean) => {
@@ -92,13 +86,14 @@ export function useProviderSearch(): UseProviderSearchReturn {
   }, [searchParams.toString()]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Run search on param change (debounced)
-  // On first mount: only search if URL params exist
-  // On subsequent param changes: always search
+  // Always search on mount to show providers immediately.
+  // On subsequent param changes: debounce to avoid excessive requests.
   useEffect(() => {
     if (!mountedRef.current) {
       mountedRef.current = true;
-      // On mount: only search if URL has filter params
-      if (!hasUrlParams) return;
+      // Always search on mount — show all providers by default
+      executeSearch(1, false);
+      return;
     }
 
     if (debounceRef.current) clearTimeout(debounceRef.current);
@@ -158,6 +153,10 @@ export function useProviderSearch(): UseProviderSearchReturn {
     if (newParams.accepting_patients !== undefined) {
       if (newParams.accepting_patients) next.set('accepting', 'true');
       else next.delete('accepting');
+    }
+    if (newParams.verification_status !== undefined) {
+      if (newParams.verification_status && newParams.verification_status !== 'all') next.set('verified', newParams.verification_status);
+      else next.delete('verified');
     }
     if (newParams.sort_by !== undefined) {
       if (newParams.sort_by && newParams.sort_by !== 'relevance') next.set('sort', newParams.sort_by);

@@ -81,50 +81,57 @@ const NewsletterSection: React.FC = () => {
               </Button>
             </div>
 
-            {/* Newsletter as secondary */}
-            <div className="border-t border-white/10 pt-8">
-              <div className="flex items-center justify-center gap-2 mb-4">
-                <Mail className="w-4 h-4 text-teal-400" />
-                <span className="text-sm text-teal-300/80 font-medium">Get weekly mental health insights</span>
-              </div>
+            {/* Email Collection */}
+            <div className="border-t border-white/10 pt-10 mt-2">
+              <div className="max-w-lg mx-auto bg-white/[0.06] backdrop-blur-sm rounded-2xl border border-white/[0.08] p-6 md:p-8">
+                <div className="flex items-center justify-center gap-2.5 mb-2">
+                  <div className="w-8 h-8 rounded-full bg-teal-400/15 flex items-center justify-center">
+                    <Mail className="w-4 h-4 text-teal-400" />
+                  </div>
+                  <h3 className="text-lg font-display font-semibold text-white">Stay in the loop</h3>
+                </div>
+                <p className="text-sm text-teal-100/50 text-center mb-5">
+                  Free weekly insights on mental health — no spam, unsubscribe anytime.
+                </p>
 
-              {status === 'success' ? (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="flex items-center justify-center gap-2 text-teal-300"
-                >
-                  <CheckCircle size={18} />
-                  <span className="text-sm font-medium">Thanks for subscribing!</span>
-                </motion.div>
-              ) : (
-                <form onSubmit={handleSubmit} className="flex items-center justify-center gap-3 max-w-md mx-auto">
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="your@email.com"
-                    required
-                    className="h-10 px-4 flex-1 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 text-white text-sm placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-teal-500/50 focus:border-transparent"
-                  />
-                  <button
-                    type="submit"
-                    disabled={status === 'loading'}
-                    className="h-10 px-5 bg-white/10 hover:bg-white/15 backdrop-blur-sm border border-white/10 text-white text-sm font-medium rounded-lg transition-colors disabled:opacity-60 flex items-center gap-2"
+                {status === 'success' ? (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="flex items-center justify-center gap-2.5 py-3 rounded-xl bg-teal-500/15 border border-teal-400/20"
                   >
-                    {status === 'loading' ? (
-                      <Loader2 size={14} className="animate-spin" />
-                    ) : status === 'error' ? (
-                      'Retry'
-                    ) : (
-                      'Subscribe'
-                    )}
-                  </button>
-                </form>
-              )}
-              <p className="text-[10px] text-white/20 mt-2 max-w-md mx-auto">
-                By subscribing you consent to receiving emails from Psychage. You can unsubscribe at any time.
-              </p>
+                    <CheckCircle size={18} className="text-teal-400" />
+                    <span className="text-sm font-medium text-teal-300">You're subscribed — check your inbox!</span>
+                  </motion.div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="Enter your email"
+                      required
+                      className="h-12 px-4 flex-1 rounded-xl bg-white/[0.07] border border-white/10 text-white text-sm placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-teal-400/40 focus:border-teal-400/30 transition-all"
+                    />
+                    <button
+                      type="submit"
+                      disabled={status === 'loading'}
+                      className="h-12 px-6 bg-teal-500 hover:bg-teal-400 text-white text-sm font-semibold rounded-xl transition-all disabled:opacity-60 flex items-center justify-center gap-2 shrink-0 shadow-lg shadow-teal-500/20"
+                    >
+                      {status === 'loading' ? (
+                        <Loader2 size={16} className="animate-spin" />
+                      ) : status === 'error' ? (
+                        'Try again'
+                      ) : (
+                        <>Subscribe <ArrowRight size={15} /></>
+                      )}
+                    </button>
+                  </form>
+                )}
+                <p className="text-[11px] text-white/25 mt-3 text-center">
+                  By subscribing you consent to receiving emails from Psychage.
+                </p>
+              </div>
             </div>
           </div>
         </motion.div>

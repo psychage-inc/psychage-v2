@@ -11,6 +11,8 @@ import HowItWorksSection from './components/home/HowItWorksSection';
 import FeatureSpotlight from './components/home/FeatureSpotlight';
 import ContentPreview from './components/home/ContentPreview';
 import LifestylePreview from './components/home/LifestylePreview';
+import RelationshipsPreview from './components/home/RelationshipsPreview';
+import TherapyIdentityPreview from './components/home/TherapyIdentityPreview';
 import NewsletterSection from './components/home/NewsletterSection';
 import MindMate from './components/ai/MindMate';
 import CookieConsent from './components/ui/CookieConsent';
@@ -167,6 +169,8 @@ const App: React.FC = () => {
                                                     <FeatureSpotlight />
                                                     <ContentPreview />
                                                     <LifestylePreview />
+                                                    <RelationshipsPreview />
+                                                    <TherapyIdentityPreview />
                                                     <NewsletterSection />
                                                 </PageTransition>
                                             } />

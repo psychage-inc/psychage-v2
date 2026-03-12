@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigator } from '../../context/NavigatorContext';
 import { NavigatorButton } from '../navigator/NavigatorButton';
 import { DisclaimerCard } from '../navigator/DisclaimerCard';
-import { Loader2, AlertCircle } from 'lucide-react';
+import { Loader2, AlertCircle, Compass } from 'lucide-react';
 
 export const WelcomeScreen: React.FC = () => {
     const { dispatch, state } = useNavigator();
@@ -20,15 +20,13 @@ export const WelcomeScreen: React.FC = () => {
 
     return (
         <div className="max-w-2xl mx-auto py-12 px-4 sm:px-6 flex flex-col items-center text-center">
-            <div className="w-20 h-20 bg-teal-900/30 rounded-2xl flex items-center justify-center mb-8 transform -rotate-3 border border-teal-500/30 shadow-[0_0_30px_rgba(20,184,166,0.15)] backdrop-blur-sm">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-teal-400 drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                </svg>
+            <div className="w-20 h-20 bg-teal-100 dark:bg-teal-900/30 rounded-2xl flex items-center justify-center mb-8 transform -rotate-3 border border-teal-200 dark:border-teal-500/30 shadow-[0_0_30px_rgba(20,184,166,0.15)]">
+                <Compass className="w-10 h-10 text-teal-600 dark:text-teal-400 drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]" strokeWidth={1.5} />
             </div>
 
-            <h1 className="text-4xl sm:text-5xl font-display text-text-primary mb-6 drop-shadow-[0_2px_10px_rgba(255,255,255,0.1)]">
+            <h1 className="text-4xl sm:text-5xl font-display font-bold text-slate-900 dark:text-white mb-6 tracking-tight">
                 Understand your experience. <br />
-                <span className="text-teal-400 drop-shadow-[0_0_10px_rgba(45,212,191,0.3)]">Find your path forward.</span>
+                <span className="text-teal-600 dark:text-teal-400">Find your path forward.</span>
             </h1>
 
             <p className="text-lg text-text-secondary leading-relaxed mb-10 max-w-xl">
@@ -74,7 +72,7 @@ export const WelcomeScreen: React.FC = () => {
                     onClick={handleStart}
                     isDisabled={!canStart}
                     isLoading={isLoading}
-                    className="mb-12 shadow-lg hover:shadow-xl transition-shadow"
+                    className="mb-12 shadow-lg hover:shadow-xl transition-shadow bg-teal-600 hover:bg-teal-500"
                     aria-label={isLoading ? 'Loading symptom library, please wait' : 'Start the Navigator'}
                 >
                     {isLoading ? 'Loading...' : 'Start the Navigator'}

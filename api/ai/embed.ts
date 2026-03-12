@@ -9,8 +9,20 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { createClient } from '@supabase/supabase-js';
 import { toPlainText } from '@portabletext/toolkit';
 import { getRequiredEnv } from '../../src/lib/ai/config';
-import type { SanityArticle } from '../../src/lib/ai/types';
-import { crisisKeywords } from '../../src/crisis/data/crisisKeywords';
+
+/** Shape of Sanity document received via webhook */
+interface SanityWebhookDocument {
+  _id: string;
+  _type: string;
+  title: string;
+  slug: { current: string };
+  excerpt?: string;
+  body?: unknown[];
+  mainImage?: { asset?: { url?: string } };
+  conditions?: string[];
+  severity?: string;
+  publishedAt?: string;
+}
 
 // ============================================================================
 // Helper: Chunk Text
@@ -34,11 +46,15 @@ function chunkText(text: string, chunkSize: number = 512, overlap: number = 64):
 // Helper: Detect Crisis Content
 // ============================================================================
 
+const CRISIS_KEYWORDS: string[] = [
+  'kill myself', 'end my life', 'suicide', 'suicidal',
+  'want to die', 'better off dead', 'no reason to live',
+  'end it all', 'self-harm', 'hurt myself', 'cutting myself',
+];
+
 function detectCrisisContent(text: string): boolean {
   const lowerText = text.toLowerCase();
-  const tier3Keywords = crisisKeywords.filter(kw => kw.tier === 3);
-
-  return tier3Keywords.some(kw => lowerText.includes(kw.keyword.toLowerCase()));
+  return CRISIS_KEYWORDS.some(kw => lowerText.includes(kw));
 }
 
 // ============================================================================
@@ -91,7 +107,7 @@ export default async function handler(
     }
 
     // Parse Sanity document
-    const document = req.body as SanityArticle;
+    const document = req.body as SanityWebhookDocument;
 
     if (!document._id || !document.title) {
       return res.status(400).json({ error: 'Invalid Sanity document' });

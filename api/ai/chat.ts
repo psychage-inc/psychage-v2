@@ -11,7 +11,7 @@ import { classifyInputSafety, generateCrisisResponse } from '../../src/lib/ai/sa
 import { retrieveRelevantContent } from '../../src/lib/ai/retrieval';
 import { AnthropicProvider, SYSTEM_PROMPT } from '../../src/lib/ai/llm';
 import { getRequiredEnv, getAIConfig } from '../../src/lib/ai/config';
-import type { ChatMessage, SafetyLevel, Citation } from '../../src/lib/ai/types';
+import type { Message, SafetyLevel, Citation } from '../../src/lib/ai/types';
 
 // ============================================================================
 // Rate Limiting (in-memory - use Redis/Upstash for production)
@@ -63,10 +63,9 @@ function extractCitations(content: string, searchResults: unknown[]): Citation[]
   while ((match = citationRegex.exec(content)) !== null) {
     const [, title, url] = match;
     citations.push({
-      id: crypto.randomUUID(),
+      document_id: crypto.randomUUID(),
       title: title.trim(),
-      url: url.trim(),
-      contentType: url.includes('/video') ? 'video' : 'article',
+      url_path: url.trim(),
     });
   }
 
@@ -91,7 +90,7 @@ export default async function handler(
   try {
     // Parse request
     const { messages, sessionId: providedSessionId } = req.body as {
-      messages: ChatMessage[];
+      messages: Message[];
       sessionId?: string;
     };
 
@@ -179,11 +178,7 @@ export default async function handler(
         similarityThreshold: config.retrieval.defaultSimilarityThreshold,
       },
       supabase,
-      { getEmbedding: async (text: string) => {
-        // OpenAI embedding call here
-        // For now, using a placeholder
-        return [];
-      }}
+      llmProvider
     );
 
     // ========================================================================
@@ -191,7 +186,7 @@ export default async function handler(
     // ========================================================================
 
     const contextChunks = searchResults
-      .map((result, idx) => `[${idx + 1}] ${result.chunk_text}\nSource: ${result.title} | ${result.url_path}`)
+      .map((result, idx) => `[${idx + 1}] ${result.chunkText}\nSource: ${result.documentTitle} | ${result.documentUrlPath}`)
       .join('\n\n');
 
     const augmentedPrompt = SYSTEM_PROMPT.replace(

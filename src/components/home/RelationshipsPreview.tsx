@@ -89,7 +89,7 @@ const RelationshipsPreview: React.FC = () => {
                             onClick={() => handleCategoryChange(cat.slug)}
                             className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                                 activeCategory === cat.slug
-                                    ? 'bg-rose-600 text-white shadow-sm'
+                                    ? 'bg-teal-600 text-white shadow-sm'
                                     : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700'
                             }`}
                         >
@@ -138,7 +138,7 @@ const RelationshipsPreview: React.FC = () => {
                                                 {article.readTime ? `${article.readTime} min read` : 'Article'}
                                             </span>
                                         </div>
-                                        <h3 className="font-display font-bold text-slate-900 dark:text-white leading-snug group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors line-clamp-2">
+                                        <h3 className="font-display font-bold text-slate-900 dark:text-white leading-snug group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors line-clamp-2">
                                             {article.title}
                                         </h3>
                                     </div>

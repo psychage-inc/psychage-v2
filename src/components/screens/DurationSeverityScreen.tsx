@@ -267,7 +267,7 @@ export const DurationSeverityScreen: React.FC = () => {
                         Let's understand more
                     </h2>
                     <p className="text-lg text-text-secondary">
-                        Tell us about the intensity and duration of these experiences to help us provide better insights.
+                        Rate how severe each symptom feels, how long you've experienced it, and how often it occurs. This helps us match you with the most relevant resources.
                     </p>
                 </div>
 
@@ -298,11 +298,11 @@ export const DurationSeverityScreen: React.FC = () => {
                         exit={{ opacity: 0, x: -20, transition: { duration: 0.2 } }}
                         className="space-y-4"
                     >
-                        <div className="p-6 rounded-2xl bg-gradient-to-br from-teal-700 to-teal-900 border border-teal-600 shadow-lg relative overflow-hidden">
-                            <h3 className="font-display text-2xl text-white mb-2 drop-shadow-md">
+                        <div className="p-6 rounded-2xl bg-gradient-to-br from-teal-600 to-teal-800 border border-teal-500 shadow-lg relative overflow-hidden">
+                            <h3 className="font-display text-2xl font-bold text-white mb-2">
                                 Regarding: {currentSymptom.details?.name}
                             </h3>
-                            <p className="text-white/80">
+                            <p className="text-white/90 text-base leading-relaxed">
                                 {currentSymptom.details?.description}
                             </p>
                         </div>
@@ -415,9 +415,9 @@ export const DurationSeverityScreen: React.FC = () => {
                     {/* Main Navigation Row */}
                     <div className="flex flex-row items-center justify-between gap-2 sm:gap-4">
                         <NavigatorButton
-                            variant="ghost"
+                            variant="secondary"
                             onClick={handleBack}
-                            className="w-auto px-2 sm:px-4 text-sm sm:text-base"
+                            className="w-auto px-4 sm:px-6 text-sm sm:text-base bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 border-slate-900 dark:border-white"
                         >
                             Back
                         </NavigatorButton>

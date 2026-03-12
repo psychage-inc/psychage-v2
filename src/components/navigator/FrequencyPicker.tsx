@@ -31,7 +31,7 @@ export const FrequencyPicker: React.FC<FrequencyPickerProps> = ({ value, onChang
                         className={cn(
                             "p-4 sm:p-5 rounded-2xl border text-left transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 group flex items-start gap-4 backdrop-blur-xl",
                             isSelected
-                                ? "border-teal-500 bg-gradient-to-br from-teal-500 to-teal-600 shadow-md"
+                                ? "border-slate-900 dark:border-white bg-slate-900 dark:bg-white shadow-md"
                                 : "border-border bg-surface/50 hover:border-border-hover hover:bg-surface-hover/50"
                         )}
                     >
@@ -39,23 +39,23 @@ export const FrequencyPicker: React.FC<FrequencyPickerProps> = ({ value, onChang
                             className={cn(
                                 "flex-shrink-0 w-5 h-5 mt-0.5 rounded-full border-2 flex items-center justify-center transition-colors",
                                 isSelected
-                                    ? "border-white"
+                                    ? "border-white dark:border-slate-900"
                                     : "border-border-hover group-hover:border-border-hover"
                             )}
                         >
-                            {isSelected && <div className="w-2.5 h-2.5 rounded-full bg-white" />}
+                            {isSelected && <div className="w-2.5 h-2.5 rounded-full bg-white dark:bg-slate-900" />}
                         </div>
 
                         <div>
                             <p className={cn(
                                 "font-medium text-base transition-colors",
-                                isSelected ? "text-white" : "text-text-secondary group-hover:text-text-primary"
+                                isSelected ? "text-white dark:text-slate-900" : "text-text-secondary group-hover:text-text-primary"
                             )}>
                                 {option.label}
                             </p>
                             <p className={cn(
                                 "text-sm mt-0.5 transition-colors",
-                                isSelected ? "text-white/80" : "text-text-tertiary group-hover:text-text-secondary"
+                                isSelected ? "text-white/80 dark:text-slate-900/70" : "text-text-tertiary group-hover:text-text-secondary"
                             )}>
                                 {option.description}
                             </p>

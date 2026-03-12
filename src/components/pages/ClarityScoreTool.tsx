@@ -474,12 +474,10 @@ const ClarityScoreTool: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Timeframe context */}
-                <div className="bg-gray-50 dark:bg-gray-800/50 rounded-xl px-5 py-3 mb-8 border border-gray-200 dark:border-gray-700">
-                  <p className="text-base md:text-lg font-medium text-gray-700 dark:text-gray-300">
-                    {currentDomain.citation}
-                  </p>
-                </div>
+                {/* Timeframe context — integrated with question */}
+                <p className="text-sm font-medium text-teal-600 dark:text-teal-400 mb-3 uppercase tracking-wide">
+                  {currentDomain.citation}
+                </p>
 
                 {/* Question text */}
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-10 leading-tight">
@@ -512,7 +510,7 @@ const ClarityScoreTool: React.FC = () => {
                     <button
                       type="button"
                       onClick={handlePrevious}
-                      className="flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                      className="flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors"
                     >
                       <ChevronLeft size={18} />
                       Previous

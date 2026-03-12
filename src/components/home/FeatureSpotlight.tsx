@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Activity, ArrowRight, Lock, Shield, AlertTriangle } from 'lucide-react';
+import { ArrowRight, Lock, Shield, AlertTriangle, Compass } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import Button from '@/components/ui/Button';
 
@@ -15,14 +15,32 @@ const FeatureSpotlight: React.FC = () => {
 
     return (
         <section className="py-28 px-6 relative overflow-hidden">
-            {/* Immersive teal background */}
+            {/* Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-teal-950 via-teal-900 to-teal-800" />
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(20,184,166,0.2),_transparent_50%)]" />
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(13,148,136,0.15),_transparent_50%)]" />
 
             <div className="container mx-auto max-w-6xl relative z-10">
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                {/* Stats Row */}
+                <motion.div
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    className="grid grid-cols-3 gap-4 mb-16"
+                >
+                    {stats.map((stat) => (
+                        <div key={stat.label} className="text-center bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 py-6 px-4">
+                            <div className="text-3xl md:text-4xl font-display font-bold text-white mb-1">
+                                {stat.value}
+                            </div>
+                            <p className="text-xs text-teal-300/60">{stat.label}</p>
+                        </div>
+                    ))}
+                </motion.div>
 
+                {/* Main Content */}
+                <div className="grid lg:grid-cols-2 gap-16 items-center">
                     {/* Left: Content */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -30,13 +48,6 @@ const FeatureSpotlight: React.FC = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.5 }}
                     >
-                        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-teal-500/10 border border-teal-400/20 mb-6">
-                            <Activity className="w-3.5 h-3.5 text-teal-400" />
-                            <span className="text-xs font-semibold text-teal-300 tracking-wide">
-                                Most advanced tool
-                            </span>
-                        </div>
-
                         <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-5 tracking-tight leading-tight">
                             Understand your symptoms.{' '}
                             <span className="text-teal-400">Without giving up your privacy.</span>
@@ -67,11 +78,11 @@ const FeatureSpotlight: React.FC = () => {
                             rightIcon={<ArrowRight className="w-4 h-4" />}
                             onClick={() => navigate('/tools/symptom-navigator')}
                         >
-                            Try the Symptom Navigator
+                            Select the symptoms you're experiencing
                         </Button>
                     </motion.div>
 
-                    {/* Right: Visual Stats + Mini Demo */}
+                    {/* Right: Steps */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -79,32 +90,27 @@ const FeatureSpotlight: React.FC = () => {
                         transition={{ duration: 0.5, delay: 0.15 }}
                         className="relative"
                     >
-                        {/* Stats Card */}
                         <div className="bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl shadow-black/20 overflow-hidden">
-                            {/* Stats Row */}
-                            <div className="grid grid-cols-3 divide-x divide-white/10 border-b border-white/10">
-                                {stats.map((stat) => (
-                                    <div key={stat.label} className="p-6 text-center">
-                                        <div className="text-2xl md:text-3xl font-display font-bold text-white mb-1">
-                                            {stat.value}
-                                        </div>
-                                        <p className="text-xs text-teal-300/60">{stat.label}</p>
-                                    </div>
-                                ))}
-                            </div>
-
-                            {/* Mini Walkthrough Preview */}
                             <div className="p-6 md:p-8">
-                                <p className="text-xs font-semibold text-teal-400/50 uppercase tracking-wider mb-5">
-                                    How it works
-                                </p>
+                                <div className="flex items-center gap-3 mb-6">
+                                    <div className="w-10 h-10 rounded-xl bg-teal-500/15 flex items-center justify-center">
+                                        <Compass className="w-5 h-5 text-teal-400" />
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-semibold text-white">Symptom Navigator</p>
+                                        <p className="text-xs text-teal-300/50">3-step guided process</p>
+                                    </div>
+                                </div>
+
                                 <div className="space-y-4">
                                     {[
-                                        { step: '1', text: 'Select the symptoms you\'re experiencing', active: true },
-                                        { step: '2', text: 'Rate severity and duration for each', active: false },
-                                        { step: '3', text: 'Get matched conditions with confidence scores', active: false },
+                                        { step: '1', text: 'Select the symptoms you\'re experiencing', description: 'Choose from 106 mapped symptoms across 4 domains', active: true },
+                                        { step: '2', text: 'Rate severity and duration', description: 'Tell us how intense and how long you\'ve felt each symptom', active: false },
+                                        { step: '3', text: 'Get matched conditions', description: 'Receive confidence-scored results with recommended next steps', active: false },
                                     ].map((item) => (
-                                        <div key={item.step} className="flex items-center gap-4">
+                                        <div key={item.step} className={`flex items-start gap-4 p-4 rounded-xl transition-colors ${
+                                            item.active ? 'bg-teal-500/10 border border-teal-400/20' : 'bg-transparent'
+                                        }`}>
                                             <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold shrink-0 ${
                                                 item.active
                                                     ? 'bg-teal-500 text-teal-950'
@@ -112,13 +118,18 @@ const FeatureSpotlight: React.FC = () => {
                                             }`}>
                                                 {item.step}
                                             </div>
-                                            <span className={`text-sm ${
-                                                item.active
-                                                    ? 'text-white font-medium'
-                                                    : 'text-white/40'
-                                            }`}>
-                                                {item.text}
-                                            </span>
+                                            <div>
+                                                <span className={`text-sm block ${
+                                                    item.active ? 'text-white font-medium' : 'text-white/40'
+                                                }`}>
+                                                    {item.text}
+                                                </span>
+                                                <span className={`text-xs block mt-0.5 ${
+                                                    item.active ? 'text-teal-300/60' : 'text-white/20'
+                                                }`}>
+                                                    {item.description}
+                                                </span>
+                                            </div>
                                         </div>
                                     ))}
                                 </div>

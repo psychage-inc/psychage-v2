@@ -165,7 +165,7 @@ const App: React.FC = () => {
                                                     <HeroSection />
                                                     <HowItWorksSection />
                                                     <ProductShowcase />
-                                                    <UserTestimonials />
+                                                    {/* UserTestimonials removed per task cd1326b1 */}
                                                     <FeatureSpotlight />
                                                     <ContentPreview />
                                                     <LifestylePreview />

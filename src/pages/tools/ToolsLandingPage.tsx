@@ -3,14 +3,14 @@ import { motion } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import { toolService } from '@/services/toolService';
 import { Tool } from '@/types/models';
-import { BrainCircuit, PenTool, Moon, Wind, Users, ShieldAlert, ArrowRight, Lock, HelpCircle, CheckCircle2, LucideIcon } from 'lucide-react';
+import { BrainCircuit, PenTool, Moon, Wind, Users, ShieldAlert, HeartHandshake, ArrowRight, Lock, HelpCircle, CheckCircle2, LucideIcon } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import { Display, Text } from '@/components/ui/Typography';
 import SEO from '@/components/SEO';
 import { Card } from '@/components/ui/Card';
 
 const iconMap: Record<string, LucideIcon> = {
-    BrainCircuit, PenTool, Moon, Wind, Users, ShieldAlert
+    BrainCircuit, PenTool, Moon, Wind, Users, ShieldAlert, HeartHandshake
 };
 
 // Color mapping for Tailwind classes (can't use dynamic classes due to purging)
@@ -53,7 +53,7 @@ const ToolsLandingPage: React.FC = () => {
 
     return (
         <div className="min-h-screen bg-background pt-24 pb-20">
-            <SEO title="Mental Health Toolkit | Psychage" description="Clinically-validated tools and exercises." />
+            <SEO title="Mental Health Toolkit | Psychage" description="Evidence-informed tools and exercises designed to support your mental wellness." />
 
             {/* Hero */}
             <section className="px-6 mb-20 text-center">
@@ -62,7 +62,7 @@ const ToolsLandingPage: React.FC = () => {
                         Tools for your <span className="text-primary">mental fitness</span>.
                     </Display>
                     <Text className="text-xl max-w-2xl mx-auto mb-10">
-                        A collection of clinically-validated exercises to help you understand, manage, and optimize your cognitive state.
+                        A collection of evidence-informed exercises to help you understand, manage, and improve your mental wellness.
                     </Text>
                 </div>
             </section>
@@ -71,7 +71,7 @@ const ToolsLandingPage: React.FC = () => {
             <section className="px-6 mb-24">
                 <div className="container mx-auto max-w-5xl">
                     <Card className="bg-surface-elevated border-primary/20 shadow-2xl overflow-hidden relative">
-                        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 pointer-events-none" />
+                        <div className="absolute top-0 right-0 w-[min(500px,90vw)] h-[min(500px,90vw)] bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 pointer-events-none" />
                         <div className="p-8 md:p-12 md:flex items-center gap-12 relative z-10">
                             <div className="flex-1">
                                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-6">
@@ -80,7 +80,7 @@ const ToolsLandingPage: React.FC = () => {
                                 </div>
                                 <Display as="h2" className="text-4xl mb-4">Clarity Score™</Display>
                                 <Text className="text-lg mb-8">
-                                    Understand your mental baseline with our clinical-grade assessment. Measures depression, anxiety, and stress indicators in less than 2 minutes.
+                                    Understand your mental baseline with our evidence-informed assessment. Measures depression, anxiety, and stress indicators in less than 2 minutes.
                                 </Text>
                                 <div className="flex flex-wrap gap-4">
                                     <Button size="xl" onClick={() => navigate('/tools/clarity-score')}>
@@ -133,7 +133,8 @@ const ToolsLandingPage: React.FC = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {filteredTools.map((tool, index) => {
                             const Icon = iconMap[tool.iconName] || BrainCircuit;
-                            const link = tool.id === 1 ? '/tools/clarity-score' : tool.id === 2 ? '/tools/mood-journal' : tool.id === 3 ? '/tools/sleep-architect' : '#';
+                            const linkMap: Record<number, string> = { 1: '/tools/clarity-score', 2: '/tools/mood-journal', 3: '/tools/sleep-architect', 7: '/tools/symptom-navigator', 8: '/tools/mindmate', 9: '/tools/thought-reframer', 10: '/tools/clarity-journal', 11: '/tools/relationship-health' };
+                            const link = linkMap[tool.id] || '#';
                             const isLocked = link === '#';
 
                             return (

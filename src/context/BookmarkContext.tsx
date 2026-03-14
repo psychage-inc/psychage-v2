@@ -4,7 +4,8 @@ import { bookmarkService, Bookmark } from '../services/bookmarkService';
 
 interface BookmarkContextType {
   bookmarks: (string | number)[];
-  toggleBookmark: (id: string | number) => void;
+  /** Returns true if the bookmark was toggled. Returns false if auth is required. */
+  toggleBookmark: (id: string | number) => boolean;
   isBookmarked: (id: string | number) => boolean;
 }
 
@@ -15,18 +16,7 @@ export { BookmarkContext };
 
 export const BookmarkProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const { isAuthenticated, user } = useAuth();
-  const [bookmarks, setBookmarks] = useState<(string | number)[]>(() => {
-    try {
-      const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        if (Array.isArray(parsed)) return parsed;
-      }
-    } catch (e) {
-      console.error('Failed to parse bookmarks from storage', e);
-    }
-    return [];
-  });
+  const [bookmarks, setBookmarks] = useState<(string | number)[]>([]);
   const hydrated = useRef(false);
 
   // Hydrate from Supabase when user logs in
@@ -37,17 +27,8 @@ export const BookmarkProvider: React.FC<{ children: ReactNode }> = ({ children }
       try {
         const serverBookmarks = await bookmarkService.getAll(user.id);
         const serverIds = serverBookmarks.map((b: Bookmark) => b.resource_id);
-
-        // Merge: local bookmarks that aren't on server get synced up
-        const localOnly = bookmarks.filter(id => !serverIds.includes(String(id)));
-        for (const id of localOnly) {
-          await bookmarkService.add(user.id, 'article', String(id));
-        }
-
-        // Use server as source of truth (plus any just-synced locals)
-        const merged = [...new Set([...serverIds, ...localOnly.map(String)])];
-        setBookmarks(merged);
-        persistToLocalStorage(merged);
+        setBookmarks(serverIds);
+        persistToLocalStorage(serverIds);
         hydrated.current = true;
       } catch (error) {
         console.error('Failed to hydrate bookmarks from Supabase:', error);
@@ -55,16 +36,23 @@ export const BookmarkProvider: React.FC<{ children: ReactNode }> = ({ children }
     };
 
     hydrateFromSupabase();
-  }, [isAuthenticated, user?.id]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [isAuthenticated, user?.id]);
 
-  // Reset hydration flag on logout
+  // Clear bookmarks and reset hydration on logout
   useEffect(() => {
     if (!isAuthenticated) {
       hydrated.current = false;
+      setBookmarks([]);
+      localStorage.removeItem(STORAGE_KEY);
     }
   }, [isAuthenticated]);
 
-  const toggleBookmark = useCallback((id: string | number) => {
+  const toggleBookmark = useCallback((id: string | number): boolean => {
+    // Require authentication for bookmarks
+    if (!isAuthenticated || !user?.id) {
+      return false;
+    }
+
     setBookmarks(prev => {
       const exists = prev.includes(id);
       const newBookmarks = exists
@@ -73,15 +61,14 @@ export const BookmarkProvider: React.FC<{ children: ReactNode }> = ({ children }
 
       persistToLocalStorage(newBookmarks);
 
-      // Sync to Supabase in the background when authenticated
-      if (isAuthenticated && user?.id) {
-        bookmarkService.toggle(user.id, 'article', String(id)).catch(err => {
-          console.error('Failed to sync bookmark to Supabase:', err);
-        });
-      }
+      bookmarkService.toggle(user.id, 'article', String(id)).catch(err => {
+        console.error('Failed to sync bookmark to Supabase:', err);
+      });
 
       return newBookmarks;
     });
+
+    return true;
   }, [isAuthenticated, user?.id]);
 
   const isBookmarked = useCallback((id: string | number) => bookmarks.includes(id), [bookmarks]);

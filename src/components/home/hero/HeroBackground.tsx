@@ -38,7 +38,7 @@ const HeroBackground: React.FC = () => {
           rotate: [0, 45, 0]
         }}
         transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute -top-[20%] -left-[10%] w-[70vw] h-[70vw] rounded-full bg-teal-200/60 blur-[120px] mix-blend-multiply"
+        className="absolute -top-[20%] -left-[10%] w-[min(70vw,50rem)] h-[min(70vw,50rem)] rounded-full bg-teal-200/60 blur-[120px] mix-blend-multiply"
       />
 
       {/* Indigo (Right) */}
@@ -49,7 +49,7 @@ const HeroBackground: React.FC = () => {
           opacity: [0.5, 0.7, 0.5] // Increased opacity
         }}
         transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-[10%] -right-[10%] w-[60vw] h-[60vw] rounded-full bg-indigo-200/60 blur-[140px] mix-blend-multiply"
+        className="absolute top-[10%] -right-[10%] w-[min(60vw,44rem)] h-[min(60vw,44rem)] rounded-full bg-indigo-200/60 blur-[140px] mix-blend-multiply"
       />
 
       {/* Rose (Bottom) */}
@@ -60,7 +60,7 @@ const HeroBackground: React.FC = () => {
           opacity: [0.4, 0.6, 0.4] // Increased opacity
         }}
         transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute -bottom-[20%] left-[20%] w-[80vw] h-[50vw] rounded-full bg-rose-200/60 blur-[120px] mix-blend-multiply"
+        className="absolute -bottom-[20%] left-[20%] w-[min(80vw,56rem)] h-[min(50vw,35rem)] rounded-full bg-rose-200/60 blur-[120px] mix-blend-multiply"
       />
 
       {/* Noise Overlay for texture */}

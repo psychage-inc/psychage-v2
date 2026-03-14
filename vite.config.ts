@@ -13,19 +13,30 @@ export default defineConfig(() => {
     server: {
       port: 5173,
       host: '0.0.0.0',
+      watch: {
+        ignored: ['**/clarity-score/**'],
+      },
     },
     plugins: [react()],
     resolve: {
       alias: {
         '@': path.resolve(__dirname, './src'),
+        'react': path.resolve(__dirname, 'node_modules/react'),
+        'react-dom': path.resolve(__dirname, 'node_modules/react-dom'),
       },
       dedupe: ['react', 'react-dom'],
     },
     optimizeDeps: {
       include: ['react', 'react-dom', 'react/jsx-runtime', 'react/jsx-dev-runtime'],
+      exclude: ['clarity-score'],
+      entries: ['src/**/*.{ts,tsx}'],
     },
     build: {
       rollupOptions: {
+        input: {
+          main: path.resolve(__dirname, 'index.html'),
+          admin: path.resolve(__dirname, 'admin.html'),
+        },
         output: {
           manualChunks: {
             // Core React libraries
@@ -43,6 +54,22 @@ export default defineConfig(() => {
             'vendor-date': ['date-fns'],
             // i18n
             'vendor-i18n': ['i18next', 'react-i18next', 'i18next-browser-languagedetector'],
+            // Radix UI primitives
+            'vendor-radix': [
+              '@radix-ui/react-dialog',
+              '@radix-ui/react-alert-dialog',
+              '@radix-ui/react-accordion',
+              '@radix-ui/react-collapsible',
+              '@radix-ui/react-tabs',
+            ],
+            // Rich text editor (admin-only)
+            'vendor-editor': [
+              '@tiptap/react',
+              '@tiptap/starter-kit',
+              '@tiptap/extension-link',
+              '@tiptap/extension-image',
+              '@tiptap/extension-placeholder',
+            ],
           }
         }
       },

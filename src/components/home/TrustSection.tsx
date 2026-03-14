@@ -28,7 +28,7 @@ const pillars = [
 
 const TrustSection: React.FC = () => {
     return (
-        <section className="py-24 px-6 bg-white dark:bg-slate-950">
+        <section className="py-14 sm:py-16 lg:py-24 px-6 bg-white dark:bg-slate-950">
             <div className="container mx-auto max-w-5xl">
                 <motion.div
                     initial={{ opacity: 0, y: 16 }}

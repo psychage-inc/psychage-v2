@@ -7,6 +7,7 @@ import { articleService } from '../services/articleService';
 import { categoryService } from '../services/categoryService';
 import { Article, Category } from '../types/models';
 import ArticleCard from '../components/article/ArticleCard';
+import { getArticleUrl } from '../lib/articleUrl';
 const ArticleCategoryPage: React.FC = () => {
     const { categorySlug } = useParams<{ categorySlug: string }>();
     const navigate = useNavigate();
@@ -66,7 +67,7 @@ const ArticleCategoryPage: React.FC = () => {
             />
 
             {/* Hero Section */}
-            <section className={`relative pt-32 pb-20 px-6 min-h-[50vh] flex flex-col justify-center overflow-hidden`}>
+            <section className={`relative pt-32 pb-20 px-6 min-h-[30vh] sm:min-h-[40vh] lg:min-h-[50vh] flex flex-col justify-center overflow-hidden`}>
                                 {/* Category specific ambient glow */}
                 <div className={`absolute top-0 left-1/2 -translate-x-1/2 w-full h-full ${category.color} opacity-10 blur-[100px] pointer-events-none`} />
 
@@ -94,7 +95,7 @@ const ArticleCategoryPage: React.FC = () => {
                                 initial={{ y: 20, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
                                 transition={{ delay: 0.1 }}
-                                className="font-display font-bold text-5xl md:text-7xl text-text-primary mb-4"
+                                className="font-display font-bold text-4xl sm:text-5xl lg:text-7xl text-text-primary mb-4"
                             >
                                 {category.name}
                             </motion.h1>
@@ -133,7 +134,7 @@ const ArticleCategoryPage: React.FC = () => {
                                 >
                                     <ArticleCard
                                         article={article}
-                                        onClick={() => navigate(`/learn/article/${article.id}`)}
+                                        onClick={() => navigate(getArticleUrl(article))}
                                     />
                                 </motion.div>
                             ))}

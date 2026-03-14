@@ -40,14 +40,18 @@ ALTER TABLE providers ADD COLUMN IF NOT EXISTS application_id UUID REFERENCES pr
 -- RLS
 ALTER TABLE provider_applications ENABLE ROW LEVEL SECURITY;
 
-CREATE POLICY "admin_applications_all" ON provider_applications
-  FOR ALL USING (
-    EXISTS (SELECT 1 FROM admin_roles ar WHERE ar.user_id = auth.uid() AND ar.role IN ('super_admin', 'clinical_admin'))
-  );
-
--- Public can submit applications
-CREATE POLICY "public_applications_insert" ON provider_applications
-  FOR INSERT WITH CHECK (true);
+DO $$ BEGIN
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'admin_applications_all' AND tablename = 'provider_applications') THEN
+    CREATE POLICY "admin_applications_all" ON provider_applications
+      FOR ALL USING (
+        EXISTS (SELECT 1 FROM admin_roles ar WHERE ar.user_id = auth.uid() AND ar.role IN ('super_admin', 'clinical_admin'))
+      );
+  END IF;
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'public_applications_insert' AND tablename = 'provider_applications') THEN
+    CREATE POLICY "public_applications_insert" ON provider_applications
+      FOR INSERT WITH CHECK (true);
+  END IF;
+END $$;
 
 -- Indexes
 CREATE INDEX IF NOT EXISTS idx_provider_apps_status ON provider_applications(status);

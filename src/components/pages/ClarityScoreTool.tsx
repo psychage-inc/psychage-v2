@@ -10,6 +10,7 @@ import {
   MessageCircle,
   Save,
   CheckCircle2,
+  Calendar,
 } from 'lucide-react';
 import Button from '../ui/Button';
 import { Link } from 'react-router-dom';
@@ -251,7 +252,7 @@ const ClarityScoreTool: React.FC = () => {
 
   // --- Render ---
   return (
-    <div className="min-h-screen bg-background pt-24 pb-12 px-6 transition-colors duration-300">
+    <div className={`${step === 'intro' ? 'min-h-screen' : 'min-h-[60vh]'} bg-background pt-24 pb-12 px-6 transition-colors duration-300`}>
       <SEO
         title="Clarity Score Assessment | Psychage"
         description="A 20-question wellness check-in built on validated psychological instruments. Get a snapshot of your mental wellbeing across five dimensions."
@@ -474,13 +475,12 @@ const ClarityScoreTool: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Timeframe context — integrated with question */}
-                <p className="text-sm font-medium text-teal-600 dark:text-teal-400 mb-3 uppercase tracking-wide">
-                  {currentDomain.citation}
-                </p>
-
-                {/* Question text */}
+                {/* Question text with integrated time-period context */}
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-10 leading-tight">
+                  <span className="flex items-center gap-2 text-base font-semibold text-teal-600 dark:text-teal-400 mb-3">
+                    <Calendar size={16} className="shrink-0" />
+                    {currentDomain.citation}
+                  </span>
                   {currentQuestion.text}
                 </h2>
 
@@ -507,31 +507,40 @@ const ClarityScoreTool: React.FC = () => {
                 {/* Previous / Next navigation */}
                 <div className="flex items-center justify-between mt-10 pt-6 border-t border-gray-100 dark:border-gray-800">
                   {currentIndex > 0 ? (
-                    <button
+                    <motion.button
                       type="button"
                       onClick={handlePrevious}
-                      className="flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors"
+                      whileTap={{ scale: 0.97 }}
+                      className="flex items-center gap-1.5 px-5 py-3 rounded-xl text-sm font-semibold bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors"
                     >
                       <ChevronLeft size={18} />
                       Previous
-                    </button>
+                    </motion.button>
                   ) : (
                     <div />
                   )}
 
-                  <button
+                  <motion.button
                     type="button"
                     onClick={handleNext}
                     disabled={!isAnswered}
-                    className={`flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all ${
+                    whileTap={isAnswered ? { scale: 0.97 } : undefined}
+                    whileHover={isAnswered ? { scale: 1.02 } : undefined}
+                    className={`flex items-center gap-1.5 px-6 py-3 rounded-xl text-sm font-semibold transition-all ${
                       isAnswered
                         ? 'bg-teal-600 hover:bg-teal-700 text-white shadow-sm shadow-teal-600/20'
                         : 'bg-gray-100 dark:bg-gray-800 text-gray-400 dark:text-gray-500 cursor-not-allowed'
                     }`}
                   >
                     {isLastQuestion ? 'Finish' : 'Next'}
-                    <ChevronRight size={18} />
-                  </button>
+                    <motion.span
+                      className="inline-flex"
+                      animate={isAnswered ? { x: [0, 3, 0] } : { x: 0 }}
+                      transition={isAnswered ? { duration: 1.5, repeat: Infinity, repeatDelay: 2 } : undefined}
+                    >
+                      <ChevronRight size={18} />
+                    </motion.span>
+                  </motion.button>
                 </div>
               </motion.div>
             );
@@ -577,6 +586,45 @@ const ClarityScoreTool: React.FC = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
+              {/* Save to Dashboard — top placement */}
+              <div className="mb-4">
+                <AuthGate
+                  inline
+                  message="Sign in to save your Clarity Score and track your progress over time."
+                >
+                  <button
+                    onClick={handleSaveToDashboard}
+                    disabled={saving || saved}
+                    className={`w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm transition-all shadow-sm ${
+                      saved
+                        ? 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 cursor-default'
+                        : 'bg-teal-600 hover:bg-teal-700 text-white shadow-teal-600/20 disabled:opacity-60'
+                    }`}
+                  >
+                    {saved ? (
+                      <>
+                        <CheckCircle2 size={18} />
+                        Saved to Dashboard
+                      </>
+                    ) : saving ? (
+                      <>
+                        <motion.div
+                          className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full"
+                          animate={{ rotate: 360 }}
+                          transition={{ duration: 0.8, repeat: Infinity, ease: 'linear' }}
+                        />
+                        Saving...
+                      </>
+                    ) : (
+                      <>
+                        <Save size={18} />
+                        Save to Dashboard
+                      </>
+                    )}
+                  </button>
+                </AuthGate>
+              </div>
+
               <ClarityResultsDashboard
                 results={results}
                 recommendations={recommendations}
@@ -584,7 +632,7 @@ const ClarityScoreTool: React.FC = () => {
                 onRetake={resetAssessment}
               />
 
-              {/* Save to Dashboard — AuthGate wraps the save button */}
+              {/* Save to Dashboard — bottom placement */}
               <div className="mt-6">
                 <AuthGate
                   inline

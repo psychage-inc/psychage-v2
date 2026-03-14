@@ -119,7 +119,7 @@ export const articles: Article[] = [
           When to Seek Help
         </h2>
         <p className="mb-6">
-          Occasional anxiety is a normal part of life. However, you should consider speaking with a professional if:
+          Occasional anxiety is a normal part of life. However, it may be worth speaking with a professional if:
         </p>
         <ul className="list-disc list-inside space-y-2 mb-8 text-gray-700 dark:text-gray-300 ml-4">
           <li>Your anxiety interferes with your ability to work, study, or socialize.</li>

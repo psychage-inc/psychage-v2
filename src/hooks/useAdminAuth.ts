@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '@/lib/supabaseClient';
+import { mainUrl, isAdminDomain } from '@/lib/urls';
 import type { AdminRole, AdminUser } from '@/lib/admin/types';
 
 export function useAdminAuth(requiredRoles?: AdminRole[]) {
   const [adminUser, setAdminUser] = useState<AdminUser | null>(null);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
+  const onAdminDomain = isAdminDomain();
 
   useEffect(() => {
     let cancelled = false;
@@ -15,6 +17,7 @@ export function useAdminAuth(requiredRoles?: AdminRole[]) {
       const { data: { session } } = await supabase.auth.getSession();
 
       if (!session) {
+        // No session → login page (works on both domains since both have /login)
         if (!cancelled) navigate('/login', { replace: true });
         return;
       }
@@ -28,14 +31,24 @@ export function useAdminAuth(requiredRoles?: AdminRole[]) {
       if (cancelled) return;
 
       if (error || !roleData) {
-        navigate('/', { replace: true });
+        // Not an admin → send to main site home
+        if (!cancelled) {
+          if (onAdminDomain) {
+            window.location.href = mainUrl('/');
+          } else {
+            navigate('/', { replace: true });
+          }
+        }
         return;
       }
 
       const role = roleData.role as AdminRole;
 
       if (requiredRoles && !requiredRoles.includes(role)) {
-        navigate('/admin', { replace: true });
+        // Wrong admin sub-role → admin dashboard
+        if (!cancelled) {
+          navigate(onAdminDomain ? '/dashboard' : '/admin', { replace: true });
+        }
         return;
       }
 
@@ -50,7 +63,7 @@ export function useAdminAuth(requiredRoles?: AdminRole[]) {
     checkAdmin();
 
     return () => { cancelled = true; };
-  }, [navigate, requiredRoles]);
+  }, [navigate, requiredRoles, onAdminDomain]);
 
   return { adminUser, loading };
 }

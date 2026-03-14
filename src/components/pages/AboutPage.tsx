@@ -38,7 +38,7 @@ const AboutPage: React.FC = () => {
         <div className="min-h-screen bg-background pt-28 pb-20">
             <SEO
                 title="About Us - Psychage"
-                description="Learn about Psychage's mission to democratize access to mental clarity through evidence-based resources and clinical tools."
+                description="Learn about Psychage's mission to democratize access to mental clarity through evidence-based resources and evidence-informed tools."
             />
 
             {/* Hero */}
@@ -51,7 +51,7 @@ const AboutPage: React.FC = () => {
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-50 border border-teal-100 text-teal-800 font-bold text-xs uppercase tracking-widest mb-8">
                         Since 2024
                     </div>
-                    <h1 className="font-display font-bold text-5xl md:text-7xl text-gray-900 mb-8 tracking-tight leading-[1.1]">
+                    <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-7xl text-gray-900 mb-8 tracking-tight leading-[1.1]">
                         Democratizing access to <br />
                         <span className="text-teal-600">mental clarity.</span>
                     </h1>
@@ -63,7 +63,7 @@ const AboutPage: React.FC = () => {
 
             {/* Stats Grid */}
             <div className="bg-white border-y border-gray-100 py-16 mb-24">
-                <div className="container mx-auto px-6 max-w-[1200px]">
+                <div className="container mx-auto px-6 max-w-dashboard">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         {stats.map((stat, idx) => (
                             <div key={idx} className="text-center">
@@ -76,7 +76,7 @@ const AboutPage: React.FC = () => {
             </div>
 
             {/* Mission Section */}
-            <div className="container mx-auto px-6 max-w-[1200px] mb-24">
+            <div className="container mx-auto px-6 max-w-dashboard mb-24">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                     <div className="relative">
                         <div className="aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl shadow-teal-900/10">
@@ -134,7 +134,7 @@ const AboutPage: React.FC = () => {
 
             {/* Values */}
             <div className="bg-gray-900 text-white py-24 px-6">
-                <div className="container mx-auto max-w-[1200px]">
+                <div className="container mx-auto max-w-dashboard">
                     <div className="text-center mb-16">
                         <h2 className="font-display font-bold text-3xl md:text-4xl mb-4">Our Core Principles</h2>
                         <p className="text-gray-400 max-w-2xl mx-auto">The framework that guides every decision we make.</p>

@@ -48,7 +48,7 @@ export const DurationSeverityScreen: React.FC = () => {
 
     if (error) {
         return (
-            <div className="flex flex-col items-center justify-center min-h-[50vh] space-y-6 text-center px-4" role="alert">
+            <div className="flex flex-col items-center justify-center min-h-[30vh] sm:min-h-[40vh] lg:min-h-[50vh] space-y-6 text-center px-4" role="alert">
                 <div className="w-16 h-16 bg-crisis-red/10 rounded-full flex items-center justify-center">
                     <ShieldAlert className="w-8 h-8 text-crisis-red" />
                 </div>
@@ -68,7 +68,7 @@ export const DurationSeverityScreen: React.FC = () => {
 
     if (symptomsArray.length === 0) {
         return (
-            <div className="flex flex-col items-center justify-center min-h-[50vh] space-y-6 text-center px-4" role="alert">
+            <div className="flex flex-col items-center justify-center min-h-[30vh] sm:min-h-[40vh] lg:min-h-[50vh] space-y-6 text-center px-4" role="alert">
                 <h3 className="text-2xl font-display text-text-primary mb-2">No symptoms selected</h3>
                 <p className="text-text-secondary max-w-md">You haven't selected any symptoms to provide details for.</p>
                 <NavigatorButton

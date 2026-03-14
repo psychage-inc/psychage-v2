@@ -87,6 +87,7 @@ export interface DimensionTierContent {
   concerns?: string[];
   actions: string[];
   toolLink?: { label: string; path: string };
+  context?: string;
 }
 
 export const DIMENSION_CONTENT: Record<
@@ -105,6 +106,8 @@ export const DIMENSION_CONTENT: Record<
         'Continue practices that support emotional balance',
         'Consider sharing your strategies with others who may benefit',
       ],
+      context:
+        'The PHQ-4 screens for both depression and anxiety. Your low scores indicate strong emotional regulation — a protective factor across all areas of wellness.',
     },
     balanced: {
       strengths: [
@@ -120,6 +123,8 @@ export const DIMENSION_CONTENT: Record<
         label: 'Try the Clarity Journal for daily emotional tracking',
         path: '/tools/clarity-journal',
       },
+      context:
+        'Your PHQ-4 scores are in the mild range. Occasional emotional dips are normal, but monitoring patterns helps catch early signals.',
     },
     struggling: {
       strengths: ['Awareness that emotions are difficult right now is a strength'],
@@ -135,6 +140,8 @@ export const DIMENSION_CONTENT: Record<
         label: 'Use the Thought Reframer to identify unhelpful thought patterns',
         path: '/tools/thought-reframer',
       },
+      context:
+        'Moderate PHQ-4 scores suggest meaningful emotional difficulty. These symptoms often respond well to structured interventions.',
     },
     distressed: {
       concerns: [
@@ -147,6 +154,8 @@ export const DIMENSION_CONTENT: Record<
         'Crisis resources are available if you need immediate support',
         'Small daily routines can provide anchoring stability',
       ],
+      context:
+        'Your PHQ-4 scores indicate significant depressive or anxiety symptoms. Professional assessment can help clarify next steps.',
     },
     crisis: {
       concerns: ['Severe emotional distress requiring immediate attention'],
@@ -154,6 +163,8 @@ export const DIMENSION_CONTENT: Record<
         'Please reach out to a crisis helpline or trusted person now',
         'You do not have to navigate this alone — support is available',
       ],
+      context:
+        'PHQ-4 scores at this level warrant immediate professional attention. Crisis support is available 24/7.',
     },
   },
 
@@ -169,6 +180,8 @@ export const DIMENSION_CONTENT: Record<
         'Maintain the routines that support your well-being',
         'Consider exploring new interests to keep engagement high',
       ],
+      context:
+        'The WHO-5 is one of the most sensitive measures of subjective wellbeing. Your high score reflects genuine psychological wellness.',
     },
     balanced: {
       strengths: [
@@ -184,6 +197,8 @@ export const DIMENSION_CONTENT: Record<
         label: 'Try the Sleep Architect to optimize your rest',
         path: '/tools/sleep-architect',
       },
+      context:
+        'Your WHO-5 suggests adequate wellbeing with some variability. Tracking which days feel better can reveal useful patterns.',
     },
     struggling: {
       strengths: ['Still engaging with daily tasks despite difficulty'],
@@ -195,6 +210,8 @@ export const DIMENSION_CONTENT: Record<
         'Consider scheduling one enjoyable activity each day, even something small',
         'Mindfulness or relaxation exercises may help restore a sense of calm',
       ],
+      context:
+        'A WHO-5 percentage below 50% often signals the need for clinical screening. This does not mean something is wrong — it means attention is warranted.',
     },
     distressed: {
       concerns: [
@@ -207,6 +224,8 @@ export const DIMENSION_CONTENT: Record<
         'Gentle physical activity, even a short walk, can improve well-being scores',
         'Consider whether your environment supports your well-being',
       ],
+      context:
+        'WHO-5 scores at this level are associated with risk of clinical depression. This is a signal, not a diagnosis.',
     },
     crisis: {
       concerns: ['Severely low well-being across multiple indicators'],
@@ -214,6 +233,8 @@ export const DIMENSION_CONTENT: Record<
         'Please connect with a mental health professional or crisis resource',
         'You deserve support — reaching out is a sign of strength',
       ],
+      context:
+        'Severely low WHO-5 scores require professional assessment. Your wellbeing matters and support is available.',
     },
   },
 
@@ -229,6 +250,8 @@ export const DIMENSION_CONTENT: Record<
         'Continue nurturing the connections that matter to you',
         'Consider mentoring or supporting someone who may be isolated',
       ],
+      context:
+        'The UCLA Loneliness Scale measures perceived social isolation. Your low score indicates meaningful social connection — a key protective factor for mental health.',
     },
     balanced: {
       strengths: [
@@ -240,6 +263,8 @@ export const DIMENSION_CONTENT: Record<
         'Explore one new social activity or community group',
         'Deepen existing friendships by reaching out more intentionally',
       ],
+      context:
+        'Some loneliness is normal and temporary. Your UCLA-3 scores suggest adequate connection with room to deepen relationships.',
     },
     struggling: {
       strengths: ['Awareness of social needs is an important first step'],
@@ -255,6 +280,8 @@ export const DIMENSION_CONTENT: Record<
         label: 'Track your social patterns in the Clarity Journal',
         path: '/tools/clarity-journal',
       },
+      context:
+        'UCLA-3 scores in this range indicate genuine feelings of disconnection. Social isolation is a modifiable risk factor — small changes can help.',
     },
     distressed: {
       concerns: [
@@ -267,6 +294,8 @@ export const DIMENSION_CONTENT: Record<
         'Community resources and peer support groups can provide a low-pressure starting point',
         'Consider whether past experiences are making connection feel unsafe',
       ],
+      context:
+        'Significant loneliness affects mental and physical health. Research shows that even one close connection can meaningfully reduce these effects.',
     },
     crisis: {
       concerns: ['Severe social isolation requiring immediate attention'],
@@ -274,6 +303,8 @@ export const DIMENSION_CONTENT: Record<
         'Please reach out to a helpline or trusted person — you are not alone',
         'Crisis text lines and chat services provide anonymous connection',
       ],
+      context:
+        'Severe social isolation requires active intervention. Crisis lines provide immediate human connection while longer-term support is arranged.',
     },
   },
 
@@ -289,6 +320,8 @@ export const DIMENSION_CONTENT: Record<
         'Continue stress management practices that work for you',
         'Consider exploring advanced relaxation or mindfulness techniques',
       ],
+      context:
+        'The PSS-4 measures perceived stress rather than counting stressors. Your low score suggests strong coping mechanisms and sense of control.',
     },
     balanced: {
       strengths: [
@@ -304,6 +337,8 @@ export const DIMENSION_CONTENT: Record<
         label: 'Try the Sleep Architect to reduce stress-related sleep issues',
         path: '/tools/sleep-architect',
       },
+      context:
+        'Moderate stress is normal and can be motivating. Your PSS-4 suggests manageable levels with occasional overwhelm.',
     },
     struggling: {
       strengths: ['Still managing core responsibilities despite stress'],
@@ -319,6 +354,8 @@ export const DIMENSION_CONTENT: Record<
         label: 'Use the Thought Reframer to challenge stress-driven thinking',
         path: '/tools/thought-reframer',
       },
+      context:
+        'Elevated PSS-4 scores mean stress is starting to feel unmanageable. Stress management interventions are among the most effective in mental health.',
     },
     distressed: {
       concerns: [
@@ -331,6 +368,8 @@ export const DIMENSION_CONTENT: Record<
         'Prioritize sleep, nutrition, and physical activity — these reduce stress biologically',
         'Consider whether your current commitments are sustainable',
       ],
+      context:
+        'High perceived stress affects cognition, sleep, and physical health. Professional guidance can help build a sustainable stress management plan.',
     },
     crisis: {
       concerns: ['Overwhelming stress requiring immediate support'],
@@ -338,6 +377,8 @@ export const DIMENSION_CONTENT: Record<
         'Please reach out to a crisis resource or mental health professional',
         'Even one conversation with a trusted person can help reduce the weight',
       ],
+      context:
+        'Overwhelming stress at this level needs immediate support. No one should navigate this alone.',
     },
   },
 
@@ -353,6 +394,8 @@ export const DIMENSION_CONTENT: Record<
         'Continue routines that support your daily functioning',
         'Consider whether there are areas you want to grow into, not just maintain',
       ],
+      context:
+        'Your daily functioning is well-maintained. Strong functioning is both a result of and a contributor to overall wellness.',
     },
     balanced: {
       strengths: [
@@ -368,6 +411,8 @@ export const DIMENSION_CONTENT: Record<
         label: 'Use the Clarity Journal to track daily functioning patterns',
         path: '/tools/clarity-journal',
       },
+      context:
+        'Some functional variability is normal. Tracking harder days can reveal whether specific dimensions are driving the difficulty.',
     },
     struggling: {
       strengths: ['Still showing up despite functional challenges'],
@@ -379,6 +424,8 @@ export const DIMENSION_CONTENT: Record<
         'Consider simplifying your routine to focus on essentials',
         'Speaking with a professional can help identify what is getting in the way',
       ],
+      context:
+        'When functioning is impacted, it often reflects underlying challenges in other dimensions. Addressing root causes typically restores functioning.',
     },
     distressed: {
       concerns: [
@@ -391,6 +438,8 @@ export const DIMENSION_CONTENT: Record<
         'Focus on basic self-care: sleep, nutrition, hygiene',
         'Let trusted people know you need support — accepting help is not weakness',
       ],
+      context:
+        'Significant functional impairment suggests that symptoms are affecting your ability to live the life you want. Professional support can help.',
     },
     crisis: {
       concerns: ['Severe functional impairment requiring immediate support'],
@@ -398,6 +447,8 @@ export const DIMENSION_CONTENT: Record<
         'Please connect with a mental health professional or crisis resource now',
         'Basic safety and self-care are the priority — everything else can wait',
       ],
+      context:
+        'Severe functional impairment requires immediate professional attention. Focus on safety and basic needs first.',
     },
   },
 };

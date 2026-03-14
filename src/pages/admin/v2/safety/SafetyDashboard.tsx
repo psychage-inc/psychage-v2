@@ -4,6 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import { ShieldAlert, ShieldCheck, AlertTriangle, Eye, ArrowRight } from 'lucide-react';
 import { supabase } from '@/lib/supabaseClient';
 import PageHeader from '@/components/admin/PageHeader';
+import { adminPath } from '@/hooks/useAdminNavigate';
 
 const AdminSafetyDashboard: React.FC = () => {
   const { data: keywordCounts } = useQuery({
@@ -77,7 +78,7 @@ const AdminSafetyDashboard: React.FC = () => {
       {/* Quick links */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <Link
-          to="/admin/safety/keywords"
+          to={adminPath('/safety/keywords')}
           className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-5 hover:border-teal-300 dark:hover:border-teal-700 transition-colors group"
         >
           <div className="flex items-center justify-between">
@@ -89,7 +90,7 @@ const AdminSafetyDashboard: React.FC = () => {
           </div>
         </Link>
         <Link
-          to="/admin/safety/conversations"
+          to={adminPath('/safety/conversations')}
           className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-5 hover:border-teal-300 dark:hover:border-teal-700 transition-colors group"
         >
           <div className="flex items-center justify-between">

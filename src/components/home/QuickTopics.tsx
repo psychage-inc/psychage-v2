@@ -94,7 +94,7 @@ const QuickTopics: React.FC = () => {
     if (topics.length === 0) return null;
 
     return (
-        <section className="py-24 px-6 relative overflow-hidden">
+        <section className="py-14 sm:py-16 lg:py-24 px-6 relative overflow-hidden">
             {/* Background Elements */}
             <div className="absolute inset-0 bg-slate-50/50" />
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-50/40 via-transparent to-transparent pointer-events-none" />

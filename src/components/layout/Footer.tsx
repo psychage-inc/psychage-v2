@@ -80,7 +80,7 @@ const Footer: React.FC = () => {
         <CrisisBanner />
       </div>
 
-      <div className="container mx-auto px-6 pt-24 max-w-[1600px] relative z-20 flex-grow flex flex-col">
+      <div className="container mx-auto px-6 pt-24 max-w-wide relative z-20 flex-grow flex flex-col">
 
         {/* Footer Hero / Statement */}
         <div className="flex flex-col lg:flex-row justify-between items-start mb-24 gap-12">
@@ -91,7 +91,7 @@ const Footer: React.FC = () => {
             viewport={{ once: true }}
             className="max-w-4xl"
           >
-            <h2 className="font-display font-bold text-5xl md:text-8xl tracking-tight leading-[0.9] mb-8 text-gray-900">
+            <h2 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-8xl tracking-tight leading-[0.9] mb-8 text-gray-900">
               Mental health <br />
               <span className="text-gray-500">is just health.</span>
             </h2>
@@ -199,7 +199,7 @@ const Footer: React.FC = () => {
 
       {/* Footer Watermark - large brand anchor like hims.com */}
       <div className="w-full flex justify-center items-end select-none pointer-events-none pb-4">
-        <h1 className="font-display font-black text-[20vw] leading-none text-gray-200 dark:text-gray-800 tracking-tighter whitespace-nowrap">
+        <h1 className="font-display font-black text-[clamp(4rem,15vw,20rem)] leading-none text-gray-200 dark:text-gray-800 tracking-tighter whitespace-nowrap">
           psychage
         </h1>
       </div>

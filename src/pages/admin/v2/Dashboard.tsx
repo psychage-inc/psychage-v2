@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import {
   Users, ClipboardCheck, MessageSquare, ShieldAlert,
   UserCheck, FileText, TrendingUp, TrendingDown,
+  Newspaper, Star, AlertCircle, Clock,
 } from 'lucide-react';
 import {
   ResponsiveContainer, AreaChart, Area, BarChart, Bar,
@@ -10,8 +12,10 @@ import {
 } from 'recharts';
 import { formatDistanceToNow } from 'date-fns';
 import { supabase } from '@/lib/supabaseClient';
+import { getArticleStats, getArticlesNeedingAttention } from '@/services/articleAdminService';
 import PageHeader from '@/components/admin/PageHeader';
 import AdminStatusBadge from '@/components/admin/StatusBadge';
+import { adminPath } from '@/hooks/useAdminNavigate';
 
 // ============================================================
 // Metric Card
@@ -169,7 +173,110 @@ const actionColors: Record<string, string> = {
   approve: 'bg-green-500',
   reject: 'bg-red-500',
   setting_change: 'bg-amber-500',
+  status_change: 'bg-purple-500',
+  rating_update: 'bg-indigo-500',
+  comment: 'bg-cyan-500',
 };
+
+// ============================================================
+// Article Metrics Section
+// ============================================================
+
+function ArticleMetrics() {
+  const { data: stats, isLoading } = useQuery({
+    queryKey: ['admin', 'article-stats'],
+    queryFn: getArticleStats,
+  });
+
+  const { data: attention } = useQuery({
+    queryKey: ['admin', 'articles-attention'],
+    queryFn: getArticlesNeedingAttention,
+  });
+
+  const totalAttention =
+    (attention?.stuckInReview.length || 0) +
+    (attention?.unresolvedCritical.length || 0) +
+    (attention?.staleRejections.length || 0);
+
+  return (
+    <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-5">
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-sm font-semibold text-gray-900 dark:text-white">Article Pipeline</h3>
+        <Link to={adminPath('/articles')} className="text-xs text-teal-600 hover:text-teal-700 font-medium">
+          View All
+        </Link>
+      </div>
+
+      {isLoading ? (
+        <div className="h-20 bg-gray-100 dark:bg-slate-800 rounded animate-pulse" />
+      ) : (
+        <>
+          <div className="grid grid-cols-4 gap-3 mb-4">
+            <div className="text-center">
+              <div className="text-xl font-bold text-gray-900 dark:text-white">{stats?.in_review ?? 0}</div>
+              <div className="text-xs text-gray-500">In Review</div>
+            </div>
+            <div className="text-center">
+              <div className="text-xl font-bold text-gray-900 dark:text-white">{stats?.approved ?? 0}</div>
+              <div className="text-xs text-gray-500">Approved</div>
+            </div>
+            <div className="text-center">
+              <div className="text-xl font-bold text-gray-900 dark:text-white">{stats?.published ?? 0}</div>
+              <div className="text-xs text-gray-500">Published</div>
+            </div>
+            <div className="text-center">
+              <div className="text-xl font-bold text-amber-500">{stats?.avg_rating ?? '—'}</div>
+              <div className="text-xs text-gray-500">Avg Rating</div>
+            </div>
+          </div>
+
+          {/* Status bar */}
+          {stats && stats.total > 0 && (
+            <div className="flex h-2 rounded-full overflow-hidden bg-gray-100 dark:bg-slate-800 mb-4">
+              {stats.published > 0 && (
+                <div className="bg-emerald-500" style={{ width: `${(stats.published / stats.total) * 100}%` }} />
+              )}
+              {stats.approved > 0 && (
+                <div className="bg-blue-500" style={{ width: `${(stats.approved / stats.total) * 100}%` }} />
+              )}
+              {stats.in_review > 0 && (
+                <div className="bg-amber-500" style={{ width: `${(stats.in_review / stats.total) * 100}%` }} />
+              )}
+              {stats.draft > 0 && (
+                <div className="bg-gray-400" style={{ width: `${(stats.draft / stats.total) * 100}%` }} />
+              )}
+              {stats.rejected > 0 && (
+                <div className="bg-red-500" style={{ width: `${(stats.rejected / stats.total) * 100}%` }} />
+              )}
+            </div>
+          )}
+
+          {/* Needs attention */}
+          {totalAttention > 0 && (
+            <div className="space-y-2">
+              <div className="flex items-center gap-2 text-xs font-medium text-amber-600 dark:text-amber-400">
+                <AlertCircle size={14} />
+                Needs Attention
+              </div>
+              {(attention?.stuckInReview.length || 0) > 0 && (
+                <div className="flex items-center gap-2 text-xs text-gray-600 dark:text-slate-400">
+                  <Clock size={12} />
+                  {attention!.stuckInReview.length} article{attention!.stuckInReview.length !== 1 ? 's' : ''} stuck in review (&gt;7 days)
+                </div>
+              )}
+              {(attention?.staleRejections.length || 0) > 0 && (
+                <div className="flex items-center gap-2 text-xs text-gray-600 dark:text-slate-400">
+                  <AlertCircle size={12} />
+                  {attention!.staleRejections.length} rejected article{attention!.staleRejections.length !== 1 ? 's' : ''} not resubmitted
+                </div>
+              )}
+            </div>
+          )}
+        </>
+      )}
+    </div>
+  );
+}
 
 const ActivityFeed: React.FC<{ entries: AuditEntry[]; loading: boolean }> = ({ entries, loading }) => (
   <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-5">
@@ -251,8 +358,11 @@ const AdminDashboardV2: React.FC = () => {
         )}
       </div>
 
-      {/* Activity Feed */}
-      <ActivityFeed entries={activity || []} loading={activityLoading} />
+      {/* Article pipeline + Activity Feed */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <ArticleMetrics />
+        <ActivityFeed entries={activity || []} loading={activityLoading} />
+      </div>
     </div>
   );
 };

@@ -59,6 +59,12 @@ CREATE TABLE IF NOT EXISTS navigator_publish_log (
   created_at TIMESTAMPTZ DEFAULT NOW()
 );
 
+-- Add columns that may be missing if tables were created by an earlier migration
+ALTER TABLE symptoms ADD COLUMN IF NOT EXISTS domain TEXT;
+ALTER TABLE symptoms ADD COLUMN IF NOT EXISTS is_active BOOLEAN DEFAULT TRUE;
+ALTER TABLE conditions ADD COLUMN IF NOT EXISTS category TEXT;
+ALTER TABLE conditions ADD COLUMN IF NOT EXISTS is_active BOOLEAN DEFAULT TRUE;
+
 -- Indexes
 CREATE INDEX IF NOT EXISTS idx_symptoms_domain ON symptoms(domain);
 CREATE INDEX IF NOT EXISTS idx_symptoms_active ON symptoms(is_active);
@@ -74,23 +80,43 @@ ALTER TABLE symptom_condition_mappings ENABLE ROW LEVEL SECURITY;
 ALTER TABLE navigator_publish_log ENABLE ROW LEVEL SECURITY;
 
 -- Public read for active data
-CREATE POLICY "public_symptoms_read" ON symptoms FOR SELECT USING (is_active = true);
-CREATE POLICY "public_conditions_read" ON conditions FOR SELECT USING (is_active = true);
-CREATE POLICY "public_mappings_read" ON symptom_condition_mappings FOR SELECT USING (true);
-CREATE POLICY "admin_publish_log_read" ON navigator_publish_log FOR SELECT USING (
-  EXISTS (SELECT 1 FROM admin_roles ar WHERE ar.user_id = auth.uid())
-);
+DO $$ BEGIN
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'public_symptoms_read' AND tablename = 'symptoms') THEN
+    CREATE POLICY "public_symptoms_read" ON symptoms FOR SELECT USING (is_active = true);
+  END IF;
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'public_conditions_read' AND tablename = 'conditions') THEN
+    CREATE POLICY "public_conditions_read" ON conditions FOR SELECT USING (is_active = true);
+  END IF;
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'public_mappings_read' AND tablename = 'symptom_condition_mappings') THEN
+    CREATE POLICY "public_mappings_read" ON symptom_condition_mappings FOR SELECT USING (true);
+  END IF;
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'admin_publish_log_read' AND tablename = 'navigator_publish_log') THEN
+    CREATE POLICY "admin_publish_log_read" ON navigator_publish_log FOR SELECT USING (
+      EXISTS (SELECT 1 FROM admin_roles ar WHERE ar.user_id = auth.uid())
+    );
+  END IF;
+END $$;
 
 -- Admin write
-CREATE POLICY "admin_symptoms_write" ON symptoms FOR ALL USING (
-  EXISTS (SELECT 1 FROM admin_roles ar WHERE ar.user_id = auth.uid() AND ar.role IN ('super_admin', 'clinical_admin'))
-);
-CREATE POLICY "admin_conditions_write" ON conditions FOR ALL USING (
-  EXISTS (SELECT 1 FROM admin_roles ar WHERE ar.user_id = auth.uid() AND ar.role IN ('super_admin', 'clinical_admin'))
-);
-CREATE POLICY "admin_mappings_write" ON symptom_condition_mappings FOR ALL USING (
-  EXISTS (SELECT 1 FROM admin_roles ar WHERE ar.user_id = auth.uid() AND ar.role IN ('super_admin', 'clinical_admin'))
-);
-CREATE POLICY "admin_publish_log_write" ON navigator_publish_log FOR INSERT WITH CHECK (
-  EXISTS (SELECT 1 FROM admin_roles ar WHERE ar.user_id = auth.uid())
-);
+DO $$ BEGIN
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'admin_symptoms_write' AND tablename = 'symptoms') THEN
+    CREATE POLICY "admin_symptoms_write" ON symptoms FOR ALL USING (
+      EXISTS (SELECT 1 FROM admin_roles ar WHERE ar.user_id = auth.uid() AND ar.role IN ('super_admin', 'clinical_admin'))
+    );
+  END IF;
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'admin_conditions_write' AND tablename = 'conditions') THEN
+    CREATE POLICY "admin_conditions_write" ON conditions FOR ALL USING (
+      EXISTS (SELECT 1 FROM admin_roles ar WHERE ar.user_id = auth.uid() AND ar.role IN ('super_admin', 'clinical_admin'))
+    );
+  END IF;
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'admin_mappings_write' AND tablename = 'symptom_condition_mappings') THEN
+    CREATE POLICY "admin_mappings_write" ON symptom_condition_mappings FOR ALL USING (
+      EXISTS (SELECT 1 FROM admin_roles ar WHERE ar.user_id = auth.uid() AND ar.role IN ('super_admin', 'clinical_admin'))
+    );
+  END IF;
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'admin_publish_log_write' AND tablename = 'navigator_publish_log') THEN
+    CREATE POLICY "admin_publish_log_write" ON navigator_publish_log FOR INSERT WITH CHECK (
+      EXISTS (SELECT 1 FROM admin_roles ar WHERE ar.user_id = auth.uid())
+    );
+  END IF;
+END $$;

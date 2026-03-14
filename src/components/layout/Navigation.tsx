@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { motion, AnimatePresence, LayoutGroup } from 'framer-motion';
 import { Search, Menu, ChevronDown, User, X, LogOut, LayoutDashboard, Settings } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import NavMenu from './NavMenu';
 import MobileMenu from './MobileMenu';
 import Button from '../ui/Button';
@@ -10,6 +10,7 @@ import { useAuth } from '../../context/AuthContext';
 import { navigationConfig } from '../../config/navigation';
 import { useNavPermissions } from '../../hooks/useNavPermissions';
 import type { NavItem } from '../../types/navigation';
+// import LanguageSwitcher from '../ui/LanguageSwitcher'; // Hidden for English-only launch
 
 const Navigation: React.FC = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -154,9 +155,9 @@ const Navigation: React.FC = () => {
                     onMouseLeave={() => setHoveredLink(null)}
                 >
                     {/* Logo */}
-                    <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigate('/')}>
+                    <Link to="/" className="flex items-center gap-3" aria-label="Psychage home">
                         <Logo className="h-12 w-auto text-[#1A1A1A] dark:text-white" />
-                    </div>
+                    </Link>
 
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex items-center gap-1" role="navigation" aria-label="Main navigation">
@@ -227,6 +228,11 @@ const Navigation: React.FC = () => {
                         >
                             {isSearchOpen ? <X size={20} aria-hidden="true" /> : <Search size={20} aria-hidden="true" />}
                         </button>
+
+                        {/* Language switcher hidden for English-only launch — uncomment when i18n re-enabled */}
+                        {/* <div className="hidden md:flex">
+                            <LanguageSwitcher />
+                        </div> */}
 
                         {/* Crisis Support Button */}
                         <button

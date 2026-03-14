@@ -109,7 +109,7 @@ export const ProcessingScreen: React.FC = () => {
     if (processingError) {
         return (
             <div
-                className="max-w-xl mx-auto py-24 px-4 sm:px-6 flex flex-col items-center justify-center min-h-[50vh] text-center space-y-6"
+                className="max-w-xl mx-auto py-24 px-4 sm:px-6 flex flex-col items-center justify-center min-h-[30vh] sm:min-h-[40vh] lg:min-h-[50vh] text-center space-y-6"
                 role="alert"
             >
                 <div className="w-16 h-16 bg-crisis-red/10 rounded-full flex items-center justify-center">
@@ -146,7 +146,7 @@ export const ProcessingScreen: React.FC = () => {
     const strokeOffset = RING_CIRCUMFERENCE - (progress / 100) * RING_CIRCUMFERENCE;
 
     return (
-        <div className="max-w-xl mx-auto py-24 px-4 sm:px-6 flex flex-col items-center justify-center min-h-[60vh] text-center">
+        <div className="max-w-xl mx-auto py-24 px-4 sm:px-6 flex flex-col items-center justify-center min-h-[40vh] sm:min-h-[50vh] lg:min-h-[60vh] text-center">
             {/* Progress ring with percentage */}
             <div className="relative w-28 h-28 mb-8">
                 <svg className="w-full h-full -rotate-90" viewBox="0 0 100 100">

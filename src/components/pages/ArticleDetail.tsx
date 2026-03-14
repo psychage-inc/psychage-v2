@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowLeft } from 'lucide-react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { articleService } from '../../services/articleService';
 import { Article } from '../../types/models';
 import ReadingProgress from '../article/ReadingProgress';
@@ -11,6 +11,7 @@ import Disclaimer from '../article/Disclaimer';
 import ReferenceList from '../article/ReferenceList';
 import CrisisResources from '../layout/CrisisResources';
 import SEO from '../SEO';
+import { getArticleUrl } from '../../lib/articleUrl';
 
 const ArticleDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -25,7 +26,12 @@ const ArticleDetail: React.FC = () => {
         setLoading(true);
         try {
           const foundArticle = await articleService.getById(id);
-          setArticle(foundArticle);
+          // Defense-in-depth: only render published articles on public site
+          if (foundArticle?.status && foundArticle.status !== 'published') {
+            setArticle(undefined);
+          } else {
+            setArticle(foundArticle);
+          }
 
           const allArticles = await articleService.getAll();
           setRelatedArticles(allArticles.filter(a => a.id.toString() !== id).slice(0, 3));
@@ -86,7 +92,7 @@ const ArticleDetail: React.FC = () => {
       </div>
 
       {/* Main Layout */}
-      <main className="container mx-auto max-w-[1280px] px-6 pb-24">
+      <main className="container mx-auto max-w-content px-6 pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
 
           {/* Sidebar (TOC) */}
@@ -130,7 +136,7 @@ const ArticleDetail: React.FC = () => {
               <h3 className="font-bold text-gray-900 dark:text-white mb-6 text-sm uppercase tracking-wider">Related Articles</h3>
               <div className="space-y-6">
                 {relatedArticles.map(rel => (
-                  <div key={rel.id} className="group cursor-pointer" onClick={() => navigate(`/learn/article/${rel.id}`)}>
+                  <Link key={rel.id} to={getArticleUrl(rel)} className="group block">
                     <div className="aspect-video rounded-lg overflow-hidden mb-3">
                       <img src={rel.image} alt={rel.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     </div>
@@ -140,7 +146,7 @@ const ArticleDetail: React.FC = () => {
                     <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2">
                       {rel.description}
                     </p>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -154,7 +160,7 @@ const ArticleDetail: React.FC = () => {
 
       {/* Related Articles (Mobile/Bottom) */}
       <section className="bg-gray-50 dark:bg-[#0a0a0a] py-24 px-6 border-t border-gray-200 dark:border-gray-800 lg:hidden">
-        <div className="container mx-auto max-w-[1280px]">
+        <div className="container mx-auto max-w-content">
           <h3 className="font-display font-bold text-3xl text-gray-900 dark:text-white mb-12">Related Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {relatedArticles.map(rel => (

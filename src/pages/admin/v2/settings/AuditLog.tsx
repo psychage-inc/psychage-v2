@@ -1,16 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { type ColumnDef } from '@tanstack/react-table';
-import { Download } from 'lucide-react';
-import { formatDistanceToNow, format } from 'date-fns';
+import { Download, Filter } from 'lucide-react';
+import { formatDistanceToNow, format, subDays } from 'date-fns';
 import { supabase } from '@/lib/supabaseClient';
 import type { AuditLogEntry } from '@/lib/admin/types';
 import PageHeader from '@/components/admin/PageHeader';
 import DataTable from '@/components/admin/DataTable';
 import AdminStatusBadge from '@/components/admin/StatusBadge';
 
+const ACTION_TYPES = ['all', 'create', 'update', 'delete', 'publish', 'approve', 'reject', 'status_change', 'rating_update', 'comment', 'setting_change'];
+const RESOURCE_TYPES = ['all', 'article', 'content', 'provider', 'symptom', 'condition', 'mapping', 'setting'];
+const DATE_RANGES = [
+  { label: 'All Time', value: 'all' },
+  { label: 'Last 7 days', value: '7d' },
+  { label: 'Last 30 days', value: '30d' },
+  { label: 'Last 90 days', value: '90d' },
+];
+
 const AdminAuditLogV2: React.FC = () => {
   const [expandedRow, setExpandedRow] = useState<string | null>(null);
+  const [actionFilter, setActionFilter] = useState('all');
+  const [resourceFilter, setResourceFilter] = useState('all');
+  const [dateFilter, setDateFilter] = useState('all');
 
   const { data: logs, isLoading } = useQuery({
     queryKey: ['admin', 'audit-log'],
@@ -19,21 +31,41 @@ const AdminAuditLogV2: React.FC = () => {
         .from('admin_audit_log')
         .select('*')
         .order('created_at', { ascending: false })
-        .limit(200);
+        .limit(500);
       if (error) throw error;
       return (data || []) as AuditLogEntry[];
     },
   });
 
+  const filteredLogs = useMemo(() => {
+    if (!logs) return [];
+    let result = logs;
+
+    if (actionFilter !== 'all') {
+      result = result.filter((l) => l.action === actionFilter);
+    }
+    if (resourceFilter !== 'all') {
+      result = result.filter((l) => l.resource_type === resourceFilter);
+    }
+    if (dateFilter !== 'all') {
+      const days = dateFilter === '7d' ? 7 : dateFilter === '30d' ? 30 : 90;
+      const cutoff = subDays(new Date(), days).toISOString();
+      result = result.filter((l) => l.created_at >= cutoff);
+    }
+
+    return result;
+  }, [logs, actionFilter, resourceFilter, dateFilter]);
+
   const exportCSV = () => {
-    if (!logs || logs.length === 0) return;
-    const headers = ['Timestamp', 'Action', 'Resource Type', 'Resource ID', 'Admin User'];
-    const rows = logs.map((log) => [
+    if (!filteredLogs || filteredLogs.length === 0) return;
+    const headers = ['Timestamp', 'Action', 'Resource Type', 'Resource ID', 'Admin User', 'Details'];
+    const rows = filteredLogs.map((log) => [
       format(new Date(log.created_at), 'yyyy-MM-dd HH:mm:ss'),
       log.action,
       log.resource_type,
       log.resource_id || '',
       log.admin_user_id,
+      log.new_value ? JSON.stringify(log.new_value) : '',
     ]);
     const csv = [headers, ...rows].map((r) => r.join(',')).join('\n');
     const blob = new Blob([csv], { type: 'text/csv' });
@@ -121,18 +153,64 @@ const AdminAuditLogV2: React.FC = () => {
         }
       />
 
+      {/* Filters */}
+      <div className="flex items-center gap-3 mb-4 flex-wrap">
+        <div className="flex items-center gap-1.5 text-xs text-gray-500">
+          <Filter size={14} />
+          Filters:
+        </div>
+        <select
+          value={actionFilter}
+          onChange={(e) => setActionFilter(e.target.value)}
+          className="px-3 py-1.5 text-xs border border-gray-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-800 text-gray-700 dark:text-slate-300"
+        >
+          {ACTION_TYPES.map((a) => (
+            <option key={a} value={a}>{a === 'all' ? 'All Actions' : a.replace(/_/g, ' ')}</option>
+          ))}
+        </select>
+        <select
+          value={resourceFilter}
+          onChange={(e) => setResourceFilter(e.target.value)}
+          className="px-3 py-1.5 text-xs border border-gray-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-800 text-gray-700 dark:text-slate-300"
+        >
+          {RESOURCE_TYPES.map((r) => (
+            <option key={r} value={r}>{r === 'all' ? 'All Resources' : r}</option>
+          ))}
+        </select>
+        <select
+          value={dateFilter}
+          onChange={(e) => setDateFilter(e.target.value)}
+          className="px-3 py-1.5 text-xs border border-gray-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-800 text-gray-700 dark:text-slate-300"
+        >
+          {DATE_RANGES.map((d) => (
+            <option key={d.value} value={d.value}>{d.label}</option>
+          ))}
+        </select>
+        {(actionFilter !== 'all' || resourceFilter !== 'all' || dateFilter !== 'all') && (
+          <button
+            onClick={() => { setActionFilter('all'); setResourceFilter('all'); setDateFilter('all'); }}
+            className="text-xs text-teal-600 hover:text-teal-700 font-medium"
+          >
+            Clear filters
+          </button>
+        )}
+        <span className="text-xs text-gray-400 ml-auto">
+          {filteredLogs.length} of {logs?.length || 0} entries
+        </span>
+      </div>
+
       <DataTable
         columns={columns}
-        data={logs || []}
+        data={filteredLogs}
         isLoading={isLoading}
-        emptyMessage="No audit log entries."
+        emptyMessage="No audit log entries matching filters."
         searchPlaceholder="Search audit log..."
-        totalCount={logs?.length}
+        totalCount={filteredLogs.length}
       />
 
       {/* Expanded detail view */}
-      {expandedRow && logs && (() => {
-        const entry = logs.find((l) => l.id === expandedRow);
+      {expandedRow && filteredLogs && (() => {
+        const entry = filteredLogs.find((l) => l.id === expandedRow);
         if (!entry) return null;
         return (
           <div className="mt-2 bg-gray-50 dark:bg-slate-800/50 border border-gray-200 dark:border-slate-700 rounded-xl p-4 text-sm">

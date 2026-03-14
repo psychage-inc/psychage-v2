@@ -104,7 +104,7 @@ const ProviderDirectory: React.FC = () => {
 
             {/* Header */}
             <div className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 pb-12 pt-8 mb-8">
-                <div className="container mx-auto max-w-[1400px] px-6">
+                <div className="container mx-auto max-w-admin px-6">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -151,7 +151,7 @@ const ProviderDirectory: React.FC = () => {
                 </div>
             </div>
 
-            <div className="container mx-auto max-w-[1400px] px-6">
+            <div className="container mx-auto max-w-admin px-6">
                 <div className="flex flex-col lg:flex-row gap-8">
 
                     {/* Sidebar Filters (Desktop & Mobile Overlay) */}

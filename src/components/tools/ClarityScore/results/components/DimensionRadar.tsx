@@ -6,18 +6,51 @@ import {
   PolarRadiusAxis,
   Radar,
   ResponsiveContainer,
+  Tooltip,
 } from 'recharts';
-import type { ClarityDomainScores } from '@/lib/clarity/types';
-import { DIMENSION_META, DIMENSION_ORDER } from '../../data/dimensions';
+import type { ClarityDomainScores, DomainKey } from '@/lib/clarity/types';
+import { DIMENSION_META, DIMENSION_ORDER, getDimensionTier } from '../../data/dimensions';
+import { getTierHexColor } from '@/lib/clarity/scoring';
 
 interface DimensionRadarProps {
   domainScores: ClarityDomainScores;
+  onDimensionClick?: (key: DomainKey) => void;
 }
 
-/** 5-axis radar chart showing all dimension scores */
-const DimensionRadar: React.FC<DimensionRadarProps> = ({ domainScores }) => {
+/** Custom tooltip showing dimension name, score, and tier color */
+const CustomTooltip = ({ active, payload }: any) => {
+  if (!active || !payload?.[0]) return null;
+  const data = payload[0].payload;
+  const tier = getDimensionTier(data.score);
+  const tierColor = getTierHexColor(tier);
+
+  return (
+    <div className="bg-white dark:bg-gray-800 shadow-lg rounded-xl px-4 py-3 border border-gray-200 dark:border-gray-700">
+      <div className="flex items-center gap-2 mb-1">
+        <span
+          className="w-2.5 h-2.5 rounded-full shrink-0"
+          style={{ backgroundColor: tierColor }}
+        />
+        <span className="text-sm font-semibold text-gray-900 dark:text-white">
+          {data.fullName}
+        </span>
+      </div>
+      <p className="text-sm text-gray-600 dark:text-gray-300">
+        <span className="font-bold">{data.score}</span> / 20
+      </p>
+    </div>
+  );
+};
+
+/** 5-axis radar chart showing all dimension scores with interactivity */
+const DimensionRadar: React.FC<DimensionRadarProps> = ({
+  domainScores,
+  onDimensionClick,
+}) => {
   const data = DIMENSION_ORDER.map((key) => ({
     dimension: DIMENSION_META[key].shortName,
+    fullName: DIMENSION_META[key].name,
+    key,
     score: Math.round(domainScores[key] * 10) / 10,
     fullMark: 20,
   }));
@@ -28,6 +61,12 @@ const DimensionRadar: React.FC<DimensionRadarProps> = ({ domainScores }) => {
       `${DIMENSION_META[key].name}: ${Math.round(domainScores[key])} out of 20`
   ).join(', ');
 
+  const handleDotClick = (_e: any, data: any) => {
+    if (onDimensionClick && data?.payload?.key) {
+      onDimensionClick(data.payload.key);
+    }
+  };
+
   return (
     <div
       role="img"
@@ -36,10 +75,7 @@ const DimensionRadar: React.FC<DimensionRadarProps> = ({ domainScores }) => {
     >
       <ResponsiveContainer width="100%" height={280}>
         <RadarChart data={data} cx="50%" cy="50%" outerRadius="75%">
-          <PolarGrid
-            stroke="#e5e7eb"
-            strokeDasharray="3 3"
-          />
+          <PolarGrid stroke="#e5e7eb" strokeDasharray="3 3" />
           <PolarAngleAxis
             dataKey="dimension"
             tick={{ fontSize: 12, fill: '#6b7280' }}
@@ -58,9 +94,23 @@ const DimensionRadar: React.FC<DimensionRadarProps> = ({ domainScores }) => {
             fill="#0d9488"
             fillOpacity={0.2}
             dot={{ r: 4, fill: '#0d9488', strokeWidth: 0 }}
+            activeDot={{
+              r: 6,
+              fill: '#0d9488',
+              stroke: '#fff',
+              strokeWidth: 2,
+              cursor: onDimensionClick ? 'pointer' : 'default',
+              onClick: handleDotClick,
+            }}
           />
+          <Tooltip content={<CustomTooltip />} />
         </RadarChart>
       </ResponsiveContainer>
+      {onDimensionClick && (
+        <p className="text-center text-xs text-gray-400 dark:text-gray-500 mt-1 md:hidden">
+          Tap a point to explore that dimension
+        </p>
+      )}
     </div>
   );
 };

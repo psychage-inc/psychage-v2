@@ -89,6 +89,12 @@ export interface Citation {
     link?: string;
     source: string;
     year?: string;
+    tier?: import('@/lib/article-framework/types').SourceTier;
+    sourceType?: import('@/lib/article-framework/types').ExpandedSourceType;
+    doi?: string;
+    authors?: string[];
+    journalName?: string;
+    accessDate?: string;
 }
 
 export interface Category {
@@ -121,4 +127,5 @@ export interface Article {
     relatedArticles?: string[];
     featured?: boolean;
     views?: number;
+    status?: string;
 }

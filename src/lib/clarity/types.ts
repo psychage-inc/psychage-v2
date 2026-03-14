@@ -38,12 +38,26 @@ export interface ClaritySubScores {
   pssScore: number;
 }
 
+export interface ClinicalFlag {
+  label: string;
+  result: string;
+  severity: 'elevated' | 'significant';
+}
+
+export interface StrengthInsight {
+  name: string;
+  key: DomainKey;
+  score: number;
+  insight: string;
+}
+
 export interface ClarityScoreResult {
   totalScore: number;
   domainScores: ClarityDomainScores;
   subScores: ClaritySubScores;
   rawScores: Record<string, number>;
   flags: string[];
+  structuredFlags: ClinicalFlag[];
   strengths: string[];
   growthAreas: string[];
   label: string;

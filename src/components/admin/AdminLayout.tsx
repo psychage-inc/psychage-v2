@@ -41,10 +41,10 @@ const AdminLayout: React.FC = () => {
       <main
         className={cn(
           'pt-16 min-h-screen transition-all duration-200',
-          sidebarCollapsed ? 'ml-16' : 'ml-64'
+          sidebarCollapsed ? 'lg:ml-16' : 'lg:ml-64'
         )}
       >
-        <div className="p-6 max-w-[1400px] mx-auto">
+        <div className="p-6 max-w-admin mx-auto">
           <Outlet />
         </div>
       </main>

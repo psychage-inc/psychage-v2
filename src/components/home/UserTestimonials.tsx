@@ -34,7 +34,7 @@ const testimonials: Testimonial[] = [
 
 const UserTestimonials: React.FC = () => {
     return (
-        <section className="py-24 px-6 bg-white dark:bg-slate-900 overflow-hidden">
+        <section className="py-14 sm:py-16 lg:py-24 px-6 bg-white dark:bg-slate-900 overflow-hidden">
             <div className="container mx-auto max-w-6xl">
                 {/* Header */}
                 <motion.div
@@ -64,7 +64,7 @@ const UserTestimonials: React.FC = () => {
                         <motion.div
                             key={i}
                             variants={staggerItem}
-                            className="w-[85vw] shrink-0 snap-center md:w-auto flex flex-col p-8 rounded-2xl bg-surface-hover dark:bg-slate-800/50 border border-border relative group"
+                            className="w-[min(85vw,21.25rem)] shrink-0 snap-center md:w-auto flex flex-col p-8 rounded-2xl bg-surface-hover dark:bg-slate-800/50 border border-border relative group"
                         >
                             <Quote className="absolute top-6 right-6 w-8 h-8 text-border group-hover:text-primary/20 transition-colors" />
 

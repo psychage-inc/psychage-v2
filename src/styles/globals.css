@@ -164,6 +164,17 @@
         backface-visibility: hidden;
     }
 
+    /* Responsive section vertical padding */
+    .section-padding {
+        @apply py-16 sm:py-20 lg:py-24 xl:py-28;
+    }
+
+    /* Decorative blob containment — prevents horizontal scroll */
+    .blob-contain {
+        @apply absolute overflow-hidden pointer-events-none;
+        contain: layout paint;
+    }
+
     /* Blob Animation */
     .animate-blob {
         animation: blob 7s infinite;

@@ -19,7 +19,7 @@ const GlassCarousel: React.FC = () => {
     }, []);
 
     return (
-        <div className="relative w-full h-[500px] flex items-center justify-center perspective-1000">
+        <div className="relative w-full h-[min(500px,70vh)] flex items-center justify-center perspective-1000">
             {/* Abstract Background Blobs */}
             <div className={`absolute inset-0 bg-gradient-to-br ${images[currentIndex].color} opacity-30 blur-3xl transition-colors duration-1000`} />
 

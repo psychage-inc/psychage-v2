@@ -23,15 +23,20 @@ export const ResultCard: React.FC<ResultCardProps> = ({ result, onClick }) => {
             variant="glass"
             hoverEffect={true}
             onClick={onClick}
-            className="w-full text-left p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-6 group hover:border-teal-500/40 cursor-pointer rounded-2xl relative overflow-hidden"
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e: React.KeyboardEvent) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    if (onClick) onClick();
+            className={cn(
+                "w-full text-left p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-6 group hover:border-teal-500/40 rounded-2xl relative overflow-hidden",
+                onClick && "cursor-pointer"
+            )}
+            {...(onClick ? {
+                role: "button" as const,
+                tabIndex: 0,
+                onKeyDown: (e: React.KeyboardEvent) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        onClick();
+                    }
                 }
-            }}
+            } : {})}
         >
             <div className="flex-1 space-y-3 relative z-10">
                 <div className="flex flex-col sm:flex-row sm:items-center gap-3">
@@ -46,7 +51,7 @@ export const ResultCard: React.FC<ResultCardProps> = ({ result, onClick }) => {
 
                 {/* Confidence bar */}
                 <div className="flex items-center gap-2.5 mt-1">
-                    <div className="flex-1 h-1.5 bg-surface-hover/50 rounded-full overflow-hidden max-w-[120px]">
+                    <div className="flex-1 h-1.5 bg-surface-hover/50 rounded-full overflow-hidden max-w-[7.5rem]">
                         <motion.div
                             className="h-full rounded-full bg-gradient-to-r from-teal-500 to-teal-400"
                             initial={{ width: 0 }}
@@ -125,11 +130,13 @@ export const ResultCard: React.FC<ResultCardProps> = ({ result, onClick }) => {
                 )}
             </div>
 
-            <div className="flex-shrink-0 flex items-center justify-end">
-                <div className="w-11 h-11 rounded-full bg-surface-hover/50 flex items-center justify-center text-text-tertiary group-hover:bg-teal-500/20 group-hover:text-teal-400 border border-border group-hover:border-teal-500/30 transition-all duration-300">
-                    <ChevronRight className="w-5 h-5" />
+            {onClick && (
+                <div className="flex-shrink-0 flex items-center justify-end">
+                    <div className="w-11 h-11 rounded-full bg-surface-hover/50 flex items-center justify-center text-text-tertiary group-hover:bg-teal-500/20 group-hover:text-teal-400 border border-border group-hover:border-teal-500/30 transition-all duration-300">
+                        <ChevronRight className="w-5 h-5" />
+                    </div>
                 </div>
-            </div>
+            )}
         </Card>
     );
 };

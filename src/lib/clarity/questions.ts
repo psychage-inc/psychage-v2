@@ -1,5 +1,11 @@
 import type { ClarityQuestion, ClarityDomain, ScaleOption } from './types';
 
+/**
+ * Domain key↔name mapping (preserved for historical DB compatibility):
+ *   key 'vitality'  → "Cognitive Clarity" (WHO-5 Well-Being Index)
+ *   key 'cognitive'  → "Physical Vitality" (PSS-4 Perceived Stress)
+ * See also: dimensions.ts DIMENSION_META for the results dashboard mapping.
+ */
 export const DOMAINS: ClarityDomain[] = [
   {
     id: 0,

@@ -11,7 +11,11 @@ const languages = [
     { code: 'es', name: 'Español', flag: '🇪🇸' },
 ];
 
-const LanguageSwitcher: React.FC = () => {
+interface LanguageSwitcherProps {
+    direction?: 'up' | 'down';
+}
+
+const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ direction = 'down' }) => {
     const { i18n } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
@@ -51,11 +55,11 @@ const LanguageSwitcher: React.FC = () => {
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                        initial={{ opacity: 0, y: direction === 'up' ? 10 : -10, scale: 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                        exit={{ opacity: 0, y: direction === 'up' ? 10 : -10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute bottom-full left-0 mb-2 w-48 bg-surface border border-border rounded-xl shadow-xl overflow-hidden z-50"
+                        className={`absolute ${direction === 'up' ? 'bottom-full mb-2' : 'top-full mt-2'} left-0 w-48 bg-surface border border-border rounded-xl shadow-xl overflow-hidden z-50`}
                     >
                         <div className="py-1">
                             {languages.map((lang) => (

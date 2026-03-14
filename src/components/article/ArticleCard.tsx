@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Clock, ArrowUpRight, Bookmark } from 'lucide-react';
 import Badge from '../ui/Badge';
@@ -7,6 +7,7 @@ import { NoiseTexture } from '../home/hero/HeroAssets';
 import { useBookmarks } from '../../context/BookmarkContext';
 import InteractiveCard from '../ui/InteractiveCard';
 import { getCategoryTheme, getCategoryBadgeClasses } from '../../config/categoryThemes';
+import AuthModal from '../auth/AuthModal';
 
 interface ArticleCardProps {
   article: Article;
@@ -16,10 +17,14 @@ interface ArticleCardProps {
 const ArticleCard: React.FC<ArticleCardProps> = ({ article, onClick }) => {
   const { isBookmarked, toggleBookmark } = useBookmarks();
   const bookmarked = isBookmarked(article.id);
+  const [showAuthModal, setShowAuthModal] = useState(false);
 
   const handleBookmark = (e: React.MouseEvent) => {
     e.stopPropagation();
-    toggleBookmark(article.id);
+    const toggled = toggleBookmark(article.id);
+    if (!toggled) {
+      setShowAuthModal(true);
+    }
   };
 
   return (
@@ -89,6 +94,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, onClick }) => {
           <span>{article.readTime} min read</span>
         </div>
       </div>
+      <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
     </InteractiveCard>
   );
 };

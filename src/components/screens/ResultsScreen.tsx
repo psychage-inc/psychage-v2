@@ -62,7 +62,7 @@ export const ResultsScreen: React.FC = () => {
 
     if (error || !results || !knowledgeBase) {
         return (
-            <div className="flex flex-col items-center justify-center min-h-[50vh] space-y-6 text-center px-4" role="alert">
+            <div className="flex flex-col items-center justify-center min-h-[30vh] sm:min-h-[40vh] lg:min-h-[50vh] space-y-6 text-center px-4" role="alert">
                 <div className="w-16 h-16 bg-crisis-red/10 rounded-full flex items-center justify-center">
                     <ShieldAlert className="w-8 h-8 text-crisis-red" />
                 </div>

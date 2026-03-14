@@ -24,7 +24,11 @@ CREATE INDEX IF NOT EXISTS idx_crisis_keywords_severity ON crisis_keywords(sever
 
 ALTER TABLE crisis_keywords ENABLE ROW LEVEL SECURITY;
 
-CREATE POLICY "admin_keywords_all" ON crisis_keywords
-  FOR ALL USING (
-    EXISTS (SELECT 1 FROM admin_roles ar WHERE ar.user_id = auth.uid() AND ar.role IN ('super_admin', 'clinical_admin'))
-  );
+DO $$ BEGIN
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'admin_keywords_all' AND tablename = 'crisis_keywords') THEN
+    CREATE POLICY "admin_keywords_all" ON crisis_keywords
+      FOR ALL USING (
+        EXISTS (SELECT 1 FROM admin_roles ar WHERE ar.user_id = auth.uid() AND ar.role IN ('super_admin', 'clinical_admin'))
+      );
+  END IF;
+END $$;

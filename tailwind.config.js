@@ -2,6 +2,7 @@
 export default {
     content: [
         "./index.html",
+        "./admin.html",
         "./src/**/*.{js,ts,jsx,tsx}",
     ],
     darkMode: 'class',
@@ -100,6 +101,17 @@ export default {
                 fast: 'var(--transition-fast)',
                 normal: 'var(--transition-normal)',
                 slow: 'var(--transition-slow)',
+            },
+            maxWidth: {
+                'content': '80rem',     // 1280px — articles, categories, topic hubs
+                'dashboard': '75rem',   // 1200px — dashboard pages
+                'admin': '87.5rem',     // 1400px — admin, provider analytics
+                'wide': '100rem',       // 1600px — footer
+            },
+            fontSize: {
+                'fluid-3xl': ['clamp(1.875rem, 1.5rem + 1.5vw, 2.5rem)', { lineHeight: '1.2' }],
+                'fluid-4xl': ['clamp(2.25rem, 1.8rem + 2vw, 3rem)', { lineHeight: '1.1' }],
+                'fluid-5xl': ['clamp(3rem, 2rem + 3vw, 4.5rem)', { lineHeight: '1.05' }],
             },
         },
     },

@@ -1,9 +1,11 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
+import React, { useState, useRef, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Send, Sparkles, AlertTriangle, Phone, Trash2 } from 'lucide-react';
+import { X, Send, Sparkles, AlertTriangle, Phone, Trash2, LogIn } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
 import { chatPersistenceService } from '@/services/chatPersistenceService';
 import { consentService } from '@/services/consentService';
+import { resolveCountry, getPrimaryCrisisLine } from '@/lib/crisis';
+import AuthModal from '@/components/auth/AuthModal';
 
 interface Message {
     id: string;
@@ -35,7 +37,18 @@ const INIT_MESSAGE: Message = {
 const MindMate: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [inputText, setInputText] = useState('');
+    const [showAuthModal, setShowAuthModal] = useState(false);
     const { user, isAuthenticated } = useAuth();
+
+    // Resolve region-appropriate crisis line
+    const crisisLine = useMemo(() => {
+        const country = resolveCountry();
+        const resource = getPrimaryCrisisLine(country);
+        return {
+            phone: resource?.phone ?? '112',
+            label: resource?.name ?? 'Emergency Services',
+        };
+    }, []);
 
     // Supabase conversation tracking
     const conversationIdRef = useRef<string | null>(null);
@@ -198,6 +211,7 @@ const MindMate: React.FC = () => {
                         whileTap={{ scale: 0.9 }}
                         onClick={() => setIsOpen(true)}
                         className="fixed bottom-6 right-6 z-[100] group"
+                        aria-label="Open Psychage AI chat"
                     >
                         <div className="absolute inset-0 bg-teal-500 rounded-full animate-ping opacity-20 group-hover:opacity-40" />
                         <div className="relative w-14 h-14 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-full shadow-xl shadow-teal-500/30 flex items-center justify-center text-white border border-white/20 overflow-hidden">
@@ -209,12 +223,56 @@ const MindMate: React.FC = () => {
             </AnimatePresence>
 
             <AnimatePresence>
-                {isOpen && (
+                {isOpen && !isAuthenticated && (
                     <motion.div
                         initial={{ opacity: 0, y: 50, scale: 0.9 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 50, scale: 0.9 }}
-                        className="fixed bottom-6 right-6 z-[100] w-[90vw] md:w-[400px] h-[600px] max-h-[80vh] flex flex-col font-sans"
+                        className="fixed bottom-6 right-6 z-[100] w-[90vw] max-w-[22.5rem] md:w-[22.5rem] font-sans"
+                    >
+                        <div className="bg-white dark:bg-slate-950 rounded-3xl shadow-2xl shadow-black/10 border border-gray-200 dark:border-gray-800 p-6">
+                            <div className="flex items-center justify-between mb-5">
+                                <div className="flex items-center gap-3">
+                                    <div className="w-8 h-8 rounded-xl bg-teal-50 dark:bg-teal-900/30 flex items-center justify-center">
+                                        <Sparkles size={16} className="text-teal-600 dark:text-teal-400" />
+                                    </div>
+                                    <span className="font-display font-semibold text-sm text-gray-900 dark:text-gray-100">Psychage AI</span>
+                                </div>
+                                <button onClick={() => setIsOpen(false)} className="p-1.5 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors text-gray-400" aria-label="Close chat panel">
+                                    <X size={16} />
+                                </button>
+                            </div>
+
+                            <div className="text-center">
+                                <div className="mx-auto w-12 h-12 rounded-2xl bg-teal-50 dark:bg-teal-900/30 flex items-center justify-center mb-4">
+                                    <LogIn size={20} className="text-teal-600 dark:text-teal-400" />
+                                </div>
+                                <h3 className="font-display font-semibold text-base text-gray-900 dark:text-gray-100 mb-2">
+                                    Sign in to chat
+                                </h3>
+                                <p className="text-sm text-gray-500 dark:text-gray-400 mb-5 leading-relaxed">
+                                    Create a free account to use Psychage AI and get personalized mental health guidance.
+                                </p>
+                                <button
+                                    onClick={() => setShowAuthModal(true)}
+                                    className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-teal-600 hover:bg-teal-700 text-white rounded-xl text-sm font-semibold transition-colors shadow-sm shadow-teal-600/20"
+                                >
+                                    <LogIn size={16} />
+                                    Sign In to Continue
+                                </button>
+                            </div>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+            <AnimatePresence>
+                {isOpen && isAuthenticated && (
+                    <motion.div
+                        initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 50, scale: 0.9 }}
+                        className="fixed bottom-6 right-6 z-[100] w-[90vw] max-w-[25rem] md:w-[25rem] h-[600px] max-h-[80vh] flex flex-col font-sans"
                     >
                         {/* Clean Container */}
                         <div className="absolute inset-0 bg-white dark:bg-slate-950 rounded-3xl shadow-2xl shadow-black/10 border border-gray-200 dark:border-gray-800" />
@@ -228,17 +286,17 @@ const MindMate: React.FC = () => {
                                 <span className="font-display font-semibold text-sm text-gray-900 dark:text-gray-100">Psychage AI</span>
                             </div>
                             <div className="flex gap-1">
-                                <button onClick={clearChat} className="p-1.5 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors text-gray-400">
+                                <button onClick={clearChat} className="p-1.5 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors text-gray-400" aria-label="Clear chat history">
                                     <Trash2 size={16} />
                                 </button>
-                                <button onClick={() => setIsOpen(false)} className="p-1.5 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors text-gray-400">
+                                <button onClick={() => setIsOpen(false)} className="p-1.5 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors text-gray-400" aria-label="Close chat panel">
                                     <X size={16} />
                                 </button>
                             </div>
                         </div>
 
                         {/* Messages — Claude-style centered */}
-                        <div className="relative z-10 flex-grow overflow-y-auto px-5 py-5 space-y-5 scroll-smooth">
+                        <div className="relative z-10 flex-grow overflow-y-auto px-5 py-5 space-y-5 scroll-smooth" role="log" aria-live="polite" aria-label="Chat messages">
                             {messages.map((msg) => (
                                 <motion.div
                                     initial={{ opacity: 0, y: 8 }}
@@ -265,8 +323,8 @@ const MindMate: React.FC = () => {
                                         {msg.text}
 
                                         {msg.type === 'crisis' && (
-                                            <a href="tel:988" className="mt-3 flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg text-xs font-bold transition-colors w-full justify-center">
-                                                <Phone size={14} /> Call 988 Now
+                                            <a href={`tel:${crisisLine.phone.replace(/[^0-9+]/g, '')}`} className="mt-3 flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg text-xs font-bold transition-colors w-full justify-center">
+                                                <Phone size={14} /> Call {crisisLine.label} ({crisisLine.phone})
                                             </a>
                                         )}
                                     </div>
@@ -296,11 +354,13 @@ const MindMate: React.FC = () => {
                                     onChange={(e) => setInputText(e.target.value)}
                                     onKeyDown={(e) => e.key === 'Enter' && handleSend()}
                                     placeholder="Message Psychage AI..."
+                                    aria-label="Type a message to Psychage AI"
                                     className="w-full pl-4 pr-12 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-2xl focus:ring-2 focus:ring-teal-500/30 focus:border-teal-400 outline-none text-sm transition-all dark:text-white placeholder-gray-400"
                                 />
                                 <button
                                     onClick={handleSend}
                                     disabled={!inputText.trim()}
+                                    aria-label="Send message"
                                     className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-gray-900 dark:bg-white hover:bg-gray-800 dark:hover:bg-gray-100 text-white dark:text-gray-900 rounded-xl disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
                                 >
                                     <Send size={14} />
@@ -310,6 +370,8 @@ const MindMate: React.FC = () => {
                     </motion.div>
                 )}
             </AnimatePresence>
+
+            <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
         </>
     );
 };

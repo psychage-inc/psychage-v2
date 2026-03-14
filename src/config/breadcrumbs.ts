@@ -10,14 +10,9 @@ export const breadcrumbConfig: Record<string, BreadcrumbItem[]> = {
         { label: 'Learn', href: '/learn' },
         { label: ':categorySlug' } // Dynamic
     ],
-    '/learn/:categorySlug/:slug': [
+    '/learn/:categorySlug/:articleSlug': [
         { label: 'Learn', href: '/learn' },
         { label: ':categorySlug', href: '/learn/:categorySlug' },
-        { label: ':title' } // From article data
-    ],
-    '/learn/article/:id': [
-        { label: 'Learn', href: '/learn' },
-        { label: ':category', href: '/learn/:categorySlug' },
         { label: ':title' }
     ],
 

@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Calendar, Clock, Share2, Bookmark } from 'lucide-react';
 import { Article } from '../../types';
 import Badge from '../ui/Badge';
 import { useBookmarks } from '../../context/BookmarkContext';
 import Breadcrumbs from '../ui/Breadcrumbs';
 import { getCategoryBadgeClasses } from '../../config/categoryThemes';
+import AuthModal from '../auth/AuthModal';
 
 interface ArticleHeaderProps {
   article: Article;
@@ -13,9 +14,17 @@ interface ArticleHeaderProps {
 const ArticleHeader: React.FC<ArticleHeaderProps> = ({ article }) => {
   const { isBookmarked, toggleBookmark } = useBookmarks();
   const bookmarked = isBookmarked(article.id);
+  const [showAuthModal, setShowAuthModal] = useState(false);
+
+  const handleBookmark = () => {
+    const toggled = toggleBookmark(article.id);
+    if (!toggled) {
+      setShowAuthModal(true);
+    }
+  };
 
   return (
-    <header className="max-w-4xl mx-auto px-6 pt-32 pb-12 text-center md:text-left">
+    <header className="max-w-4xl mx-auto px-4 sm:px-6 pt-20 sm:pt-24 lg:pt-32 pb-12 text-center md:text-left">
       {/* Breadcrumb */}
       <div className="flex justify-center md:justify-start mb-8">
         <Breadcrumbs
@@ -77,7 +86,7 @@ const ArticleHeader: React.FC<ArticleHeaderProps> = ({ article }) => {
             <Share2 size={18} />
           </button>
           <button
-            onClick={() => toggleBookmark(article.id)}
+            onClick={handleBookmark}
             className={`p-2.5 rounded-full transition-colors ${bookmarked
               ? 'bg-teal-50 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400'
               : 'hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-400 hover:text-gray-900 dark:hover:text-white'
@@ -88,6 +97,8 @@ const ArticleHeader: React.FC<ArticleHeaderProps> = ({ article }) => {
           </button>
         </div>
       </div>
+
+      <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
     </header>
   );
 };

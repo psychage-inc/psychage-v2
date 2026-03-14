@@ -7,6 +7,7 @@ import { useArticleService } from '@/services/articleService';
 import { categoryService } from '@/services/categoryService';
 import { Article, Category } from '@/types/models';
 import ArticleCard from '@/components/article/ArticleCard';
+import { getArticleUrl } from '@/lib/articleUrl';
 import { Display, Text } from '@/components/ui/Typography';
 
 const CategoryPage: React.FC = () => {
@@ -130,7 +131,7 @@ const CategoryPage: React.FC = () => {
                                         >
                                             <ArticleCard
                                                 article={article}
-                                                onClick={() => navigate(`/learn/article/${article.id}`)}
+                                                onClick={() => navigate(getArticleUrl(article))}
                                             />
                                         </motion.div>
                                     ))}

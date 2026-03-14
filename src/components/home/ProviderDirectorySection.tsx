@@ -29,7 +29,7 @@ const ProviderDirectorySection: React.FC = () => {
 
     if (loading) {
         return (
-            <section className="py-24 bg-white relative overflow-hidden">
+            <section className="py-14 sm:py-16 lg:py-24 bg-white relative overflow-hidden">
                 <div className="container mx-auto px-6 md:px-12">
                     <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
                         <div className="max-w-2xl">
@@ -57,7 +57,7 @@ const ProviderDirectorySection: React.FC = () => {
     if (providers.length === 0) return null;
 
     return (
-        <section className="py-24 bg-white relative overflow-hidden">
+        <section className="py-14 sm:py-16 lg:py-24 bg-white relative overflow-hidden">
             <div className="container mx-auto px-6 md:px-12">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
                     <div className="max-w-2xl">

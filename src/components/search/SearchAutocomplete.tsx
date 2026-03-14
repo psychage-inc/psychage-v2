@@ -3,6 +3,7 @@ import { Search, X } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { api } from '../../lib/api';
 import { ArticleWithContent } from '../../services/articleService';
+import { getArticleUrl } from '../../lib/articleUrl';
 import { AnimatePresence, motion } from 'framer-motion';
 
 interface SearchAutocompleteProps {
@@ -88,9 +89,7 @@ const SearchAutocomplete: React.FC<SearchAutocompleteProps> = ({
     };
 
     const handleSuggestionClick = (article: ArticleWithContent) => {
-        // Use slug if available, otherwise use ID
-        const identifier = article.slug || article.id;
-        navigate(`/learn/article/${identifier}`);
+        navigate(getArticleUrl(article));
         setIsOpen(false);
         setQuery('');
     };

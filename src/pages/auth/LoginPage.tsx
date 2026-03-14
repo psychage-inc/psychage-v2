@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link, useNavigate, useLocation, useSearchParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Mail, Lock, AlertCircle, ArrowRight, CheckCircle2, Eye, EyeOff } from 'lucide-react';
 import Button from '@/components/ui/Button';
@@ -11,8 +11,13 @@ import { Alert, AlertDescription } from '@/components/ui/Alert';
 import InteractiveCard from '@/components/ui/InteractiveCard';
 import { LogoIcon } from '@/components/ui/LogoIcon';
 import { supabase } from '@/lib/supabaseClient';
+import { adminUrl, mainUrl, isAdminDomain } from '@/lib/urls';
 
-const LoginPage = () => {
+interface LoginPageProps {
+    variant?: 'main' | 'admin';
+}
+
+const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
@@ -20,11 +25,13 @@ const LoginPage = () => {
     const { login, isLoading, signInWithGoogle, signInWithApple } = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
+    const [searchParams] = useSearchParams();
     const [oauthLoading, setOauthLoading] = useState<'google' | 'apple' | null>(null);
     const [infoMessage, setInfoMessage] = useState<string | null>(null);
 
     // Get the page they were trying to visit, or default to appropriate dashboard
-    const from = location.state?.from?.pathname;
+    // Prefer state (set by ProtectedRoute), fall back to query param (survives refresh)
+    const from = location.state?.from?.pathname || searchParams.get('redirectTo') || null;
 
     // Display messages passed via navigation state (e.g., from signup or password reset)
     useEffect(() => {
@@ -108,11 +115,22 @@ const LoginPage = () => {
                         // Column may not exist yet — skip onboarding check
                     }
 
-                    if (needsOnboarding) {
-                        navigate('/admin/onboarding', { replace: true });
+                    if (variant === 'admin') {
+                        // Already on admin domain — navigate locally
+                        navigate(needsOnboarding ? '/onboarding' : (from || '/dashboard'), { replace: true });
                     } else {
-                        navigate(from || '/admin', { replace: true });
+                        // On main domain — redirect to admin domain
+                        window.location.href = needsOnboarding
+                            ? adminUrl('/onboarding')
+                            : adminUrl(from || '/');
                     }
+                    return;
+                }
+
+                // Non-admin user
+                if (variant === 'admin') {
+                    // Non-admin on admin domain — send to main site
+                    window.location.href = mainUrl(from || '/dashboard');
                     return;
                 }
 
@@ -316,13 +334,15 @@ const LoginPage = () => {
                         </div>
                     </div>
 
-                    <p className="mt-8 text-center text-text-secondary">
-                        Don't have an account?{' '}
-                        <Link to="/signup" className="font-bold text-primary hover:text-primary-hover inline-flex items-center gap-1 group transition-colors">
-                            Create account
-                            <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                        </Link>
-                    </p>
+                    {variant !== 'admin' && (
+                        <p className="mt-8 text-center text-text-secondary">
+                            Don't have an account?{' '}
+                            <Link to="/signup" className="font-bold text-primary hover:text-primary-hover inline-flex items-center gap-1 group transition-colors">
+                                Create account
+                                <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                            </Link>
+                        </p>
+                    )}
                 </InteractiveCard>
             </motion.div>
         </div>

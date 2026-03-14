@@ -11,6 +11,7 @@ import { Article, Category } from '../types/models';
 import { supabase } from '../lib/supabaseClient';
 import { useMemo } from 'react';
 import { sanityArticleService, SanityArticle } from './sanityArticleService';
+import { getCategoryTheme } from '../config/categoryThemes';
 import type { PortableTextBlock } from '@portabletext/types';
 
 // Fallback to mock data if all APIs fail
@@ -31,15 +32,15 @@ interface DBArticle {
         name: string;
         slug: string;
         description: string;
-        group: string;
-        image: string;
-        color: string;
+        icon: string | null;
+        color: string | null;
     } | null;
     read_time?: number;
     created_at: string;
     content?: string;
     tags?: string[];
     featured?: boolean;
+    status?: string;
 }
 
 // Extended Article type that can hold Portable Text content
@@ -93,6 +94,7 @@ function mapSanityToArticle(data: SanityArticle): ArticleWithContent {
         portableTextContent: data.body, // Raw Portable Text for rendering
         tags: [],
         featured: data.featured || false,
+        status: data.status,
         author: data.author ? {
             id: data.author._id,
             name: data.author.name,
@@ -131,6 +133,8 @@ function mapSanityToArticle(data: SanityArticle): ArticleWithContent {
  * Map Supabase article to unified Article format
  */
 function mapSupabaseToArticle(data: DBArticle): ArticleWithContent {
+    const catSlug = data.category?.slug || 'uncategorized';
+    const theme = getCategoryTheme(catSlug);
     return {
         id: data.id,
         slug: data.slug,
@@ -140,11 +144,9 @@ function mapSupabaseToArticle(data: DBArticle): ArticleWithContent {
         category: {
             id: data.category?.id || '',
             name: data.category?.name || 'Uncategorized',
-            slug: data.category?.slug || 'uncategorized',
+            slug: catSlug,
             description: data.category?.description || '',
-            group: data.category?.group || '',
-            image: data.category?.image || '',
-            color: data.category?.color || '',
+            color: theme.classes.bg,
             subTopics: []
         } as Category,
         readTime: data.read_time || 5,
@@ -152,6 +154,7 @@ function mapSupabaseToArticle(data: DBArticle): ArticleWithContent {
         content: data.content || data.description,
         tags: data.tags || [],
         featured: data.featured || false,
+        status: data.status,
         author: {
             id: 'team',
             name: 'PsychAge Team',
@@ -205,12 +208,13 @@ export const articleService = {
 
         // Fallback to Supabase
         try {
-            let selectString = '*, category:categories(*)';
+            let selectString = '*, category:article_categories!category_id(*)';
             if (params?.category) {
-                selectString = '*, category:categories!inner(*)';
+                selectString = '*, category:article_categories!category_id!inner(*)';
             }
 
-            let query = supabase.from('articles').select(selectString);
+            let query = supabase.from('articles').select(selectString)
+                .eq('status', 'published');
 
             if (params?.featured) {
                 query = query.eq('featured', true);
@@ -251,8 +255,9 @@ export const articleService = {
         try {
             const { data, error } = await supabase
                 .from('articles')
-                .select('*, category:categories(*)')
+                .select('*, category:article_categories!category_id(*)')
                 .eq('id', id)
+                .eq('status', 'published')
                 .single();
 
             if (error) {
@@ -289,8 +294,9 @@ export const articleService = {
         try {
             const { data, error } = await supabase
                 .from('articles')
-                .select('*, category:categories(*)')
+                .select('*, category:article_categories!category_id(*)')
                 .eq('slug', slug)
+                .eq('status', 'published')
                 .single();
 
             if (error) {
@@ -390,6 +396,60 @@ export const articleService = {
             console.error('Failed to check bookmark status:', error);
             return false;
         }
+    },
+
+    /**
+     * Get related articles based on category and tags.
+     * Priority: same category → shared tags → recent fallback.
+     */
+    getRelatedArticles: async (
+        currentId: string | number,
+        categorySlug: string,
+        tags?: string[],
+        limit = 3
+    ): Promise<ArticleWithContent[]> => {
+        const currentIdStr = String(currentId);
+
+        // Try Supabase: articles in the same category
+        try {
+            const { data, error } = await supabase
+                .from('articles')
+                .select('*, category:article_categories!category_id(*)')
+                .eq('status', 'published')
+                .neq('id', currentId)
+                .order('created_at', { ascending: false })
+                .limit(limit * 2); // fetch extra to filter/rank
+
+            if (!error && data && data.length > 0) {
+                const mapped = (data as unknown as DBArticle[]).map(mapSupabaseToArticle);
+
+                // Score: same category = 10, shared tag = 2 each
+                const scored = mapped.map(a => {
+                    let score = 0;
+                    if (a.category.slug === categorySlug) score += 10;
+                    if (tags && tags.length > 0 && a.tags) {
+                        const shared = a.tags.filter(t => tags.includes(t)).length;
+                        score += shared * 2;
+                    }
+                    return { article: a, score };
+                });
+
+                scored.sort((a, b) => b.score - a.score);
+                const result = scored.slice(0, limit).map(s => s.article);
+                if (result.length > 0) return result;
+            }
+        } catch (error) {
+            console.warn('[ArticleService] Related articles query failed:', error);
+        }
+
+        // Fallback to mock data
+        const allMock = mockArticles.map(a => ({ ...a, _source: 'mock' as const }));
+        const sameCat = allMock.filter(a => a.category.slug === categorySlug && a.id.toString() !== currentIdStr);
+        if (sameCat.length >= limit) return sameCat.slice(0, limit);
+
+        // Pad with other articles
+        const others = allMock.filter(a => a.id.toString() !== currentIdStr && a.category.slug !== categorySlug);
+        return [...sameCat, ...others].slice(0, limit);
     }
 };
 

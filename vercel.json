@@ -1,5 +1,24 @@
 {
+  "redirects": [
+    {
+      "source": "/admin/:path*",
+      "destination": "https://admin.psychage.com/:path*",
+      "permanent": false,
+      "has": [{ "type": "host", "value": "psychage.com" }]
+    },
+    {
+      "source": "/admin",
+      "destination": "https://admin.psychage.com/",
+      "permanent": false,
+      "has": [{ "type": "host", "value": "psychage.com" }]
+    }
+  ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+    {
+      "source": "/(.*)",
+      "destination": "/admin.html",
+      "has": [{ "type": "host", "value": "admin.psychage.com" }]
+    },
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

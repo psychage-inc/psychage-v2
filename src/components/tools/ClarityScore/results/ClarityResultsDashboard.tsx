@@ -15,7 +15,7 @@ import type {
   Recommendation,
   DomainKey,
 } from '@/lib/clarity/types';
-import { getScoreTierColor } from '@/lib/clarity/scoring';
+import { getScoreTierColor, getTierHexColor } from '@/lib/clarity/scoring';
 import TierBadge from './components/TierBadge';
 import OverviewTab from './OverviewTab';
 import DimensionsTab from './DimensionsTab';
@@ -114,17 +114,23 @@ const ClarityResultsDashboard: React.FC<ClarityResultsDashboardProps> = ({
       className="space-y-0"
     >
       {/* ─── Score Banner Header ─── */}
-      <div className="bg-gray-900 dark:bg-black text-white rounded-t-3xl overflow-hidden relative">
-        <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-teal-500/20 to-transparent" />
+      <div
+        className="text-white rounded-t-3xl overflow-hidden relative"
+        style={{
+          background: `linear-gradient(135deg, ${getTierHexColor(results.tier)}dd, ${getTierHexColor(results.tier)}88)`,
+        }}
+      >
+        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 opacity-5 bg-gradient-to-br from-white/20 to-transparent" />
         <div className="relative z-10 p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-6">
             <div className="text-center">
-              <div className="text-6xl md:text-7xl font-display font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
+              <div className="text-6xl md:text-7xl font-display font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70">
                 {results.totalScore}
               </div>
-              <p className="text-xs text-gray-400 mt-1">Clarity Score</p>
+              <p className="text-xs text-white/60 mt-1">Clarity Score</p>
             </div>
-            <div className="hidden md:block w-px h-16 bg-gray-700" />
+            <div className="hidden md:block w-px h-16 bg-white/20" />
             <div>
               <TierBadge tier={results.tier} label={results.label} size="lg" />
             </div>
@@ -133,7 +139,7 @@ const ClarityResultsDashboard: React.FC<ClarityResultsDashboardProps> = ({
           <button
             onClick={onRetake}
             type="button"
-            className="text-gray-400 hover:text-gray-200 font-medium flex items-center gap-2 transition-colors text-sm"
+            className="text-white/70 hover:text-white font-medium flex items-center gap-2 transition-colors text-sm"
           >
             <RefreshCw size={16} />
             Retake Assessment

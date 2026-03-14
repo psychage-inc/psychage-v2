@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useNavigate, useLocation } from 'react-router-dom';
-import { Search, BookOpen, Sparkles, TrendingUp, ArrowRight, Filter } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { Search, BookOpen, Sparkles, TrendingUp, ArrowRight } from 'lucide-react';
 import SEO from '../components/SEO';
 import { useArticleService } from '../services/articleService';
 import { categoryService } from '../services/categoryService';
@@ -10,27 +10,17 @@ import { getPopularArticles } from '../utils/articleUtils';
 import CategoryCard from '../components/articles/CategoryCard';
 import ArticleCard from '../components/article/ArticleCard';
 import Button from '../components/ui/Button';
-import { Display, Text } from '../components/ui/Typography';
 import InteractiveCard from '../components/ui/InteractiveCard';
 import { getCategoryBadgeClasses } from '../config/categoryThemes';
+import { getArticleUrl } from '../lib/articleUrl';
 
 const LearnPage: React.FC = () => {
     const navigate = useNavigate();
     const [articles, setArticles] = useState<Article[]>([]);
     const [categories, setCategories] = useState<Category[]>([]);
     const [isLoading, setIsLoading] = useState(true);
-    const [activeFilter, setActiveFilter] = useState('all');
     const [searchQuery, setSearchQuery] = useState('');
-    const location = useLocation();
     const articleService = useArticleService();
-
-    useEffect(() => {
-        const params = new URLSearchParams(location.search);
-        const filterParam = params.get('filter');
-        if (filterParam) {
-            setActiveFilter(filterParam);
-        }
-    }, [location.search]);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -96,7 +86,7 @@ const LearnPage: React.FC = () => {
             />
 
             {/* Hero Section */}
-            <section className="relative pt-32 pb-20 px-6 min-h-[60vh] flex flex-col justify-center overflow-hidden">
+            <section className="relative pt-32 pb-20 px-6 min-h-[40vh] sm:min-h-[50vh] lg:min-h-[60vh] flex flex-col justify-center overflow-hidden">
                 <div className="container mx-auto max-w-7xl relative z-10">
                     <div className="max-w-4xl mx-auto text-center">
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface border border-border text-text-primary text-sm font-bold uppercase tracking-wider mb-8 shadow-sm">
@@ -104,7 +94,7 @@ const LearnPage: React.FC = () => {
                             <span>Knowledge Base</span>
                         </div>
 
-                        <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 text-text-primary leading-tight">
+                        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold mb-6 text-text-primary leading-tight">
                             Mental Health <br />
                             <span className="text-primary">
                                 Education & Guides
@@ -150,7 +140,7 @@ const LearnPage: React.FC = () => {
                             <motion.div key={article.id} variants={itemVariants} className="h-full">
                                 <ArticleCard
                                     article={article}
-                                    onClick={() => navigate(`/learn/article/${article.id}`)}
+                                    onClick={() => navigate(getArticleUrl(article))}
                                 />
                             </motion.div>
                         ))}
@@ -161,59 +151,33 @@ const LearnPage: React.FC = () => {
             {/* Categories Grid */}
             <section className="px-6 mb-24 relative pt-8 border-t border-border mt-8">
                 <div className="container mx-auto max-w-7xl">
-                    <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
-                        <div className="flex items-center gap-3">
-                            <Filter className="text-primary" size={24} />
-                            <h2 className="text-3xl font-display font-bold text-text-primary">Browse by Topic</h2>
-                        </div>
-
-                        {/* Filter Bar */}
-                        <div className="flex overflow-x-auto pb-2 md:pb-0 gap-3 no-scrollbar -mx-6 px-6 md:mx-0 md:px-0">
-                            {[
-                                { id: 'all', label: 'All Topics' },
-                                { id: 'condition', label: 'Conditions' },
-                                { id: 'wellness', label: 'Wellness' },
-                                { id: 'life', label: 'Life & Relationships' },
-                                { id: 'identity', label: 'Identity' },
-                                { id: 'therapy', label: 'Therapy' }
-                            ].map((filter) => (
-                                <button
-                                    key={filter.id}
-                                    onClick={() => setActiveFilter(filter.id)}
-                                    className={`whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition-colors border ${activeFilter === filter.id
-                                        ? 'bg-primary text-white border-primary'
-                                        : 'bg-surface text-text-secondary border-border hover:bg-surface-hover hover:text-text-primary'
-                                        }`}
-                                >
-                                    {filter.label}
-                                </button>
-                            ))}
-                        </div>
+                    <div className="flex items-center gap-3 mb-8">
+                        <BookOpen className="text-primary" size={24} />
+                        <h2 className="text-3xl font-display font-bold text-text-primary">Browse by Topic</h2>
+                        <span className="text-sm text-text-tertiary font-medium ml-2">{categories.length} categories</span>
                     </div>
 
                     <motion.div
                         layout
-                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
+                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4"
                     >
                         <AnimatePresence mode="popLayout">
-                            {categories
-                                .filter(c => activeFilter === 'all' || c.group === activeFilter)
-                                .map((category) => (
-                                    <motion.div
-                                        key={category.id}
-                                        layout
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
-                                        exit={{ opacity: 0 }}
-                                        transition={{ duration: 0.2 }}
-                                        className="h-full"
-                                    >
-                                        <CategoryCard
-                                            category={category}
-                                            onClick={() => navigate(`/learn/${category.slug}`)}
-                                        />
-                                    </motion.div>
-                                ))}
+                            {categories.map((category) => (
+                                <motion.div
+                                    key={category.id}
+                                    layout
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                    transition={{ duration: 0.2 }}
+                                    className="h-full"
+                                >
+                                    <CategoryCard
+                                        category={category}
+                                        onClick={() => navigate(`/learn/${category.slug}`)}
+                                    />
+                                </motion.div>
+                            ))}
                         </AnimatePresence>
                     </motion.div>
                 </div>
@@ -234,7 +198,7 @@ const LearnPage: React.FC = () => {
                                     <div key={article.id} className="h-full">
                                         <ArticleCard
                                             article={article}
-                                            onClick={() => navigate(`/learn/article/${article.id}`)}
+                                            onClick={() => navigate(getArticleUrl(article))}
                                         />
                                     </div>
                                 ))}
@@ -253,7 +217,7 @@ const LearnPage: React.FC = () => {
                                         <li
                                             key={article.id}
                                             className="group cursor-pointer hover:bg-white/5 transition-colors p-6"
-                                            onClick={() => navigate(`/learn/article/${article.id}`)}
+                                            onClick={() => navigate(getArticleUrl(article))}
                                         >
                                             <div className="flex gap-4 items-start">
                                                 <span className="text-3xl font-display font-bold text-text-tertiary/30 group-hover:text-primary transition-colors">0{idx + 1}</span>

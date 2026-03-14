@@ -4,6 +4,7 @@ import { ArrowLeft, Upload, CheckCircle, XCircle, Loader2 } from 'lucide-react';
 import { supabase } from '@/lib/supabaseClient';
 import { logAdminAction } from '@/lib/admin/auditLogger';
 import PageHeader from '@/components/admin/PageHeader';
+import { adminPath } from '@/hooks/useAdminNavigate';
 
 interface ImportResult {
   npi: string;
@@ -111,7 +112,7 @@ const AdminBulkImport: React.FC = () => {
         title="Bulk NPI Import"
         description="Import providers by NPI number via NPPES registry"
         actions={
-          <button onClick={() => navigate('/admin/providers')} className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 hover:text-gray-900">
+          <button onClick={() => navigate(adminPath('/providers'))} className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 hover:text-gray-900">
             <ArrowLeft size={16} /> Back
           </button>
         }

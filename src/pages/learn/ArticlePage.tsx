@@ -3,10 +3,12 @@ import { Share2, Bookmark, ChevronRight, Clock, Calendar, Search, Check } from '
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useArticleService } from '@/services/articleService';
 import { Article } from '@/types/models';
+import { getArticleUrl } from '@/lib/articleUrl';
 import ReadingProgress from '@/components/article/ReadingProgress';
 import TableOfContents from '@/components/article/TableOfContents';
 import ArticleCard from '@/components/article/ArticleCard';
 import ReferenceList from '@/components/article/ReferenceList';
+import AuthModal from '@/components/auth/AuthModal';
 
 import SEO from '@/components/SEO';
 import Button from '@/components/ui/Button';
@@ -21,7 +23,7 @@ import { cn } from '@/lib/utils';
 import { useBookmarks } from '@/context/BookmarkContext';
 
 const ArticlePage: React.FC = () => {
-    const { id } = useParams<{ id: string }>();
+    const { categorySlug, articleSlug } = useParams<{ categorySlug: string; articleSlug: string }>();
     const navigate = useNavigate();
     const [article, setArticle] = useState<Article | undefined>();
     const [relatedArticles, setRelatedArticles] = useState<Article[]>([]);
@@ -29,6 +31,15 @@ const ArticlePage: React.FC = () => {
     const [shareStatus, setShareStatus] = useState<'idle' | 'copied'>('idle');
     const articleService = useArticleService();
     const { isBookmarked, toggleBookmark } = useBookmarks();
+    const [showAuthModal, setShowAuthModal] = useState(false);
+
+    const handleBookmark = useCallback(() => {
+        if (!article) return;
+        const toggled = toggleBookmark(article.id);
+        if (!toggled) {
+            setShowAuthModal(true);
+        }
+    }, [article, toggleBookmark]);
 
     // Share functionality
     const handleShare = useCallback(async () => {
@@ -72,14 +83,20 @@ const ArticlePage: React.FC = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            if (id) {
+            if (articleSlug) {
                 setLoading(true);
                 try {
-                    const foundArticle = await articleService.getById(id);
+                    const foundArticle = await articleService.getBySlug(articleSlug);
                     setArticle(foundArticle);
 
-                    const allArticles = await articleService.getAll();
-                    setRelatedArticles(allArticles.filter(a => a.id.toString() !== id).slice(0, 3));
+                    if (foundArticle) {
+                        const related = await articleService.getRelatedArticles(
+                            foundArticle.id,
+                            foundArticle.category.slug,
+                            foundArticle.tags
+                        );
+                        setRelatedArticles(related);
+                    }
                 } catch (error) {
                     console.error("Failed to fetch article", error);
                 } finally {
@@ -88,7 +105,7 @@ const ArticlePage: React.FC = () => {
             }
         };
         fetchData();
-    }, [id, articleService]);
+    }, [articleSlug, articleService]);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -127,6 +144,18 @@ const ArticlePage: React.FC = () => {
                 description={article.description}
                 image={article.image}
                 type="article"
+                canonical={`https://psychage.com${getArticleUrl(article)}`}
+                article={{
+                    headline: article.title,
+                    description: article.description,
+                    image: article.image,
+                    authorName: article.author?.name,
+                    datePublished: article.publishedAt,
+                    dateModified: article.updatedAt,
+                    categoryName: article.category.name,
+                    categorySlug: article.category.slug,
+                    url: `https://psychage.com${getArticleUrl(article)}`,
+                }}
             />
             <ReadingProgress />
 
@@ -150,7 +179,7 @@ const ArticlePage: React.FC = () => {
                 {/* Hero Content */}
                 <motion.div
                     style={{ opacity: heroOpacity, y: heroY }}
-                    className="container mx-auto max-w-[1280px] px-6 relative z-10"
+                    className="container mx-auto max-w-content px-6 relative z-10"
                 >
                     {/* Breadcrumb */}
                     <nav className="flex items-center gap-2 text-sm text-text-tertiary mb-6 overflow-x-auto whitespace-nowrap hide-scrollbar">
@@ -211,7 +240,7 @@ const ArticlePage: React.FC = () => {
             </div>
 
             {/* Main Layout */}
-            <main className="container mx-auto max-w-[1280px] px-6 pb-24 -mt-12 relative z-20">
+            <main className="container mx-auto max-w-content px-6 pb-24 -mt-12 relative z-20">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
 
                     {/* Left Sidebar (Share/Controls) */}
@@ -234,7 +263,7 @@ const ArticlePage: React.FC = () => {
                             <motion.button
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
-                                onClick={() => toggleBookmark(article.id)}
+                                onClick={handleBookmark}
                                 className={cn(
                                     "w-12 h-12 rounded-full border shadow-lg flex items-center justify-center transition-all",
                                     bookmarked
@@ -323,7 +352,7 @@ const ArticlePage: React.FC = () => {
                                 <h3 className="font-bold text-text-primary mb-4 text-xs uppercase tracking-widest pl-1">Related Articles</h3>
                                 <div className="space-y-4">
                                     {relatedArticles.map(rel => (
-                                        <Link key={rel.id} to={`/learn/article/${rel.id}`} className="block group">
+                                        <Link key={rel.id} to={getArticleUrl(rel)} className="block group">
                                             <InteractiveCard className="flex gap-4 p-3 hover:bg-surface-hover/50 transition-colors">
                                                 <div className="w-20 h-20 rounded-lg overflow-hidden shrink-0">
                                                     <img src={rel.image} alt={rel.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
@@ -344,7 +373,7 @@ const ArticlePage: React.FC = () => {
                                 <div className="relative z-10">
                                     <h4 className="font-bold text-lg text-primary mb-2">Need professional help?</h4>
                                     <p className="text-sm text-text-secondary mb-4">Connect with licensed therapists who understand what you're going through.</p>
-                                    <Button size="sm" className="w-full shadow-lg shadow-primary/20" onClick={() => navigate('/find-care')}>Find a Provider</Button>
+                                    <Button size="sm" className="w-full shadow-lg shadow-primary/20" onClick={() => navigate('/providers')}>Find a Provider</Button>
                                 </div>
                                 <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/10 rounded-full blur-xl" />
                             </Card>
@@ -356,7 +385,7 @@ const ArticlePage: React.FC = () => {
 
             {/* Mobile Footer Area */}
             <section className="bg-surface/50 backdrop-blur-md py-12 px-6 border-t border-border/50 lg:hidden">
-                <div className="container mx-auto max-w-[1280px]">
+                <div className="container mx-auto max-w-content">
                     <h3 className="font-display font-bold text-2xl text-text-primary mb-8">Related Articles</h3>
                     <div className="grid grid-cols-1 gap-6">
                         {relatedArticles.map(rel => (
@@ -365,6 +394,8 @@ const ArticlePage: React.FC = () => {
                     </div>
                 </div>
             </section>
+
+            <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
         </div>
     );
 };

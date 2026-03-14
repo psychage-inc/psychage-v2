@@ -52,7 +52,7 @@ const UserAssessmentHistory: React.FC = () => {
         <div className="min-h-screen bg-background pt-24 pb-20 px-6">
             <SEO title="Assessment History | Psychage" />
 
-            <div className="container mx-auto max-w-[1200px]">
+            <div className="container mx-auto max-w-dashboard">
                 <h1 className="text-3xl font-display font-bold text-text-primary mb-8">Assessment History</h1>
 
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">

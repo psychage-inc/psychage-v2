@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '@/lib/supabaseClient';
+import { adminUrl, mainUrl, isAdminDomain } from '@/lib/urls';
 import { Loader2 } from 'lucide-react';
+
 const AuthCallback: React.FC = () => {
     const navigate = useNavigate();
     const [error, setError] = useState<string | null>(null);
@@ -22,9 +24,14 @@ const AuthCallback: React.FC = () => {
                 if (data.session) {
                     // Determine where to redirect based on user metadata
                     const userRole = data.session.user?.user_metadata?.role || 'patient';
+                    const onAdminDomain = isAdminDomain();
 
                     if (userRole === 'provider') {
-                        navigate('/provider', { replace: true });
+                        if (onAdminDomain) {
+                            window.location.href = mainUrl('/provider');
+                        } else {
+                            navigate('/provider', { replace: true });
+                        }
                     } else if (userRole === 'admin') {
                         // Check if admin has completed onboarding (fail-open if column missing)
                         let needsOnboarding = false;
@@ -38,13 +45,19 @@ const AuthCallback: React.FC = () => {
                             needsOnboarding = true;
                         }
 
-                        if (needsOnboarding) {
-                            navigate('/admin/onboarding', { replace: true });
+                        if (onAdminDomain) {
+                            navigate(needsOnboarding ? '/onboarding' : '/dashboard', { replace: true });
                         } else {
-                            navigate('/admin', { replace: true });
+                            window.location.href = needsOnboarding
+                                ? adminUrl('/onboarding')
+                                : adminUrl('/');
                         }
                     } else {
-                        navigate('/dashboard', { replace: true });
+                        if (onAdminDomain) {
+                            window.location.href = mainUrl('/dashboard');
+                        } else {
+                            navigate('/dashboard', { replace: true });
+                        }
                     }
                 } else {
                     // No session, redirect to login

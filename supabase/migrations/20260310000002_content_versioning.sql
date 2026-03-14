@@ -36,6 +36,11 @@ CREATE TABLE IF NOT EXISTS content_versions (
 
 CREATE INDEX IF NOT EXISTS idx_content_versions_doc ON content_versions(document_id, version_number DESC);
 CREATE INDEX IF NOT EXISTS idx_content_documents_slug ON content_documents(slug);
+
+-- Add columns that may be missing if table was created by an earlier migration
+ALTER TABLE content_documents ADD COLUMN IF NOT EXISTS status TEXT DEFAULT 'draft' CHECK (status IN ('draft', 'in_review', 'published'));
+ALTER TABLE content_documents ADD COLUMN IF NOT EXISTS is_published BOOLEAN DEFAULT FALSE;
+
 CREATE INDEX IF NOT EXISTS idx_content_documents_status ON content_documents(status, is_published);
 
 -- RLS

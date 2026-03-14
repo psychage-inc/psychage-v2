@@ -9,258 +9,161 @@ const themeIcon = (slug: string) => {
 
 const themeColor = (slug: string) => getCategoryTheme(slug).classes.bg;
 
+/**
+ * 15 categories aligned with the `article_categories` DB table.
+ * Used as fallback when Supabase is unavailable.
+ */
 export const categories: Category[] = [
-    // --- CONDITIONS ---
     {
-        id: 'anxiety',
-        name: 'Anxiety Disorders',
-        slug: 'anxiety',
-        description: 'Understanding and managing various forms of anxiety and panic.',
-        icon: themeIcon('anxiety'),
-        color: themeColor('anxiety'),
-        group: 'condition',
+        id: 'anxiety-stress',
+        name: 'Anxiety & Stress',
+        slug: 'anxiety-stress',
+        description: 'Understanding and managing various forms of anxiety, panic, and chronic stress.',
+        icon: themeIcon('anxiety-stress'),
+        color: themeColor('anxiety-stress'),
         image: '/images/categories/anxiety.png',
-        subTopics: ['Generalized Anxiety (GAD)', 'Social Anxiety', 'Panic Disorder', 'Phobias', 'OCD']
+        subTopics: ['Generalized Anxiety (GAD)', 'Social Anxiety', 'Panic Disorder', 'Phobias', 'Chronic Stress', 'Performance Anxiety']
     },
     {
-        id: 'mood',
-        name: 'Mood Disorders',
-        slug: 'mood-disorders',
+        id: 'depression-mood',
+        name: 'Depression & Mood',
+        slug: 'depression-mood',
         description: 'Resources for depression, bipolar disorder, and emotional regulation.',
-        icon: themeIcon('mood-disorders'),
-        color: themeColor('mood-disorders'),
-        group: 'condition',
+        icon: themeIcon('depression-mood'),
+        color: themeColor('depression-mood'),
         image: '/images/categories/mood.png',
-        subTopics: ['Major Depression', 'Bipolar I & II', 'Seasonal Affective (SAD)', 'Postpartum']
+        subTopics: ['Major Depressive Disorder', 'Persistent Depressive Disorder', 'Bipolar Disorder', 'Seasonal Affective Disorder', 'Postpartum Depression', 'Emotional Regulation']
     },
     {
-        id: 'trauma',
+        id: 'relationships-social',
+        name: 'Relationships & Social Health',
+        slug: 'relationships-social',
+        description: 'Navigating connections, family dynamics, boundaries, and social well-being.',
+        icon: themeIcon('relationships-social'),
+        color: themeColor('relationships-social'),
+        image: '/images/categories/relationships.svg',
+        subTopics: ['Communication Skills', 'Healthy Boundaries', 'Couples & Partnership', 'Family Dynamics', 'Loneliness & Isolation', 'Conflict Resolution']
+    },
+    {
+        id: 'trauma-ptsd',
         name: 'Trauma & PTSD',
-        slug: 'trauma-stress',
-        description: 'Healing from traumatic experiences and managing acute stress.',
-        icon: themeIcon('trauma-stress'),
-        color: themeColor('trauma-stress'),
-        group: 'condition',
+        slug: 'trauma-ptsd',
+        description: 'Healing from traumatic experiences and managing acute stress responses.',
+        icon: themeIcon('trauma-ptsd'),
+        color: themeColor('trauma-ptsd'),
         image: '/images/categories/trauma.png',
-        subTopics: ['PTSD', 'Complex PTSD', 'Acute Stress', 'Grief & Loss']
+        subTopics: ['PTSD', 'Complex PTSD', 'Acute Stress Disorder', 'Trauma Recovery', 'Childhood Trauma', 'Dissociative Experiences']
     },
     {
         id: 'neurodevelopmental',
-        name: 'Neurodiversity',
-        slug: 'neurodiversity',
-        description: 'Understanding ADHD, Autism, and learning differences.',
-        icon: themeIcon('neurodiversity'),
-        color: themeColor('neurodiversity'),
-        group: 'condition',
+        name: 'Neurodevelopmental',
+        slug: 'neurodevelopmental',
+        description: 'Understanding ADHD, Autism, learning differences, and executive function.',
+        icon: themeIcon('neurodevelopmental'),
+        color: themeColor('neurodevelopmental'),
         image: '/images/categories/neurodiversity.png',
-        subTopics: ['ADHD', 'Autism Spectrum', 'Dyslexia', 'Executive Function']
+        subTopics: ['ADHD', 'Autism Spectrum', 'Learning Disabilities', 'Executive Function', 'Sensory Processing']
     },
     {
-        id: 'personality',
-        name: 'Personality Disorders',
-        slug: 'personality-disorders',
-        description: 'Understanding complex personality patterns and traits.',
-        icon: themeIcon('personality-disorders'),
-        color: themeColor('personality-disorders'),
-        group: 'condition',
-        image: '/images/categories/personality.png',
-        subTopics: ['Borderline (BPD)', 'Narcissistic (NPD)', 'Avoidant', 'OCPD']
-    },
-    {
-        id: 'addiction',
-        name: 'Addiction & Recovery',
-        slug: 'addiction',
-        description: 'Support for substance use and behavioral addictions.',
-        icon: themeIcon('addiction'),
-        color: themeColor('addiction'),
-        group: 'condition',
+        id: 'substance-addiction',
+        name: 'Substance Use & Addiction',
+        slug: 'substance-addiction',
+        description: 'Support for substance use, behavioral addictions, and recovery.',
+        icon: themeIcon('substance-addiction'),
+        color: themeColor('substance-addiction'),
         image: '/images/categories/addiction.png',
-        subTopics: ['Alcohol Use', 'Substance Use', 'Gambling', 'Digital Addiction']
+        subTopics: ['Alcohol Use Disorder', 'Drug Dependence', 'Behavioral Addictions', 'Recovery & Sobriety', 'Harm Reduction', 'Dual Diagnosis']
     },
     {
-        id: 'eating-disorders',
-        name: 'Eating Disorders',
-        slug: 'eating-disorders',
-        description: 'Recovery resources for anorexia, bulimia, and body image.',
-        icon: themeIcon('eating-disorders'),
-        color: themeColor('eating-disorders'),
-        group: 'condition',
-        image: '/images/categories/eating_disorders.png',
-        subTopics: ['Anorexia', 'Bulimia', 'Binge Eating', 'Body Dysmorphia']
-    },
-    {
-        id: 'psychosis',
-        name: 'Psychosis & Schizophrenia',
-        slug: 'psychosis',
-        description: 'Understanding reality distortion and thought disorders.',
-        icon: themeIcon('psychosis'),
-        color: themeColor('psychosis'),
-        group: 'condition',
-        image: '/images/categories/psychosis.svg',
-        subTopics: ['Schizophrenia', 'Schizoaffective', 'Brief Psychotic Disorder']
-    },
-
-    // --- WELLNESS ---
-    {
-        id: 'sleep',
-        name: 'Sleep & Rest',
-        slug: 'sleep',
-        description: 'Optimizing sleep hygiene and treating sleep disorders.',
-        icon: themeIcon('sleep'),
-        color: themeColor('sleep'),
-        group: 'wellness',
+        id: 'sleep-circadian',
+        name: 'Sleep & Circadian Health',
+        slug: 'sleep-circadian',
+        description: 'Optimizing sleep hygiene, treating sleep disorders, and circadian rhythms.',
+        icon: themeIcon('sleep-circadian'),
+        color: themeColor('sleep-circadian'),
         image: '/images/categories/sleep.svg',
-        subTopics: ['Insomnia', 'Sleep Apnea', 'Circadian Rhythms', 'Sleep Hygiene']
+        subTopics: ['Insomnia', 'Sleep Apnea', 'Circadian Rhythm Disorders', 'Sleep Hygiene', 'Parasomnias', 'Shift Work & Jet Lag']
     },
     {
-        id: 'wellness',
-        name: 'Holistic Wellness',
-        slug: 'wellness',
-        description: 'Nutrition, movement, and lifestyle for mental health.',
-        icon: themeIcon('wellness'),
-        color: themeColor('wellness'),
-        group: 'wellness',
-        image: '/images/categories/wellness.svg',
-        subTopics: ['Nutrition', 'Exercise', 'Nature Therapy', 'Breathwork']
+        id: 'self-esteem-identity',
+        name: 'Self-Esteem & Identity',
+        slug: 'self-esteem-identity',
+        description: 'Building self-worth, confidence, and authentic identity.',
+        icon: themeIcon('self-esteem-identity'),
+        color: themeColor('self-esteem-identity'),
+        image: '/images/categories/self_esteem.svg',
+        subTopics: ['Self-Worth', 'Imposter Syndrome', 'Body Image', 'Gender Identity', 'Cultural Identity', 'People-Pleasing']
     },
     {
-        id: 'mindfulness',
-        name: 'Mindfulness',
-        slug: 'mindfulness',
-        description: 'Practices to stay present and reduce stress.',
-        icon: themeIcon('mindfulness'),
-        color: themeColor('mindfulness'),
-        group: 'wellness',
-        image: '/images/categories/mindfulness.svg',
-        subTopics: ['Meditation', 'Grounding', 'Gratitude', 'Mindful Eating']
-    },
-    {
-        id: 'digital-wellbeing',
-        name: 'Digital Wellbeing',
-        slug: 'digital-wellbeing',
-        description: 'Managing screen time and social media impact.',
-        icon: themeIcon('digital-wellbeing'),
-        color: themeColor('digital-wellbeing'),
-        group: 'wellness',
-        image: '/images/categories/digital_wellbeing.svg',
-        subTopics: ['Social Media Detox', 'Screen Addiction', 'Cyberbullying']
-    },
-
-    // --- LIFE & RELATIONSHIPS ---
-    {
-        id: 'relationships',
-        name: 'Relationships',
-        slug: 'relationships',
-        description: 'Navigating connections, family, and boundaries.',
-        icon: themeIcon('relationships'),
-        color: themeColor('relationships'),
-        group: 'life',
-        image: '/images/categories/relationships.svg',
-        subTopics: ['Communication', 'Boundaries', 'Couples', 'Family Dynamics']
-    },
-    {
-        id: 'workplace',
-        name: 'Workplace Health',
-        slug: 'workplace',
-        description: 'Navigating burnout and professional growth.',
-        icon: themeIcon('workplace'),
-        color: themeColor('workplace'),
-        group: 'life',
-        image: '/images/categories/workplace.svg',
-        subTopics: ['Burnout', 'Work-Life Balance', 'Imposter Syndrome', 'Leadership']
-    },
-    {
-        id: 'parenting',
-        name: 'Parenting',
-        slug: 'parenting',
-        description: 'Raising resilient children and managing parental stress.',
-        icon: themeIcon('parenting'),
-        color: themeColor('parenting'),
-        group: 'family',
-        image: '/images/categories/parenting.svg',
-        subTopics: ['Positive Parenting', 'Teen Issues', 'New Parents', 'Family Therapy']
-    },
-    {
-        id: 'grief',
-        name: 'Grief & Loss',
-        slug: 'grief',
-        description: 'Navigating the complex emotions of loss.',
-        icon: themeIcon('grief'),
-        color: themeColor('grief'),
-        group: 'life',
-        image: '/images/categories/grief.svg',
-        subTopics: ['Bereavement', 'Anticipatory Grief', 'Pet Loss']
-    },
-    {
-        id: 'anger',
-        name: 'Anger Management',
-        slug: 'anger',
-        description: 'Healthy ways to express and process anger.',
-        icon: themeIcon('anger'),
-        color: themeColor('anger'),
-        group: 'life',
-        image: '/images/categories/anger.svg',
-        subTopics: ['Emotional Regulation', 'Conflict Resolution', 'Triggers']
-    },
-
-    // --- IDENTITY ---
-    {
-        id: 'mens-health',
-        name: 'Men\'s Mental Health',
-        slug: 'mens-health',
-        description: 'Specific challenges and resources for men.',
-        icon: themeIcon('mens-health'),
-        color: themeColor('mens-health'),
-        group: 'identity',
-        image: '/images/categories/mens_health.svg',
-        subTopics: ['Emotional Expression', 'Fatherhood', 'Masculinity']
-    },
-    {
-        id: 'womens-health',
-        name: 'Women\'s Mental Health',
-        slug: 'womens-health',
-        description: 'Specific challenges and resources for women.',
-        icon: themeIcon('womens-health'),
-        color: themeColor('womens-health'),
-        group: 'identity',
-        image: '/images/categories/womens_health.svg',
-        subTopics: ['Hormonal Health', 'Motherhood', 'Body Image']
-    },
-    {
-        id: 'lgbtq',
-        name: 'LGBTQ+ Support',
-        slug: 'lgbtq',
-        description: 'Resources for the LGBTQ+ community.',
-        icon: themeIcon('lgbtq'),
-        color: themeColor('lgbtq'),
-        group: 'identity',
-        image: '/images/categories/lgbtq.svg',
-        subTopics: ['Coming Out', 'Gender Identity', 'Discrimination']
-    },
-
-    // --- THERAPY ---
-    {
-        id: 'therapy-types',
-        name: 'Types of Therapy',
-        slug: 'therapy-types',
-        description: 'Guides to different therapeutic modalities.',
-        icon: themeIcon('therapy-types'),
-        color: themeColor('therapy-types'),
-        group: 'therapy',
+        id: 'therapy-treatment',
+        name: 'Therapy & Treatment',
+        slug: 'therapy-treatment',
+        description: 'Guides to therapeutic modalities, medications, and finding the right support.',
+        icon: themeIcon('therapy-treatment'),
+        color: themeColor('therapy-treatment'),
         image: '/images/categories/therapy_types.svg',
-        subTopics: ['CBT', 'DBT', 'EMDR', 'Psychodynamic']
+        subTopics: ['CBT', 'DBT', 'EMDR', 'Psychodynamic Therapy', 'Medication Management', 'Finding a Therapist', 'Group Therapy']
     },
     {
-        id: 'medication',
-        name: 'Medication',
-        slug: 'medication',
-        description: 'Understanding psychiatric medications.',
-        icon: themeIcon('medication'),
-        color: themeColor('medication'),
-        group: 'therapy',
-        image: '/images/categories/medication.svg',
-        subTopics: ['Antidepressants', 'Anxiolytics', 'Mood Stabilizers']
-    }
+        id: 'workplace-academic',
+        name: 'Workplace & Academic',
+        slug: 'workplace-academic',
+        description: 'Navigating burnout, professional growth, and academic stress.',
+        icon: themeIcon('workplace-academic'),
+        color: themeColor('workplace-academic'),
+        image: '/images/categories/workplace.svg',
+        subTopics: ['Burnout', 'Work-Life Balance', 'Academic Pressure', 'Imposter Syndrome', 'Leadership & Stress', 'Remote Work']
+    },
+    {
+        id: 'life-transitions',
+        name: 'Life Transitions & Crises',
+        slug: 'life-transitions',
+        description: 'Navigating major life changes, grief, loss, and personal crises.',
+        icon: themeIcon('life-transitions'),
+        color: themeColor('life-transitions'),
+        image: '/images/categories/life_transitions.svg',
+        subTopics: ['Grief & Bereavement', 'Divorce & Separation', 'Retirement', 'Moving & Relocation', 'Identity Shifts', 'Midlife Transitions']
+    },
+    {
+        id: 'children-adolescents',
+        name: 'Children & Adolescents',
+        slug: 'children-adolescents',
+        description: 'Mental health resources for children, teens, and parenting support.',
+        icon: themeIcon('children-adolescents'),
+        color: themeColor('children-adolescents'),
+        image: '/images/categories/parenting.svg',
+        subTopics: ['Child Mental Health', 'Adolescent Issues', 'Parenting Strategies', 'Bullying', 'School Refusal', 'Teen Anxiety & Depression']
+    },
+    {
+        id: 'eating-body',
+        name: 'Eating & Body',
+        slug: 'eating-body',
+        description: 'Recovery resources for eating disorders, body image, and nutrition.',
+        icon: themeIcon('eating-body'),
+        color: themeColor('eating-body'),
+        image: '/images/categories/eating_disorders.png',
+        subTopics: ['Anorexia Nervosa', 'Bulimia Nervosa', 'Binge Eating Disorder', 'Body Dysmorphia', 'ARFID', 'Intuitive Eating', 'Orthorexia']
+    },
+    {
+        id: 'ocd-related',
+        name: 'OCD & Related',
+        slug: 'ocd-related',
+        description: 'Understanding OCD, body-focused repetitive behaviors, and impulse control.',
+        icon: themeIcon('ocd-related'),
+        color: themeColor('ocd-related'),
+        image: '/images/categories/ocd.svg',
+        subTopics: ['OCD', 'Trichotillomania', 'Excoriation Disorder', 'Hoarding', 'Impulse Control', 'Body-Focused Repetitive Behaviors']
+    },
+    {
+        id: 'global-cultural',
+        name: 'Global & Cultural MH',
+        slug: 'global-cultural',
+        description: 'Global mental health perspectives, cultural considerations, and cross-cultural research.',
+        icon: themeIcon('global-cultural'),
+        color: themeColor('global-cultural'),
+        image: '/images/categories/global.svg',
+        subTopics: ['Cultural Stigma', 'Migration & Displacement', 'Indigenous Perspectives', 'LGBTQ+ Mental Health', 'Racial Trauma', 'Collectivist vs Individualist']
+    },
 ];
 
 export const getCategoryById = (id: string): Category | undefined => {

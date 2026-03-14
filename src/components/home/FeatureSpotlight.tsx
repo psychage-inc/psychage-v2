@@ -14,7 +14,7 @@ const FeatureSpotlight: React.FC = () => {
     const navigate = useNavigate();
 
     return (
-        <section className="py-28 px-6 relative overflow-hidden">
+        <section className="py-16 sm:py-20 lg:py-28 px-6 relative overflow-hidden">
             {/* Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-teal-950 via-teal-900 to-teal-800" />
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(20,184,166,0.2),_transparent_50%)]" />

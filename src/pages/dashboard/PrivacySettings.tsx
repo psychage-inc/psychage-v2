@@ -235,7 +235,7 @@ const PrivacySettings: React.FC = () => {
             <div className="fixed inset-0 z-0 pointer-events-none">
                             </div>
 
-            <div className="container mx-auto max-w-[1200px] relative z-10">
+            <div className="container mx-auto max-w-dashboard relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}

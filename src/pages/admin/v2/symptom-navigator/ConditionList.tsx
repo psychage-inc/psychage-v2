@@ -9,6 +9,7 @@ import PageHeader from '@/components/admin/PageHeader';
 import DataTable from '@/components/admin/DataTable';
 import AdminStatusBadge from '@/components/admin/StatusBadge';
 import { cn } from '@/lib/utils';
+import { adminPath } from '@/hooks/useAdminNavigate';
 
 const AdminConditionList: React.FC = () => {
   const navigate = useNavigate();
@@ -64,7 +65,7 @@ const AdminConditionList: React.FC = () => {
       header: 'Name',
       cell: ({ row }) => (
         <Link
-          to={`/admin/symptom-navigator/conditions/${row.original.id}/edit`}
+          to={adminPath(`/symptom-navigator/conditions/${row.original.id}/edit`)}
           className="font-medium text-gray-900 dark:text-white hover:text-teal-600"
         >
           {row.original.name?.en || row.original.condition_id}
@@ -128,7 +129,7 @@ const AdminConditionList: React.FC = () => {
       enableSorting: false,
       cell: ({ row }) => (
         <button
-          onClick={() => navigate(`/admin/symptom-navigator/conditions/${row.original.id}/edit`)}
+          onClick={() => navigate(adminPath(`/symptom-navigator/conditions/${row.original.id}/edit`))}
           className="p-1.5 text-gray-400 hover:text-teal-600"
           title="Edit"
         >
@@ -145,7 +146,7 @@ const AdminConditionList: React.FC = () => {
         description={`${conditions?.length || 0} condition profiles`}
         actions={
           <button
-            onClick={() => navigate('/admin/symptom-navigator/conditions/new/edit')}
+            onClick={() => navigate(adminPath('/symptom-navigator/conditions/new/edit'))}
             className="flex items-center gap-2 px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium rounded-lg transition-colors"
           >
             <Plus size={16} /> Add Condition

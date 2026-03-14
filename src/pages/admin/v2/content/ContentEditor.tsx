@@ -12,6 +12,7 @@ import { CONTENT_TYPES, CONTENT_STATUSES, SUPPORTED_LANGUAGES } from '@/lib/admi
 import type { ContentDocument, ContentVersion, ContentStatus } from '@/lib/admin/types';
 import TiptapEditor from '@/components/admin/TiptapEditor';
 import PageHeader from '@/components/admin/PageHeader';
+import { adminPath } from '@/hooks/useAdminNavigate';
 
 // ============================================================
 // Validation
@@ -190,7 +191,7 @@ const AdminContentEditor: React.FC = () => {
     onSuccess: (docId) => {
       queryClient.invalidateQueries({ queryKey: ['admin', 'content'] });
       if (isNew && docId) {
-        navigate(`/admin/content/${docId}/edit`, { replace: true });
+        navigate(adminPath(`/content/${docId}/edit`), { replace: true });
       }
     },
   });
@@ -230,7 +231,7 @@ const AdminContentEditor: React.FC = () => {
         title={isNew ? 'New Content' : 'Edit Content'}
         actions={
           <button
-            onClick={() => navigate('/admin/content')}
+            onClick={() => navigate(adminPath('/content'))}
             className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white transition-colors"
           >
             <ArrowLeft size={16} />

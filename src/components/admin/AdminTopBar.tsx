@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { ExternalLink, LogOut, Search } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useAuth } from '@/context/AuthContext';
+import { mainUrl } from '@/lib/urls';
 import type { AdminUser } from '@/lib/admin/types';
 import { ADMIN_ROLE_LABELS } from '@/lib/admin/constants';
 
@@ -84,7 +85,7 @@ const AdminTopBar: React.FC<AdminTopBarProps> = ({ adminUser, sidebarCollapsed, 
         </button>
 
         <a
-          href="/"
+          href={mainUrl('/')}
           target="_blank"
           rel="noopener noreferrer"
           className="hidden sm:flex items-center gap-1.5 text-sm text-gray-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors"

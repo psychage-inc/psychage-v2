@@ -68,9 +68,9 @@ const ToolsSection: React.FC = () => {
     const [featuredTool, ...secondaryTools] = tools;
 
     return (
-        <section className="py-24 px-6 bg-slate-50 border-y border-slate-200 relative overflow-hidden">
+        <section className="py-14 sm:py-16 lg:py-24 px-6 bg-slate-50 border-y border-slate-200 relative overflow-hidden">
             {/* Decorative Background */}
-            <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[800px] h-[800px] bg-teal-500/5 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[min(800px,100vw)] h-[min(800px,100vw)] bg-teal-500/5 rounded-full blur-3xl pointer-events-none" />
 
             <div className="container mx-auto max-w-6xl relative z-10">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">

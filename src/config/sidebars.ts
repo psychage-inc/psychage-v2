@@ -1,8 +1,10 @@
-import { LayoutDashboard, History, Bookmark, Settings, Shield, Users, BarChart3, UserSquare2, UserCircle, ShieldAlert, FileText, BookOpen } from 'lucide-react';
+import { LayoutDashboard, History, Bookmark, Settings, Shield, Users, BarChart3, UserSquare2, UserCircle, ShieldAlert, FileText, BookOpen, Activity, Brain } from 'lucide-react';
 
 export const patientSidebarItems = [
     { icon: LayoutDashboard, label: 'Dashboard', path: '/dashboard' },
     { icon: History, label: 'Assessment History', path: '/dashboard/history' },
+    { icon: Activity, label: 'Clarity Score', path: '/clarity-score' },
+    { icon: Brain, label: 'Symptom Navigator', path: '/tools/symptom-navigator' },
     { icon: Bookmark, label: 'Saved', path: '/dashboard/bookmarks' },
     { icon: Settings, label: 'Account Settings', path: '/dashboard/settings' },
     { icon: Shield, label: 'Privacy & Data', path: '/dashboard/privacy' },

@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import Button from '@/components/ui/Button';
 import { useArticleService } from '@/services/articleService';
 import { Article } from '@/types/models';
+import { getArticleUrl } from '@/lib/articleUrl';
 
 const categories = [
     { slug: 'wellness', label: 'Wellness' },
@@ -45,7 +46,7 @@ const LifestylePreview: React.FC = () => {
     };
 
     return (
-        <section className="py-28 px-6 bg-slate-50 dark:bg-slate-900/50">
+        <section className="py-16 sm:py-20 lg:py-28 px-6 bg-slate-50 dark:bg-slate-900/50">
             <div className="container mx-auto max-w-6xl">
 
                 {/* Header */}
@@ -121,7 +122,7 @@ const LifestylePreview: React.FC = () => {
                                 {articles.map((article) => (
                                     <div
                                         key={article.id}
-                                        onClick={() => navigate(`/learn/article/${article.id}`)}
+                                        onClick={() => navigate(getArticleUrl(article))}
                                         className="group cursor-pointer"
                                     >
                                         <div className="aspect-[4/3] rounded-2xl overflow-hidden mb-4 bg-slate-200 dark:bg-slate-800">

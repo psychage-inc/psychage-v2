@@ -4,6 +4,14 @@ import type { ScoreTier } from '@/lib/clarity/types';
 import { getScoreTierColor } from '@/lib/clarity/scoring';
 import TierBadge from './TierBadge';
 
+const TIER_SENTENCES: Record<ScoreTier, string> = {
+  thriving: 'Strong wellness across most dimensions',
+  balanced: 'Solid foundation with room to grow',
+  struggling: 'Some areas need attention',
+  distressed: 'Significant challenges detected',
+  crisis: 'Immediate support recommended',
+};
+
 interface ScoreGaugeProps {
   score: number;
   tier: ScoreTier;
@@ -72,11 +80,10 @@ const ScoreGauge: React.FC<ScoreGaugeProps> = ({
       aria-label={`Clarity Score: ${score} out of 100, ${label}`}
       role="img"
     >
+      <div className="relative w-full max-w-[12.5rem]">
       <svg
-        width={SIZE}
-        height={SIZE}
         viewBox={`0 0 ${SIZE} ${SIZE}`}
-        className="transform rotate-[135deg]"
+        className="transform rotate-[135deg] w-full h-auto"
       >
         {/* Background arc */}
         <circle
@@ -111,10 +118,10 @@ const ScoreGauge: React.FC<ScoreGaugeProps> = ({
       </svg>
 
       {/* Score number overlay */}
-      <div className="absolute flex flex-col items-center justify-center" style={{ width: SIZE, height: SIZE }}>
+      <div className="absolute inset-0 flex flex-col items-center justify-center">
         <span
           ref={scoreRef}
-          className="text-6xl font-display font-bold text-gray-900 dark:text-white"
+          className="text-5xl sm:text-6xl font-display font-bold text-gray-900 dark:text-white"
         >
           {prefersReduced || !shouldAnimate ? score : 0}
         </span>
@@ -122,10 +129,14 @@ const ScoreGauge: React.FC<ScoreGaugeProps> = ({
           out of 100
         </span>
       </div>
+      </div>
 
-      {/* Tier badge below */}
-      <div className="-mt-4">
+      {/* Tier badge + interpretive sentence */}
+      <div className="-mt-4 flex flex-col items-center">
         <TierBadge tier={tier} label={label} size="lg" />
+        <p className="text-xs text-gray-400 dark:text-gray-500 text-center mt-2 max-w-[180px]">
+          {TIER_SENTENCES[tier]}
+        </p>
       </div>
     </div>
   );

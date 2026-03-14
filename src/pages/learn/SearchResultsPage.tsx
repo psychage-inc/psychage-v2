@@ -8,6 +8,7 @@ import { Display, Text } from '@/components/ui/Typography';
 import Button from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import SEO from '@/components/SEO';
+import { getArticleUrl } from '@/lib/articleUrl';
 import { motion, AnimatePresence } from 'framer-motion';
 
 type SearchType = 'all' | 'articles' | 'providers' | 'tools';
@@ -249,7 +250,7 @@ const SearchResultsPage: React.FC = () => {
                                             <ArticleCard
                                                 key={article.id}
                                                 article={article as Article}
-                                                onClick={() => navigate(`/learn/article/${article.slug || article.id}`)}
+                                                onClick={() => navigate(getArticleUrl(article as Article))}
                                             />
                                         ))}
                                     </div>

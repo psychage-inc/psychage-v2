@@ -50,7 +50,7 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children, title, subtitle, se
     return (
         <div className="min-h-screen bg-background pt-24 pb-20 px-6">
             <SEO title={seoTitle || `${title} | Admin`} />
-            <div className="container mx-auto max-w-[1400px]">
+            <div className="container mx-auto max-w-admin">
                 <Breadcrumbs className="mb-6" />
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
                     <div className="lg:col-span-3">

@@ -16,8 +16,10 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
     }
 
     if (!isAuthenticated) {
-        // Redirect to login page, but save the current location they were trying to go to
-        return <Navigate to="/login" state={{ from: location }} replace />;
+        // Redirect to login page with redirectTo query param (survives page refresh)
+        // Also pass location via state for backward compatibility
+        const redirectTo = encodeURIComponent(location.pathname + location.search);
+        return <Navigate to={`/login?redirectTo=${redirectTo}`} state={{ from: location }} replace />;
     }
 
     return <>{children}</>;

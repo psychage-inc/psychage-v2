@@ -98,5 +98,14 @@ export const tools: Tool[] = [
     category: "Self-Care",
     color: "teal",
     features: ["Privacy-first", "7 journal sections", "Trend insights"]
+  },
+  {
+    id: 11,
+    name: "Relationship Health Check",
+    description: "Understand the quality of your relationships across four key areas of your life with this research-backed reflection tool.",
+    iconName: "HeartHandshake",
+    category: "Assessment",
+    color: "rose",
+    features: ["4 life domains", "5-min assessment", "Privacy-first"]
   }
 ];

@@ -7,6 +7,7 @@ import { useTopicHubData } from '@/hooks/useTopicHubData';
 import { SkeletonTopicHub } from '@/components/ui/Skeletons';
 import InteractiveCard from '@/components/ui/InteractiveCard';
 import GrainOverlay from '@/components/ui/GrainOverlay';
+import { getArticleUrl } from '@/lib/articleUrl';
 
 interface TopicHubSectionProps {
     categoryId: string;
@@ -35,7 +36,7 @@ const TopicHubSection: React.FC<TopicHubSectionProps> = ({
         <section className={`py-20 px-6 relative overflow-hidden ${className}`}>
             <GrainOverlay opacity={0.03} />
             <motion.div
-                className="container mx-auto max-w-[1280px] relative z-10"
+                className="container mx-auto max-w-content relative z-10"
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, margin: "-100px" }}
@@ -90,7 +91,7 @@ const TopicHubSection: React.FC<TopicHubSectionProps> = ({
                             className={`lg:col-span-6 h-full ${invert ? "lg:order-last" : ""}`}
                         >
                             <InteractiveCard
-                                onClick={() => navigate(`/learn/article/${categoryArticles[0].id}`)}
+                                onClick={() => navigate(getArticleUrl(categoryArticles[0]))}
                                 className="h-full bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-lg cursor-pointer group"
                             >
                                 <div className="p-5 h-full flex flex-col">
@@ -125,7 +126,7 @@ const TopicHubSection: React.FC<TopicHubSectionProps> = ({
                                         show: { opacity: 1, x: 0, transition: { duration: 0.5 } }
                                     }}
                                     className={`flex gap-6 group cursor-pointer items-start ${invert ? "flex-row-reverse text-right" : ""}`}
-                                    onClick={() => navigate(`/learn/article/${article.id}`)}
+                                    onClick={() => navigate(getArticleUrl(article))}
                                 >
                                     <div className="w-28 h-20 shrink-0 rounded-lg overflow-hidden bg-gray-100">
                                         <img

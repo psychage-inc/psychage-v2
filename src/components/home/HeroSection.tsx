@@ -20,7 +20,7 @@ const HeroSection: React.FC = () => {
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-20 -left-32 w-96 h-96 bg-teal-100/30 dark:bg-teal-900/10 rounded-full blur-3xl" />
                 <div className="absolute bottom-20 -right-32 w-80 h-80 bg-teal-50/40 dark:bg-teal-950/10 rounded-full blur-3xl" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-50/20 dark:bg-emerald-950/5 rounded-full blur-3xl" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(600px,90vw)] h-[min(600px,90vw)] bg-emerald-50/20 dark:bg-emerald-950/5 rounded-full blur-3xl" />
             </div>
 
             <div className="container mx-auto px-4 relative z-10 max-w-4xl text-center">

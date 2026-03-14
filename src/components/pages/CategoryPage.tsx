@@ -10,6 +10,7 @@ import VideoCard from '../video/VideoCard';
 import ToolCard from '../tool/ToolCard';
 import { useParams, useNavigate } from 'react-router-dom';
 import SEO from '../SEO';
+import { getArticleUrl } from '../../lib/articleUrl';
 import { AlertCircle, RefreshCw } from 'lucide-react';
 
 // Loading skeleton components
@@ -120,7 +121,7 @@ const CategoryPage: React.FC = () => {
             />
             {/* Hero */}
             <div className="bg-teal-900 pt-32 pb-20 px-6">
-                <div className="container mx-auto max-w-[1280px]">
+                <div className="container mx-auto max-w-content">
                     <h1 className="font-display font-bold text-4xl md:text-6xl text-white mb-6">
                         {categoryTitle}
                     </h1>
@@ -137,7 +138,7 @@ const CategoryPage: React.FC = () => {
                 </div>
             </div>
 
-            <div className="container mx-auto max-w-[1280px] px-6 space-y-20 py-20">
+            <div className="container mx-auto max-w-content px-6 space-y-20 py-20">
 
                 {/* Error State */}
                 {error && (
@@ -183,7 +184,7 @@ const CategoryPage: React.FC = () => {
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: idx * 0.05 }}
                                     className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all cursor-pointer group"
-                                    onClick={() => navigate(`/learn/article/${article.slug}`)}
+                                    onClick={() => navigate(getArticleUrl(article))}
                                 >
                                     <ArticleCard article={article} />
                                 </motion.div>

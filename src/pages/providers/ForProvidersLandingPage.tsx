@@ -103,7 +103,7 @@ const ForProvidersLandingPage: React.FC = () => {
           {/* Decorative elements */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div className="absolute -top-24 -right-24 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl" />
-            <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-teal-400/10 rounded-full blur-3xl" />
+            <div className="absolute -bottom-32 -left-32 w-[min(500px,90vw)] h-[min(500px,90vw)] bg-teal-400/10 rounded-full blur-3xl" />
           </div>
 
           <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">

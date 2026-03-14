@@ -11,6 +11,7 @@ import PageHeader from '@/components/admin/PageHeader';
 import DataTable from '@/components/admin/DataTable';
 import AdminStatusBadge from '@/components/admin/StatusBadge';
 import ConfirmDialog from '@/components/admin/ConfirmDialog';
+import { adminPath } from '@/hooks/useAdminNavigate';
 
 const AdminContentList: React.FC = () => {
   const navigate = useNavigate();
@@ -61,7 +62,7 @@ const AdminContentList: React.FC = () => {
       header: 'Title',
       cell: ({ row }) => (
         <Link
-          to={`/admin/content/${row.original.id}/edit`}
+          to={adminPath(`/content/${row.original.id}/edit`)}
           className="font-medium text-gray-900 dark:text-white hover:text-teal-600 dark:hover:text-teal-400"
         >
           {row.original.title}
@@ -109,7 +110,7 @@ const AdminContentList: React.FC = () => {
         return (
           <div className="flex items-center gap-1">
             <button
-              onClick={() => navigate(`/admin/content/${doc.id}/edit`)}
+              onClick={() => navigate(adminPath(`/content/${doc.id}/edit`))}
               className="p-1.5 text-gray-400 hover:text-teal-600 transition-colors"
               title="Edit"
             >
@@ -142,7 +143,7 @@ const AdminContentList: React.FC = () => {
         description="Manage articles, guides, and educational content"
         actions={
           <button
-            onClick={() => navigate('/admin/content/new')}
+            onClick={() => navigate(adminPath('/content/new'))}
             className="flex items-center gap-2 px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium rounded-lg transition-colors"
           >
             <Plus size={16} />

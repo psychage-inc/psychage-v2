@@ -9,7 +9,7 @@ import type { NavigationConfig, NavMegaMenu, NavLink } from '../types/navigation
 export const navigationConfig: NavigationConfig = {
     // PRIMARY NAVIGATION (Desktop navbar, top-level items)
     primary: [
-        // Learn mega menu - 5 sections, 16 items (1 Browse + 15 categories)
+        // Learn mega menu - 4 sections: Browse + 3 groups of 5 categories
         {
             id: 'learn',
             label: 'Learn',
@@ -28,127 +28,122 @@ export const navigationConfig: NavigationConfig = {
                     ]
                 },
                 {
-                    title: 'Understanding Mental Health',
+                    title: 'Conditions & Disorders',
                     items: [
                         {
                             id: 'anxiety-stress',
                             label: 'Anxiety & Stress',
                             description: 'Managing worry and overwhelm',
-                            href: '/learn?category=anxiety-stress',
+                            href: '/learn/anxiety-stress',
                             icon: 'brain'
                         },
                         {
-                            id: 'depression-grief',
-                            label: 'Depression & Grief',
-                            description: 'Navigating sadness and loss',
-                            href: '/learn?category=depression-grief',
+                            id: 'depression-mood',
+                            label: 'Depression & Mood',
+                            description: 'Navigating sadness and emotional lows',
+                            href: '/learn/depression-mood',
                             icon: 'cloud'
                         },
                         {
-                            id: 'trauma-healing',
-                            label: 'Trauma & Healing',
+                            id: 'trauma-ptsd',
+                            label: 'Trauma & PTSD',
                             description: 'Processing difficult experiences',
-                            href: '/learn?category=trauma-healing',
+                            href: '/learn/trauma-ptsd',
                             icon: 'shield-check'
                         },
                         {
-                            id: 'mental-health-conditions',
-                            label: 'Mental Health Conditions',
-                            description: 'Understanding diagnoses',
-                            href: '/learn?category=mental-health-conditions',
-                            icon: 'stethoscope'
+                            id: 'neurodevelopmental',
+                            label: 'Neurodevelopmental',
+                            description: 'ADHD, Autism, and learning differences',
+                            href: '/learn/neurodevelopmental',
+                            icon: 'zap'
+                        },
+                        {
+                            id: 'ocd-related',
+                            label: 'OCD & Related',
+                            description: 'OCD, impulse control, and BFRBs',
+                            href: '/learn/ocd-related',
+                            icon: 'refresh-cw'
                         }
                     ]
                 },
                 {
-                    title: 'Personal Growth',
+                    title: 'Behavior & Wellness',
                     items: [
                         {
-                            id: 'emotional-regulation',
-                            label: 'Emotional Regulation',
-                            description: 'Managing your emotions',
-                            href: '/learn?category=emotional-regulation',
-                            icon: 'heart-pulse'
+                            id: 'substance-addiction',
+                            label: 'Substance Use & Addiction',
+                            description: 'Recovery and harm reduction',
+                            href: '/learn/substance-addiction',
+                            icon: 'alert-triangle'
                         },
                         {
-                            id: 'self-worth',
-                            label: 'Self-Worth & Identity',
-                            description: 'Building confidence',
-                            href: '/learn?category=self-worth',
-                            icon: 'star'
+                            id: 'eating-body',
+                            label: 'Eating & Body',
+                            description: 'Eating disorders and body image',
+                            href: '/learn/eating-body',
+                            icon: 'apple'
                         },
                         {
-                            id: 'habits-motivation',
-                            label: 'Habits & Motivation',
-                            description: 'Creating positive change',
-                            href: '/learn?category=habits-motivation',
-                            icon: 'target'
-                        },
-                        {
-                            id: 'sleep-body',
-                            label: 'Sleep & Body',
-                            description: 'Physical and mental wellness',
-                            href: '/learn?category=sleep-body',
+                            id: 'sleep-circadian',
+                            label: 'Sleep & Circadian Health',
+                            description: 'Better sleep and circadian rhythms',
+                            href: '/learn/sleep-circadian',
                             icon: 'moon'
-                        }
-                    ]
-                },
-                {
-                    title: 'Relationships & Life',
-                    items: [
-                        {
-                            id: 'relationships',
-                            label: 'Relationships',
-                            description: 'Building healthy connections',
-                            href: '/learn?category=relationships',
-                            icon: 'users'
                         },
                         {
-                            id: 'family-parenting',
-                            label: 'Family & Parenting',
-                            description: 'Family dynamics and patterns',
-                            href: '/learn?category=family-parenting',
-                            icon: 'home'
-                        },
-                        {
-                            id: 'loneliness-connection',
-                            label: 'Loneliness & Connection',
-                            description: 'Finding meaningful belonging',
-                            href: '/learn?category=loneliness-connection',
-                            icon: 'user-plus'
-                        },
-                        {
-                            id: 'work-burnout',
-                            label: 'Work & Burnout',
-                            description: 'Managing work-life balance',
-                            href: '/learn?category=work-burnout',
-                            icon: 'briefcase'
-                        }
-                    ]
-                },
-                {
-                    title: 'Modern Life & Support',
-                    items: [
-                        {
-                            id: 'digital-life',
-                            label: 'Digital Life',
-                            description: 'Technology and mental health',
-                            href: '/learn?category=digital-life',
-                            icon: 'smartphone'
-                        },
-                        {
-                            id: 'cultural-perspectives',
-                            label: 'Cultural Perspectives',
-                            description: 'Global mental health insights',
-                            href: '/learn?category=cultural-perspectives',
-                            icon: 'globe'
+                            id: 'self-esteem-identity',
+                            label: 'Self-Esteem & Identity',
+                            description: 'Building self-worth and confidence',
+                            href: '/learn/self-esteem-identity',
+                            icon: 'heart'
                         },
                         {
                             id: 'therapy-treatment',
                             label: 'Therapy & Treatment',
                             description: 'Finding the right support',
-                            href: '/learn?category=therapy-treatment',
-                            icon: 'heart'
+                            href: '/learn/therapy-treatment',
+                            icon: 'message-circle'
+                        }
+                    ]
+                },
+                {
+                    title: 'Life & Society',
+                    items: [
+                        {
+                            id: 'relationships-social',
+                            label: 'Relationships & Social',
+                            description: 'Building healthy connections',
+                            href: '/learn/relationships-social',
+                            icon: 'users'
+                        },
+                        {
+                            id: 'workplace-academic',
+                            label: 'Workplace & Academic',
+                            description: 'Burnout, stress, and balance',
+                            href: '/learn/workplace-academic',
+                            icon: 'briefcase'
+                        },
+                        {
+                            id: 'life-transitions',
+                            label: 'Life Transitions',
+                            description: 'Grief, change, and growth',
+                            href: '/learn/life-transitions',
+                            icon: 'compass'
+                        },
+                        {
+                            id: 'children-adolescents',
+                            label: 'Children & Adolescents',
+                            description: 'Youth mental health and parenting',
+                            href: '/learn/children-adolescents',
+                            icon: 'baby'
+                        },
+                        {
+                            id: 'global-cultural',
+                            label: 'Global & Cultural MH',
+                            description: 'Cross-cultural perspectives',
+                            href: '/learn/global-cultural',
+                            icon: 'globe'
                         }
                     ]
                 }
@@ -191,6 +186,14 @@ export const navigationConfig: NavigationConfig = {
                             icon: 'brain',
                             cta: 'Start Navigation',
                             requiredFeatureFlag: 'VITE_NAV_TIER1_ENABLED'
+                        },
+                        {
+                            id: 'relationship-health',
+                            label: 'Relationship Health',
+                            description: 'Relationship quality check',
+                            href: '/tools/relationship-health',
+                            icon: 'heart-handshake',
+                            cta: 'Take Assessment'
                         }
                     ]
                 },

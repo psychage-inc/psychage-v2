@@ -145,7 +145,7 @@ const ProviderAnalytics: React.FC = () => {
         <div className="min-h-screen bg-background pt-24 pb-20 px-4 md:px-6">
             <SEO title="Analytics | Provider Dashboard" />
 
-            <div className="container mx-auto max-w-[1400px]">
+            <div className="container mx-auto max-w-admin">
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
                     <div>
                         <h1 className="text-3xl font-display font-bold text-text-primary">Practice Analytics</h1>

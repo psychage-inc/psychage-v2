@@ -38,7 +38,7 @@ const VideoShowcaseSection: React.FC = () => {
     if (videos.length === 0) return null;
 
     return (
-        <section ref={scrollRef} className="py-24 bg-gray-50 text-gray-900 overflow-hidden relative">
+        <section ref={scrollRef} className="py-14 sm:py-16 lg:py-24 bg-gray-50 text-gray-900 overflow-hidden relative">
             <div className="container mx-auto px-6 md:px-12 mb-12 relative z-10">
                 <div className="flex flex-col md:flex-row justify-between items-end gap-6 border-b border-gray-200 pb-8">
                     <div>

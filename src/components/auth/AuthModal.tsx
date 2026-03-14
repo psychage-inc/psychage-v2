@@ -123,6 +123,9 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.9, y: 20 }}
                             transition={{ type: "spring", damping: 25, stiffness: 300 }}
+                            role="dialog"
+                            aria-modal="true"
+                            aria-label={view === 'login' ? 'Sign in to Psychage' : view === 'signup' ? 'Create Psychage account' : 'Reset your password'}
                             className="bg-white dark:bg-[#0a0a0a] w-full max-w-md rounded-[2rem] shadow-2xl overflow-hidden pointer-events-auto border border-gray-100 dark:border-gray-800 relative"
                         >
                             {/* Decorative Elements */}

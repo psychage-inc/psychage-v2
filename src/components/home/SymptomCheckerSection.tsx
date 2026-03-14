@@ -10,7 +10,7 @@ const SymptomCheckerSection: React.FC = () => {
     const navigate = useNavigate();
 
     return (
-        <section className="py-24 bg-white border-t border-gray-100">
+        <section className="py-14 sm:py-16 lg:py-24 bg-white border-t border-gray-100">
             <div className="container mx-auto px-6 md:px-12">
                 <div className="max-w-4xl mx-auto text-center">
                     <motion.div
@@ -21,20 +21,20 @@ const SymptomCheckerSection: React.FC = () => {
                     >
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-100 mb-6">
                             <Activity size={14} className="text-teal-600" />
-                            <span className="text-xs font-bold tracking-widest uppercase text-teal-700">AI Diagnostic Tool</span>
+                            <span className="text-xs font-bold tracking-widest uppercase text-teal-700">Wellness Screener</span>
                         </div>
                         <Display className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                             Understand your <br />
                             <span className="text-teal-600">symptoms better.</span>
                         </Display>
                         <Text className="text-xl text-gray-500 mb-10 leading-relaxed max-w-2xl mx-auto">
-                            Our advanced AI symptom checker analyzes your inputs against a vast medical database to provide preliminary insights and recommended next steps.
+                            Explore your mental wellness patterns with our evidence-informed screener. Get personalized educational insights and guided next steps.
                         </Text>
 
                         <div className="flex flex-wrap justify-center gap-8 mb-12">
                             {[
                                 "Confidential analysis",
-                                "Instant preliminary report",
+                                "Instant educational report",
                                 "Guided pathways to care"
                             ].map((item, index) => (
                                 <div key={index} className="flex items-center gap-2">
@@ -50,7 +50,7 @@ const SymptomCheckerSection: React.FC = () => {
                             className="rounded-full bg-gray-900 text-white hover:bg-gray-800 border-none shadow-lg"
                             onClick={() => navigate('/clarity-score')}
                         >
-                            Start Symptom Check
+                            Start Wellness Check
                         </Button>
                     </motion.div>
                 </div>

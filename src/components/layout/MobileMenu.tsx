@@ -9,6 +9,7 @@ import { navigationConfig } from '../../config/navigation';
 import { useNavigation } from '../../hooks/useNavigation';
 import { useNavPermissions } from '../../hooks/useNavPermissions';
 import type { NavItem } from '../../types/navigation';
+// import LanguageSwitcher from '../ui/LanguageSwitcher'; // Hidden for English-only launch
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -195,6 +196,10 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onNavigateGene
 
             {/* Footer / CTA */}
             <div className="p-6 border-t border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50 space-y-3">
+              {/* Language switcher hidden for English-only launch — uncomment when i18n re-enabled */}
+              {/* <div className="flex justify-center mb-3">
+                <LanguageSwitcher direction="up" />
+              </div> */}
               {isAuthenticated ? (
                 <>
                   <button

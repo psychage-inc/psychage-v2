@@ -63,7 +63,14 @@ export interface SanityClinician {
 
 export interface SanityCitation {
   _id: string;
-  sourceType: 'WHO' | 'CDC' | 'APA' | 'NIMH' | 'PeerReviewed' | 'Book';
+  sourceType:
+    | 'WHO' | 'CDC' | 'APA' | 'NIMH' | 'PeerReviewed' | 'Book'
+    // Expanded PEAF source types
+    | 'peer_reviewed_journal' | 'meta_analysis' | 'systematic_review'
+    | 'nimh' | 'nih' | 'who' | 'cdc' | 'samhsa'
+    | 'apa_psychiatric' | 'apa_psychological' | 'nami' | 'mha'
+    | 'dsm' | 'icd' | 'cochrane' | 'clinical_guideline'
+    | 'mayo_clinic' | 'textbook' | 'reference';
   title: string;
   authors?: string[];
   publicationDate?: string;
@@ -154,7 +161,7 @@ const allArticlesQuery = `
  * Query for a single article by slug
  */
 const articleBySlugQuery = `
-  *[_type == "article" && slug.current == $slug][0] {
+  *[_type == "article" && slug.current == $slug && status == "published"][0] {
     ${articleFields}
   }
 `;

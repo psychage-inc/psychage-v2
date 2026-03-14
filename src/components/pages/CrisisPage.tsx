@@ -432,17 +432,33 @@ const CrisisPage: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
-          className="text-center text-text-tertiary text-sm space-y-2"
+          className="bg-slate-50 dark:bg-slate-900/50 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 md:p-8"
         >
-          <p>
-            All resources listed are free and confidential. You matter, and help
-            is always available.
-          </p>
-          <p className="text-xs">
-            Psychage is not an emergency service. In a medical emergency, call{' '}
-            {emergency_number}. Resource data is sourced from verified
-            directories and reviewed regularly.
-          </p>
+          <div className="flex items-start gap-3 mb-4">
+            <Shield size={20} className="text-slate-400 dark:text-slate-500 shrink-0 mt-0.5" />
+            <h3 className="font-bold text-slate-700 dark:text-slate-300 text-sm">
+              Important Information About These Resources
+            </h3>
+          </div>
+          <div className="space-y-3 text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+            <p>
+              Psychage curates these crisis resources from verified directories to connect you with help when you need it most. All listed resources are free and confidential.
+            </p>
+            <p>
+              <strong className="text-slate-600 dark:text-slate-300">Psychage is not an emergency service.</strong>{' '}
+              If you are in immediate physical danger, call your local emergency number ({emergency_number}) or go to your nearest emergency room.
+            </p>
+            <p>
+              Contact information, availability, and services may change without notice. While we review this data regularly, Psychage cannot guarantee the accuracy of third-party resource details at any given time.
+            </p>
+            <p>
+              The resources listed are operated by independent organizations. Psychage does not control, endorse, or accept responsibility for the services they provide or the outcomes of any interactions.
+            </p>
+            <p className="text-xs text-slate-400 dark:text-slate-500 pt-2 border-t border-slate-200 dark:border-slate-700">
+              Resource data is sourced from verified crisis directories and reviewed regularly.
+              If you notice outdated information, please contact us so we can update it.
+            </p>
+          </div>
         </motion.div>
       </div>
     </div>

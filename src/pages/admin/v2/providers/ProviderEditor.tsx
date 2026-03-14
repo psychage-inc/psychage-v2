@@ -10,6 +10,7 @@ import { logAdminAction } from '@/lib/admin/auditLogger';
 import { VERIFICATION_TIERS } from '@/lib/admin/constants';
 import PageHeader from '@/components/admin/PageHeader';
 import AdminStatusBadge from '@/components/admin/StatusBadge';
+import { adminPath } from '@/hooks/useAdminNavigate';
 
 const providerSchema = z.object({
   name: z.string().min(1, 'Name is required'),
@@ -89,7 +90,7 @@ const AdminProviderEditor: React.FC = () => {
         title="Edit Provider"
         description={provider?.name || ''}
         actions={
-          <button onClick={() => navigate('/admin/providers')} className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 hover:text-gray-900">
+          <button onClick={() => navigate(adminPath('/providers'))} className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 hover:text-gray-900">
             <ArrowLeft size={16} /> Back
           </button>
         }

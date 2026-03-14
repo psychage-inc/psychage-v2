@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ChevronRight, CheckCircle2, AlertCircle, Lightbulb } from 'lucide-react';
+import {
+  ChevronRight,
+  CheckCircle2,
+  AlertCircle,
+  Lightbulb,
+  Info,
+} from 'lucide-react';
 import type { ClarityScoreResult, DomainKey } from '@/lib/clarity/types';
 import {
   DIMENSION_META,
@@ -46,12 +52,13 @@ const DimensionsTab: React.FC<DimensionsTabProps> = ({
       transition={{ duration: 0.3 }}
       className="space-y-6"
     >
-      {/* ─── Dimension Selector ─── */}
+      {/* ─── Dimension Selector with Scores ─── */}
       <div className="flex flex-wrap gap-2">
         {DIMENSION_ORDER.map((key) => {
           const m = DIMENSION_META[key];
           const DimIcon = m.icon;
           const isActive = key === selected;
+          const dimScore = Math.round(results.domainScores[key]);
           return (
             <button
               key={key}
@@ -67,6 +74,13 @@ const DimensionsTab: React.FC<DimensionsTabProps> = ({
               <DimIcon size={16} />
               <span className="hidden sm:inline">{m.shortName}</span>
               <span className="sm:hidden">{m.shortName.substring(0, 4)}</span>
+              <span
+                className={`text-xs font-bold ${
+                  isActive ? 'opacity-100' : 'opacity-60'
+                }`}
+              >
+                {dimScore}
+              </span>
             </button>
           );
         })}
@@ -82,9 +96,17 @@ const DimensionsTab: React.FC<DimensionsTabProps> = ({
           transition={{ duration: 0.2 }}
           className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm overflow-hidden"
         >
-          {/* Header */}
-          <div className={`p-6 md:p-8 ${meta.tailwindBgLight}`}>
-            <div className="flex items-center gap-4">
+          {/* Header with dimension hex color gradient */}
+          <div
+            className="p-6 md:p-8 relative overflow-hidden"
+            style={{ backgroundColor: `${meta.hexColor}10` }}
+          >
+            {/* Decorative circle */}
+            <div
+              className="absolute -right-6 -top-6 w-32 h-32 rounded-full opacity-10"
+              style={{ backgroundColor: meta.hexColor }}
+            />
+            <div className="relative flex items-center gap-4">
               <div
                 className={`w-14 h-14 rounded-2xl flex items-center justify-center ${meta.tailwindText} bg-white/70 dark:bg-gray-900/50`}
               >
@@ -120,6 +142,19 @@ const DimensionsTab: React.FC<DimensionsTabProps> = ({
                 {meta.description}
               </p>
             </div>
+
+            {/* Why This Matters — clinical context */}
+            {content.context && (
+              <div className="bg-indigo-50/50 dark:bg-indigo-900/10 rounded-xl p-4 border border-indigo-100 dark:border-indigo-800">
+                <h4 className="text-xs font-bold text-indigo-500 dark:text-indigo-400 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                  <Info size={12} />
+                  Why This Matters
+                </h4>
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                  {content.context}
+                </p>
+              </div>
+            )}
 
             {/* Score position */}
             <ScorePositionBar score={score} maxScore={20} tier={tier} />
@@ -171,7 +206,7 @@ const DimensionsTab: React.FC<DimensionsTabProps> = ({
               </div>
             )}
 
-            {/* Actions */}
+            {/* Actions — Numbered card grid */}
             <div>
               <div className="flex items-center gap-2 mb-3">
                 <Lightbulb size={16} className="text-teal-500" />
@@ -179,13 +214,18 @@ const DimensionsTab: React.FC<DimensionsTabProps> = ({
                   Recommended Next Steps
                 </h4>
               </div>
-              <div className="space-y-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {content.actions.map((a, i) => (
                   <div
                     key={i}
-                    className="bg-teal-50 dark:bg-teal-900/10 rounded-lg p-3 text-sm text-teal-800 dark:text-teal-300 border-l-3 border-teal-400"
+                    className="flex items-start gap-3 bg-teal-50 dark:bg-teal-900/10 rounded-xl p-4 border border-teal-100 dark:border-teal-800"
                   >
-                    {a}
+                    <span className="w-6 h-6 rounded-full bg-teal-500 text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
+                      {i + 1}
+                    </span>
+                    <span className="text-sm text-teal-800 dark:text-teal-300">
+                      {a}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -197,7 +237,9 @@ const DimensionsTab: React.FC<DimensionsTabProps> = ({
                 to={content.toolLink.path}
                 className="flex items-center gap-3 p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors group"
               >
-                <div className={`w-8 h-8 rounded-full flex items-center justify-center ${meta.tailwindBgLight} ${meta.tailwindText}`}>
+                <div
+                  className={`w-8 h-8 rounded-full flex items-center justify-center ${meta.tailwindBgLight} ${meta.tailwindText}`}
+                >
                   <Icon size={16} />
                 </div>
                 <span className="flex-1 text-sm font-medium text-gray-700 dark:text-gray-300">
@@ -209,6 +251,14 @@ const DimensionsTab: React.FC<DimensionsTabProps> = ({
                 />
               </Link>
             )}
+
+            {/* Instrument badge */}
+            <div className="flex items-center gap-2 text-xs text-gray-400 dark:text-gray-500 pt-2 border-t border-gray-100 dark:border-gray-800">
+              <span className="px-2 py-0.5 bg-gray-100 dark:bg-gray-800 rounded-md font-mono font-medium text-gray-500 dark:text-gray-400">
+                {meta.instrument}
+              </span>
+              <span>{meta.instrumentFull}</span>
+            </div>
 
             {/* Consultation guidance per dimension */}
             <div
@@ -252,7 +302,7 @@ const DimensionsTab: React.FC<DimensionsTabProps> = ({
               </p>
               {consultLevel === 'professional' && (
                 <Link
-                  to="/find-care"
+                  to="/providers"
                   className="inline-flex items-center gap-1 mt-2 text-sm font-medium text-orange-700 dark:text-orange-300 underline hover:no-underline"
                 >
                   Find a Provider <ChevronRight size={14} />

@@ -13,6 +13,7 @@ import ArticleCard from '../article/ArticleCard';
 import VideoCard from '../video/VideoCard';
 import ToolCard from '../tool/ToolCard';
 import SearchAutocomplete from '../search/SearchAutocomplete';
+import { getArticleUrl } from '../../lib/articleUrl';
 
 type SortOption = 'relevance' | 'date' | 'title';
 
@@ -331,7 +332,7 @@ const SearchResults: React.FC = () => {
                                             animate={{ opacity: 1, y: 0 }}
                                             transition={{ delay: idx * 0.05 }}
                                             className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer group border border-gray-100 dark:border-gray-800"
-                                            onClick={() => navigate(`/learn/article/${article.slug || article.id}`)}
+                                            onClick={() => navigate(getArticleUrl(article))}
                                         >
                                             <ArticleCard article={article} />
                                         </motion.div>

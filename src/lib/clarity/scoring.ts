@@ -3,6 +3,9 @@ import type {
   ClarityDomainScores,
   ScoreTier,
   Recommendation,
+  ClinicalFlag,
+  StrengthInsight,
+  DomainKey,
 } from './types';
 import { DOMAINS } from './questions';
 
@@ -23,12 +26,13 @@ export function calculateClarityScore(
   answers: Record<string, number>
 ): ClarityScoreResult {
   // --- Emotional Wellness (PHQ-4) ---
-  const phq2 = (answers['q1'] || 0) + (answers['q2'] || 0);
-  const gad2 = (answers['q3'] || 0) + (answers['q4'] || 0);
+  const gad2 = (answers['q1'] || 0) + (answers['q2'] || 0);
+  const phq2 = (answers['q3'] || 0) + (answers['q4'] || 0);
   const phq4Raw = phq2 + gad2; // max 12
   const emotionalDomain = Math.max(0, 20 - (phq4Raw / 12) * 20);
 
   // --- Cognitive Clarity (WHO-5) ---
+  // Stored under key 'vitality' for historical DB compatibility.
   // Options are symptom-scaled: 0 = best mental state, 5 = worst
   const who5SymptomRaw =
     (answers['q5'] || 0) +
@@ -38,7 +42,7 @@ export function calculateClarityScore(
     (answers['q9'] || 0); // max 25
   const who5Raw = 25 - who5SymptomRaw; // Invert to wellbeing raw (25 = best)
   const who5Percentage = who5Raw * 4; // 0-100
-  const vitalityDomain = Math.max(0, (who5Percentage / 100) * 20);
+  const who5Domain = Math.max(0, (who5Percentage / 100) * 20);
 
   // --- Social Connection (UCLA-3) ---
   // Scale 1-3, min raw = 3, max raw = 9. Lower = better.
@@ -48,6 +52,7 @@ export function calculateClarityScore(
   const socialDomain = Math.max(0, 20 - (normalizedUcla / 6) * 20);
 
   // --- Physical Vitality (PSS-4) ---
+  // Stored under key 'cognitive' for historical DB compatibility.
   // q13 & q16 are direct (higher = more stress = worse)
   // q14 & q15 are positive items, reverse-scored: 4 - value
   const pss1 = answers['q13'] || 0;
@@ -55,7 +60,7 @@ export function calculateClarityScore(
   const pss3 = 4 - (answers['q15'] !== undefined ? answers['q15'] : 4);
   const pss4 = answers['q16'] || 0;
   const pssScore = pss1 + pss2 + pss3 + pss4; // max 16
-  const cognitiveDomain = Math.max(0, 20 - (pssScore / 16) * 20);
+  const pss4Domain = Math.max(0, 20 - (pssScore / 16) * 20);
 
   // --- Daily Functioning (Custom) ---
   // 0-4 scale, higher = worse. Max raw 16.
@@ -69,27 +74,43 @@ export function calculateClarityScore(
   // --- Composite ---
   const totalScore = Math.round(
     emotionalDomain +
-      vitalityDomain +
+      who5Domain +
       socialDomain +
-      cognitiveDomain +
+      pss4Domain +
       functioningDomain
   );
 
   // --- Domain scores object ---
+  // Key mapping (preserved for historical DB compatibility):
+  //   'vitality'  → Cognitive Clarity (WHO-5)
+  //   'cognitive'  → Physical Vitality (PSS-4)
   const domainScores: ClarityDomainScores = {
     emotional: Math.round(emotionalDomain * 10) / 10,
-    vitality: Math.round(vitalityDomain * 10) / 10,
+    vitality: Math.round(who5Domain * 10) / 10,
     social: Math.round(socialDomain * 10) / 10,
-    cognitive: Math.round(cognitiveDomain * 10) / 10,
+    cognitive: Math.round(pss4Domain * 10) / 10,
     functioning: Math.round(functioningDomain * 10) / 10,
   };
 
   // --- Clinical flags ---
   const flags: string[] = [];
-  if (phq2 >= 3) flags.push('Elevated depressive symptoms (PHQ-2 ≥ 3)');
-  if (gad2 >= 3) flags.push('Elevated anxiety symptoms (GAD-2 ≥ 3)');
-  if (who5Percentage <= 28) flags.push('Low well-being (WHO-5 ≤ 28%)');
-  if (uclaRaw >= 6) flags.push('Significant feelings of loneliness');
+  const structuredFlags: ClinicalFlag[] = [];
+  if (phq2 >= 3) {
+    flags.push('Elevated depressive symptoms (PHQ-2 ≥ 3)');
+    structuredFlags.push({ label: 'Depressive Symptoms', result: `PHQ-2: ${phq2}/6`, severity: 'elevated' });
+  }
+  if (gad2 >= 3) {
+    flags.push('Elevated anxiety symptoms (GAD-2 ≥ 3)');
+    structuredFlags.push({ label: 'Anxiety Symptoms', result: `GAD-2: ${gad2}/6`, severity: 'elevated' });
+  }
+  if (who5Percentage <= 28) {
+    flags.push('Low well-being (WHO-5 ≤ 28%)');
+    structuredFlags.push({ label: 'Well-Being Index', result: `WHO-5: ${who5Percentage}%`, severity: 'significant' });
+  }
+  if (uclaRaw >= 6) {
+    flags.push('Significant feelings of loneliness');
+    structuredFlags.push({ label: 'Loneliness', result: `UCLA: ${uclaRaw}/9`, severity: 'significant' });
+  }
 
   // --- Strengths & growth areas ---
   const { strengths, growthAreas } = getStrengthsAndGrowth(domainScores);
@@ -109,6 +130,7 @@ export function calculateClarityScore(
     },
     rawScores: answers,
     flags,
+    structuredFlags,
     strengths,
     growthAreas,
     label,
@@ -191,7 +213,7 @@ export function getRecommendations(
     recs.push({
       dimension: 'Emotional Wellness',
       text: 'Your emotional wellness scores suggest you may benefit from professional support.',
-      link: '/find-care',
+      link: '/providers',
       linkLabel: 'Find a Provider',
     });
   }
@@ -227,7 +249,7 @@ export function getRecommendations(
     recs.push({
       dimension: 'Daily Functioning',
       text: 'Daily functioning is impacted. Professional support is recommended.',
-      link: '/find-care',
+      link: '/providers',
       linkLabel: 'Find a Provider',
     });
   }
@@ -242,6 +264,68 @@ export function getRecommendations(
   }
 
   return recs;
+}
+
+/**
+ * Get the hex color for a given score tier.
+ */
+export function getTierHexColor(tier: ScoreTier): string {
+  const map: Record<ScoreTier, string> = {
+    thriving: '#10b981',
+    balanced: '#0d9488',
+    struggling: '#f59e0b',
+    distressed: '#f97316',
+    crisis: '#ef4444',
+  };
+  return map[tier];
+}
+
+/**
+ * Get detailed strengths and growth insights with dimension-specific sentences.
+ */
+export function getStrengthsAndGrowthDetailed(
+  domainScores: ClarityDomainScores
+): { strengths: StrengthInsight[]; growthAreas: StrengthInsight[] } {
+  const insights: Record<DomainKey, { strength: string; growth: string }> = {
+    emotional: {
+      strength: 'Your emotional resilience helps you navigate challenges with stability and hope.',
+      growth: 'Emotional patterns suggest room for building stronger regulation habits.',
+    },
+    vitality: {
+      strength: 'You maintain a positive outlook with good energy and daily engagement.',
+      growth: 'Your well-being indicators suggest exploring routines that restore energy and calm.',
+    },
+    social: {
+      strength: 'Strong social connections provide a meaningful support network.',
+      growth: 'Feelings of disconnection may benefit from intentional social engagement.',
+    },
+    cognitive: {
+      strength: 'You manage stress effectively with a healthy sense of control.',
+      growth: 'Elevated stress levels indicate a need for structured coping strategies.',
+    },
+    functioning: {
+      strength: 'Daily responsibilities and relationships are well-maintained.',
+      growth: 'Functional impact suggests simplifying routines and seeking support.',
+    },
+  };
+
+  const entries = DOMAINS.map((d) => ({
+    name: d.name,
+    key: d.key,
+    score: domainScores[d.key],
+  }));
+  entries.sort((a, b) => b.score - a.score);
+
+  return {
+    strengths: entries.slice(0, 2).map((e) => ({
+      ...e,
+      insight: insights[e.key].strength,
+    })),
+    growthAreas: entries.slice(-2).reverse().map((e) => ({
+      ...e,
+      insight: insights[e.key].growth,
+    })),
+  };
 }
 
 /**

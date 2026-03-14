@@ -47,7 +47,7 @@ const AllCategoriesSection: React.FC = () => {
         : categories.filter(c => c.group === activeGroup);
 
     return (
-        <section className="py-24 px-6 bg-background relative overflow-hidden">
+        <section className="py-14 sm:py-16 lg:py-24 px-6 bg-background relative overflow-hidden">
             {/* Ambient Background */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                 <div className="absolute top-1/4 -right-64 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />

@@ -4,7 +4,7 @@ import { videoService } from '../../services/videoService';
 import { Video } from '../../types/models';
 import { motion } from 'framer-motion';
 import Button from '../ui/Button';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import SEO from '../SEO';
 import VideoPlayer from '../video/VideoPlayer';
 
@@ -59,7 +59,7 @@ const VideoDetail: React.FC = () => {
             />
             {/* Sticky Header */}
             <div className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-100 px-6 py-4">
-                <div className="container mx-auto max-w-[1280px] flex items-center gap-4">
+                <div className="container mx-auto max-w-content flex items-center gap-4">
                     <button onClick={() => navigate('/')} className="p-2 hover:bg-gray-100 rounded-full transition-colors">
                         <ArrowLeft size={20} className="text-gray-600" />
                     </button>
@@ -70,7 +70,7 @@ const VideoDetail: React.FC = () => {
                 </div>
             </div>
 
-            <main className="container mx-auto max-w-[1280px] px-6 py-8">
+            <main className="container mx-auto max-w-content px-6 py-8">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
 
                     {/* Left Column: Player & Info */}
@@ -169,13 +169,13 @@ const VideoDetail: React.FC = () => {
                         <h3 className="font-bold text-gray-900 mb-6">Up Next</h3>
                         <div className="flex flex-col gap-4">
                             {relatedVideos.map((rel) => (
-                                <div
+                                <Link
                                     key={rel.id}
-                                    className="group flex gap-3 cursor-pointer"
-                                    onClick={() => navigate(`/watch/${rel.id}`)}
+                                    to={`/watch/${rel.id}`}
+                                    className="group flex gap-3"
                                 >
                                     <div className="relative w-40 aspect-video rounded-lg overflow-hidden bg-gray-100 shrink-0">
-                                        <img src={rel.thumbnail} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                        <img src={rel.thumbnail} alt={rel.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                         <div className="absolute bottom-1 right-1 px-1 py-0.5 bg-black/80 rounded text-[10px] font-bold text-white">
                                             {Math.floor(rel.duration / 60)}:{(rel.duration % 60).toString().padStart(2, '0')}
                                         </div>
@@ -187,7 +187,7 @@ const VideoDetail: React.FC = () => {
                                         <div className="text-xs text-gray-500">{rel.category}</div>
                                         <div className="text-xs text-gray-400 mt-1">15K views</div>
                                     </div>
-                                </div>
+                                </Link>
                             ))}
                         </div>
                     </div>

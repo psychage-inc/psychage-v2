@@ -33,8 +33,8 @@ const NewsletterSection: React.FC = () => {
   return (
     <>
       {/* CTA Section */}
-      <section className="py-28 px-6 bg-white dark:bg-slate-950">
-        <div className="container mx-auto max-w-[1280px]">
+      <section className="py-16 sm:py-20 lg:py-28 px-6 bg-white dark:bg-slate-950">
+        <div className="container mx-auto max-w-content">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

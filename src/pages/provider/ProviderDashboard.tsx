@@ -75,7 +75,7 @@ const ProviderDashboard: React.FC = () => {
 
 
 
-            <div className="container mx-auto max-w-[1200px]">
+            <div className="container mx-auto max-w-dashboard">
                 <Breadcrumbs className="mb-6" />
                 <h1 className="text-3xl font-display font-bold text-text-primary mb-8">Provider Dashboard</h1>
 

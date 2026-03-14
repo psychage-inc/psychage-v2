@@ -128,7 +128,7 @@ export const SkeletonArticleDetail = () => (
             <Skeleton className="w-full aspect-[21/9] rounded-[2rem] mb-16" />
 
             {/* Content */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-[1280px] mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-content mx-auto">
                 <div className="hidden lg:block lg:col-span-3 space-y-4">
                     <Skeleton className="h-4 w-24 mb-6" />
                     <Skeleton className="h-4 w-full" />
@@ -153,14 +153,14 @@ export const SkeletonVideoDetail = () => (
     <div className="animate-pulse min-h-screen bg-white">
         {/* Sticky Header */}
         <div className="border-b border-gray-100 px-6 py-4">
-            <div className="container mx-auto max-w-[1280px] flex items-center gap-4">
+            <div className="container mx-auto max-w-content flex items-center gap-4">
                 <Skeleton className="w-8 h-8 rounded-full" />
                 <Skeleton className="h-4 w-48 flex-grow" />
                 <Skeleton className="h-8 w-24 rounded-full" />
             </div>
         </div>
 
-        <div className="container mx-auto max-w-[1280px] px-6 py-8">
+        <div className="container mx-auto max-w-content px-6 py-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
                 <div className="lg:col-span-8">
                     <Skeleton className="w-full aspect-video rounded-2xl mb-6" />
@@ -241,7 +241,7 @@ export const SkeletonProviderProfile = () => (
 
 export const SkeletonProviderDirectory = () => (
     <div className="min-h-screen bg-background pt-28 pb-20">
-        <div className="container mx-auto max-w-[1200px] px-6">
+        <div className="container mx-auto max-w-dashboard px-6">
             <div className="text-center max-w-2xl mx-auto mb-12">
                 <Skeleton className="h-12 w-3/4 mx-auto mb-6" />
                 <Skeleton className="h-6 w-1/2 mx-auto" />
@@ -283,7 +283,7 @@ export const SkeletonToolCard = ({ large = false }: { large?: boolean }) => (
 
 export const SkeletonTopicHub = ({ invert = false }: { invert?: boolean }) => (
     <div className="py-20 px-6">
-        <div className="container mx-auto max-w-[1280px]">
+        <div className="container mx-auto max-w-content">
             {/* Header Skeleton */}
             <div className={`flex flex-col md:flex-row justify-between items-end mb-12 gap-6 border-b border-gray-100 pb-8 ${invert ? "md:flex-row-reverse" : ""}`}>
                 <div className={invert ? "items-end flex flex-col" : ""}>
@@ -338,7 +338,7 @@ export const SkeletonVideoShowcase = () => (
 
 export const SkeletonQuickTopics = () => (
     <div className="py-16 px-6 bg-white">
-        <div className="container mx-auto max-w-[1280px]">
+        <div className="container mx-auto max-w-content">
             <div className="mb-10">
                 <Skeleton className="h-3 w-20 mb-2" />
                 <Skeleton className="h-10 w-64 mb-3" />
@@ -355,7 +355,7 @@ export const SkeletonQuickTopics = () => (
 
 export const SkeletonToolsSection = () => (
     <div className="py-20 px-6 bg-background">
-        <div className="container mx-auto max-w-[1280px]">
+        <div className="container mx-auto max-w-content">
             <div className="mb-12">
                 <Skeleton className="h-3 w-16 mb-2" />
                 <Skeleton className="h-10 w-56 mb-3" />

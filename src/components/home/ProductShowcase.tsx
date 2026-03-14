@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
-    Scan, Compass, Palette, Cpu, CloudMoon,
+    Brain, Compass, BookHeart, Sparkles, Moon,
     ArrowRight
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -21,7 +21,7 @@ const tools: ToolCard[] = [
     {
         title: 'Clarity Score',
         description: 'Comprehensive mental well-being assessment. Understand your cognitive and emotional state in 10 minutes.',
-        icon: Scan,
+        icon: Brain,
         href: '/clarity-score',
         bg: 'bg-teal-600',
         stat: 'Free assessment',
@@ -37,21 +37,21 @@ const tools: ToolCard[] = [
     {
         title: 'Mood Journal',
         description: 'Track emotional patterns and identify triggers over time with visual insights.',
-        icon: Palette,
+        icon: BookHeart,
         href: '/tools/mood-journal',
         bg: 'bg-teal-500',
     },
     {
         title: 'MindMate AI',
         description: '24/7 AI companion for mental health questions, guidance, and support.',
-        icon: Cpu,
+        icon: Sparkles,
         href: '/tools/mindmate',
         bg: 'bg-teal-800',
     },
     {
         title: 'Sleep Architect',
         description: 'Science-backed sleep schedules and habit tracking for better rest.',
-        icon: CloudMoon,
+        icon: Moon,
         href: '/tools/sleep-architect',
         bg: 'bg-teal-900',
     },
@@ -61,7 +61,7 @@ const ProductShowcase: React.FC = () => {
     const navigate = useNavigate();
 
     return (
-        <section className="py-28 px-6 bg-slate-50/50 dark:bg-slate-950 border-y border-slate-100 dark:border-slate-800">
+        <section className="py-16 sm:py-20 lg:py-28 px-6 bg-slate-50/50 dark:bg-slate-950 border-y border-slate-100 dark:border-slate-800">
             <div className="container mx-auto max-w-6xl">
                 {/* Header */}
                 <motion.div
@@ -96,7 +96,7 @@ const ProductShowcase: React.FC = () => {
                             <motion.div
                                 key={tool.title}
                                 variants={staggerItem}
-                                className={cn('w-[80vw] shrink-0 snap-center md:w-auto md:col-span-1', colSpan)}
+                                className={cn('w-[min(80vw,20rem)] shrink-0 snap-center md:w-auto md:col-span-1', colSpan)}
                             >
                                 <div
                                     role="button"
@@ -112,12 +112,12 @@ const ProductShowcase: React.FC = () => {
                                         isPrimary ? 'min-h-[220px]' : 'min-h-[200px]'
                                     )}
                                 >
-                                    {/* Icon — large, bottom-left, decorative */}
-                                    <div className="absolute bottom-0 left-0 pointer-events-none">
+                                    {/* Icon — large, bottom-right, decorative */}
+                                    <div className="absolute bottom-0 right-0 pointer-events-none">
                                         <Icon
                                             className={cn(
                                                 'text-white/[0.12] group-hover:text-white/[0.18] transition-all duration-500',
-                                                isPrimary ? 'w-40 h-40 -ml-4 -mb-4' : 'w-28 h-28 -ml-3 -mb-3'
+                                                isPrimary ? 'w-40 h-40 -mr-4 -mb-4' : 'w-28 h-28 -mr-3 -mb-3'
                                             )}
                                             strokeWidth={0.8}
                                         />
@@ -128,12 +128,17 @@ const ProductShowcase: React.FC = () => {
                                         'relative z-10 flex flex-col h-full',
                                         isPrimary ? 'p-8 md:p-10' : 'p-6 md:p-8'
                                     )}>
-                                        <h3 className={cn(
-                                            'font-display font-bold text-white mb-2',
-                                            isPrimary ? 'text-2xl lg:text-3xl' : 'text-xl'
-                                        )}>
-                                            {tool.title}
-                                        </h3>
+                                        {/* Title + Arrow (top) */}
+                                        <div className="flex items-center justify-between gap-3 mb-2">
+                                            <h3 className={cn(
+                                                'font-display font-bold text-white',
+                                                isPrimary ? 'text-2xl lg:text-3xl' : 'text-xl'
+                                            )}>
+                                                {tool.title}
+                                            </h3>
+                                            <ArrowRight className="w-5 h-5 text-white/40 group-hover:text-white/80 group-hover:translate-x-1 transition-all shrink-0" />
+                                        </div>
+
                                         <p className={cn(
                                             'text-white/70 leading-relaxed',
                                             isPrimary ? 'text-lg max-w-2xl' : 'text-sm'
@@ -148,11 +153,6 @@ const ProductShowcase: React.FC = () => {
                                                 </span>
                                             </div>
                                         )}
-
-                                        {/* Arrow */}
-                                        <div className="mt-auto pt-4 flex justify-end">
-                                            <ArrowRight className="w-5 h-5 text-white/40 group-hover:text-white/80 group-hover:translate-x-1 transition-all" />
-                                        </div>
                                     </div>
                                 </div>
                             </motion.div>

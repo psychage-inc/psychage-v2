@@ -10,6 +10,7 @@ import DataTable from '@/components/admin/DataTable';
 import AdminStatusBadge from '@/components/admin/StatusBadge';
 import ConfirmDialog from '@/components/admin/ConfirmDialog';
 import { cn } from '@/lib/utils';
+import { adminPath } from '@/hooks/useAdminNavigate';
 
 interface ProviderRow {
   id: string;
@@ -85,7 +86,7 @@ const AdminProviderList: React.FC = () => {
       accessorKey: 'name',
       header: 'Name',
       cell: ({ row }) => (
-        <Link to={`/admin/providers/${row.original.id}/edit`} className="font-medium text-gray-900 dark:text-white hover:text-teal-600">
+        <Link to={adminPath(`/providers/${row.original.id}/edit`)} className="font-medium text-gray-900 dark:text-white hover:text-teal-600">
           {row.original.name}
         </Link>
       ),
@@ -133,7 +134,7 @@ const AdminProviderList: React.FC = () => {
       enableSorting: false,
       cell: ({ row }) => (
         <div className="flex items-center gap-1">
-          <button onClick={() => navigate(`/admin/providers/${row.original.id}/edit`)} className="p-1.5 text-gray-400 hover:text-teal-600" title="Edit">
+          <button onClick={() => navigate(adminPath(`/providers/${row.original.id}/edit`))} className="p-1.5 text-gray-400 hover:text-teal-600" title="Edit">
             <Pencil size={15} />
           </button>
           <button onClick={() => setSuspendTarget(row.original)} className="p-1.5 text-gray-400 hover:text-orange-500" title={row.original.is_suspended ? 'Unsuspend' : 'Suspend'}>
@@ -157,7 +158,7 @@ const AdminProviderList: React.FC = () => {
         description="Manage provider directory and applications"
         actions={
           <button
-            onClick={() => navigate('/admin/providers/import')}
+            onClick={() => navigate(adminPath('/providers/import'))}
             className="flex items-center gap-2 px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium rounded-lg transition-colors"
           >
             <Shield size={16} />
@@ -173,7 +174,7 @@ const AdminProviderList: React.FC = () => {
             key={t.key}
             onClick={() => {
               if (t.key === 'pending') {
-                navigate('/admin/providers/applications');
+                navigate(adminPath('/providers/applications'));
               } else {
                 setTab(t.key);
               }

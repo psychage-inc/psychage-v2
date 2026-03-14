@@ -26,6 +26,21 @@ const statusMap: Record<string, StatusVariant> = {
   URGENT: 'urgent',
   clinical_admin: 'urgent',
   unverified: 'default',
+  // Article Command Center
+  paused: 'urgent',
+  archived: 'default',
+  suggestion: 'info',
+  needs_fix: 'warning',
+  critical: 'danger',
+  // Article Production System — review stages
+  planned: 'default',
+  researched: 'info',
+  drafted: 'warning',
+  // in_review already mapped above
+  // approved already mapped above
+  // published already mapped above
+  // Derivative statuses
+  reviewed: 'info',
 };
 
 const variantStyles: Record<StatusVariant, string> = {

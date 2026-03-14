@@ -194,12 +194,27 @@ const NavigatorContext = createContext<{
 // Define regions mapping
 const detectRegion = (): string => {
     try {
-        const locale = navigator.language;
-        if (locale.includes('US') || locale.includes('us')) return 'US';
-        if (locale.includes('GB') || locale.includes('gb') || locale.includes('UK') || locale.includes('uk')) return 'GB';
-        if (locale.includes('CA') || locale.includes('ca')) return 'CA';
-        if (locale.includes('AU') || locale.includes('au')) return 'AU';
-    } catch (e) {
+        const locale = navigator.language.toUpperCase();
+        // Extract country code from locale (e.g., "en-US" → "US", "pt-BR" → "BR")
+        const parts = locale.split(/[-_]/);
+        const country = parts.length > 1 ? parts[1] : '';
+
+        // Map locale country codes to crisis resource region keys
+        const regionMap: Record<string, string> = {
+            US: 'US', GB: 'GB', UK: 'GB', CA: 'CA', AU: 'AU',
+            IN: 'IN', BD: 'BD', DE: 'DE', FR: 'FR', BR: 'BR',
+            NZ: 'NZ', IE: 'IE', ZA: 'ZA', PH: 'PH', SG: 'SG',
+        };
+
+        if (country && regionMap[country]) return regionMap[country];
+
+        // Fallback: check if the primary language hints at a region
+        const langHints: Record<string, string> = {
+            EN: 'US', HI: 'IN', BN: 'BD', DE: 'DE', FR: 'FR', PT: 'BR',
+        };
+        const lang = parts[0];
+        if (lang && langHints[lang]) return langHints[lang];
+    } catch (_e) {
         // Ignore error
     }
     return 'DEFAULT'; // International fallback

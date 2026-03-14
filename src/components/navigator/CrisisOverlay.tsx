@@ -1,15 +1,19 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ShieldAlert, X } from 'lucide-react';
+import { ShieldAlert, X, Globe, ExternalLink } from 'lucide-react';
 import { useNavigator } from '../../context/NavigatorContext';
 import { CrisisResourceCard } from './CrisisResourceCard';
 import { useFocusTrap } from '../../hooks/useFocusTrap';
+
+const CLOSE_DELAY_MS = 4000;
 
 export const CrisisOverlay: React.FC = () => {
     const { state, dispatch, announceAssertive } = useNavigator();
 
     const { crisisTriggered, crisisAcknowledged, detectedRegion, knowledgeBase } = state;
     const isVisible = crisisTriggered && !crisisAcknowledged;
+
+    const [closeEnabled, setCloseEnabled] = useState(false);
 
     const handleAcknowledge = () => {
         dispatch({ type: 'ACKNOWLEDGE_CRISIS' });
@@ -36,8 +40,16 @@ export const CrisisOverlay: React.FC = () => {
         if (isVisible) {
             document.body.style.overflow = 'hidden';
             announceAssertive("Important Safety Information shown. Please consider reaching out to one of the resources provided.");
+
+            // Enable close button after delay
+            const timer = setTimeout(() => setCloseEnabled(true), CLOSE_DELAY_MS);
+            return () => {
+                clearTimeout(timer);
+                document.body.style.overflow = 'unset';
+            };
         } else {
             document.body.style.overflow = 'unset';
+            setCloseEnabled(false);
         }
         return () => {
             document.body.style.overflow = 'unset';
@@ -80,6 +92,23 @@ export const CrisisOverlay: React.FC = () => {
                                 aria-describedby="crisis-modal-desc"
                                 tabIndex={-1}
                             >
+                                {/* Delayed close button */}
+                                <AnimatePresence>
+                                    {closeEnabled && (
+                                        <motion.button
+                                            initial={{ opacity: 0 }}
+                                            animate={{ opacity: 1 }}
+                                            transition={{ duration: 0.5 }}
+                                            type="button"
+                                            onClick={handleAcknowledge}
+                                            className="absolute top-4 right-4 z-10 p-1.5 rounded-full text-white/30 hover:text-white/60 transition-colors"
+                                            aria-label="Close safety information"
+                                        >
+                                            <X size={18} />
+                                        </motion.button>
+                                    )}
+                                </AnimatePresence>
+
                                 {/* Header Strip */}
                                 <div className="h-2 bg-crisis-red w-full"></div>
 
@@ -114,6 +143,27 @@ export const CrisisOverlay: React.FC = () => {
                                         {resources.map((resource) => (
                                             <CrisisResourceCard key={resource.id} resource={resource} />
                                         ))}
+
+                                        {/* International helpline link */}
+                                        <a
+                                            href="https://findahelpline.com"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group"
+                                        >
+                                            <div className="w-10 h-10 rounded-full bg-teal-500/10 flex items-center justify-center shrink-0">
+                                                <Globe size={20} className="text-teal-400" />
+                                            </div>
+                                            <div className="flex-1 text-left">
+                                                <p className="text-sm font-semibold text-text-primary">
+                                                    Find A Helpline
+                                                </p>
+                                                <p className="text-xs text-text-secondary">
+                                                    Search crisis helplines in any country worldwide
+                                                </p>
+                                            </div>
+                                            <ExternalLink size={14} className="text-text-secondary group-hover:text-teal-400 transition-colors shrink-0" />
+                                        </a>
                                     </div>
 
                                     <div className="mt-10 sm:flex sm:flex-row-reverse gap-3">
@@ -125,6 +175,16 @@ export const CrisisOverlay: React.FC = () => {
                                         >
                                             I understand, continue to results
                                         </button>
+                                    </div>
+
+                                    {/* Disclaimer */}
+                                    <div className="mt-6 pt-4 border-t border-white/10">
+                                        <p className="text-xs text-text-secondary/60 leading-relaxed">
+                                            Psychage is not a crisis service and does not provide emergency support.
+                                            The resources shown are operated by independent organizations.
+                                            If you are in immediate danger, call your local emergency number.
+                                            Information may not reflect the most current availability.
+                                        </p>
                                     </div>
                                 </div>
                             </motion.div>

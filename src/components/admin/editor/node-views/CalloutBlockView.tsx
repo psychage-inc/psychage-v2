@@ -1,11 +1,11 @@
 import React from 'react';
 import { NodeViewWrapper, NodeViewContent, NodeViewProps } from '@tiptap/react';
-import { Info, AlertTriangle, Lightbulb, StickyNote } from 'lucide-react';
+import { Info, AlertTriangle, Lightbulb, StickyNote, type LucideIcon } from 'lucide-react';
 import type { CalloutVariant } from '../extensions/CalloutBlock';
 
 const VARIANT_CONFIG: Record<
   CalloutVariant,
-  { icon: React.FC<{ size?: number }>; bg: string; border: string; iconColor: string; label: string }
+  { icon: LucideIcon; bg: string; border: string; iconColor: string; label: string }
 > = {
   info: {
     icon: Info,

@@ -186,106 +186,22 @@ function ArticleHtmlRenderer({ html, className }: { html: string; className?: st
     const chartNodes = containerRef.current.querySelectorAll<HTMLElement>('[data-chart-block]');
     if (chartNodes.length === 0) return;
 
-    // Dynamically import chart renderer to avoid loading Recharts for non-chart articles
     const roots: Array<{ unmount: () => void }> = [];
 
     const renderCharts = async () => {
       const { createRoot } = await import('react-dom/client');
-      const {
-        ResponsiveContainer,
-        BarChart,
-        Bar,
-        PieChart,
-        Pie,
-        Cell,
-        LineChart,
-        Line,
-        XAxis,
-        YAxis,
-        CartesianGrid,
-        Tooltip,
-      } = await import('recharts');
-
-      const COLORS = ['#0D9488', '#6366F1', '#F59E0B', '#EF4444', '#8B5CF6', '#EC4899', '#06B6D4', '#84CC16'];
+      const { default: ReadOnlyChart } = await import('@/components/admin/editor/ReadOnlyChart');
 
       chartNodes.forEach((node) => {
         const raw = node.getAttribute('data-chart');
         if (!raw) return;
         try {
           const chartData = JSON.parse(raw);
-          const { chartType, title, data } = chartData;
-          if (!data?.length) return;
+          if (!chartData?.data?.length) return;
 
           const root = createRoot(node);
           roots.push(root);
-
-          const chart = (() => {
-            switch (chartType) {
-              case 'bar':
-                return React.createElement(
-                  ResponsiveContainer,
-                  { width: '100%', height: 250 },
-                  React.createElement(
-                    BarChart,
-                    { data, margin: { top: 10, right: 20, left: 0, bottom: 5 } },
-                    React.createElement(CartesianGrid, { strokeDasharray: '3 3', stroke: '#e5e7eb' }),
-                    React.createElement(XAxis, { dataKey: 'label', tick: { fontSize: 11 }, stroke: '#9ca3af' }),
-                    React.createElement(YAxis, { tick: { fontSize: 11 }, stroke: '#9ca3af' }),
-                    React.createElement(Tooltip, null),
-                    React.createElement(
-                      Bar,
-                      { dataKey: 'value', radius: [4, 4, 0, 0] },
-                      data.map((_: unknown, i: number) =>
-                        React.createElement(Cell, { key: i, fill: COLORS[i % COLORS.length] })
-                      )
-                    )
-                  )
-                );
-              case 'pie':
-                return React.createElement(
-                  ResponsiveContainer,
-                  { width: '100%', height: 250 },
-                  React.createElement(
-                    PieChart,
-                    null,
-                    React.createElement(
-                      Pie,
-                      { data, dataKey: 'value', nameKey: 'label', cx: '50%', cy: '50%', outerRadius: 80, label: ({ label }: { label: string }) => label },
-                      data.map((_: unknown, i: number) =>
-                        React.createElement(Cell, { key: i, fill: COLORS[i % COLORS.length] })
-                      )
-                    ),
-                    React.createElement(Tooltip, null)
-                  )
-                );
-              case 'line':
-                return React.createElement(
-                  ResponsiveContainer,
-                  { width: '100%', height: 250 },
-                  React.createElement(
-                    LineChart,
-                    { data, margin: { top: 10, right: 20, left: 0, bottom: 5 } },
-                    React.createElement(CartesianGrid, { strokeDasharray: '3 3', stroke: '#e5e7eb' }),
-                    React.createElement(XAxis, { dataKey: 'label', tick: { fontSize: 11 }, stroke: '#9ca3af' }),
-                    React.createElement(YAxis, { tick: { fontSize: 11 }, stroke: '#9ca3af' }),
-                    React.createElement(Tooltip, null),
-                    React.createElement(Line, { type: 'monotone', dataKey: 'value', stroke: '#0D9488', strokeWidth: 2, dot: { r: 4 } })
-                  )
-                );
-              default:
-                return null;
-            }
-          })();
-
-          if (chart) {
-            const wrapper = React.createElement(
-              'div',
-              null,
-              title && React.createElement('h4', { className: 'text-sm font-medium text-gray-900 dark:text-white mb-2' }, title),
-              chart
-            );
-            root.render(wrapper);
-          }
+          root.render(React.createElement(ReadOnlyChart, { data: chartData }));
         } catch {
           // Malformed chart data — leave the empty div
         }

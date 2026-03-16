@@ -45,7 +45,7 @@ export default defineConfig(() => {
     optimizeDeps: {
       include: [
         'react', 'react-dom', 'react/jsx-runtime', 'react/jsx-dev-runtime',
-        '@tiptap/react', '@tiptap/starter-kit', '@tiptap/core', '@tiptap/pm',
+        '@tiptap/react', '@tiptap/starter-kit', '@tiptap/core',
         '@tiptap/extension-link', '@tiptap/extension-image', '@tiptap/extension-table',
         '@tiptap/extension-placeholder', '@tiptap/extension-underline',
         '@tiptap/extension-text-align', '@tiptap/extension-highlight',

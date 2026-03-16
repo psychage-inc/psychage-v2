@@ -54,38 +54,38 @@ export default defineConfig(() => {
           admin: path.resolve(__dirname, 'admin.html'),
         },
         output: {
-          manualChunks: {
-            // Core React libraries
-            'vendor-react': ['react', 'react-dom', 'react-router-dom'],
-            // UI and animation libraries
-            'vendor-ui': ['framer-motion', 'lucide-react', 'class-variance-authority', 'clsx', 'tailwind-merge'],
-            // Chart libraries (heavy)
-            'vendor-charts': ['recharts'],
-            // 3D libraries (heavy, only used on homepage)
-            'vendor-three': ['three', '@react-three/fiber', '@react-three/drei'],
-            // Backend integrations
-            'vendor-supabase': ['@supabase/supabase-js'],
-            'vendor-sanity': ['@sanity/client', '@sanity/image-url', '@portabletext/react'],
-            // Date utilities
-            'vendor-date': ['date-fns'],
-            // i18n
-            'vendor-i18n': ['i18next', 'react-i18next', 'i18next-browser-languagedetector'],
-            // Radix UI primitives
-            'vendor-radix': [
-              '@radix-ui/react-dialog',
-              '@radix-ui/react-alert-dialog',
-              '@radix-ui/react-accordion',
-              '@radix-ui/react-collapsible',
-              '@radix-ui/react-tabs',
-            ],
+          manualChunks(id) {
+            if (!id.includes('node_modules')) return;
+
+            // React MUST be a singleton — route all react imports here
+            if (id.includes('/react-dom/') || id.includes('/scheduler/')) return 'vendor-react';
+            if (id.includes('/react/') && !id.includes('/react-i18next') && !id.includes('/react-router') && !id.includes('/react-three') && !id.includes('/@react-')) return 'vendor-react';
+            if (id.includes('/react-router-dom/') || id.includes('/react-router/') || id.includes('/@remix-run/')) return 'vendor-react';
+
+            // UI and animation
+            if (id.includes('/framer-motion/') || id.includes('/lucide-react/') || id.includes('/class-variance-authority/') || id.includes('/clsx/') || id.includes('/tailwind-merge/')) return 'vendor-ui';
+
+            // Charts
+            if (id.includes('/recharts/') || id.includes('/d3-') || id.includes('/victory-')) return 'vendor-charts';
+
+            // 3D (heavy, homepage only)
+            if (id.includes('/three/') || id.includes('/@react-three/')) return 'vendor-three';
+
+            // Backend
+            if (id.includes('/@supabase/')) return 'vendor-supabase';
+            if (id.includes('/@sanity/') || id.includes('/@portabletext/')) return 'vendor-sanity';
+
+            // Date
+            if (id.includes('/date-fns/')) return 'vendor-date';
+
+            // i18n (react-i18next goes here, but NOT react itself)
+            if (id.includes('/i18next') || id.includes('/react-i18next')) return 'vendor-i18n';
+
+            // Radix UI
+            if (id.includes('/@radix-ui/')) return 'vendor-radix';
+
             // Rich text editor (admin-only)
-            'vendor-editor': [
-              '@tiptap/react',
-              '@tiptap/starter-kit',
-              '@tiptap/extension-link',
-              '@tiptap/extension-image',
-              '@tiptap/extension-placeholder',
-            ],
+            if (id.includes('/@tiptap/') || id.includes('/prosemirror')) return 'vendor-editor';
           }
         }
       },

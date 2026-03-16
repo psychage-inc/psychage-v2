@@ -188,6 +188,8 @@ export interface ArticleRecord {
   sanity_id: string | null;
   title: string;
   slug: string;
+  content: string;
+  content_format: 'markdown' | 'html';
   status: ArticleStatus;
   category: string | null;
   tags: string[];

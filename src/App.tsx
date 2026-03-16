@@ -100,17 +100,13 @@ const ProviderPatients = React.lazy(() => import('./pages/provider/ProviderPatie
 
 // --- ADMIN REDIRECT ---
 
-/** Redirects /admin/* to the admin domain (or admin.html in local dev) */
+/** Redirects /admin/* to the admin domain (or /admin/* with Vite middleware in dev) */
 const AdminRedirect: React.FC = () => {
     const location = useLocation();
     const subPath = location.pathname.replace(/^\/admin/, '') || '/';
     React.useEffect(() => {
-        if (ADMIN_URL !== MAIN_URL) {
-            window.location.href = adminUrl(subPath);
-        } else {
-            // Local dev: redirect to admin.html entry point
-            window.location.href = `/admin.html${subPath}`;
-        }
+        // adminUrl() handles both production (cross-domain) and dev (/admin/*)
+        window.location.href = adminUrl(subPath);
     }, [subPath]);
     return null;
 };

@@ -2,19 +2,16 @@
  * Article Service
  *
  * Unified article service with cascading data sources:
- * 1. Sanity CMS (primary - rich content)
- * 2. Supabase (fallback - basic content)
- * 3. Mock data (last resort - development)
+ * 1. Supabase (primary - single source of truth)
+ * 2. Mock data (fallback - development)
  */
 
 import { Article, Category } from '../types/models';
 import { supabase } from '../lib/supabaseClient';
 import { useMemo } from 'react';
-import { sanityArticleService, SanityArticle } from './sanityArticleService';
 import { getCategoryTheme } from '../config/categoryThemes';
-import type { PortableTextBlock } from '@portabletext/types';
 
-// Fallback to mock data if all APIs fail
+// Fallback to mock data if Supabase fails
 import { articles as mockArticles } from '../data/articles';
 
 // ============================================================================
@@ -43,91 +40,14 @@ interface DBArticle {
     status?: string;
 }
 
-// Extended Article type that can hold Portable Text content
 export interface ArticleWithContent extends Article {
-    /** Raw Portable Text content from Sanity (for rendering with PortableText component) */
-    portableTextContent?: PortableTextBlock[];
     /** Data source for debugging */
-    _source?: 'sanity' | 'supabase' | 'mock';
+    _source?: 'supabase' | 'mock';
 }
 
 // ============================================================================
 // Mappers
 // ============================================================================
-
-/**
- * Map Sanity article to unified Article format
- */
-function mapSanityToArticle(data: SanityArticle): ArticleWithContent {
-    return {
-        id: data._id,
-        slug: data.slug.current,
-        title: data.title,
-        description: data.summary,
-        image: data.ogImage
-            ? sanityArticleService.getImageUrl(data.ogImage, 800, 600) || ''
-            : '',
-        category: data.category ? {
-            id: data.category._id,
-            name: data.category.name,
-            slug: data.category.slug.current,
-            description: data.category.description || '',
-            group: undefined, // Sanity doesn't have group
-            image: data.category.icon
-                ? sanityArticleService.getImageUrl(data.category.icon) || ''
-                : '',
-            color: '',
-            subTopics: []
-        } : {
-            id: '',
-            name: 'Uncategorized',
-            slug: 'uncategorized',
-            description: '',
-            group: undefined,
-            image: '',
-            color: '',
-            subTopics: []
-        },
-        readTime: sanityArticleService.calculateReadTime(data.body),
-        publishedAt: data.publishedAt,
-        content: '', // Use portableTextContent instead for Sanity articles
-        portableTextContent: data.body, // Raw Portable Text for rendering
-        tags: [],
-        featured: data.featured || false,
-        status: data.status,
-        author: data.author ? {
-            id: data.author._id,
-            name: data.author.name,
-            role: data.author.credentials || 'Clinician',
-            image: data.author.image
-                ? sanityArticleService.getImageUrl(data.author.image, 100, 100) || ''
-                : ''
-        } : {
-            id: 'team',
-            name: 'PsychAge Team',
-            role: 'Editor',
-            image: ''
-        },
-        reviewedBy: data.reviewer ? {
-            id: data.reviewer._id,
-            name: data.reviewer.name,
-            role: data.reviewer.credentials || 'Reviewer',
-            image: data.reviewer.image
-                ? sanityArticleService.getImageUrl(data.reviewer.image, 100, 100) || ''
-                : ''
-        } : undefined,
-        relatedArticles: [],
-        citations: (data.references || []).map((ref, index) => ({
-            id: ref._id,
-            text: ref.title,
-            source: ref.sourceType,
-            year: ref.publicationDate?.substring(0, 4) || '',
-            link: ref.url,
-            index: index + 1
-        })),
-        _source: 'sanity'
-    };
-}
 
 /**
  * Map Supabase article to unified Article format
@@ -174,39 +94,10 @@ function mapSupabaseToArticle(data: DBArticle): ArticleWithContent {
 export const articleService = {
     /**
      * Fetch all articles
-     * Priority: Sanity > Supabase > Mock
+     * Priority: Supabase > Mock
      */
     getAll: async (params?: { category?: string; featured?: boolean }): Promise<ArticleWithContent[]> => {
-        // Try Sanity first
-        if (sanityArticleService.isAvailable()) {
-            try {
-                let articles: SanityArticle[];
-
-                if (params?.category) {
-                    articles = await sanityArticleService.getByCategory(params.category);
-                } else if (params?.featured) {
-                    articles = await sanityArticleService.getFeatured();
-                } else {
-                    articles = await sanityArticleService.getAll();
-                }
-
-                if (articles && articles.length > 0) {
-                    console.log(`[ArticleService] Fetched ${articles.length} articles from Sanity`);
-                    let result = articles.map(mapSanityToArticle);
-
-                    // Apply additional filtering if needed
-                    if (params?.featured && !params.category) {
-                        result = result.filter(a => a.featured);
-                    }
-
-                    return result;
-                }
-            } catch (error) {
-                console.warn('[ArticleService] Sanity fetch failed, trying Supabase:', error);
-            }
-        }
-
-        // Fallback to Supabase
+        // Try Supabase first
         try {
             let selectString = '*, category:article_categories!category_id(*)';
             if (params?.category) {
@@ -274,23 +165,10 @@ export const articleService = {
 
     /**
      * Fetch article by slug
-     * Priority: Sanity > Supabase > Mock
+     * Priority: Supabase > Mock
      */
     getBySlug: async (slug: string): Promise<ArticleWithContent | undefined> => {
-        // Try Sanity first
-        if (sanityArticleService.isAvailable()) {
-            try {
-                const article = await sanityArticleService.getBySlug(slug);
-                if (article) {
-                    console.log(`[ArticleService] Fetched article "${slug}" from Sanity`);
-                    return mapSanityToArticle(article);
-                }
-            } catch (error) {
-                console.warn('[ArticleService] Sanity getBySlug failed:', error);
-            }
-        }
-
-        // Fallback to Supabase
+        // Try Supabase first
         try {
             const { data, error } = await supabase
                 .from('articles')

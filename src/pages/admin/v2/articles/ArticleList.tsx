@@ -7,7 +7,6 @@ import {
   Eye,
   Trash2,
   Star,
-  RefreshCw,
   FileText,
   Clock,
   CheckCircle,
@@ -20,8 +19,7 @@ import PageHeader from '@/components/admin/PageHeader';
 import DataTable from '@/components/admin/DataTable';
 import AdminStatusBadge from '@/components/admin/StatusBadge';
 import ConfirmDialog from '@/components/admin/ConfirmDialog';
-import { getArticles, getArticleStats, updateArticleStatus, getArticleCategories } from '@/services/articleAdminService';
-import { syncAllArticlesToSupabase } from '@/services/sanitySyncService';
+import { getArticles, getArticleStats, updateArticleStatus, getArticleCategories, getArticlesDataSource } from '@/services/articleAdminService';
 import type { ArticleRecord, ArticleStatus, ArticleCategoryRecord } from '@/lib/admin/types';
 import { ARTICLE_STATUSES, ARTICLE_REVIEW_STAGES } from '@/lib/admin/constants';
 import { adminPath } from '@/hooks/useAdminNavigate';
@@ -116,6 +114,8 @@ const AdminArticleList: React.FC = () => {
     queryFn: getArticles,
   });
 
+  const dataSource = articles ? getArticlesDataSource() : { source: null, error: null };
+
   const { data: categories } = useQuery({
     queryKey: ['admin', 'article-categories'],
     queryFn: getArticleCategories,
@@ -140,18 +140,6 @@ const AdminArticleList: React.FC = () => {
     },
     onError: (err: Error) => {
       toast.error(`Archive failed: ${err.message}`);
-    },
-  });
-
-  const syncMutation = useMutation({
-    mutationFn: syncAllArticlesToSupabase,
-    onSuccess: (result) => {
-      queryClient.invalidateQueries({ queryKey: ['admin', 'articles'] });
-      queryClient.invalidateQueries({ queryKey: ['admin', 'article-stats'] });
-      toast.success(`Sync complete: ${result.created} created, ${result.updated} updated`);
-    },
-    onError: (err: Error) => {
-      toast.error(`Sync failed: ${err.message}`);
     },
   });
 
@@ -278,14 +266,6 @@ const AdminArticleList: React.FC = () => {
         actions={
           <div className="flex items-center gap-2">
             <button
-              onClick={() => syncMutation.mutate()}
-              disabled={syncMutation.isPending}
-              className="flex items-center gap-2 px-3 py-2 border border-gray-300 dark:border-slate-600 text-gray-700 dark:text-slate-300 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors disabled:opacity-50"
-            >
-              <RefreshCw size={16} className={syncMutation.isPending ? 'animate-spin' : ''} />
-              Sync Sanity
-            </button>
-            <button
               onClick={() => navigate(adminPath('/articles/clusters'))}
               className="flex items-center gap-2 px-3 py-2 border border-gray-300 dark:border-slate-600 text-gray-700 dark:text-slate-300 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
             >
@@ -372,14 +352,48 @@ const AdminArticleList: React.FC = () => {
         </div>
       </div>
 
+      {dataSource.source === 'mock' && (
+        <div className="mb-4 rounded-lg border border-amber-300 dark:border-amber-700 bg-amber-50 dark:bg-amber-900/20 p-4">
+          <div className="flex items-start gap-3">
+            <AlertCircle className="h-5 w-5 text-amber-600 dark:text-amber-400 mt-0.5 flex-shrink-0" />
+            <div>
+              <p className="font-medium text-amber-800 dark:text-amber-300">
+                Showing demo data — Supabase query failed
+              </p>
+              <p className="text-sm text-amber-700 dark:text-amber-400 mt-1">
+                {dataSource.error || 'Unknown error'}
+              </p>
+              <p className="text-xs text-amber-600 dark:text-amber-500 mt-2">
+                Check browser console for "[articleAdminService]" error details.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
       <DataTable
         columns={columns}
         data={filteredArticles || []}
         isLoading={isLoading}
-        emptyMessage="No articles found. Click 'Sync Sanity' to import articles from your CMS."
+        emptyMessage="No articles found. Create articles via the admin panel or seed migration."
         searchPlaceholder="Search articles..."
         totalCount={filteredArticles?.length}
       />
+
+      {dataSource.source && (
+        <div className="mt-4 flex justify-end">
+          <span className={`inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full ${
+            dataSource.source === 'supabase'
+              ? 'bg-emerald-50 text-emerald-700 dark:bg-emerald-900/20 dark:text-emerald-400'
+              : 'bg-amber-50 text-amber-700 dark:bg-amber-900/20 dark:text-amber-400'
+          }`}>
+            <span className={`w-1.5 h-1.5 rounded-full ${
+              dataSource.source === 'supabase' ? 'bg-emerald-500' : 'bg-amber-500'
+            }`} />
+            {dataSource.source === 'supabase' ? 'Live data' : 'Demo data'}
+          </span>
+        </div>
+      )}
 
       <ConfirmDialog
         open={!!deleteTarget}

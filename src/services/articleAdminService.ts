@@ -39,6 +39,17 @@ import {
 } from '@/pages/admin/data/articleMockData';
 
 // ============================================================
+// Data source tracking — lets the UI detect mock fallback
+// ============================================================
+
+let _articlesSource: 'supabase' | 'mock' | null = null;
+let _articlesError: string | null = null;
+
+export function getArticlesDataSource() {
+  return { source: _articlesSource, error: _articlesError };
+}
+
+// ============================================================
 // Articles — CRUD
 // ============================================================
 
@@ -49,9 +60,19 @@ export async function getArticles(): Promise<ArticleRecord[]> {
       .select('*')
       .order('updated_at', { ascending: false });
     if (error) throw error;
+    _articlesSource = 'supabase';
+    _articlesError = null;
     return (data || []) as ArticleRecord[];
-  } catch (err) {
-    console.warn('getArticles: falling back to mock data', err);
+  } catch (err: unknown) {
+    const e = err as { message?: string; details?: string; hint?: string; code?: string };
+    const message = e?.message || (err instanceof Error ? err.message : String(err));
+    const details = e?.details ? ` | Details: ${e.details}` : '';
+    const hint = e?.hint ? ` | Hint: ${e.hint}` : '';
+    const code = e?.code ? ` | Code: ${e.code}` : '';
+    const fullMsg = `${message}${details}${hint}${code}`;
+    console.error('[articleAdminService] getArticles FAILED:', fullMsg);
+    _articlesSource = 'mock';
+    _articlesError = fullMsg;
     return getMockArticles();
   }
 }
@@ -536,8 +557,11 @@ export async function getArticleStats(): Promise<ArticleStats> {
         ? Number((ratings.reduce((s, r) => s + r, 0) / ratings.length).toFixed(1))
         : null,
     };
-  } catch (err) {
-    console.warn('getArticleStats: falling back to mock data', err);
+  } catch (err: unknown) {
+    const e = err as { message?: string; details?: string; hint?: string; code?: string };
+    const message = e?.message || (err instanceof Error ? err.message : String(err));
+    const details = e?.details ? ` | Details: ${e.details}` : '';
+    console.error('[articleAdminService] getArticleStats FAILED:', `${message}${details}`);
     return getMockArticleStats();
   }
 }
@@ -1061,4 +1085,37 @@ export async function generateArticleProductionId(categorySlug: string): Promise
     console.warn('generateArticleProductionId: error', err);
     return `${fullPrefix}001`;
   }
+}
+
+// ============================================================
+// Diagnostics — run from browser console to debug connection
+// ============================================================
+
+export async function diagnoseConnection() {
+  const { data: { session } } = await supabase.auth.getSession();
+  const userId = session?.user?.id || null;
+  const userRole = session?.user?.user_metadata?.role || null;
+
+  let adminRole: unknown = null;
+  if (userId) {
+    const { data, error } = await supabase
+      .from('admin_roles')
+      .select('*')
+      .eq('user_id', userId)
+      .single();
+    adminRole = error ? { error: error.message } : data;
+  }
+
+  const { count, error: artErr } = await supabase
+    .from('articles')
+    .select('id', { count: 'exact', head: true });
+
+  console.table({
+    authenticated: !!session,
+    userId,
+    userRole,
+    adminRole: JSON.stringify(adminRole),
+    articlesCount: count,
+    articlesError: artErr ? artErr.message : null,
+  });
 }

@@ -29,6 +29,19 @@ export {
   BLOCKED_SOURCE_DOMAINS,
 } from './constants';
 
+// Content Architecture (15 Categories × 1,000 Articles)
+export type { ContentCategory, ClarityInstrument } from './content-architecture';
+export {
+  CONTENT_CATEGORIES,
+  TOTAL_ARTICLE_TARGET,
+  getCategoryByNumber,
+  getCategoryBySlug,
+  getCategoriesForInstrument,
+  getCategoriesForCondition,
+  GAP_CLOSER_CATEGORIES,
+  FOUNDATION_CATEGORIES,
+} from './content-architecture';
+
 // Quality Gate Engine
 export { runQualityGate } from './quality-gate';
 

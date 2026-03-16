@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import ReactMarkdown from 'react-markdown';
 import {
   ArrowLeft,
   FileText,
@@ -8,7 +9,6 @@ import {
   Image as ImageIcon,
   GitBranch,
   BarChart3,
-  ExternalLink,
   Scissors,
   Send,
   CheckCircle,
@@ -21,6 +21,9 @@ import {
   ArrowRight,
   AlertCircle,
   ShieldCheck,
+  Pencil,
+  Eye,
+  Save,
 } from 'lucide-react';
 import { formatDistanceToNow, format } from 'date-fns';
 import { toast } from 'sonner';
@@ -30,6 +33,7 @@ import ConfirmDialog from '@/components/admin/ConfirmDialog';
 import QualityGateDashboard from '@/components/admin/articles/QualityGateDashboard';
 import ArticleTypeSelector from '@/components/admin/articles/ArticleTypeSelector';
 import CitationManager from '@/components/admin/articles/CitationManager';
+import TiptapEditor from '@/components/admin/TiptapEditor';
 import {
   getArticleById,
   getArticleComments,
@@ -43,8 +47,8 @@ import {
   updateArticleImage,
   updateArticleRatings,
   updateArticleStatus,
+  updateArticle,
 } from '@/services/articleAdminService';
-import { fetchArticleFromSanity } from '@/services/sanitySyncService';
 import type {
   ArticleRecord,
   ArticleCommentRecord,
@@ -176,25 +180,56 @@ const AdminArticleDetail: React.FC = () => {
 function ContentTab({ article }: { article: ArticleRecord }) {
   const navigate = useNavigate();
   const queryClient = useQueryClient();
-  const { data: sanityContent } = useQuery({
-    queryKey: ['admin', 'sanity-article', article.sanity_id],
-    queryFn: () => (article.sanity_id ? fetchArticleFromSanity(article.sanity_id) : null),
-    enabled: !!article.sanity_id,
-  });
-
-  const projectId = import.meta.env.VITE_SANITY_PROJECT_ID;
-  const sanityStudioUrl = projectId
-    ? `https://${projectId}.sanity.studio/desk/article;${article.sanity_id}`
-    : null;
+  const [isEditing, setIsEditing] = useState(false);
+  const [editContent, setEditContent] = useState(article.content || '');
+  const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
 
   const handleArticleTypeChange = useCallback(
     (_type: ArticleType) => {
-      // In production, this would call articleAdminService.updateArticle()
-      // For now, this updates the local state — the type is persisted on save
       toast.success(`Article type set to ${_type.replace(/_/g, ' ')}`);
     },
     [],
   );
+
+  const saveMutation = useMutation({
+    mutationFn: () => {
+      const wordCount = editContent.replace(/<[^>]*>/g, ' ').split(/\s+/).filter(Boolean).length;
+      return updateArticle(article.id, {
+        content: editContent,
+        content_format: 'html',
+        word_count: wordCount,
+      });
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['admin', 'article', article.id] });
+      setHasUnsavedChanges(false);
+      toast.success('Content saved');
+    },
+    onError: (err: Error) => toast.error(`Save failed: ${err.message}`),
+  });
+
+  const handleEditToggle = () => {
+    if (isEditing && hasUnsavedChanges) {
+      const confirmed = window.confirm('You have unsaved changes. Discard them?');
+      if (!confirmed) return;
+    }
+    if (!isEditing) {
+      setEditContent(article.content || '');
+      setHasUnsavedChanges(false);
+    }
+    setIsEditing(!isEditing);
+  };
+
+  const handleContentChange = (html: string) => {
+    setEditContent(html);
+    setHasUnsavedChanges(true);
+  };
+
+  const liveWordCount = isEditing
+    ? editContent.replace(/<[^>]*>/g, ' ').split(/\s+/).filter(Boolean).length
+    : article.word_count;
+
+  const proseClasses = "prose prose-gray dark:prose-invert max-w-none prose-headings:scroll-mt-20 prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-xl prose-h3:font-semibold prose-h3:mt-8 prose-h3:mb-3 prose-p:leading-relaxed prose-p:mb-4 prose-li:leading-relaxed prose-blockquote:border-teal-500 prose-blockquote:bg-teal-50 dark:prose-blockquote:bg-teal-900/10 prose-blockquote:py-1 prose-blockquote:px-4 prose-blockquote:rounded-r-lg prose-blockquote:not-italic prose-a:text-teal-600 dark:prose-a:text-teal-400 prose-strong:text-gray-900 dark:prose-strong:text-white";
 
   return (
     <div className="space-y-6">
@@ -210,38 +245,51 @@ function ContentTab({ article }: { article: ArticleRecord }) {
       <div className="grid grid-cols-3 gap-4">
         <div className="bg-white dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700 p-4 text-center">
           <div className="text-2xl font-semibold text-gray-900 dark:text-white">
-            {article.word_count.toLocaleString()}
+            {liveWordCount.toLocaleString()}
           </div>
-          <div className="text-sm text-gray-500">Words</div>
+          <div className="text-sm text-gray-500">Words{isEditing && hasUnsavedChanges ? ' (editing)' : ''}</div>
         </div>
         <div className="bg-white dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700 p-4 text-center">
           <div className="text-2xl font-semibold text-gray-900 dark:text-white">
-            {article.word_count > 0 ? `${Math.ceil(article.word_count / 200)} min` : '—'}
+            {liveWordCount > 0 ? `${Math.ceil(liveWordCount / 200)} min` : '—'}
           </div>
           <div className="text-sm text-gray-500">Read Time</div>
         </div>
         <div className="bg-white dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700 p-4 text-center">
           <div className="text-2xl font-semibold text-gray-900 dark:text-white">
-            {article.sanity_last_synced_at
-              ? formatDistanceToNow(new Date(article.sanity_last_synced_at), { addSuffix: true })
-              : 'Never'}
+            {article.updated_at
+              ? formatDistanceToNow(new Date(article.updated_at), { addSuffix: true })
+              : '—'}
           </div>
-          <div className="text-sm text-gray-500">Last Synced</div>
+          <div className="text-sm text-gray-500">Last Updated</div>
         </div>
       </div>
 
       {/* Actions */}
       <div className="flex items-center gap-3">
-        {sanityStudioUrl && (
-          <a
-            href={sanityStudioUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-slate-700 text-white text-sm font-medium rounded-lg hover:bg-gray-800 dark:hover:bg-slate-600 transition-colors"
+        <button
+          onClick={handleEditToggle}
+          className={`flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
+            isEditing
+              ? 'bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-slate-600'
+              : 'bg-teal-600 hover:bg-teal-700 text-white'
+          }`}
+        >
+          {isEditing ? <Eye size={16} /> : <Pencil size={16} />}
+          {isEditing ? 'View Mode' : 'Edit Content'}
+        </button>
+        {isEditing && (
+          <button
+            onClick={() => saveMutation.mutate()}
+            disabled={saveMutation.isPending || !hasUnsavedChanges}
+            className="flex items-center gap-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium rounded-lg transition-colors disabled:opacity-50"
           >
-            <ExternalLink size={16} />
-            Edit in Sanity
-          </a>
+            <Save size={16} />
+            {saveMutation.isPending ? 'Saving...' : 'Save Content'}
+          </button>
+        )}
+        {isEditing && hasUnsavedChanges && (
+          <span className="text-xs text-amber-600 dark:text-amber-400 font-medium">Unsaved changes</span>
         )}
         <button
           onClick={() => navigate(adminPath(`/articles/${article.id}/breakdown`))}
@@ -252,25 +300,39 @@ function ContentTab({ article }: { article: ArticleRecord }) {
         </button>
       </div>
 
-      {/* Article content preview */}
-      <div className="bg-white dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700 p-6">
-        {sanityContent?.body ? (
-          <div className="prose dark:prose-invert max-w-none">
-            <h2>{sanityContent.title}</h2>
-            {sanityContent.summary && (
-              <p className="text-lg text-gray-600 dark:text-slate-400 italic">{sanityContent.summary}</p>
-            )}
-            <p className="text-sm text-gray-500">
-              Full article content is rendered in Sanity Studio. This view shows metadata and summary.
-            </p>
-          </div>
+      {/* SEO Description */}
+      {article.seo_description && (
+        <div className="bg-gray-50 dark:bg-slate-800/50 rounded-lg border border-gray-200 dark:border-slate-700 p-4">
+          <p className="text-xs font-medium text-gray-500 dark:text-slate-400 uppercase tracking-wide mb-1">SEO Description</p>
+          <p className="text-sm text-gray-700 dark:text-slate-300 italic">{article.seo_description}</p>
+        </div>
+      )}
+
+      {/* Full article content */}
+      <div className="bg-white dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700 p-8">
+        {isEditing ? (
+          <TiptapEditor
+            content={editContent}
+            onChange={handleContentChange}
+            placeholder="Start writing your article content..."
+          />
+        ) : article.content ? (
+          article.content_format === 'html' ? (
+            <article
+              className={proseClasses}
+              dangerouslySetInnerHTML={{ __html: article.content }}
+            />
+          ) : (
+            <article className={proseClasses}>
+              <ReactMarkdown>{article.content}</ReactMarkdown>
+            </article>
+          )
         ) : (
-          <div className="text-center py-8 text-gray-500">
-            <FileText size={32} className="mx-auto mb-2 opacity-40" />
-            <p>
-              {article.sanity_id
-                ? 'Unable to load content from Sanity. Check your CMS configuration.'
-                : 'This article has no linked Sanity document.'}
+          <div className="text-center py-12 text-gray-500">
+            <FileText size={40} className="mx-auto mb-3 opacity-30" />
+            <p className="text-lg font-medium text-gray-400 dark:text-slate-500">No content yet</p>
+            <p className="text-sm text-gray-400 dark:text-slate-600 mt-1">
+              Click "Edit Content" to start writing.
             </p>
           </div>
         )}

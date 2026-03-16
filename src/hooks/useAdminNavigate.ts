@@ -1,8 +1,8 @@
 /**
  * Admin path helper for domain-aware navigation.
  *
- * On admin domain (admin.psychage.com): routes have no /admin prefix.
- * On main domain (psychage.com): routes keep /admin prefix.
+ * Returns paths relative to admin BrowserRouter's basename.
+ * BrowserRouter handles the /admin prefix automatically in local dev.
  *
  * Usage:
  *   import { adminPath } from '@/hooks/useAdminNavigate';
@@ -10,13 +10,8 @@
  *   navigate(adminPath('/articles'));
  */
 
-import { isAdminDomain } from '@/lib/urls';
-
-const PREFIX = isAdminDomain() ? '' : '/admin';
-
-/** Convert an admin path to be domain-appropriate */
+/** Convert an admin path to be usable within admin BrowserRouter */
 export function adminPath(path: string): string {
-  // Strip /admin prefix if present, then re-add the correct prefix
-  const normalized = path.replace(/^\/admin/, '');
-  return `${PREFIX}${normalized}`;
+  // Strip /admin prefix if present — BrowserRouter basename handles it
+  return path.replace(/^\/admin/, '') || '/';
 }

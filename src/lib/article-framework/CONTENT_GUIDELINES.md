@@ -4,6 +4,33 @@ Evidence-based writing standards for every article published on Psychage.
 
 ---
 
+## Content Architecture
+
+The full 15-category content plan targeting 1,000 articles is defined in `content-architecture.ts`. Categories 1–12 form the life-context foundation; categories 13–15 close clinical and structural gaps identified through 5 layers of analysis (validated instruments, clinical condition coverage, global prevalence data, search behavior, and cultural reach).
+
+| # | Category | Target |
+|---|----------|--------|
+| 1 | Emotional Regulation & Self-Awareness | 80 |
+| 2 | Anxiety, Stress & Overwhelm | 90 |
+| 3 | Relationships & Communication | 80 |
+| 4 | Self-Worth, Confidence & Identity | 70 |
+| 5 | Work, Productivity & Burnout | 75 |
+| 6 | Family, Parenting & Childhood Patterns | 75 |
+| 7 | Depression, Grief & Loss | 70 |
+| 8 | Habits, Motivation & Behavior Change | 65 |
+| 9 | Sleep, Body & Mind-Body Connection | 60 |
+| 10 | Digital Life, Social Media & Modern Stressors | 50 |
+| 11 | Trauma-Informed Education & Healing | 55 |
+| 12 | Cultural Perspectives, Inclusion & Global Wellness | 50 |
+| 13 | Understanding Mental Health Conditions ★ | 80 |
+| 14 | Therapy, Treatment & Mental Health Navigation ★ | 50 |
+| 15 | Loneliness, Social Connection & Belonging ★ | 50 |
+| | **TOTAL** | **1,000** |
+
+Each category includes its research basis, Clarity Score instrument mappings, Symptom Navigator condition links, cross-references to related categories, and article target count. See `content-architecture.ts` for the full programmatic definition.
+
+---
+
 ## Source Hierarchy
 
 Every claim in a Psychage article must be traceable to a credible source. We use a 5-tier system — higher tiers carry more weight.

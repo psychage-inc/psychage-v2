@@ -1,0 +1,1234 @@
+// ============================================================================
+// Category 1 | Subcategory 1 — Understanding Your Emotions (Articles 001–010)
+// ============================================================================
+
+import React from 'react';
+import { Article } from '../../../types';
+import { Lightbulb, Quote, Brain, Heart, AlertCircle } from 'lucide-react';
+import Citation from '../../../components/article/Citation';
+import { CATEGORY_EMOTIONAL_REGULATION, PRIMARY_AUTHOR, CLINICAL_REVIEWER, catId } from './_shared';
+
+export const understandingEmotionsArticles: Article[] = [
+  // -------------------------------------------------------------------------
+  // 001. What Are Emotions, Really? A Beginner's Guide to How Feelings Work
+  // -------------------------------------------------------------------------
+  {
+    id: catId(1),
+    slug: 'what-are-emotions-beginners-guide',
+    title: "What Are Emotions, Really? A Beginner's Guide to How Feelings Work",
+    description:
+      'Discover the science behind your feelings — what emotions actually are, how they form in the brain and body, and why understanding them is the first step toward emotional wellbeing.',
+    image: '/images/articles/cat01/cover-001.svg',
+    category: CATEGORY_EMOTIONAL_REGULATION,
+    readTime: 7,
+    publishedAt: '2026-03-16',
+    author: PRIMARY_AUTHOR,
+    reviewedBy: CLINICAL_REVIEWER,
+    tags: ['Emotional Literacy', 'Psychology', 'Self-Awareness', 'Wellbeing'],
+    citations: [
+      { id: '1', text: 'The nature of emotion: fundamental questions', source: 'Oxford University Press', year: '2018', link: 'https://doi.org/10.1093/oso/9780190612573.001.0001' },
+      { id: '2', text: 'Emotion regulation: current status and future prospects', source: 'Psychological Inquiry', year: '2015', link: 'https://doi.org/10.1080/1047840X.2014.940781' },
+      { id: '3', text: 'The science of emotion: what people believe, what the evidence shows, and where to go from here', source: 'Psychological Science in the Public Interest', year: '2019', link: 'https://doi.org/10.1177/1529100619832930' },
+      { id: '4', text: 'How emotions are made: the secret life of the brain', source: 'Houghton Mifflin Harcourt', year: '2017' },
+      { id: '5', text: 'Emotional responses to music: the need to consider underlying mechanisms', source: 'Behavioral and Brain Sciences', year: '2008', link: 'https://doi.org/10.1017/S0140525X08005293' },
+      { id: '6', text: 'The role of emotion in decision-making: evidence from neurological patients with orbitofrontal damage', source: 'Brain and Cognition', year: '2004', link: 'https://doi.org/10.1016/j.bandc.2003.04.001' },
+      { id: '7', text: 'Emotions: brief for policymakers and practitioners', source: 'National Institute of Mental Health', year: '2023', link: 'https://www.nimh.nih.gov/health/topics/emotions' },
+      { id: '8', text: 'Understanding emotions in social interactions', source: 'American Psychological Association', year: '2022', link: 'https://www.apa.org/topics/emotions' },
+    ],
+    content: (
+      <>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            You feel them every day — a tightness in your chest before a difficult conversation, a wave of warmth when someone you love walks through the door, a sudden pang of sadness at a memory you thought you had moved past. These are emotions. But what <em>are</em> they, exactly?
+          </p>
+          <p className="mb-6">
+            Despite being central to human experience, emotions are widely misunderstood. Many people think of emotions as irrational forces that need to be controlled — or worse, suppressed. But decades of research in psychology, neuroscience, and affective science tell a different story <Citation id="1" index={1} source="Oxford University Press" year="2018" tier={5} />.
+          </p>
+          <p className="mb-6">
+            In this guide, we break down the science of emotions in plain language — what they are, how they form, why they exist, and how understanding them can improve your daily life.
+          </p>
+        </div>
+
+        <h2 id="understanding-the-challenge" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Understanding the Challenge
+        </h2>
+        <p className="mb-6">
+          Most of us were never taught what emotions actually are. We learn to label some of them — happy, sad, angry, scared — but rarely learn how they work or why they arise. This gap in emotional literacy has real consequences.
+        </p>
+        <p className="mb-6">
+          Research by psychologist James Gross shows that people who understand their emotions are better at managing them, maintain healthier relationships, and experience fewer mental health difficulties <Citation id="2" index={2} source="Psychological Inquiry" year="2015" tier={1} />.
+        </p>
+        <p className="mb-6">
+          So what exactly is an emotion? Scientists define emotions as short-lived responses to a situation or stimulus that involve three connected components:
+        </p>
+
+        <div className="my-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-violet-50 dark:bg-violet-900/20 rounded-2xl p-6 border border-violet-100 dark:border-violet-800">
+            <h3 className="font-bold text-violet-800 dark:text-violet-200 mb-3 flex items-center gap-2">
+              <Brain size={20} /> Cognitive
+            </h3>
+            <p className="text-violet-900/80 dark:text-violet-100/80 text-sm">
+              How your brain interprets what is happening — the thoughts and appraisals that shape your response.
+            </p>
+          </div>
+          <div className="bg-rose-50 dark:bg-rose-900/20 rounded-2xl p-6 border border-rose-100 dark:border-rose-800">
+            <h3 className="font-bold text-rose-800 dark:text-rose-200 mb-3 flex items-center gap-2">
+              <Heart size={20} /> Physiological
+            </h3>
+            <p className="text-rose-900/80 dark:text-rose-100/80 text-sm">
+              What happens in your body — heart rate changes, hormone release, muscle tension, breathing shifts.
+            </p>
+          </div>
+          <div className="bg-sky-50 dark:bg-sky-900/20 rounded-2xl p-6 border border-sky-100 dark:border-sky-800">
+            <h3 className="font-bold text-sky-800 dark:text-sky-200 mb-3 flex items-center gap-2">
+              <AlertCircle size={20} /> Behavioral
+            </h3>
+            <p className="text-sky-900/80 dark:text-sky-100/80 text-sm">
+              How you express the emotion outwardly — facial expressions, voice changes, actions, or withdrawal.
+            </p>
+          </div>
+        </div>
+
+        <p className="mb-6">
+          Neuroscientist Lisa Feldman Barrett describes emotions not as fixed circuits in the brain that fire automatically, but as constructions — your brain's best guess about what your body's sensations mean in the current context <Citation id="4" index={4} source="Houghton Mifflin Harcourt" year="2017" tier={5} />.
+        </p>
+
+        <h2 id="evidence-based-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Evidence-Based Strategies
+        </h2>
+        <p className="mb-6">
+          Understanding what emotions are is not just academic — it has practical applications. Here are research-backed ways to deepen your emotional understanding:
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">1. Learn the difference between emotions, feelings, and moods</h3>
+        <p className="mb-6">
+          These three terms are often used interchangeably, but they describe different things. An <strong>emotion</strong> is a brief, automatic response — it lasts seconds to minutes. A <strong>feeling</strong> is your subjective awareness of that emotion — the meaning you assign to it. A <strong>mood</strong> is a longer-lasting emotional state that can persist for hours or days, often without a clear trigger <Citation id="3" index={3} source="Psychological Science in the Public Interest" year="2019" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">2. Recognize that emotions are data, not directives</h3>
+        <p className="mb-6">
+          Your emotions carry information about your relationship to the world. Anger often signals that a boundary has been crossed. Fear signals a perceived threat. Sadness signals loss. But the signal is not a command — you can acknowledge the information without acting on it automatically <Citation id="6" index={6} source="Brain and Cognition" year="2004" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">3. Notice the body first</h3>
+        <p className="mb-6">
+          Before your conscious mind labels an experience as "anxiety" or "excitement," your body has already responded — your heart rate has shifted, your muscles have tensed or relaxed, your breathing pattern has changed. Learning to notice these physical cues gives you an earlier window into your emotional state <Citation id="5" index={5} source="Behavioral and Brain Sciences" year="2008" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">4. Expand your emotional vocabulary</h3>
+        <p className="mb-6">
+          The more precisely you can name what you feel, the better you can manage it. Research shows that people who distinguish between fine-grained emotional states — "I feel disappointed" versus "I feel frustrated" versus "I feel let down" — are more effective at regulating their emotions. Psychologists call this <strong>emotional granularity</strong> <Citation id="3" index={3} source="Psychological Science in the Public Interest" year="2019" tier={1} />.
+        </p>
+
+        <div className="my-10 p-6 bg-amber-50 dark:bg-amber-900/20 rounded-xl border-l-4 border-amber-400 flex gap-4">
+          <div className="shrink-0 text-amber-500 mt-1">
+            <Lightbulb size={24} />
+          </div>
+          <div>
+            <h4 className="font-bold text-amber-900 dark:text-amber-100 mb-1">Key Takeaway</h4>
+            <p className="text-amber-800 dark:text-amber-200/80 text-sm leading-relaxed">
+              Emotions are not enemies to defeat. They are your brain's way of quickly orienting you to what matters. When you understand how they work, you can respond to them with more clarity and less reactivity.
+            </p>
+          </div>
+        </div>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">5. Understand that emotions serve a purpose</h3>
+        <p className="mb-6">
+          From an evolutionary perspective, every core emotion exists because it helped our ancestors survive. Fear kept them alert to danger. Disgust protected them from contamination. Joy reinforced social bonds that improved survival odds. Even emotions that feel uncomfortable have adaptive value — they motivate action, shape decision-making, and strengthen social connections <Citation id="8" index={8} source="American Psychological Association" year="2022" tier={3} />.
+        </p>
+
+        <h2 id="how-to-get-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How to Get Started
+        </h2>
+        <p className="mb-6">
+          Building emotional literacy is a practice, not a one-time event. Here are three simple steps to begin today:
+        </p>
+        <ul className="list-disc list-inside space-y-3 mb-8 text-gray-700 dark:text-gray-300 ml-4">
+          <li><strong>Pause three times a day</strong> and ask yourself: "What am I feeling right now?" Try to name the emotion as specifically as possible.</li>
+          <li><strong>Track your emotions</strong> for one week using a simple notes app or journal. Note the situation, the emotion, and where you felt it in your body.</li>
+          <li><strong>Read about emotions</strong> — even short articles like this one build the conceptual framework that makes emotions easier to understand and manage.</li>
+        </ul>
+
+        <figure className="my-12">
+          <blockquote className="relative p-8 bg-gray-50 dark:bg-gray-800/50 rounded-2xl border-l-4 border-teal-500 italic text-xl text-gray-700 dark:text-gray-300 leading-relaxed font-display">
+            <Quote className="absolute top-4 left-4 text-teal-200 dark:text-teal-800 w-8 h-8 -z-10 opacity-50" />
+            "Between stimulus and response there is a space. In that space is our freedom and our power to choose our response."
+          </blockquote>
+          <figcaption className="mt-4 text-sm text-gray-500 dark:text-gray-400 font-medium text-right">
+            — Viktor Frankl
+          </figcaption>
+        </figure>
+
+        <h2 id="when-self-help-isnt-enough" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When Self-Help Isn't Enough
+        </h2>
+        <p className="mb-6">
+          Learning about emotions is a powerful starting point. But if you find that your emotions regularly feel overwhelming, uncontrollable, or confusing despite your best efforts, that is a signal that professional support could help <Citation id="7" index={7} source="NIMH" year="2023" tier={2} />.
+        </p>
+        <p className="mb-6">
+          A therapist — particularly one trained in emotion-focused therapy (EFT) or cognitive behavioral therapy (CBT) — can help you develop deeper emotional awareness in a safe, guided setting. This is not a sign of weakness. It is a sign that you are taking your emotional health seriously.
+        </p>
+      </>
+    ),
+  },
+
+  // -------------------------------------------------------------------------
+  // 002. The Emotion Spectrum: Why Your Feelings Exist on a Continuum
+  // -------------------------------------------------------------------------
+  {
+    id: catId(2),
+    slug: 'emotion-spectrum-feelings-continuum',
+    title: "The Emotion Spectrum: Why Your Feelings Exist on a Continuum, Not in Boxes",
+    description:
+      'Emotions are not on-off switches. Learn how the spectrum model of emotions can help you understand subtle shifts in how you feel and respond more skillfully.',
+    image: '/images/articles/cat01/cover-002.svg',
+    category: CATEGORY_EMOTIONAL_REGULATION,
+    readTime: 6,
+    publishedAt: '2026-03-16',
+    author: PRIMARY_AUTHOR,
+    reviewedBy: CLINICAL_REVIEWER,
+    tags: ['Emotional Literacy', 'Psychology', 'Self-Awareness'],
+    citations: [
+      { id: '1', text: 'A circumplex model of affect', source: 'Journal of Personality and Social Psychology', year: '1980', link: 'https://doi.org/10.1037/h0077714' },
+      { id: '2', text: 'The theory of constructed emotion: an active inference account of interoception and categorization', source: 'Social Cognitive and Affective Neuroscience', year: '2017', link: 'https://doi.org/10.1093/scan/nsw154' },
+      { id: '3', text: 'Positive emotions broaden the scope of attention and thought-action repertoires', source: 'Cognition and Emotion', year: '2005', link: 'https://doi.org/10.1080/02699930441000238' },
+      { id: '4', text: 'Varieties of emotional experience during voluntary emotional regulation', source: 'Emotion', year: '2022', link: 'https://doi.org/10.1037/emo0001069' },
+      { id: '5', text: 'Emotional granularity increases with intensive measurement of affect', source: 'Psychological Science', year: '2001', link: 'https://doi.org/10.1111/1467-9280.00340' },
+      { id: '6', text: 'The feeling wheel: a tool for expanding emotional vocabulary', source: 'Transactional Analysis Journal', year: '1982', link: 'https://doi.org/10.1177/036215378201200411' },
+      { id: '7', text: 'Affect and cognition: a review of theory and evidence', source: 'Annual Review of Psychology', year: '2021', link: 'https://doi.org/10.1146/annurev-psych-010419-050754' },
+      { id: '8', text: 'Emotions and mental health', source: 'National Institute of Mental Health', year: '2023', link: 'https://www.nimh.nih.gov/health/topics/emotions' },
+    ],
+    content: (
+      <>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            Ask someone how they feel, and you will usually get one of a handful of words: good, bad, fine, stressed, tired. But human emotional experience is far richer than these labels suggest. Your feelings do not live in neat boxes — they exist on a spectrum, shifting in intensity, blending together, and changing moment to moment.
+          </p>
+          <p className="mb-6">
+            Understanding this spectrum is more than a vocabulary exercise. Research shows that people who recognize the nuances in their emotional experience are better at managing stress, making decisions, and maintaining relationships <Citation id="5" index={5} source="Psychological Science" year="2001" tier={1} />.
+          </p>
+        </div>
+
+        <h2 id="understanding-the-challenge" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Understanding the Challenge
+        </h2>
+        <p className="mb-6">
+          Most emotional education boils down to a small set of "basic" emotions — happiness, sadness, anger, fear, surprise, and disgust. This model, influenced by psychologist Paul Ekman's work on universal facial expressions, is useful as a starting point. But it can also be limiting.
+        </p>
+        <p className="mb-6">
+          Psychologist James Russell proposed a different framework: the <strong>circumplex model of affect</strong>. In this model, every emotional experience can be mapped along two dimensions — how pleasant or unpleasant it feels (valence), and how activated or calm your body is (arousal) <Citation id="1" index={1} source="Journal of Personality and Social Psychology" year="1980" tier={1} />.
+        </p>
+
+        <div className="my-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-emerald-50 dark:bg-emerald-900/20 rounded-2xl p-6 border border-emerald-100 dark:border-emerald-800">
+            <h3 className="font-bold text-emerald-800 dark:text-emerald-200 mb-3">High Arousal + Pleasant</h3>
+            <p className="text-emerald-900/80 dark:text-emerald-100/80 text-sm mb-2">Excitement, joy, enthusiasm, elation</p>
+            <p className="text-emerald-700/60 dark:text-emerald-300/60 text-xs italic">Your body is activated and the experience feels good.</p>
+          </div>
+          <div className="bg-amber-50 dark:bg-amber-900/20 rounded-2xl p-6 border border-amber-100 dark:border-amber-800">
+            <h3 className="font-bold text-amber-800 dark:text-amber-200 mb-3">High Arousal + Unpleasant</h3>
+            <p className="text-amber-900/80 dark:text-amber-100/80 text-sm mb-2">Anxiety, anger, panic, frustration</p>
+            <p className="text-amber-700/60 dark:text-amber-300/60 text-xs italic">Your body is activated but the experience feels distressing.</p>
+          </div>
+          <div className="bg-sky-50 dark:bg-sky-900/20 rounded-2xl p-6 border border-sky-100 dark:border-sky-800">
+            <h3 className="font-bold text-sky-800 dark:text-sky-200 mb-3">Low Arousal + Pleasant</h3>
+            <p className="text-sky-900/80 dark:text-sky-100/80 text-sm mb-2">Calm, contentment, serenity, relaxation</p>
+            <p className="text-sky-700/60 dark:text-sky-300/60 text-xs italic">Your body is settled and the experience feels peaceful.</p>
+          </div>
+          <div className="bg-slate-50 dark:bg-slate-900/20 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
+            <h3 className="font-bold text-slate-800 dark:text-slate-200 mb-3">Low Arousal + Unpleasant</h3>
+            <p className="text-slate-900/80 dark:text-slate-100/80 text-sm mb-2">Sadness, boredom, fatigue, hopelessness</p>
+            <p className="text-slate-700/60 dark:text-slate-300/60 text-xs italic">Your body is depleted and the experience feels heavy.</p>
+          </div>
+        </div>
+
+        <p className="mb-6">
+          Lisa Feldman Barrett's theory of constructed emotion takes this further: your brain doesn't contain preset emotion circuits. Instead, it continuously predicts what your body sensations mean based on past experience and current context <Citation id="2" index={2} source="Social Cognitive and Affective Neuroscience" year="2017" tier={1} />.
+        </p>
+
+        <h2 id="evidence-based-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Evidence-Based Strategies
+        </h2>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">1. Use a feelings wheel to expand your vocabulary</h3>
+        <p className="mb-6">
+          Gloria Willcox's "Feeling Wheel" organizes emotions in concentric rings — core emotions in the center (like "angry"), with more specific variations radiating outward ("frustrated," "bitter," "humiliated," "let down"). The next time you notice a strong emotion, try to move from the center ring to the outer ring <Citation id="6" index={6} source="Transactional Analysis Journal" year="1982" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">2. Rate your valence and arousal</h3>
+        <p className="mb-6">
+          When you check in with yourself, ask two questions: "Does this feel pleasant or unpleasant?" and "Does my body feel activated or calm?" These two data points place you on the circumplex map and can help you name what you are experiencing more accurately <Citation id="4" index={4} source="Emotion" year="2022" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">3. Notice emotional blends</h3>
+        <p className="mb-6">
+          Real emotional experiences are rarely pure. You can feel excited and nervous about a job interview at the same time. You can feel relief and sadness when a difficult chapter of your life ends. These blends are normal — and naming both parts gives you a fuller picture <Citation id="7" index={7} source="Annual Review of Psychology" year="2021" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">4. Track intensity, not just category</h3>
+        <p className="mb-6">
+          There is a difference between irritation and rage, between unease and terror. When you notice an emotion, try rating its intensity on a scale from 1 to 10. This practice builds awareness of your emotional baseline and helps you catch escalating patterns earlier.
+        </p>
+
+        <div className="my-10 p-6 bg-amber-50 dark:bg-amber-900/20 rounded-xl border-l-4 border-amber-400 flex gap-4">
+          <div className="shrink-0 text-amber-500 mt-1">
+            <Lightbulb size={24} />
+          </div>
+          <div>
+            <h4 className="font-bold text-amber-900 dark:text-amber-100 mb-1">Key Takeaway</h4>
+            <p className="text-amber-800 dark:text-amber-200/80 text-sm leading-relaxed">
+              Expanding your emotional vocabulary is like upgrading from a box of 8 crayons to 64. The same world exists — you can just see it with more precision.
+            </p>
+          </div>
+        </div>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">5. Recognize that positive emotions are a spectrum too</h3>
+        <p className="mb-6">
+          Barbara Fredrickson's broaden-and-build theory shows that positive emotions — gratitude, awe, curiosity, amusement, love — are not all the same. Each one broadens your attention in different ways and builds different psychological resources over time <Citation id="3" index={3} source="Cognition and Emotion" year="2005" tier={1} />.
+        </p>
+
+        <h2 id="how-to-get-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How to Get Started
+        </h2>
+        <ul className="list-disc list-inside space-y-3 mb-8 text-gray-700 dark:text-gray-300 ml-4">
+          <li><strong>Download or print a feelings wheel</strong> and keep it visible — on your desk, in your journal, or saved on your phone.</li>
+          <li><strong>Three times today</strong>, pause and identify both your valence (pleasant/unpleasant) and arousal (activated/calm).</li>
+          <li><strong>When you label an emotion</strong>, try to use a word that is one step more specific than your first instinct — "disappointed" instead of "sad," "overwhelmed" instead of "stressed."</li>
+        </ul>
+
+        <h2 id="when-self-help-isnt-enough" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When Self-Help Isn't Enough
+        </h2>
+        <p className="mb-6">
+          If you consistently struggle to identify what you are feeling — a condition clinicians call <strong>alexithymia</strong> — or if intense emotions seem to come out of nowhere without any pattern you can detect, working with a mental health professional can help. Therapists trained in emotion-focused approaches specialize in building exactly this kind of awareness <Citation id="8" index={8} source="NIMH" year="2023" tier={2} />.
+        </p>
+      </>
+    ),
+  },
+
+  // -------------------------------------------------------------------------
+  // 003. Why "Negative" Emotions Aren't Actually Bad for You
+  // -------------------------------------------------------------------------
+  {
+    id: catId(3),
+    slug: 'negative-emotions-not-bad',
+    title: "Why \"Negative\" Emotions Aren't Actually Bad for You",
+    description:
+      'Anger, sadness, fear, and guilt all serve important purposes. Learn why suppressing uncomfortable emotions can backfire and how accepting them leads to better mental health.',
+    image: '/images/articles/cat01/cover-003.svg',
+    category: CATEGORY_EMOTIONAL_REGULATION,
+    readTime: 7,
+    publishedAt: '2026-03-16',
+    author: PRIMARY_AUTHOR,
+    reviewedBy: CLINICAL_REVIEWER,
+    tags: ['Emotional Acceptance', 'Psychology', 'Mental Health'],
+    citations: [
+      { id: '1', text: 'The dark side of emotion regulation: why accepting negative emotions matters', source: 'Journal of Personality and Social Psychology', year: '2017', link: 'https://doi.org/10.1037/pspp0000163' },
+      { id: '2', text: 'Emotional suppression and mortality risk over a 12-year follow-up', source: 'Journal of Psychosomatic Research', year: '2013', link: 'https://doi.org/10.1016/j.jpsychores.2013.07.014' },
+      { id: '3', text: 'The functional value of negative emotions', source: 'Handbook of Emotions (4th ed.)', year: '2016' },
+      { id: '4', text: 'Acceptance and commitment therapy: model, processes, and outcomes', source: 'Behaviour Research and Therapy', year: '2006', link: 'https://doi.org/10.1016/j.brat.2005.06.006' },
+      { id: '5', text: 'The upside of your dark side: why being your whole self — not just your "good" self — drives success and fulfillment', source: 'Avery Publishing', year: '2015' },
+      { id: '6', text: 'Emodiversity and the emotional ecosystem', source: 'Journal of Experimental Psychology: General', year: '2014', link: 'https://doi.org/10.1037/a0038025' },
+      { id: '7', text: 'Anger and approach motivation', source: 'Current Directions in Psychological Science', year: '2010', link: 'https://doi.org/10.1177/0963721410397314' },
+      { id: '8', text: 'Coping with emotions in mental health', source: 'World Health Organization', year: '2022', link: 'https://www.who.int/news-room/fact-sheets/detail/mental-health-strengthening-our-response' },
+    ],
+    content: (
+      <>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            We are taught from an early age that some emotions are "good" — happiness, gratitude, calm — and others are "bad" — anger, sadness, fear, jealousy. But the science tells a more nuanced story: uncomfortable emotions are not defects. They are essential parts of a healthy emotional system.
+          </p>
+          <p className="mb-6">
+            Research from UC Berkeley found that people who habitually accept their negative emotions — rather than judging themselves for having them — experience better psychological health over time <Citation id="1" index={1} source="Journal of Personality and Social Psychology" year="2017" tier={1} />.
+          </p>
+        </div>
+
+        <h2 id="understanding-the-challenge" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Understanding the Challenge
+        </h2>
+        <p className="mb-6">
+          The cultural message is clear: be positive, stay optimistic, choose happiness. While positive thinking has its place, the relentless pursuit of positivity creates a shadow problem — what psychologists call <strong>toxic positivity</strong>. When you treat uncomfortable emotions as failures, you add a second layer of suffering: guilt about feeling bad.
+        </p>
+        <p className="mb-6">
+          Chronic emotional suppression carries measurable health costs. A 12-year longitudinal study found that people who habitually suppress their emotions have a higher risk of all-cause mortality <Citation id="2" index={2} source="Journal of Psychosomatic Research" year="2013" tier={1} />.
+        </p>
+        <p className="mb-6">
+          The truth is that every emotion — including the uncomfortable ones — evolved because it serves an adaptive function <Citation id="3" index={3} source="Handbook of Emotions" year="2016" tier={5} />.
+        </p>
+
+        <div className="my-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-red-50 dark:bg-red-900/20 rounded-2xl p-6 border border-red-100 dark:border-red-800">
+            <h3 className="font-bold text-red-800 dark:text-red-200 mb-3">Anger</h3>
+            <p className="text-red-900/80 dark:text-red-100/80 text-sm">
+              Signals that a boundary has been crossed or an injustice has occurred. Motivates corrective action and self-advocacy <Citation id="7" index={7} source="Current Directions in Psychological Science" year="2010" tier={1} />.
+            </p>
+          </div>
+          <div className="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-6 border border-blue-100 dark:border-blue-800">
+            <h3 className="font-bold text-blue-800 dark:text-blue-200 mb-3">Sadness</h3>
+            <p className="text-blue-900/80 dark:text-blue-100/80 text-sm">
+              Signals loss and prompts reflection. Slows you down so you can process what happened and elicits support from others.
+            </p>
+          </div>
+          <div className="bg-yellow-50 dark:bg-yellow-900/20 rounded-2xl p-6 border border-yellow-100 dark:border-yellow-800">
+            <h3 className="font-bold text-yellow-800 dark:text-yellow-200 mb-3">Fear</h3>
+            <p className="text-yellow-900/80 dark:text-yellow-100/80 text-sm">
+              Alerts you to danger and prepares your body to respond. Without fear, you would take risks without evaluating consequences.
+            </p>
+          </div>
+          <div className="bg-purple-50 dark:bg-purple-900/20 rounded-2xl p-6 border border-purple-100 dark:border-purple-800">
+            <h3 className="font-bold text-purple-800 dark:text-purple-200 mb-3">Guilt</h3>
+            <p className="text-purple-900/80 dark:text-purple-100/80 text-sm">
+              Signals that your behavior has conflicted with your values. Motivates repair in relationships and course-correction.
+            </p>
+          </div>
+        </div>
+
+        <h2 id="evidence-based-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Evidence-Based Strategies
+        </h2>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">1. Practice emotional acceptance</h3>
+        <p className="mb-6">
+          Acceptance and Commitment Therapy (ACT) teaches that trying to eliminate unwanted emotions often intensifies them. The alternative is <strong>psychological flexibility</strong> — acknowledging what you feel without fusing with it or fighting it <Citation id="4" index={4} source="Behaviour Research and Therapy" year="2006" tier={1} />.
+        </p>
+        <p className="mb-6">
+          Try this: the next time you feel an uncomfortable emotion, silently say to yourself, "I notice I am feeling [emotion]." This small linguistic shift creates distance between you and the feeling.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">2. Ask what the emotion is telling you</h3>
+        <p className="mb-6">
+          Instead of asking "How do I get rid of this feeling?", try "What is this feeling trying to communicate?" Anger might be telling you that a need is unmet. Anxiety might be flagging an unresolved decision. Treat the emotion as a messenger, not an enemy <Citation id="5" index={5} source="Avery Publishing" year="2015" tier={5} />.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">3. Cultivate emodiversity</h3>
+        <p className="mb-6">
+          Research by Jordi Quoidbach and colleagues found that <strong>emodiversity</strong> — experiencing a wide range of emotions, including negative ones — is associated with better physical health and lower inflammation. A rich emotional life, not just a positive one, is a healthy one <Citation id="6" index={6} source="Journal of Experimental Psychology: General" year="2014" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">4. Distinguish between the emotion and the behavior</h3>
+        <p className="mb-6">
+          All emotions are valid. Not all behaviors that follow emotions are helpful. You can feel angry without yelling. You can feel afraid without avoiding. The goal is not to suppress the feeling but to choose your response to it deliberately.
+        </p>
+
+        <div className="my-10 p-6 bg-amber-50 dark:bg-amber-900/20 rounded-xl border-l-4 border-amber-400 flex gap-4">
+          <div className="shrink-0 text-amber-500 mt-1">
+            <Lightbulb size={24} />
+          </div>
+          <div>
+            <h4 className="font-bold text-amber-900 dark:text-amber-100 mb-1">Key Takeaway</h4>
+            <p className="text-amber-800 dark:text-amber-200/80 text-sm leading-relaxed">
+              A full emotional life includes the full range of emotions. The healthiest people are not the ones who never feel angry, sad, or afraid — they are the ones who let themselves feel those things without being controlled by them.
+            </p>
+          </div>
+        </div>
+
+        <h2 id="how-to-get-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How to Get Started
+        </h2>
+        <ul className="list-disc list-inside space-y-3 mb-8 text-gray-700 dark:text-gray-300 ml-4">
+          <li><strong>This week</strong>, when you feel an uncomfortable emotion, resist the urge to immediately distract or fix. Instead, sit with it for 90 seconds — the typical duration of an emotional wave.</li>
+          <li><strong>Reframe your self-talk</strong>: replace "I shouldn't feel this way" with "This is an understandable response to what I am experiencing."</li>
+          <li><strong>Journal about one "negative" emotion</strong> per week, exploring what triggered it and what it might be signaling.</li>
+        </ul>
+
+        <h2 id="when-self-help-isnt-enough" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When Self-Help Isn't Enough
+        </h2>
+        <p className="mb-6">
+          If you find that emotions like sadness, anger, or fear are persistent (lasting weeks rather than hours), disproportionate to the situation, or significantly interfering with your ability to function — at work, in relationships, or in daily tasks — these may be signs that professional support would be helpful <Citation id="8" index={8} source="WHO" year="2022" tier={2} />.
+        </p>
+        <p className="mb-6">
+          Therapies like ACT, DBT (dialectical behavior therapy), and emotion-focused therapy are specifically designed to help people build a healthier relationship with difficult emotions.
+        </p>
+      </>
+    ),
+  },
+
+  // -------------------------------------------------------------------------
+  // 004. The Science of Emotional Triggers
+  // -------------------------------------------------------------------------
+  {
+    id: catId(4),
+    slug: 'science-of-emotional-triggers',
+    title: 'The Science of Emotional Triggers: What Fires Off Your Feelings and Why',
+    description:
+      'Why do certain situations, words, or memories set off intense emotional reactions? Explore the neuroscience of triggers and learn practical strategies for managing them.',
+    image: '/images/articles/cat01/cover-004.svg',
+    category: CATEGORY_EMOTIONAL_REGULATION,
+    readTime: 7,
+    publishedAt: '2026-03-16',
+    author: PRIMARY_AUTHOR,
+    reviewedBy: CLINICAL_REVIEWER,
+    tags: ['Emotional Triggers', 'Neuroscience', 'Self-Awareness', 'Coping'],
+    citations: [
+      { id: '1', text: 'The amygdala and emotional memory', source: 'Annual Review of Neuroscience', year: '2004', link: 'https://doi.org/10.1146/annurev.neuro.27.070203.144107' },
+      { id: '2', text: 'Cognitive appraisal theories of emotion: a review', source: 'Cognition and Emotion', year: '2019', link: 'https://doi.org/10.1080/02699931.2019.1590554' },
+      { id: '3', text: 'Neural systems underlying the reappraisal of emotionally triggering experiences', source: 'Biological Psychiatry', year: '2014', link: 'https://doi.org/10.1016/j.biopsych.2013.12.015' },
+      { id: '4', text: 'The role of the prefrontal cortex in emotion regulation', source: 'Neuroscience & Biobehavioral Reviews', year: '2017', link: 'https://doi.org/10.1016/j.neubiorev.2017.01.002' },
+      { id: '5', text: 'Conditioning and extinction of fear in youth and adults', source: 'Developmental Psychobiology', year: '2018', link: 'https://doi.org/10.1002/dev.21599' },
+      { id: '6', text: 'Implicit emotional associations and cognitive reappraisal', source: 'Journal of Experimental Psychology: General', year: '2020', link: 'https://doi.org/10.1037/xge0000760' },
+      { id: '7', text: 'Stress and the brain: from adaptation to disease', source: 'Nature Reviews Neuroscience', year: '2005', link: 'https://doi.org/10.1038/nrn1683' },
+      { id: '8', text: 'Coping with stress', source: 'National Institute of Mental Health', year: '2024', link: 'https://www.nimh.nih.gov/health/publications/stress' },
+    ],
+    content: (
+      <>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            A certain song comes on and your chest tightens. A coworker uses a particular tone of voice and your heart starts racing. Someone cancels plans last minute and you feel a wave of anger that seems out of proportion to the event. These are emotional triggers — and understanding how they work is one of the most powerful tools for managing your emotional life.
+          </p>
+        </div>
+
+        <h2 id="understanding-the-challenge" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Understanding the Challenge
+        </h2>
+        <p className="mb-6">
+          An emotional trigger is any stimulus — a situation, sensation, phrase, or memory — that activates a strong emotional response, often before you have time to think about it. The response feels automatic because, at the neurological level, it is.
+        </p>
+        <p className="mb-6">
+          The brain structure most involved in this rapid-fire reaction is the <strong>amygdala</strong> — an almond-shaped cluster of neurons that acts as an emotional alarm system. When the amygdala detects something that resembles a past threat, it can trigger a fight-flight-freeze response in milliseconds, bypassing the slower, more deliberate processing of the prefrontal cortex <Citation id="1" index={1} source="Annual Review of Neuroscience" year="2004" tier={1} />.
+        </p>
+        <p className="mb-6">
+          This is why triggers feel disproportionate. Your brain is not responding to what is happening right now — it is responding to what happened <em>before</em>, in a situation that left a strong emotional imprint <Citation id="7" index={7} source="Nature Reviews Neuroscience" year="2005" tier={1} />.
+        </p>
+
+        <div className="my-10 p-6 bg-amber-50 dark:bg-amber-900/20 rounded-xl border-l-4 border-amber-400 flex gap-4">
+          <div className="shrink-0 text-amber-500 mt-1">
+            <Lightbulb size={24} />
+          </div>
+          <div>
+            <h4 className="font-bold text-amber-900 dark:text-amber-100 mb-1">Key Takeaway</h4>
+            <p className="text-amber-800 dark:text-amber-200/80 text-sm leading-relaxed">
+              A trigger is your brain's pattern-matching system working too broadly — it flags current experiences as threats because they resemble past ones, even when the current situation is safe.
+            </p>
+          </div>
+        </div>
+
+        <h2 id="evidence-based-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Evidence-Based Strategies
+        </h2>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">1. Identify your triggers with specificity</h3>
+        <p className="mb-6">
+          Start by noticing <em>what</em> triggers you and <em>what you feel</em> when it happens. Keep a simple log: situation, emotion, intensity (1–10), body sensation. Over time, patterns will emerge. Appraisal theory research shows that the way you interpret a situation determines the emotion it produces — and interpretations can be changed <Citation id="2" index={2} source="Cognition and Emotion" year="2019" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">2. Use the cognitive reappraisal technique</h3>
+        <p className="mb-6">
+          Neuroimaging studies show that when people deliberately reinterpret the meaning of a triggering situation, activity in the prefrontal cortex increases while amygdala activation decreases <Citation id="3" index={3} source="Biological Psychiatry" year="2014" tier={1} />. For example, if a friend does not reply to your message, you can shift from "they are ignoring me" to "they might be busy or overwhelmed."
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">3. Build your prefrontal cortex response time</h3>
+        <p className="mb-6">
+          The prefrontal cortex — the brain region responsible for planning, reasoning, and impulse control — can override the amygdala's alarm, but it is slower. Practices like mindfulness meditation strengthen the connection between these two regions, giving you more time to choose your response <Citation id="4" index={4} source="Neuroscience & Biobehavioral Reviews" year="2017" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">4. Understand that triggers can be unlearned</h3>
+        <p className="mb-6">
+          Through a process called <strong>extinction learning</strong>, your brain can form new associations that compete with the old trigger-response patterns. This is the basis of exposure-based therapies. With repeated safe exposure to a trigger, the emotional charge gradually decreases <Citation id="5" index={5} source="Developmental Psychobiology" year="2018" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">5. Challenge automatic interpretations</h3>
+        <p className="mb-6">
+          Much of what makes a trigger potent is the <em>implicit</em> meaning your brain assigns to it. Research shows that making these automatic associations explicit — writing them down or speaking them aloud — weakens their hold <Citation id="6" index={6} source="Journal of Experimental Psychology: General" year="2020" tier={1} />.
+        </p>
+
+        <h2 id="how-to-get-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How to Get Started
+        </h2>
+        <ul className="list-disc list-inside space-y-3 mb-8 text-gray-700 dark:text-gray-300 ml-4">
+          <li><strong>Start a trigger journal</strong>: the next time you have a disproportionate emotional reaction, write down what happened, what you felt, and what memory or association came up.</li>
+          <li><strong>Practice the 5-second pause</strong>: when you feel triggered, count to five slowly before responding. This gives your prefrontal cortex time to catch up.</li>
+          <li><strong>Label the experience</strong>: silently tell yourself, "I am being triggered right now. This is my amygdala. I am safe." Research shows this simple labeling reduces amygdala activation.</li>
+        </ul>
+
+        <h2 id="when-self-help-isnt-enough" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When Self-Help Isn't Enough
+        </h2>
+        <p className="mb-6">
+          If your triggers are connected to traumatic experiences, if they cause panic attacks, or if they significantly limit your daily life — for example, you avoid entire categories of situations to prevent being triggered — professional support from a trauma-informed therapist can make a meaningful difference <Citation id="8" index={8} source="NIMH" year="2024" tier={2} />.
+        </p>
+        <p className="mb-6">
+          Therapies like EMDR (Eye Movement Desensitization and Reprocessing) and prolonged exposure therapy are specifically designed to help the brain reprocess traumatic memories so that triggers lose their intensity.
+        </p>
+      </>
+    ),
+  },
+
+  // -------------------------------------------------------------------------
+  // 005. Emotional Granularity
+  // -------------------------------------------------------------------------
+  {
+    id: catId(5),
+    slug: 'emotional-granularity-naming-feelings',
+    title: 'Emotional Granularity: How Naming Your Feelings More Precisely Changes Everything',
+    description:
+      'People who distinguish between fine-grained emotional states manage stress better, make clearer decisions, and have stronger relationships. Learn how to build this skill.',
+    image: '/images/articles/cat01/cover-005.svg',
+    category: CATEGORY_EMOTIONAL_REGULATION,
+    readTime: 7,
+    publishedAt: '2026-03-16',
+    author: PRIMARY_AUTHOR,
+    reviewedBy: CLINICAL_REVIEWER,
+    tags: ['Emotional Granularity', 'Emotional Literacy', 'Self-Awareness', 'Wellbeing'],
+    citations: [
+      { id: '1', text: 'Emotional granularity increases with intensive measurement of affect', source: 'Psychological Science', year: '2001', link: 'https://doi.org/10.1111/1467-9280.00340' },
+      { id: '2', text: 'Putting feelings into words: affect labeling disrupts amygdala activity in response to affective stimuli', source: 'Psychological Science', year: '2007', link: 'https://doi.org/10.1111/j.1467-9280.2007.01916.x' },
+      { id: '3', text: 'Emotional granularity and emotion regulation', source: 'Journal of Personality and Social Psychology', year: '2019', link: 'https://doi.org/10.1037/pspp0000220' },
+      { id: '4', text: 'How emotions are made: the secret life of the brain', source: 'Houghton Mifflin Harcourt', year: '2017' },
+      { id: '5', text: 'The benefits of emotional granularity for reducing drinking behavior', source: 'Emotion', year: '2019', link: 'https://doi.org/10.1037/emo0000573' },
+      { id: '6', text: 'Negative emotional granularity is associated with reduced aggression', source: 'Journal of Research in Personality', year: '2016', link: 'https://doi.org/10.1016/j.jrp.2016.01.001' },
+      { id: '7', text: 'Affect as information', source: 'Handbook of Affect and Social Cognition', year: '2001' },
+      { id: '8', text: 'Understanding emotions and mental health', source: 'American Psychological Association', year: '2023', link: 'https://www.apa.org/topics/emotions' },
+    ],
+    content: (
+      <>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            When someone asks "How are you?", most of us default to a single word: "fine," "good," "stressed," or "tired." But what if the precision with which you label your feelings had a direct impact on your ability to manage them? Research says it does — and the skill is called <strong>emotional granularity</strong>.
+          </p>
+        </div>
+
+        <h2 id="understanding-the-challenge" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Understanding the Challenge
+        </h2>
+        <p className="mb-6">
+          Emotional granularity is the ability to make fine-grained distinctions between similar emotional states. Instead of saying "I feel bad," a person with high emotional granularity might say "I feel disappointed," "I feel embarrassed," or "I feel resentful" — each of which points to a different cause and a different solution.
+        </p>
+        <p className="mb-6">
+          Lisa Feldman Barrett, the neuroscientist who coined the term, found that people who differentiate their emotions with precision are significantly better at regulating them <Citation id="1" index={1} source="Psychological Science" year="2001" tier={1} />.
+        </p>
+        <p className="mb-6">
+          Why does naming an emotion help? A landmark UCLA neuroimaging study by Matthew Lieberman found that putting a feeling into words — a process called <strong>affect labeling</strong> — reduces activation in the amygdala, the brain's emotional alarm center. In other words, naming an emotion literally turns down its intensity <Citation id="2" index={2} source="Psychological Science" year="2007" tier={1} />.
+        </p>
+
+        <figure className="my-12">
+          <blockquote className="relative p-8 bg-gray-50 dark:bg-gray-800/50 rounded-2xl border-l-4 border-teal-500 italic text-xl text-gray-700 dark:text-gray-300 leading-relaxed font-display">
+            <Quote className="absolute top-4 left-4 text-teal-200 dark:text-teal-800 w-8 h-8 -z-10 opacity-50" />
+            "The more finely grained your experience of emotion, the more precisely your brain can craft a response that fits the situation."
+          </blockquote>
+          <figcaption className="mt-4 text-sm text-gray-500 dark:text-gray-400 font-medium text-right">
+            — Lisa Feldman Barrett, <em>How Emotions Are Made</em>
+          </figcaption>
+        </figure>
+
+        <h2 id="evidence-based-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Evidence-Based Strategies
+        </h2>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">1. Replace broad labels with specific ones</h3>
+        <p className="mb-6">
+          When you catch yourself using a vague word like "bad," "upset," or "stressed," pause and ask: "Can I be more specific?" Stressed could be overwhelmed, pressured, anxious, frustrated, or depleted — and each points to a different response. People who practice this regularly show improved emotion regulation in daily life <Citation id="3" index={3} source="Journal of Personality and Social Psychology" year="2019" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">2. Use the "I feel [specific emotion] because [reason]" formula</h3>
+        <p className="mb-6">
+          Connecting the emotion to its cause forces you to move beyond surface-level labeling. "I feel resentful because I agreed to something I didn't want to do" gives you actionable information. "I feel bad" does not <Citation id="7" index={7} source="Handbook of Affect and Social Cognition" year="2001" tier={5} />.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">3. Build your vocabulary deliberately</h3>
+        <p className="mb-6">
+          Barrett's research suggests that emotional granularity is partly a function of vocabulary — the more emotion words you know, the more distinctions your brain can draw <Citation id="4" index={4} source="Houghton Mifflin Harcourt" year="2017" tier={5} />.
+        </p>
+        <p className="mb-6">
+          Try learning one new emotion word per week. For example: <em>wistful</em> (a gentle sadness for something past), <em>ambivalent</em> (pulled in two directions), <em>apprehensive</em> (uneasy about something uncertain), or <em>indignant</em> (angry at perceived unfairness).
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">4. Know the downstream benefits</h3>
+        <p className="mb-6">
+          This is not just about self-knowledge. Research shows that people with higher negative emotional granularity drink less alcohol in response to intense emotions <Citation id="5" index={5} source="Emotion" year="2019" tier={1} /> and exhibit lower levels of aggressive behavior <Citation id="6" index={6} source="Journal of Research in Personality" year="2016" tier={1} />. Precision in naming feelings leads to precision in choosing responses.
+        </p>
+
+        <div className="my-10 p-6 bg-amber-50 dark:bg-amber-900/20 rounded-xl border-l-4 border-amber-400 flex gap-4">
+          <div className="shrink-0 text-amber-500 mt-1">
+            <Lightbulb size={24} />
+          </div>
+          <div>
+            <h4 className="font-bold text-amber-900 dark:text-amber-100 mb-1">Key Takeaway</h4>
+            <p className="text-amber-800 dark:text-amber-200/80 text-sm leading-relaxed">
+              Emotional granularity is a trainable skill. The more precisely you name what you feel, the more power you gain over how you respond. It is one of the simplest, most effective emotional regulation strategies available.
+            </p>
+          </div>
+        </div>
+
+        <h2 id="how-to-get-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How to Get Started
+        </h2>
+        <ul className="list-disc list-inside space-y-3 mb-8 text-gray-700 dark:text-gray-300 ml-4">
+          <li><strong>Three times today</strong>, check in with yourself and try to name your emotion as specifically as possible — go beyond "good" or "bad."</li>
+          <li><strong>Keep a feelings log</strong> for one week: write down the specific emotion, its intensity (1–10), and what triggered it.</li>
+          <li><strong>Use a feelings wheel</strong> or a list of emotion words as a reference until the vocabulary becomes second nature.</li>
+          <li><strong>In conversations</strong>, practice saying what you actually feel instead of defaulting to "fine" — it deepens connection and builds the skill simultaneously.</li>
+        </ul>
+
+        <h2 id="when-self-help-isnt-enough" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When Self-Help Isn't Enough
+        </h2>
+        <p className="mb-6">
+          If you find it consistently difficult to identify or name your emotions — if you frequently draw a blank when asked how you feel, or if your emotional experience feels flat or confusing — this may be a sign of <strong>alexithymia</strong>, a trait-level difficulty with emotional processing <Citation id="8" index={8} source="APA" year="2023" tier={3} />.
+        </p>
+        <p className="mb-6">
+          Alexithymia is not a diagnosis — it is a dimension that exists on a spectrum. But if it is affecting your relationships or wellbeing, a therapist experienced in emotion-focused work can help you develop this capacity in a structured, supportive setting.
+        </p>
+      </>
+    ),
+  },
+
+  // -------------------------------------------------------------------------
+  // 006. Why You Feel Everything So Deeply
+  // -------------------------------------------------------------------------
+  {
+    id: catId(6),
+    slug: 'why-you-feel-everything-deeply',
+    title: 'Why You Feel Everything So Deeply: Understanding Emotional Sensitivity',
+    description:
+      'If your emotions seem more intense than other people\'s, you may have high emotional sensitivity. Learn what causes it, why it is not a weakness, and how to work with it rather than against it.',
+    image: '/images/articles/cat01/cover-006.svg',
+    category: CATEGORY_EMOTIONAL_REGULATION,
+    readTime: 7,
+    publishedAt: '2026-03-16',
+    author: PRIMARY_AUTHOR,
+    reviewedBy: CLINICAL_REVIEWER,
+    tags: ['Emotional Sensitivity', 'HSP', 'Self-Awareness', 'Wellbeing'],
+    citations: [
+      { id: '1', text: 'Sensory processing sensitivity: a review in light of the evolution of biological responsivity', source: 'Personality and Social Psychology Review', year: '2012', link: 'https://doi.org/10.1177/1088868311434213' },
+      { id: '2', text: 'Environmental sensitivity in children: development of the Highly Sensitive Child scale', source: 'Development and Psychopathology', year: '2018', link: 'https://doi.org/10.1017/S0954579417000611' },
+      { id: '3', text: 'The highly sensitive brain: an fMRI study of sensory processing sensitivity and response to others\' emotions', source: 'Brain and Behavior', year: '2014', link: 'https://doi.org/10.1002/brb3.242' },
+      { id: '4', text: 'Emotional reactivity and regulation in current and remitted depression', source: 'Emotion', year: '2017', link: 'https://doi.org/10.1037/emo0000235' },
+      { id: '5', text: 'Differential susceptibility to environmental influences', source: 'Annual Review of Psychology', year: '2019', link: 'https://doi.org/10.1146/annurev-psych-010418-103242' },
+      { id: '6', text: 'Individual differences in emotion reactivity and regulation', source: 'Emotion Review', year: '2020', link: 'https://doi.org/10.1177/1754073920930810' },
+      { id: '7', text: 'The concept of sensory-processing sensitivity and mental health', source: 'Clinical Psychology Review', year: '2022', link: 'https://doi.org/10.1016/j.cpr.2022.102164' },
+      { id: '8', text: 'Managing emotional wellbeing', source: 'National Institute of Mental Health', year: '2023', link: 'https://www.nimh.nih.gov/health/topics/caring-for-your-mental-health' },
+    ],
+    content: (
+      <>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            You cry at movies that others shrug off. A harsh comment stays with you for days. Crowded rooms drain you faster than they drain your friends. If this sounds familiar, you are not broken, dramatic, or "too much." You may have what researchers call <strong>high emotional sensitivity</strong> — and it is more common, and more scientifically understood, than most people realize.
+          </p>
+        </div>
+
+        <h2 id="understanding-the-challenge" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Understanding the Challenge
+        </h2>
+        <p className="mb-6">
+          Psychologist Elaine Aron identified a temperament trait she called <strong>sensory processing sensitivity (SPS)</strong>, present in an estimated 15–20% of the population. People high in SPS process sensory and emotional information more deeply — they notice subtleties others miss, react more strongly to stimuli, and need more recovery time after intense experiences <Citation id="1" index={1} source="Personality and Social Psychology Review" year="2012" tier={1} />.
+        </p>
+        <p className="mb-6">
+          This is not a clinical disorder. It is a temperament trait with a neurological basis. fMRI studies show that highly sensitive people display greater activation in brain regions involved in awareness, empathy, and emotional processing — including the insula and mirror neuron system <Citation id="3" index={3} source="Brain and Behavior" year="2014" tier={1} />.
+        </p>
+        <p className="mb-6">
+          The challenge is not the sensitivity itself — it is living in a culture that treats deep feeling as a liability rather than an asset. Sensitive people often internalize the message that they need to "toughen up," which leads to self-criticism and emotional suppression rather than skillful management <Citation id="7" index={7} source="Clinical Psychology Review" year="2022" tier={1} />.
+        </p>
+
+        <h2 id="evidence-based-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Evidence-Based Strategies
+        </h2>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">1. Reframe sensitivity as depth of processing</h3>
+        <p className="mb-6">
+          Sensitivity is not about being weak — it is about processing more deeply. The same trait that makes you more affected by negativity also makes you more responsive to positive experiences, supportive environments, and therapeutic interventions. Researchers call this <strong>differential susceptibility</strong> — for better and for worse <Citation id="5" index={5} source="Annual Review of Psychology" year="2019" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">2. Build in recovery time</h3>
+        <p className="mb-6">
+          Highly sensitive people deplete their emotional energy faster in stimulating environments. This is not a flaw — it is a neurological reality. Schedule downtime after intense social interactions, stressful meetings, or emotionally charged events. Even 15 minutes of quiet can prevent the buildup that leads to overwhelm <Citation id="6" index={6} source="Emotion Review" year="2020" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">3. Manage your environment proactively</h3>
+        <p className="mb-6">
+          Research on sensory processing sensitivity in children shows that environment matters enormously — sensitive children thrive in supportive environments and struggle more than average in harsh ones <Citation id="2" index={2} source="Development and Psychopathology" year="2018" tier={1} />. As an adult, you have more control over your environment. Reduce unnecessary stimulation: noise-canceling headphones, limited news consumption, intentional social scheduling.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">4. Develop emotion regulation skills</h3>
+        <p className="mb-6">
+          Sensitivity means you feel emotions more intensely, but it does not determine how you respond to them. Building a toolkit of regulation strategies — deep breathing, cognitive reappraisal, grounding techniques — gives you a bridge between feeling deeply and responding skillfully <Citation id="4" index={4} source="Emotion" year="2017" tier={1} />.
+        </p>
+
+        <div className="my-10 p-6 bg-amber-50 dark:bg-amber-900/20 rounded-xl border-l-4 border-amber-400 flex gap-4">
+          <div className="shrink-0 text-amber-500 mt-1">
+            <Lightbulb size={24} />
+          </div>
+          <div>
+            <h4 className="font-bold text-amber-900 dark:text-amber-100 mb-1">Key Takeaway</h4>
+            <p className="text-amber-800 dark:text-amber-200/80 text-sm leading-relaxed">
+              Emotional sensitivity is not a disorder or a weakness. It is a temperament trait that, when understood and managed, becomes a source of depth, empathy, and connection that enriches your life and the lives of people around you.
+            </p>
+          </div>
+        </div>
+
+        <h2 id="how-to-get-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How to Get Started
+        </h2>
+        <ul className="list-disc list-inside space-y-3 mb-8 text-gray-700 dark:text-gray-300 ml-4">
+          <li><strong>Take stock of your energy drains</strong>: this week, notice which situations leave you feeling depleted and which ones energize you. Write them down.</li>
+          <li><strong>Build one buffer</strong> into your daily schedule — a 15-minute block of quiet between activities.</li>
+          <li><strong>Replace self-criticism with self-recognition</strong>: the next time you think "I'm too sensitive," try "I process things deeply, and that's why I need to take care of my energy."</li>
+        </ul>
+
+        <h2 id="when-self-help-isnt-enough" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When Self-Help Isn't Enough
+        </h2>
+        <p className="mb-6">
+          Emotional sensitivity is a trait, not a condition. But when sensitivity combines with chronic stress, unsupportive environments, or past trauma, it can contribute to anxiety, depression, or burnout <Citation id="8" index={8} source="NIMH" year="2023" tier={2} />. If your sensitivity is causing persistent distress or interfering with your ability to work, maintain relationships, or enjoy daily life, a therapist can help you build strategies tailored to your temperament.
+        </p>
+      </>
+    ),
+  },
+
+  // -------------------------------------------------------------------------
+  // 007. The Difference Between Feelings, Emotions, and Moods
+  // -------------------------------------------------------------------------
+  {
+    id: catId(7),
+    slug: 'feelings-emotions-moods-difference',
+    title: "The Difference Between Feelings, Emotions, and Moods — And Why It Matters",
+    description:
+      'These three terms are used interchangeably, but they describe different things. Understanding the distinction helps you respond more effectively to your inner experience.',
+    image: '/images/articles/cat01/cover-007.svg',
+    category: CATEGORY_EMOTIONAL_REGULATION,
+    readTime: 6,
+    publishedAt: '2026-03-16',
+    author: PRIMARY_AUTHOR,
+    reviewedBy: CLINICAL_REVIEWER,
+    tags: ['Emotional Literacy', 'Psychology', 'Self-Awareness'],
+    citations: [
+      { id: '1', text: 'What is an emotion?', source: 'Annual Review of Psychology', year: '2019', link: 'https://doi.org/10.1146/annurev-psych-122216-011854' },
+      { id: '2', text: 'The nature of feelings: evolutionary and neurobiological origins', source: 'Nature Reviews Neuroscience', year: '2009', link: 'https://doi.org/10.1038/nrn2555' },
+      { id: '3', text: 'Affect, mood, and emotion', source: 'Handbook of Cognition and Emotion', year: '2021', link: 'https://doi.org/10.1002/9781119235071.ch4' },
+      { id: '4', text: 'Mood as input: people have to interpret the motivational implications of their moods', source: 'Journal of Personality and Social Psychology', year: '1996', link: 'https://doi.org/10.1037/0022-3514.71.1.83' },
+      { id: '5', text: 'The duration of emotional responses: a meta-analytic review', source: 'Motivation and Emotion', year: '2015', link: 'https://doi.org/10.1007/s11031-014-9434-1' },
+      { id: '6', text: 'Core affect and the psychological construction of emotion', source: 'Psychological Bulletin', year: '2007', link: 'https://doi.org/10.1037/0033-2909.133.3.459' },
+      { id: '7', text: 'Damasio on emotion, feeling, and consciousness', source: 'Cerebral Cortex', year: '2005', link: 'https://doi.org/10.1093/cercor/bhh032' },
+      { id: '8', text: 'Emotional health and wellbeing', source: 'World Health Organization', year: '2022', link: 'https://www.who.int/news-room/fact-sheets/detail/mental-health-strengthening-our-response' },
+    ],
+    content: (
+      <>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            "How are you feeling?" "What's your mood?" "What emotions are coming up?" In everyday conversation, feelings, emotions, and moods are treated as the same thing. In psychology, they describe different layers of your inner experience — and understanding the distinction gives you more precise tools for managing each one.
+          </p>
+        </div>
+
+        <h2 id="understanding-the-challenge" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Understanding the Challenge
+        </h2>
+
+        <div className="my-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-rose-50 dark:bg-rose-900/20 rounded-2xl p-6 border border-rose-100 dark:border-rose-800">
+            <h3 className="font-bold text-rose-800 dark:text-rose-200 mb-3">Emotions</h3>
+            <p className="text-rose-900/80 dark:text-rose-100/80 text-sm mb-2">
+              Brief, automatic responses to a stimulus. They involve changes in your body (heart rate, hormones), facial expressions, and behavioral impulses. They typically last seconds to minutes.
+            </p>
+            <p className="text-rose-700/60 dark:text-rose-300/60 text-xs italic">Example: A surge of fear when a car swerves toward you.</p>
+          </div>
+          <div className="bg-violet-50 dark:bg-violet-900/20 rounded-2xl p-6 border border-violet-100 dark:border-violet-800">
+            <h3 className="font-bold text-violet-800 dark:text-violet-200 mb-3">Feelings</h3>
+            <p className="text-violet-900/80 dark:text-violet-100/80 text-sm mb-2">
+              Your subjective, conscious experience of an emotion. The mental representation — the meaning you assign to the bodily changes. Feelings require awareness and interpretation.
+            </p>
+            <p className="text-violet-700/60 dark:text-violet-300/60 text-xs italic">Example: Recognizing "I feel scared" after the car swerves.</p>
+          </div>
+          <div className="bg-sky-50 dark:bg-sky-900/20 rounded-2xl p-6 border border-sky-100 dark:border-sky-800">
+            <h3 className="font-bold text-sky-800 dark:text-sky-200 mb-3">Moods</h3>
+            <p className="text-sky-900/80 dark:text-sky-100/80 text-sm mb-2">
+              Longer-lasting emotional states that color your overall experience. Moods are less intense than emotions but more persistent — they can last hours, days, or even weeks, often without a clear trigger.
+            </p>
+            <p className="text-sky-700/60 dark:text-sky-300/60 text-xs italic">Example: Feeling "down" all week without knowing exactly why.</p>
+          </div>
+        </div>
+
+        <p className="mb-6">
+          Neuroscientist Antonio Damasio draws a clear line: emotions are changes in the body; feelings are the conscious perception of those changes <Citation id="2" index={2} source="Nature Reviews Neuroscience" year="2009" tier={1} />. Moods, by contrast, are background states that shift the baseline — they make certain emotions more likely to arise <Citation id="3" index={3} source="Handbook of Cognition and Emotion" year="2021" tier={1} />.
+        </p>
+        <p className="mb-6">
+          A meta-analysis on the duration of emotional responses confirms this distinction: discrete emotions typically last between 0.5 seconds and several minutes, while moods persist for hours to days <Citation id="5" index={5} source="Motivation and Emotion" year="2015" tier={1} />.
+        </p>
+
+        <h2 id="evidence-based-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Evidence-Based Strategies
+        </h2>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">1. Ask: "Is this an emotion, a feeling, or a mood?"</h3>
+        <p className="mb-6">
+          When you notice something happening internally, try to classify it. If it came on suddenly in response to something specific and involves body sensations, it is likely an emotion. If it has been coloring your experience for hours without a clear cause, it is likely a mood. This classification points you toward different management strategies <Citation id="1" index={1} source="Annual Review of Psychology" year="2019" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">2. Manage emotions in the moment; manage moods with lifestyle</h3>
+        <p className="mb-6">
+          Emotions respond well to in-the-moment techniques: deep breathing, reappraisal, grounding. Moods, because they are longer-lasting, respond better to lifestyle factors — sleep quality, exercise, social connection, and daily structure <Citation id="4" index={4} source="Journal of Personality and Social Psychology" year="1996" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">3. Notice how moods prime your emotions</h3>
+        <p className="mb-6">
+          When you are in an irritable mood, you are more likely to experience anger in response to small provocations. When you are in an anxious mood, you are more likely to interpret neutral situations as threatening. Recognizing this priming effect helps you avoid overreacting <Citation id="6" index={6} source="Psychological Bulletin" year="2007" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">4. Use body awareness to access emotions before they become feelings</h3>
+        <p className="mb-6">
+          Damasio's somatic marker hypothesis suggests that your body registers emotional information before your conscious mind processes it <Citation id="7" index={7} source="Cerebral Cortex" year="2005" tier={1} />. Practicing body scanning — noticing tension, heart rate, breathing patterns — gives you early access to emotional data.
+        </p>
+
+        <div className="my-10 p-6 bg-amber-50 dark:bg-amber-900/20 rounded-xl border-l-4 border-amber-400 flex gap-4">
+          <div className="shrink-0 text-amber-500 mt-1">
+            <Lightbulb size={24} />
+          </div>
+          <div>
+            <h4 className="font-bold text-amber-900 dark:text-amber-100 mb-1">Key Takeaway</h4>
+            <p className="text-amber-800 dark:text-amber-200/80 text-sm leading-relaxed">
+              Emotions are fast and specific. Moods are slow and diffuse. Feelings are the bridge — your conscious interpretation. Managing each one requires different tools. Understanding the distinction is the first step.
+            </p>
+          </div>
+        </div>
+
+        <h2 id="how-to-get-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How to Get Started
+        </h2>
+        <ul className="list-disc list-inside space-y-3 mb-8 text-gray-700 dark:text-gray-300 ml-4">
+          <li><strong>Track your mood</strong> once in the morning and once in the evening for a week, using a 1–10 scale. Notice patterns.</li>
+          <li><strong>When a strong emotion hits</strong>, note how long it lasts. If it is gone within minutes, it was an emotion. If it lingers for hours, it has shifted into a mood.</li>
+          <li><strong>Practice naming the layer</strong>: "My body just had an emotional reaction" vs. "I've been in a low mood all day" vs. "I feel sad about what happened."</li>
+        </ul>
+
+        <h2 id="when-self-help-isnt-enough" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When Self-Help Isn't Enough
+        </h2>
+        <p className="mb-6">
+          If a low mood persists for more than two weeks and is accompanied by changes in sleep, appetite, energy, or concentration, this may indicate something beyond a normal mood shift. Persistent changes in mood are one of the key indicators clinicians use when assessing for depression or other mood-related conditions <Citation id="8" index={8} source="WHO" year="2022" tier={2} />.
+        </p>
+        <p className="mb-6">
+          Speaking with a mental health professional can help you determine whether what you are experiencing is a mood fluctuation or something that would benefit from clinical support.
+        </p>
+      </>
+    ),
+  },
+
+  // -------------------------------------------------------------------------
+  // 008. How Your Brain Decides What You Feel Before You Even Know It
+  // -------------------------------------------------------------------------
+  {
+    id: catId(8),
+    slug: 'brain-decides-what-you-feel',
+    title: 'How Your Brain Decides What You Feel Before You Even Know It',
+    description:
+      'Your brain constructs emotions unconsciously before you become aware of them. Learn how prediction, memory, and body signals shape your emotional experience — and how to use this knowledge.',
+    image: '/images/articles/cat01/cover-008.svg',
+    category: CATEGORY_EMOTIONAL_REGULATION,
+    readTime: 7,
+    publishedAt: '2026-03-16',
+    author: PRIMARY_AUTHOR,
+    reviewedBy: CLINICAL_REVIEWER,
+    tags: ['Neuroscience', 'Emotional Processing', 'Self-Awareness', 'Brain Science'],
+    citations: [
+      { id: '1', text: 'The theory of constructed emotion: an active inference account of interoception and categorization', source: 'Social Cognitive and Affective Neuroscience', year: '2017', link: 'https://doi.org/10.1093/scan/nsw154' },
+      { id: '2', text: 'Predictive processing and the representation of emotional states', source: 'Journal of Cognitive Neuroscience', year: '2019', link: 'https://doi.org/10.1162/jocn_a_01404' },
+      { id: '3', text: 'Interoception and emotion: a neuroanatomical perspective', source: 'Handbook of Emotions (4th ed.)', year: '2016' },
+      { id: '4', text: 'The emotional brain: the mysterious underpinnings of emotional life', source: 'Simon & Schuster', year: '1996' },
+      { id: '5', text: 'Experience-dependent neuroplasticity of emotion circuits', source: 'Trends in Cognitive Sciences', year: '2018', link: 'https://doi.org/10.1016/j.tics.2018.07.003' },
+      { id: '6', text: 'The role of affective predictions in emotion perception and emotion regulation', source: 'Psychological Review', year: '2020', link: 'https://doi.org/10.1037/rev0000192' },
+      { id: '7', text: 'Mindfulness and interoceptive accuracy', source: 'NeuroImage', year: '2017', link: 'https://doi.org/10.1016/j.neuroimage.2017.01.042' },
+      { id: '8', text: 'Brain basics', source: 'National Institute of Mental Health', year: '2023', link: 'https://www.nimh.nih.gov/health/educational-resources/brain-basics' },
+    ],
+    content: (
+      <>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            You walk into a room and feel uneasy before you can explain why. You meet someone and instantly distrust them — but cannot point to anything specific they did. Your brain has already made an emotional assessment before your conscious mind has caught up. This is not a glitch. It is how your brain is designed to work.
+          </p>
+        </div>
+
+        <h2 id="understanding-the-challenge" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Understanding the Challenge
+        </h2>
+        <p className="mb-6">
+          Your brain is a prediction machine. Rather than waiting for sensory data to arrive and then reacting, it constantly generates predictions about what is about to happen — including what you are about to feel. Neuroscientist Lisa Feldman Barrett calls this the <strong>theory of constructed emotion</strong>: your brain uses past experience and body signals to construct an emotional response before the event fully unfolds <Citation id="1" index={1} source="Social Cognitive and Affective Neuroscience" year="2017" tier={1} />.
+        </p>
+        <p className="mb-6">
+          A key input to these predictions is <strong>interoception</strong> — your brain's perception of signals from inside your body. Heart rate, gut sensations, breathing rate, muscle tension — these internal signals are continuously monitored and interpreted. When your brain detects a pattern that resembles a past emotional experience, it generates the corresponding emotion proactively <Citation id="3" index={3} source="Handbook of Emotions" year="2016" tier={5} />.
+        </p>
+        <p className="mb-6">
+          Joseph LeDoux's foundational work on the "emotional brain" showed that sensory information can reach the amygdala through a fast, rough pathway before the slower cortical pathway has finished processing the details <Citation id="4" index={4} source="Simon & Schuster" year="1996" tier={5} />.
+        </p>
+
+        <h2 id="evidence-based-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Evidence-Based Strategies
+        </h2>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">1. Improve your interoceptive awareness</h3>
+        <p className="mb-6">
+          If emotions are constructed partly from body signals, then becoming more attuned to those signals gives you earlier awareness of your emotional state. Studies show that mindfulness meditation improves interoceptive accuracy — the ability to sense your own heartbeat, breathing, and internal states <Citation id="7" index={7} source="NeuroImage" year="2017" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">2. Recognize that your brain is guessing, not reporting</h3>
+        <p className="mb-6">
+          Your emotional experience is a prediction, not a direct readout of reality. This means your emotions can be wrong — or at least outdated. When you feel instant distrust toward a stranger, your brain may be pattern-matching to someone from your past. Knowing this gives you permission to question the emotion rather than treat it as fact <Citation id="2" index={2} source="Journal of Cognitive Neuroscience" year="2019" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">3. Update your prediction patterns</h3>
+        <p className="mb-6">
+          Through a process called <strong>experience-dependent neuroplasticity</strong>, your brain updates its emotional predictions based on new experiences. If your brain predicts anxiety in social situations because past social encounters were painful, positive new social experiences gradually recalibrate those predictions <Citation id="5" index={5} source="Trends in Cognitive Sciences" year="2018" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">4. Use "prediction error" to your advantage</h3>
+        <p className="mb-6">
+          When reality does not match your brain's emotional prediction — when the thing you feared turns out fine — this creates a <strong>prediction error</strong> that forces your brain to update its model. Exposure therapy is built on this principle. You can apply a lighter version in daily life by gradually approaching situations your brain predicts as threatening <Citation id="6" index={6} source="Psychological Review" year="2020" tier={1} />.
+        </p>
+
+        <div className="my-10 p-6 bg-amber-50 dark:bg-amber-900/20 rounded-xl border-l-4 border-amber-400 flex gap-4">
+          <div className="shrink-0 text-amber-500 mt-1">
+            <Lightbulb size={24} />
+          </div>
+          <div>
+            <h4 className="font-bold text-amber-900 dark:text-amber-100 mb-1">Key Takeaway</h4>
+            <p className="text-amber-800 dark:text-amber-200/80 text-sm leading-relaxed">
+              Your emotions are not objective reports about the world. They are your brain's best guesses — constructed from past experience, body signals, and context. Understanding this gives you the power to question, update, and eventually reshape your emotional responses.
+            </p>
+          </div>
+        </div>
+
+        <h2 id="how-to-get-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How to Get Started
+        </h2>
+        <ul className="list-disc list-inside space-y-3 mb-8 text-gray-700 dark:text-gray-300 ml-4">
+          <li><strong>Try a body scan</strong>: spend 3 minutes noticing sensations in your body without trying to change them. This builds interoceptive awareness.</li>
+          <li><strong>When you have a strong gut reaction</strong>, ask yourself: "Is this about what is happening now, or is my brain predicting based on the past?"</li>
+          <li><strong>Create positive prediction errors</strong>: do one thing this week that your brain predicts will go badly. Notice what actually happens.</li>
+        </ul>
+
+        <h2 id="when-self-help-isnt-enough" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When Self-Help Isn't Enough
+        </h2>
+        <p className="mb-6">
+          If your brain's emotional predictions are consistently intense, distressing, or disconnected from reality — for example, if you feel terror in objectively safe situations — this may indicate that past experiences, including trauma, have shaped your prediction system in ways that require professional support to recalibrate <Citation id="8" index={8} source="NIMH" year="2023" tier={2} />.
+        </p>
+      </>
+    ),
+  },
+
+  // -------------------------------------------------------------------------
+  // 009. Mixed Emotions: Why You Can Feel Two Contradictory Things at Once
+  // -------------------------------------------------------------------------
+  {
+    id: catId(9),
+    slug: 'mixed-emotions-contradictory-feelings',
+    title: 'Mixed Emotions: Why You Can Feel Two Contradictory Things at Once',
+    description:
+      'Feeling happy and sad at the same time is not confusion — it is a sign of emotional complexity. Learn why mixed emotions are normal, healthy, and even beneficial.',
+    image: '/images/articles/cat01/cover-009.svg',
+    category: CATEGORY_EMOTIONAL_REGULATION,
+    readTime: 6,
+    publishedAt: '2026-03-16',
+    author: PRIMARY_AUTHOR,
+    reviewedBy: CLINICAL_REVIEWER,
+    tags: ['Mixed Emotions', 'Emotional Complexity', 'Psychology', 'Self-Awareness'],
+    citations: [
+      { id: '1', text: 'Can people feel happy and sad at the same time?', source: 'Journal of Personality and Social Psychology', year: '2001', link: 'https://doi.org/10.1037/0022-3514.81.4.684' },
+      { id: '2', text: 'Mixed emotional experience is associated with and precedes improvements in wellbeing', source: 'PLOS ONE', year: '2017', link: 'https://doi.org/10.1371/journal.pone.0187780' },
+      { id: '3', text: 'The benefits of feeling mixed emotions: a meta-analytic review', source: 'Psychological Bulletin', year: '2021', link: 'https://doi.org/10.1037/bul0000309' },
+      { id: '4', text: 'Emotional complexity and wellbeing in older adults', source: 'Psychology and Aging', year: '2013', link: 'https://doi.org/10.1037/a0030025' },
+      { id: '5', text: 'Dialectical emotions in cultural contexts', source: 'Cognition and Emotion', year: '2018', link: 'https://doi.org/10.1080/02699931.2017.1419934' },
+      { id: '6', text: 'Beyond valence: toward a model of emotion-specific influences on judgement and choice', source: 'Cognition and Emotion', year: '2000', link: 'https://doi.org/10.1080/026999300402763' },
+      { id: '7', text: 'Emotional complexity develops across the lifespan', source: 'Developmental Psychology', year: '2016', link: 'https://doi.org/10.1037/dev0000159' },
+      { id: '8', text: 'Emotions and emotional wellbeing', source: 'American Psychological Association', year: '2023', link: 'https://www.apa.org/topics/emotions' },
+    ],
+    content: (
+      <>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            You are proud of your child for leaving home for college — and deeply sad that they are leaving. You feel relief when a difficult relationship ends — and grief for what could have been. You laugh at a funeral, sharing a fond memory. Mixed emotions are not a sign that something is wrong with you. They are a sign of emotional depth.
+          </p>
+        </div>
+
+        <h2 id="understanding-the-challenge" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Understanding the Challenge
+        </h2>
+        <p className="mb-6">
+          For years, psychologists debated whether people could feel positive and negative emotions simultaneously. Research by Jeff Larsen and colleagues settled the question: yes, they can. In studies using moment-to-moment emotional tracking, participants regularly reported feeling happy and sad at the same time, particularly during meaningful life events <Citation id="1" index={1} source="Journal of Personality and Social Psychology" year="2001" tier={1} />.
+        </p>
+        <p className="mb-6">
+          Mixed emotions are not confusion. They are what researchers call <strong>emotional complexity</strong> — the capacity to hold multiple, even contradictory, emotional states simultaneously. And the research suggests this capacity is not just normal — it may be beneficial <Citation id="3" index={3} source="Psychological Bulletin" year="2021" tier={1} />.
+        </p>
+
+        <h2 id="evidence-based-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Evidence-Based Strategies
+        </h2>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">1. Stop forcing resolution</h3>
+        <p className="mb-6">
+          The instinct to resolve mixed emotions — to decide if you feel "good" or "bad" — actually increases distress. Research shows that accepting mixed emotions without trying to resolve them leads to improved wellbeing over time <Citation id="2" index={2} source="PLOS ONE" year="2017" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">2. Name both emotions, not just one</h3>
+        <p className="mb-6">
+          Instead of collapsing a complex experience into a single label, try naming multiple layers: "I feel excited about this new job and anxious about leaving what I know." Both are true. Both deserve acknowledgment <Citation id="6" index={6} source="Cognition and Emotion" year="2000" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">3. Recognize that complexity grows with age</h3>
+        <p className="mb-6">
+          Emotional complexity tends to increase over the lifespan. Research shows that older adults report more mixed emotional experiences than younger adults — and this complexity is associated with better emotional wellbeing and psychological adjustment <Citation id="4" index={4} source="Psychology and Aging" year="2013" tier={1} /> <Citation id="7" index={7} source="Developmental Psychology" year="2016" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">4. Consider cultural context</h3>
+        <p className="mb-6">
+          In many East Asian cultures, mixed emotions are viewed as more natural and desirable than in Western cultures, where emotional purity — feeling one thing at a time — is often the ideal. Research on dialectical emotions shows that comfort with emotional contradiction varies across cultural contexts <Citation id="5" index={5} source="Cognition and Emotion" year="2018" tier={1} />.
+        </p>
+
+        <div className="my-10 p-6 bg-amber-50 dark:bg-amber-900/20 rounded-xl border-l-4 border-amber-400 flex gap-4">
+          <div className="shrink-0 text-amber-500 mt-1">
+            <Lightbulb size={24} />
+          </div>
+          <div>
+            <h4 className="font-bold text-amber-900 dark:text-amber-100 mb-1">Key Takeaway</h4>
+            <p className="text-amber-800 dark:text-amber-200/80 text-sm leading-relaxed">
+              Feeling two things at once is not a sign of confusion. It is a sign that your emotional system is sophisticated enough to hold the complexity of real life. The most meaningful moments often produce the most mixed feelings.
+            </p>
+          </div>
+        </div>
+
+        <h2 id="how-to-get-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How to Get Started
+        </h2>
+        <ul className="list-disc list-inside space-y-3 mb-8 text-gray-700 dark:text-gray-300 ml-4">
+          <li><strong>The next time you feel conflicted</strong>, try writing down all the emotions present — not just the loudest one.</li>
+          <li><strong>Use "and" instead of "but"</strong>: "I love my partner <em>and</em> this situation is frustrating" instead of "I love my partner <em>but</em> this is frustrating." The word "and" lets both emotions coexist.</li>
+          <li><strong>Reflect on a meaningful memory</strong> — a graduation, a move, a relationship ending — and notice how multiple emotions were present simultaneously.</li>
+        </ul>
+
+        <h2 id="when-self-help-isnt-enough" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When Self-Help Isn't Enough
+        </h2>
+        <p className="mb-6">
+          Mixed emotions are normal. But if you feel chronically torn, unable to make decisions because of competing emotions, or emotionally paralyzed by ambivalence, this may indicate deeper unresolved conflicts that a therapist can help you work through <Citation id="8" index={8} source="APA" year="2023" tier={3} />.
+        </p>
+      </>
+    ),
+  },
+
+  // -------------------------------------------------------------------------
+  // 010. The Purpose of Emotions: What Evolutionary Psychology Tells Us
+  // -------------------------------------------------------------------------
+  {
+    id: catId(10),
+    slug: 'purpose-of-emotions-evolutionary-psychology',
+    title: 'The Purpose of Emotions: What Evolutionary Psychology Tells Us About Why We Feel',
+    description:
+      'Every core emotion exists because it solved a survival problem for our ancestors. Understanding the evolutionary function of your feelings can transform how you relate to them.',
+    image: '/images/articles/cat01/cover-010.svg',
+    category: CATEGORY_EMOTIONAL_REGULATION,
+    readTime: 7,
+    publishedAt: '2026-03-16',
+    author: PRIMARY_AUTHOR,
+    reviewedBy: CLINICAL_REVIEWER,
+    tags: ['Evolutionary Psychology', 'Emotional Literacy', 'Science', 'Wellbeing'],
+    citations: [
+      { id: '1', text: 'The evolution of emotion: insights from evolutionary psychology', source: 'Annual Review of Psychology', year: '2019', link: 'https://doi.org/10.1146/annurev-psych-010418-103348' },
+      { id: '2', text: 'The functional architecture of human emotions', source: 'Proceedings of the National Academy of Sciences', year: '2017', link: 'https://doi.org/10.1073/pnas.1616512114' },
+      { id: '3', text: 'The expression of the emotions in man and animals', source: 'John Murray (original 1872, reprinted Oxford University Press)', year: '1998' },
+      { id: '4', text: 'Positive emotions broaden the scope of attention and thought-action repertoires', source: 'Cognition and Emotion', year: '2005', link: 'https://doi.org/10.1080/02699930441000238' },
+      { id: '5', text: 'The social functions of emotion and emotion regulation', source: 'Handbook of Emotions (4th ed.)', year: '2016' },
+      { id: '6', text: 'Disgust and its role in disease avoidance', source: 'Philosophical Transactions of the Royal Society B', year: '2011', link: 'https://doi.org/10.1098/rstb.2011.0003' },
+      { id: '7', text: 'The moral emotions', source: 'Handbook of Affective Sciences', year: '2003' },
+      { id: '8', text: 'Understanding emotions and mental health', source: 'National Institute of Mental Health', year: '2024', link: 'https://www.nimh.nih.gov/health/topics/emotions' },
+    ],
+    content: (
+      <>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            Why do humans feel fear, anger, sadness, disgust, or jealousy? These emotions can be uncomfortable, sometimes overwhelming — so why did evolution keep them? The answer, according to evolutionary psychology, is that every core emotion exists because it solved a critical survival or social problem for our ancestors. Understanding this can change your relationship with your feelings.
+          </p>
+        </div>
+
+        <h2 id="understanding-the-challenge" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Understanding the Challenge
+        </h2>
+        <p className="mb-6">
+          Charles Darwin was the first to argue that emotions are adaptive — they evolved because they helped organisms survive and reproduce. His 1872 book <em>The Expression of the Emotions in Man and Animals</em> catalogued emotional expressions across species, arguing that they serve communicative functions <Citation id="3" index={3} source="Oxford University Press" year="1998" tier={5} />.
+        </p>
+        <p className="mb-6">
+          Modern evolutionary psychology has refined this view. Research now identifies at least 27 distinct emotional categories, each mapped to specific adaptive challenges — from physical danger to social cooperation to mating to disease avoidance <Citation id="2" index={2} source="PNAS" year="2017" tier={1} />.
+        </p>
+
+        <div className="my-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-red-50 dark:bg-red-900/20 rounded-2xl p-6 border border-red-100 dark:border-red-800">
+            <h3 className="font-bold text-red-800 dark:text-red-200 mb-3">Fear</h3>
+            <p className="text-red-900/80 dark:text-red-100/80 text-sm">
+              <strong>Adaptive function:</strong> Detects threats and prepares the body for rapid response (fight, flight, or freeze). Ancestors who felt fear in dangerous situations survived longer.
+            </p>
+          </div>
+          <div className="bg-orange-50 dark:bg-orange-900/20 rounded-2xl p-6 border border-orange-100 dark:border-orange-800">
+            <h3 className="font-bold text-orange-800 dark:text-orange-200 mb-3">Anger</h3>
+            <p className="text-orange-900/80 dark:text-orange-100/80 text-sm">
+              <strong>Adaptive function:</strong> Signals boundary violation and mobilizes energy for confrontation or self-defense. Motivates corrective action when resources or status are threatened.
+            </p>
+          </div>
+          <div className="bg-green-50 dark:bg-green-900/20 rounded-2xl p-6 border border-green-100 dark:border-green-800">
+            <h3 className="font-bold text-green-800 dark:text-green-200 mb-3">Disgust</h3>
+            <p className="text-green-900/80 dark:text-green-100/80 text-sm">
+              <strong>Adaptive function:</strong> Protects against contamination and disease. The disgust response developed to help humans avoid pathogens in spoiled food, waste, and infected individuals <Citation id="6" index={6} source="Phil. Trans. R. Soc. B" year="2011" tier={1} />.
+            </p>
+          </div>
+          <div className="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-6 border border-blue-100 dark:border-blue-800">
+            <h3 className="font-bold text-blue-800 dark:text-blue-200 mb-3">Sadness</h3>
+            <p className="text-blue-900/80 dark:text-blue-100/80 text-sm">
+              <strong>Adaptive function:</strong> Signals loss and triggers withdrawal, allowing for processing and recovery. Also communicates distress to others, eliciting social support — a crucial survival resource.
+            </p>
+          </div>
+        </div>
+
+        <h2 id="evidence-based-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Evidence-Based Strategies
+        </h2>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">1. Ask what problem this emotion evolved to solve</h3>
+        <p className="mb-6">
+          When a strong emotion arises, try framing it through an evolutionary lens: "What is this emotion designed to do?" Fear is designed to protect you from danger. Jealousy is designed to protect valued relationships. Guilt is designed to maintain social bonds by motivating repair after a transgression <Citation id="7" index={7} source="Handbook of Affective Sciences" year="2003" tier={5} /> <Citation id="1" index={1} source="Annual Review of Psychology" year="2019" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">2. Recognize evolutionary mismatch</h3>
+        <p className="mb-6">
+          Many emotional responses that were adaptive on the savanna are less useful in a modern office. Social anxiety — the fear of social evaluation — made sense when exile from the group meant death. Today, a critical email from your boss is not a survival threat, but your nervous system may respond as if it is. Naming this mismatch helps you recalibrate <Citation id="5" index={5} source="Handbook of Emotions" year="2016" tier={5} />.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">3. Appreciate the social function of emotions</h3>
+        <p className="mb-6">
+          Emotions are not just internal states — they are social signals. Your facial expressions, tone of voice, and posture communicate your emotional state to others, coordinating group behavior. A smile invites approach. A scowl signals "back off." Tears elicit caregiving. Understanding emotions as social tools makes them easier to work with <Citation id="5" index={5} source="Handbook of Emotions" year="2016" tier={5} />.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">4. Leverage positive emotions for growth</h3>
+        <p className="mb-6">
+          Barbara Fredrickson's broaden-and-build theory proposes that positive emotions — joy, interest, contentment, love — evolved to expand your awareness and build lasting psychological resources like resilience, social bonds, and creativity <Citation id="4" index={4} source="Cognition and Emotion" year="2005" tier={1} />.
+        </p>
+
+        <div className="my-10 p-6 bg-amber-50 dark:bg-amber-900/20 rounded-xl border-l-4 border-amber-400 flex gap-4">
+          <div className="shrink-0 text-amber-500 mt-1">
+            <Lightbulb size={24} />
+          </div>
+          <div>
+            <h4 className="font-bold text-amber-900 dark:text-amber-100 mb-1">Key Takeaway</h4>
+            <p className="text-amber-800 dark:text-amber-200/80 text-sm leading-relaxed">
+              Your emotions are not random. They are the product of millions of years of natural selection — each one fine-tuned to help you navigate specific challenges. When you understand their purpose, you can work with them instead of against them.
+            </p>
+          </div>
+        </div>
+
+        <h2 id="how-to-get-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How to Get Started
+        </h2>
+        <ul className="list-disc list-inside space-y-3 mb-8 text-gray-700 dark:text-gray-300 ml-4">
+          <li><strong>Pick one emotion</strong> you experienced today and ask: "What survival problem was this emotion designed to solve?"</li>
+          <li><strong>Identify one instance</strong> of evolutionary mismatch in your life — where your brain is treating a modern situation as an ancient threat.</li>
+          <li><strong>Seek out one positive emotion</strong> intentionally today — gratitude, curiosity, amusement, or awe — and notice how it changes your perspective.</li>
+        </ul>
+
+        <h2 id="when-self-help-isnt-enough" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When Self-Help Isn't Enough
+        </h2>
+        <p className="mb-6">
+          Understanding the evolutionary purpose of emotions is illuminating, but it does not automatically reduce their intensity. If emotions like fear, anger, or sadness are disproportionate, persistent, or significantly interfere with your daily functioning, professional support can help you recalibrate these responses <Citation id="8" index={8} source="NIMH" year="2024" tier={2} />.
+        </p>
+        <p className="mb-6">
+          Cognitive behavioral therapy, in particular, is effective at helping people distinguish between emotional signals that are accurate (there is a real problem to address) and emotional signals that are outdated (your brain is responding to a pattern that no longer applies).
+        </p>
+      </>
+    ),
+  },
+];

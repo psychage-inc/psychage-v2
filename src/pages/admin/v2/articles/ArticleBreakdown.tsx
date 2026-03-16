@@ -13,7 +13,6 @@ import { toast } from 'sonner';
 import PageHeader from '@/components/admin/PageHeader';
 import ConfirmDialog from '@/components/admin/ConfirmDialog';
 import { getArticleById, createBreakdownArticles } from '@/services/articleAdminService';
-import { fetchArticleFromSanity } from '@/services/sanitySyncService';
 import { adminPath } from '@/hooks/useAdminNavigate';
 
 interface BreakdownSection {
@@ -42,12 +41,6 @@ const AdminArticleBreakdown: React.FC = () => {
     queryKey: ['admin', 'article', id],
     queryFn: () => getArticleById(id!),
     enabled: !!id,
-  });
-
-  const { data: sanityContent } = useQuery({
-    queryKey: ['admin', 'sanity-article', article?.sanity_id],
-    queryFn: () => (article?.sanity_id ? fetchArticleFromSanity(article.sanity_id) : null),
-    enabled: !!article?.sanity_id,
   });
 
   const breakdownMutation = useMutation({
@@ -127,10 +120,10 @@ const AdminArticleBreakdown: React.FC = () => {
               <span>{article.word_count.toLocaleString()} words</span>
               <span>{Math.ceil(article.word_count / 200)} min read</span>
             </div>
-            {sanityContent?.summary ? (
-              <p className="text-sm text-gray-600 dark:text-slate-400">{sanityContent.summary}</p>
+            {article.seo_description ? (
+              <p className="text-sm text-gray-600 dark:text-slate-400">{article.seo_description}</p>
             ) : (
-              <p className="text-sm text-gray-400 italic">No summary available from Sanity.</p>
+              <p className="text-sm text-gray-400 italic">No description available.</p>
             )}
             <div className="mt-4 p-3 bg-blue-50 dark:bg-blue-900/10 border border-blue-200 dark:border-blue-800 rounded-lg">
               <p className="text-xs text-blue-700 dark:text-blue-400">

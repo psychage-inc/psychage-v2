@@ -1,6 +1,22 @@
 import path from 'path';
-import { defineConfig } from 'vite';
+import { defineConfig, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
+
+/** Serve admin.html for /admin/* routes in dev (mimics Vercel hostname rewrite) */
+function adminFallbackPlugin(): Plugin {
+  return {
+    name: 'admin-fallback',
+    configureServer(server) {
+      server.middlewares.use((req, _res, next) => {
+        const pathname = (req.url || '').split('?')[0];
+        if (pathname.startsWith('/admin') && !/\.\w+$/.test(pathname)) {
+          req.url = '/admin.html';
+        }
+        next();
+      });
+    },
+  };
+}
 
 export default defineConfig(() => {
   return {
@@ -17,7 +33,7 @@ export default defineConfig(() => {
         ignored: ['**/clarity-score/**'],
       },
     },
-    plugins: [react()],
+    plugins: [adminFallbackPlugin(), react()],
     resolve: {
       alias: {
         '@': path.resolve(__dirname, './src'),

@@ -17,6 +17,8 @@ const now = new Date();
 
 /** Default PEAF + production system fields for mock data */
 const PEAF_DEFAULTS = {
+  content: '',
+  content_format: 'markdown' as const,
   article_type: null as ArticleRecord['article_type'],
   linked_condition_ids: [] as string[],
   quality_score: null as number | null,

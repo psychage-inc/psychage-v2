@@ -74,13 +74,13 @@ const CitationForm: React.FC<CitationFormProps> = ({ initial, onSave, onCancel }
     <div className="border border-teal-200 dark:border-teal-800 bg-teal-50/50 dark:bg-teal-900/10 rounded-lg p-4 space-y-3">
       {/* Source Type */}
       <div>
-        <label className="block text-xs font-medium text-gray-700 dark:text-slate-300 mb-1">
+        <label className="block text-xs font-medium text-text-secondary mb-1">
           Source Type
         </label>
         <select
           value={form.sourceType}
           onChange={(e) => setForm({ ...form, sourceType: e.target.value as ExpandedSourceType })}
-          className="w-full text-sm border border-gray-300 dark:border-slate-600 rounded-md px-3 py-1.5 bg-white dark:bg-slate-800 text-gray-900 dark:text-white"
+          className="w-full text-sm border border-border-hover rounded-md px-3 py-1.5 bg-surface text-text-primary"
         >
           {EXPANDED_SOURCE_TYPES.map((st) => (
             <option key={st.value} value={st.value}>
@@ -93,7 +93,7 @@ const CitationForm: React.FC<CitationFormProps> = ({ initial, onSave, onCancel }
             className={`w-2 h-2 rounded-full bg-${tierInfo.color}-500`}
             style={{ backgroundColor: `var(--color-${tierInfo.color}-500, #6b7280)` }}
           />
-          <span className="text-[10px] text-gray-500 dark:text-slate-400">
+          <span className="text-[10px] text-text-secondary">
             Tier {tier} — {tierInfo.label}
           </span>
         </div>
@@ -102,7 +102,7 @@ const CitationForm: React.FC<CitationFormProps> = ({ initial, onSave, onCancel }
       {/* Title + Authors */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div>
-          <label className="block text-xs font-medium text-gray-700 dark:text-slate-300 mb-1">
+          <label className="block text-xs font-medium text-text-secondary mb-1">
             Title *
           </label>
           <input
@@ -110,11 +110,11 @@ const CitationForm: React.FC<CitationFormProps> = ({ initial, onSave, onCancel }
             value={form.title}
             onChange={(e) => setForm({ ...form, title: e.target.value })}
             placeholder="Study or publication title"
-            className="w-full text-sm border border-gray-300 dark:border-slate-600 rounded-md px-3 py-1.5 bg-white dark:bg-slate-800 text-gray-900 dark:text-white placeholder:text-gray-400"
+            className="w-full text-sm border border-border-hover rounded-md px-3 py-1.5 bg-surface text-text-primary placeholder:text-text-tertiary"
           />
         </div>
         <div>
-          <label className="block text-xs font-medium text-gray-700 dark:text-slate-300 mb-1">
+          <label className="block text-xs font-medium text-text-secondary mb-1">
             Authors (comma-separated)
           </label>
           <input
@@ -122,7 +122,7 @@ const CitationForm: React.FC<CitationFormProps> = ({ initial, onSave, onCancel }
             value={form.authors}
             onChange={(e) => setForm({ ...form, authors: e.target.value })}
             placeholder="Smith, J., Doe, A."
-            className="w-full text-sm border border-gray-300 dark:border-slate-600 rounded-md px-3 py-1.5 bg-white dark:bg-slate-800 text-gray-900 dark:text-white placeholder:text-gray-400"
+            className="w-full text-sm border border-border-hover rounded-md px-3 py-1.5 bg-surface text-text-primary placeholder:text-text-tertiary"
           />
         </div>
       </div>
@@ -130,7 +130,7 @@ const CitationForm: React.FC<CitationFormProps> = ({ initial, onSave, onCancel }
       {/* Year + Journal/Publisher */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
         <div>
-          <label className="block text-xs font-medium text-gray-700 dark:text-slate-300 mb-1">
+          <label className="block text-xs font-medium text-text-secondary mb-1">
             Year
           </label>
           <input
@@ -139,8 +139,8 @@ const CitationForm: React.FC<CitationFormProps> = ({ initial, onSave, onCancel }
             onChange={(e) => setForm({ ...form, year: e.target.value.replace(/\D/g, '').slice(0, 4) })}
             placeholder="2024"
             maxLength={4}
-            className={`w-full text-sm border rounded-md px-3 py-1.5 bg-white dark:bg-slate-800 text-gray-900 dark:text-white placeholder:text-gray-400 ${
-              isOld ? 'border-amber-400 dark:border-amber-600' : 'border-gray-300 dark:border-slate-600'
+            className={`w-full text-sm border rounded-md px-3 py-1.5 bg-surface text-text-primary placeholder:text-text-tertiary ${
+              isOld ? 'border-amber-400 dark:border-amber-600' : 'border-border-hover'
             }`}
           />
           {isOld && (
@@ -151,7 +151,7 @@ const CitationForm: React.FC<CitationFormProps> = ({ initial, onSave, onCancel }
           )}
         </div>
         <div>
-          <label className="block text-xs font-medium text-gray-700 dark:text-slate-300 mb-1">
+          <label className="block text-xs font-medium text-text-secondary mb-1">
             Journal Name
           </label>
           <input
@@ -159,11 +159,11 @@ const CitationForm: React.FC<CitationFormProps> = ({ initial, onSave, onCancel }
             value={form.journalName}
             onChange={(e) => setForm({ ...form, journalName: e.target.value })}
             placeholder="JAMA Psychiatry"
-            className="w-full text-sm border border-gray-300 dark:border-slate-600 rounded-md px-3 py-1.5 bg-white dark:bg-slate-800 text-gray-900 dark:text-white placeholder:text-gray-400"
+            className="w-full text-sm border border-border-hover rounded-md px-3 py-1.5 bg-surface text-text-primary placeholder:text-text-tertiary"
           />
         </div>
         <div>
-          <label className="block text-xs font-medium text-gray-700 dark:text-slate-300 mb-1">
+          <label className="block text-xs font-medium text-text-secondary mb-1">
             Publisher
           </label>
           <input
@@ -171,7 +171,7 @@ const CitationForm: React.FC<CitationFormProps> = ({ initial, onSave, onCancel }
             value={form.publisher}
             onChange={(e) => setForm({ ...form, publisher: e.target.value })}
             placeholder="Publisher name"
-            className="w-full text-sm border border-gray-300 dark:border-slate-600 rounded-md px-3 py-1.5 bg-white dark:bg-slate-800 text-gray-900 dark:text-white placeholder:text-gray-400"
+            className="w-full text-sm border border-border-hover rounded-md px-3 py-1.5 bg-surface text-text-primary placeholder:text-text-tertiary"
           />
         </div>
       </div>
@@ -179,7 +179,7 @@ const CitationForm: React.FC<CitationFormProps> = ({ initial, onSave, onCancel }
       {/* URL + DOI */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div>
-          <label className="block text-xs font-medium text-gray-700 dark:text-slate-300 mb-1">
+          <label className="block text-xs font-medium text-text-secondary mb-1">
             URL
           </label>
           <input
@@ -187,8 +187,8 @@ const CitationForm: React.FC<CitationFormProps> = ({ initial, onSave, onCancel }
             value={form.url}
             onChange={(e) => setForm({ ...form, url: e.target.value })}
             placeholder="https://..."
-            className={`w-full text-sm border rounded-md px-3 py-1.5 bg-white dark:bg-slate-800 text-gray-900 dark:text-white placeholder:text-gray-400 ${
-              isBlockedUrl ? 'border-red-400 dark:border-red-600' : 'border-gray-300 dark:border-slate-600'
+            className={`w-full text-sm border rounded-md px-3 py-1.5 bg-surface text-text-primary placeholder:text-text-tertiary ${
+              isBlockedUrl ? 'border-red-400 dark:border-red-600' : 'border-border-hover'
             }`}
           />
           {isBlockedUrl && (
@@ -199,7 +199,7 @@ const CitationForm: React.FC<CitationFormProps> = ({ initial, onSave, onCancel }
           )}
         </div>
         <div>
-          <label className="block text-xs font-medium text-gray-700 dark:text-slate-300 mb-1">
+          <label className="block text-xs font-medium text-text-secondary mb-1">
             DOI
           </label>
           <input
@@ -207,7 +207,7 @@ const CitationForm: React.FC<CitationFormProps> = ({ initial, onSave, onCancel }
             value={form.doi}
             onChange={(e) => setForm({ ...form, doi: e.target.value })}
             placeholder="10.1001/jamapsychiatry.2024.xxxxx"
-            className="w-full text-sm border border-gray-300 dark:border-slate-600 rounded-md px-3 py-1.5 bg-white dark:bg-slate-800 text-gray-900 dark:text-white placeholder:text-gray-400"
+            className="w-full text-sm border border-border-hover rounded-md px-3 py-1.5 bg-surface text-text-primary placeholder:text-text-tertiary"
           />
         </div>
       </div>
@@ -217,7 +217,7 @@ const CitationForm: React.FC<CitationFormProps> = ({ initial, onSave, onCancel }
         <button
           type="button"
           onClick={onCancel}
-          className="px-3 py-1.5 text-sm text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+          className="px-3 py-1.5 text-sm text-text-secondary hover:text-text-primary transition-colors"
         >
           Cancel
         </button>
@@ -225,7 +225,7 @@ const CitationForm: React.FC<CitationFormProps> = ({ initial, onSave, onCancel }
           type="button"
           onClick={() => canSave && onSave(form)}
           disabled={!canSave}
-          className="px-4 py-1.5 text-sm font-medium bg-teal-600 hover:bg-teal-700 disabled:bg-gray-300 dark:disabled:bg-slate-700 text-white rounded-md transition-colors"
+          className="px-4 py-1.5 text-sm font-medium bg-primary hover:bg-primary-hover disabled:bg-gray-300 dark:disabled:bg-slate-700 text-white rounded-md transition-colors"
         >
           {initial ? 'Update' : 'Add Citation'}
         </button>
@@ -258,10 +258,10 @@ const CitationRow: React.FC<CitationRowProps> = ({ citation, index, onEdit, onDe
   const isOld = citation.year != null && currentYear - citation.year > 10;
 
   return (
-    <div className="flex items-start gap-3 p-3 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg group hover:border-gray-300 dark:hover:border-slate-600 transition-colors">
+    <div className="flex items-start gap-3 p-3 bg-surface border border-border rounded-lg group hover:border-border-hover transition-colors">
       <div className="flex items-center gap-2 flex-shrink-0 mt-0.5">
-        <GripVertical size={14} className="text-gray-300 dark:text-slate-600" />
-        <span className="text-xs text-gray-400 dark:text-slate-500 w-5 text-right">{index + 1}.</span>
+        <GripVertical size={14} className="text-text-tertiary" />
+        <span className="text-xs text-text-tertiary w-5 text-right">{index + 1}.</span>
       </div>
 
       <div className="flex-1 min-w-0">
@@ -276,14 +276,14 @@ const CitationRow: React.FC<CitationRowProps> = ({ citation, index, onEdit, onDe
             </span>
           )}
         </div>
-        <p className="text-sm text-gray-900 dark:text-white mt-1 line-clamp-1">{citation.title}</p>
-        <p className="text-xs text-gray-500 dark:text-slate-400 mt-0.5">
+        <p className="text-sm text-text-primary mt-1 line-clamp-1">{citation.title}</p>
+        <p className="text-xs text-text-secondary mt-0.5">
           {citation.authors.length > 0 ? citation.authors.join(', ') : 'No authors'}
           {citation.year ? ` (${citation.year})` : ''}
           {citation.journalName ? ` — ${citation.journalName}` : ''}
         </p>
         {citation.doi && (
-          <p className="text-[10px] text-gray-400 dark:text-slate-500 mt-0.5">
+          <p className="text-[10px] text-text-tertiary mt-0.5">
             DOI: {citation.doi}
           </p>
         )}
@@ -295,20 +295,20 @@ const CitationRow: React.FC<CitationRowProps> = ({ citation, index, onEdit, onDe
             href={citation.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-1.5 text-gray-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
+            className="p-1.5 text-text-tertiary hover:text-primary transition-colors"
           >
             <ExternalLink size={14} />
           </a>
         )}
         <button
           onClick={onEdit}
-          className="p-1.5 text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-xs"
+          className="p-1.5 text-text-tertiary hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-xs"
         >
           Edit
         </button>
         <button
           onClick={onDelete}
-          className="p-1.5 text-gray-400 hover:text-red-600 dark:hover:text-red-400 transition-colors"
+          className="p-1.5 text-text-tertiary hover:text-red-600 dark:hover:text-red-400 transition-colors"
         >
           <Trash2 size={14} />
         </button>
@@ -396,10 +396,10 @@ const CitationManager: React.FC<CitationManagerProps> = ({ citations, onChange, 
           className="flex items-center gap-2 text-left"
         >
           {expanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-2">
+          <h3 className="text-lg font-semibold text-text-primary flex items-center gap-2">
             <BookOpen size={18} />
             Citations
-            <span className="text-sm font-normal text-gray-500 dark:text-slate-400">
+            <span className="text-sm font-normal text-text-secondary">
               ({citations.length})
             </span>
           </h3>
@@ -409,7 +409,7 @@ const CitationManager: React.FC<CitationManagerProps> = ({ citations, onChange, 
             setShowForm(true);
             setExpanded(true);
           }}
-          className="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium bg-teal-600 hover:bg-teal-700 text-white rounded-md transition-colors"
+          className="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium bg-primary hover:bg-primary-hover text-white rounded-md transition-colors"
         >
           <Plus size={14} />
           Add Citation
@@ -438,10 +438,10 @@ const CitationManager: React.FC<CitationManagerProps> = ({ citations, onChange, 
 
           {/* Citation list */}
           {citations.length === 0 && !showForm ? (
-            <div className="text-center py-8 border border-dashed border-gray-300 dark:border-slate-600 rounded-lg">
-              <BookOpen size={24} className="mx-auto text-gray-400 dark:text-slate-500 mb-2" />
-              <p className="text-sm text-gray-500 dark:text-slate-400">No citations yet</p>
-              <p className="text-xs text-gray-400 dark:text-slate-500 mt-1">
+            <div className="text-center py-8 border border-dashed border-border-hover rounded-lg">
+              <BookOpen size={24} className="mx-auto text-text-tertiary mb-2" />
+              <p className="text-sm text-text-secondary">No citations yet</p>
+              <p className="text-xs text-text-tertiary mt-1">
                 Add structured citations with source tier classification
               </p>
             </div>

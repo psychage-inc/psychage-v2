@@ -19,10 +19,10 @@ const AdminConversationReview: React.FC = () => {
         </div>
       </div>
 
-      <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-12 text-center">
-        <ShieldAlert size={48} className="mx-auto text-gray-300 dark:text-slate-600 mb-4" />
-        <p className="text-gray-500 dark:text-slate-400 font-medium">No flagged conversations</p>
-        <p className="text-sm text-gray-400 dark:text-slate-500 mt-1">
+      <div className="bg-surface border border-border rounded-2xl p-12 text-center">
+        <ShieldAlert size={48} className="mx-auto text-text-tertiary mb-4" />
+        <p className="text-text-secondary font-medium">No flagged conversations</p>
+        <p className="text-sm text-text-tertiary mt-1">
           Flagged conversations will appear here when the AI chat safety system detects crisis-level messages.
         </p>
       </div>

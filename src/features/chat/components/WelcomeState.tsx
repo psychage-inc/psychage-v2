@@ -86,10 +86,22 @@ export default function WelcomeState({ onSuggestionClick }: WelcomeStateProps) {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.2 }}
-          className="text-base text-slate-500 dark:text-slate-400 max-w-md mx-auto mb-8"
+          className="text-base text-slate-500 dark:text-slate-400 max-w-md mx-auto mb-4"
         >
           Ask me anything about mental health. I'm here to help you learn and understand — not to diagnose.
         </motion.p>
+
+        {/* Disclaimer */}
+        <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.25 }}
+          className="max-w-md mx-auto mb-8 px-4 py-3 rounded-xl bg-amber-50 dark:bg-amber-900/10 border border-amber-200/60 dark:border-amber-800/30"
+        >
+          <p className="text-xs text-amber-800 dark:text-amber-300 leading-relaxed">
+            <strong>Important:</strong> Psyche AI is an educational tool, not a medical professional. It does not diagnose conditions or replace professional advice. AI can make mistakes. For clinical guidance, please consult a licensed mental health provider.
+          </p>
+        </motion.div>
 
         {/* Suggestion cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">

@@ -86,7 +86,7 @@ const AdminProviderList: React.FC = () => {
       accessorKey: 'name',
       header: 'Name',
       cell: ({ row }) => (
-        <Link to={adminPath(`/providers/${row.original.id}/edit`)} className="font-medium text-gray-900 dark:text-white hover:text-teal-600">
+        <Link to={adminPath(`/providers/${row.original.id}/edit`)} className="font-medium text-text-primary hover:text-primary">
           {row.original.name}
         </Link>
       ),
@@ -103,7 +103,7 @@ const AdminProviderList: React.FC = () => {
       cell: ({ row }) => {
         const specs = row.original.specialties || [];
         return (
-          <span className="text-sm text-gray-500 truncate block max-w-[200px]">
+          <span className="text-sm text-text-secondary truncate block max-w-[200px]">
             {specs.length > 0 ? specs.slice(0, 3).join(', ') : '\u2014'}
             {specs.length > 3 && ` +${specs.length - 3}`}
           </span>
@@ -114,7 +114,7 @@ const AdminProviderList: React.FC = () => {
       id: 'location',
       header: 'Location',
       cell: ({ row }) => (
-        <span className="text-sm text-gray-500">
+        <span className="text-sm text-text-secondary">
           {[row.original.city, row.original.state].filter(Boolean).join(', ') || '\u2014'}
         </span>
       ),
@@ -134,10 +134,10 @@ const AdminProviderList: React.FC = () => {
       enableSorting: false,
       cell: ({ row }) => (
         <div className="flex items-center gap-1">
-          <button onClick={() => navigate(adminPath(`/providers/${row.original.id}/edit`))} className="p-1.5 text-gray-400 hover:text-teal-600" title="Edit">
+          <button onClick={() => navigate(adminPath(`/providers/${row.original.id}/edit`))} className="p-1.5 text-text-tertiary hover:text-primary" title="Edit">
             <Pencil size={15} />
           </button>
-          <button onClick={() => setSuspendTarget(row.original)} className="p-1.5 text-gray-400 hover:text-orange-500" title={row.original.is_suspended ? 'Unsuspend' : 'Suspend'}>
+          <button onClick={() => setSuspendTarget(row.original)} className="p-1.5 text-text-tertiary hover:text-orange-500" title={row.original.is_suspended ? 'Unsuspend' : 'Suspend'}>
             <UserX size={15} />
           </button>
         </div>
@@ -159,7 +159,7 @@ const AdminProviderList: React.FC = () => {
         actions={
           <button
             onClick={() => navigate(adminPath('/providers/import'))}
-            className="flex items-center gap-2 px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium rounded-lg transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary-hover text-white text-sm font-medium rounded-lg transition-colors"
           >
             <Shield size={16} />
             Bulk Import
@@ -168,7 +168,7 @@ const AdminProviderList: React.FC = () => {
       />
 
       {/* Tabs */}
-      <div className="flex gap-1 mb-4 border-b border-gray-200 dark:border-slate-700">
+      <div className="flex gap-1 mb-4 border-b border-border">
         {tabs.map((t) => (
           <button
             key={t.key}
@@ -182,8 +182,8 @@ const AdminProviderList: React.FC = () => {
             className={cn(
               'px-4 py-2.5 text-sm font-medium border-b-2 transition-colors -mb-px',
               tab === t.key
-                ? 'border-teal-600 text-teal-600'
-                : 'border-transparent text-gray-500 hover:text-gray-700'
+                ? 'border-primary text-primary'
+                : 'border-transparent text-text-secondary hover:text-text-secondary'
             )}
           >
             {t.label}

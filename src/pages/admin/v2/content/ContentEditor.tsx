@@ -220,7 +220,7 @@ const AdminContentEditor: React.FC = () => {
   if (isLoading && !isNew) {
     return (
       <div className="flex items-center justify-center py-24">
-        <div className="w-8 h-8 rounded-full border-2 border-gray-200 border-t-teal-500 animate-spin" />
+        <div className="w-8 h-8 rounded-full border-2 border-border border-t-primary animate-spin" />
       </div>
     );
   }
@@ -232,7 +232,7 @@ const AdminContentEditor: React.FC = () => {
         actions={
           <button
             onClick={() => navigate(adminPath('/content'))}
-            className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+            className="flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:text-text-primary transition-colors"
           >
             <ArrowLeft size={16} />
             Back
@@ -247,12 +247,12 @@ const AdminContentEditor: React.FC = () => {
           <input
             {...register('title')}
             placeholder="Article title"
-            className="w-full text-2xl font-bold border-0 border-b border-gray-200 dark:border-slate-700 bg-transparent text-gray-900 dark:text-white pb-3 outline-none focus:border-teal-500 placeholder:text-gray-300"
+            className="w-full text-2xl font-bold border-0 border-b border-border bg-transparent text-text-primary pb-3 outline-none focus:border-primary placeholder:text-text-tertiary"
           />
           {errors.title && <p className="text-sm text-red-500">{errors.title.message}</p>}
 
           {/* Slug */}
-          <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-slate-400">
+          <div className="flex items-center gap-2 text-sm text-text-secondary">
             <span>/learn/</span>
             <input
               {...register('slug')}
@@ -260,7 +260,7 @@ const AdminContentEditor: React.FC = () => {
                 setSlugManuallyEdited(true);
                 setValue('slug', e.target.value);
               }}
-              className="text-sm bg-transparent border-b border-dashed border-gray-300 dark:border-slate-600 outline-none focus:border-teal-500 text-gray-700 dark:text-slate-300"
+              className="text-sm bg-transparent border-b border-dashed border-border-hover outline-none focus:border-primary text-text-secondary"
             />
           </div>
 
@@ -278,13 +278,13 @@ const AdminContentEditor: React.FC = () => {
 
           {/* Summary */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1">Summary</label>
+            <label className="block text-sm font-medium text-text-secondary mb-1">Summary</label>
             <textarea
               {...register('summary')}
               placeholder="2-3 sentence summary (used for SEO and AI retrieval)"
               maxLength={500}
               rows={3}
-              className="w-full px-3 py-2 text-sm border border-gray-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-900 text-gray-900 dark:text-white resize-none outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface text-text-primary resize-none outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
         </div>
@@ -293,10 +293,10 @@ const AdminContentEditor: React.FC = () => {
         <div className="space-y-4">
           {/* Type */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1">Type</label>
+            <label className="block text-sm font-medium text-text-secondary mb-1">Type</label>
             <select
               {...register('type')}
-              className="w-full px-3 py-2 text-sm border border-gray-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-900 text-gray-900 dark:text-white outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface text-text-primary outline-none focus:ring-2 focus:ring-primary"
             >
               {CONTENT_TYPES.map((t) => (
                 <option key={t.value} value={t.value}>{t.label}</option>
@@ -306,10 +306,10 @@ const AdminContentEditor: React.FC = () => {
 
           {/* Status */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1">Status</label>
+            <label className="block text-sm font-medium text-text-secondary mb-1">Status</label>
             <select
               {...register('status')}
-              className="w-full px-3 py-2 text-sm border border-gray-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-900 text-gray-900 dark:text-white outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface text-text-primary outline-none focus:ring-2 focus:ring-primary"
             >
               {CONTENT_STATUSES.map((s) => (
                 <option key={s.value} value={s.value}>{s.label}</option>
@@ -319,10 +319,10 @@ const AdminContentEditor: React.FC = () => {
 
           {/* Language */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1">Language</label>
+            <label className="block text-sm font-medium text-text-secondary mb-1">Language</label>
             <select
               {...register('language')}
-              className="w-full px-3 py-2 text-sm border border-gray-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-900 text-gray-900 dark:text-white outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface text-text-primary outline-none focus:ring-2 focus:ring-primary"
             >
               {SUPPORTED_LANGUAGES.map((l) => (
                 <option key={l.value} value={l.value}>{l.label}</option>
@@ -332,16 +332,16 @@ const AdminContentEditor: React.FC = () => {
 
           {/* Author */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1">Author</label>
+            <label className="block text-sm font-medium text-text-secondary mb-1">Author</label>
             <input
               {...register('author')}
-              className="w-full px-3 py-2 text-sm border border-gray-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-900 text-gray-900 dark:text-white outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface text-text-primary outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
 
           {/* Clinical Review Checklist */}
-          <div className="bg-gray-50 dark:bg-slate-800/50 border border-gray-200 dark:border-slate-700 rounded-xl p-4">
-            <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">Clinical Review Checklist</h4>
+          <div className="bg-surface-hover border border-border rounded-2xl p-4">
+            <h4 className="text-sm font-semibold text-text-primary mb-3">Clinical Review Checklist</h4>
             <div className="space-y-2">
               {[
                 'All claims have citations',
@@ -350,8 +350,8 @@ const AdminContentEditor: React.FC = () => {
                 'Crisis disclaimer included (if applicable)',
                 '"Common" used instead of "normal"',
               ].map((item) => (
-                <label key={item} className="flex items-start gap-2 text-sm text-gray-600 dark:text-slate-400 cursor-pointer">
-                  <input type="checkbox" className="mt-0.5 rounded border-gray-300 text-teal-600 focus:ring-teal-500" />
+                <label key={item} className="flex items-start gap-2 text-sm text-text-secondary cursor-pointer">
+                  <input type="checkbox" className="mt-0.5 rounded border-border-hover text-primary focus:ring-primary" />
                   {item}
                 </label>
               ))}
@@ -363,7 +363,7 @@ const AdminContentEditor: React.FC = () => {
             <button
               onClick={() => onSave()}
               disabled={saveMutation.isPending}
-              className="w-full flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium border border-gray-200 dark:border-slate-700 rounded-lg text-gray-700 dark:text-slate-300 hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors disabled:opacity-50"
+              className="w-full flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium border border-border rounded-lg text-text-secondary hover:bg-surface-hover transition-colors disabled:opacity-50"
             >
               <Save size={16} />
               {saveMutation.isPending ? 'Saving...' : 'Save Draft'}
@@ -371,7 +371,7 @@ const AdminContentEditor: React.FC = () => {
             <button
               onClick={() => onSave('in_review')}
               disabled={saveMutation.isPending}
-              className="w-full flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium bg-gray-100 dark:bg-slate-800 text-gray-700 dark:text-slate-300 rounded-lg hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors disabled:opacity-50"
+              className="w-full flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium bg-surface-hover text-text-secondary rounded-lg hover:bg-surface-active transition-colors disabled:opacity-50"
             >
               <Send size={16} />
               Submit for Review
@@ -379,7 +379,7 @@ const AdminContentEditor: React.FC = () => {
             <button
               onClick={() => onSave('published')}
               disabled={saveMutation.isPending}
-              className="w-full flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium bg-teal-600 hover:bg-teal-700 text-white rounded-lg transition-colors disabled:opacity-50"
+              className="w-full flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium bg-primary hover:bg-primary-hover text-white rounded-lg transition-colors disabled:opacity-50"
             >
               <GlobeIcon size={16} />
               Publish
@@ -388,14 +388,14 @@ const AdminContentEditor: React.FC = () => {
 
           {/* Version History */}
           {versions && versions.length > 0 && (
-            <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-4">
-              <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+            <div className="bg-surface border border-border rounded-2xl p-4">
+              <h4 className="text-sm font-semibold text-text-primary mb-3 flex items-center gap-2">
                 <Clock size={14} />
                 Version History
               </h4>
               <div className="space-y-2 max-h-[200px] overflow-y-auto">
                 {versions.map((v) => (
-                  <div key={v.id} className="text-sm text-gray-600 dark:text-slate-400 flex justify-between">
+                  <div key={v.id} className="text-sm text-text-secondary flex justify-between">
                     <span>v{v.version_number}</span>
                     <span>{formatDistanceToNow(new Date(v.created_at), { addSuffix: true })}</span>
                   </div>

@@ -8,7 +8,7 @@ import { generateId, nowISO } from '../dates';
 const COPING_TOOLS = [
   { value: 'breathwork', label: 'Breathwork', emoji: '🌬️' },
   { value: 'grounding', label: 'Grounding', emoji: '🌿' },
-  { value: 'thought-reframer', label: 'Thought Reframer', emoji: '💡' },
+  { value: 'cognitive-restructuring', label: 'Cognitive Restructuring', emoji: '💡' },
   { value: 'journaling', label: 'Journaling', emoji: '📝' },
   { value: 'exercise', label: 'Exercise', emoji: '🏃' },
   { value: 'social-support', label: 'Social Support', emoji: '💬' },

@@ -24,7 +24,7 @@ const FEATURES = [
   {
     icon: Wrench,
     title: 'Tools',
-    description: 'Mood Journal, Sleep Architect, Clarity Score, Symptom Navigator, Thought Reframer, and Clarity Journal.',
+    description: 'Mood Journal, Sleep Architect, Clarity Score, Symptom Navigator, Relationship Health Check, and Clarity Journal.',
     color: 'from-teal-500 to-emerald-600',
     spotlight: 'rgba(20, 184, 166, 0.1)',
   },

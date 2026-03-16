@@ -30,7 +30,7 @@ const VARIANT_CONFIG: Record<
   },
   note: {
     icon: StickyNote,
-    bg: 'bg-gray-50 dark:bg-slate-800/50',
+    bg: 'bg-surface-hover',
     border: 'border-l-gray-400 dark:border-l-slate-500',
     iconColor: 'text-gray-500 dark:text-slate-400',
     label: 'Note',
@@ -52,7 +52,7 @@ const CalloutBlockView: React.FC<NodeViewProps> = ({ node, updateAttributes }) =
           <select
             value={variant}
             onChange={(e) => updateAttributes({ variant: e.target.value })}
-            className="text-[10px] bg-transparent border border-gray-300 dark:border-slate-600 rounded px-1 py-0.5 text-gray-500 dark:text-slate-400 cursor-pointer"
+            className="text-[10px] bg-transparent border border-border-hover rounded px-1 py-0.5 text-text-secondary cursor-pointer"
           >
             <option value="info">Info</option>
             <option value="warning">Warning</option>

@@ -56,7 +56,7 @@ const ScoreRing: React.FC<{ score: number; size?: number }> = ({ score, size = 1
       </svg>
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         <span className={`text-2xl font-bold ${color}`}>{score}</span>
-        <span className="text-xs text-gray-500 dark:text-slate-400">/ 100</span>
+        <span className="text-xs text-text-secondary">/ 100</span>
       </div>
     </div>
   );
@@ -81,24 +81,24 @@ const CheckRow: React.FC<{ check: QualityCheck }> = ({ check }) => {
       ? 'bg-red-50 dark:bg-red-900/10 border-red-200 dark:border-red-800'
       : check.status === 'warning'
         ? 'bg-amber-50 dark:bg-amber-900/10 border-amber-200 dark:border-amber-800'
-        : 'bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700';
+        : 'bg-surface border-border';
 
   return (
     <div className={`flex items-start gap-3 p-3 rounded-lg border ${bgClass}`}>
       <div className="mt-0.5">{icon}</div>
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2">
-          <span className="text-sm font-medium text-gray-900 dark:text-white">{check.label}</span>
+          <span className="text-sm font-medium text-text-primary">{check.label}</span>
           {check.blocking && check.status === 'fail' && (
             <span className="text-[10px] font-semibold uppercase px-1.5 py-0.5 rounded bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400">
               Blocking
             </span>
           )}
         </div>
-        <p className="text-xs text-gray-500 dark:text-slate-400 mt-0.5">{check.message}</p>
+        <p className="text-xs text-text-secondary mt-0.5">{check.message}</p>
         {check.value !== undefined && check.target !== undefined && (
           <div className="mt-1.5">
-            <div className="h-1.5 bg-gray-200 dark:bg-slate-700 rounded-full overflow-hidden">
+            <div className="h-1.5 bg-surface-active rounded-full overflow-hidden">
               <div
                 className={`h-full rounded-full transition-all ${
                   check.status === 'pass' ? 'bg-emerald-500' : check.status === 'warning' ? 'bg-amber-500' : 'bg-red-500'
@@ -120,7 +120,7 @@ const CheckRow: React.FC<{ check: QualityCheck }> = ({ check }) => {
 const TierDistribution: React.FC<{ citations: EnhancedCitation[] }> = ({ citations }) => {
   if (citations.length === 0) {
     return (
-      <p className="text-sm text-gray-500 dark:text-slate-400 italic">No citations to analyze</p>
+      <p className="text-sm text-text-secondary italic">No citations to analyze</p>
     );
   }
 
@@ -142,7 +142,7 @@ const TierDistribution: React.FC<{ citations: EnhancedCitation[] }> = ({ citatio
 
   return (
     <div className="space-y-2">
-      <div className="flex h-4 rounded-full overflow-hidden bg-gray-200 dark:bg-slate-700">
+      <div className="flex h-4 rounded-full overflow-hidden bg-surface-active">
         {tiers.map((tier) => {
           const pct = (tierCounts[tier] / total) * 100;
           if (pct === 0) return null;
@@ -160,7 +160,7 @@ const TierDistribution: React.FC<{ citations: EnhancedCitation[] }> = ({ citatio
         {tiers.map((tier) => (
           <div key={tier} className="flex items-center gap-1.5">
             <div className={`w-2.5 h-2.5 rounded-full ${tierColors[tier]}`} />
-            <span className="text-gray-600 dark:text-slate-400">
+            <span className="text-text-secondary">
               T{tier}: {tierCounts[tier]} ({Math.round((tierCounts[tier] / total) * 100)}%)
             </span>
           </div>
@@ -168,7 +168,7 @@ const TierDistribution: React.FC<{ citations: EnhancedCitation[] }> = ({ citatio
       </div>
       <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs mt-1">
         {tiers.map((tier) => (
-          <span key={tier} className="text-gray-400 dark:text-slate-500">
+          <span key={tier} className="text-text-tertiary">
             {SOURCE_TIERS[tier].label}
           </span>
         ))}
@@ -226,18 +226,18 @@ const QualityGateDashboard: React.FC<QualityGateDashboardProps> = ({
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-2">
+          <h3 className="text-lg font-semibold text-text-primary flex items-center gap-2">
             <ShieldCheck size={20} />
             Quality Gate
           </h3>
-          <p className="text-sm text-gray-500 dark:text-slate-400 mt-0.5">
+          <p className="text-sm text-text-secondary mt-0.5">
             PEAF compliance check — all blocking checks must pass before submission
           </p>
         </div>
         <button
           onClick={handleRunCheck}
           disabled={running || !article.article_type}
-          className="flex items-center gap-2 px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-gray-300 dark:disabled:bg-slate-700 text-white rounded-lg text-sm font-medium transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary-hover disabled:bg-gray-300 dark:disabled:bg-slate-700 text-white rounded-lg text-sm font-medium transition-colors"
         >
           <RefreshCw size={14} className={running ? 'animate-spin' : ''} />
           {running ? 'Running...' : 'Run Quality Check'}
@@ -256,27 +256,27 @@ const QualityGateDashboard: React.FC<QualityGateDashboardProps> = ({
 
       {/* Template requirements summary */}
       {template && !result && (
-        <div className="bg-gray-50 dark:bg-slate-800/50 border border-gray-200 dark:border-slate-700 rounded-lg p-4">
-          <h4 className="text-sm font-medium text-gray-900 dark:text-white flex items-center gap-2 mb-3">
+        <div className="bg-surface-hover border border-border rounded-lg p-4">
+          <h4 className="text-sm font-medium text-text-primary flex items-center gap-2 mb-3">
             <BookOpen size={14} />
             {template.label} Requirements
           </h4>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
             <div>
-              <p className="text-gray-500 dark:text-slate-400">Min Words</p>
-              <p className="font-semibold text-gray-900 dark:text-white">{template.minWordCount.toLocaleString()}</p>
+              <p className="text-text-secondary">Min Words</p>
+              <p className="font-semibold text-text-primary">{template.minWordCount.toLocaleString()}</p>
             </div>
             <div>
-              <p className="text-gray-500 dark:text-slate-400">Min Citations</p>
-              <p className="font-semibold text-gray-900 dark:text-white">{template.minCitations}</p>
+              <p className="text-text-secondary">Min Citations</p>
+              <p className="font-semibold text-text-primary">{template.minCitations}</p>
             </div>
             <div>
-              <p className="text-gray-500 dark:text-slate-400">Sections</p>
-              <p className="font-semibold text-gray-900 dark:text-white">{template.requiredSections.length}</p>
+              <p className="text-text-secondary">Sections</p>
+              <p className="font-semibold text-text-primary">{template.requiredSections.length}</p>
             </div>
             <div>
-              <p className="text-gray-500 dark:text-slate-400">Clinical Review</p>
-              <p className="font-semibold text-gray-900 dark:text-white">{template.requiresClinicalReview ? 'Required' : 'Optional'}</p>
+              <p className="text-text-secondary">Clinical Review</p>
+              <p className="font-semibold text-text-primary">{template.requiresClinicalReview ? 'Required' : 'Optional'}</p>
             </div>
           </div>
         </div>
@@ -286,7 +286,7 @@ const QualityGateDashboard: React.FC<QualityGateDashboardProps> = ({
       {result && (
         <>
           {/* Score + Summary */}
-          <div className="flex items-center gap-6 p-4 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg">
+          <div className="flex items-center gap-6 p-4 bg-surface border border-border rounded-lg">
             <ScoreRing score={result.score} />
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-1">
@@ -306,7 +306,7 @@ const QualityGateDashboard: React.FC<QualityGateDashboardProps> = ({
                   </>
                 )}
               </div>
-              <p className="text-sm text-gray-500 dark:text-slate-400">
+              <p className="text-sm text-text-secondary">
                 {result.blockingFailures > 0 && (
                   <span className="text-red-600 dark:text-red-400 font-medium">
                     {result.blockingFailures} blocking issue{result.blockingFailures !== 1 ? 's' : ''}
@@ -322,15 +322,15 @@ const QualityGateDashboard: React.FC<QualityGateDashboardProps> = ({
                   <span className="text-emerald-600 dark:text-emerald-400">All checks passed</span>
                 )}
               </p>
-              <p className="text-xs text-gray-400 dark:text-slate-500 mt-1">
+              <p className="text-xs text-text-tertiary mt-1">
                 Last checked: {new Date(result.timestamp).toLocaleString()}
               </p>
             </div>
           </div>
 
           {/* Tier Distribution */}
-          <div className="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg p-4">
-            <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-3">
+          <div className="bg-surface border border-border rounded-lg p-4">
+            <h4 className="text-sm font-medium text-text-primary mb-3">
               Source Tier Distribution
             </h4>
             <TierDistribution citations={citations} />
@@ -338,7 +338,7 @@ const QualityGateDashboard: React.FC<QualityGateDashboardProps> = ({
 
           {/* Individual Checks */}
           <div className="space-y-2">
-            <h4 className="text-sm font-medium text-gray-900 dark:text-white">
+            <h4 className="text-sm font-medium text-text-primary">
               Individual Checks ({result.checks.filter((c) => c.status === 'pass').length}/{result.checks.length} passed)
             </h4>
             {result.checks.map((check) => (

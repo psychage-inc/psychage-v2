@@ -22,7 +22,7 @@ const ArticleTypeSelector: React.FC<ArticleTypeSelectorProps> = ({ value, onChan
 
   return (
     <div className="space-y-3">
-      <label className="block text-sm font-medium text-gray-700 dark:text-slate-300">
+      <label className="block text-sm font-medium text-text-secondary">
         Article Type (PEAF Template)
       </label>
 
@@ -39,15 +39,15 @@ const ArticleTypeSelector: React.FC<ArticleTypeSelectorProps> = ({ value, onChan
               disabled={disabled}
               className={`flex items-start gap-3 p-3 rounded-lg border text-left transition-all ${
                 isSelected
-                  ? 'border-teal-500 bg-teal-50 dark:bg-teal-900/20 ring-1 ring-teal-500'
-                  : 'border-gray-200 dark:border-slate-700 hover:border-gray-300 dark:hover:border-slate-600 bg-white dark:bg-slate-800'
+                  ? 'border-teal-500 bg-primary/10 ring-1 ring-teal-500'
+                  : 'border-border hover:border-border-hover bg-surface'
               } ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}`}
             >
               <div
                 className={`p-1.5 rounded ${
                   isSelected
-                    ? 'bg-teal-100 dark:bg-teal-800 text-teal-600 dark:text-teal-400'
-                    : 'bg-gray-100 dark:bg-slate-700 text-gray-500 dark:text-slate-400'
+                    ? 'bg-teal-100 dark:bg-teal-800 text-primary'
+                    : 'bg-surface-hover text-text-secondary'
                 }`}
               >
                 <Icon size={16} />
@@ -55,12 +55,12 @@ const ArticleTypeSelector: React.FC<ArticleTypeSelectorProps> = ({ value, onChan
               <div className="flex-1 min-w-0">
                 <p
                   className={`text-sm font-medium ${
-                    isSelected ? 'text-teal-700 dark:text-teal-300' : 'text-gray-900 dark:text-white'
+                    isSelected ? 'text-teal-700 dark:text-teal-300' : 'text-text-primary'
                   }`}
                 >
                   {opt.label}
                 </p>
-                <p className="text-xs text-gray-500 dark:text-slate-400 mt-0.5 line-clamp-2">
+                <p className="text-xs text-text-secondary mt-0.5 line-clamp-2">
                   {opt.description}
                 </p>
               </div>
@@ -71,11 +71,11 @@ const ArticleTypeSelector: React.FC<ArticleTypeSelectorProps> = ({ value, onChan
 
       {/* Template requirements summary */}
       {selectedTemplate && (
-        <div className="bg-gray-50 dark:bg-slate-800/50 border border-gray-200 dark:border-slate-700 rounded-lg p-3 mt-2">
-          <p className="text-xs font-medium text-gray-700 dark:text-slate-300 mb-2">
+        <div className="bg-surface-hover border border-border rounded-lg p-3 mt-2">
+          <p className="text-xs font-medium text-text-secondary mb-2">
             Template Requirements
           </p>
-          <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-500 dark:text-slate-400">
+          <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-text-secondary">
             <span>Min {selectedTemplate.minWordCount.toLocaleString()} words</span>
             <span>Min {selectedTemplate.minCitations} citations</span>
             <span>{selectedTemplate.requiredSections.length} sections</span>
@@ -87,12 +87,12 @@ const ArticleTypeSelector: React.FC<ArticleTypeSelectorProps> = ({ value, onChan
             )}
           </div>
           <div className="mt-2">
-            <p className="text-xs text-gray-400 dark:text-slate-500">Required sections:</p>
+            <p className="text-xs text-text-tertiary">Required sections:</p>
             <div className="flex flex-wrap gap-1.5 mt-1">
               {selectedTemplate.requiredSections.map((section) => (
                 <span
                   key={section}
-                  className="text-[10px] px-1.5 py-0.5 rounded bg-gray-200 dark:bg-slate-700 text-gray-600 dark:text-slate-400"
+                  className="text-[10px] px-1.5 py-0.5 rounded bg-surface-active text-text-secondary"
                 >
                   {section}
                 </span>

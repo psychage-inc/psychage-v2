@@ -21,6 +21,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import Badge from '@/components/ui/Badge';
 import { cn } from '@/lib/utils';
 import { useBookmarks } from '@/context/BookmarkContext';
+import '@/components/admin/editor/tiptap-styles.css';
 
 const ArticlePage: React.FC = () => {
     const { categorySlug, articleSlug } = useParams<{ categorySlug: string; articleSlug: string }>();
@@ -299,7 +300,7 @@ const ArticlePage: React.FC = () => {
                         </div>
 
                         <div className="
-                            prose prose-lg max-w-none 
+                            prose-medium prose prose-lg max-w-none
                             prose-headings:font-display prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-text-primary
                             prose-h1:text-4xl prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
                             prose-h3:text-2xl prose-h3:mt-8

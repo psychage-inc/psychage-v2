@@ -170,7 +170,7 @@ export const JOURNAL_SECTIONS: SectionMeta[] = [
     id: 'thought-record',
     title: 'Thought Record',
     subtitle: 'See your thoughts clearly',
-    description: 'Challenge negative thought patterns with the Thought Reframer tool.',
+    description: 'Challenge negative thought patterns with structured CBT exercises.',
     icon: 'Lightbulb',
     frequency: 'As needed',
     time: '5-10 min',

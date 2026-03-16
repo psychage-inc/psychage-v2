@@ -31,16 +31,16 @@ function DerivativeRow({ d }: { d: ArticleDerivativeRecord }) {
   const typeLabel = DERIVATIVE_TYPES.find((t) => t.value === d.derivative_type)?.label || d.derivative_type;
 
   return (
-    <div className="flex items-center gap-3 py-2 pl-10 pr-4 text-sm border-t border-gray-50 dark:border-slate-700/30">
-      <span className="w-4 h-px bg-gray-300 dark:bg-slate-600 flex-shrink-0" />
-      <span className="text-xs font-medium text-gray-500 dark:text-slate-400 bg-gray-100 dark:bg-slate-700 px-2 py-0.5 rounded flex-shrink-0">
+    <div className="flex items-center gap-3 py-2 pl-10 pr-4 text-sm border-t border-border">
+      <span className="w-4 h-px bg-border-hover flex-shrink-0" />
+      <span className="text-xs font-medium text-text-secondary bg-surface-hover px-2 py-0.5 rounded flex-shrink-0">
         {typeLabel}
       </span>
-      <span className="text-gray-700 dark:text-slate-300 truncate flex-1">
+      <span className="text-text-secondary truncate flex-1">
         {d.title || 'Untitled'}
       </span>
       {d.platform && (
-        <span className="text-[11px] text-gray-400 dark:text-slate-500">{d.platform}</span>
+        <span className="text-[11px] text-text-tertiary">{d.platform}</span>
       )}
       <AdminStatusBadge status={d.status} />
     </div>
@@ -81,20 +81,20 @@ function TreeNode({ article }: { article: ArticleRecord }) {
   const totalDerivatives = derivatives?.length || 0;
 
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700 overflow-hidden">
+    <div className="bg-surface rounded-2xl border border-border overflow-hidden">
       {/* Header */}
       <button
         onClick={() => setExpanded(!expanded)}
-        className="w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-gray-50 dark:hover:bg-slate-700/30 transition-colors"
+        className="w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-surface-hover transition-colors"
       >
         {expanded ? (
-          <ChevronDown size={16} className="text-gray-400 flex-shrink-0" />
+          <ChevronDown size={16} className="text-text-tertiary flex-shrink-0" />
         ) : (
-          <ChevronRight size={16} className="text-gray-400 flex-shrink-0" />
+          <ChevronRight size={16} className="text-text-tertiary flex-shrink-0" />
         )}
 
         {article.article_production_id && (
-          <span className="text-xs font-mono text-gray-400 dark:text-slate-500 flex-shrink-0">
+          <span className="text-xs font-mono text-text-tertiary flex-shrink-0">
             {article.article_production_id}
           </span>
         )}
@@ -102,7 +102,7 @@ function TreeNode({ article }: { article: ArticleRecord }) {
         <Link
           to={adminPath(`/articles/${article.id}`)}
           onClick={(e) => e.stopPropagation()}
-          className="font-medium text-sm text-gray-900 dark:text-white hover:text-teal-600 dark:hover:text-teal-400 truncate flex-1"
+          className="font-medium text-sm text-text-primary hover:text-primary truncate flex-1"
         >
           {article.title}
         </Link>
@@ -110,7 +110,7 @@ function TreeNode({ article }: { article: ArticleRecord }) {
         <AdminStatusBadge status={article.review_stage || 'planned'} />
 
         {expanded && totalDerivatives > 0 && (
-          <span className="text-[11px] text-gray-400 dark:text-slate-500 flex-shrink-0">
+          <span className="text-[11px] text-text-tertiary flex-shrink-0">
             {publishedCount}/{totalDerivatives}
           </span>
         )}
@@ -120,17 +120,17 @@ function TreeNode({ article }: { article: ArticleRecord }) {
       {expanded && (
         <div>
           {derivLoading ? (
-            <div className="px-4 py-3 text-sm text-gray-400">Loading derivatives...</div>
+            <div className="px-4 py-3 text-sm text-text-tertiary">Loading derivatives...</div>
           ) : derivatives && derivatives.length > 0 ? (
             derivatives.map((d) => <DerivativeRow key={d.id} d={d} />)
           ) : (
-            <div className="px-4 py-3 text-sm text-gray-400 dark:text-slate-500 border-t border-gray-50 dark:border-slate-700/30">
+            <div className="px-4 py-3 text-sm text-text-tertiary border-t border-border">
               No derivatives yet
             </div>
           )}
 
           {/* Add derivative */}
-          <div className="border-t border-gray-100 dark:border-slate-700/50 px-4 py-2">
+          <div className="border-t border-border px-4 py-2">
             {showAddForm ? (
               <div className="flex flex-wrap gap-1.5">
                 {DERIVATIVE_TYPES.map((dt) => (
@@ -138,14 +138,14 @@ function TreeNode({ article }: { article: ArticleRecord }) {
                     key={dt.value}
                     onClick={() => createMutation.mutate(dt.value)}
                     disabled={createMutation.isPending}
-                    className="text-[11px] px-2 py-1 rounded bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-slate-300 hover:bg-teal-100 dark:hover:bg-teal-900/30 hover:text-teal-700 dark:hover:text-teal-400 transition-colors disabled:opacity-50"
+                    className="text-[11px] px-2 py-1 rounded bg-surface-hover text-text-secondary hover:bg-primary/15 hover:text-primary transition-colors disabled:opacity-50"
                   >
                     {dt.label}
                   </button>
                 ))}
                 <button
                   onClick={() => setShowAddForm(false)}
-                  className="text-[11px] px-2 py-1 text-gray-400 hover:text-gray-600 transition-colors"
+                  className="text-[11px] px-2 py-1 text-text-tertiary hover:text-text-secondary transition-colors"
                 >
                   Cancel
                 </button>
@@ -153,7 +153,7 @@ function TreeNode({ article }: { article: ArticleRecord }) {
             ) : (
               <button
                 onClick={() => setShowAddForm(true)}
-                className="inline-flex items-center gap-1 text-xs text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300 transition-colors"
+                className="inline-flex items-center gap-1 text-xs text-primary hover:text-primary-hover transition-colors"
               >
                 <Plus size={12} />
                 Add Derivative
@@ -199,26 +199,26 @@ const AdminArticleTree: React.FC = () => {
 
       {/* Summary stats */}
       <div className="grid grid-cols-3 gap-4 mb-6">
-        <div className="bg-white dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700 p-4">
-          <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-slate-400 mb-1">
-            <TreePine size={14} className="text-teal-500" />
+        <div className="bg-surface rounded-2xl border border-border p-4">
+          <div className="flex items-center gap-2 text-sm text-text-secondary mb-1">
+            <TreePine size={14} className="text-primary" />
             Cornerstones
           </div>
-          <div className="text-2xl font-semibold text-gray-900 dark:text-white">{cornerstoneCount}</div>
+          <div className="text-2xl font-semibold text-text-primary">{cornerstoneCount}</div>
         </div>
-        <div className="bg-white dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700 p-4">
-          <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-slate-400 mb-1">
+        <div className="bg-surface rounded-2xl border border-border p-4">
+          <div className="flex items-center gap-2 text-sm text-text-secondary mb-1">
             <Layers size={14} className="text-purple-500" />
             Categories
           </div>
-          <div className="text-2xl font-semibold text-gray-900 dark:text-white">{categories?.length || 0}</div>
+          <div className="text-2xl font-semibold text-text-primary">{categories?.length || 0}</div>
         </div>
-        <div className="bg-white dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700 p-4">
-          <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-slate-400 mb-1">
+        <div className="bg-surface rounded-2xl border border-border p-4">
+          <div className="flex items-center gap-2 text-sm text-text-secondary mb-1">
             <CheckCircle2 size={14} className="text-emerald-500" />
             Published
           </div>
-          <div className="text-2xl font-semibold text-gray-900 dark:text-white">
+          <div className="text-2xl font-semibold text-text-primary">
             {articles?.filter((a) => a.review_stage === 'published').length || 0}
           </div>
         </div>
@@ -231,8 +231,8 @@ const AdminArticleTree: React.FC = () => {
           className={cn(
             'px-3 py-1.5 text-xs font-medium rounded-full transition-colors',
             categoryFilter === 'all'
-              ? 'bg-teal-600 text-white'
-              : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-slate-700 dark:text-slate-300'
+              ? 'bg-primary text-white'
+              : 'bg-surface-hover text-text-secondary hover:bg-surface-active'
           )}
         >
           All
@@ -245,7 +245,7 @@ const AdminArticleTree: React.FC = () => {
               'px-3 py-1.5 text-xs font-medium rounded-full transition-colors',
               categoryFilter === cat.id
                 ? 'text-white'
-                : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-slate-700 dark:text-slate-300'
+                : 'bg-surface-hover text-text-secondary hover:bg-surface-active'
             )}
             style={categoryFilter === cat.id ? { backgroundColor: cat.color || '#0D9488' } : undefined}
           >
@@ -258,7 +258,7 @@ const AdminArticleTree: React.FC = () => {
       {isLoading ? (
         <div className="space-y-3">
           {Array.from({ length: 5 }).map((_, i) => (
-            <div key={i} className="h-14 bg-gray-100 dark:bg-slate-800 rounded-lg animate-pulse" />
+            <div key={i} className="h-14 bg-surface-hover rounded-lg animate-pulse" />
           ))}
         </div>
       ) : filtered && filtered.length > 0 ? (
@@ -268,7 +268,7 @@ const AdminArticleTree: React.FC = () => {
           ))}
         </div>
       ) : (
-        <div className="text-center py-16 text-gray-400 dark:text-slate-500">
+        <div className="text-center py-16 text-text-tertiary">
           <TreePine size={40} className="mx-auto mb-3 opacity-50" />
           <p className="text-sm">No cornerstone articles found</p>
           <p className="text-xs mt-1">Mark articles as cornerstone to see them here</p>

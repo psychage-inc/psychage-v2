@@ -108,6 +108,15 @@ export default {
                 'admin': '87.5rem',     // 1400px — admin, provider analytics
                 'wide': '100rem',       // 1600px — footer
             },
+            typography: {
+                DEFAULT: {
+                    css: {
+                        '--tw-prose-links': '#0d9488',
+                        '--tw-prose-quotes-border': '#0d9488',
+                        maxWidth: 'none',
+                    },
+                },
+            },
             fontSize: {
                 'fluid-3xl': ['clamp(1.875rem, 1.5rem + 1.5vw, 2.5rem)', { lineHeight: '1.2' }],
                 'fluid-4xl': ['clamp(2.25rem, 1.8rem + 2vw, 3rem)', { lineHeight: '1.1' }],
@@ -115,5 +124,7 @@ export default {
             },
         },
     },
-    plugins: [],
+    plugins: [
+        require('@tailwindcss/typography'),
+    ],
 }

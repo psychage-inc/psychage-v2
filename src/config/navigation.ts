@@ -226,13 +226,6 @@ export const navigationConfig: NavigationConfig = {
                             requiredFeatureFlag: 'VITE_ENABLE_AI_CHAT'
                         },
                         {
-                            id: 'thought-reframer',
-                            label: 'Thought Reframer',
-                            description: 'Challenge negative thoughts',
-                            href: '/tools/thought-reframer',
-                            icon: 'lightbulb'
-                        },
-                        {
                             id: 'clarity-journal',
                             label: 'Clarity Journal',
                             description: 'Structured journaling & tracking',
@@ -244,7 +237,6 @@ export const navigationConfig: NavigationConfig = {
             ],
             quickActions: [
                 { label: 'All Tools', href: '/tools' },
-                { label: 'Thought Reframer', href: '/tools/thought-reframer' },
                 {
                     label: 'Clarity Score',
                     href: '/clarity-score',

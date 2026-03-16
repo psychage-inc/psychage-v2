@@ -59,10 +59,10 @@ const CellPopover: React.FC<CellPopoverProps> = ({ conditionId, symptomId, mappi
   });
 
   return (
-    <div className="absolute z-50 bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-lg shadow-xl p-4 w-64" onClick={(e) => e.stopPropagation()}>
+    <div className="absolute z-50 bg-surface border border-border rounded-lg shadow-xl p-4 w-64" onClick={(e) => e.stopPropagation()}>
       <div className="space-y-3">
         <div>
-          <label className="block text-xs font-medium text-gray-500 mb-1">Weight</label>
+          <label className="block text-xs font-medium text-text-secondary mb-1">Weight</label>
           <div className="flex gap-1">
             {[0, 1, 2, 3].map((w) => (
               <button
@@ -71,8 +71,8 @@ const CellPopover: React.FC<CellPopoverProps> = ({ conditionId, symptomId, mappi
                 className={cn(
                   'flex-1 py-1.5 text-sm font-medium rounded transition-colors',
                   weight === w
-                    ? w === 0 ? 'bg-gray-200 text-gray-700' : 'bg-teal-600 text-white'
-                    : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
+                    ? w === 0 ? 'bg-surface-active text-text-secondary' : 'bg-primary text-white'
+                    : 'bg-surface-hover text-text-secondary hover:bg-surface-active'
                 )}
               >
                 {w === 0 ? 'None' : w}
@@ -82,22 +82,22 @@ const CellPopover: React.FC<CellPopoverProps> = ({ conditionId, symptomId, mappi
         </div>
         {weight > 0 && (
           <>
-            <label className="flex items-center gap-2 text-sm text-gray-700 dark:text-slate-300">
-              <input type="checkbox" checked={isCore} onChange={(e) => setIsCore(e.target.checked)} className="rounded border-gray-300 text-teal-600" />
+            <label className="flex items-center gap-2 text-sm text-text-secondary">
+              <input type="checkbox" checked={isCore} onChange={(e) => setIsCore(e.target.checked)} className="rounded border-border-hover text-primary" />
               Core symptom
             </label>
-            <label className="flex items-center gap-2 text-sm text-gray-700 dark:text-slate-300">
-              <input type="checkbox" checked={isRedFlag} onChange={(e) => setIsRedFlag(e.target.checked)} className="rounded border-gray-300 text-red-600" />
+            <label className="flex items-center gap-2 text-sm text-text-secondary">
+              <input type="checkbox" checked={isRedFlag} onChange={(e) => setIsRedFlag(e.target.checked)} className="rounded border-border-hover text-red-600" />
               Red flag
             </label>
           </>
         )}
         <div className="flex gap-2">
-          <button onClick={onClose} className="flex-1 py-1.5 text-sm bg-gray-100 text-gray-600 rounded hover:bg-gray-200">Cancel</button>
+          <button onClick={onClose} className="flex-1 py-1.5 text-sm bg-surface-hover text-text-secondary rounded hover:bg-surface-active">Cancel</button>
           <button
             onClick={() => saveMutation.mutate()}
             disabled={saveMutation.isPending}
-            className="flex-1 py-1.5 text-sm bg-teal-600 text-white rounded hover:bg-teal-700 disabled:opacity-50"
+            className="flex-1 py-1.5 text-sm bg-primary text-white rounded hover:bg-primary-hover disabled:opacity-50"
           >
             {saveMutation.isPending ? '...' : 'Save'}
           </button>
@@ -194,16 +194,16 @@ const AdminMappingMatrix: React.FC = () => {
 
       {/* View toggle */}
       <div className="flex items-center gap-4 mb-4">
-        <div className="flex gap-1 bg-gray-100 dark:bg-slate-800 rounded-lg p-1">
+        <div className="flex gap-1 bg-surface-hover rounded-lg p-1">
           <button
             onClick={() => setView('matrix')}
-            className={cn('flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-md transition-colors', view === 'matrix' ? 'bg-white dark:bg-slate-700 shadow text-gray-900 dark:text-white' : 'text-gray-500')}
+            className={cn('flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-md transition-colors', view === 'matrix' ? 'bg-surface shadow text-text-primary' : 'text-text-secondary')}
           >
             <Grid3X3 size={14} /> Matrix
           </button>
           <button
             onClick={() => setView('list')}
-            className={cn('flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-md transition-colors', view === 'list' ? 'bg-white dark:bg-slate-700 shadow text-gray-900 dark:text-white' : 'text-gray-500')}
+            className={cn('flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-md transition-colors', view === 'list' ? 'bg-surface shadow text-text-primary' : 'text-text-secondary')}
           >
             <List size={14} /> List
           </button>
@@ -226,17 +226,17 @@ const AdminMappingMatrix: React.FC = () => {
         />
       ) : (
         /* Matrix View */
-        <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl overflow-hidden">
+        <div className="bg-surface border border-border rounded-2xl overflow-hidden">
           <div className="overflow-auto max-h-[70vh]">
             <table className="text-xs">
               <thead>
                 <tr>
-                  <th className="sticky left-0 top-0 z-20 bg-gray-50 dark:bg-slate-800 px-3 py-2 border-b border-r border-gray-200 dark:border-slate-700 min-w-[160px]">
+                  <th className="sticky left-0 top-0 z-20 bg-surface-hover px-3 py-2 border-b border-r border-border min-w-[160px]">
                     Condition / Symptom
                   </th>
                   {(symptoms || []).map((s) => (
-                    <th key={s.symptom_id} className="sticky top-0 z-10 bg-gray-50 dark:bg-slate-800 px-1 py-2 border-b border-gray-200 dark:border-slate-700 text-center font-normal">
-                      <span className="writing-mode-vertical block -rotate-45 origin-left translate-x-3 translate-y-1 whitespace-nowrap text-gray-500 max-w-[80px] truncate">
+                    <th key={s.symptom_id} className="sticky top-0 z-10 bg-surface-hover px-1 py-2 border-b border-border text-center font-normal">
+                      <span className="writing-mode-vertical block -rotate-45 origin-left translate-x-3 translate-y-1 whitespace-nowrap text-text-secondary max-w-[80px] truncate">
                         {s.symptom_id}
                       </span>
                     </th>
@@ -246,7 +246,7 @@ const AdminMappingMatrix: React.FC = () => {
               <tbody>
                 {(conditions || []).map((c) => (
                   <tr key={c.condition_id}>
-                    <td className="sticky left-0 z-10 bg-white dark:bg-slate-900 px-3 py-1.5 border-r border-b border-gray-100 dark:border-slate-800 font-medium text-gray-700 dark:text-slate-300 whitespace-nowrap">
+                    <td className="sticky left-0 z-10 bg-surface px-3 py-1.5 border-r border-b border-border font-medium text-text-secondary whitespace-nowrap">
                       {c.name?.en || c.condition_id}
                     </td>
                     {(symptoms || []).map((s) => {
@@ -257,13 +257,13 @@ const AdminMappingMatrix: React.FC = () => {
                       return (
                         <td
                           key={key}
-                          className="relative border-b border-gray-50 dark:border-slate-800/50 p-0"
+                          className="relative border-b border-border p-0"
                         >
                           <button
                             onClick={() => setActiveCell(isOpen ? null : { conditionId: c.condition_id, symptomId: s.symptom_id })}
                             className={cn(
                               'w-full h-7 flex items-center justify-center transition-colors',
-                              !mapping && 'hover:bg-gray-50 dark:hover:bg-slate-800',
+                              !mapping && 'hover:bg-surface-hover',
                               mapping?.weight === 1 && 'bg-teal-100 dark:bg-teal-900/30',
                               mapping?.weight === 2 && 'bg-teal-300 dark:bg-teal-800/50',
                               mapping?.weight === 3 && 'bg-teal-600 text-white dark:bg-teal-700',
@@ -290,7 +290,7 @@ const AdminMappingMatrix: React.FC = () => {
           </div>
 
           {/* Legend */}
-          <div className="flex items-center gap-4 px-4 py-3 border-t border-gray-200 dark:border-slate-700 text-xs text-gray-500">
+          <div className="flex items-center gap-4 px-4 py-3 border-t border-border text-xs text-text-secondary">
             <span>Weight:</span>
             <span className="flex items-center gap-1"><span className="w-4 h-4 rounded bg-teal-100" /> 1</span>
             <span className="flex items-center gap-1"><span className="w-4 h-4 rounded bg-teal-300" /> 2</span>

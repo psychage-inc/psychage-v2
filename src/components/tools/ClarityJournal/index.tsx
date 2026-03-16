@@ -88,12 +88,8 @@ const ClarityJournal: React.FC = () => {
   for (const m of v2Moods) moodMap.set(m.label, m);
   const recentMoods = [...moodMap.values()].slice(-14);
 
-  // Thought record count from ThoughtReframer localStorage
-  let thoughtRecordCount = 0;
-  try {
-    const raw = localStorage.getItem('psychage_thought_reframer_v1');
-    if (raw) thoughtRecordCount = (JSON.parse(raw) as unknown[]).filter((r: any) => r.completed).length;
-  } catch { /* ignore */ }
+  // Thought record count (legacy — kept for backwards compat)
+  const thoughtRecordCount = 0;
 
   // V2 today's status
   const hasTodayV2Data = todaySectionCount > 0;

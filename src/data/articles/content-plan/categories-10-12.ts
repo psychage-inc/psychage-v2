@@ -1,0 +1,311 @@
+// ============================================================================
+// Content Plan — Categories 10–12
+// ============================================================================
+
+import { CategoryPlan, planId } from './types';
+
+// ═══════════════════════════════════════════════════════════════════════════
+// CATEGORY 10: Digital Life, Social Media & Modern Stressors (50 articles)
+// ═══════════════════════════════════════════════════════════════════════════
+
+export const CATEGORY_10: CategoryPlan = {
+  category: 10,
+  name: 'Digital Life, Social Media & Modern Stressors',
+  slug: 'digital-life',
+  target: 50,
+  subtopics: [
+    {
+      number: 1,
+      name: 'Social Media & Mental Health',
+      range: '001–010',
+      articles: [
+        { id: planId(10, 1), title: 'How Social Media Affects Your Mental Health: What Five Years of Research Shows', type: 'research_digest' },
+        { id: planId(10, 2), title: 'The Comparison Trap: Why Scrolling Makes You Feel Worse About Your Life', type: 'self_help' },
+        { id: planId(10, 3), title: 'Social Media and Teens: What Parents Need to Know About the Risks', type: 'self_help' },
+        { id: planId(10, 4), title: 'FOMO: The Fear of Missing Out and How It Drives Anxious Scrolling', type: 'self_help' },
+        { id: planId(10, 5), title: 'Instagram, TikTok, and Body Image: The Visual Platform Problem', type: 'self_help' },
+        { id: planId(10, 6), title: 'Social Media and Loneliness: Does Online Connection Replace Real Connection?', type: 'research_digest' },
+        { id: planId(10, 7), title: 'Likes, Comments, and Dopamine: How Social Media Hijacks Your Reward System', type: 'research_digest' },
+        { id: planId(10, 8), title: "The Highlight Reel Effect: Why Everyone Else's Life Looks Perfect Online", type: 'self_help' },
+        { id: planId(10, 9), title: 'Social Media Breaks: What the Research Says About Taking Time Off', type: 'research_digest' },
+        { id: planId(10, 10), title: 'How to Use Social Media Mindfully: Strategies for a Healthier Feed', type: 'self_help' },
+      ],
+    },
+    {
+      number: 2,
+      name: 'Screen Time, Digital Habits & Balance',
+      range: '011–020',
+      articles: [
+        { id: planId(10, 11), title: 'How Much Screen Time Is Too Much? What the Evidence Actually Says', type: 'research_digest' },
+        { id: planId(10, 12), title: 'Smartphone Addiction: Is It Real or Just a Bad Habit?', type: 'research_digest' },
+        { id: planId(10, 13), title: 'The Attention Economy: How Apps Are Designed to Keep You Hooked', type: 'self_help' },
+        { id: planId(10, 14), title: 'Digital Minimalism: Reducing Your Tech Footprint Without Going Off-Grid', type: 'self_help' },
+        { id: planId(10, 15), title: 'Screen Time and Children: Age-Appropriate Guidelines and Why They Matter', type: 'self_help' },
+        { id: planId(10, 16), title: 'How Night-Time Screen Use Disrupts Sleep and What to Do About It', type: 'self_help' },
+        { id: planId(10, 17), title: 'The Dopamine Detox Trend: Science or Snake Oil?', type: 'research_digest' },
+        { id: planId(10, 18), title: 'How to Set Up Your Phone for Mental Health: A Practical Guide', type: 'self_help' },
+        { id: planId(10, 19), title: 'The Productivity Paradox: When Technology Makes You Less Efficient', type: 'self_help' },
+        { id: planId(10, 20), title: 'Digital Boundaries for Families: Creating a Tech Agreement That Works', type: 'self_help' },
+      ],
+    },
+    {
+      number: 3,
+      name: 'Online Comparison, Cyberbullying & Digital Harm',
+      range: '021–030',
+      articles: [
+        { id: planId(10, 21), title: 'Cyberbullying: The Mental Health Impact of Online Harassment', type: 'self_help' },
+        { id: planId(10, 22), title: 'Cancel Culture and Mental Health: The Psychology of Public Shaming', type: 'self_help' },
+        { id: planId(10, 23), title: 'Online Trolling: Understanding Why People Are Cruel on the Internet', type: 'self_help' },
+        { id: planId(10, 24), title: 'Revenge Porn and Digital Exploitation: The Psychological Damage', type: 'self_help' },
+        { id: planId(10, 25), title: 'Online Radicalization and Mental Health: How Extreme Content Pulls People In', type: 'self_help' },
+        { id: planId(10, 26), title: 'How Online Reviews and Ratings Create Social Anxiety', type: 'self_help' },
+        { id: planId(10, 27), title: 'The Mental Health Impact of Online Dating: Rejection, Ghosting, and Comparison', type: 'self_help' },
+        { id: planId(10, 28), title: "Parasocial Relationships: When You Feel Connected to Someone Who Doesn't Know You Exist", type: 'self_help' },
+        { id: planId(10, 29), title: 'Online Impersonation, Catfishing, and Trust: Digital Deception and Its Effects', type: 'self_help' },
+        { id: planId(10, 30), title: "Helping Teens Navigate Online Cruelty: A Parent's Action Guide", type: 'self_help' },
+      ],
+    },
+    {
+      number: 4,
+      name: 'Information Overload & Doomscrolling',
+      range: '031–040',
+      articles: [
+        { id: planId(10, 31), title: 'What Is Doomscrolling? The Psychology of Consuming Bad News Compulsively', type: 'self_help' },
+        { id: planId(10, 32), title: 'Information Overload: How Too Much Input Overwhelms Your Brain', type: 'self_help' },
+        { id: planId(10, 33), title: 'News Anxiety: How the 24/7 News Cycle Damages Mental Health', type: 'self_help' },
+        { id: planId(10, 34), title: 'Climate Anxiety and the Internet: When Awareness Becomes Overwhelm', type: 'self_help' },
+        { id: planId(10, 35), title: 'Misinformation and Mental Health: How False Claims Cause Real Harm', type: 'self_help' },
+        { id: planId(10, 36), title: 'The Infinite Scroll: How Endless Content Feeds Exploit Your Attention', type: 'self_help' },
+        { id: planId(10, 37), title: 'How to Stay Informed Without Becoming Anxious or Despairing', type: 'self_help' },
+        { id: planId(10, 38), title: 'Echo Chambers and Mental Health: When Your Feed Reinforces Your Fears', type: 'self_help' },
+        { id: planId(10, 39), title: 'The Mental Health Impact of Constant Pandemic News Coverage', type: 'self_help' },
+        { id: planId(10, 40), title: 'Building a Healthy Information Diet: Practical Strategies', type: 'self_help' },
+      ],
+    },
+    {
+      number: 5,
+      name: 'Digital Wellness & Intentional Technology Use',
+      range: '041–050',
+      articles: [
+        { id: planId(10, 41), title: 'What Is Digital Wellness? A Framework for a Healthy Tech Relationship', type: 'self_help' },
+        { id: planId(10, 42), title: 'Digital Detox Retreats: Effective Recovery or Expensive Gimmick?', type: 'research_digest' },
+        { id: planId(10, 43), title: 'The Right to Disconnect: Why Boundaries with Technology Are a Human Need', type: 'self_help' },
+        { id: planId(10, 44), title: 'How to Reclaim Your Attention: Training Focus in a Distracted World', type: 'self_help' },
+        { id: planId(10, 45), title: 'Nature and Technology: Why Getting Outside Counteracts Screen Exposure', type: 'self_help' },
+        { id: planId(10, 46), title: 'Analog Activities for Mental Health: Rediscovering Offline Joy', type: 'self_help' },
+        { id: planId(10, 47), title: "The Future of Technology and Mental Health: AI, VR, and What's Coming", type: 'research_digest' },
+        { id: planId(10, 48), title: 'Teaching Children Digital Literacy: Raising Healthy Digital Citizens', type: 'self_help' },
+        { id: planId(10, 49), title: 'Technology as a Mental Health Tool: When Apps and AI Actually Help', type: 'self_help' },
+        { id: planId(10, 50), title: 'Your Personal Digital Wellness Plan: A Step-by-Step Guide', type: 'self_help' },
+      ],
+    },
+  ],
+};
+
+// ═══════════════════════════════════════════════════════════════════════════
+// CATEGORY 11: Trauma-Informed Education & Healing (55 articles)
+// ═══════════════════════════════════════════════════════════════════════════
+
+export const CATEGORY_11: CategoryPlan = {
+  category: 11,
+  name: 'Trauma-Informed Education & Healing',
+  slug: 'trauma-healing',
+  target: 55,
+  subtopics: [
+    {
+      number: 1,
+      name: 'Understanding Trauma & Its Impact',
+      range: '001–010',
+      articles: [
+        { id: planId(11, 1), title: "What Is Psychological Trauma? A Clear Guide to What 'Trauma' Actually Means", type: 'self_help' },
+        { id: planId(11, 2), title: 'Big T and Little t: The Spectrum of Traumatic Experiences', type: 'self_help' },
+        { id: planId(11, 3), title: 'How Trauma Changes the Brain: Neuroscience in Plain Language', type: 'research_digest' },
+        { id: planId(11, 4), title: 'The ACE Study: How Childhood Adversity Predicts Adult Health', type: 'research_digest' },
+        { id: planId(11, 5), title: 'Why Two People Can Experience the Same Event and Be Affected Differently', type: 'self_help' },
+        { id: planId(11, 6), title: 'Trauma and the Body: How Unprocessed Experiences Live in Your Nervous System', type: 'self_help' },
+        { id: planId(11, 7), title: 'The Window of Tolerance: Understanding Your Capacity for Stress', type: 'self_help' },
+        { id: planId(11, 8), title: "Secondary Trauma: How Exposure to Others' Pain Affects You", type: 'self_help' },
+        { id: planId(11, 9), title: 'Complex Trauma vs. Single-Incident Trauma: Why the Distinction Matters', type: 'self_help' },
+        { id: planId(11, 10), title: 'Trauma Prevalence: How Common Traumatic Experiences Actually Are', type: 'research_digest' },
+      ],
+    },
+    {
+      number: 2,
+      name: 'PTSD & Complex Trauma',
+      range: '011–020',
+      articles: [
+        { id: planId(11, 11), title: 'PTSD: A Complete Guide to Post-Traumatic Stress Disorder', type: 'condition_deep_dive' },
+        { id: planId(11, 12), title: 'Complex PTSD: The Condition the DSM Is Still Catching Up To', type: 'condition_deep_dive' },
+        { id: planId(11, 13), title: 'Flashbacks Explained: What Happens in Your Brain During a Trauma Memory', type: 'self_help' },
+        { id: planId(11, 14), title: "Hypervigilance: When Your Brain Won't Stop Scanning for Danger", type: 'self_help' },
+        { id: planId(11, 15), title: "Emotional Numbness After Trauma: Why You Can't Feel Anything", type: 'self_help' },
+        { id: planId(11, 16), title: 'PTSD and Nightmares: Why Trauma Disrupts Your Sleep', type: 'self_help' },
+        { id: planId(11, 17), title: 'Trauma and Dissociation: When Your Mind Disconnects to Survive', type: 'self_help' },
+        { id: planId(11, 18), title: 'PTSD in First Responders: The Cost of Witnessing Crisis', type: 'self_help' },
+        { id: planId(11, 19), title: 'Military PTSD: Combat Trauma and the Challenges of Coming Home', type: 'self_help' },
+        { id: planId(11, 20), title: 'PTSD vs. Acute Stress Disorder: Understanding the Timeline', type: 'self_help' },
+      ],
+    },
+    {
+      number: 3,
+      name: 'Trauma Responses & Survival Patterns',
+      range: '021–030',
+      articles: [
+        { id: planId(11, 21), title: 'Fight, Flight, Freeze, and Fawn: The Four Trauma Responses Explained', type: 'self_help' },
+        { id: planId(11, 22), title: 'The Fawn Response: How People-Pleasing Becomes a Survival Strategy', type: 'self_help' },
+        { id: planId(11, 23), title: 'The Freeze Response: When Trauma Makes You Shut Down', type: 'self_help' },
+        { id: planId(11, 24), title: "Why You Didn't Fight Back: Understanding Immobility During Trauma", type: 'self_help' },
+        { id: planId(11, 25), title: 'Trauma Triggers: What They Are, Why They Happen, and How to Manage Them', type: 'self_help' },
+        { id: planId(11, 26), title: 'Avoidance After Trauma: How Staying Safe Keeps You Stuck', type: 'self_help' },
+        { id: planId(11, 27), title: 'Trauma Bonding: Why People Stay in Abusive Situations', type: 'self_help' },
+        { id: planId(11, 28), title: "Self-Blame After Trauma: Why Survivors Blame Themselves (And Why It's Not Their Fault)", type: 'self_help' },
+        { id: planId(11, 29), title: 'Anger After Trauma: The Emotion Survivors Are Told Not to Feel', type: 'self_help' },
+        { id: planId(11, 30), title: 'Hyperarousal: Living in a State of Constant Alert', type: 'self_help' },
+      ],
+    },
+    {
+      number: 4,
+      name: 'Body-Based Trauma Healing',
+      range: '031–040',
+      articles: [
+        { id: planId(11, 31), title: 'Somatic Experiencing: How Body-Based Therapy Processes Trauma', type: 'treatment_guide' },
+        { id: planId(11, 32), title: 'EMDR Explained: How Eye Movements Help Process Traumatic Memories', type: 'treatment_guide' },
+        { id: planId(11, 33), title: 'Yoga as Trauma Therapy: What the Research Says About Movement and Healing', type: 'treatment_guide' },
+        { id: planId(11, 34), title: "The Vagus Nerve and Trauma Recovery: Activating Your Body's Calm System", type: 'self_help' },
+        { id: planId(11, 35), title: 'Breathwork for Trauma: Techniques That Help Regulate a Dysregulated Nervous System', type: 'self_help' },
+        { id: planId(11, 36), title: 'Neurofeedback for PTSD: How Brain Training Supports Trauma Recovery', type: 'treatment_guide' },
+        { id: planId(11, 37), title: 'Sensorimotor Psychotherapy: Using the Body as a Gateway to Healing', type: 'treatment_guide' },
+        { id: planId(11, 38), title: 'How Nature Supports Trauma Recovery: Ecotherapy and Green Space', type: 'self_help' },
+        { id: planId(11, 39), title: 'Animal-Assisted Therapy for Trauma: The Evidence for Dogs, Horses, and More', type: 'treatment_guide' },
+        { id: planId(11, 40), title: "Why Traditional Talk Therapy Sometimes Isn't Enough for Trauma", type: 'self_help' },
+      ],
+    },
+    {
+      number: 5,
+      name: 'Trauma-Informed Care & Relationships',
+      range: '041–050',
+      articles: [
+        { id: planId(11, 41), title: 'What Is Trauma-Informed Care? The Principles Everyone Should Know', type: 'self_help' },
+        { id: planId(11, 42), title: 'Trauma-Informed Parenting: Raising Children Who Have Experienced Adversity', type: 'self_help' },
+        { id: planId(11, 43), title: 'How Trauma Affects Relationships: Attachment, Trust, and Intimacy After Pain', type: 'self_help' },
+        { id: planId(11, 44), title: 'Trauma and Substance Use: Understanding the Self-Medication Hypothesis', type: 'self_help' },
+        { id: planId(11, 45), title: "Supporting a Partner with PTSD: What Helps and What Doesn't", type: 'self_help' },
+        { id: planId(11, 46), title: 'Trauma-Informed Education: How Schools Can Support Affected Students', type: 'self_help' },
+        { id: planId(11, 47), title: 'Workplace Trauma: Harassment, Accidents, and Psychological Safety', type: 'self_help' },
+        { id: planId(11, 48), title: 'Trauma-Informed Healthcare: Why Your Doctor Should Ask About Your Past', type: 'self_help' },
+        { id: planId(11, 49), title: 'Vicarious Trauma in Therapists: The Cost of Bearing Witness', type: 'self_help' },
+        { id: planId(11, 50), title: 'How to Create Trauma-Sensitive Spaces: A Practical Guide', type: 'self_help' },
+      ],
+    },
+    {
+      number: 6,
+      name: 'Collective Trauma, Resilience & Growth',
+      range: '051–055',
+      articles: [
+        { id: planId(11, 51), title: 'What Is Collective Trauma? When Communities Share the Wound', type: 'self_help' },
+        { id: planId(11, 52), title: 'Post-Traumatic Growth: How Some People Emerge Stronger After Adversity', type: 'research_digest' },
+        { id: planId(11, 53), title: 'Resilience After Trauma: What Protective Factors Make the Difference', type: 'research_digest' },
+        { id: planId(11, 54), title: 'Historical Trauma and Indigenous Communities: Understanding Ongoing Impact', type: 'self_help' },
+        { id: planId(11, 55), title: 'Finding Meaning After Trauma: The Role of Narrative and Purpose in Recovery', type: 'self_help' },
+      ],
+    },
+  ],
+};
+
+// ═══════════════════════════════════════════════════════════════════════════
+// CATEGORY 12: Cultural Perspectives, Inclusion & Global Wellness (50 articles)
+// ═══════════════════════════════════════════════════════════════════════════
+
+export const CATEGORY_12: CategoryPlan = {
+  category: 12,
+  name: 'Cultural Perspectives, Inclusion & Global Wellness',
+  slug: 'cultural-global',
+  target: 50,
+  subtopics: [
+    {
+      number: 1,
+      name: 'Mental Health Across Cultures',
+      range: '001–010',
+      articles: [
+        { id: planId(12, 1), title: "How Culture Shapes Mental Health: Why One Framework Doesn't Fit All", type: 'self_help' },
+        { id: planId(12, 2), title: 'Culture-Bound Syndromes: Mental Health Conditions Unique to Specific Cultures', type: 'research_digest' },
+        { id: planId(12, 3), title: 'Collectivist vs. Individualist Cultures: How Community Shapes Mental Illness', type: 'self_help' },
+        { id: planId(12, 4), title: 'Mental Health in East Asian Cultures: Face, Shame, and Somatization', type: 'self_help' },
+        { id: planId(12, 5), title: 'Mental Health in Latin American Communities: Familismo, Faith, and Healing', type: 'self_help' },
+        { id: planId(12, 6), title: 'Mental Health in African and Afro-Diasporic Communities: Resilience and Barriers', type: 'self_help' },
+        { id: planId(12, 7), title: 'Mental Health in Middle Eastern Cultures: Honor, Family, and Stigma', type: 'self_help' },
+        { id: planId(12, 8), title: 'Mental Health in South Asian Communities: Silence, Duty, and the Family System', type: 'self_help' },
+        { id: planId(12, 9), title: 'Indigenous Mental Health: Reclaiming Traditional Healing in Modern Systems', type: 'self_help' },
+        { id: planId(12, 10), title: "Western Psychology's Blind Spots: What Cross-Cultural Research Reveals", type: 'research_digest' },
+      ],
+    },
+    {
+      number: 2,
+      name: 'Stigma, Shame & Help-Seeking',
+      range: '011–020',
+      articles: [
+        { id: planId(12, 11), title: 'Mental Health Stigma: What It Is, Where It Comes From, and How to Fight It', type: 'self_help' },
+        { id: planId(12, 12), title: "Self-Stigma: When You Apply Society's Judgment to Yourself", type: 'self_help' },
+        { id: planId(12, 13), title: "Why Men Don't Seek Help: Masculinity, Stigma, and the Therapy Gap", type: 'self_help' },
+        { id: planId(12, 14), title: 'Mental Health in the Workplace: Fighting Stigma in Professional Settings', type: 'self_help' },
+        { id: planId(12, 15), title: 'Religion and Mental Health: When Faith Helps and When Stigma Hurts', type: 'self_help' },
+        { id: planId(12, 16), title: 'The Language of Stigma: How Words Shape Attitudes Toward Mental Illness', type: 'self_help' },
+        { id: planId(12, 17), title: "Anti-Stigma Campaigns: What Works and What Doesn't According to Research", type: 'research_digest' },
+        { id: planId(12, 18), title: 'Talking About Mental Health Across Generations: Boomers, Gen X, Millennials, Gen Z', type: 'self_help' },
+        { id: planId(12, 19), title: 'Celebrity Mental Health Disclosure: Does It Help or Hurt the Cause?', type: 'self_help' },
+        { id: planId(12, 20), title: 'How to Be a Mental Health Ally: Practical Actions Against Stigma', type: 'self_help' },
+      ],
+    },
+    {
+      number: 3,
+      name: 'Race, Ethnicity & Mental Health',
+      range: '021–030',
+      articles: [
+        { id: planId(12, 21), title: 'Racial Trauma: The Psychological Impact of Racism on Mental Health', type: 'self_help' },
+        { id: planId(12, 22), title: 'Mental Health Disparities: Why People of Color Receive Less and Worse Care', type: 'research_digest' },
+        { id: planId(12, 23), title: 'Microaggressions and Mental Health: The Cumulative Toll of Everyday Racism', type: 'self_help' },
+        { id: planId(12, 24), title: 'Cultural Competence in Therapy: What to Look for in a Provider', type: 'self_help' },
+        { id: planId(12, 25), title: 'Black Mental Health: Breaking the Silence in African American Communities', type: 'self_help' },
+        { id: planId(12, 26), title: 'Hispanic and Latino Mental Health: Language Barriers, Immigration, and Cultural Values', type: 'self_help' },
+        { id: planId(12, 27), title: 'Asian American Mental Health: The Model Minority Myth and Its Consequences', type: 'self_help' },
+        { id: planId(12, 28), title: 'Mental Health in Multiracial and Multicultural Individuals: Navigating Multiple Identities', type: 'self_help' },
+        { id: planId(12, 29), title: 'Addressing Mental Health in Predominantly White Institutions', type: 'self_help' },
+        { id: planId(12, 30), title: 'Culturally Adapted Therapies: What Makes Treatment Work Across Racial Groups', type: 'treatment_guide' },
+      ],
+    },
+    {
+      number: 4,
+      name: 'Immigration, Displacement & Mental Health',
+      range: '031–040',
+      articles: [
+        { id: planId(12, 31), title: 'The Mental Health Impact of Immigration: What Every Newcomer Needs to Know', type: 'self_help' },
+        { id: planId(12, 32), title: 'Refugee Mental Health: Trauma, Displacement, and Rebuilding', type: 'self_help' },
+        { id: planId(12, 33), title: 'Asylum Seekers and Psychological Distress: The Mental Health Crisis at Borders', type: 'self_help' },
+        { id: planId(12, 34), title: 'Acculturation Stress: When Adapting to a New Culture Overwhelms You', type: 'self_help' },
+        { id: planId(12, 35), title: "Language Barriers and Mental Health: When You Can't Express Your Pain", type: 'self_help' },
+        { id: planId(12, 36), title: 'Undocumented and Anxious: Mental Health in the Shadows', type: 'self_help' },
+        { id: planId(12, 37), title: 'Children of Immigrants: Growing Up Between Two Worlds', type: 'self_help' },
+        { id: planId(12, 38), title: 'Reverse Culture Shock: The Mental Health Challenges of Returning Home', type: 'self_help' },
+        { id: planId(12, 39), title: 'International Students and Mental Health: Isolation, Pressure, and Distance from Home', type: 'self_help' },
+        { id: planId(12, 40), title: 'Building Culturally Responsive Mental Health Services for Newcomers', type: 'self_help' },
+      ],
+    },
+    {
+      number: 5,
+      name: 'Traditional Healing & Global Approaches',
+      range: '041–050',
+      articles: [
+        { id: planId(12, 41), title: 'Traditional Healing and Evidence-Based Practice: Can They Work Together?', type: 'research_digest' },
+        { id: planId(12, 42), title: 'Mindfulness Beyond McMindfulness: Buddhist Origins and Clinical Applications', type: 'self_help' },
+        { id: planId(12, 43), title: 'Ayurveda and Mental Health: An Ancient System in Modern Context', type: 'self_help' },
+        { id: planId(12, 44), title: 'Traditional Chinese Medicine and Psychological Wellness', type: 'self_help' },
+        { id: planId(12, 45), title: 'Indigenous Healing Practices: Ceremony, Community, and Connection', type: 'self_help' },
+        { id: planId(12, 46), title: 'Faith-Based Counseling: When Spiritual Support Meets Psychological Need', type: 'self_help' },
+        { id: planId(12, 47), title: 'Art Therapy Across Cultures: Creative Healing as a Universal Language', type: 'treatment_guide' },
+        { id: planId(12, 48), title: 'Community-Based Mental Health: How Non-Western Models Center the Collective', type: 'self_help' },
+        { id: planId(12, 49), title: 'Global Mental Health Policy: WHO Guidelines and the Treatment Gap', type: 'research_digest' },
+        { id: planId(12, 50), title: 'The Future of Culturally Responsive Mental Healthcare: Integration, Not Replacement', type: 'self_help' },
+      ],
+    },
+  ],
+};

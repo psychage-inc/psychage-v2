@@ -19,7 +19,7 @@ const ToolbarButton: React.FC<ToolbarButtonProps> = ({ onClick, active, disabled
       'p-1.5 rounded transition-colors',
       active
         ? 'bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-400'
-        : 'text-gray-500 hover:bg-gray-100 dark:text-slate-400 dark:hover:bg-slate-800',
+        : 'text-text-secondary hover:bg-surface-hover',
       disabled && 'opacity-40 cursor-not-allowed'
     )}
   >

@@ -32,7 +32,7 @@ interface EditorToolbarProps {
   onVideoClick: () => void;
 }
 
-const Divider = () => <div className="w-px h-5 bg-gray-200 dark:bg-slate-700 mx-1" />;
+const Divider = () => <div className="w-px h-5 bg-border mx-1" />;
 
 const EditorToolbar: React.FC<EditorToolbarProps> = ({
   editor,
@@ -41,7 +41,7 @@ const EditorToolbar: React.FC<EditorToolbarProps> = ({
   onVideoClick,
 }) => {
   return (
-    <div className="flex items-center gap-0.5 flex-wrap px-2 py-1.5 border-b border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800/50">
+    <div className="flex items-center gap-0.5 flex-wrap px-2 py-1.5 border-b border-border bg-surface-hover">
       {/* Heading dropdown */}
       <HeadingDropdown editor={editor} />
 

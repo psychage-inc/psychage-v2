@@ -82,7 +82,7 @@ const AdminUserManagementV2: React.FC = () => {
       accessorKey: 'user_id',
       header: 'User ID',
       cell: ({ row }) => (
-        <code className="text-xs font-mono text-gray-500">{row.original.user_id.slice(0, 8)}...</code>
+        <code className="text-xs font-mono text-text-secondary">{row.original.user_id.slice(0, 8)}...</code>
       ),
     },
     {
@@ -94,7 +94,7 @@ const AdminUserManagementV2: React.FC = () => {
           <select
             value={row.original.role}
             onChange={(e) => changeRoleMutation.mutate({ id: row.original.id, newRole: e.target.value as AdminRole })}
-            className="text-sm border border-gray-200 dark:border-slate-700 rounded-lg px-2 py-1 bg-white dark:bg-slate-900 outline-none focus:ring-2 focus:ring-teal-500"
+            className="text-sm border border-border rounded-lg px-2 py-1 bg-surface outline-none focus:ring-2 focus:ring-primary"
           >
             <option value="super_admin">Super Admin</option>
             <option value="clinical_admin">Clinical Admin</option>
@@ -107,7 +107,7 @@ const AdminUserManagementV2: React.FC = () => {
       accessorKey: 'created_at',
       header: 'Added',
       cell: ({ row }) => (
-        <span className="text-sm text-gray-500">
+        <span className="text-sm text-text-secondary">
           {new Date(row.original.created_at).toLocaleDateString()}
         </span>
       ),
@@ -121,7 +121,7 @@ const AdminUserManagementV2: React.FC = () => {
         return (
           <button
             onClick={() => setRemoveTarget(row.original)}
-            className="p-1.5 text-gray-400 hover:text-red-500 transition-colors"
+            className="p-1.5 text-text-tertiary hover:text-red-500 transition-colors"
             title="Remove"
           >
             <Trash2 size={15} />
@@ -140,7 +140,7 @@ const AdminUserManagementV2: React.FC = () => {
           isSuperAdmin ? (
             <button
               onClick={() => setShowInvite(true)}
-              className="flex items-center gap-2 px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium rounded-lg transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary-hover text-white text-sm font-medium rounded-lg transition-colors"
             >
               <UserPlus size={16} /> Add Admin
             </button>
@@ -166,24 +166,24 @@ const AdminUserManagementV2: React.FC = () => {
       {showInvite && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
           <div className="absolute inset-0 bg-black/40" onClick={() => setShowInvite(false)} />
-          <div className="relative bg-white dark:bg-slate-900 rounded-xl shadow-xl p-6 w-full max-w-md">
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Add Admin User</h2>
+          <div className="relative bg-surface rounded-2xl shadow-xl p-6 w-full max-w-md">
+            <h2 className="text-lg font-semibold text-text-primary mb-4">Add Admin User</h2>
             <div className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1">Email</label>
+                <label className="block text-sm font-medium text-text-secondary mb-1">Email</label>
                 <input
                   value={inviteEmail}
                   onChange={(e) => setInviteEmail(e.target.value)}
                   placeholder="user@example.com"
-                  className="w-full px-3 py-2 text-sm border border-gray-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-900 outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1">Role</label>
+                <label className="block text-sm font-medium text-text-secondary mb-1">Role</label>
                 <select
                   value={inviteRole}
                   onChange={(e) => setInviteRole(e.target.value as AdminRole)}
-                  className="w-full px-3 py-2 text-sm border border-gray-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-900 outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface outline-none focus:ring-2 focus:ring-primary"
                 >
                   <option value="viewer">Viewer</option>
                   <option value="clinical_admin">Clinical Admin</option>
@@ -196,14 +196,14 @@ const AdminUserManagementV2: React.FC = () => {
               <div className="flex gap-2">
                 <button
                   onClick={() => setShowInvite(false)}
-                  className="flex-1 py-2 bg-gray-100 text-gray-700 text-sm rounded-lg hover:bg-gray-200"
+                  className="flex-1 py-2 bg-surface-hover text-text-secondary text-sm rounded-lg hover:bg-surface-active"
                 >
                   Cancel
                 </button>
                 <button
                   onClick={() => inviteMutation.mutate()}
                   disabled={inviteMutation.isPending || !inviteEmail.trim()}
-                  className="flex-1 py-2 bg-teal-600 text-white text-sm rounded-lg hover:bg-teal-700 disabled:opacity-50"
+                  className="flex-1 py-2 bg-primary text-white text-sm rounded-lg hover:bg-primary-hover disabled:opacity-50"
                 >
                   {inviteMutation.isPending ? 'Adding...' : 'Add Admin'}
                 </button>

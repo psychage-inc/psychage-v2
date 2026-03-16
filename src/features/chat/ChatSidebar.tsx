@@ -1,5 +1,6 @@
-import { Plus, Search, X, Brain } from 'lucide-react';
+import { Plus, Search, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Logo } from '@/components/ui/Logo';
 import { useAuth } from '@/context/AuthContext';
 import { useConversations } from './hooks/useConversations';
 import ConversationItem from './components/ConversationItem';
@@ -38,10 +39,9 @@ export default function ChatSidebar({
       <div className="flex items-center justify-between px-4 py-3 border-b border-slate-200 dark:border-slate-800">
         <Link
           to="/"
-          className="flex items-center gap-2 text-slate-700 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
+          className="flex items-center hover:opacity-80 transition-opacity"
         >
-          <Brain size={20} className="text-teal-600 dark:text-teal-400" />
-          <span className="text-sm font-semibold">Psyche AI</span>
+          <Logo className="h-7 w-auto text-[#1A1A1A] dark:text-white" />
         </Link>
         {isMobile && onClose && (
           <button

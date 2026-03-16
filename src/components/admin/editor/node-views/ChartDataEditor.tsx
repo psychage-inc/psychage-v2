@@ -33,11 +33,11 @@ const ChartDataEditor: React.FC<ChartDataEditorProps> = ({ data, onChange }) => 
   return (
     <div className="p-3 space-y-3">
       <div className="flex items-center gap-3">
-        <label className="text-xs font-medium text-gray-500 dark:text-slate-400">Type</label>
+        <label className="text-xs font-medium text-text-secondary">Type</label>
         <select
           value={data.chartType}
           onChange={(e) => onChange({ ...data, chartType: e.target.value as ChartBlockData['chartType'] })}
-          className="px-2 py-1 text-xs border border-gray-300 dark:border-slate-600 rounded bg-white dark:bg-slate-900 text-gray-700 dark:text-slate-300"
+          className="px-2 py-1 text-xs border border-border-hover rounded bg-surface text-text-secondary"
         >
           <option value="bar">Bar Chart</option>
           <option value="pie">Pie Chart</option>
@@ -47,7 +47,7 @@ const ChartDataEditor: React.FC<ChartDataEditorProps> = ({ data, onChange }) => 
 
       <table className="w-full text-xs">
         <thead>
-          <tr className="text-left text-gray-500 dark:text-slate-400">
+          <tr className="text-left text-text-secondary">
             <th className="pb-1 font-medium">Label</th>
             <th className="pb-1 font-medium w-24">Value</th>
             <th className="pb-1 w-8" />
@@ -60,7 +60,7 @@ const ChartDataEditor: React.FC<ChartDataEditorProps> = ({ data, onChange }) => 
                 <input
                   value={row.label}
                   onChange={(e) => updateRow(i, 'label', e.target.value)}
-                  className="w-full px-2 py-1 border border-gray-300 dark:border-slate-600 rounded bg-white dark:bg-slate-900 text-gray-700 dark:text-slate-300"
+                  className="w-full px-2 py-1 border border-border-hover rounded bg-surface text-text-secondary"
                 />
               </td>
               <td className="py-0.5 pr-2">
@@ -68,14 +68,14 @@ const ChartDataEditor: React.FC<ChartDataEditorProps> = ({ data, onChange }) => 
                   type="number"
                   value={row.value}
                   onChange={(e) => updateRow(i, 'value', e.target.value)}
-                  className="w-full px-2 py-1 border border-gray-300 dark:border-slate-600 rounded bg-white dark:bg-slate-900 text-gray-700 dark:text-slate-300"
+                  className="w-full px-2 py-1 border border-border-hover rounded bg-surface text-text-secondary"
                 />
               </td>
               <td className="py-0.5">
                 <button
                   onClick={() => removeRow(i)}
                   disabled={data.data.length <= 1}
-                  className="p-1 text-gray-400 hover:text-red-500 disabled:opacity-30 disabled:cursor-not-allowed"
+                  className="p-1 text-text-tertiary hover:text-red-500 disabled:opacity-30 disabled:cursor-not-allowed"
                 >
                   <Trash2 size={12} />
                 </button>
@@ -87,7 +87,7 @@ const ChartDataEditor: React.FC<ChartDataEditorProps> = ({ data, onChange }) => 
 
       <button
         onClick={addRow}
-        className="flex items-center gap-1 text-xs text-teal-600 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300"
+        className="flex items-center gap-1 text-xs text-primary hover:text-primary"
       >
         <Plus size={12} /> Add Row
       </button>

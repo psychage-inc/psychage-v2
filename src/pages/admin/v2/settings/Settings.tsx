@@ -81,17 +81,17 @@ const AdminSettingsV2: React.FC = () => {
     if (field.type === 'boolean') {
       const boolValue = value === true || value === 'true';
       return (
-        <div key={field.key} className="flex items-center justify-between py-4 border-b border-gray-100 dark:border-slate-800 last:border-0">
+        <div key={field.key} className="flex items-center justify-between py-4 border-b border-border last:border-0">
           <div>
-            <p className="text-sm font-medium text-gray-900 dark:text-white">
+            <p className="text-sm font-medium text-text-primary">
               {field.label}
               {field.critical && <AlertTriangle size={12} className="inline ml-1.5 text-amber-500" />}
             </p>
-            {field.description && <p className="text-xs text-gray-500 mt-0.5">{field.description}</p>}
+            {field.description && <p className="text-xs text-text-secondary mt-0.5">{field.description}</p>}
           </div>
           <button
             onClick={() => handleChange(field.key, !boolValue, field.critical)}
-            className={`w-11 h-6 rounded-full transition-colors relative ${boolValue ? 'bg-teal-500' : 'bg-gray-300'}`}
+            className={`w-11 h-6 rounded-full transition-colors relative ${boolValue ? 'bg-primary' : 'bg-gray-300'}`}
           >
             <div className={`absolute top-0.5 w-5 h-5 rounded-full bg-white shadow transition-all ${boolValue ? 'left-5' : 'left-0.5'}`} />
           </button>
@@ -101,16 +101,16 @@ const AdminSettingsV2: React.FC = () => {
 
     if (field.type === 'number') {
       return (
-        <div key={field.key} className="flex items-center justify-between py-4 border-b border-gray-100 dark:border-slate-800 last:border-0">
+        <div key={field.key} className="flex items-center justify-between py-4 border-b border-border last:border-0">
           <div>
-            <p className="text-sm font-medium text-gray-900 dark:text-white">{field.label}</p>
-            {field.description && <p className="text-xs text-gray-500 mt-0.5">{field.description}</p>}
+            <p className="text-sm font-medium text-text-primary">{field.label}</p>
+            {field.description && <p className="text-xs text-text-secondary mt-0.5">{field.description}</p>}
           </div>
           <input
             type="number"
             value={String(value ?? '')}
             onChange={(e) => setValues((prev) => ({ ...prev, [field.key]: Number(e.target.value) }))}
-            className="w-24 px-3 py-1.5 text-sm text-right border border-gray-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-900 outline-none focus:ring-2 focus:ring-teal-500"
+            className="w-24 px-3 py-1.5 text-sm text-right border border-border rounded-lg bg-surface outline-none focus:ring-2 focus:ring-primary"
           />
         </div>
       );
@@ -122,7 +122,7 @@ const AdminSettingsV2: React.FC = () => {
   if (isLoading) {
     return (
       <div className="flex items-center justify-center py-24">
-        <div className="w-8 h-8 rounded-full border-2 border-gray-200 border-t-teal-500 animate-spin" />
+        <div className="w-8 h-8 rounded-full border-2 border-border border-t-primary animate-spin" />
       </div>
     );
   }
@@ -136,7 +136,7 @@ const AdminSettingsV2: React.FC = () => {
           <button
             onClick={() => saveMutation.mutate()}
             disabled={saveMutation.isPending}
-            className="flex items-center gap-2 px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium rounded-lg transition-colors disabled:opacity-50"
+            className="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary-hover text-white text-sm font-medium rounded-lg transition-colors disabled:opacity-50"
           >
             <Save size={16} />
             {saveMutation.isPending ? 'Saving...' : 'Save Changes'}
@@ -150,7 +150,7 @@ const AdminSettingsV2: React.FC = () => {
         </div>
       )}
 
-      <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl px-6">
+      <div className="bg-surface border border-border rounded-2xl px-6">
         {SETTING_FIELDS.map(renderField)}
       </div>
 

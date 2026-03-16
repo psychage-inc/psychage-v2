@@ -4,7 +4,7 @@ import Button from '@/components/ui/Button';
 import type { FreeFormEntry } from '../types';
 import { generateId, nowISO } from '../dates';
 import { getDailyPrompt, getRandomPrompt } from '../data/prompts';
-import { scanForCrisisKeywords } from '../../ThoughtReframer/crisisDetection';
+import { scanForCrisisKeywords } from '@/lib/safety/crisisKeywords';
 
 interface FreeFormSectionProps {
   onSave: (entry: FreeFormEntry) => void;

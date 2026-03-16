@@ -19,18 +19,18 @@ export default function ConversationItem({
 
   return (
     <div
-      className={`group relative flex items-center gap-2 px-3 py-2.5 rounded-lg cursor-pointer transition-colors ${
+      className={`group relative flex items-center gap-2 px-3 py-2.5 rounded-lg cursor-pointer transition-all duration-200 ${
         isActive
-          ? 'bg-teal-50 dark:bg-teal-900/20 border-l-2 border-teal-500'
-          : 'hover:bg-slate-100 dark:hover:bg-slate-800 border-l-2 border-transparent'
+          ? 'bg-teal-50 dark:bg-teal-900/20 border-l-2 border-teal-500 shadow-sm'
+          : 'hover:bg-teal-50/50 dark:hover:bg-teal-900/10 border-l-2 border-transparent hover:border-teal-300 dark:hover:border-teal-700'
       }`}
       onClick={() => onSelect(conversation.id)}
     >
       <p
-        className={`flex-1 text-sm truncate ${
+        className={`flex-1 text-sm truncate transition-colors duration-200 ${
           isActive
             ? 'text-teal-900 dark:text-teal-100 font-medium'
-            : 'text-slate-700 dark:text-slate-300'
+            : 'text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200'
         }`}
       >
         {conversation.title}

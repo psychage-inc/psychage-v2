@@ -79,7 +79,7 @@ const AdminProviderEditor: React.FC = () => {
   if (isLoading) {
     return (
       <div className="flex items-center justify-center py-24">
-        <div className="w-8 h-8 rounded-full border-2 border-gray-200 border-t-teal-500 animate-spin" />
+        <div className="w-8 h-8 rounded-full border-2 border-border border-t-primary animate-spin" />
       </div>
     );
   }
@@ -90,7 +90,7 @@ const AdminProviderEditor: React.FC = () => {
         title="Edit Provider"
         description={provider?.name || ''}
         actions={
-          <button onClick={() => navigate(adminPath('/providers'))} className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 hover:text-gray-900">
+          <button onClick={() => navigate(adminPath('/providers'))} className="flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:text-text-primary">
             <ArrowLeft size={16} /> Back
           </button>
         }
@@ -98,75 +98,75 @@ const AdminProviderEditor: React.FC = () => {
 
       <form onSubmit={handleSubmit((data) => saveMutation.mutate(data))} className="space-y-6 max-w-2xl">
         {/* Basic Info */}
-        <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-6 space-y-4">
-          <h3 className="text-sm font-semibold text-gray-900 dark:text-white">Basic Information</h3>
+        <div className="bg-surface border border-border rounded-2xl p-6 space-y-4">
+          <h3 className="text-sm font-semibold text-text-primary">Basic Information</h3>
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1">Name</label>
-              <input {...register('name')} className="w-full px-3 py-2 text-sm border border-gray-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-900 outline-none focus:ring-2 focus:ring-teal-500" />
+              <label className="block text-sm font-medium text-text-secondary mb-1">Name</label>
+              <input {...register('name')} className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface outline-none focus:ring-2 focus:ring-primary" />
               {errors.name && <p className="text-xs text-red-500 mt-1">{errors.name.message}</p>}
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1">Credentials</label>
-              <input {...register('credentials')} className="w-full px-3 py-2 text-sm border border-gray-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-900 outline-none focus:ring-2 focus:ring-teal-500" />
+              <label className="block text-sm font-medium text-text-secondary mb-1">Credentials</label>
+              <input {...register('credentials')} className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface outline-none focus:ring-2 focus:ring-primary" />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1">NPI Number</label>
-              <input {...register('npi_number')} className="w-full px-3 py-2 text-sm border border-gray-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-900 outline-none focus:ring-2 focus:ring-teal-500" />
+              <label className="block text-sm font-medium text-text-secondary mb-1">NPI Number</label>
+              <input {...register('npi_number')} className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface outline-none focus:ring-2 focus:ring-primary" />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1">Practice Name</label>
-              <input {...register('practice_name')} className="w-full px-3 py-2 text-sm border border-gray-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-900 outline-none focus:ring-2 focus:ring-teal-500" />
+              <label className="block text-sm font-medium text-text-secondary mb-1">Practice Name</label>
+              <input {...register('practice_name')} className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface outline-none focus:ring-2 focus:ring-primary" />
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1">City</label>
-              <input {...register('city')} className="w-full px-3 py-2 text-sm border border-gray-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-900 outline-none focus:ring-2 focus:ring-teal-500" />
+              <label className="block text-sm font-medium text-text-secondary mb-1">City</label>
+              <input {...register('city')} className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface outline-none focus:ring-2 focus:ring-primary" />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1">State</label>
-              <input {...register('state')} className="w-full px-3 py-2 text-sm border border-gray-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-900 outline-none focus:ring-2 focus:ring-teal-500" />
+              <label className="block text-sm font-medium text-text-secondary mb-1">State</label>
+              <input {...register('state')} className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface outline-none focus:ring-2 focus:ring-primary" />
             </div>
           </div>
-          <label className="flex items-center gap-2 text-sm text-gray-700 dark:text-slate-300">
-            <input type="checkbox" {...register('telehealth')} className="rounded border-gray-300 text-teal-600" />
+          <label className="flex items-center gap-2 text-sm text-text-secondary">
+            <input type="checkbox" {...register('telehealth')} className="rounded border-border-hover text-primary" />
             Telehealth available
           </label>
         </div>
 
         {/* Verification */}
-        <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-6 space-y-4">
-          <h3 className="text-sm font-semibold text-gray-900 dark:text-white">Verification</h3>
+        <div className="bg-surface border border-border rounded-2xl p-6 space-y-4">
+          <h3 className="text-sm font-semibold text-text-primary">Verification</h3>
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1">Verification Tier</label>
-            <select {...register('verification_tier')} className="w-full px-3 py-2 text-sm border border-gray-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-900 outline-none focus:ring-2 focus:ring-teal-500">
+            <label className="block text-sm font-medium text-text-secondary mb-1">Verification Tier</label>
+            <select {...register('verification_tier')} className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface outline-none focus:ring-2 focus:ring-primary">
               {VERIFICATION_TIERS.map((t) => <option key={t.value} value={t.value}>{t.label}</option>)}
             </select>
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1">Verification Notes</label>
-            <textarea {...register('verification_notes')} rows={3} className="w-full px-3 py-2 text-sm border border-gray-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-900 resize-none outline-none focus:ring-2 focus:ring-teal-500" />
+            <label className="block text-sm font-medium text-text-secondary mb-1">Verification Notes</label>
+            <textarea {...register('verification_notes')} rows={3} className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface resize-none outline-none focus:ring-2 focus:ring-primary" />
           </div>
         </div>
 
         {/* Suspension */}
-        <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-6 space-y-4">
-          <h3 className="text-sm font-semibold text-gray-900 dark:text-white">Suspension</h3>
-          <label className="flex items-center gap-2 text-sm text-gray-700 dark:text-slate-300">
-            <input type="checkbox" {...register('is_suspended')} className="rounded border-gray-300 text-red-600" />
+        <div className="bg-surface border border-border rounded-2xl p-6 space-y-4">
+          <h3 className="text-sm font-semibold text-text-primary">Suspension</h3>
+          <label className="flex items-center gap-2 text-sm text-text-secondary">
+            <input type="checkbox" {...register('is_suspended')} className="rounded border-border-hover text-red-600" />
             Provider is suspended
           </label>
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1">Suspension Reason</label>
-            <textarea {...register('suspension_reason')} rows={2} className="w-full px-3 py-2 text-sm border border-gray-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-900 resize-none outline-none focus:ring-2 focus:ring-teal-500" />
+            <label className="block text-sm font-medium text-text-secondary mb-1">Suspension Reason</label>
+            <textarea {...register('suspension_reason')} rows={2} className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface resize-none outline-none focus:ring-2 focus:ring-primary" />
           </div>
         </div>
 
         <button
           type="submit"
           disabled={saveMutation.isPending}
-          className="flex items-center gap-2 px-6 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium rounded-lg transition-colors disabled:opacity-50"
+          className="flex items-center gap-2 px-6 py-2.5 bg-primary hover:bg-primary-hover text-white text-sm font-medium rounded-lg transition-colors disabled:opacity-50"
         >
           <Save size={16} />
           {saveMutation.isPending ? 'Saving...' : 'Save Changes'}

@@ -37,41 +37,41 @@ const AdminSafetyDashboard: React.FC = () => {
 
       {/* Metrics */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-        <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-5">
+        <div className="bg-surface border border-border rounded-2xl p-5">
           <div className="flex items-center gap-3 mb-2">
             <div className="w-10 h-10 rounded-lg bg-red-50 dark:bg-red-900/20 flex items-center justify-center">
               <ShieldAlert size={20} className="text-red-600" />
             </div>
           </div>
-          <p className="text-sm text-gray-500">CRISIS Keywords</p>
-          <p className="text-2xl font-bold text-gray-900 dark:text-white">{keywordCounts?.crisis ?? 0}</p>
+          <p className="text-sm text-text-secondary">CRISIS Keywords</p>
+          <p className="text-2xl font-bold text-text-primary">{keywordCounts?.crisis ?? 0}</p>
         </div>
-        <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-5">
+        <div className="bg-surface border border-border rounded-2xl p-5">
           <div className="flex items-center gap-3 mb-2">
             <div className="w-10 h-10 rounded-lg bg-orange-50 dark:bg-orange-900/20 flex items-center justify-center">
               <AlertTriangle size={20} className="text-orange-600" />
             </div>
           </div>
-          <p className="text-sm text-gray-500">URGENT Keywords</p>
-          <p className="text-2xl font-bold text-gray-900 dark:text-white">{keywordCounts?.urgent ?? 0}</p>
+          <p className="text-sm text-text-secondary">URGENT Keywords</p>
+          <p className="text-2xl font-bold text-text-primary">{keywordCounts?.urgent ?? 0}</p>
         </div>
-        <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-5">
+        <div className="bg-surface border border-border rounded-2xl p-5">
           <div className="flex items-center gap-3 mb-2">
             <div className="w-10 h-10 rounded-lg bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center">
               <Eye size={20} className="text-blue-600" />
             </div>
           </div>
-          <p className="text-sm text-gray-500">WATCH Keywords</p>
-          <p className="text-2xl font-bold text-gray-900 dark:text-white">{keywordCounts?.watch ?? 0}</p>
+          <p className="text-sm text-text-secondary">WATCH Keywords</p>
+          <p className="text-2xl font-bold text-text-primary">{keywordCounts?.watch ?? 0}</p>
         </div>
-        <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-5">
+        <div className="bg-surface border border-border rounded-2xl p-5">
           <div className="flex items-center gap-3 mb-2">
-            <div className="w-10 h-10 rounded-lg bg-gray-50 dark:bg-slate-800 flex items-center justify-center">
-              <ShieldCheck size={20} className="text-gray-600" />
+            <div className="w-10 h-10 rounded-lg bg-surface-hover flex items-center justify-center">
+              <ShieldCheck size={20} className="text-text-secondary" />
             </div>
           </div>
-          <p className="text-sm text-gray-500">Total Active Keywords</p>
-          <p className="text-2xl font-bold text-gray-900 dark:text-white">{keywordCounts?.total ?? 0}</p>
+          <p className="text-sm text-text-secondary">Total Active Keywords</p>
+          <p className="text-2xl font-bold text-text-primary">{keywordCounts?.total ?? 0}</p>
         </div>
       </div>
 
@@ -79,26 +79,26 @@ const AdminSafetyDashboard: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <Link
           to={adminPath('/safety/keywords')}
-          className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-5 hover:border-teal-300 dark:hover:border-teal-700 transition-colors group"
+          className="bg-surface border border-border rounded-2xl p-5 hover:border-border-hover transition-colors group"
         >
           <div className="flex items-center justify-between">
             <div>
-              <h3 className="font-medium text-gray-900 dark:text-white">Crisis Keywords</h3>
-              <p className="text-sm text-gray-500 mt-1">Manage detection keywords by severity and category</p>
+              <h3 className="font-medium text-text-primary">Crisis Keywords</h3>
+              <p className="text-sm text-text-secondary mt-1">Manage detection keywords by severity and category</p>
             </div>
-            <ArrowRight size={20} className="text-gray-400 group-hover:text-teal-600 transition-colors" />
+            <ArrowRight size={20} className="text-text-tertiary group-hover:text-primary transition-colors" />
           </div>
         </Link>
         <Link
           to={adminPath('/safety/conversations')}
-          className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-5 hover:border-teal-300 dark:hover:border-teal-700 transition-colors group"
+          className="bg-surface border border-border rounded-2xl p-5 hover:border-border-hover transition-colors group"
         >
           <div className="flex items-center justify-between">
             <div>
-              <h3 className="font-medium text-gray-900 dark:text-white">Conversation Review</h3>
-              <p className="text-sm text-gray-500 mt-1">Review flagged AI conversations</p>
+              <h3 className="font-medium text-text-primary">Conversation Review</h3>
+              <p className="text-sm text-text-secondary mt-1">Review flagged AI conversations</p>
             </div>
-            <ArrowRight size={20} className="text-gray-400 group-hover:text-teal-600 transition-colors" />
+            <ArrowRight size={20} className="text-text-tertiary group-hover:text-primary transition-colors" />
           </div>
         </Link>
       </div>

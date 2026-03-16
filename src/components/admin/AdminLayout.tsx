@@ -20,14 +20,14 @@ const AdminLayout: React.FC = () => {
 
   if (loading || !adminUser) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-slate-50 dark:bg-slate-950">
-        <div className="w-8 h-8 rounded-full border-2 border-gray-200 border-t-teal-500 animate-spin" />
+      <div className="flex items-center justify-center min-h-screen bg-background">
+        <div className="w-8 h-8 rounded-full border-2 border-border border-t-primary animate-spin" />
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
+    <div className="min-h-screen bg-background">
       <AdminSidebar
         collapsed={sidebarCollapsed}
         onToggle={() => setSidebarCollapsed((prev) => !prev)}

@@ -90,25 +90,25 @@ const ImageUploadDialog: React.FC<ImageUploadDialogProps> = ({ editor, open, onO
       <DialogPrimitive.Portal>
         <DialogPrimitive.Overlay className="fixed inset-0 z-[100] bg-black/40 backdrop-blur-sm" />
         <DialogPrimitive.Content className="fixed inset-0 z-[101] flex items-center justify-center p-4">
-          <div className="relative w-full max-w-md bg-white dark:bg-slate-800 rounded-xl shadow-xl border border-gray-200 dark:border-slate-700">
-            <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-slate-700">
-              <DialogPrimitive.Title className="text-sm font-semibold text-gray-900 dark:text-white flex items-center gap-2">
+          <div className="relative w-full max-w-md bg-surface rounded-xl shadow-xl border border-border">
+            <div className="flex items-center justify-between p-4 border-b border-border">
+              <DialogPrimitive.Title className="text-sm font-semibold text-text-primary flex items-center gap-2">
                 <ImageIcon size={16} /> Insert Image
               </DialogPrimitive.Title>
-              <DialogPrimitive.Close className="p-1 text-gray-400 hover:text-gray-600 dark:hover:text-slate-300 rounded">
+              <DialogPrimitive.Close className="p-1 text-text-tertiary hover:text-text-primary rounded">
                 <X size={16} />
               </DialogPrimitive.Close>
             </div>
 
             {/* Tab switcher */}
-            <div className="flex border-b border-gray-200 dark:border-slate-700">
+            <div className="flex border-b border-border">
               <button
                 onClick={() => setTab('upload')}
                 disabled={!articleId}
                 className={`flex-1 px-4 py-2 text-xs font-medium transition-colors ${
                   tab === 'upload'
-                    ? 'text-teal-600 border-b-2 border-teal-600 dark:text-teal-400'
-                    : 'text-gray-500 dark:text-slate-400 hover:text-gray-700'
+                    ? 'text-primary border-b-2 border-primary'
+                    : 'text-text-secondary hover:text-text-primary'
                 } ${!articleId ? 'opacity-40 cursor-not-allowed' : ''}`}
               >
                 <Upload size={12} className="inline mr-1" /> Upload File
@@ -117,8 +117,8 @@ const ImageUploadDialog: React.FC<ImageUploadDialogProps> = ({ editor, open, onO
                 onClick={() => setTab('url')}
                 className={`flex-1 px-4 py-2 text-xs font-medium transition-colors ${
                   tab === 'url'
-                    ? 'text-teal-600 border-b-2 border-teal-600 dark:text-teal-400'
-                    : 'text-gray-500 dark:text-slate-400 hover:text-gray-700'
+                    ? 'text-primary border-b-2 border-primary'
+                    : 'text-text-secondary hover:text-text-primary'
                 }`}
               >
                 <LinkIcon size={12} className="inline mr-1" /> URL
@@ -137,21 +137,21 @@ const ImageUploadDialog: React.FC<ImageUploadDialogProps> = ({ editor, open, onO
                     onDrop={handleDrop}
                     className={`border-2 border-dashed rounded-lg p-6 text-center transition-colors ${
                       isDragging
-                        ? 'border-teal-500 bg-teal-50 dark:bg-teal-900/10'
-                        : 'border-gray-300 dark:border-slate-600 hover:border-gray-400'
+                        ? 'border-primary bg-primary/10'
+                        : 'border-border-hover hover:border-gray-400'
                     }`}
                   >
                     {isUploading ? (
                       <div className="space-y-2">
-                        <div className="w-8 h-8 border-2 border-teal-500 border-t-transparent rounded-full animate-spin mx-auto" />
-                        <p className="text-sm text-teal-600">Uploading...</p>
+                        <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin mx-auto" />
+                        <p className="text-sm text-primary">Uploading...</p>
                       </div>
                     ) : (
                       <>
-                        <Upload size={24} className="mx-auto mb-2 text-gray-400" />
-                        <p className="text-sm text-gray-600 dark:text-slate-400">
+                        <Upload size={24} className="mx-auto mb-2 text-text-tertiary" />
+                        <p className="text-sm text-text-secondary">
                           Drag & drop or{' '}
-                          <label className="text-teal-600 hover:text-teal-700 cursor-pointer font-medium">
+                          <label className="text-primary hover:text-primary cursor-pointer font-medium">
                             browse
                             <input
                               type="file"
@@ -161,18 +161,18 @@ const ImageUploadDialog: React.FC<ImageUploadDialogProps> = ({ editor, open, onO
                             />
                           </label>
                         </p>
-                        <p className="text-xs text-gray-400 mt-1">PNG, JPG, WEBP up to 10MB</p>
+                        <p className="text-xs text-text-tertiary mt-1">PNG, JPG, WEBP up to 10MB</p>
                       </>
                     )}
                   </div>
                 ) : (
-                  <div className="text-center py-4 text-gray-500 text-sm">
+                  <div className="text-center py-4 text-text-secondary text-sm">
                     Save the article first to enable image upload
                   </div>
                 )
               ) : (
                 <div>
-                  <label className="block text-xs font-medium text-gray-500 dark:text-slate-400 mb-1">
+                  <label className="block text-xs font-medium text-text-secondary mb-1">
                     Image URL
                   </label>
                   <input
@@ -182,38 +182,38 @@ const ImageUploadDialog: React.FC<ImageUploadDialogProps> = ({ editor, open, onO
                     placeholder="https://example.com/image.png"
                     autoFocus
                     onKeyDown={(e) => e.key === 'Enter' && handleUrlInsert()}
-                    className="w-full px-3 py-2 text-sm border border-gray-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-900 text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none"
+                    className="w-full px-3 py-2 text-sm border border-border-hover rounded-lg bg-surface text-text-primary placeholder:text-text-tertiary focus:ring-2 focus:ring-primary focus:border-primary outline-none"
                   />
                 </div>
               )}
 
               {/* Alt text (shared) */}
               <div>
-                <label className="block text-xs font-medium text-gray-500 dark:text-slate-400 mb-1">
-                  Alt Text <span className="text-gray-400">(optional)</span>
+                <label className="block text-xs font-medium text-text-secondary mb-1">
+                  Alt Text <span className="text-text-tertiary">(optional)</span>
                 </label>
                 <input
                   type="text"
                   value={altText}
                   onChange={(e) => setAltText(e.target.value)}
                   placeholder="Describe the image..."
-                  className="w-full px-3 py-2 text-sm border border-gray-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-900 text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none"
+                  className="w-full px-3 py-2 text-sm border border-border-hover rounded-lg bg-surface text-text-primary placeholder:text-text-tertiary focus:ring-2 focus:ring-primary focus:border-primary outline-none"
                 />
               </div>
             </div>
 
             {tab === 'url' && (
-              <div className="flex justify-end gap-2 p-4 border-t border-gray-200 dark:border-slate-700">
+              <div className="flex justify-end gap-2 p-4 border-t border-border">
                 <button
                   onClick={() => onOpenChange(false)}
-                  className="px-3 py-1.5 text-xs font-medium text-gray-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-700 rounded-lg"
+                  className="px-3 py-1.5 text-xs font-medium text-text-secondary hover:bg-surface-hover rounded-lg"
                 >
                   Cancel
                 </button>
                 <button
                   onClick={handleUrlInsert}
                   disabled={!url.trim()}
-                  className="px-3 py-1.5 text-xs font-medium text-white bg-teal-600 hover:bg-teal-700 rounded-lg disabled:opacity-50"
+                  className="px-3 py-1.5 text-xs font-medium text-white bg-primary hover:bg-primary-hover rounded-lg disabled:opacity-50"
                 >
                   Insert
                 </button>

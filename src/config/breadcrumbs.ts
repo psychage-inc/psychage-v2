@@ -85,11 +85,6 @@ export const breadcrumbConfig: Record<string, BreadcrumbItem[]> = {
         { label: 'Clarity Journal', href: '/tools/clarity-journal' },
         { label: 'Therapist Report' }
     ],
-    '/tools/thought-reframer': [
-        { label: 'Tools', href: '/tools' },
-        { label: 'Thought Reframer' }
-    ],
-
     // Dashboard sections
     '/dashboard': [{ label: 'Dashboard' }],
     '/dashboard/settings': [

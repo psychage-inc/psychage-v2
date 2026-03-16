@@ -56,7 +56,6 @@ const ContactPage = React.lazy(() => import('./components/pages/ContactPage'));
 const LegalPage = React.lazy(() => import('./components/pages/LegalPages'));
 const CrisisPage = React.lazy(() => import('./components/pages/CrisisPage'));
 const NavigatorPage = React.lazy(() => import('./components/pages/NavigatorPage'));
-const ThoughtReframer = React.lazy(() => import('./components/tools/ThoughtReframer'));
 const RelationshipHealthCheck = React.lazy(() => import('./components/tools/RelationshipHealthCheck'));
 const ClarityJournal = React.lazy(() => import('./components/tools/ClarityJournal'));
 const ClarityJournalDailyCheckIn = React.lazy(() => import('./components/tools/ClarityJournal/sections/DailyCheckIn'));
@@ -137,9 +136,9 @@ const App: React.FC = () => {
 
                     {!isLoading && (
                         <div className="min-h-screen bg-background font-sans text-gray-900 overflow-x-hidden flex flex-col transition-colors duration-300">
-                            {location.pathname !== '/tools/mindmate' && <Navigation />}
+                            <Navigation />
 
-                            <main id="main-content" className={`flex-grow w-full outline-none ${location.pathname === '/tools/mindmate' ? '' : 'pb-24'} ${location.pathname !== '/' && location.pathname !== '/tools/mindmate' ? 'pt-20' : ''}`} tabIndex={-1}>
+                            <main id="main-content" className={`flex-grow w-full outline-none ${location.pathname === '/tools/mindmate' ? '' : 'pb-24'} ${location.pathname !== '/' ? 'pt-20' : ''}`} tabIndex={-1}>
                                 <ErrorBoundary
                                     resetKeys={[location.pathname]}
                                     fallback={(error, reset) => (
@@ -200,7 +199,6 @@ const App: React.FC = () => {
                                             } />
                                             <Route path="/tools/symptom-navigator" element={<PageTransition><NavigatorPage /></PageTransition>} />
                                             <Route path="/tools/symptom-navigator/crisis" element={<PageTransition><CrisisResourcesScreen /></PageTransition>} />
-                                            <Route path="/tools/thought-reframer" element={<PageTransition><ThoughtReframer /></PageTransition>} />
                                             <Route path="/tools/relationship-health" element={<PageTransition><RelationshipHealthCheck /></PageTransition>} />
                                             <Route path="/tools/clarity-journal" element={<PageTransition><ClarityJournal /></PageTransition>} />
                                             <Route path="/tools/clarity-journal/daily" element={<PageTransition><ClarityJournalDailyCheckIn /></PageTransition>} />

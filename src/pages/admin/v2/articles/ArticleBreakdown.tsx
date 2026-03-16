@@ -86,8 +86,8 @@ const AdminArticleBreakdown: React.FC = () => {
   if (!article) {
     return (
       <div className="text-center py-12">
-        <p className="text-gray-500">Article not found.</p>
-        <button onClick={() => navigate(adminPath('/articles'))} className="text-teal-600 mt-2 hover:underline">
+        <p className="text-text-secondary">Article not found.</p>
+        <button onClick={() => navigate(adminPath('/articles'))} className="text-primary mt-2 hover:underline">
           Back to Articles
         </button>
       </div>
@@ -102,7 +102,7 @@ const AdminArticleBreakdown: React.FC = () => {
         actions={
           <button
             onClick={() => navigate(adminPath(`/articles/${id}`))}
-            className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+            className="flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:text-text-primary transition-colors"
           >
             <ArrowLeft size={16} />
             Back to Article
@@ -113,17 +113,17 @@ const AdminArticleBreakdown: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Source content */}
         <div>
-          <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">Source Article</h3>
-          <div className="bg-white dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700 p-5">
-            <h4 className="text-lg font-medium text-gray-900 dark:text-white mb-2">{article.title}</h4>
-            <div className="flex items-center gap-3 text-sm text-gray-500 mb-4">
+          <h3 className="text-sm font-semibold text-text-primary mb-3">Source Article</h3>
+          <div className="bg-surface rounded-2xl border border-border p-5">
+            <h4 className="text-lg font-medium text-text-primary mb-2">{article.title}</h4>
+            <div className="flex items-center gap-3 text-sm text-text-secondary mb-4">
               <span>{article.word_count.toLocaleString()} words</span>
               <span>{Math.ceil(article.word_count / 200)} min read</span>
             </div>
             {article.seo_description ? (
-              <p className="text-sm text-gray-600 dark:text-slate-400">{article.seo_description}</p>
+              <p className="text-sm text-text-secondary">{article.seo_description}</p>
             ) : (
-              <p className="text-sm text-gray-400 italic">No description available.</p>
+              <p className="text-sm text-text-tertiary italic">No description available.</p>
             )}
             <div className="mt-4 p-3 bg-blue-50 dark:bg-blue-900/10 border border-blue-200 dark:border-blue-800 rounded-lg">
               <p className="text-xs text-blue-700 dark:text-blue-400">
@@ -136,10 +136,10 @@ const AdminArticleBreakdown: React.FC = () => {
         {/* Breakdown editor */}
         <div>
           <div className="flex items-center justify-between mb-3">
-            <h3 className="text-sm font-semibold text-gray-900 dark:text-white">Sub-Articles</h3>
+            <h3 className="text-sm font-semibold text-text-primary">Sub-Articles</h3>
             <button
               onClick={addSection}
-              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium bg-teal-600 hover:bg-teal-700 text-white rounded-lg transition-colors"
+              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium bg-primary hover:bg-primary-hover text-white rounded-lg transition-colors"
             >
               <Plus size={14} />
               Add Section
@@ -147,9 +147,9 @@ const AdminArticleBreakdown: React.FC = () => {
           </div>
 
           {sections.length === 0 ? (
-            <div className="bg-white dark:bg-slate-800 rounded-lg border-2 border-dashed border-gray-300 dark:border-slate-600 p-8 text-center">
-              <Scissors size={32} className="mx-auto mb-3 text-gray-400" />
-              <p className="text-sm text-gray-500">
+            <div className="bg-surface rounded-2xl border-2 border-dashed border-border-hover p-8 text-center">
+              <Scissors size={32} className="mx-auto mb-3 text-text-tertiary" />
+              <p className="text-sm text-text-secondary">
                 Click "Add Section" to define sub-articles for the breakdown.
               </p>
             </div>
@@ -158,12 +158,12 @@ const AdminArticleBreakdown: React.FC = () => {
               {sections.map((section, index) => (
                 <div
                   key={section.id}
-                  className="bg-white dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700 p-4"
+                  className="bg-surface rounded-2xl border border-border p-4"
                 >
                   <div className="flex items-start gap-3">
                     <div className="flex items-center gap-2 mt-2">
-                      <GripVertical size={16} className="text-gray-400" />
-                      <span className="text-xs font-mono text-gray-400 w-5">{index + 1}</span>
+                      <GripVertical size={16} className="text-text-tertiary" />
+                      <span className="text-xs font-mono text-text-tertiary w-5">{index + 1}</span>
                     </div>
                     <div className="flex-1 space-y-2">
                       <input
@@ -171,19 +171,19 @@ const AdminArticleBreakdown: React.FC = () => {
                         value={section.title}
                         onChange={(e) => updateSection(section.id, 'title', e.target.value)}
                         placeholder="Sub-article title..."
-                        className="w-full px-3 py-2 text-sm border border-gray-300 dark:border-slate-600 rounded-lg bg-transparent text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                        className="w-full px-3 py-2 text-sm border border-border-hover rounded-lg bg-transparent text-text-primary placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-primary"
                       />
                       <input
                         type="text"
                         value={section.slug}
                         onChange={(e) => updateSection(section.id, 'slug', e.target.value)}
                         placeholder="slug"
-                        className="w-full px-3 py-1.5 text-xs font-mono border border-gray-200 dark:border-slate-700 rounded bg-gray-50 dark:bg-slate-900 text-gray-600 dark:text-slate-400 focus:outline-none focus:ring-1 focus:ring-teal-500"
+                        className="w-full px-3 py-1.5 text-xs font-mono border border-border rounded bg-surface-hover text-text-secondary focus:outline-none focus:ring-1 focus:ring-primary"
                       />
                     </div>
                     <button
                       onClick={() => removeSection(section.id)}
-                      className="p-1.5 text-gray-400 hover:text-red-500 transition-colors mt-1"
+                      className="p-1.5 text-text-tertiary hover:text-red-500 transition-colors mt-1"
                     >
                       <Trash2 size={16} />
                     </button>
@@ -195,13 +195,13 @@ const AdminArticleBreakdown: React.FC = () => {
 
           {sections.length > 0 && (
             <div className="mt-6 flex items-center justify-between">
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-text-secondary">
                 {sections.length} sub-article{sections.length !== 1 ? 's' : ''} will be created
               </p>
               <button
                 onClick={() => setShowConfirm(true)}
                 disabled={sections.some((s) => !s.title.trim())}
-                className="flex items-center gap-2 px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium rounded-lg transition-colors disabled:opacity-50"
+                className="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary-hover text-white text-sm font-medium rounded-lg transition-colors disabled:opacity-50"
               >
                 <CheckCircle size={16} />
                 Confirm Breakdown

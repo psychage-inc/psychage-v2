@@ -63,7 +63,7 @@ const AdminContentList: React.FC = () => {
       cell: ({ row }) => (
         <Link
           to={adminPath(`/content/${row.original.id}/edit`)}
-          className="font-medium text-gray-900 dark:text-white hover:text-teal-600 dark:hover:text-teal-400"
+          className="font-medium text-text-primary hover:text-primary"
         >
           {row.original.title}
         </Link>
@@ -83,7 +83,7 @@ const AdminContentList: React.FC = () => {
       accessorKey: 'language',
       header: 'Lang',
       cell: ({ row }) => (
-        <span className="inline-flex items-center gap-1 text-xs text-gray-500 uppercase">
+        <span className="inline-flex items-center gap-1 text-xs text-text-secondary uppercase">
           <Globe size={12} /> {row.original.language}
         </span>
       ),
@@ -96,7 +96,7 @@ const AdminContentList: React.FC = () => {
       accessorKey: 'updated_at',
       header: 'Updated',
       cell: ({ row }) => (
-        <span className="text-sm text-gray-500">
+        <span className="text-sm text-text-secondary">
           {formatDistanceToNow(new Date(row.original.updated_at), { addSuffix: true })}
         </span>
       ),
@@ -111,21 +111,21 @@ const AdminContentList: React.FC = () => {
           <div className="flex items-center gap-1">
             <button
               onClick={() => navigate(adminPath(`/content/${doc.id}/edit`))}
-              className="p-1.5 text-gray-400 hover:text-teal-600 transition-colors"
+              className="p-1.5 text-text-tertiary hover:text-primary transition-colors"
               title="Edit"
             >
               <Pencil size={15} />
             </button>
             <button
               onClick={() => togglePublish.mutate({ id: doc.id, isPublished: doc.is_published })}
-              className="p-1.5 text-gray-400 hover:text-blue-600 transition-colors"
+              className="p-1.5 text-text-tertiary hover:text-blue-600 transition-colors"
               title={doc.is_published ? 'Unpublish' : 'Publish'}
             >
               <Eye size={15} />
             </button>
             <button
               onClick={() => setDeleteTarget(doc)}
-              className="p-1.5 text-gray-400 hover:text-red-500 transition-colors"
+              className="p-1.5 text-text-tertiary hover:text-red-500 transition-colors"
               title="Delete"
             >
               <Trash2 size={15} />
@@ -144,7 +144,7 @@ const AdminContentList: React.FC = () => {
         actions={
           <button
             onClick={() => navigate(adminPath('/content/new'))}
-            className="flex items-center gap-2 px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium rounded-lg transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary-hover text-white text-sm font-medium rounded-lg transition-colors"
           >
             <Plus size={16} />
             New Content

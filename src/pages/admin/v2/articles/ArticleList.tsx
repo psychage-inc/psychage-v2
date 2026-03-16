@@ -42,7 +42,7 @@ function StatsBar() {
   const categoriesCovered = categories?.filter((c: ArticleCategoryRecord) => (c.article_count || 0) > 0).length || 0;
 
   const cards = [
-    { label: 'Total', value: stats?.total ?? '—', icon: FileText, color: 'text-gray-600' },
+    { label: 'Total', value: stats?.total ?? '—', icon: FileText, color: 'text-text-secondary' },
     { label: 'In Review', value: stats?.in_review ?? '—', icon: Clock, color: 'text-blue-600' },
     { label: 'Published', value: stats?.published ?? '—', icon: CheckCircle, color: 'text-emerald-600' },
     {
@@ -64,13 +64,13 @@ function StatsBar() {
       {cards.map((card) => (
         <div
           key={card.label}
-          className="bg-white dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700 p-4"
+          className="bg-surface rounded-2xl border border-border p-4"
         >
-          <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-slate-400 mb-1">
+          <div className="flex items-center gap-2 text-sm text-text-secondary mb-1">
             <card.icon size={14} className={card.color} />
             {card.label}
           </div>
-          <div className="text-2xl font-semibold text-gray-900 dark:text-white">{card.value}</div>
+          <div className="text-2xl font-semibold text-text-primary">{card.value}</div>
         </div>
       ))}
     </div>
@@ -82,17 +82,17 @@ function StatsBar() {
 // ============================================================
 
 function StarRating({ rating }: { rating: number | null }) {
-  if (rating === null) return <span className="text-sm text-gray-400">—</span>;
+  if (rating === null) return <span className="text-sm text-text-tertiary">—</span>;
   return (
     <div className="flex items-center gap-1">
       {[1, 2, 3, 4, 5].map((star) => (
         <Star
           key={star}
           size={14}
-          className={star <= Math.round(rating) ? 'text-amber-400 fill-amber-400' : 'text-gray-300'}
+          className={star <= Math.round(rating) ? 'text-amber-400 fill-amber-400' : 'text-text-tertiary'}
         />
       ))}
-      <span className="text-xs text-gray-500 ml-1">{rating.toFixed(1)}</span>
+      <span className="text-xs text-text-secondary ml-1">{rating.toFixed(1)}</span>
     </div>
   );
 }
@@ -148,7 +148,7 @@ const AdminArticleList: React.FC = () => {
       accessorKey: 'article_production_id',
       header: 'ID',
       cell: ({ row }) => (
-        <span className="text-xs font-mono text-gray-500 dark:text-slate-400">
+        <span className="text-xs font-mono text-text-secondary">
           {row.original.article_production_id || '—'}
         </span>
       ),
@@ -160,7 +160,7 @@ const AdminArticleList: React.FC = () => {
         <div>
           <Link
             to={adminPath(`/articles/${row.original.id}`)}
-            className="font-medium text-gray-900 dark:text-white hover:text-teal-600 dark:hover:text-teal-400"
+            className="font-medium text-text-primary hover:text-primary"
           >
             {row.original.title}
           </Link>
@@ -170,7 +170,7 @@ const AdminArticleList: React.FC = () => {
             </span>
           )}
           {row.original.is_cornerstone && (
-            <span className="ml-1 text-xs text-teal-600 dark:text-teal-400 bg-teal-50 dark:bg-teal-900/30 px-1.5 py-0.5 rounded">
+            <span className="ml-1 text-xs text-primary bg-primary/10 px-1.5 py-0.5 rounded">
               Cornerstone
             </span>
           )}
@@ -194,7 +194,7 @@ const AdminArticleList: React.FC = () => {
       header: 'Category',
       cell: ({ row }) => {
         const cat = (categories as ArticleCategoryRecord[] | undefined)?.find((c) => c.id === row.original.category_id);
-        if (!cat) return <span className="text-sm text-gray-400">—</span>;
+        if (!cat) return <span className="text-sm text-text-tertiary">—</span>;
         return (
           <span
             className="text-xs px-2 py-0.5 rounded-full font-medium"
@@ -214,7 +214,7 @@ const AdminArticleList: React.FC = () => {
       accessorKey: 'author_name',
       header: 'Author',
       cell: ({ row }) => (
-        <span className="text-sm text-gray-600 dark:text-slate-400">
+        <span className="text-sm text-text-secondary">
           {row.original.author_name || '—'}
         </span>
       ),
@@ -223,7 +223,7 @@ const AdminArticleList: React.FC = () => {
       accessorKey: 'updated_at',
       header: 'Updated',
       cell: ({ row }) => (
-        <span className="text-sm text-gray-500">
+        <span className="text-sm text-text-secondary">
           {formatDistanceToNow(new Date(row.original.updated_at), { addSuffix: true })}
         </span>
       ),
@@ -238,7 +238,7 @@ const AdminArticleList: React.FC = () => {
           <div className="flex items-center gap-1">
             <button
               onClick={() => navigate(adminPath(`/articles/${article.id}`))}
-              className="p-1.5 text-gray-400 hover:text-teal-600 transition-colors"
+              className="p-1.5 text-text-tertiary hover:text-primary transition-colors"
               title="View Details"
             >
               <Eye size={15} />
@@ -246,7 +246,7 @@ const AdminArticleList: React.FC = () => {
             {article.status !== 'archived' && (
               <button
                 onClick={() => setDeleteTarget(article)}
-                className="p-1.5 text-gray-400 hover:text-red-500 transition-colors"
+                className="p-1.5 text-text-tertiary hover:text-red-500 transition-colors"
                 title="Archive"
               >
                 <Trash2 size={15} />
@@ -267,7 +267,7 @@ const AdminArticleList: React.FC = () => {
           <div className="flex items-center gap-2">
             <button
               onClick={() => navigate(adminPath('/articles/clusters'))}
-              className="flex items-center gap-2 px-3 py-2 border border-gray-300 dark:border-slate-600 text-gray-700 dark:text-slate-300 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+              className="flex items-center gap-2 px-3 py-2 border border-border-hover text-text-secondary text-sm font-medium rounded-lg hover:bg-surface-hover transition-colors"
             >
               <Plus size={16} />
               Topic Clusters
@@ -282,13 +282,13 @@ const AdminArticleList: React.FC = () => {
       <div className="space-y-3 mb-4">
         {/* Status filter */}
         <div className="flex items-center gap-2 flex-wrap">
-          <span className="text-xs font-medium text-gray-500 dark:text-slate-400 w-14">Status</span>
+          <span className="text-xs font-medium text-text-secondary w-14">Status</span>
           <button
             onClick={() => setStatusFilter('all')}
             className={`px-3 py-1.5 text-xs font-medium rounded-full transition-colors ${
               statusFilter === 'all'
-                ? 'bg-teal-600 text-white'
-                : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-slate-700 dark:text-slate-300'
+                ? 'bg-primary text-white'
+                : 'bg-surface-hover text-text-secondary hover:bg-surface-active'
             }`}
           >
             All
@@ -299,8 +299,8 @@ const AdminArticleList: React.FC = () => {
               onClick={() => setStatusFilter(s.value)}
               className={`px-3 py-1.5 text-xs font-medium rounded-full transition-colors ${
                 statusFilter === s.value
-                  ? 'bg-teal-600 text-white'
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-slate-700 dark:text-slate-300'
+                  ? 'bg-primary text-white'
+                  : 'bg-surface-hover text-text-secondary hover:bg-surface-active'
               }`}
             >
               {s.label}
@@ -310,13 +310,13 @@ const AdminArticleList: React.FC = () => {
 
         {/* Review stage filter */}
         <div className="flex items-center gap-2 flex-wrap">
-          <span className="text-xs font-medium text-gray-500 dark:text-slate-400 w-14">Stage</span>
+          <span className="text-xs font-medium text-text-secondary w-14">Stage</span>
           <button
             onClick={() => setStageFilter('all')}
             className={`px-3 py-1.5 text-xs font-medium rounded-full transition-colors ${
               stageFilter === 'all'
-                ? 'bg-teal-600 text-white'
-                : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-slate-700 dark:text-slate-300'
+                ? 'bg-primary text-white'
+                : 'bg-surface-hover text-text-secondary hover:bg-surface-active'
             }`}
           >
             All
@@ -327,8 +327,8 @@ const AdminArticleList: React.FC = () => {
               onClick={() => setStageFilter(s.value)}
               className={`px-3 py-1.5 text-xs font-medium rounded-full transition-colors ${
                 stageFilter === s.value
-                  ? 'bg-teal-600 text-white'
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-slate-700 dark:text-slate-300'
+                  ? 'bg-primary text-white'
+                  : 'bg-surface-hover text-text-secondary hover:bg-surface-active'
               }`}
             >
               {s.label}
@@ -338,11 +338,11 @@ const AdminArticleList: React.FC = () => {
 
         {/* Category filter */}
         <div className="flex items-center gap-2 flex-wrap">
-          <span className="text-xs font-medium text-gray-500 dark:text-slate-400 w-14">Category</span>
+          <span className="text-xs font-medium text-text-secondary w-14">Category</span>
           <select
             value={categoryFilter}
             onChange={(e) => setCategoryFilter(e.target.value)}
-            className="text-xs px-3 py-1.5 rounded-lg border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-700 text-gray-700 dark:text-slate-300"
+            className="text-xs px-3 py-1.5 rounded-lg border border-border bg-surface text-text-secondary"
           >
             <option value="all">All Categories</option>
             {(categories as ArticleCategoryRecord[] | undefined)?.map((cat) => (

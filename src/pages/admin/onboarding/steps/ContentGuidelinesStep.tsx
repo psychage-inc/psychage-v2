@@ -132,8 +132,8 @@ const ContentGuidelinesStep: React.FC<StepProps> = ({ onNext, onBack }) => {
             className={cn(
               'w-6 h-6 rounded-md border-2 flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors',
               acknowledged
-                ? 'border-teal-500 bg-teal-500'
-                : 'border-gray-400 dark:border-gray-500'
+                ? 'border-primary bg-primary'
+                : 'border-border-hover'
             )}
           >
             {acknowledged && <Check size={14} className="text-white" />}

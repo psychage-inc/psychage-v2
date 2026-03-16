@@ -137,8 +137,8 @@ export const DIMENSION_CONTENT: Record<
         'Speaking with a counselor about emotional regulation tools may help',
       ],
       toolLink: {
-        label: 'Use the Thought Reframer to identify unhelpful thought patterns',
-        path: '/tools/thought-reframer',
+        label: 'Use the Clarity Journal to identify unhelpful thought patterns',
+        path: '/tools/clarity-journal',
       },
       context:
         'Moderate PHQ-4 scores suggest meaningful emotional difficulty. These symptoms often respond well to structured interventions.',
@@ -351,8 +351,8 @@ export const DIMENSION_CONTENT: Record<
         'Break overwhelming tasks into smaller, more manageable steps',
       ],
       toolLink: {
-        label: 'Use the Thought Reframer to challenge stress-driven thinking',
-        path: '/tools/thought-reframer',
+        label: 'Use the Clarity Journal to challenge stress-driven thinking',
+        path: '/tools/clarity-journal',
       },
       context:
         'Elevated PSS-4 scores mean stress is starting to feel unmanageable. Stress management interventions are among the most effective in mental health.',

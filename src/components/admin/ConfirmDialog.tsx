@@ -30,24 +30,24 @@ const ConfirmDialog: React.FC<ConfirmDialogProps> = ({
     <AlertDialogPrimitive.Root open={open} onOpenChange={onOpenChange}>
       <AlertDialogPrimitive.Portal>
         <AlertDialogPrimitive.Overlay className="fixed inset-0 bg-black/40 z-50 animate-in fade-in" />
-        <AlertDialogPrimitive.Content className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-full max-w-md bg-white dark:bg-slate-900 rounded-xl shadow-xl p-6 animate-in fade-in zoom-in-95">
-          <AlertDialogPrimitive.Title className="text-lg font-semibold text-gray-900 dark:text-white">
+        <AlertDialogPrimitive.Content className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-full max-w-md bg-surface rounded-2xl shadow-xl p-6 animate-in fade-in zoom-in-95">
+          <AlertDialogPrimitive.Title className="text-lg font-semibold text-text-primary">
             {title}
           </AlertDialogPrimitive.Title>
-          <AlertDialogPrimitive.Description className="mt-2 text-sm text-gray-500 dark:text-slate-400">
+          <AlertDialogPrimitive.Description className="mt-2 text-sm text-text-secondary">
             {description}
           </AlertDialogPrimitive.Description>
 
           {confirmText && (
             <div className="mt-4">
-              <p className="text-sm text-gray-600 dark:text-slate-300 mb-2">
+              <p className="text-sm text-text-secondary mb-2">
                 Type <strong>{confirmText}</strong> to confirm:
               </p>
               <input
                 type="text"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
-                className="w-full px-3 py-2 text-sm border border-gray-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-teal-500 outline-none"
+                className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface text-text-primary focus:ring-2 focus:ring-primary outline-none"
                 autoFocus
               />
             </div>
@@ -55,7 +55,7 @@ const ConfirmDialog: React.FC<ConfirmDialogProps> = ({
 
           <div className="flex justify-end gap-3 mt-6">
             <AlertDialogPrimitive.Cancel asChild>
-              <button className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-slate-300 bg-gray-100 dark:bg-slate-800 rounded-lg hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">
+              <button className="px-4 py-2 text-sm font-medium text-text-primary bg-surface-hover rounded-lg hover:bg-surface-active transition-colors">
                 Cancel
               </button>
             </AlertDialogPrimitive.Cancel>
@@ -67,7 +67,7 @@ const ConfirmDialog: React.FC<ConfirmDialogProps> = ({
                   'px-4 py-2 text-sm font-medium text-white rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed',
                   destructive
                     ? 'bg-red-600 hover:bg-red-700'
-                    : 'bg-teal-600 hover:bg-teal-700'
+                    : 'bg-primary hover:bg-primary-hover'
                 )}
               >
                 {confirmLabel}

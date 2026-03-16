@@ -18,7 +18,6 @@ const ROUTE_MAP: Record<number, string> = {
   6: '/crisis',
   7: '/tools/symptom-navigator',
   8: '/tools/mindmate',
-  9: '/tools/thought-reframer',
   10: '/tools/clarity-journal',
   11: '/tools/relationship-health'
 };

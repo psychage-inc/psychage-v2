@@ -60,25 +60,25 @@ function SubcategoryDrawer({ categoryId }: { categoryId: string }) {
 
   if (isLoading) {
     return (
-      <div className="px-4 py-3 text-sm text-gray-400 dark:text-slate-500">Loading subcategories...</div>
+      <div className="px-4 py-3 text-sm text-text-tertiary">Loading subcategories...</div>
     );
   }
 
   if (!subcategories?.length) {
     return (
-      <div className="px-4 py-3 text-sm text-gray-400 dark:text-slate-500">No subcategories</div>
+      <div className="px-4 py-3 text-sm text-text-tertiary">No subcategories</div>
     );
   }
 
   return (
-    <div className="border-t border-gray-100 dark:border-slate-700/50">
+    <div className="border-t border-border">
       {subcategories.map((sub: ArticleSubcategoryRecord) => (
         <div
           key={sub.id}
-          className="flex items-center justify-between px-4 py-2.5 text-sm border-b border-gray-50 dark:border-slate-700/30 last:border-0"
+          className="flex items-center justify-between px-4 py-2.5 text-sm border-b border-border last:border-0"
         >
-          <span className="text-gray-700 dark:text-slate-300">{sub.name}</span>
-          <span className="text-xs text-gray-400 dark:text-slate-500 tabular-nums">
+          <span className="text-text-secondary">{sub.name}</span>
+          <span className="text-xs text-text-tertiary tabular-nums">
             {sub.article_count ?? 0} articles
           </span>
         </div>
@@ -99,7 +99,7 @@ function CategoryCard({ dist }: { dist: CategoryArticleDistribution }) {
   const Icon = getIcon(category.icon);
 
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden">
+    <div className="bg-surface rounded-2xl border border-border overflow-hidden">
       {/* Color accent bar */}
       <div className="h-1" style={{ backgroundColor: category.color || '#6B7280' }} />
 
@@ -113,10 +113,10 @@ function CategoryCard({ dist }: { dist: CategoryArticleDistribution }) {
             <Icon size={18} />
           </div>
           <div className="min-w-0 flex-1">
-            <h3 className="font-semibold text-sm text-gray-900 dark:text-white truncate">
+            <h3 className="font-semibold text-sm text-text-primary truncate">
               {category.name}
             </h3>
-            <p className="text-xs text-gray-500 dark:text-slate-400 mt-0.5">
+            <p className="text-xs text-text-secondary mt-0.5">
               {totalCount} / {target} articles
             </p>
           </div>
@@ -125,10 +125,10 @@ function CategoryCard({ dist }: { dist: CategoryArticleDistribution }) {
         {/* Progress bar */}
         <div className="mb-3">
           <div className="flex items-center justify-between text-xs mb-1">
-            <span className="text-gray-500 dark:text-slate-400">{publishedCount} published</span>
-            <span className="font-medium text-gray-700 dark:text-slate-300">{pct}%</span>
+            <span className="text-text-secondary">{publishedCount} published</span>
+            <span className="font-medium text-text-secondary">{pct}%</span>
           </div>
-          <div className="h-2 bg-gray-100 dark:bg-slate-700 rounded-full overflow-hidden">
+          <div className="h-2 bg-surface-hover rounded-full overflow-hidden">
             <div
               className="h-full rounded-full transition-all duration-500"
               style={{
@@ -147,7 +147,7 @@ function CategoryCard({ dist }: { dist: CategoryArticleDistribution }) {
             return (
               <span
                 key={stage.value}
-                className="inline-flex items-center gap-1 text-[11px] text-gray-600 dark:text-slate-400"
+                className="inline-flex items-center gap-1 text-[11px] text-text-secondary"
               >
                 <span className={cn('w-2 h-2 rounded-full', stageColors[stage.value])} />
                 {count} {stage.label.toLowerCase()}
@@ -160,7 +160,7 @@ function CategoryCard({ dist }: { dist: CategoryArticleDistribution }) {
       {/* Expand toggle */}
       <button
         onClick={() => setExpanded(!expanded)}
-        className="w-full flex items-center justify-center gap-1 py-2 text-xs text-gray-400 dark:text-slate-500 hover:text-gray-600 dark:hover:text-slate-300 hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors border-t border-gray-100 dark:border-slate-700/50"
+        className="w-full flex items-center justify-center gap-1 py-2 text-xs text-text-tertiary hover:text-text-secondary hover:bg-surface-hover transition-colors border-t border-border"
       >
         {expanded ? <ChevronDown size={12} /> : <ChevronRight size={12} />}
         {expanded ? 'Hide' : 'Show'} subcategories
@@ -195,7 +195,7 @@ const AdminArticleCategories: React.FC = () => {
       {/* Stage legend */}
       <div className="flex items-center gap-4 mb-6 flex-wrap">
         {ARTICLE_REVIEW_STAGES.map((stage) => (
-          <span key={stage.value} className="inline-flex items-center gap-1.5 text-xs text-gray-500 dark:text-slate-400">
+          <span key={stage.value} className="inline-flex items-center gap-1.5 text-xs text-text-secondary">
             <span className={cn('w-2.5 h-2.5 rounded-full', stageColors[stage.value])} />
             {stage.label}
           </span>
@@ -205,7 +205,7 @@ const AdminArticleCategories: React.FC = () => {
       {isLoading ? (
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
           {Array.from({ length: 6 }).map((_, i) => (
-            <div key={i} className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 h-48 animate-pulse" />
+            <div key={i} className="bg-surface rounded-2xl border border-border h-48 animate-pulse" />
           ))}
         </div>
       ) : (

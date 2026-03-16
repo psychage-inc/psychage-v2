@@ -82,7 +82,7 @@ const AdminAuditLogV2: React.FC = () => {
       accessorKey: 'created_at',
       header: 'Timestamp',
       cell: ({ row }) => (
-        <span className="text-sm text-gray-500 cursor-help" title={format(new Date(row.original.created_at), 'PPpp')}>
+        <span className="text-sm text-text-secondary cursor-help" title={format(new Date(row.original.created_at), 'PPpp')}>
           {formatDistanceToNow(new Date(row.original.created_at), { addSuffix: true })}
         </span>
       ),
@@ -96,7 +96,7 @@ const AdminAuditLogV2: React.FC = () => {
       accessorKey: 'resource_type',
       header: 'Resource Type',
       cell: ({ row }) => (
-        <span className="text-sm text-gray-600 dark:text-slate-400">
+        <span className="text-sm text-text-secondary">
           {row.original.resource_type.replace(/_/g, ' ')}
         </span>
       ),
@@ -105,16 +105,16 @@ const AdminAuditLogV2: React.FC = () => {
       accessorKey: 'resource_id',
       header: 'Resource',
       cell: ({ row }) => row.original.resource_id ? (
-        <code className="text-xs font-mono text-gray-500">{row.original.resource_id.slice(0, 12)}</code>
+        <code className="text-xs font-mono text-text-secondary">{row.original.resource_id.slice(0, 12)}</code>
       ) : (
-        <span className="text-gray-300">\u2014</span>
+        <span className="text-gray-300">{'\u2014'}</span>
       ),
     },
     {
       accessorKey: 'admin_user_id',
       header: 'Admin',
       cell: ({ row }) => (
-        <code className="text-xs font-mono text-gray-500">{row.original.admin_user_id?.slice(0, 8)}...</code>
+        <code className="text-xs font-mono text-text-secondary">{row.original.admin_user_id?.slice(0, 8)}...</code>
       ),
     },
     {
@@ -128,7 +128,7 @@ const AdminAuditLogV2: React.FC = () => {
         return (
           <button
             onClick={() => setExpandedRow(isExpanded ? null : row.original.id)}
-            className="text-xs text-teal-600 hover:text-teal-700"
+            className="text-xs text-primary hover:text-primary-hover"
           >
             {isExpanded ? 'Hide' : 'Details'}
           </button>
@@ -146,7 +146,7 @@ const AdminAuditLogV2: React.FC = () => {
           <button
             onClick={exportCSV}
             disabled={!logs || logs.length === 0}
-            className="flex items-center gap-2 px-4 py-2 border border-gray-200 dark:border-slate-700 text-gray-700 dark:text-slate-300 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors disabled:opacity-50"
+            className="flex items-center gap-2 px-4 py-2 border border-border text-text-secondary text-sm font-medium rounded-lg hover:bg-surface-hover transition-colors disabled:opacity-50"
           >
             <Download size={16} /> Export CSV
           </button>
@@ -155,14 +155,14 @@ const AdminAuditLogV2: React.FC = () => {
 
       {/* Filters */}
       <div className="flex items-center gap-3 mb-4 flex-wrap">
-        <div className="flex items-center gap-1.5 text-xs text-gray-500">
+        <div className="flex items-center gap-1.5 text-xs text-text-secondary">
           <Filter size={14} />
           Filters:
         </div>
         <select
           value={actionFilter}
           onChange={(e) => setActionFilter(e.target.value)}
-          className="px-3 py-1.5 text-xs border border-gray-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-800 text-gray-700 dark:text-slate-300"
+          className="px-3 py-1.5 text-xs border border-border-hover rounded-lg bg-surface text-text-secondary"
         >
           {ACTION_TYPES.map((a) => (
             <option key={a} value={a}>{a === 'all' ? 'All Actions' : a.replace(/_/g, ' ')}</option>
@@ -171,7 +171,7 @@ const AdminAuditLogV2: React.FC = () => {
         <select
           value={resourceFilter}
           onChange={(e) => setResourceFilter(e.target.value)}
-          className="px-3 py-1.5 text-xs border border-gray-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-800 text-gray-700 dark:text-slate-300"
+          className="px-3 py-1.5 text-xs border border-border-hover rounded-lg bg-surface text-text-secondary"
         >
           {RESOURCE_TYPES.map((r) => (
             <option key={r} value={r}>{r === 'all' ? 'All Resources' : r}</option>
@@ -180,7 +180,7 @@ const AdminAuditLogV2: React.FC = () => {
         <select
           value={dateFilter}
           onChange={(e) => setDateFilter(e.target.value)}
-          className="px-3 py-1.5 text-xs border border-gray-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-800 text-gray-700 dark:text-slate-300"
+          className="px-3 py-1.5 text-xs border border-border-hover rounded-lg bg-surface text-text-secondary"
         >
           {DATE_RANGES.map((d) => (
             <option key={d.value} value={d.value}>{d.label}</option>
@@ -189,12 +189,12 @@ const AdminAuditLogV2: React.FC = () => {
         {(actionFilter !== 'all' || resourceFilter !== 'all' || dateFilter !== 'all') && (
           <button
             onClick={() => { setActionFilter('all'); setResourceFilter('all'); setDateFilter('all'); }}
-            className="text-xs text-teal-600 hover:text-teal-700 font-medium"
+            className="text-xs text-primary hover:text-primary-hover font-medium"
           >
             Clear filters
           </button>
         )}
-        <span className="text-xs text-gray-400 ml-auto">
+        <span className="text-xs text-text-tertiary ml-auto">
           {filteredLogs.length} of {logs?.length || 0} entries
         </span>
       </div>
@@ -213,20 +213,20 @@ const AdminAuditLogV2: React.FC = () => {
         const entry = filteredLogs.find((l) => l.id === expandedRow);
         if (!entry) return null;
         return (
-          <div className="mt-2 bg-gray-50 dark:bg-slate-800/50 border border-gray-200 dark:border-slate-700 rounded-xl p-4 text-sm">
+          <div className="mt-2 bg-surface-hover border border-border rounded-2xl p-4 text-sm">
             <div className="grid grid-cols-2 gap-4">
               {entry.previous_value && (
                 <div>
-                  <p className="text-xs font-medium text-gray-500 mb-1">Previous Value</p>
-                  <pre className="text-xs font-mono text-gray-600 bg-white dark:bg-slate-900 p-2 rounded overflow-auto max-h-40">
+                  <p className="text-xs font-medium text-text-secondary mb-1">Previous Value</p>
+                  <pre className="text-xs font-mono text-text-secondary bg-surface p-2 rounded overflow-auto max-h-40">
                     {JSON.stringify(entry.previous_value, null, 2)}
                   </pre>
                 </div>
               )}
               {entry.new_value && (
                 <div>
-                  <p className="text-xs font-medium text-gray-500 mb-1">New Value</p>
-                  <pre className="text-xs font-mono text-gray-600 bg-white dark:bg-slate-900 p-2 rounded overflow-auto max-h-40">
+                  <p className="text-xs font-medium text-text-secondary mb-1">New Value</p>
+                  <pre className="text-xs font-mono text-text-secondary bg-surface p-2 rounded overflow-auto max-h-40">
                     {JSON.stringify(entry.new_value, null, 2)}
                   </pre>
                 </div>

@@ -34,7 +34,7 @@ function CitationDonut({ data }: { data: CitationDiversityEntry[] }) {
 
   if (grandTotal === 0) {
     return (
-      <div className="flex items-center justify-center h-52 text-gray-400 dark:text-slate-500 text-sm">
+      <div className="flex items-center justify-center h-52 text-text-tertiary text-sm">
         No citations data
       </div>
     );
@@ -69,8 +69,8 @@ function CitationDonut({ data }: { data: CitationDiversityEntry[] }) {
         {chartData.map((item, idx) => (
           <div key={idx} className="flex items-center gap-2 text-sm">
             <span className="w-3 h-3 rounded-sm flex-shrink-0" style={{ backgroundColor: TIER_COLORS[idx] }} />
-            <span className="text-gray-600 dark:text-slate-400 flex-1">{item.name}</span>
-            <span className="font-medium text-gray-900 dark:text-white tabular-nums">{item.value}</span>
+            <span className="text-text-secondary flex-1">{item.name}</span>
+            <span className="font-medium text-text-primary tabular-nums">{item.value}</span>
           </div>
         ))}
       </div>
@@ -118,29 +118,29 @@ function FlaggedTable({
   emptyMessage: string;
 }) {
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden">
-      <div className="px-4 py-3 border-b border-gray-100 dark:border-slate-700/50 flex items-center gap-2">
+    <div className="bg-surface rounded-2xl border border-border overflow-hidden">
+      <div className="px-4 py-3 border-b border-border flex items-center gap-2">
         <Icon size={16} className="text-amber-500" />
-        <h3 className="text-sm font-semibold text-gray-900 dark:text-white">{title}</h3>
-        <span className="ml-auto text-xs text-gray-400 dark:text-slate-500">{entries.length} articles</span>
+        <h3 className="text-sm font-semibold text-text-primary">{title}</h3>
+        <span className="ml-auto text-xs text-text-tertiary">{entries.length} articles</span>
       </div>
 
       {entries.length === 0 ? (
-        <div className="px-4 py-8 text-center text-sm text-gray-400 dark:text-slate-500">
+        <div className="px-4 py-8 text-center text-sm text-text-tertiary">
           {emptyMessage}
         </div>
       ) : (
-        <div className="divide-y divide-gray-50 dark:divide-slate-700/30">
+        <div className="divide-y divide-border">
           {entries.map((entry) => (
             <div key={entry.articleId} className="flex items-center gap-3 px-4 py-2.5">
               <Link
                 to={adminPath(`/articles/${entry.articleId}`)}
-                className="text-sm text-gray-900 dark:text-white hover:text-teal-600 dark:hover:text-teal-400 truncate flex-1"
+                className="text-sm text-text-primary hover:text-primary truncate flex-1"
               >
                 {entry.title}
               </Link>
               <TierBadges tiers={entry.tiers} />
-              <span className="text-xs text-gray-400 dark:text-slate-500 tabular-nums flex-shrink-0">
+              <span className="text-xs text-text-tertiary tabular-nums flex-shrink-0">
                 {entry.totalCitations} total
               </span>
             </div>
@@ -178,16 +178,16 @@ const AdminArticleCitationReport: React.FC = () => {
 
       {isLoading ? (
         <div className="space-y-4">
-          <div className="h-52 bg-gray-100 dark:bg-slate-800 rounded-xl animate-pulse" />
-          <div className="h-64 bg-gray-100 dark:bg-slate-800 rounded-xl animate-pulse" />
+          <div className="h-52 bg-surface-hover rounded-2xl animate-pulse" />
+          <div className="h-64 bg-surface-hover rounded-2xl animate-pulse" />
         </div>
       ) : (
         <>
           {/* Summary row */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
             {/* Donut */}
-            <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-5">
-              <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-4">
+            <div className="bg-surface rounded-2xl border border-border p-5">
+              <h3 className="text-sm font-semibold text-text-primary mb-4">
                 Citation Distribution by Tier
               </h3>
               <CitationDonut data={report || []} />
@@ -195,33 +195,33 @@ const AdminArticleCitationReport: React.FC = () => {
 
             {/* Key metrics */}
             <div className="grid grid-cols-2 gap-4 content-start">
-              <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-4">
-                <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-slate-400 mb-1">
-                  <BookOpen size={14} className="text-teal-500" />
+              <div className="bg-surface rounded-2xl border border-border p-4">
+                <div className="flex items-center gap-2 text-sm text-text-secondary mb-1">
+                  <BookOpen size={14} className="text-primary" />
                   Total Citations
                 </div>
-                <div className="text-2xl font-semibold text-gray-900 dark:text-white">{totalCitations}</div>
+                <div className="text-2xl font-semibold text-text-primary">{totalCitations}</div>
               </div>
-              <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-4">
-                <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-slate-400 mb-1">
+              <div className="bg-surface rounded-2xl border border-border p-4">
+                <div className="flex items-center gap-2 text-sm text-text-secondary mb-1">
                   <BookOpen size={14} className="text-purple-500" />
                   Avg per Article
                 </div>
-                <div className="text-2xl font-semibold text-gray-900 dark:text-white">{avgPerArticle}</div>
+                <div className="text-2xl font-semibold text-text-primary">{avgPerArticle}</div>
               </div>
-              <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-4">
-                <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-slate-400 mb-1">
+              <div className="bg-surface rounded-2xl border border-border p-4">
+                <div className="flex items-center gap-2 text-sm text-text-secondary mb-1">
                   <BookOpen size={14} className="text-blue-500" />
                   Articles w/ Citations
                 </div>
-                <div className="text-2xl font-semibold text-gray-900 dark:text-white">{articlesWithCitations}</div>
+                <div className="text-2xl font-semibold text-text-primary">{articlesWithCitations}</div>
               </div>
-              <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-4">
-                <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-slate-400 mb-1">
+              <div className="bg-surface rounded-2xl border border-border p-4">
+                <div className="flex items-center gap-2 text-sm text-text-secondary mb-1">
                   <AlertTriangle size={14} className="text-amber-500" />
                   Flagged
                 </div>
-                <div className="text-2xl font-semibold text-gray-900 dark:text-white">
+                <div className="text-2xl font-semibold text-text-primary">
                   {insufficientDiversity.length + lowCitationCount.length}
                 </div>
               </div>

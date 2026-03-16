@@ -89,7 +89,7 @@ const ReadOnlyChart: React.FC<{ data: ChartData }> = ({ data: chartData }) => {
   return (
     <div>
       {title && (
-        <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-2">{title}</h4>
+        <h4 className="text-sm font-medium text-text-primary mb-2">{title}</h4>
       )}
       {renderChart()}
     </div>

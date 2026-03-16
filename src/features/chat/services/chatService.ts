@@ -112,7 +112,7 @@ Research supports several approaches:
 3. **Physical activity** — Regular exercise has been shown to have effects comparable to medication for mild-to-moderate depression
 4. **Social connection** — Maintaining relationships, even when the impulse is to withdraw
 
-Would you like to explore any of these topics further? The **Thought Reframer** tool on Psychage uses cognitive restructuring principles if you'd like to try it.
+Would you like to explore any of these topics further? The **Clarity Journal** on Psychage includes structured thought records based on cognitive restructuring principles.
 
 ---
 

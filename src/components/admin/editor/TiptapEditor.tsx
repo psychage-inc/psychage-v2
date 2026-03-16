@@ -55,7 +55,7 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({
       TextAlign.configure({ types: ['heading', 'paragraph'] }),
       Link.configure({
         openOnClick: false,
-        HTMLAttributes: { class: 'text-teal-600 dark:text-teal-400 underline' },
+        HTMLAttributes: { class: 'text-primary underline' },
       }),
       ImageExt.configure({ inline: false, allowBase64: false }),
       Table.configure({ resizable: true }),
@@ -78,7 +78,7 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({
           'prose-h1:text-3xl prose-h1:font-bold prose-h1:mt-8 prose-h1:mb-4 ' +
           'prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-6 prose-h2:mb-3 ' +
           'prose-h3:text-xl prose-h3:font-semibold prose-h3:mt-5 prose-h3:mb-2 ' +
-          'prose-h4:text-lg prose-h4:font-medium prose-h4:mt-4 prose-h4:mb-2 prose-h4:text-gray-600 dark:prose-h4:text-slate-400',
+          'prose-h4:text-lg prose-h4:font-medium prose-h4:mt-4 prose-h4:mb-2 prose-h4:text-text-secondary',
       },
     },
   });
@@ -86,7 +86,7 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({
   if (!editor) return null;
 
   return (
-    <div className="border border-gray-200 dark:border-slate-700 rounded-xl overflow-hidden bg-white dark:bg-slate-900">
+    <div className="border border-border rounded-xl overflow-hidden bg-surface">
       {/* Toolbar */}
       <EditorToolbar
         editor={editor}

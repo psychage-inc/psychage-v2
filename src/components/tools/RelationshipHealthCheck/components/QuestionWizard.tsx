@@ -34,18 +34,31 @@ export const QuestionWizard: React.FC<QuestionWizardProps> = ({
   const [showDomainTransition, setShowDomainTransition] = useState(false);
   const autoAdvanceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const prevDomainRef = useRef<string | null>(null);
+  const seenDomainsRef = useRef<Set<string>>(new Set());
 
   const currentQuestion = questions[currentIndex];
   const totalQuestions = questions.length;
   const progress = ((currentIndex) / totalQuestions) * 100;
 
-  // Detect domain transitions
+  // Mark first domain as seen on mount
+  useEffect(() => {
+    if (currentQuestion) {
+      seenDomainsRef.current.add(currentQuestion.domain);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Detect domain transitions — only show once per domain, only going forward
   useEffect(() => {
     if (!currentQuestion) return;
     const currentDomain = currentQuestion.domain;
-    if (prevDomainRef.current && prevDomainRef.current !== currentDomain) {
+    const isNewDomain = prevDomainRef.current && prevDomainRef.current !== currentDomain;
+    const notSeenYet = !seenDomainsRef.current.has(currentDomain);
+
+    if (isNewDomain && notSeenYet) {
+      seenDomainsRef.current.add(currentDomain);
       setShowDomainTransition(true);
-      const timer = setTimeout(() => setShowDomainTransition(false), 1200);
+      const timer = setTimeout(() => setShowDomainTransition(false), 1500);
       return () => clearTimeout(timer);
     }
     prevDomainRef.current = currentDomain;
@@ -162,25 +175,30 @@ export const QuestionWizard: React.FC<QuestionWizardProps> = ({
           </span>
         </div>
 
-        {/* Domain transition overlay */}
+        {/* Domain transition banner */}
         <AnimatePresence>
           {showDomainTransition && (
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              className="fixed inset-0 z-50 flex items-center justify-center bg-white/80 backdrop-blur-sm"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3, ease: 'easeOut' }}
+              className="mb-6 rounded-xl border p-4 flex items-center gap-3"
+              style={{
+                backgroundColor: `var(--domain-bg, #f0fdfa)`,
+                borderColor: `var(--domain-border, #ccfbf1)`,
+              }}
             >
-              <div className="text-center">
-                <div
-                  className={`w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 ${domainMeta.bgColor} ${domainMeta.textColor}`}
-                >
-                  {DOMAIN_ICONS[currentQuestion.domain]}
-                </div>
-                <p className="font-display font-bold text-2xl text-gray-900">
-                  {domainMeta.name}
+              <div
+                className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${domainMeta.bgColor} ${domainMeta.textColor}`}
+              >
+                {DOMAIN_ICONS[currentQuestion.domain]}
+              </div>
+              <div>
+                <p className="font-bold text-sm text-gray-900">
+                  Now exploring: {domainMeta.name}
                 </p>
-                <p className="text-sm text-gray-500 mt-1">{domainMeta.description}</p>
+                <p className="text-xs text-gray-500">{domainMeta.description}</p>
               </div>
             </motion.div>
           )}

@@ -249,10 +249,10 @@ const CommandPalette: React.FC<CommandPaletteProps> = ({ open, onClose }) => {
 
       {/* Palette */}
       <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-full max-w-lg">
-        <div className="bg-white dark:bg-slate-900 rounded-xl shadow-2xl border border-gray-200 dark:border-slate-700 overflow-hidden">
+        <div className="bg-surface rounded-2xl shadow-2xl border border-border overflow-hidden">
           {/* Search input */}
-          <div className="flex items-center gap-3 px-4 py-3 border-b border-gray-200 dark:border-slate-700">
-            <Search size={18} className="text-gray-400 dark:text-slate-500 flex-shrink-0" />
+          <div className="flex items-center gap-3 px-4 py-3 border-b border-border">
+            <Search size={18} className="text-text-tertiary flex-shrink-0" />
             <input
               ref={inputRef}
               value={query}
@@ -261,9 +261,9 @@ const CommandPalette: React.FC<CommandPaletteProps> = ({ open, onClose }) => {
                 setActiveIndex(0);
               }}
               placeholder="Search commands..."
-              className="flex-1 text-sm bg-transparent text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-slate-500 outline-none"
+              className="flex-1 text-sm bg-transparent text-text-primary placeholder:text-text-tertiary outline-none"
             />
-            <kbd className="hidden sm:inline-flex items-center gap-1 px-1.5 py-0.5 text-[10px] font-mono text-gray-400 dark:text-slate-500 bg-gray-100 dark:bg-slate-800 rounded">
+            <kbd className="hidden sm:inline-flex items-center gap-1 px-1.5 py-0.5 text-[10px] font-mono text-text-tertiary bg-surface-hover rounded">
               ESC
             </kbd>
           </div>
@@ -271,14 +271,14 @@ const CommandPalette: React.FC<CommandPaletteProps> = ({ open, onClose }) => {
           {/* Results */}
           <div ref={listRef} className="max-h-80 overflow-y-auto py-2">
             {filtered.length === 0 && (
-              <div className="px-4 py-8 text-center text-sm text-gray-400 dark:text-slate-500">
+              <div className="px-4 py-8 text-center text-sm text-text-tertiary">
                 No matching commands
               </div>
             )}
 
             {Array.from(grouped.entries()).map(([section, items]) => (
               <div key={section}>
-                <div className="px-4 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
+                <div className="px-4 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-text-tertiary">
                   {section}
                 </div>
                 {items.map((item) => {
@@ -295,15 +295,15 @@ const CommandPalette: React.FC<CommandPaletteProps> = ({ open, onClose }) => {
                       onMouseEnter={() => setActiveIndex(idx)}
                       className={`w-full flex items-center gap-3 px-4 py-2.5 text-left transition-colors ${
                         isActive
-                          ? 'bg-teal-50 dark:bg-teal-900/20 text-teal-700 dark:text-teal-400'
-                          : 'text-gray-700 dark:text-slate-300 hover:bg-gray-50 dark:hover:bg-slate-800'
+                          ? 'bg-primary/10 text-primary'
+                          : 'text-text-secondary hover:bg-surface-hover'
                       }`}
                     >
                       <item.icon size={16} className="flex-shrink-0 opacity-60" />
                       <div className="flex-1 min-w-0">
                         <p className="text-sm font-medium truncate">{item.label}</p>
                         {item.description && (
-                          <p className="text-xs text-gray-400 dark:text-slate-500 truncate">
+                          <p className="text-xs text-text-tertiary truncate">
                             {item.description}
                           </p>
                         )}
@@ -316,13 +316,13 @@ const CommandPalette: React.FC<CommandPaletteProps> = ({ open, onClose }) => {
           </div>
 
           {/* Footer */}
-          <div className="px-4 py-2 border-t border-gray-200 dark:border-slate-700 flex items-center gap-4 text-[11px] text-gray-400 dark:text-slate-500">
+          <div className="px-4 py-2 border-t border-border flex items-center gap-4 text-[11px] text-text-tertiary">
             <span className="flex items-center gap-1">
-              <kbd className="px-1 py-0.5 bg-gray-100 dark:bg-slate-800 rounded text-[10px] font-mono">↑↓</kbd>
+              <kbd className="px-1 py-0.5 bg-surface-hover rounded text-[10px] font-mono">↑↓</kbd>
               Navigate
             </span>
             <span className="flex items-center gap-1">
-              <kbd className="px-1 py-0.5 bg-gray-100 dark:bg-slate-800 rounded text-[10px] font-mono">↵</kbd>
+              <kbd className="px-1 py-0.5 bg-surface-hover rounded text-[10px] font-mono">↵</kbd>
               Select
             </span>
             <span className="flex items-center gap-1 ml-auto">

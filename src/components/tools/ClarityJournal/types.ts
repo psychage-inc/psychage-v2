@@ -173,7 +173,7 @@ export interface ThoughtRecordEntry {
   balancedThought: string;
   emotionsAfter: EmotionEntry[];
   completed: boolean;
-  source: 'journal' | 'thought-reframer';
+  source: 'journal' | 'cognitive-restructuring';
 }
 
 export interface SafetyFlag {

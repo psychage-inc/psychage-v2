@@ -30,10 +30,10 @@ interface MetricCardProps {
 }
 
 const MetricCard: React.FC<MetricCardProps> = ({ icon: Icon, label, value, trend, loading }) => (
-  <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-5">
+  <div className="bg-surface border border-border rounded-2xl p-5">
     <div className="flex items-center justify-between mb-3">
-      <div className="w-10 h-10 rounded-lg bg-teal-50 dark:bg-teal-900/20 flex items-center justify-center">
-        <Icon size={20} className="text-teal-600 dark:text-teal-400" />
+      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+        <Icon size={20} className="text-primary" />
       </div>
       {trend !== undefined && trend !== 0 && (
         <div className={`flex items-center gap-1 text-xs font-medium ${trend > 0 ? 'text-emerald-600' : 'text-red-500'}`}>
@@ -42,11 +42,11 @@ const MetricCard: React.FC<MetricCardProps> = ({ icon: Icon, label, value, trend
         </div>
       )}
     </div>
-    <p className="text-sm text-gray-500 dark:text-slate-400">{label}</p>
+    <p className="text-sm text-text-secondary">{label}</p>
     {loading ? (
-      <div className="h-8 w-20 bg-gray-100 dark:bg-slate-800 rounded animate-pulse mt-1" />
+      <div className="h-8 w-20 bg-surface-hover rounded animate-pulse mt-1" />
     ) : (
-      <p className="text-2xl font-bold text-gray-900 dark:text-white mt-1">
+      <p className="text-2xl font-bold text-text-primary mt-1">
         {value ?? '\u2014'}
       </p>
     )}
@@ -129,10 +129,10 @@ function useRecentActivity() {
 const CHART_COLORS = ['#0d9488', '#f59e0b', '#ef4444', '#3b82f6', '#8b5cf6'];
 
 const UserGrowthChart: React.FC<{ data: { date: string; count: number }[] }> = ({ data }) => (
-  <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-5">
-    <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-4">User Registrations (30d)</h3>
+  <div className="bg-surface border border-border rounded-2xl p-5">
+    <h3 className="text-sm font-semibold text-text-primary mb-4">User Registrations (30d)</h3>
     {data.length === 0 ? (
-      <p className="text-sm text-gray-400 py-8 text-center">No data available</p>
+      <p className="text-sm text-text-tertiary py-8 text-center">No data available</p>
     ) : (
       <ResponsiveContainer width="100%" height={240}>
         <AreaChart data={data}>
@@ -199,40 +199,40 @@ function ArticleMetrics() {
     (attention?.staleRejections.length || 0);
 
   return (
-    <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-5">
+    <div className="bg-surface border border-border rounded-2xl p-5">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-sm font-semibold text-gray-900 dark:text-white">Article Pipeline</h3>
-        <Link to={adminPath('/articles')} className="text-xs text-teal-600 hover:text-teal-700 font-medium">
+        <h3 className="text-sm font-semibold text-text-primary">Article Pipeline</h3>
+        <Link to={adminPath('/articles')} className="text-xs text-primary hover:text-primary-hover font-medium">
           View All
         </Link>
       </div>
 
       {isLoading ? (
-        <div className="h-20 bg-gray-100 dark:bg-slate-800 rounded animate-pulse" />
+        <div className="h-20 bg-surface-hover rounded animate-pulse" />
       ) : (
         <>
           <div className="grid grid-cols-4 gap-3 mb-4">
             <div className="text-center">
-              <div className="text-xl font-bold text-gray-900 dark:text-white">{stats?.in_review ?? 0}</div>
-              <div className="text-xs text-gray-500">In Review</div>
+              <div className="text-xl font-bold text-text-primary">{stats?.in_review ?? 0}</div>
+              <div className="text-xs text-text-secondary">In Review</div>
             </div>
             <div className="text-center">
-              <div className="text-xl font-bold text-gray-900 dark:text-white">{stats?.approved ?? 0}</div>
-              <div className="text-xs text-gray-500">Approved</div>
+              <div className="text-xl font-bold text-text-primary">{stats?.approved ?? 0}</div>
+              <div className="text-xs text-text-secondary">Approved</div>
             </div>
             <div className="text-center">
-              <div className="text-xl font-bold text-gray-900 dark:text-white">{stats?.published ?? 0}</div>
-              <div className="text-xs text-gray-500">Published</div>
+              <div className="text-xl font-bold text-text-primary">{stats?.published ?? 0}</div>
+              <div className="text-xs text-text-secondary">Published</div>
             </div>
             <div className="text-center">
               <div className="text-xl font-bold text-amber-500">{stats?.avg_rating ?? '—'}</div>
-              <div className="text-xs text-gray-500">Avg Rating</div>
+              <div className="text-xs text-text-secondary">Avg Rating</div>
             </div>
           </div>
 
           {/* Status bar */}
           {stats && stats.total > 0 && (
-            <div className="flex h-2 rounded-full overflow-hidden bg-gray-100 dark:bg-slate-800 mb-4">
+            <div className="flex h-2 rounded-full overflow-hidden bg-surface-hover mb-4">
               {stats.published > 0 && (
                 <div className="bg-emerald-500" style={{ width: `${(stats.published / stats.total) * 100}%` }} />
               )}
@@ -259,13 +259,13 @@ function ArticleMetrics() {
                 Needs Attention
               </div>
               {(attention?.stuckInReview.length || 0) > 0 && (
-                <div className="flex items-center gap-2 text-xs text-gray-600 dark:text-slate-400">
+                <div className="flex items-center gap-2 text-xs text-text-secondary">
                   <Clock size={12} />
                   {attention!.stuckInReview.length} article{attention!.stuckInReview.length !== 1 ? 's' : ''} stuck in review (&gt;7 days)
                 </div>
               )}
               {(attention?.staleRejections.length || 0) > 0 && (
-                <div className="flex items-center gap-2 text-xs text-gray-600 dark:text-slate-400">
+                <div className="flex items-center gap-2 text-xs text-text-secondary">
                   <AlertCircle size={12} />
                   {attention!.staleRejections.length} rejected article{attention!.staleRejections.length !== 1 ? 's' : ''} not resubmitted
                 </div>
@@ -279,34 +279,34 @@ function ArticleMetrics() {
 }
 
 const ActivityFeed: React.FC<{ entries: AuditEntry[]; loading: boolean }> = ({ entries, loading }) => (
-  <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-5">
-    <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-4">Recent Activity</h3>
+  <div className="bg-surface border border-border rounded-2xl p-5">
+    <h3 className="text-sm font-semibold text-text-primary mb-4">Recent Activity</h3>
     {loading ? (
       <div className="space-y-3">
         {Array.from({ length: 5 }).map((_, i) => (
           <div key={i} className="flex items-center gap-3">
-            <div className="w-2.5 h-2.5 rounded-full bg-gray-200 animate-pulse" />
-            <div className="h-4 flex-1 bg-gray-100 dark:bg-slate-800 rounded animate-pulse" />
+            <div className="w-2.5 h-2.5 rounded-full bg-surface-hover animate-pulse" />
+            <div className="h-4 flex-1 bg-surface-hover rounded animate-pulse" />
           </div>
         ))}
       </div>
     ) : entries.length === 0 ? (
-      <p className="text-sm text-gray-400 py-8 text-center">No recent activity</p>
+      <p className="text-sm text-text-tertiary py-8 text-center">No recent activity</p>
     ) : (
       <div className="space-y-3 max-h-[400px] overflow-y-auto">
         {entries.map((entry) => (
           <div key={entry.id} className="flex items-start gap-3">
             <div className={`w-2.5 h-2.5 rounded-full mt-1.5 flex-shrink-0 ${actionColors[entry.action] || 'bg-gray-400'}`} />
             <div className="flex-1 min-w-0">
-              <p className="text-sm text-gray-700 dark:text-slate-300">
+              <p className="text-sm text-text-secondary">
                 <span className="font-medium">{entry.action}</span>
                 {' '}
                 <AdminStatusBadge status={entry.resource_type} />
                 {entry.resource_id && (
-                  <span className="text-gray-400 ml-1">({entry.resource_id})</span>
+                  <span className="text-text-tertiary ml-1">({entry.resource_id})</span>
                 )}
               </p>
-              <p className="text-xs text-gray-400 dark:text-slate-500 mt-0.5">
+              <p className="text-xs text-text-tertiary mt-0.5">
                 {formatDistanceToNow(new Date(entry.created_at), { addSuffix: true })}
               </p>
             </div>
@@ -344,15 +344,15 @@ const AdminDashboardV2: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
         {chartsLoading ? (
           <>
-            <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-5 h-[300px] animate-pulse" />
-            <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-5 h-[300px] animate-pulse" />
+            <div className="bg-surface border border-border rounded-2xl p-5 h-[300px] animate-pulse" />
+            <div className="bg-surface border border-border rounded-2xl p-5 h-[300px] animate-pulse" />
           </>
         ) : (
           <>
             <UserGrowthChart data={chartData?.userGrowth || []} />
-            <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-5">
-              <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-4">Safety Flags by Week</h3>
-              <p className="text-sm text-gray-400 py-8 text-center">Data available after Phase 6</p>
+            <div className="bg-surface border border-border rounded-2xl p-5">
+              <h3 className="text-sm font-semibold text-text-primary mb-4">Safety Flags by Week</h3>
+              <p className="text-sm text-text-tertiary py-8 text-center">Data available after Phase 6</p>
             </div>
           </>
         )}

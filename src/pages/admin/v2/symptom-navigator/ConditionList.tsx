@@ -66,7 +66,7 @@ const AdminConditionList: React.FC = () => {
       cell: ({ row }) => (
         <Link
           to={adminPath(`/symptom-navigator/conditions/${row.original.id}/edit`)}
-          className="font-medium text-gray-900 dark:text-white hover:text-teal-600"
+          className="font-medium text-text-primary hover:text-primary"
         >
           {row.original.name?.en || row.original.condition_id}
         </Link>
@@ -82,7 +82,7 @@ const AdminConditionList: React.FC = () => {
       header: 'Symptoms',
       cell: ({ row }) => {
         const counts = mappingCounts?.get(row.original.condition_id);
-        return <span className="text-sm text-gray-500">{counts?.total || 0}</span>;
+        return <span className="text-sm text-text-secondary">{counts?.total || 0}</span>;
       },
     },
     {
@@ -90,7 +90,7 @@ const AdminConditionList: React.FC = () => {
       header: 'Core',
       cell: ({ row }) => {
         const counts = mappingCounts?.get(row.original.condition_id);
-        return <span className="text-sm text-gray-500">{counts?.core || 0}</span>;
+        return <span className="text-sm text-text-secondary">{counts?.core || 0}</span>;
       },
     },
     {
@@ -130,7 +130,7 @@ const AdminConditionList: React.FC = () => {
       cell: ({ row }) => (
         <button
           onClick={() => navigate(adminPath(`/symptom-navigator/conditions/${row.original.id}/edit`))}
-          className="p-1.5 text-gray-400 hover:text-teal-600"
+          className="p-1.5 text-text-tertiary hover:text-primary"
           title="Edit"
         >
           <Pencil size={15} />
@@ -147,7 +147,7 @@ const AdminConditionList: React.FC = () => {
         actions={
           <button
             onClick={() => navigate(adminPath('/symptom-navigator/conditions/new/edit'))}
-            className="flex items-center gap-2 px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium rounded-lg transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary-hover text-white text-sm font-medium rounded-lg transition-colors"
           >
             <Plus size={16} /> Add Condition
           </button>

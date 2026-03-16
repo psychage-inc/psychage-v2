@@ -11,7 +11,7 @@ import type {
 } from '../types';
 import { loadJournal, getDailyJournalsInRange } from '../storage';
 import { classifyPHQ2, classifyGAD2 } from '../scoring';
-import { COGNITIVE_DISTORTIONS } from '../../ThoughtReframer/types';
+import { COGNITIVE_DISTORTIONS } from '@/lib/safety/cognitiveDistortions';
 
 /** Generate the full report data for a given configuration */
 export function generateReportData(config: ReportConfig): ReportData {
@@ -162,15 +162,9 @@ function computeScreenerTrends(screenings: ClarityJournalData['weeklyScreenings'
 // ── Thought Record Analysis ──
 
 function computeThoughtRecordAnalysis(journals: DailyJournal[], data: ClarityJournalData) {
-  // Combine journal thought records + imported ThoughtReframer records
+  // Journal thought records
   const journalRecords = journals.flatMap(j => j.thoughtRecords);
-  let reframerRecords: any[] = [];
-  try {
-    const raw = localStorage.getItem('psychage_thought_reframer_v1');
-    if (raw) reframerRecords = JSON.parse(raw);
-  } catch { /* ignore */ }
-
-  const allRecords = [...journalRecords, ...reframerRecords.filter((r: any) => r.distortions)];
+  const allRecords = [...journalRecords];
   const completedRecords = allRecords.filter((r: any) => r.completed);
 
   // Count distortions

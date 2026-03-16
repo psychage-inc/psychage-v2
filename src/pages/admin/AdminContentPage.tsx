@@ -319,7 +319,7 @@ const AdminContentPage: React.FC = () => {
         header: 'Category',
         cell: ({ getValue }) => {
           const cat = getValue() as string;
-          const colors = categoryBadgeColors[cat] || 'bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-400';
+          const colors = categoryBadgeColors[cat] || 'bg-surface-hover text-text-secondary';
           return (
             <span
               className={cn(
@@ -477,7 +477,7 @@ const AdminContentPage: React.FC = () => {
           const type = getValue() as string;
           const label = type === 'provider_profile' ? 'Profile' : type;
           const colors =
-            contentTypeBadgeColors[type] || 'bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-400';
+            contentTypeBadgeColors[type] || 'bg-surface-hover text-text-secondary';
           return (
             <span
               className={cn(

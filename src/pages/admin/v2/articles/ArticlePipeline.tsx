@@ -18,7 +18,7 @@ import { adminPath } from '@/hooks/useAdminNavigate';
 
 // Column header colors
 const stageHeaderColors: Record<string, string> = {
-  planned: 'bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600',
+  planned: 'bg-surface-hover border-border-hover',
   researched: 'bg-purple-50 dark:bg-purple-900/20 border-purple-300 dark:border-purple-700',
   drafted: 'bg-blue-50 dark:bg-blue-900/20 border-blue-300 dark:border-blue-700',
   in_review: 'bg-amber-50 dark:bg-amber-900/20 border-amber-300 dark:border-amber-700',
@@ -42,41 +42,41 @@ function PipelineCard({
   const daysInStage = formatDistanceToNow(new Date(article.updated_at), { addSuffix: false });
 
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700 p-3 hover:shadow-sm transition-shadow">
+    <div className="bg-surface rounded-2xl border border-border p-3 hover:shadow-sm transition-shadow">
       <div className="flex items-start gap-2">
-        <GripVertical size={14} className="text-gray-300 dark:text-slate-600 mt-0.5 flex-shrink-0" />
+        <GripVertical size={14} className="text-text-tertiary mt-0.5 flex-shrink-0" />
         <div className="min-w-0 flex-1">
           <Link
             to={adminPath(`/articles/${article.id}`)}
-            className="text-sm font-medium text-gray-900 dark:text-white hover:text-teal-600 dark:hover:text-teal-400 line-clamp-2 leading-snug"
+            className="text-sm font-medium text-text-primary hover:text-primary line-clamp-2 leading-snug"
           >
             {article.title}
           </Link>
 
           <div className="flex items-center gap-2 mt-2 flex-wrap">
             {article.category && (
-              <span className="text-[11px] px-1.5 py-0.5 rounded bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-slate-400 truncate max-w-[120px]">
+              <span className="text-[11px] px-1.5 py-0.5 rounded bg-surface-hover text-text-secondary truncate max-w-[120px]">
                 {article.category}
               </span>
             )}
-            <span className="text-[11px] text-gray-400 dark:text-slate-500">{daysInStage}</span>
+            <span className="text-[11px] text-text-tertiary">{daysInStage}</span>
           </div>
 
           {article.assigned_reviewer_name && (
-            <p className="text-[11px] text-gray-400 dark:text-slate-500 mt-1.5 truncate">
+            <p className="text-[11px] text-text-tertiary mt-1.5 truncate">
               Reviewer: {article.assigned_reviewer_name}
             </p>
           )}
 
           {nextStages.length > 0 && (
-            <div className="mt-2 pt-2 border-t border-gray-100 dark:border-slate-700/50">
+            <div className="mt-2 pt-2 border-t border-border">
               {nextStages.map((next) => {
                 const nextLabel = ARTICLE_REVIEW_STAGES.find((s) => s.value === next)?.label || next;
                 return (
                   <button
                     key={next}
                     onClick={() => onAdvance(article)}
-                    className="inline-flex items-center gap-1 text-[11px] font-medium text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300 transition-colors mr-3"
+                    className="inline-flex items-center gap-1 text-[11px] font-medium text-primary hover:text-primary-hover transition-colors mr-3"
                   >
                     <ChevronRight size={12} />
                     {nextLabel}
@@ -113,16 +113,16 @@ function PipelineColumn({
           stageHeaderColors[stage.value]
         )}
       >
-        <h3 className="text-sm font-semibold text-gray-700 dark:text-slate-200">{stage.label}</h3>
-        <span className="text-xs font-medium text-gray-500 dark:text-slate-400 bg-white dark:bg-slate-700 px-2 py-0.5 rounded-full">
+        <h3 className="text-sm font-semibold text-text-primary">{stage.label}</h3>
+        <span className="text-xs font-medium text-text-secondary bg-surface px-2 py-0.5 rounded-full">
           {articles.length}
         </span>
       </div>
 
       {/* Cards */}
-      <div className="flex-1 space-y-2 p-2 bg-gray-50/50 dark:bg-slate-900/30 rounded-b-lg border border-t-0 border-gray-200 dark:border-slate-700 overflow-y-auto max-h-[calc(100vh-260px)]">
+      <div className="flex-1 space-y-2 p-2 bg-background rounded-b-lg border border-t-0 border-border overflow-y-auto max-h-[calc(100vh-260px)]">
         {articles.length === 0 ? (
-          <p className="text-xs text-gray-400 dark:text-slate-500 text-center py-8">No articles</p>
+          <p className="text-xs text-text-tertiary text-center py-8">No articles</p>
         ) : (
           articles.map((article) => (
             <PipelineCard key={article.id} article={article} onAdvance={onAdvance} />
@@ -177,7 +177,7 @@ const AdminArticlePipeline: React.FC = () => {
       {isLoading ? (
         <div className="flex gap-4 overflow-x-auto pb-4">
           {Array.from({ length: 6 }).map((_, i) => (
-            <div key={i} className="min-w-[260px] h-96 bg-gray-100 dark:bg-slate-800 rounded-lg animate-pulse" />
+            <div key={i} className="min-w-[260px] h-96 bg-surface-hover rounded-lg animate-pulse" />
           ))}
         </div>
       ) : (

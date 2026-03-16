@@ -143,7 +143,7 @@ const UserManagementPage: React.FC = () => {
                     patient: 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400',
                 };
                 return (
-                    <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-bold uppercase tracking-wide capitalize ${badgeColors[role] || 'bg-gray-100 text-gray-700'}`}>
+                    <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-bold uppercase tracking-wide capitalize ${badgeColors[role] || 'bg-surface-hover text-text-secondary'}`}>
                         {role}
                     </span>
                 );
@@ -209,8 +209,8 @@ const UserManagementPage: React.FC = () => {
 
                         {inviteSuccess ? (
                             <div className="text-center py-8">
-                                <div className="w-16 h-16 mx-auto rounded-full bg-teal-500/10 flex items-center justify-center mb-4">
-                                    <Mail className="w-8 h-8 text-teal-500" />
+                                <div className="w-16 h-16 mx-auto rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                                    <Mail className="w-8 h-8 text-primary" />
                                 </div>
                                 <p className="text-lg font-bold text-text-primary mb-1">Invite Sent</p>
                                 <p className="text-text-secondary text-sm">They&apos;ll receive an email to set up their account.</p>

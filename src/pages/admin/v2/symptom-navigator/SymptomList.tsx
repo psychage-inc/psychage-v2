@@ -114,7 +114,7 @@ const AdminSymptomList: React.FC = () => {
     {
       accessorKey: 'symptom_id',
       header: 'ID',
-      cell: ({ row }) => <code className="text-xs font-mono text-gray-500">{row.original.symptom_id}</code>,
+      cell: ({ row }) => <code className="text-xs font-mono text-text-secondary">{row.original.symptom_id}</code>,
     },
     { accessorKey: 'clinical_name', header: 'Clinical Name' },
     {
@@ -154,7 +154,7 @@ const AdminSymptomList: React.FC = () => {
       header: '',
       enableSorting: false,
       cell: ({ row }) => (
-        <button onClick={() => openForm(row.original)} className="p-1.5 text-gray-400 hover:text-teal-600" title="Edit">
+        <button onClick={() => openForm(row.original)} className="p-1.5 text-text-tertiary hover:text-primary" title="Edit">
           <Pencil size={15} />
         </button>
       ),
@@ -167,7 +167,7 @@ const AdminSymptomList: React.FC = () => {
         title="Symptoms"
         description={`${symptoms?.length || 0} symptoms across 4 domains`}
         actions={
-          <button onClick={() => openForm()} className="flex items-center gap-2 px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium rounded-lg transition-colors">
+          <button onClick={() => openForm()} className="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary-hover text-white text-sm font-medium rounded-lg transition-colors">
             <Plus size={16} /> Add Symptom
           </button>
         }
@@ -182,7 +182,7 @@ const AdminSymptomList: React.FC = () => {
       <div className="flex gap-2 mb-4">
         <button
           onClick={() => setFilterDomain('')}
-          className={cn('px-3 py-1.5 text-sm rounded-lg transition-colors', !filterDomain ? 'bg-teal-100 text-teal-700' : 'bg-gray-100 text-gray-600 hover:bg-gray-200')}
+          className={cn('px-3 py-1.5 text-sm rounded-lg transition-colors', !filterDomain ? 'bg-primary/15 text-primary' : 'bg-surface-hover text-text-secondary hover:bg-surface-active')}
         >
           All
         </button>
@@ -190,7 +190,7 @@ const AdminSymptomList: React.FC = () => {
           <button
             key={d.value}
             onClick={() => setFilterDomain(d.value)}
-            className={cn('px-3 py-1.5 text-sm rounded-lg transition-colors', filterDomain === d.value ? 'bg-teal-100 text-teal-700' : 'bg-gray-100 text-gray-600 hover:bg-gray-200')}
+            className={cn('px-3 py-1.5 text-sm rounded-lg transition-colors', filterDomain === d.value ? 'bg-primary/15 text-primary' : 'bg-surface-hover text-text-secondary hover:bg-surface-active')}
           >
             {d.label}
           </button>
@@ -210,45 +210,45 @@ const AdminSymptomList: React.FC = () => {
       {form.open && (
         <div className="fixed inset-0 z-50 flex">
           <div className="absolute inset-0 bg-black/40" onClick={closeForm} />
-          <div className="relative ml-auto w-full max-w-md bg-white dark:bg-slate-900 h-full overflow-y-auto shadow-xl p-6">
+          <div className="relative ml-auto w-full max-w-md bg-surface h-full overflow-y-auto shadow-xl p-6">
             <div className="flex items-center justify-between mb-6">
-              <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
+              <h2 className="text-lg font-semibold text-text-primary">
                 {form.editing ? 'Edit Symptom' : 'Add Symptom'}
               </h2>
-              <button onClick={closeForm} className="text-gray-400 hover:text-gray-600"><X size={20} /></button>
+              <button onClick={closeForm} className="text-text-tertiary hover:text-text-secondary"><X size={20} /></button>
             </div>
 
             <div className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1">Symptom ID</label>
-                <input value={symptomId} onChange={(e) => setSymptomId(e.target.value)} placeholder="e.g. SLP_001" className="w-full px-3 py-2 text-sm font-mono border border-gray-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-900 outline-none focus:ring-2 focus:ring-teal-500" />
+                <label className="block text-sm font-medium text-text-secondary mb-1">Symptom ID</label>
+                <input value={symptomId} onChange={(e) => setSymptomId(e.target.value)} placeholder="e.g. SLP_001" className="w-full px-3 py-2 text-sm font-mono border border-border rounded-lg bg-surface outline-none focus:ring-2 focus:ring-primary" />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1">Domain</label>
-                <select value={domain} onChange={(e) => setDomain(e.target.value as SymptomDomain)} className="w-full px-3 py-2 text-sm border border-gray-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-900 outline-none focus:ring-2 focus:ring-teal-500">
+                <label className="block text-sm font-medium text-text-secondary mb-1">Domain</label>
+                <select value={domain} onChange={(e) => setDomain(e.target.value as SymptomDomain)} className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface outline-none focus:ring-2 focus:ring-primary">
                   {SYMPTOM_DOMAINS.map((d) => <option key={d.value} value={d.value}>{d.label}</option>)}
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1">Category</label>
-                <input value={category} onChange={(e) => setCategory(e.target.value)} placeholder="e.g. sleep, mood, appetite" className="w-full px-3 py-2 text-sm border border-gray-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-900 outline-none focus:ring-2 focus:ring-teal-500" />
+                <label className="block text-sm font-medium text-text-secondary mb-1">Category</label>
+                <input value={category} onChange={(e) => setCategory(e.target.value)} placeholder="e.g. sleep, mood, appetite" className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface outline-none focus:ring-2 focus:ring-primary" />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1">Clinical Name</label>
-                <input value={clinicalName} onChange={(e) => setClinicalName(e.target.value)} className="w-full px-3 py-2 text-sm border border-gray-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-900 outline-none focus:ring-2 focus:ring-teal-500" />
+                <label className="block text-sm font-medium text-text-secondary mb-1">Clinical Name</label>
+                <input value={clinicalName} onChange={(e) => setClinicalName(e.target.value)} className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface outline-none focus:ring-2 focus:ring-primary" />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1">Display Name (English)</label>
-                <input value={displayNameEn} onChange={(e) => setDisplayNameEn(e.target.value)} className="w-full px-3 py-2 text-sm border border-gray-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-900 outline-none focus:ring-2 focus:ring-teal-500" />
+                <label className="block text-sm font-medium text-text-secondary mb-1">Display Name (English)</label>
+                <input value={displayNameEn} onChange={(e) => setDisplayNameEn(e.target.value)} className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface outline-none focus:ring-2 focus:ring-primary" />
               </div>
-              <label className="flex items-center gap-2 text-sm text-gray-700 dark:text-slate-300">
-                <input type="checkbox" checked={isActive} onChange={(e) => setIsActive(e.target.checked)} className="rounded border-gray-300 text-teal-600" />
+              <label className="flex items-center gap-2 text-sm text-text-secondary">
+                <input type="checkbox" checked={isActive} onChange={(e) => setIsActive(e.target.checked)} className="rounded border-border-hover text-primary" />
                 Active
               </label>
               <button
                 onClick={() => saveMutation.mutate()}
                 disabled={saveMutation.isPending || !symptomId || !clinicalName}
-                className="w-full py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium rounded-lg transition-colors disabled:opacity-50"
+                className="w-full py-2.5 bg-primary hover:bg-primary-hover text-white text-sm font-medium rounded-lg transition-colors disabled:opacity-50"
               >
                 {saveMutation.isPending ? 'Saving...' : form.editing ? 'Save Changes' : 'Add Symptom'}
               </button>

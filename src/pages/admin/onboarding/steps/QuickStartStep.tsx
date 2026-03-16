@@ -110,8 +110,8 @@ const QuickStartStep: React.FC<StepProps> = ({ onNext, onBack }) => {
                 className={cn(
                   'w-6 h-6 rounded-md border-2 flex items-center justify-center flex-shrink-0 transition-colors',
                   isChecked
-                    ? 'border-teal-500 bg-teal-500'
-                    : 'border-gray-400 dark:border-gray-600'
+                    ? 'border-primary bg-primary'
+                    : 'border-border-hover'
                 )}
               >
                 {isChecked && <Check size={14} className="text-white" />}

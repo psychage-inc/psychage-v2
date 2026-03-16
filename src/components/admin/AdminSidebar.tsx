@@ -81,16 +81,16 @@ const AdminSidebar: React.FC<AdminSidebarProps> = ({ collapsed, onToggle }) => {
   return (
     <aside
       className={cn(
-        'fixed left-0 top-0 h-screen bg-slate-900 text-white flex flex-col z-40 transition-all duration-200',
+        'fixed left-0 top-0 h-screen bg-surface/80 backdrop-blur-xl border-r border-border text-text-primary flex flex-col z-40 transition-all duration-200',
         'max-lg:-translate-x-full max-lg:w-64',
         'lg:translate-x-0',
         collapsed ? 'lg:w-16' : 'lg:w-64'
       )}
     >
       {/* Logo */}
-      <div className="h-16 flex items-center px-4 border-b border-slate-700/50">
+      <div className="h-16 flex items-center px-4 border-b border-border">
         <Link to={adminPath('/dashboard')} className="flex items-center gap-3 min-w-0">
-          <div className="w-8 h-8 rounded-lg bg-teal-500 flex items-center justify-center flex-shrink-0">
+          <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center flex-shrink-0">
             <span className="text-white font-bold text-sm">P</span>
           </div>
           {!collapsed && (
@@ -115,8 +115,8 @@ const AdminSidebar: React.FC<AdminSidebarProps> = ({ collapsed, onToggle }) => {
                   'flex items-center gap-3 rounded-lg transition-colors',
                   collapsed ? 'px-3 py-3 justify-center' : 'px-3 py-2.5',
                   active
-                    ? 'bg-teal-600/20 text-teal-400'
-                    : 'text-slate-400 hover:bg-slate-800 hover:text-white'
+                    ? 'bg-primary/10 text-primary'
+                    : 'text-text-secondary hover:bg-surface-hover hover:text-text-primary'
                 )}
               >
                 <item.icon size={20} className="flex-shrink-0" />
@@ -138,7 +138,7 @@ const AdminSidebar: React.FC<AdminSidebarProps> = ({ collapsed, onToggle }) => {
 
               {/* Sub-items */}
               {showSubItems && (
-                <div className="mt-1 ml-4 pl-4 border-l border-slate-700/50 space-y-0.5">
+                <div className="mt-1 ml-4 pl-4 border-l border-border space-y-0.5">
                   {item.subItems!.map((sub) => {
                     const subActive = sub.path === adminPath('/articles')
                       ? isExactActive(sub.path)
@@ -150,8 +150,8 @@ const AdminSidebar: React.FC<AdminSidebarProps> = ({ collapsed, onToggle }) => {
                         className={cn(
                           'flex items-center gap-2.5 px-2.5 py-2 rounded-md text-xs font-medium transition-colors',
                           subActive
-                            ? 'text-teal-400 bg-teal-600/10'
-                            : 'text-slate-500 hover:text-slate-300 hover:bg-slate-800/50'
+                            ? 'text-primary bg-primary/10'
+                            : 'text-text-tertiary hover:text-text-primary hover:bg-surface-hover'
                         )}
                       >
                         <sub.icon size={14} className="flex-shrink-0" />
@@ -169,7 +169,7 @@ const AdminSidebar: React.FC<AdminSidebarProps> = ({ collapsed, onToggle }) => {
       {/* Collapse toggle */}
       <button
         onClick={onToggle}
-        className="h-12 flex items-center justify-center border-t border-slate-700/50 text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+        className="h-12 flex items-center justify-center border-t border-border text-text-tertiary hover:text-text-primary hover:bg-surface-hover transition-colors"
         aria-label={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
       >
         {collapsed ? <ChevronRight size={18} /> : <ChevronLeft size={18} />}

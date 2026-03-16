@@ -112,15 +112,15 @@ const AdminBulkImport: React.FC = () => {
         title="Bulk NPI Import"
         description="Import providers by NPI number via NPPES registry"
         actions={
-          <button onClick={() => navigate(adminPath('/providers'))} className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 hover:text-gray-900">
+          <button onClick={() => navigate(adminPath('/providers'))} className="flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:text-text-primary">
             <ArrowLeft size={16} /> Back
           </button>
         }
       />
 
       <div className="max-w-2xl space-y-6">
-        <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-6">
-          <label className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-2">
+        <div className="bg-surface border border-border rounded-2xl p-6">
+          <label className="block text-sm font-medium text-text-secondary mb-2">
             NPI Numbers (one per line or comma-separated)
           </label>
           <textarea
@@ -128,23 +128,23 @@ const AdminBulkImport: React.FC = () => {
             onChange={(e) => setNpiInput(e.target.value)}
             placeholder="1234567890&#10;0987654321&#10;..."
             rows={8}
-            className="w-full px-3 py-2 text-sm font-mono border border-gray-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-900 text-gray-900 dark:text-white resize-none outline-none focus:ring-2 focus:ring-teal-500"
+            className="w-full px-3 py-2 text-sm font-mono border border-border rounded-lg bg-surface text-text-primary resize-none outline-none focus:ring-2 focus:ring-primary"
             disabled={importing}
           />
 
           <button
             onClick={handleImport}
             disabled={importing || !npiInput.trim()}
-            className="mt-4 flex items-center gap-2 px-6 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium rounded-lg transition-colors disabled:opacity-50"
+            className="mt-4 flex items-center gap-2 px-6 py-2.5 bg-primary hover:bg-primary-hover text-white text-sm font-medium rounded-lg transition-colors disabled:opacity-50"
           >
             {importing ? <Loader2 size={16} className="animate-spin" /> : <Upload size={16} />}
             {importing ? `Importing... ${progress}%` : 'Import'}
           </button>
 
           {importing && (
-            <div className="mt-4 h-2 bg-gray-100 dark:bg-slate-800 rounded-full overflow-hidden">
+            <div className="mt-4 h-2 bg-surface-hover rounded-full overflow-hidden">
               <div
-                className="h-full bg-teal-500 transition-all duration-300"
+                className="h-full bg-primary transition-all duration-300"
                 style={{ width: `${progress}%` }}
               />
             </div>
@@ -152,8 +152,8 @@ const AdminBulkImport: React.FC = () => {
         </div>
 
         {results.length > 0 && (
-          <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-6">
-            <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-4">
+          <div className="bg-surface border border-border rounded-2xl p-6">
+            <h3 className="text-sm font-semibold text-text-primary mb-4">
               Results: {imported} imported, {existing} already exist, {failed} failed
             </h3>
             <div className="space-y-2 max-h-[400px] overflow-y-auto">
@@ -162,8 +162,8 @@ const AdminBulkImport: React.FC = () => {
                   {r.status === 'imported' && <CheckCircle size={16} className="text-emerald-500" />}
                   {r.status === 'exists' && <CheckCircle size={16} className="text-blue-500" />}
                   {r.status === 'failed' && <XCircle size={16} className="text-red-500" />}
-                  <span className="font-mono text-gray-600 dark:text-slate-400">{r.npi}</span>
-                  {r.name && <span className="text-gray-900 dark:text-white">{r.name}</span>}
+                  <span className="font-mono text-text-secondary">{r.npi}</span>
+                  {r.name && <span className="text-text-primary">{r.name}</span>}
                   {r.status === 'exists' && <span className="text-blue-500">Already exists</span>}
                   {r.error && <span className="text-red-500">{r.error}</span>}
                 </div>

@@ -3,6 +3,216 @@
    Works in both editor and dangerouslySetInnerHTML view mode
    ============================================================ */
 
+/* ============================================================
+   Medium-style prose preview — shared by admin + public pages
+   Apply class "prose-medium" alongside Tailwind's prose plugin
+   ============================================================ */
+
+.prose-medium {
+  font-family: Georgia, 'Times New Roman', 'Noto Serif', serif;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.85;
+  font-size: 1.125rem; /* 18px base */
+  color: #1a1a1a;
+}
+.dark .prose-medium {
+  color: #e5e7eb;
+}
+
+/* Headings — clean sans-serif for contrast */
+.prose-medium h1,
+.prose-medium h2,
+.prose-medium h3,
+.prose-medium h4 {
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  letter-spacing: -0.02em;
+  color: #111827;
+}
+.dark .prose-medium h1,
+.dark .prose-medium h2,
+.dark .prose-medium h3,
+.dark .prose-medium h4 {
+  color: #f9fafb;
+}
+
+.prose-medium h1 {
+  font-size: 2.25rem; /* 36px */
+  font-weight: 800;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+.prose-medium h2 {
+  font-size: 1.75rem; /* 28px */
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+.prose-medium h3 {
+  font-size: 1.375rem; /* 22px */
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+}
+.prose-medium h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Paragraphs */
+.prose-medium p {
+  margin-bottom: 1.5em;
+  line-height: 1.85;
+}
+
+/* Drop cap — first paragraph only */
+.prose-medium > p:first-of-type::first-letter {
+  float: left;
+  font-size: 3.5em;
+  line-height: 0.85;
+  padding-right: 0.1em;
+  margin-top: 0.05em;
+  font-weight: 700;
+  color: #0d9488;
+  font-family: Georgia, serif;
+}
+.dark .prose-medium > p:first-of-type::first-letter {
+  color: #2dd4bf;
+}
+
+/* Blockquotes — Medium-style pull quotes */
+.prose-medium blockquote {
+  border-left: 4px solid #0d9488;
+  background: rgba(13, 148, 136, 0.04);
+  padding: 1.5rem 2rem;
+  margin: 2.5rem 0;
+  border-radius: 0 0.75rem 0.75rem 0;
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #111827;
+  line-height: 1.6;
+}
+.dark .prose-medium blockquote {
+  background: rgba(13, 148, 136, 0.08);
+  color: #e5e7eb;
+}
+
+/* Images — full-width with rounded corners */
+.prose-medium img {
+  width: 100%;
+  border-radius: 1rem;
+  margin: 2rem 0;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+}
+
+/* Image captions (using figcaption or em after img) */
+.prose-medium figure {
+  margin: 2rem 0;
+}
+.prose-medium figcaption {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 0.75rem;
+  font-style: italic;
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+}
+
+/* Links */
+.prose-medium a {
+  color: #0d9488;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s;
+}
+.prose-medium a:hover {
+  color: #0f766e;
+  text-decoration: underline;
+}
+.dark .prose-medium a {
+  color: #2dd4bf;
+}
+.dark .prose-medium a:hover {
+  color: #5eead4;
+}
+
+/* Lists */
+.prose-medium ul,
+.prose-medium ol {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+.prose-medium li {
+  margin-bottom: 0.5rem;
+  line-height: 1.75;
+}
+.prose-medium li::marker {
+  color: #0d9488;
+}
+
+/* Code blocks */
+.prose-medium pre {
+  background: #1f2937;
+  color: #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.875rem;
+  overflow-x: auto;
+  margin: 2rem 0;
+  line-height: 1.7;
+}
+.prose-medium code:not(pre code) {
+  background: #f3f4f6;
+  padding: 0.15em 0.4em;
+  border-radius: 0.25rem;
+  font-size: 0.9em;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+.dark .prose-medium code:not(pre code) {
+  background: rgba(55, 65, 81, 0.5);
+}
+
+/* Horizontal rule */
+.prose-medium hr {
+  border: none;
+  text-align: center;
+  margin: 3rem auto;
+}
+.prose-medium hr::before {
+  content: '···';
+  letter-spacing: 1em;
+  color: #9ca3af;
+  font-size: 1.25rem;
+}
+
+/* Strong / Bold */
+.prose-medium strong {
+  font-weight: 700;
+  color: #111827;
+}
+.dark .prose-medium strong {
+  color: #f3f4f6;
+}
+
+/* Citation superscripts */
+.prose-medium sup {
+  font-size: 0.75em;
+  color: #0d9488;
+  font-weight: 600;
+  cursor: pointer;
+}
+.prose-medium sup:hover {
+  text-decoration: underline;
+}
+
 /* Callout blocks */
 div[data-callout] {
   border-left: 4px solid;

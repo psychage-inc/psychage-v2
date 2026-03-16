@@ -93,8 +93,8 @@ const AdminArticleDetail: React.FC = () => {
   if (isLoading) {
     return (
       <div className="animate-pulse space-y-4">
-        <div className="h-8 bg-gray-200 dark:bg-slate-700 rounded w-1/3" />
-        <div className="h-64 bg-gray-200 dark:bg-slate-700 rounded" />
+        <div className="h-8 bg-surface-hover rounded animate-pulse w-1/3" />
+        <div className="h-64 bg-surface-hover rounded animate-pulse" />
       </div>
     );
   }
@@ -102,8 +102,8 @@ const AdminArticleDetail: React.FC = () => {
   if (!article) {
     return (
       <div className="text-center py-12">
-        <p className="text-gray-500">Article not found.</p>
-        <button onClick={() => navigate(adminPath('/articles'))} className="text-teal-600 mt-2 hover:underline">
+        <p className="text-text-secondary">Article not found.</p>
+        <button onClick={() => navigate(adminPath('/articles'))} className="text-primary mt-2 hover:underline">
           Back to Articles
         </button>
       </div>
@@ -118,10 +118,10 @@ const AdminArticleDetail: React.FC = () => {
           <div className="flex items-center gap-3 mt-1">
             <AdminStatusBadge status={article.status} />
             {article.author_name && (
-              <span className="text-sm text-gray-500">by {article.author_name}</span>
+              <span className="text-sm text-text-secondary">by {article.author_name}</span>
             )}
             {article.category && (
-              <span className="text-xs bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-slate-400 px-2 py-0.5 rounded">
+              <span className="text-xs bg-surface-hover text-text-secondary px-2 py-0.5 rounded">
                 {article.category}
               </span>
             )}
@@ -130,7 +130,7 @@ const AdminArticleDetail: React.FC = () => {
         actions={
           <button
             onClick={() => navigate(adminPath('/articles'))}
-            className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+            className="flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:text-text-primary transition-colors"
           >
             <ArrowLeft size={16} />
             Back
@@ -139,7 +139,7 @@ const AdminArticleDetail: React.FC = () => {
       />
 
       {/* Tab bar */}
-      <div className="border-b border-gray-200 dark:border-slate-700 mb-6">
+      <div className="border-b border-border mb-6">
         <nav className="flex gap-1 -mb-px">
           {TABS.map((tab) => (
             <button
@@ -147,8 +147,8 @@ const AdminArticleDetail: React.FC = () => {
               onClick={() => setActiveTab(tab.id)}
               className={`flex items-center gap-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${
                 activeTab === tab.id
-                  ? 'border-teal-500 text-teal-600 dark:text-teal-400'
-                  : 'border-transparent text-gray-500 dark:text-slate-400 hover:text-gray-700 dark:hover:text-slate-300 hover:border-gray-300'
+                  ? 'border-primary text-primary'
+                  : 'border-transparent text-text-secondary hover:text-text-primary hover:border-border-hover'
               }`}
             >
               <tab.icon size={16} />
@@ -280,12 +280,12 @@ function ContentTab({ article }: { article: ArticleRecord }) {
     ? editContent.replace(/<[^>]*>/g, ' ').split(/\s+/).filter(Boolean).length
     : article.word_count;
 
-  const proseClasses = "prose prose-gray dark:prose-invert max-w-none prose-headings:scroll-mt-20 prose-h1:text-3xl prose-h1:font-bold prose-h1:mt-12 prose-h1:mb-6 prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-xl prose-h3:font-semibold prose-h3:mt-8 prose-h3:mb-3 prose-h4:text-lg prose-h4:font-medium prose-h4:mt-6 prose-h4:mb-2 prose-h4:text-gray-600 dark:prose-h4:text-slate-400 prose-p:leading-relaxed prose-p:mb-4 prose-li:leading-relaxed prose-blockquote:border-teal-500 prose-blockquote:bg-teal-50 dark:prose-blockquote:bg-teal-900/10 prose-blockquote:py-1 prose-blockquote:px-4 prose-blockquote:rounded-r-lg prose-blockquote:not-italic prose-a:text-teal-600 dark:prose-a:text-teal-400 prose-strong:text-gray-900 dark:prose-strong:text-white";
+  const proseClasses = "prose-medium prose prose-gray dark:prose-invert max-w-none prose-headings:scroll-mt-20 prose-h1:text-3xl prose-h1:font-bold prose-h1:mt-12 prose-h1:mb-6 prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-xl prose-h3:font-semibold prose-h3:mt-8 prose-h3:mb-3 prose-h4:text-lg prose-h4:font-medium prose-h4:mt-6 prose-h4:mb-2 prose-h4:text-text-secondary prose-p:leading-relaxed prose-p:mb-4 prose-li:leading-relaxed prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:py-1 prose-blockquote:px-4 prose-blockquote:rounded-r-lg prose-blockquote:not-italic prose-a:text-primary prose-strong:text-text-primary";
 
   return (
     <div className="space-y-6">
       {/* Article Type Selector */}
-      <div className="bg-white dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700 p-4">
+      <div className="bg-surface rounded-2xl border border-border p-4">
         <ArticleTypeSelector
           value={article.article_type}
           onChange={handleArticleTypeChange}
@@ -294,25 +294,25 @@ function ContentTab({ article }: { article: ArticleRecord }) {
 
       {/* Meta info cards */}
       <div className="grid grid-cols-3 gap-4">
-        <div className="bg-white dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700 p-4 text-center">
-          <div className="text-2xl font-semibold text-gray-900 dark:text-white">
+        <div className="bg-surface rounded-2xl border border-border p-4 text-center">
+          <div className="text-2xl font-semibold text-text-primary">
             {liveWordCount.toLocaleString()}
           </div>
-          <div className="text-sm text-gray-500">Words{isEditing && hasUnsavedChanges ? ' (editing)' : ''}</div>
+          <div className="text-sm text-text-secondary">Words{isEditing && hasUnsavedChanges ? ' (editing)' : ''}</div>
         </div>
-        <div className="bg-white dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700 p-4 text-center">
-          <div className="text-2xl font-semibold text-gray-900 dark:text-white">
+        <div className="bg-surface rounded-2xl border border-border p-4 text-center">
+          <div className="text-2xl font-semibold text-text-primary">
             {liveWordCount > 0 ? `${Math.ceil(liveWordCount / 200)} min` : '—'}
           </div>
-          <div className="text-sm text-gray-500">Read Time</div>
+          <div className="text-sm text-text-secondary">Read Time</div>
         </div>
-        <div className="bg-white dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700 p-4 text-center">
-          <div className="text-2xl font-semibold text-gray-900 dark:text-white">
+        <div className="bg-surface rounded-2xl border border-border p-4 text-center">
+          <div className="text-2xl font-semibold text-text-primary">
             {article.updated_at
               ? formatDistanceToNow(new Date(article.updated_at), { addSuffix: true })
               : '—'}
           </div>
-          <div className="text-sm text-gray-500">Last Updated</div>
+          <div className="text-sm text-text-secondary">Last Updated</div>
         </div>
       </div>
 
@@ -322,8 +322,8 @@ function ContentTab({ article }: { article: ArticleRecord }) {
           onClick={handleEditToggle}
           className={`flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
             isEditing
-              ? 'bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-slate-600'
-              : 'bg-teal-600 hover:bg-teal-700 text-white'
+              ? 'bg-surface-hover text-text-secondary hover:bg-surface-active'
+              : 'bg-primary hover:bg-primary-hover text-white'
           }`}
         >
           {isEditing ? <Eye size={16} /> : <Pencil size={16} />}
@@ -344,7 +344,7 @@ function ContentTab({ article }: { article: ArticleRecord }) {
         )}
         <button
           onClick={() => navigate(adminPath(`/articles/${article.id}/breakdown`))}
-          className="flex items-center gap-2 px-4 py-2 border border-gray-300 dark:border-slate-600 text-gray-700 dark:text-slate-300 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+          className="flex items-center gap-2 px-4 py-2 border border-border-hover text-text-secondary text-sm font-medium rounded-lg hover:bg-surface-hover transition-colors"
         >
           <Scissors size={16} />
           Break Down
@@ -353,14 +353,14 @@ function ContentTab({ article }: { article: ArticleRecord }) {
 
       {/* SEO Description */}
       {article.seo_description && (
-        <div className="bg-gray-50 dark:bg-slate-800/50 rounded-lg border border-gray-200 dark:border-slate-700 p-4">
-          <p className="text-xs font-medium text-gray-500 dark:text-slate-400 uppercase tracking-wide mb-1">SEO Description</p>
-          <p className="text-sm text-gray-700 dark:text-slate-300 italic">{article.seo_description}</p>
+        <div className="bg-surface-hover rounded-lg border border-border p-4">
+          <p className="text-xs font-medium text-text-secondary uppercase tracking-wide mb-1">SEO Description</p>
+          <p className="text-sm text-text-secondary italic">{article.seo_description}</p>
         </div>
       )}
 
       {/* Full article content */}
-      <div className="bg-white dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700 p-8">
+      <div className="bg-surface rounded-2xl border border-border p-8">
         {isEditing ? (
           <TiptapEditor
             content={editContent}
@@ -377,10 +377,10 @@ function ContentTab({ article }: { article: ArticleRecord }) {
             </article>
           )
         ) : (
-          <div className="text-center py-12 text-gray-500">
+          <div className="text-center py-12 text-text-secondary">
             <FileText size={40} className="mx-auto mb-3 opacity-30" />
-            <p className="text-lg font-medium text-gray-400 dark:text-slate-500">No content yet</p>
-            <p className="text-sm text-gray-400 dark:text-slate-600 mt-1">
+            <p className="text-lg font-medium text-text-tertiary">No content yet</p>
+            <p className="text-sm text-text-tertiary mt-1">
               Click "Edit Content" to start writing.
             </p>
           </div>
@@ -476,14 +476,14 @@ function ReviewTab({ article }: { article: ArticleRecord }) {
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
       {/* Rating panel */}
       <div className="lg:col-span-1 space-y-6">
-        <div className="bg-white dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700 p-5">
-          <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-4">Article Rating</h3>
+        <div className="bg-surface rounded-2xl border border-border p-5">
+          <h3 className="text-sm font-semibold text-text-primary mb-4">Article Rating</h3>
 
           {RATING_DIMENSIONS.map((dim) => {
             const key = dim.key as keyof typeof ratings;
             return (
               <div key={dim.key} className="mb-4">
-                <label className="text-xs text-gray-500 dark:text-slate-400 mb-1 block">{dim.label}</label>
+                <label className="text-xs text-text-secondary mb-1 block">{dim.label}</label>
                 <div className="flex gap-1">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <button
@@ -496,7 +496,7 @@ function ReviewTab({ article }: { article: ArticleRecord }) {
                         className={
                           star <= (ratings[key] || 0)
                             ? 'text-amber-400 fill-amber-400'
-                            : 'text-gray-300 dark:text-slate-600'
+                            : 'text-text-tertiary'
                         }
                       />
                     </button>
@@ -507,9 +507,9 @@ function ReviewTab({ article }: { article: ArticleRecord }) {
           })}
 
           {overallRating !== null && (
-            <div className="pt-3 border-t border-gray-200 dark:border-slate-700">
+            <div className="pt-3 border-t border-border">
               <div className="flex items-center justify-between">
-                <span className="text-sm font-medium text-gray-700 dark:text-slate-300">Overall</span>
+                <span className="text-sm font-medium text-text-secondary">Overall</span>
                 <span className="text-lg font-bold text-amber-500">{overallRating}/5</span>
               </div>
             </div>
@@ -518,7 +518,7 @@ function ReviewTab({ article }: { article: ArticleRecord }) {
           <button
             onClick={() => ratingMutation.mutate()}
             disabled={ratingMutation.isPending}
-            className="mt-4 w-full px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium rounded-lg transition-colors disabled:opacity-50"
+            className="mt-4 w-full px-4 py-2 bg-primary hover:bg-primary-hover text-white text-sm font-medium rounded-lg transition-colors disabled:opacity-50"
           >
             {ratingMutation.isPending ? 'Saving...' : 'Save Ratings'}
           </button>
@@ -529,7 +529,7 @@ function ReviewTab({ article }: { article: ArticleRecord }) {
       <div className="lg:col-span-2 space-y-4">
         {/* Comment counts */}
         <div className="flex items-center gap-3">
-          <span className="text-sm font-medium text-gray-900 dark:text-white">
+          <span className="text-sm font-medium text-text-primary">
             {comments.length} Comments
           </span>
           {criticalCount > 0 && (
@@ -557,8 +557,8 @@ function ReviewTab({ article }: { article: ArticleRecord }) {
               onClick={() => setSeverityFilter(f)}
               className={`px-3 py-1 text-xs font-medium rounded-full transition-colors ${
                 severityFilter === f
-                  ? 'bg-teal-600 text-white'
-                  : 'bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-slate-300 hover:bg-gray-200'
+                  ? 'bg-primary text-white'
+                  : 'bg-surface-hover text-text-secondary hover:bg-surface-active'
               }`}
             >
               {f === 'all' ? 'All' : f.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())}
@@ -579,7 +579,7 @@ function ReviewTab({ article }: { article: ArticleRecord }) {
             />
           ))}
           {filteredComments.length === 0 && (
-            <div className="text-center py-8 text-gray-500">
+            <div className="text-center py-8 text-text-secondary">
               <MessageSquare size={24} className="mx-auto mb-2 opacity-40" />
               <p className="text-sm">No comments yet</p>
             </div>
@@ -587,19 +587,19 @@ function ReviewTab({ article }: { article: ArticleRecord }) {
         </div>
 
         {/* New comment form */}
-        <div className="bg-white dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700 p-4">
+        <div className="bg-surface rounded-2xl border border-border p-4">
           <textarea
             value={commentBody}
             onChange={(e) => setCommentBody(e.target.value)}
             placeholder="Add a review comment..."
             rows={3}
-            className="w-full px-3 py-2 text-sm border border-gray-300 dark:border-slate-600 rounded-lg bg-transparent text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 resize-none"
+            className="w-full px-3 py-2 text-sm border border-border-hover rounded-lg bg-transparent text-text-primary placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-primary resize-none"
           />
           <div className="flex items-center justify-between mt-3">
             <select
               value={commentSeverity}
               onChange={(e) => setCommentSeverity(e.target.value as CommentSeverity)}
-              className="px-3 py-1.5 text-sm border border-gray-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="px-3 py-1.5 text-sm border border-border-hover rounded-lg bg-surface text-text-primary focus:outline-none focus:ring-2 focus:ring-primary"
             >
               {COMMENT_SEVERITIES.map((s) => (
                 <option key={s.value} value={s.value}>
@@ -610,7 +610,7 @@ function ReviewTab({ article }: { article: ArticleRecord }) {
             <button
               onClick={() => commentMutation.mutate()}
               disabled={!commentBody.trim() || commentMutation.isPending}
-              className="flex items-center gap-2 px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium rounded-lg transition-colors disabled:opacity-50"
+              className="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary-hover text-white text-sm font-medium rounded-lg transition-colors disabled:opacity-50"
             >
               <Send size={14} />
               Post
@@ -633,32 +633,32 @@ function CommentCard({
 }) {
   return (
     <div
-      className={`bg-white dark:bg-slate-800 rounded-lg border p-4 ${
+      className={`bg-surface rounded-2xl border p-4 ${
         comment.is_resolved
-          ? 'border-gray-200 dark:border-slate-700 opacity-60'
+          ? 'border-border opacity-60'
           : comment.severity === 'critical'
             ? 'border-red-300 dark:border-red-800'
             : comment.severity === 'needs_fix'
               ? 'border-amber-300 dark:border-amber-800'
-              : 'border-gray-200 dark:border-slate-700'
+              : 'border-border'
       }`}
     >
       <div className="flex items-start justify-between mb-2">
         <div className="flex items-center gap-2">
-          <span className="text-sm font-medium text-gray-900 dark:text-white">{comment.author_name}</span>
+          <span className="text-sm font-medium text-text-primary">{comment.author_name}</span>
           <AdminStatusBadge status={comment.severity} />
           {comment.is_resolved && <AdminStatusBadge status="approved" />}
         </div>
-        <span className="text-xs text-gray-400">
+        <span className="text-xs text-text-tertiary">
           {formatDistanceToNow(new Date(comment.created_at), { addSuffix: true })}
         </span>
       </div>
       {comment.section_reference && (
-        <div className="text-xs text-gray-500 dark:text-slate-400 mb-2 italic">
+        <div className="text-xs text-text-secondary mb-2 italic">
           Re: {comment.section_reference}
         </div>
       )}
-      <p className="text-sm text-gray-700 dark:text-slate-300 mb-3">{comment.body}</p>
+      <p className="text-sm text-text-secondary mb-3">{comment.body}</p>
       <button
         onClick={() => onResolveToggle(comment.id, comment.is_resolved)}
         className={`text-xs font-medium transition-colors ${
@@ -740,21 +740,21 @@ function MediaTab({ article }: { article: ArticleRecord }) {
         onDrop={handleDrop}
         className={`border-2 border-dashed rounded-lg p-8 text-center transition-colors ${
           isDragging
-            ? 'border-teal-500 bg-teal-50 dark:bg-teal-900/10'
-            : 'border-gray-300 dark:border-slate-600 hover:border-gray-400'
+            ? 'border-primary bg-primary/5'
+            : 'border-border-hover hover:border-border-hover'
         }`}
       >
-        <Upload size={32} className="mx-auto mb-3 text-gray-400" />
-        <p className="text-sm text-gray-600 dark:text-slate-400 mb-2">
+        <Upload size={32} className="mx-auto mb-3 text-text-tertiary" />
+        <p className="text-sm text-text-secondary mb-2">
           Drag & drop images here, or{' '}
-          <label className="text-teal-600 hover:text-teal-700 cursor-pointer font-medium">
+          <label className="text-primary hover:text-primary-hover cursor-pointer font-medium">
             browse
             <input type="file" multiple accept="image/*" onChange={handleFileSelect} className="hidden" />
           </label>
         </p>
-        <p className="text-xs text-gray-400">PNG, JPG, WEBP up to 10MB each</p>
+        <p className="text-xs text-text-tertiary">PNG, JPG, WEBP up to 10MB each</p>
         {uploadMutation.isPending && (
-          <p className="text-sm text-teal-600 mt-2">Uploading...</p>
+          <p className="text-sm text-primary mt-2">Uploading...</p>
         )}
       </div>
 
@@ -771,7 +771,7 @@ function MediaTab({ article }: { article: ArticleRecord }) {
           ))}
         </div>
       ) : (
-        <div className="text-center py-8 text-gray-500">
+        <div className="text-center py-8 text-text-secondary">
           <ImageIcon size={32} className="mx-auto mb-2 opacity-40" />
           <p className="text-sm">No images uploaded yet</p>
         </div>
@@ -803,16 +803,16 @@ function ImageCard({
   const [caption, setCaption] = useState(image.caption || '');
 
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700 overflow-hidden">
-      <div className="aspect-video bg-gray-100 dark:bg-slate-900">
+    <div className="bg-surface rounded-2xl border border-border overflow-hidden">
+      <div className="aspect-video bg-surface-hover">
         <img src={image.public_url} alt={image.alt_text || ''} className="w-full h-full object-cover" />
       </div>
       <div className="p-3 space-y-2">
         <div className="flex items-center justify-between">
-          <span className="text-xs text-gray-500 truncate">{image.original_filename}</span>
+          <span className="text-xs text-text-secondary truncate">{image.original_filename}</span>
           <div className="flex items-center gap-1">
             <AdminStatusBadge status={image.purpose} />
-            <button onClick={onDelete} className="p-1 text-gray-400 hover:text-red-500">
+            <button onClick={onDelete} className="p-1 text-text-tertiary hover:text-red-500">
               <Trash2 size={14} />
             </button>
           </div>
@@ -820,7 +820,7 @@ function ImageCard({
         <select
           value={image.purpose}
           onChange={(e) => onUpdate({ purpose: e.target.value as ImagePurpose })}
-          className="w-full px-2 py-1 text-xs border border-gray-300 dark:border-slate-600 rounded bg-transparent text-gray-700 dark:text-slate-300"
+          className="w-full px-2 py-1 text-xs border border-border-hover rounded bg-transparent text-text-secondary"
         >
           {IMAGE_PURPOSES.map((p) => (
             <option key={p.value} value={p.value}>{p.label}</option>
@@ -832,7 +832,7 @@ function ImageCard({
           onChange={(e) => setAltText(e.target.value)}
           onBlur={() => altText !== image.alt_text && onUpdate({ alt_text: altText })}
           placeholder="Alt text..."
-          className="w-full px-2 py-1 text-xs border border-gray-300 dark:border-slate-600 rounded bg-transparent text-gray-700 dark:text-slate-300 placeholder-gray-400"
+          className="w-full px-2 py-1 text-xs border border-border-hover rounded bg-transparent text-text-secondary placeholder:text-text-tertiary"
         />
         <input
           type="text"
@@ -840,7 +840,7 @@ function ImageCard({
           onChange={(e) => setCaption(e.target.value)}
           onBlur={() => caption !== image.caption && onUpdate({ caption })}
           placeholder="Caption..."
-          className="w-full px-2 py-1 text-xs border border-gray-300 dark:border-slate-600 rounded bg-transparent text-gray-700 dark:text-slate-300 placeholder-gray-400"
+          className="w-full px-2 py-1 text-xs border border-border-hover rounded bg-transparent text-text-secondary placeholder:text-text-tertiary"
         />
       </div>
     </div>
@@ -906,47 +906,47 @@ function WorkflowTab({ article }: { article: ArticleRecord }) {
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
       {/* Timeline */}
       <div className="lg:col-span-2">
-        <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-4">Status History</h3>
+        <h3 className="text-sm font-semibold text-text-primary mb-4">Status History</h3>
         <div className="space-y-0">
           {history.map((entry, i) => (
             <div key={entry.id} className="flex gap-4">
               <div className="flex flex-col items-center">
                 <div className={`w-3 h-3 rounded-full ${statusColor[entry.to_status] || 'bg-gray-400'}`} />
-                {i < history.length - 1 && <div className="w-0.5 flex-1 bg-gray-200 dark:bg-slate-700" />}
+                {i < history.length - 1 && <div className="w-0.5 flex-1 bg-surface-active" />}
               </div>
               <div className="pb-6">
                 <div className="flex items-center gap-2">
                   <AdminStatusBadge status={entry.to_status} />
                   {entry.from_status && (
                     <>
-                      <ArrowRight size={12} className="text-gray-400" />
-                      <span className="text-xs text-gray-400">from {entry.from_status}</span>
+                      <ArrowRight size={12} className="text-text-tertiary" />
+                      <span className="text-xs text-text-tertiary">from {entry.from_status}</span>
                     </>
                   )}
                 </div>
-                <div className="text-sm text-gray-600 dark:text-slate-400 mt-1">
+                <div className="text-sm text-text-secondary mt-1">
                   {entry.changed_by_name || 'System'}
-                  <span className="text-gray-400 mx-1">·</span>
+                  <span className="text-text-tertiary mx-1">·</span>
                   {format(new Date(entry.created_at), 'MMM d, yyyy h:mm a')}
                 </div>
                 {entry.notes && (
-                  <p className="text-sm text-gray-500 dark:text-slate-500 mt-1 italic">{entry.notes}</p>
+                  <p className="text-sm text-text-tertiary mt-1 italic">{entry.notes}</p>
                 )}
               </div>
             </div>
           ))}
           {history.length === 0 && (
-            <p className="text-sm text-gray-500 py-4">No status history recorded.</p>
+            <p className="text-sm text-text-secondary py-4">No status history recorded.</p>
           )}
         </div>
       </div>
 
       {/* Actions */}
       <div className="space-y-4">
-        <div className="bg-white dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700 p-5">
-          <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-4">Actions</h3>
+        <div className="bg-surface rounded-2xl border border-border p-5">
+          <h3 className="text-sm font-semibold text-text-primary mb-4">Actions</h3>
 
-          <div className="text-sm text-gray-600 dark:text-slate-400 mb-4">
+          <div className="text-sm text-text-secondary mb-4">
             Current status: <AdminStatusBadge status={article.status} className="ml-1" />
           </div>
 
@@ -982,7 +982,7 @@ function WorkflowTab({ article }: { article: ArticleRecord }) {
             {allowedTransitions.includes('draft') && (
               <button
                 onClick={() => setConfirmAction({ status: 'draft', label: 'Return to Draft' })}
-                className="w-full flex items-center justify-center gap-2 px-4 py-2 border border-gray-300 dark:border-slate-600 text-gray-700 dark:text-slate-300 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+                className="w-full flex items-center justify-center gap-2 px-4 py-2 border border-border-hover text-text-secondary text-sm font-medium rounded-lg hover:bg-surface-hover transition-colors"
               >
                 <RotateCcw size={16} />
                 Return to Draft
@@ -1018,7 +1018,7 @@ function WorkflowTab({ article }: { article: ArticleRecord }) {
             {allowedTransitions.includes('archived') && (
               <button
                 onClick={() => setConfirmAction({ status: 'archived', label: 'Archive' })}
-                className="w-full flex items-center justify-center gap-2 px-4 py-2 border border-gray-300 dark:border-slate-600 text-gray-500 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+                className="w-full flex items-center justify-center gap-2 px-4 py-2 border border-border-hover text-text-secondary text-sm font-medium rounded-lg hover:bg-surface-hover transition-colors"
               >
                 <Trash2 size={16} />
                 Archive
@@ -1060,7 +1060,7 @@ function WorkflowTab({ article }: { article: ArticleRecord }) {
               onChange={(e) => setRejectReason(e.target.value)}
               rows={3}
               placeholder="Rejection reason (required)..."
-              className="w-full px-3 py-2 text-sm border border-gray-300 dark:border-slate-600 rounded-lg bg-transparent text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 resize-none"
+              className="w-full px-3 py-2 text-sm border border-border-hover rounded-lg bg-transparent text-text-primary placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-red-500 resize-none"
             />
           </div>
         }
@@ -1097,13 +1097,13 @@ function PerformanceTab({ article }: { article: ArticleRecord }) {
         {metrics.map((m) => (
           <div
             key={m.label}
-            className="bg-white dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700 p-5"
+            className="bg-surface rounded-2xl border border-border p-5"
           >
-            <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-slate-400 mb-2">
+            <div className="flex items-center gap-2 text-sm text-text-secondary mb-2">
               <m.icon size={16} />
               {m.label}
             </div>
-            <div className="text-2xl font-semibold text-gray-900 dark:text-white">{m.value}</div>
+            <div className="text-2xl font-semibold text-text-primary">{m.value}</div>
           </div>
         ))}
       </div>
@@ -1116,13 +1116,13 @@ function PerformanceTab({ article }: { article: ArticleRecord }) {
         </div>
       )}
 
-      <div className="bg-white dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700 p-6">
+      <div className="bg-surface rounded-2xl border border-border p-6">
         <div className="text-center py-12">
-          <BarChart3 size={48} className="mx-auto mb-4 text-gray-300 dark:text-slate-600" />
-          <h3 className="text-lg font-medium text-gray-700 dark:text-slate-300 mb-2">
+          <BarChart3 size={48} className="mx-auto mb-4 text-text-tertiary" />
+          <h3 className="text-lg font-medium text-text-secondary mb-2">
             Analytics Integration Pending
           </h3>
-          <p className="text-sm text-gray-500 dark:text-slate-500 max-w-md mx-auto">
+          <p className="text-sm text-text-tertiary max-w-md mx-auto">
             This section will display detailed engagement charts once analytics (Plausible/PostHog) are connected.
             The component is structured to receive real data.
           </p>

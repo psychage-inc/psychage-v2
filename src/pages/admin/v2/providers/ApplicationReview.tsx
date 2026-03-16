@@ -61,7 +61,7 @@ const AdminApplicationReview: React.FC = () => {
       cell: ({ row }) => (
         <button
           onClick={() => setSelectedApp(row.original)}
-          className="font-medium text-gray-900 dark:text-white hover:text-teal-600 text-left"
+          className="font-medium text-text-primary hover:text-primary text-left"
         >
           {row.original.provider_name}
         </button>
@@ -83,7 +83,7 @@ const AdminApplicationReview: React.FC = () => {
       accessorKey: 'submitted_at',
       header: 'Submitted',
       cell: ({ row }) => (
-        <span className="text-sm text-gray-500">
+        <span className="text-sm text-text-secondary">
           {formatDistanceToNow(new Date(row.original.submitted_at), { addSuffix: true })}
         </span>
       ),
@@ -99,14 +99,14 @@ const AdminApplicationReview: React.FC = () => {
           <div className="flex items-center gap-1">
             <button
               onClick={() => updateStatus.mutate({ id: app.id, status: 'approved' })}
-              className="p-1.5 text-gray-400 hover:text-emerald-600 transition-colors"
+              className="p-1.5 text-text-tertiary hover:text-emerald-600 transition-colors"
               title="Approve"
             >
               <Check size={16} />
             </button>
             <button
               onClick={() => setRejectDialog(app)}
-              className="p-1.5 text-gray-400 hover:text-red-500 transition-colors"
+              className="p-1.5 text-text-tertiary hover:text-red-500 transition-colors"
               title="Reject"
             >
               <X size={16} />
@@ -134,55 +134,55 @@ const AdminApplicationReview: React.FC = () => {
       {selectedApp && (
         <div className="fixed inset-0 z-50 flex">
           <div className="absolute inset-0 bg-black/40" onClick={() => setSelectedApp(null)} />
-          <div className="relative ml-auto w-full max-w-lg bg-white dark:bg-slate-900 h-full overflow-y-auto shadow-xl p-6">
+          <div className="relative ml-auto w-full max-w-lg bg-surface h-full overflow-y-auto shadow-xl p-6">
             <div className="flex items-center justify-between mb-6">
-              <h2 className="text-lg font-semibold text-gray-900 dark:text-white">{selectedApp.provider_name}</h2>
-              <button onClick={() => setSelectedApp(null)} className="text-gray-400 hover:text-gray-600">
+              <h2 className="text-lg font-semibold text-text-primary">{selectedApp.provider_name}</h2>
+              <button onClick={() => setSelectedApp(null)} className="text-text-tertiary hover:text-text-secondary">
                 <X size={20} />
               </button>
             </div>
 
             <div className="space-y-4">
               <div>
-                <label className="text-xs font-medium text-gray-500 uppercase">Credentials</label>
-                <p className="text-sm text-gray-900 dark:text-white">{selectedApp.credentials}</p>
+                <label className="text-xs font-medium text-text-secondary uppercase">Credentials</label>
+                <p className="text-sm text-text-primary">{selectedApp.credentials}</p>
               </div>
               <div>
-                <label className="text-xs font-medium text-gray-500 uppercase">Email</label>
-                <p className="text-sm text-gray-900 dark:text-white">{selectedApp.contact_email}</p>
+                <label className="text-xs font-medium text-text-secondary uppercase">Email</label>
+                <p className="text-sm text-text-primary">{selectedApp.contact_email}</p>
               </div>
               {selectedApp.npi_number && (
                 <div>
-                  <label className="text-xs font-medium text-gray-500 uppercase">NPI Number</label>
-                  <p className="text-sm text-gray-900 dark:text-white">{selectedApp.npi_number}</p>
+                  <label className="text-xs font-medium text-text-secondary uppercase">NPI Number</label>
+                  <p className="text-sm text-text-primary">{selectedApp.npi_number}</p>
                 </div>
               )}
               {selectedApp.practice_name && (
                 <div>
-                  <label className="text-xs font-medium text-gray-500 uppercase">Practice</label>
-                  <p className="text-sm text-gray-900 dark:text-white">{selectedApp.practice_name}</p>
+                  <label className="text-xs font-medium text-text-secondary uppercase">Practice</label>
+                  <p className="text-sm text-text-primary">{selectedApp.practice_name}</p>
                 </div>
               )}
               {selectedApp.specialties?.length > 0 && (
                 <div>
-                  <label className="text-xs font-medium text-gray-500 uppercase">Specialties</label>
+                  <label className="text-xs font-medium text-text-secondary uppercase">Specialties</label>
                   <div className="flex flex-wrap gap-1 mt-1">
                     {selectedApp.specialties.map((s) => (
-                      <span key={s} className="px-2 py-0.5 text-xs bg-gray-100 dark:bg-slate-800 rounded">{s}</span>
+                      <span key={s} className="px-2 py-0.5 text-xs bg-surface-hover rounded">{s}</span>
                     ))}
                   </div>
                 </div>
               )}
               {selectedApp.bio && (
                 <div>
-                  <label className="text-xs font-medium text-gray-500 uppercase">Bio</label>
-                  <p className="text-sm text-gray-700 dark:text-slate-300 mt-1">{selectedApp.bio}</p>
+                  <label className="text-xs font-medium text-text-secondary uppercase">Bio</label>
+                  <p className="text-sm text-text-secondary mt-1">{selectedApp.bio}</p>
                 </div>
               )}
               <AdminStatusBadge status={selectedApp.status} />
 
               {selectedApp.status === 'pending' && (
-                <div className="flex gap-2 pt-4 border-t border-gray-200 dark:border-slate-700">
+                <div className="flex gap-2 pt-4 border-t border-border">
                   <button
                     onClick={() => updateStatus.mutate({ id: selectedApp.id, status: 'approved' })}
                     disabled={updateStatus.isPending}

@@ -41,19 +41,19 @@ const LinkDialog: React.FC<LinkDialogProps> = ({ editor, open, onOpenChange }) =
       <DialogPrimitive.Portal>
         <DialogPrimitive.Overlay className="fixed inset-0 z-[100] bg-black/40 backdrop-blur-sm" />
         <DialogPrimitive.Content className="fixed inset-0 z-[101] flex items-center justify-center p-4">
-          <div className="relative w-full max-w-sm bg-white dark:bg-slate-800 rounded-xl shadow-xl border border-gray-200 dark:border-slate-700">
-            <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-slate-700">
-              <DialogPrimitive.Title className="text-sm font-semibold text-gray-900 dark:text-white flex items-center gap-2">
+          <div className="relative w-full max-w-sm bg-surface rounded-xl shadow-xl border border-border">
+            <div className="flex items-center justify-between p-4 border-b border-border">
+              <DialogPrimitive.Title className="text-sm font-semibold text-text-primary flex items-center gap-2">
                 <LinkIcon size={16} /> Insert Link
               </DialogPrimitive.Title>
-              <DialogPrimitive.Close className="p-1 text-gray-400 hover:text-gray-600 dark:hover:text-slate-300 rounded">
+              <DialogPrimitive.Close className="p-1 text-text-tertiary hover:text-text-primary rounded">
                 <X size={16} />
               </DialogPrimitive.Close>
             </div>
 
             <div className="p-4 space-y-3">
               <div>
-                <label className="block text-xs font-medium text-gray-500 dark:text-slate-400 mb-1">URL</label>
+                <label className="block text-xs font-medium text-text-secondary mb-1">URL</label>
                 <input
                   type="url"
                   value={url}
@@ -61,22 +61,22 @@ const LinkDialog: React.FC<LinkDialogProps> = ({ editor, open, onOpenChange }) =
                   placeholder="https://example.com"
                   autoFocus
                   onKeyDown={(e) => e.key === 'Enter' && handleApply()}
-                  className="w-full px-3 py-2 text-sm border border-gray-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-900 text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none"
+                  className="w-full px-3 py-2 text-sm border border-border-hover rounded-lg bg-surface text-text-primary placeholder:text-text-tertiary focus:ring-2 focus:ring-primary focus:border-primary outline-none"
                 />
               </div>
 
-              <label className="flex items-center gap-2 text-sm text-gray-600 dark:text-slate-400 cursor-pointer">
+              <label className="flex items-center gap-2 text-sm text-text-secondary cursor-pointer">
                 <input
                   type="checkbox"
                   checked={openInNewTab}
                   onChange={(e) => setOpenInNewTab(e.target.checked)}
-                  className="rounded border-gray-300 dark:border-slate-600 text-teal-600 focus:ring-teal-500"
+                  className="rounded border-border-hover text-primary focus:ring-primary"
                 />
                 Open in new tab
               </label>
             </div>
 
-            <div className="flex items-center justify-between p-4 border-t border-gray-200 dark:border-slate-700">
+            <div className="flex items-center justify-between p-4 border-t border-border">
               {existingHref ? (
                 <button
                   onClick={handleRemove}
@@ -90,14 +90,14 @@ const LinkDialog: React.FC<LinkDialogProps> = ({ editor, open, onOpenChange }) =
               <div className="flex gap-2">
                 <button
                   onClick={() => onOpenChange(false)}
-                  className="px-3 py-1.5 text-xs font-medium text-gray-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-700 rounded-lg"
+                  className="px-3 py-1.5 text-xs font-medium text-text-secondary hover:bg-surface-hover rounded-lg"
                 >
                   Cancel
                 </button>
                 <button
                   onClick={handleApply}
                   disabled={!url.trim()}
-                  className="px-3 py-1.5 text-xs font-medium text-white bg-teal-600 hover:bg-teal-700 rounded-lg disabled:opacity-50"
+                  className="px-3 py-1.5 text-xs font-medium text-white bg-primary hover:bg-primary-hover rounded-lg disabled:opacity-50"
                 >
                   Apply
                 </button>

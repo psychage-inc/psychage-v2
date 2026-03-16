@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import { HeartHandshake, Clock, LayoutGrid, HelpCircle, History } from 'lucide-react';
+import { Clock, LayoutGrid, HelpCircle, History } from 'lucide-react';
 import SEO from '@/components/SEO';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import Button from '@/components/ui/Button';
@@ -105,7 +105,17 @@ const RelationshipHealthCheck: React.FC = () => {
           className="text-center max-w-2xl mx-auto mb-12"
         >
           <div className="w-20 h-20 bg-rose-100 rounded-3xl flex items-center justify-center mx-auto mb-6">
-            <HeartHandshake size={40} className="text-rose-600" />
+            <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              {/* Two silhouettes connected by a heart */}
+              <circle cx="15" cy="14" r="5" fill="#e11d48" opacity="0.7" />
+              <path d="M8 28c0-4.5 3.2-7 7-7s7 2.5 7 7" stroke="#e11d48" strokeWidth="2.5" strokeLinecap="round" fill="none" opacity="0.7" />
+              <circle cx="33" cy="14" r="5" fill="#e11d48" opacity="0.7" />
+              <path d="M26 28c0-4.5 3.2-7 7-7s7 2.5 7 7" stroke="#e11d48" strokeWidth="2.5" strokeLinecap="round" fill="none" opacity="0.7" />
+              {/* Heart bridge connecting them */}
+              <path d="M24 30c-1.5-1.5-5-4-5-6.5a3 3 0 0 1 5-2.2 3 3 0 0 1 5 2.2c0 2.5-3.5 5-5 6.5z" fill="#e11d48" />
+              {/* Connection arc */}
+              <path d="M14 32c3 6 17 6 20 0" stroke="#e11d48" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.5" strokeDasharray="3 2" />
+            </svg>
           </div>
           <h1 className="font-display font-bold text-4xl md:text-5xl text-gray-900 mb-4">
             Relationship Health Check
@@ -211,14 +221,16 @@ const RelationshipHealthCheck: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.25 }}
-          className="max-w-xl mx-auto mt-12"
+          className="max-w-xl mx-auto mt-12 bg-slate-50 border border-slate-200 rounded-xl p-5"
         >
-          <p className="text-xs text-gray-400 text-center leading-relaxed">
-            This tool is for educational and self-reflection purposes only. It is not a
-            diagnostic instrument and does not replace professional advice. If you are
-            experiencing relationship difficulties or safety concerns, please reach out to a
-            qualified professional.
-          </p>
+          <p className="text-xs font-bold text-slate-600 mb-2">Before you begin</p>
+          <ul className="text-xs text-slate-500 leading-relaxed space-y-1.5 list-disc list-inside">
+            <li>This is <strong>not</strong> a diagnostic tool — it is a self-reflection exercise to help you understand your relationship patterns better.</li>
+            <li>Your responses are processed entirely on your device and are never sent to any server.</li>
+            <li>Results are educational and cannot replace a professional clinical assessment.</li>
+            <li>If you are experiencing relationship difficulties, domestic violence, or safety concerns, please reach out to a qualified professional or call the National DV Hotline at <strong>1-800-799-7233</strong>.</li>
+            <li>Use this tool as a starting point for self-awareness — not as a final answer.</li>
+          </ul>
         </motion.div>
       </div>
     </div>

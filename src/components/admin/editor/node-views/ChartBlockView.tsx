@@ -23,9 +23,9 @@ const CHART_COLORS = ['#0D9488', '#6366F1', '#F59E0B', '#EF4444', '#8B5CF6', '#E
 const CustomTooltip = ({ active, payload, label }: any) => {
   if (active && payload?.length) {
     return (
-      <div className="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg shadow-lg px-3 py-2 text-xs">
-        <p className="font-medium text-gray-900 dark:text-white">{label || payload[0]?.name}</p>
-        <p className="text-gray-600 dark:text-slate-400">{payload[0]?.value}</p>
+      <div className="bg-surface border border-border rounded-lg shadow-lg px-3 py-2 text-xs">
+        <p className="font-medium text-text-primary">{label || payload[0]?.name}</p>
+        <p className="text-text-secondary">{payload[0]?.value}</p>
       </div>
     );
   }
@@ -51,7 +51,7 @@ const ChartBlockView: React.FC<NodeViewProps> = ({ node, updateAttributes, delet
     const { data, chartType } = chartData;
     if (!data.length) {
       return (
-        <div className="flex items-center justify-center h-full text-gray-400 text-sm">
+        <div className="flex items-center justify-center h-full text-text-tertiary text-sm">
           No data — click the gear icon to add data
         </div>
       );
@@ -118,30 +118,30 @@ const ChartBlockView: React.FC<NodeViewProps> = ({ node, updateAttributes, delet
 
   return (
     <NodeViewWrapper className="my-6" data-drag-handle>
-      <div className="border border-gray-200 dark:border-slate-700 rounded-xl overflow-hidden bg-white dark:bg-slate-800">
+      <div className="border border-border rounded-xl overflow-hidden bg-surface">
         {/* Header */}
         <div
           contentEditable={false}
-          className="flex items-center justify-between px-4 py-2 bg-gray-50 dark:bg-slate-800/50 border-b border-gray-200 dark:border-slate-700"
+          className="flex items-center justify-between px-4 py-2 bg-surface-hover border-b border-border"
         >
           <input
             value={chartData.title}
             onChange={(e) => updateChartData({ ...chartData, title: e.target.value })}
-            className="text-sm font-medium bg-transparent border-none outline-none text-gray-900 dark:text-white placeholder-gray-400"
+            className="text-sm font-medium bg-transparent border-none outline-none text-text-primary placeholder:text-text-tertiary"
             placeholder="Chart Title"
           />
           <div className="flex items-center gap-1">
             <button
               onClick={() => setShowEditor(!showEditor)}
               title="Edit chart data"
-              className={`p-1.5 rounded transition-colors ${showEditor ? 'bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-400' : 'text-gray-400 hover:text-gray-600 dark:hover:text-slate-300'}`}
+              className={`p-1.5 rounded transition-colors ${showEditor ? 'bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-400' : 'text-text-tertiary hover:text-text-primary'}`}
             >
               <Settings size={14} />
             </button>
             <button
               onClick={deleteNode}
               title="Remove chart"
-              className="p-1.5 rounded text-gray-400 hover:text-red-500 transition-colors"
+              className="p-1.5 rounded text-text-tertiary hover:text-red-500 transition-colors"
             >
               <Trash2 size={14} />
             </button>
@@ -155,7 +155,7 @@ const ChartBlockView: React.FC<NodeViewProps> = ({ node, updateAttributes, delet
 
         {/* Data editor (expandable) */}
         {showEditor && (
-          <div contentEditable={false} className="border-t border-gray-200 dark:border-slate-700">
+          <div contentEditable={false} className="border-t border-border">
             <ChartDataEditor data={chartData} onChange={updateChartData} />
           </div>
         )}

@@ -43,7 +43,17 @@ export default defineConfig(() => {
       dedupe: ['react', 'react-dom'],
     },
     optimizeDeps: {
-      include: ['react', 'react-dom', 'react/jsx-runtime', 'react/jsx-dev-runtime'],
+      include: [
+        'react', 'react-dom', 'react/jsx-runtime', 'react/jsx-dev-runtime',
+        '@tiptap/react', '@tiptap/starter-kit', '@tiptap/core', '@tiptap/pm',
+        '@tiptap/extension-link', '@tiptap/extension-image', '@tiptap/extension-table',
+        '@tiptap/extension-placeholder', '@tiptap/extension-underline',
+        '@tiptap/extension-text-align', '@tiptap/extension-highlight',
+        '@tiptap/extension-text-style', '@tiptap/extension-task-list',
+        '@tiptap/extension-task-item', '@tiptap/extension-youtube',
+        '@tiptap/extension-table-row', '@tiptap/extension-table-cell',
+        '@tiptap/extension-table-header',
+      ],
       exclude: ['clarity-score'],
       entries: ['src/**/*.{ts,tsx}'],
     },
@@ -57,35 +67,29 @@ export default defineConfig(() => {
           manualChunks(id) {
             if (!id.includes('node_modules')) return;
 
-            // React MUST be a singleton — route all react imports here
-            if (id.includes('/react-dom/') || id.includes('/scheduler/')) return 'vendor-react';
-            if (id.includes('/react/') && !id.includes('/react-i18next') && !id.includes('/react-router') && !id.includes('/react-three') && !id.includes('/@react-')) return 'vendor-react';
-            if (id.includes('/react-router-dom/') || id.includes('/react-router/') || id.includes('/@remix-run/')) return 'vendor-react';
+            // --- Only split non-React-dependent heavy libraries ---
+            // React-dependent libs (framer-motion, lucide, radix, recharts, react-i18next,
+            // react-router, react-three, tiptap-react) MUST stay in the default chunk
+            // with React to avoid createContext/forwardRef init-time failures.
 
-            // UI and animation
-            if (id.includes('/framer-motion/') || id.includes('/lucide-react/') || id.includes('/class-variance-authority/') || id.includes('/clsx/') || id.includes('/tailwind-merge/')) return 'vendor-ui';
+            // 3D engine (no top-level React calls — Three.js core is pure JS)
+            if (id.includes('/three/src/') || id.includes('/three/build/')) return 'vendor-three';
 
-            // Charts
-            if (id.includes('/recharts/') || id.includes('/d3-') || id.includes('/victory-')) return 'vendor-charts';
+            // Prosemirror (pure JS, no React dependency)
+            if (id.includes('/prosemirror-')) return 'vendor-editor';
 
-            // 3D (heavy, homepage only)
-            if (id.includes('/three/') || id.includes('/@react-three/')) return 'vendor-three';
-
-            // Backend
+            // Backend SDKs (no React dependency)
             if (id.includes('/@supabase/')) return 'vendor-supabase';
             if (id.includes('/@sanity/') || id.includes('/@portabletext/')) return 'vendor-sanity';
 
-            // Date
+            // Pure i18n core (NOT react-i18next)
+            if (id.includes('/i18next/') || id.includes('/i18next-browser-languagedetector/')) return 'vendor-i18n';
+
+            // Date utilities (no React dependency)
             if (id.includes('/date-fns/')) return 'vendor-date';
 
-            // i18n (react-i18next goes here, but NOT react itself)
-            if (id.includes('/i18next') || id.includes('/react-i18next')) return 'vendor-i18n';
-
-            // Radix UI
-            if (id.includes('/@radix-ui/')) return 'vendor-radix';
-
-            // Rich text editor (admin-only)
-            if (id.includes('/@tiptap/') || id.includes('/prosemirror')) return 'vendor-editor';
+            // D3 internals (pure JS math/layout, used by recharts)
+            if (id.includes('/d3-')) return 'vendor-charts';
           }
         }
       },

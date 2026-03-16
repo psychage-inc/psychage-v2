@@ -1,0 +1,205 @@
+/* ============================================================
+   Tiptap Editor Custom Styles
+   Works in both editor and dangerouslySetInnerHTML view mode
+   ============================================================ */
+
+/* Callout blocks */
+div[data-callout] {
+  border-left: 4px solid;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1.5rem 0;
+}
+
+div[data-callout][data-callout-variant="info"] {
+  background: rgb(239 246 255);
+  border-color: rgb(96 165 250);
+}
+div[data-callout][data-callout-variant="warning"] {
+  background: rgb(255 251 235);
+  border-color: rgb(251 191 36);
+}
+div[data-callout][data-callout-variant="tip"] {
+  background: rgb(236 253 245);
+  border-color: rgb(52 211 153);
+}
+div[data-callout][data-callout-variant="note"] {
+  background: rgb(249 250 251);
+  border-color: rgb(156 163 175);
+}
+
+/* Dark mode callout overrides */
+.dark div[data-callout][data-callout-variant="info"] {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(96, 165, 250, 0.6);
+}
+.dark div[data-callout][data-callout-variant="warning"] {
+  background: rgba(245, 158, 11, 0.1);
+  border-color: rgba(251, 191, 36, 0.6);
+}
+.dark div[data-callout][data-callout-variant="tip"] {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: rgba(52, 211, 153, 0.6);
+}
+.dark div[data-callout][data-callout-variant="note"] {
+  background: rgba(107, 114, 128, 0.1);
+  border-color: rgba(156, 163, 175, 0.6);
+}
+
+/* Chart blocks (view mode — empty until hydrated) */
+div[data-chart-block] {
+  border: 1px solid rgb(229 231 235);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  min-height: 200px;
+}
+.dark div[data-chart-block] {
+  border-color: rgb(51 65 85);
+}
+
+/* Task list styling */
+ul[data-type="taskList"] {
+  list-style: none;
+  padding-left: 0;
+}
+ul[data-type="taskList"] li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+ul[data-type="taskList"] li > label {
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+ul[data-type="taskList"] li > label input[type="checkbox"] {
+  accent-color: #0d9488;
+  cursor: pointer;
+}
+ul[data-type="taskList"] li > div {
+  flex: 1;
+}
+
+/* YouTube embed */
+div[data-youtube-video] {
+  margin: 1.5rem 0;
+}
+div[data-youtube-video] iframe {
+  border-radius: 0.5rem;
+  max-width: 100%;
+}
+
+/* Table styling for editor */
+.ProseMirror table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+}
+.ProseMirror td,
+.ProseMirror th {
+  border: 1px solid rgb(209 213 219);
+  padding: 0.5rem 0.75rem;
+  min-width: 80px;
+  vertical-align: top;
+}
+.dark .ProseMirror td,
+.dark .ProseMirror th {
+  border-color: rgb(51 65 85);
+}
+.ProseMirror th {
+  background: rgb(249 250 251);
+  font-weight: 600;
+}
+.dark .ProseMirror th {
+  background: rgba(51, 65, 85, 0.5);
+}
+
+/* Table column resize handle */
+.ProseMirror .column-resize-handle {
+  position: absolute;
+  right: -2px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #0d9488;
+  cursor: col-resize;
+  z-index: 10;
+}
+.ProseMirror .tableWrapper {
+  overflow-x: auto;
+}
+.ProseMirror table .selectedCell::after {
+  background: rgba(13, 148, 136, 0.1);
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 2;
+}
+
+/* Horizontal rule */
+.ProseMirror hr {
+  border: none;
+  border-top: 2px solid rgb(229 231 235);
+  margin: 2rem 0;
+}
+.dark .ProseMirror hr {
+  border-top-color: rgb(51 65 85);
+}
+
+/* Placeholder */
+.ProseMirror p.is-editor-empty:first-child::before {
+  color: #adb5bd;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+/* Highlight */
+.ProseMirror mark {
+  background-color: #fef08a;
+  border-radius: 0.125rem;
+  padding: 0.125rem 0;
+}
+.dark .ProseMirror mark {
+  background-color: rgba(250, 204, 21, 0.3);
+  color: inherit;
+}
+
+/* Image in editor */
+.ProseMirror img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+.ProseMirror img.ProseMirror-selectednode {
+  outline: 2px solid #0d9488;
+  outline-offset: 2px;
+}
+
+/* Code block */
+.ProseMirror pre {
+  background: rgb(31 41 55);
+  color: rgb(229 231 235);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  overflow-x: auto;
+}
+
+/* Blockquote */
+.ProseMirror blockquote {
+  border-left: 3px solid #0d9488;
+  padding-left: 1rem;
+  margin-left: 0;
+  color: rgb(75 85 99);
+}
+.dark .ProseMirror blockquote {
+  color: rgb(156 163 175);
+}

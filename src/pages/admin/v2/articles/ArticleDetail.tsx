@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import ReactMarkdown from 'react-markdown';
@@ -34,6 +34,7 @@ import QualityGateDashboard from '@/components/admin/articles/QualityGateDashboa
 import ArticleTypeSelector from '@/components/admin/articles/ArticleTypeSelector';
 import CitationManager from '@/components/admin/articles/CitationManager';
 import TiptapEditor from '@/components/admin/TiptapEditor';
+import '@/components/admin/editor/tiptap-styles.css';
 import {
   getArticleById,
   getArticleComments,
@@ -174,6 +175,140 @@ const AdminArticleDetail: React.FC = () => {
 };
 
 // ============================================================
+// HTML renderer with chart block hydration
+// ============================================================
+
+function ArticleHtmlRenderer({ html, className }: { html: string; className?: string }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+    const chartNodes = containerRef.current.querySelectorAll<HTMLElement>('[data-chart-block]');
+    if (chartNodes.length === 0) return;
+
+    // Dynamically import chart renderer to avoid loading Recharts for non-chart articles
+    const roots: Array<{ unmount: () => void }> = [];
+
+    const renderCharts = async () => {
+      const { createRoot } = await import('react-dom/client');
+      const {
+        ResponsiveContainer,
+        BarChart,
+        Bar,
+        PieChart,
+        Pie,
+        Cell,
+        LineChart,
+        Line,
+        XAxis,
+        YAxis,
+        CartesianGrid,
+        Tooltip,
+      } = await import('recharts');
+
+      const COLORS = ['#0D9488', '#6366F1', '#F59E0B', '#EF4444', '#8B5CF6', '#EC4899', '#06B6D4', '#84CC16'];
+
+      chartNodes.forEach((node) => {
+        const raw = node.getAttribute('data-chart');
+        if (!raw) return;
+        try {
+          const chartData = JSON.parse(raw);
+          const { chartType, title, data } = chartData;
+          if (!data?.length) return;
+
+          const root = createRoot(node);
+          roots.push(root);
+
+          const chart = (() => {
+            switch (chartType) {
+              case 'bar':
+                return React.createElement(
+                  ResponsiveContainer,
+                  { width: '100%', height: 250 },
+                  React.createElement(
+                    BarChart,
+                    { data, margin: { top: 10, right: 20, left: 0, bottom: 5 } },
+                    React.createElement(CartesianGrid, { strokeDasharray: '3 3', stroke: '#e5e7eb' }),
+                    React.createElement(XAxis, { dataKey: 'label', tick: { fontSize: 11 }, stroke: '#9ca3af' }),
+                    React.createElement(YAxis, { tick: { fontSize: 11 }, stroke: '#9ca3af' }),
+                    React.createElement(Tooltip, null),
+                    React.createElement(
+                      Bar,
+                      { dataKey: 'value', radius: [4, 4, 0, 0] },
+                      data.map((_: unknown, i: number) =>
+                        React.createElement(Cell, { key: i, fill: COLORS[i % COLORS.length] })
+                      )
+                    )
+                  )
+                );
+              case 'pie':
+                return React.createElement(
+                  ResponsiveContainer,
+                  { width: '100%', height: 250 },
+                  React.createElement(
+                    PieChart,
+                    null,
+                    React.createElement(
+                      Pie,
+                      { data, dataKey: 'value', nameKey: 'label', cx: '50%', cy: '50%', outerRadius: 80, label: ({ label }: { label: string }) => label },
+                      data.map((_: unknown, i: number) =>
+                        React.createElement(Cell, { key: i, fill: COLORS[i % COLORS.length] })
+                      )
+                    ),
+                    React.createElement(Tooltip, null)
+                  )
+                );
+              case 'line':
+                return React.createElement(
+                  ResponsiveContainer,
+                  { width: '100%', height: 250 },
+                  React.createElement(
+                    LineChart,
+                    { data, margin: { top: 10, right: 20, left: 0, bottom: 5 } },
+                    React.createElement(CartesianGrid, { strokeDasharray: '3 3', stroke: '#e5e7eb' }),
+                    React.createElement(XAxis, { dataKey: 'label', tick: { fontSize: 11 }, stroke: '#9ca3af' }),
+                    React.createElement(YAxis, { tick: { fontSize: 11 }, stroke: '#9ca3af' }),
+                    React.createElement(Tooltip, null),
+                    React.createElement(Line, { type: 'monotone', dataKey: 'value', stroke: '#0D9488', strokeWidth: 2, dot: { r: 4 } })
+                  )
+                );
+              default:
+                return null;
+            }
+          })();
+
+          if (chart) {
+            const wrapper = React.createElement(
+              'div',
+              null,
+              title && React.createElement('h4', { className: 'text-sm font-medium text-gray-900 dark:text-white mb-2' }, title),
+              chart
+            );
+            root.render(wrapper);
+          }
+        } catch {
+          // Malformed chart data — leave the empty div
+        }
+      });
+    };
+
+    renderCharts();
+
+    return () => {
+      roots.forEach((root) => root.unmount());
+    };
+  }, [html]);
+
+  return (
+    <article
+      ref={containerRef}
+      className={className}
+      dangerouslySetInnerHTML={{ __html: html }}
+    />
+  );
+}
+
+// ============================================================
 // Tab 1: Content
 // ============================================================
 
@@ -229,7 +364,7 @@ function ContentTab({ article }: { article: ArticleRecord }) {
     ? editContent.replace(/<[^>]*>/g, ' ').split(/\s+/).filter(Boolean).length
     : article.word_count;
 
-  const proseClasses = "prose prose-gray dark:prose-invert max-w-none prose-headings:scroll-mt-20 prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-xl prose-h3:font-semibold prose-h3:mt-8 prose-h3:mb-3 prose-p:leading-relaxed prose-p:mb-4 prose-li:leading-relaxed prose-blockquote:border-teal-500 prose-blockquote:bg-teal-50 dark:prose-blockquote:bg-teal-900/10 prose-blockquote:py-1 prose-blockquote:px-4 prose-blockquote:rounded-r-lg prose-blockquote:not-italic prose-a:text-teal-600 dark:prose-a:text-teal-400 prose-strong:text-gray-900 dark:prose-strong:text-white";
+  const proseClasses = "prose prose-gray dark:prose-invert max-w-none prose-headings:scroll-mt-20 prose-h1:text-3xl prose-h1:font-bold prose-h1:mt-12 prose-h1:mb-6 prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-xl prose-h3:font-semibold prose-h3:mt-8 prose-h3:mb-3 prose-h4:text-lg prose-h4:font-medium prose-h4:mt-6 prose-h4:mb-2 prose-h4:text-gray-600 dark:prose-h4:text-slate-400 prose-p:leading-relaxed prose-p:mb-4 prose-li:leading-relaxed prose-blockquote:border-teal-500 prose-blockquote:bg-teal-50 dark:prose-blockquote:bg-teal-900/10 prose-blockquote:py-1 prose-blockquote:px-4 prose-blockquote:rounded-r-lg prose-blockquote:not-italic prose-a:text-teal-600 dark:prose-a:text-teal-400 prose-strong:text-gray-900 dark:prose-strong:text-white";
 
   return (
     <div className="space-y-6">
@@ -315,13 +450,11 @@ function ContentTab({ article }: { article: ArticleRecord }) {
             content={editContent}
             onChange={handleContentChange}
             placeholder="Start writing your article content..."
+            articleId={article.id}
           />
         ) : article.content ? (
           article.content_format === 'html' ? (
-            <article
-              className={proseClasses}
-              dangerouslySetInnerHTML={{ __html: article.content }}
-            />
+            <ArticleHtmlRenderer html={article.content} className={proseClasses} />
           ) : (
             <article className={proseClasses}>
               <ReactMarkdown>{article.content}</ReactMarkdown>

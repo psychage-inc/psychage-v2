@@ -747,8 +747,8 @@ export const mockKnowledgeBase: KnowledgeBase = {
     conditions,
     matchingConfig: {
         confidence_cap: 0.75,
-        min_relevance_threshold: 0.15,
-        below_minimum_penalty: 0.3,
+        min_relevance_threshold: 0.08,
+        below_minimum_penalty: 0.6,
         max_results: 5,
         min_results: 1,
         max_per_family: 2,
@@ -756,12 +756,12 @@ export const mockKnowledgeBase: KnowledgeBase = {
         frequency_modifiers: { rarely: 0.7, sometimes: 1.0, often: 1.2, always: 1.4 },
         duration_modifiers: { below_half: 0.7, half_to_full: 1.0, meets_or_exceeds: 1.3 },
         relevance_display_tiers: {
-            high: { min: 0.55, label: 'Highly Relevant', color: '#2563eb' },
-            moderate: { min: 0.35, label: 'Moderately Relevant', color: '#7c3aed' },
-            low: { min: 0.15, label: 'Possibly Relevant', color: '#6b7280' },
-            minimal: { min: 0, label: 'Low Relevance', color: '#9ca3af' },
+            high: { min: 0.45, label: 'Highly Relevant', color: '#2563eb' },
+            moderate: { min: 0.25, label: 'Moderately Relevant', color: '#7c3aed' },
+            low: { min: 0.12, label: 'Possibly Relevant', color: '#6b7280' },
+            minimal: { min: 0, label: 'Worth Exploring', color: '#9ca3af' },
         },
-        version: '1.1.0',
+        version: '1.2.0',
     },
     crisisResources: {
         US: [

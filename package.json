@@ -6,7 +6,7 @@
   "packageManager": "pnpm@10.25.0",
   "scripts": {
     "dev": "vite",
-    "build": "npm run verify:routes && tsc && vite build",
+    "build": "tsc && npm run verify:routes && vite build",
     "preview": "vite preview",
     "lint": "ESLINT_USE_FLAT_CONFIG=false eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "format": "prettier --write .",
@@ -28,7 +28,10 @@
     "verify:backend": "tsx scripts/verify-api-endpoints.ts",
     "verify:fallback": "tsx scripts/test-fallback-behavior.ts",
     "verify:deployment": "tsx scripts/verify-deployment.ts",
-    "verify:routes": "tsx scripts/verify-routes.ts"
+    "verify:routes": "tsx scripts/verify-routes.ts",
+    "seed:articles:generate": "tsx src/scripts/generate-article-seeds.ts",
+    "seed:articles:content": "tsx src/scripts/seed-article-content.ts",
+    "seed:articles:citations": "tsx src/scripts/seed-article-citations.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.78.0",

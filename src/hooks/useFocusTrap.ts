@@ -28,7 +28,7 @@ export function useFocusTrap(
             if (!isActive && previousFocusRef.current) {
                 const targetToFocus = restoreFocusRef?.current || previousFocusRef.current;
                 // Double check it's still in the document before focusing
-                if (document.body.contains(targetToFocus)) {
+                if (targetToFocus && document.body.contains(targetToFocus)) {
                     targetToFocus.focus();
                 }
             }

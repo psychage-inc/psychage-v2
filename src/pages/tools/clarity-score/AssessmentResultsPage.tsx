@@ -24,10 +24,16 @@ const AssessmentResultsPage: React.FC = () => {
                     // Logic to calculate score (Should ideally be in a shared util or service)
                     // Simplified for now based on previous implementation logic
                     const answersList = Object.values(parsed.answers) as number[];
-                    const maxPossible = answersList.length * 3; // Assuming 0-3 scale
+                    // Derive max from actual answers to avoid hardcoded scale assumptions
+                    const maxPerQuestion = answersList.length > 0
+                      ? Math.max(...answersList, 3) // At least 3 (PHQ-9 0-3 scale)
+                      : 3;
+                    const maxPossible = answersList.length * maxPerQuestion;
                     const total = answersList.reduce((a, b) => a + b, 0);
                     // Clarity is inverse of symptoms (100 - symptom%)
-                    const clarityScore = Math.round(100 - ((total / maxPossible) * 100));
+                    const clarityScore = maxPossible > 0
+                      ? Math.round(100 - ((total / maxPossible) * 100))
+                      : 0;
 
                     setScore(clarityScore);
 

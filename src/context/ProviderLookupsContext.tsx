@@ -24,6 +24,7 @@ export interface ProviderLookups {
   culturalCompetencies: CulturalCompetency[];
   insurancePlans: InsurancePlan[];
   isLoading: boolean;
+  error: string | null;
 }
 
 const DEFAULT_LOOKUPS: ProviderLookups = {
@@ -36,6 +37,7 @@ const DEFAULT_LOOKUPS: ProviderLookups = {
   culturalCompetencies: [],
   insurancePlans: [],
   isLoading: true,
+  error: null,
 };
 
 const ProviderLookupsContext = createContext<ProviderLookups>(DEFAULT_LOOKUPS);
@@ -64,9 +66,10 @@ export const ProviderLookupsProvider: React.FC<{ children: React.ReactNode }> = 
         culturalCompetencies: comps,
         insurancePlans: plans,
         isLoading: false,
+        error: null,
       });
-    }).catch(() => {
-      if (!cancelled) setLookups(prev => ({ ...prev, isLoading: false }));
+    }).catch((err) => {
+      if (!cancelled) setLookups(prev => ({ ...prev, isLoading: false, error: err instanceof Error ? err.message : 'Failed to load filter options' }));
     });
 
     return () => { cancelled = true; };

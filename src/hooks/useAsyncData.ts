@@ -23,6 +23,10 @@ export function useAsyncData<T>(
 ): AsyncState<T> & { refetch: () => Promise<void>; reset: () => void } {
     const { immediate = true, onSuccess, onError } = options;
     const mountedRef = useRef(true);
+    const fetcherRef = useRef(fetcher);
+
+    // Always use the latest fetcher without triggering re-renders
+    fetcherRef.current = fetcher;
 
     const [state, setState] = useState<AsyncState<T>>({
         data: null,
@@ -40,7 +44,7 @@ export function useAsyncData<T>(
         setState(prev => ({ ...prev, loading: true, error: null }));
 
         try {
-            const result = await fetcher();
+            const result = await fetcherRef.current();
             if (!mountedRef.current) return;
             setState({ data: result, loading: false, error: null });
             onSuccess?.(result);

@@ -253,6 +253,7 @@ function ContentTab({ article }: { article: ArticleRecord }) {
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['admin', 'article', article.id] });
+      queryClient.invalidateQueries({ queryKey: ['admin', 'articles'] });
       setHasUnsavedChanges(false);
       toast.success('Content saved');
     },

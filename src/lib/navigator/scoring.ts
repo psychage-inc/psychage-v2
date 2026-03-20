@@ -119,8 +119,9 @@ export function calculateConditionScore(
     : Math.log2(totalMapped + 1) / Math.log2(COVERAGE_REFERENCE + 1);
   const adjustedNormalized = normalized * coverageFactor;
 
-  // Count cap: prevents high scores from just 1-2 symptoms
-  const countCap = Math.min(1.0, matchedCount / 5);
+  // Count cap: prevents high scores from just 1 symptom.
+  // Divisor of 3 means 3+ matched symptoms reach full potential.
+  const countCap = Math.min(1.0, matchedCount / 3);
 
   // Apply count cap, then absolute confidence cap
   let capped = Math.min(adjustedNormalized * countCap, config.confidence_cap);
@@ -192,6 +193,29 @@ export function rankAndDiversify(
       ...score,
       relevance_level: relevanceLevel,
     });
+  }
+
+  // Enforce min_results guarantee: if we have scored conditions but none
+  // passed the threshold, include the top-scoring ones so the user always
+  // sees at least min_results results when they submitted symptoms.
+  if (diversified.length < config.min_results && sorted.length > 0) {
+    const alreadyIncluded = new Set(diversified.map((d) => d.condition_id));
+
+    for (const score of sorted) {
+      if (alreadyIncluded.has(score.condition_id)) continue;
+      if (score.matched_count === 0) continue; // skip conditions with zero matches
+      if (diversified.length >= config.min_results) break;
+
+      const relevanceLevel = getRelevanceLevel(
+        score.capped_score,
+        config.relevance_display_tiers
+      );
+
+      diversified.push({
+        ...score,
+        relevance_level: relevanceLevel,
+      });
+    }
   }
 
   return diversified;

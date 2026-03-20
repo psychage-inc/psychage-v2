@@ -35,11 +35,11 @@ const RELEVANCE_CONFIG = {
         label: 'Worth exploring'
     },
     minimal: {
-        filledDots: 0,
+        filledDots: 1,
         totalDots: 4,
-        colorClass: 'text-text-tertiary',
-        bgColorClass: 'bg-gray-400',
-        label: 'Less likely'
+        colorClass: 'text-amber-500',
+        bgColorClass: 'bg-amber-500',
+        label: 'Worth exploring'
     }
 };
 

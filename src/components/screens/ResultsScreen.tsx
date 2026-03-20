@@ -96,6 +96,11 @@ export const ResultsScreen: React.FC = () => {
     const hasWatchFlags = safety.has_watch;
     const anyProfessionalRecommended = matchResults.some(r => r.always_recommend_professional);
 
+    // Split results into strong matches vs exploratory
+    const strongMatches = matchResults.filter(r => r.relevance_level === 'high' || r.relevance_level === 'moderate');
+    const exploratoryMatches = matchResults.filter(r => r.relevance_level === 'low' || r.relevance_level === 'minimal');
+    const allWeak = matchResults.length > 0 && strongMatches.length === 0;
+
     const nextSteps: NextStepItem[] = [
         {
             id: 'ns1',
@@ -195,8 +200,10 @@ export const ResultsScreen: React.FC = () => {
                                     <p className="text-text-secondary leading-relaxed">
                                         We analyzed <strong className="text-text-primary font-semibold">{symptomCount} symptom{symptomCount !== 1 ? 's' : ''}</strong> you
                                         reported{matchResults.length > 0
-                                            ? <> and identified <strong className="text-text-primary font-semibold">{matchResults.length} possible pattern{matchResults.length !== 1 ? 's' : ''}</strong> that may be relevant to your experience.</>
-                                            : <> but did not find a strong match for your specific combination. This doesn't mean your experience isn't valid — it may reflect something unique or multi-faceted.</>
+                                            ? strongMatches.length > 0
+                                                ? <> and identified <strong className="text-text-primary font-semibold">{strongMatches.length} likely pattern{strongMatches.length !== 1 ? 's' : ''}</strong>{exploratoryMatches.length > 0 ? <> and <strong className="text-text-primary font-semibold">{exploratoryMatches.length} additional pattern{exploratoryMatches.length !== 1 ? 's' : ''}</strong> worth exploring</> : null} that may be relevant to your experience.</>
+                                                : <> and found <strong className="text-text-primary font-semibold">{matchResults.length} possible pattern{matchResults.length !== 1 ? 's' : ''}</strong> worth exploring. The matches are partial, which means a professional can help you dig deeper.</>
+                                            : <> but did not find a match for your specific combination. This doesn't mean your experience isn't valid — it may reflect something unique or multi-faceted.</>
                                         }
                                     </p>
                                     {hasUrgentFlags && (
@@ -243,35 +250,83 @@ export const ResultsScreen: React.FC = () => {
 
                     {/* ─── Section 3: Likely Possibilities ─── */}
                     <motion.section variants={slideUp} className="relative z-10">
-                        <h3 className="text-2xl font-display font-medium text-text-primary mb-2 drop-shadow-sm">
-                            {matchResults.length > 0 ? 'Likely Possibilities' : 'Assessment Results'}
-                        </h3>
-                        <p className="text-sm text-text-secondary mb-6">
-                            {matchResults.length > 0
-                                ? 'These profiles reflect patterns commonly associated with the symptoms you described. They are ranked by relevance — not certainty.'
-                                : 'Based on the symptoms you selected, no strong pattern match was found.'
-                            }
-                        </p>
-                        <motion.div variants={staggerContainer} initial="hidden" animate="visible" className="space-y-4">
-                            {matchResults.map((match) => (
-                                <motion.div key={match.condition_id} variants={staggerItem}>
-                                    <ResultCard result={match} />
+                        {/* Strong matches */}
+                        {strongMatches.length > 0 && (
+                            <>
+                                <h3 className="text-2xl font-display font-medium text-text-primary mb-2 drop-shadow-sm">
+                                    Likely Possibilities
+                                </h3>
+                                <p className="text-sm text-text-secondary mb-6">
+                                    These profiles reflect patterns commonly associated with the symptoms you described. They are ranked by relevance — not certainty.
+                                </p>
+                                <motion.div variants={staggerContainer} initial="hidden" animate="visible" className="space-y-4 mb-8">
+                                    {strongMatches.map((match) => (
+                                        <motion.div key={match.condition_id} variants={staggerItem}>
+                                            <ResultCard result={match} />
+                                        </motion.div>
+                                    ))}
                                 </motion.div>
-                            ))}
-                            {matchResults.length === 0 && (
+                            </>
+                        )}
+
+                        {/* Exploratory matches — shown when present */}
+                        {exploratoryMatches.length > 0 && (
+                            <>
+                                <h3 className="text-2xl font-display font-medium text-text-primary mb-2 drop-shadow-sm">
+                                    {strongMatches.length > 0 ? 'Worth Exploring' : 'Possible Patterns'}
+                                </h3>
+                                <p className="text-sm text-text-secondary mb-6">
+                                    {strongMatches.length > 0
+                                        ? 'These patterns showed a weaker connection to your symptoms but may still be worth discussing with a professional.'
+                                        : 'Your symptoms showed a partial match with these patterns. While the connection is not strong, they may be a helpful starting point for a conversation with a healthcare provider.'
+                                    }
+                                </p>
+                                {allWeak && (
+                                    <div className="bg-amber-500/5 border border-amber-500/20 rounded-xl p-4 mb-6">
+                                        <p className="text-sm text-text-secondary leading-relaxed">
+                                            <strong className="text-amber-500">Tip:</strong> Providing more detail about severity, duration, and frequency for each symptom helps produce stronger matches. You can also try selecting additional symptoms you may be experiencing.
+                                        </p>
+                                    </div>
+                                )}
+                                <motion.div variants={staggerContainer} initial="hidden" animate="visible" className="space-y-4">
+                                    {exploratoryMatches.map((match) => (
+                                        <motion.div key={match.condition_id} variants={staggerItem}>
+                                            <ResultCard result={match} />
+                                        </motion.div>
+                                    ))}
+                                </motion.div>
+                            </>
+                        )}
+
+                        {/* No matches at all */}
+                        {matchResults.length === 0 && (
+                            <div className="space-y-4">
+                                <h3 className="text-2xl font-display font-medium text-text-primary mb-2 drop-shadow-sm">
+                                    Assessment Results
+                                </h3>
                                 <div className="bg-surface/50 backdrop-blur-xl rounded-2xl p-8 text-center border border-border shadow-lg relative overflow-hidden">
                                     <div className="absolute inset-0 bg-gradient-to-br from-surface-hover/50 to-transparent pointer-events-none" />
-                                    <div className="relative z-10 space-y-3">
+                                    <div className="relative z-10 space-y-4">
                                         <p className="text-text-secondary font-medium">
-                                            We couldn't find a strong match for your specific combination of symptoms.
+                                            We couldn't find a match for your specific combination of symptoms.
                                         </p>
                                         <p className="text-text-tertiary text-sm max-w-lg mx-auto">
                                             This can happen when symptoms span multiple areas or don't fit neatly into common patterns. Your experience is still valid, and a professional can help you understand what you're going through.
                                         </p>
+                                        <div className="bg-teal-500/5 border border-teal-500/20 rounded-xl p-4 text-left max-w-lg mx-auto">
+                                            <p className="text-sm text-text-secondary leading-relaxed mb-2 font-medium">
+                                                What you can try:
+                                            </p>
+                                            <ul className="text-sm text-text-tertiary space-y-1.5 list-disc list-inside">
+                                                <li>Go back and select additional symptoms you may be experiencing</li>
+                                                <li>Provide more detail about duration, severity, and frequency</li>
+                                                <li>Rate symptoms you feel strongly about at a higher severity</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            )}
-                        </motion.div>
+                            </div>
+                        )}
                     </motion.section>
 
                     {/* ─── Section 4: When to See a Clinician ─── */}

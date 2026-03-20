@@ -134,6 +134,7 @@ const UserDashboard: React.FC = () => {
     const [clarityHistory, setClarityHistory] = useState<{ date: string; score: number }[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
+    const [partialFailures, setPartialFailures] = useState(0);
 
     // New state for enhanced dashboard
     const [moodStats, setMoodStats] = useState<MoodStats | null>(null);
@@ -151,11 +152,15 @@ const UserDashboard: React.FC = () => {
 
         setIsLoading(true);
         setError(null);
+        setPartialFailures(0);
 
         const today = new Date().toISOString().split('T')[0];
         const sevenDaysAgo = subDays(new Date(), 7).toISOString().split('T')[0];
 
         try {
+            let failures = 0;
+            const track = <T,>(fallback: T) => (err: unknown) => { failures++; console.warn('Dashboard fetch failed:', err); return fallback; };
+
             const [
                 statsRes, activityRes, historyRes,
                 moodStatsRes, sleepStatsRes,
@@ -164,18 +169,18 @@ const UserDashboard: React.FC = () => {
                 navigatorRes, bookmarksRes
             ] = await Promise.all([
                 // Existing 3 calls
-                api.clarityScore.getStats().catch(() => ({ success: false, data: null })),
-                api.user.getActivity().catch(() => ({ success: false, data: [] })),
-                api.clarityScore.getHistory().catch(() => ({ success: false, data: [] })),
+                api.clarityScore.getStats().catch(track({ success: false, data: null })),
+                api.user.getActivity().catch(track({ success: false, data: [] })),
+                api.clarityScore.getHistory().catch(track({ success: false, data: [] })),
                 // Mood & sleep stats
-                moodService.getStats(user.id).catch(() => null),
-                sleepService.getStats(user.id).catch(() => null),
+                moodService.getStats(user.id).catch(track(null)),
+                sleepService.getStats(user.id).catch(track(null)),
                 // Latest entries (to check "logged today")
-                moodService.getEntries(user.id, 1).catch(() => []),
-                sleepService.getEntries(user.id, 1).catch(() => []),
+                moodService.getEntries(user.id, 1).catch(track([])),
+                sleepService.getEntries(user.id, 1).catch(track([])),
                 // Date-range entries for chart
-                moodService.getEntriesByDateRange(user.id, sevenDaysAgo, new Date().toISOString()).catch(() => []),
-                sleepService.getEntriesByDateRange(user.id, sevenDaysAgo, new Date().toISOString()).catch(() => []),
+                moodService.getEntriesByDateRange(user.id, sevenDaysAgo, new Date().toISOString()).catch(track([])),
+                sleepService.getEntriesByDateRange(user.id, sevenDaysAgo, new Date().toISOString()).catch(track([])),
                 // Navigator metadata (count + latest date)
                 (async () => {
                     try {
@@ -186,13 +191,17 @@ const UserDashboard: React.FC = () => {
                             .order('created_at', { ascending: false })
                             .limit(1);
                         return { count: res.count ?? 0, latest: res.data?.[0]?.created_at ?? null };
-                    } catch {
+                    } catch (err) {
+                        failures++;
+                        console.warn('Dashboard fetch failed:', err);
                         return { count: 0, latest: null };
                     }
                 })(),
                 // Bookmarks count
-                bookmarkService.getAll(user.id).then(b => b.length).catch(() => 0),
+                bookmarkService.getAll(user.id).then(b => b.length).catch(track(0)),
             ]);
+
+            setPartialFailures(failures);
 
             // Existing data
             if (statsRes.success) setStats(statsRes.data);
@@ -286,6 +295,15 @@ const UserDashboard: React.FC = () => {
                         {/* Error State */}
                         {!isLoading && error && (
                             <DashboardError message={error} onRetry={fetchData} />
+                        )}
+
+                        {/* Partial failure warning */}
+                        {!isLoading && !error && partialFailures > 0 && (
+                            <div className="bg-amber-500/5 border border-amber-500/20 rounded-2xl px-5 py-3 flex items-center gap-3 mb-2">
+                                <AlertCircle size={16} className="text-amber-400 shrink-0" />
+                                <p className="text-sm text-amber-400/90 flex-grow">Some data couldn't be loaded. Displayed values may be incomplete.</p>
+                                <button onClick={fetchData} className="text-xs font-medium text-amber-400 hover:text-amber-300 shrink-0">Retry</button>
+                            </div>
                         )}
 
                         {/* Content */}

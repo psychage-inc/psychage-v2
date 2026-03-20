@@ -13,6 +13,7 @@ interface ResultCardProps {
 
 export const ResultCard: React.FC<ResultCardProps> = ({ result, onClick }) => {
     const [isExpanded, setIsExpanded] = useState(false);
+    const isExploratory = result.relevance_level === 'minimal' || result.relevance_level === 'low';
 
     const handleToggleExpand = (e: React.MouseEvent | React.KeyboardEvent) => {
         e.stopPropagation();
@@ -24,7 +25,8 @@ export const ResultCard: React.FC<ResultCardProps> = ({ result, onClick }) => {
             hoverEffect={true}
             onClick={onClick}
             className={cn(
-                "w-full text-left p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-6 group hover:border-teal-500/40 rounded-2xl relative overflow-hidden",
+                "w-full text-left p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-6 group rounded-2xl relative overflow-hidden",
+                isExploratory ? "hover:border-amber-500/30 opacity-95" : "hover:border-teal-500/40",
                 onClick && "cursor-pointer"
             )}
             {...(onClick ? {
@@ -53,14 +55,19 @@ export const ResultCard: React.FC<ResultCardProps> = ({ result, onClick }) => {
                 <div className="flex items-center gap-2.5 mt-1">
                     <div className="flex-1 h-1.5 bg-surface-hover/50 rounded-full overflow-hidden max-w-[7.5rem]">
                         <motion.div
-                            className="h-full rounded-full bg-gradient-to-r from-teal-500 to-teal-400"
+                            className={cn(
+                                "h-full rounded-full",
+                                isExploratory
+                                    ? "bg-gradient-to-r from-amber-500 to-amber-400"
+                                    : "bg-gradient-to-r from-teal-500 to-teal-400"
+                            )}
                             initial={{ width: 0 }}
-                            animate={{ width: `${Math.round((result.relevance_score / 0.75) * 100)}%` }}
+                            animate={{ width: `${Math.max(8, Math.round((result.relevance_score / 0.75) * 100))}%` }}
                             transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
                         />
                     </div>
                     <span className="text-xs font-mono text-text-tertiary tabular-nums">
-                        {Math.round((result.relevance_score / 0.75) * 100)}%
+                        {Math.max(1, Math.round((result.relevance_score / 0.75) * 100))}%
                     </span>
                 </div>
 
@@ -115,7 +122,12 @@ export const ResultCard: React.FC<ResultCardProps> = ({ result, onClick }) => {
                                     initial={isExpanded ? { opacity: 0, scale: 0.9 } : false}
                                     animate={{ opacity: 1, scale: 1 }}
                                     transition={{ duration: 0.2 }}
-                                    className="inline-block bg-teal-500/10 text-teal-300 text-xs sm:text-sm px-3 py-1.5 rounded-md border border-teal-500/20 backdrop-blur-sm"
+                                    className={cn(
+                                        "inline-block text-xs sm:text-sm px-3 py-1.5 rounded-md border backdrop-blur-sm",
+                                        isExploratory
+                                            ? "bg-amber-500/10 text-amber-300 border-amber-500/20"
+                                            : "bg-teal-500/10 text-teal-300 border-teal-500/20"
+                                    )}
                                 >
                                     {sym.name.replace(/_/g, ' ')}
                                 </motion.span>

@@ -98,11 +98,15 @@ export function useProviderSearch(): UseProviderSearchReturn {
 
     if (debounceRef.current) clearTimeout(debounceRef.current);
     debounceRef.current = setTimeout(() => {
+      debounceRef.current = null;
       executeSearch(1, false);
     }, 300);
 
     return () => {
-      if (debounceRef.current) clearTimeout(debounceRef.current);
+      if (debounceRef.current) {
+        clearTimeout(debounceRef.current);
+        debounceRef.current = null;
+      }
     };
   }, [executeSearch]); // eslint-disable-line react-hooks/exhaustive-deps
 

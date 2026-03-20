@@ -9,6 +9,10 @@ import SEO from '@/components/SEO';
 
 const STORAGE_KEY = 'psychage_clarity_progress';
 
+/** Question IDs that trigger the crisis overlay when answered with severity >= 2.
+ *  PHQ-9 item 9 = suicidal ideation, item 13 = self-harm ideation. */
+const CRISIS_QUESTION_IDS = new Set([9, 13]);
+
 const AssessmentPage: React.FC = () => {
     const navigate = useNavigate();
     const [questions, setQuestions] = useState<Question[]>([]);
@@ -64,8 +68,7 @@ const AssessmentPage: React.FC = () => {
     const handleAnswer = (value: number) => {
         // Crisis Detection
         const currentQuestion = questions[currentQuestionIndex];
-        // Scale dependent IDs: 9 (PHQ-9 item 9), 13 (Similar item if exists)
-        if (currentQuestion && (currentQuestion.id === 9 || currentQuestion.id === 13) && value >= 2) {
+        if (currentQuestion && CRISIS_QUESTION_IDS.has(currentQuestion.id) && value >= 2) {
             setShowCrisisOverlay(true);
         }
 

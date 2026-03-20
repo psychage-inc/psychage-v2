@@ -26,8 +26,17 @@ export function adminUrl(path: string): string {
   return `${ADMIN_URL}${path}`;
 }
 
-/** Check if we are currently running on the admin domain */
+/** Check if we are currently running on the admin domain (production only — used for basename) */
 export function isAdminDomain(): boolean {
   if (typeof window === 'undefined') return false;
   return window.location.origin === ADMIN_URL && !_sameOrigin;
+}
+
+/** Check if we are inside the admin app (production admin domain OR dev /admin/* path) */
+export function isInAdminApp(): boolean {
+  if (typeof window === 'undefined') return false;
+  if (isAdminDomain()) return true;
+  // Dev (same origin): admin app runs at /admin/* paths
+  if (_sameOrigin) return window.location.pathname.startsWith('/admin');
+  return false;
 }

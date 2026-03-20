@@ -91,6 +91,17 @@ const MoodJournal: React.FC = () => {
             setView('history');
         } catch (error) {
             console.error('Failed to save entry:', error);
+            // Fallback: save to localStorage so the entry isn't lost
+            const fallbackEntry: MoodEntry = {
+                id: Date.now().toString(),
+                date: new Date().toISOString(),
+                mood: data.valence,
+                emotions: combinedTags,
+                note: noteToSave
+            };
+            const updatedEntries = [fallbackEntry, ...entries];
+            setEntries(updatedEntries);
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedEntries));
         }
     };
 

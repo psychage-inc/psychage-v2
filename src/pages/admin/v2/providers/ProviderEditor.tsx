@@ -8,6 +8,7 @@ import { ArrowLeft, Save } from 'lucide-react';
 import { supabase } from '@/lib/supabaseClient';
 import { logAdminAction } from '@/lib/admin/auditLogger';
 import { VERIFICATION_TIERS } from '@/lib/admin/constants';
+import { toast } from 'sonner';
 import PageHeader from '@/components/admin/PageHeader';
 import AdminStatusBadge from '@/components/admin/StatusBadge';
 import { adminPath } from '@/hooks/useAdminNavigate';
@@ -73,7 +74,9 @@ const AdminProviderEditor: React.FC = () => {
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['admin', 'providers'] });
+      toast.success('Changes saved');
     },
+    onError: (err: Error) => toast.error(`Save failed: ${err.message}`),
   });
 
   if (isLoading) {

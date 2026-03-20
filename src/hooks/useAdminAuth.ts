@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '@/lib/supabaseClient';
-import { mainUrl, isAdminDomain } from '@/lib/urls';
+import { mainUrl, isInAdminApp } from '@/lib/urls';
 import type { AdminRole, AdminUser } from '@/lib/admin/types';
 
 export function useAdminAuth(requiredRoles?: AdminRole[]) {
   const [adminUser, setAdminUser] = useState<AdminUser | null>(null);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
-  const onAdminDomain = isAdminDomain();
+  const onAdminDomain = isInAdminApp();
 
   useEffect(() => {
     let cancelled = false;

@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 
 interface GeolocationState {
   latitude: number | null;
@@ -24,6 +24,12 @@ export function useGeolocation(): UseGeolocationReturn {
     error: null,
     isSupported: typeof navigator !== 'undefined' && 'geolocation' in navigator,
   });
+  const mountedRef = useRef(true);
+
+  useEffect(() => {
+    mountedRef.current = true;
+    return () => { mountedRef.current = false; };
+  }, []);
 
   const requestLocation = useCallback(() => {
     if (!state.isSupported) {
@@ -35,6 +41,7 @@ export function useGeolocation(): UseGeolocationReturn {
 
     navigator.geolocation.getCurrentPosition(
       (position) => {
+        if (!mountedRef.current) return;
         setState({
           latitude: position.coords.latitude,
           longitude: position.coords.longitude,
@@ -44,6 +51,7 @@ export function useGeolocation(): UseGeolocationReturn {
         });
       },
       (err) => {
+        if (!mountedRef.current) return;
         let errorMessage = 'Failed to get your location';
         if (err.code === err.PERMISSION_DENIED) {
           errorMessage = 'Location access was denied. Please enable it in your browser settings.';

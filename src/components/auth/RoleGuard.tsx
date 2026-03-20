@@ -2,7 +2,7 @@ import React from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { GlobalLoading } from '../ui/Skeletons';
-import { adminUrl, mainUrl, isAdminDomain } from '@/lib/urls';
+import { adminUrl, mainUrl, isInAdminApp } from '@/lib/urls';
 
 type UserRole = 'patient' | 'provider' | 'admin';
 
@@ -14,7 +14,7 @@ interface RoleGuardProps {
 const RoleGuard: React.FC<RoleGuardProps> = ({ children, allowedRoles }) => {
     const { user, isAuthenticated, isLoading } = useAuth();
     const location = useLocation();
-    const onAdminDomain = isAdminDomain();
+    const onAdminDomain = isInAdminApp();
 
     if (isLoading) {
         return <GlobalLoading />;

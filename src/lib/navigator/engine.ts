@@ -150,9 +150,19 @@ function buildGeneralRecommendations(
 
   // Always recommend professional consultation
   if (results.length > 0) {
-    recommendations.push(
-      'Consider sharing these results with a healthcare provider who can offer personalized guidance.'
+    const hasStrongMatches = results.some(
+      (r) => r.relevance_level === 'high' || r.relevance_level === 'moderate'
     );
+    if (hasStrongMatches) {
+      recommendations.push(
+        'Consider sharing these results with a healthcare provider who can offer personalized guidance.'
+      );
+    } else {
+      recommendations.push(
+        'The patterns identified are exploratory starting points. A healthcare provider can help determine ' +
+          'whether these areas are relevant to your experience and guide next steps.'
+      );
+    }
   }
 
   // If no results matched, provide general wellness
@@ -166,7 +176,8 @@ function buildGeneralRecommendations(
         'and social connection can benefit mental wellbeing for everyone.'
     );
     recommendations.push(
-      'If your experiences are causing distress, speaking with a healthcare provider can help.'
+      'If your experiences are causing distress, speaking with a healthcare provider can help. ' +
+        'You might also try selecting additional symptoms or providing more detailed severity and duration information.'
     );
   }
 

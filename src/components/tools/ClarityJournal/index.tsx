@@ -71,21 +71,22 @@ const ClarityJournal: React.FC = () => {
   const v1Moods = [...data.dailyCheckIns]
     .sort((a, b) => a.date.localeCompare(b.date))
     .slice(-14)
-    .map(c => ({ label: formatDate(c.date), value: c.mood }));
+    .map(c => ({ key: c.date.slice(0, 10), label: formatDate(c.date), value: c.mood }));
 
   const v2Moods = [...(data.dailyJournals || [])]
     .filter(j => j.moodCheckIns.length > 0)
     .sort((a, b) => a.date.localeCompare(b.date))
     .slice(-14)
     .map(j => ({
+      key: j.date.slice(0, 10),
       label: formatDate(j.date),
       value: Math.round(j.moodCheckIns.reduce((s, m) => s + m.overallMood, 0) / j.moodCheckIns.length),
     }));
 
-  // Merge by date, preferring V2 data
+  // Merge by ISO date key, preferring V2 data
   const moodMap = new Map<string, { label: string; value: number }>();
-  for (const m of v1Moods) moodMap.set(m.label, m);
-  for (const m of v2Moods) moodMap.set(m.label, m);
+  for (const m of v1Moods) moodMap.set(m.key, { label: m.label, value: m.value });
+  for (const m of v2Moods) moodMap.set(m.key, { label: m.label, value: m.value });
   const recentMoods = [...moodMap.values()].slice(-14);
 
   // Thought record count (legacy — kept for backwards compat)

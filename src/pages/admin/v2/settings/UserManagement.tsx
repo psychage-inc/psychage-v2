@@ -202,7 +202,7 @@ const AdminUserManagementV2: React.FC = () => {
                 </button>
                 <button
                   onClick={() => inviteMutation.mutate()}
-                  disabled={inviteMutation.isPending || !inviteEmail.trim()}
+                  disabled={inviteMutation.isPending || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inviteEmail)}
                   className="flex-1 py-2 bg-primary text-white text-sm rounded-lg hover:bg-primary-hover disabled:opacity-50"
                 >
                   {inviteMutation.isPending ? 'Adding...' : 'Add Admin'}

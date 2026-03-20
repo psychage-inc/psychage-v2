@@ -406,7 +406,7 @@ async function main() {
         sql += `    v_sub_id,\n`;
         sql += `    'drafted',\n`;
         sql += `    '${esc(art.description || '')}',\n`;
-        sql += `    '${esc(art.image || `/images/articles/cat${cat.catPad}/cover-${String(globalIdx).padStart(3, '0')}.svg`)}',\n`;
+        sql += `    '${esc(art.image || `/images/articles/cat${cat.catPad}/cover-${String(artIdx + 1).padStart(3, '0')}.svg`)}',\n`;
         sql += `    ${citCount},\n`;
         sql += `    ${hasCrisis},\n`;
         sql += `    ${isFirst},\n`;

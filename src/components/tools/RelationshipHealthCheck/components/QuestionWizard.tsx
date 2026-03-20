@@ -4,8 +4,8 @@ import { ArrowLeft, SkipForward, Heart, Home, Users, Globe } from 'lucide-react'
 import SEO from '@/components/SEO';
 import Button from '@/components/ui/Button';
 import { getActiveQuestions } from '../questions';
-import { LIKERT_OPTIONS, DOMAIN_META } from '../types';
-import type { RelationshipDomain, RelationshipQuestion } from '../types';
+import { LIKERT_OPTIONS, DOMAIN_META, SUB_DIMENSION_META } from '../types';
+import type { RelationshipDomain } from '../types';
 
 interface QuestionWizardProps {
   skipPartner: boolean;
@@ -20,8 +20,6 @@ const DOMAIN_ICONS: Record<RelationshipDomain, React.ReactNode> = {
   community: <Globe size={16} />,
 };
 
-const DOMAIN_ORDER: RelationshipDomain[] = ['partner', 'family', 'friends', 'community'];
-
 export const QuestionWizard: React.FC<QuestionWizardProps> = ({
   skipPartner,
   onComplete,
@@ -30,7 +28,7 @@ export const QuestionWizard: React.FC<QuestionWizardProps> = ({
   const questions = useMemo(() => getActiveQuestions(skipPartner), [skipPartner]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, number>>({});
-  const [direction, setDirection] = useState(1); // 1 = forward, -1 = backward
+  const [direction, setDirection] = useState(1);
   const [showDomainTransition, setShowDomainTransition] = useState(false);
   const autoAdvanceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const prevDomainRef = useRef<string | null>(null);
@@ -39,6 +37,20 @@ export const QuestionWizard: React.FC<QuestionWizardProps> = ({
   const currentQuestion = questions[currentIndex];
   const totalQuestions = questions.length;
   const progress = ((currentIndex) / totalQuestions) * 100;
+
+  // Sub-dimension label for current question
+  const currentSubDimMeta = useMemo(() => {
+    if (!currentQuestion) return null;
+    return SUB_DIMENSION_META.find((m) => m.key === currentQuestion.subDimension) ?? null;
+  }, [currentQuestion]);
+
+  // Progress milestones
+  const showMilestone = useMemo(() => {
+    const pct = Math.round(progress);
+    if (pct >= 49 && pct <= 52) return 'You\'re halfway there!';
+    if (pct >= 74 && pct <= 77) return 'Almost done — just a few more!';
+    return null;
+  }, [progress]);
 
   // Mark first domain as seen on mount
   useEffect(() => {
@@ -69,7 +81,6 @@ export const QuestionWizard: React.FC<QuestionWizardProps> = ({
       if (!currentQuestion) return;
       setAnswers((prev) => ({ ...prev, [currentQuestion.id]: value }));
 
-      // Auto-advance after brief delay
       autoAdvanceTimer.current = setTimeout(() => {
         if (currentIndex < totalQuestions - 1) {
           setDirection(1);
@@ -104,7 +115,6 @@ export const QuestionWizard: React.FC<QuestionWizardProps> = ({
     }
   }, [currentIndex, totalQuestions, answers, onComplete]);
 
-  // Cleanup timer on unmount
   useEffect(() => {
     return () => {
       if (autoAdvanceTimer.current) clearTimeout(autoAdvanceTimer.current);
@@ -116,7 +126,6 @@ export const QuestionWizard: React.FC<QuestionWizardProps> = ({
   const domainMeta = DOMAIN_META[currentQuestion.domain];
   const selectedValue = answers[currentQuestion.id];
 
-  // Domain badge colors (static Tailwind classes)
   const domainBadgeClasses: Record<RelationshipDomain, string> = {
     partner: 'bg-rose-50 text-rose-600 border-rose-200',
     family: 'bg-indigo-50 text-indigo-600 border-indigo-200',
@@ -165,14 +174,35 @@ export const QuestionWizard: React.FC<QuestionWizardProps> = ({
           </div>
         </div>
 
-        {/* Domain badge */}
-        <div className="flex justify-center mb-6">
+        {/* Progress milestone */}
+        <AnimatePresence>
+          {showMilestone && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="text-center mb-4"
+            >
+              <span className="inline-flex items-center px-3 py-1 rounded-full bg-teal-50 text-teal-700 text-xs font-bold">
+                {showMilestone}
+              </span>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Domain + sub-dimension badges */}
+        <div className="flex flex-col items-center gap-1 mb-6">
           <span
             className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold border ${domainBadgeClasses[currentQuestion.domain]}`}
           >
             {DOMAIN_ICONS[currentQuestion.domain]}
             {domainMeta.name}
           </span>
+          {currentSubDimMeta && (
+            <span className="text-[11px] text-gray-400 font-medium">
+              {currentSubDimMeta.name}
+            </span>
+          )}
         </div>
 
         {/* Domain transition banner */}
@@ -183,11 +213,7 @@ export const QuestionWizard: React.FC<QuestionWizardProps> = ({
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3, ease: 'easeOut' }}
-              className="mb-6 rounded-xl border p-4 flex items-center gap-3"
-              style={{
-                backgroundColor: `var(--domain-bg, #f0fdfa)`,
-                borderColor: `var(--domain-border, #ccfbf1)`,
-              }}
+              className={`mb-6 rounded-xl border p-4 flex items-center gap-3 ${domainMeta.bgColor} ${domainMeta.borderColor}`}
             >
               <div
                 className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${domainMeta.bgColor} ${domainMeta.textColor}`}

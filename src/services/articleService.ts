@@ -12,7 +12,7 @@ import { useMemo } from 'react';
 import { getCategoryTheme } from '../config/categoryThemes';
 
 // Fallback to mock data if Supabase fails
-import { articles as mockArticles } from '../data/articles';
+import { allArticles as mockArticles } from '../data/articles/all-articles';
 
 // ============================================================================
 // Types

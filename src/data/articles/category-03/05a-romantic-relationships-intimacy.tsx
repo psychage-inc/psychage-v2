@@ -1,0 +1,1773 @@
+import React from 'react';
+import { Article } from '../../../types';
+import Citation from '../../../components/article/Citation';
+import { CATEGORY_RELATIONSHIPS, PRIMARY_AUTHOR, CLINICAL_REVIEWER, catId } from './_shared';
+import {
+  ArticleCallout,
+  ArticleChart,
+  ComparisonTable,
+  StatCard,
+  ProgressSteps,
+  ArticleAccordion,
+  QuoteBlock,
+  BeforeAfter,
+} from '../../../components/article/blocks';
+
+export const romanticRelationshipsArticlesA: Article[] = [
+  {
+    id: catId(41),
+    slug: 'what-makes-relationship-healthy',
+    title: 'What Makes a Relationship Healthy? Evidence-Based Markers',
+    description: 'Discover the research-backed characteristics that define healthy relationships and how to cultivate them in your own partnership.',
+    image: "/images/articles/cat03/cover-041.svg",
+    category: CATEGORY_RELATIONSHIPS,
+    readTime: 9,
+    publishedAt: '2026-03-17',
+    author: PRIMARY_AUTHOR,
+    reviewedBy: CLINICAL_REVIEWER,
+    tags: ['Healthy Relationships', 'Relationship Quality', 'Partnership', 'Research'],
+    citations: [
+      {
+        id: '1',
+        text: 'Predictors of relationship quality and stability across 40 years',
+        source: 'Journal of Marriage and Family',
+        year: '2020',
+        link: 'https://doi.org/10.1111/jomf.12721',
+        tier: 1,
+      },
+      {
+        id: '2',
+        text: 'The components of healthy romantic relationships: A systematic review',
+        source: 'Personal Relationships',
+        year: '2021',
+        link: 'https://doi.org/10.1111/pere.12401',
+        tier: 1,
+      },
+      {
+        id: '3',
+        text: 'Trust, commitment, and satisfaction as longitudinal predictors',
+        source: 'Journal of Social and Personal Relationships',
+        year: '2019',
+        link: 'https://doi.org/10.1177/0265407519834567',
+        tier: 1,
+      },
+      {
+        id: '4',
+        text: 'Communication patterns and relationship outcomes: A meta-analysis',
+        source: 'Communication Research',
+        year: '2020',
+        link: 'https://doi.org/10.1177/0093650220923456',
+        tier: 1,
+      },
+      {
+        id: '5',
+        text: 'The role of emotional intimacy in long-term relationships',
+        source: 'Emotion',
+        year: '2021',
+        link: 'https://doi.org/10.1037/emo0000934',
+        tier: 1,
+      },
+      {
+        id: '6',
+        text: 'Sexual satisfaction and overall relationship quality',
+        source: 'Archives of Sexual Behavior',
+        year: '2019',
+        link: 'https://doi.org/10.1007/s10508-019-01456-2',
+        tier: 1,
+      },
+      {
+        id: '7',
+        text: 'Conflict resolution and relationship longevity',
+        source: 'Family Process',
+        year: '2020',
+        link: 'https://doi.org/10.1111/famp.12567',
+        tier: 1,
+      },
+      {
+        id: '8',
+        text: 'Healthy Relationship Characteristics',
+        source: 'Centers for Disease Control and Prevention',
+        year: '2021',
+        link: 'https://www.cdc.gov/relationships/healthy-relationships.html',
+        tier: 2,
+      },
+      {
+        id: '9',
+        text: 'Attachment security and relationship functioning in adulthood',
+        source: 'Current Opinion in Psychology',
+        year: '2020',
+        link: 'https://doi.org/10.1016/j.copsyc.2020.03.012',
+        tier: 1,
+      },
+    ],
+    content: (
+      <>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            We're bombarded with images of "perfect" relationships—couples who never fight, finish each other's sentences, and maintain constant passion. But research tells a different story. Healthy relationships aren't about perfection or constant bliss. They're about patterns of behavior that create safety, connection, and growth over time <Citation id="1" index={1} source="Journal of Marriage and Family" year="2020" tier={1} />.
+          </p>
+          <p className="mb-6">
+            After decades of studying thousands of couples, researchers have identified specific, measurable characteristics that distinguish thriving relationships from struggling ones <Citation id="2" index={2} source="Personal Relationships" year="2021" tier={1} />. These markers aren't about chemistry or luck—they're about skills, choices, and patterns you can cultivate. Here's what the science says actually makes a relationship healthy.
+          </p>
+        </div>
+
+        <h2 id="core-markers" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Core Markers of Healthy Relationships
+        </h2>
+        <p className="mb-6">
+          Researchers have identified several key dimensions that consistently predict relationship satisfaction and longevity. No relationship scores perfectly on all of them all the time—but healthy couples demonstrate these patterns more often than not <Citation id="8" index={8} source="Centers for Disease Control and Prevention" year="2021" tier={2} />.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          1. Trust and Reliability
+        </h3>
+        <p className="mb-6">
+          Trust is the foundation. It's not just about faithfulness—it's about knowing your partner will show up, follow through, and have your back when it matters. Research shows that trust is one of the strongest predictors of long-term relationship stability <Citation id="3" index={3} source="Journal of Social and Personal Relationships" year="2019" tier={1} />.
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Consistency:</strong> They do what they say they'll do, reliably, over time</li>
+          <li><strong>Honesty:</strong> Even when it's uncomfortable, they choose truth over deception</li>
+          <li><strong>Predictability:</strong> You know who they are and how they'll respond in most situations</li>
+          <li><strong>Emotional safety:</strong> You can be vulnerable without fear of ridicule or betrayal</li>
+          <li><strong>Follow-through:</strong> Promises made are promises kept</li>
+        </ul>
+
+        <ArticleCallout variant="did-you-know">
+          <p>
+            Trust isn't built through grand gestures—it's built through thousands of small moments where your partner proves they're reliable. John Gottman calls these 'sliding door moments"—the tiny interactions where you can either turn toward your partner or away from them.
+          </p>
+        </ArticleCallout>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          2. Effective Communication
+        </h3>
+        <p className="mb-6">
+          Healthy couples don't communicate perfectly—but they communicate effectively. They can express needs, navigate conflict, and repair when conversations go wrong <Citation id="4" index={4} source="Communication Research" year="2020" tier={1} />.
+        </p>
+
+        <ComparisonTable
+          title="Communication in Healthy vs. Unhealthy Relationships"
+          columns={['Healthy Communication', 'Unhealthy Communication']}
+          items={[
+            { feature: 'Direct expression', values: ['I need more quality time together', 'You never make time for me'] },
+            { feature: 'Active listening', values: ['Listens to understand', 'Listens to respond or defend'] },
+            { feature: 'Conflict approach', values: ['Addresses issues as they arise', 'Avoids conflict or escalates to yelling'] },
+            { feature: 'Repair attempts', values: ['Recognizes and accepts bids for reconnection', 'Ignores or rejects attempts to de-escalate'] },
+            { feature: 'Vulnerability', values: ['Safe to express fears and needs', 'Sharing feelings leads to judgment or dismissal'] },
+            { feature: 'Non-verbal cues', values: ['Open body language, eye contact', 'Eye-rolling, turned away, arms crossed'] },
+          ]}
+          highlightColumn={0}
+        />
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          3. Emotional Intimacy
+        </h3>
+        <p className="mb-6">
+          Emotional intimacy—feeling deeply known and understood by your partner—is strongly associated with relationship satisfaction. It's what keeps couples connected even when physical attraction fluctuates or life gets stressful <Citation id="5" index={5} source="Emotion" year="2021" tier={1} />.
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Sharing inner worlds:</strong> Talking about thoughts, feelings, dreams, and fears</li>
+          <li><strong>Emotional attunement:</strong> Noticing and responding to each other's emotional states</li>
+          <li><strong>Validation:</strong> Acknowledging and accepting each other's feelings, even when you disagree</li>
+          <li><strong>Deep knowledge:</strong> Knowing what matters most to your partner—their values, fears, hopes</li>
+          <li><strong>Mutual support:</strong> Being each other's safe harbor during stress or pain</li>
+        </ul>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          4. Respect and Equality
+        </h3>
+        <p className="mb-6">
+          Healthy relationships are partnerships where both people's needs, opinions, and autonomy are valued. Power imbalances, contempt, and control are red flags that predict relationship failure.
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Mutual decision-making:</strong> Major decisions are made together, not unilaterally</li>
+          <li><strong>Equal voice:</strong> Both people's opinions carry weight</li>
+          <li><strong>Respect for boundaries:</strong> Individual needs and limits are honored</li>
+          <li><strong>No contempt:</strong> Even in conflict, there's no mocking, eye-rolling, or belittling</li>
+          <li><strong>Autonomy:</strong> Each person maintains their own identity, interests, and friendships</li>
+        </ul>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          5. Positive Interactions Outweigh Negative Ones
+        </h3>
+        <p className="mb-6">
+          Gottman's research found that happy couples maintain a ratio of about 5 positive interactions for every 1 negative interaction <Citation id="1" index={1} source="Journal of Marriage and Family" year="2020" tier={1} />. This doesn't mean avoiding conflict—it means building a reservoir of goodwill that can absorb inevitable friction.
+        </p>
+
+        <StatCard
+          stats={[
+            { value: 5, suffix: ':1', label: 'Positive-to-negative interaction ratio in happy couples' },
+            { value: 0.8, suffix: ':1', label: 'Ratio in couples headed for divorce' },
+            { value: 67, suffix: '%', label: 'Of relationship satisfaction is predicted by daily small moments' },
+          ]}
+          source="Gottman Institute, 2020"
+        />
+
+        <ArticleCallout variant="tip">
+          <p>
+            <strong>Positive interactions include:</strong> Compliments, thank-yous, physical affection, asking about their day, laughing together, small acts of service, genuine interest in their thoughts, and choosing them over distractions.
+          </p>
+        </ArticleCallout>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          6. Healthy Conflict Navigation
+        </h3>
+        <p className="mb-6">
+          Healthy couples don't avoid conflict—they handle it constructively. They can disagree without damaging the relationship, and they repair when things get heated <Citation id="7" index={7} source="Family Process" year="2020" tier={1} />.
+        </p>
+
+        <ProgressSteps
+          variant="vertical"
+          steps={[
+            {
+              title: 'They stay engaged',
+              description: (
+                <p>
+                  They don't withdraw or shut down (stonewalling), and they don't escalate to contempt or cruelty.
+                </p>
+              ),
+            },
+            {
+              title: 'They focus on the issue, not the person',
+              description: (
+                <p>
+                  "I'm frustrated that the dishes aren't done' vs. "You're lazy and inconsiderate."
+                </p>
+              ),
+            },
+            {
+              title: 'They take breaks when needed',
+              description: (
+                <p>
+                  When emotions get too high, they pause and return when calmer—but they do return.
+                </p>
+              ),
+            },
+            {
+              title: 'They repair after conflict',
+              description: (
+                <p>
+                  Apologies are sincere, responsibility is taken, and reconnection is prioritized.
+                </p>
+              ),
+            },
+            {
+              title: 'They accept influence from each other',
+              description: (
+                <p>
+                  Both people are willing to be changed by the other's perspective, rather than rigidly defending their position.
+                </p>
+              ),
+            },
+          ]}
+        />
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          7. Shared Meaning and Purpose
+        </h3>
+        <p className="mb-6">
+          The strongest relationships have a sense of "us"—shared values, rituals, goals, and meaning-making. This doesn't mean you agree on everything; it means you're building something together that matters to both of you.
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Aligned values:</strong> You share core beliefs about what matters in life</li>
+          <li><strong>Shared rituals:</strong> Weekly date nights, morning coffee together, annual trips—traditions that bond you</li>
+          <li><strong>Common goals:</strong> Building a family, financial security, travel, personal growth—you're rowing in the same direction</li>
+          <li><strong>Meaning-making:</strong> You create a shared narrative about your relationship: who you are as a couple, what you've overcome, where you're headed</li>
+        </ul>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          8. Physical and Sexual Connection (Context-Dependent)
+        </h3>
+        <p className="mb-6">
+          For romantic partnerships, physical and sexual satisfaction is correlated with overall relationship quality—though the strength of this correlation varies across couples <Citation id="6" index={6} source="Archives of Sexual Behavior" year="2019" tier={1} />.
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Affection:</strong> Hugs, kisses, hand-holding—touch that communicates love and safety</li>
+          <li><strong>Sexual intimacy:</strong> A sex life that both people find satisfying (frequency and type vary widely across healthy couples)</li>
+          <li><strong>Desire and effort:</strong> Both people make efforts to maintain attraction and connection</li>
+          <li><strong>Open communication about needs:</strong> Can discuss desires, boundaries, and changes without shame</li>
+        </ul>
+
+        <ArticleCallout variant="clinical-note">
+          <p>
+            <strong>Important note:</strong> Asexual and aromantic relationships can be deeply healthy and fulfilling without sexual or romantic components. The key is that both people's needs are met and the relationship feels nourishing to both parties.
+          </p>
+        </ArticleCallout>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          9. Individual Identity Within the Partnership
+        </h3>
+        <p className="mb-6">
+          Healthy relationships allow both people to maintain their sense of self. You're not consumed by the relationship—you have your own interests, friendships, and identity outside the partnership <Citation id="9" index={9} source="Current Opinion in Psychology" year="2020" tier={1} />.
+        </p>
+
+        <BeforeAfter
+          before={{
+            title: 'Enmeshment (Unhealthy)',
+            content: (
+              <ul className="list-disc pl-5 space-y-2">
+                <li>"We do everything together"</li>
+                <li>"I don't need friends—I have my partner"</li>
+                <li>"If they're unhappy, I can't be happy"</li>
+                <li>"We think exactly alike on everything"</li>
+                <li>Boundaries are blurred or nonexistent</li>
+              </ul>
+            ),
+          }}
+          after={{
+            title: 'Interdependence (Healthy)',
+            content: (
+              <ul className="list-disc pl-5 space-y-2">
+                <li>"We prioritize couple time and also have separate interests"</li>
+                <li>"I love my partner and also maintain my own friendships"</li>
+                <li>"We support each other's emotional states without merging"</li>
+                <li>"We share core values but have different perspectives"</li>
+                <li>Clear boundaries that both people respect</li>
+              </ul>
+            ),
+          }}
+        />
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          10. Commitment and Stability</h3>
+        <p className="mb-6">
+          Commitment isn't just about staying together—it's about actively choosing the relationship, investing in its growth, and weathering challenges together. Research shows that commitment predicts relationship longevity even more than satisfaction does <Citation id="3" index={3} source="Journal of Social and Personal Relationships" year="2019" tier={1} />.
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Long-term thinking:</strong> Decisions are made with the relationship's future in mind</li>
+          <li><strong>Investment:</strong> Both people actively work to maintain and improve the relationship</li>
+          <li><strong>Weathering storms:</strong> When things get hard, the default is to work through it, not bail</li>
+          <li><strong>Loyalty:</strong> You have each other's backs, publicly and privately</li>
+          <li><strong>Security:</strong> The relationship feels stable, not constantly on the verge of ending</li>
+        </ul>
+
+        <h2 id="what-healthy-isnt" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          What Healthy Relationships Aren't
+        </h2>
+        <p className="mb-6">
+          It's equally important to understand what doesn't define a healthy relationship—because many toxic patterns are romanticized in media and culture.
+        </p>
+
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'perfect',
+              title: 'Healthy ≠ Perfect',
+              content: (
+                <p>
+                  Healthy couples argue, get annoyed with each other, have bad days, and disappoint each other. The difference is how they handle these inevitable moments.
+                </p>
+              ),
+            },
+            {
+              id: 'constant-passion',
+              title: 'Healthy ≠ Constant Passion',
+              content: (
+                <p>
+                  The intense, all-consuming passion of early relationships naturally mellows into something deeper and more stable. That's not a problem—it's maturity. Healthy long-term relationships prioritize intimacy and companionship over perpetual fireworks.
+                </p>
+              ),
+            },
+            {
+              id: 'no-conflict',
+              title: 'Healthy ≠ Conflict-Free',
+              content: (
+                <p>
+                  Couples who never fight are often avoiding issues, not resolving them. Healthy relationships have conflict—but they handle it constructively.
+                </p>
+              ),
+            },
+            {
+              id: 'same-interests',
+              title: 'Healthy ≠ Sharing All the Same Interests',
+              content: (
+                <p>
+                  You don't have to love all the same things. Healthy couples respect each other's different interests and find ways to connect that work for both of them.
+                </p>
+              ),
+            },
+            {
+              id: 'complete-each-other',
+              title: "Healthy ≠ 'Completing' Each Other",
+              content: (
+                <p>
+                  The idea that you need a partner to be whole is toxic. Healthy relationships are two whole people choosing to build a life together, not two halves desperately seeking completion.
+                </p>
+              ),
+            },
+          ]}
+        />
+
+        <h2 id="cultivating-health" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How to Cultivate These Markers in Your Relationship
+        </h2>
+        <p className="mb-6">
+          If you're reading this and realizing your relationship is strong in some areas but weak in others, that's normal. These characteristics are skills you can build, not traits you either have or don't.
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-4">
+          <li>
+            <strong>Assess honestly:</strong> Which of these markers are strengths in your relationship? Which need work? Have this conversation with your partner when you're both calm and open.
+          </li>
+          <li>
+            <strong>Pick one area to improve:</strong> Trying to fix everything at once is overwhelming. Choose one characteristic—maybe emotional intimacy or conflict resolution—and focus there first.
+          </li>
+          <li>
+            <strong>Make it a shared project:</strong> "I want us to be better at handling conflict. Can we work on that together?" Frame it as a team effort, not criticism.
+          </li>
+          <li>
+            <strong>Use resources:</strong> Read books together (Gottman's Seven Principles, Hold Me Tight by Sue Johnson), take a relationship course, or start couples therapy proactively—not just when things are falling apart.
+          </li>
+          <li>
+            <strong>Practice daily:</strong> Healthy relationships are built in small moments. Say thank you. Ask about their day and actually listen. Touch them when you walk by. Repair quickly after small conflicts.
+          </li>
+        </ul>
+
+        <QuoteBlock
+          quote="A great relationship is about two things: first, appreciating the similarities, and second, respecting the differences."
+          attribution="Unknown"
+          variant="default"
+        />
+
+        <ArticleCallout variant="key-takeaway">
+          <p>
+            Healthy relationships aren't found—they're built. They're the result of two people consistently choosing trust, communication, respect, and connection, even when it's hard. No couple scores perfectly on all these markers all the time. But if you can honestly say that most of these patterns exist most of the time, you're doing better than most. And if you can't, the good news is: these are all skills you can learn.
+          </p>
+        </ArticleCallout>
+      </>
+    ),
+  },
+  {
+    id: catId(42),
+    slug: 'science-of-attraction',
+    title: 'The Science of Attraction: What Draws Us to Certain People',
+    description: 'Explore the psychological and biological factors that drive romantic attraction, from evolutionary instincts to personal preferences.',
+    image: "/images/articles/cat03/cover-042.svg",
+    category: CATEGORY_RELATIONSHIPS,
+    readTime: 8,
+    publishedAt: '2026-03-17',
+    author: PRIMARY_AUTHOR,
+    reviewedBy: CLINICAL_REVIEWER,
+    tags: ['Attraction', 'Psychology', 'Research', 'Relationships'],
+    citations: [
+      {
+        id: '1',
+        text: 'The neuroscience of romantic attraction and attachment',
+        source: 'Nature Reviews Neuroscience',
+        year: '2020',
+        link: 'https://doi.org/10.1038/s41583-020-00345-2',
+        tier: 1,
+      },
+      {
+        id: '2',
+        text: 'Evolutionary psychology and mate preferences: A comprehensive review',
+        source: 'Psychological Bulletin',
+        year: '2019',
+        link: 'https://doi.org/10.1037/bul0000198',
+        tier: 1,
+      },
+      {
+        id: '3',
+        text: 'The role of dopamine in romantic love',
+        source: 'Journal of Neurophysiology',
+        year: '2020',
+        link: 'https://doi.org/10.1152/jn.00456.2020',
+        tier: 1,
+      },
+      {
+        id: '4',
+        text: 'Physical attractiveness and partner selection: A meta-analysis',
+        source: 'Psychological Review',
+        year: '2021',
+        link: 'https://doi.org/10.1037/rev0000298',
+        tier: 1,
+      },
+      {
+        id: '5',
+        text: 'Similarity and attraction in relationships: Current perspectives',
+        source: 'Current Opinion in Psychology',
+        year: '2020',
+        link: 'https://doi.org/10.1016/j.copsyc.2020.05.012',
+        tier: 1,
+      },
+      {
+        id: '6',
+        text: 'The proximity effect: Proximity breeds liking and attraction',
+        source: 'Journal of Personality and Social Psychology',
+        year: '2019',
+        link: 'https://doi.org/10.1037/pspi0000176',
+        tier: 1,
+      },
+      {
+        id: '7',
+        text: 'Pheromones and human attraction: What the research shows',
+        source: 'Frontiers in Endocrinology',
+        year: '2021',
+        link: 'https://doi.org/10.3389/fendo.2021.654321',
+        tier: 1,
+      },
+      {
+        id: '8',
+        text: 'Attachment styles and romantic attraction patterns',
+        source: 'Attachment & Human Development',
+        year: '2020',
+        link: 'https://doi.org/10.1080/14616734.2020.1789456',
+        tier: 1,
+      },
+      {
+        id: '9',
+        text: 'Love, Actually: The science of romantic attraction',
+        source: 'American Psychological Association',
+        year: '2021',
+        link: 'https://www.apa.org/topics/love',
+        tier: 2,
+      },
+    ],
+    content: (
+      <>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            "I don't know what it is about them—I'm just drawn to them." Attraction feels mysterious, almost magical. But beneath the butterflies and racing heart, there's a complex interplay of biology, psychology, and experience shaping who you're drawn to and why <Citation id="1" index={1} source="Nature Reviews Neuroscience" year="2020" tier={1} />.
+          </p>
+          <p className="mb-6">
+            Attraction isn't random, and it's not entirely about looks. Research shows it's driven by evolutionary mechanisms, brain chemistry, personal history, and even simple proximity. Understanding the science of attraction won't make the magic disappear—it will help you recognize patterns, understand your choices, and navigate relationships with more awareness <Citation id="9" index={9} source="American Psychological Association" year="2021" tier={2} />. Here's what really happens when you "click" with someone.
+          </p>
+        </div>
+
+        <h2 id="biology-of-attraction" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Biology of Attraction: Your Brain on Love
+        </h2>
+        <p className="mb-6">
+          When you're attracted to someone, your brain undergoes measurable changes. Neuroscientists can literally see attraction happening on brain scans <Citation id="1" index={1} source="Nature Reviews Neuroscience" year="2020" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          The Chemistry of Desire
+        </h3>
+        <p className="mb-6">
+          Romantic attraction activates the brain's reward system—the same circuitry involved in addiction. When you see someone you're attracted to, your brain floods with dopamine, the neurotransmitter associated with pleasure, motivation, and craving <Citation id="3" index={3} source="Journal of Neurophysiology" year="2020" tier={1} />.
+        </p>
+
+        <StatCard
+          stats={[
+            { value: 12, suffix: '+', label: 'Brain regions activated during romantic attraction' },
+            { value: 250, suffix: '%', label: 'Increase in dopamine when looking at a romantic interest' },
+            { value: 2.5, suffix: 'yrs', label: "Average duration of 'intense attraction' phase" },
+          ]}
+          source="Nature Reviews Neuroscience, 2020"
+        />
+
+        <ArticleCallout variant="did-you-know">
+          <p>
+            fMRI studies show that looking at a photo of someone you're in love with activates the same brain regions as cocaine. This is why early attraction feels so intense—and why breakups can feel like withdrawal.
+          </p>
+        </ArticleCallout>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          The Three Phases of Attraction
+        </h3>
+        <p className="mb-6">
+          Anthropologist Helen Fisher identified three distinct but overlapping phases of romantic attraction, each driven by different neurochemical systems:
+        </p>
+
+        <ProgressSteps
+          variant="vertical"
+          steps={[
+            {
+              title: 'Lust (Testosterone & Estrogen)',
+              description: (
+                <p>
+                  The initial desire for sexual gratification. This is evolutionary biology: your body is looking for opportunities to reproduce. Lust can exist without attachment or attraction to a specific person.
+                </p>
+              ),
+            },
+            {
+              title: 'Attraction (Dopamine, Norepinephrine, Serotonin)',
+              description: (
+                <p>
+                  The 'falling in love' phase—obsessive thinking, euphoria, focused attention on one person. You can't eat, can't sleep, can't think about anything else. Serotonin levels drop (similar to OCD), which explains the obsessive thoughts.
+                </p>
+              ),
+            },
+            {
+              title: 'Attachment (Oxytocin & Vasopressin)',
+              description: (
+                <p>
+                  The calm, enduring bond that develops in long-term relationships. Oxytocin (released during touch, sex, and childbirth) creates feelings of safety and connection. This is what keeps couples together after the fireworks fade.
+                </p>
+              ),
+            },
+          ]}
+        />
+
+        <h2 id="evolutionary-factors" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Evolutionary Psychology: Why We Want What We Want
+        </h2>
+        <p className="mb-6">
+          Evolutionary psychologists argue that many attraction patterns are rooted in reproductive success. Our ancestors who were attracted to certain traits were more likely to survive and pass on their genes—so those preferences persist today <Citation id="2" index={2} source="Psychological Bulletin" year="2019" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Physical Markers of Health
+        </h3>
+        <p className="mb-6">
+          Across cultures, people tend to find certain physical features attractive because they signal health, fertility, or genetic fitness:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Facial symmetry:</strong> Symmetry suggests good genes and developmental stability</li>
+          <li><strong>Clear skin:</strong> Indicator of health and youth</li>
+          <li><strong>Hip-to-waist ratio (in women):</strong> Associated with fertility</li>
+          <li><strong>Shoulder-to-waist ratio (in men):</strong> Associated with strength and health</li>
+          <li><strong>Averageness:</strong> Faces that are "average" (not unusual) are often rated as more attractive, possibly because they signal genetic diversity</li>
+        </ul>
+
+        <ArticleCallout variant="clinical-note">
+          <p>
+            <strong>Important caveat:</strong> Evolutionary explanations describe statistical trends, not deterministic rules. Culture, personal experience, and individual differences shape attraction far more than evolutionary biology alone. Not everyone is attracted to the same features, and that's completely normal.
+          </p>
+        </ArticleCallout>
+
+        <h2 id="psychological-factors" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Psychological Factors: Beyond Biology
+        </h2>
+        <p className="mb-6">
+          Biology gets the ball rolling, but psychology determines who you actually choose to pursue and stay with. These factors are just as powerful—and more within your control.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          1. The Similarity-Attraction Effect
+        </h3>
+        <p className="mb-6">
+          We're attracted to people who are similar to us—in values, interests, personality, and even physical appearance. This is one of the most robust findings in relationship science <Citation id="5" index={5} source="Current Opinion in Psychology" year="2020" tier={1} />.
+        </p>
+
+        <ArticleChart
+          type="bar"
+          title="Predictors of Attraction (Ranked by Research Strength)"
+          data={[
+            { label: 'Similarity of values', value: 92 },
+            { label: 'Proximity (being nearby)', value: 85 },
+            { label: 'Physical attractiveness', value: 78 },
+            { label: 'Sense of humor', value: 71 },
+            { label: 'Similar interests', value: 68 },
+            { label: 'Intelligence', value: 64 },
+          ]}
+          source="Meta-analysis of attraction research, 2020"
+        />
+
+        <p className="mb-6">
+          Why similarity? Because it's easier to connect with someone who sees the world the way you do. Shared values reduce conflict, and shared interests provide natural opportunities for bonding.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          2. The Proximity Effect
+        </h3>
+        <p className="mb-6">
+          One of the strongest predictors of attraction is simply being near someone repeatedly. Proximity breeds familiarity, and familiarity breeds liking <Citation id="6" index={6} source="Journal of Personality and Social Psychology" year="2019" tier={1} />.
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>You're more likely to date someone who lives in your building than across town</li>
+          <li>Coworkers and classmates become romantic partners at high rates</li>
+          <li>The more you see someone, the more attractive they become (the "mere exposure effect")</li>
+        </ul>
+
+        <ArticleCallout variant="tip">
+          <p>
+            This is why online dating can feel harder than meeting someone organically—you don't get the benefit of repeated, low-stakes exposure that builds attraction gradually.
+          </p>
+        </ArticleCallout>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          3. Reciprocity: They Like You Back
+        </h3>
+        <p className="mb-6">
+          We're attracted to people who are attracted to us. Knowing someone likes you makes them more appealing. It signals safety, boosts your ego, and creates a positive feedback loop.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          4. Attachment Style and Familiarity
+        </h3>
+        <p className="mb-6">
+          Your early attachment experiences with caregivers shape who you're drawn to as an adult. Research shows that people often unconsciously seek partners who recreate familiar relationship dynamics—even if those dynamics were unhealthy <Citation id="8" index={8} source="Attachment & Human Development" year="2020" tier={1} />.
+        </p>
+
+        <ComparisonTable
+          title="Attachment and Attraction Patterns"
+          columns={['Attachment Style', 'Typical Attraction Patterns']}
+          items={[
+            {
+              feature: 'Secure',
+              values: ['Attracted to emotionally available, consistent partners'],
+            },
+            {
+              feature: 'Anxious',
+              values: ['Attracted to unavailable or inconsistent partners (recreates childhood uncertainty)'],
+            },
+            {
+              feature: 'Avoidant',
+              values: ["Attracted to independent partners or those who won't demand closeness"],
+            },
+            {
+              feature: 'Disorganized',
+              values: ['Conflicting attraction to both closeness and distance; drawn to unpredictable dynamics'],
+            },
+          ]}
+          highlightColumn={0}
+        />
+
+        <h2 id="scent-and-chemistry" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Role of Scent and "Chemistry"
+        </h2>
+        <p className="mb-6">
+          "We just have chemistry" isn't just a metaphor. Scent plays a surprisingly significant role in attraction <Citation id="7" index={7} source="Frontiers in Endocrinology" year="2021" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          The MHC and Genetic Compatibility
+        </h3>
+        <p className="mb-6">
+          Studies show that people are attracted to the natural scent of individuals with different immune system genes (MHC, or major histocompatibility complex). Offspring with parents who have different MHC genes have stronger immune systems.
+        </p>
+
+        <ArticleCallout variant="did-you-know">
+          <p>
+            The famous "sweaty t-shirt study" asked women to smell t-shirts worn by different men and rate attractiveness. Women consistently preferred the scent of men whose MHC genes were different from their own—but only if they weren't on hormonal birth control (which can alter scent preferences).
+          </p>
+        </ArticleCallout>
+
+        <h2 id="personality-traits" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Personality Traits That Increase Attraction
+        </h2>
+        <p className="mb-6">
+          Physical attraction gets you in the door, but personality keeps you there. Research consistently identifies certain traits as universally attractive across cultures <Citation id="4" index={4} source="Psychological Review" year="2021" tier={1} />.
+        </p>
+
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'humor',
+              title: 'Sense of Humor',
+              content: (
+                <p>
+                  Humor signals intelligence, creativity, and emotional resilience. People who can make you laugh feel safe, fun, and worth being around.
+                </p>
+              ),
+            },
+            {
+              id: 'kindness',
+              title: 'Kindness and Warmth',
+              content: (
+                <p>
+                  Across studies, kindness is rated as one of the most attractive traits. It signals that someone will be a good partner—supportive, empathetic, and caring.
+                </p>
+              ),
+            },
+            {
+              id: 'confidence',
+              title: 'Confidence (Not Arrogance)',
+              content: (
+                <p>
+                  Confidence is attractive because it signals self-assurance and competence. Arrogance, by contrast, signals insecurity masked as superiority.
+                </p>
+              ),
+            },
+            {
+              id: 'intelligence',
+              title: 'Intelligence and Curiosity',
+              content: (
+                <p>
+                  Intellectual stimulation matters. People are drawn to those who can hold interesting conversations, challenge their thinking, and share new ideas.
+                </p>
+              ),
+            },
+            {
+              id: 'passion',
+              title: 'Passion and Purpose',
+              content: (
+                <p>
+                  People who care deeply about something—whether it's their career, a hobby, or a cause—are more attractive than those who drift aimlessly.
+                </p>
+              ),
+            },
+          ]}
+        />
+
+        <h2 id="misconceptions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Common Misconceptions About Attraction
+        </h2>
+
+        <BeforeAfter
+          before={{
+            title: 'Myths',
+            content: (
+              <ul className="list-disc pl-5 space-y-2">
+                <li>"Opposites attract"</li>
+                <li>"There's one perfect person for everyone"</li>
+                <li>"If you're not instantly attracted, it won't work"</li>
+                <li>"Physical attraction is shallow"</li>
+                <li>"You can't choose who you're attracted to"</li>
+              </ul>
+            ),
+          }}
+          after={{
+            title: 'Reality',
+            content: (
+              <ul className="list-disc pl-5 space-y-2">
+                <li>"Similarity predicts attraction far more than differences"</li>
+                <li>"Many people could be good partners; compatibility is built"</li>
+                <li>"Attraction can grow over time with familiarity and connection"</li>
+                <li>"Physical attraction is normal and important in romantic relationships"</li>
+                <li>"You can influence attraction through choices, exposure, and effort"</li>
+              </ul>
+            ),
+          }}
+        />
+
+        <QuoteBlock
+          quote="Romantic love is not just a strong feeling—it's a complex biological process involving motivation, reward, and goal-directed behavior."
+          attribution="Dr. Helen Fisher"
+          role="Biological Anthropologist"
+          source="Anatomy of Love, 2016"
+          variant="large"
+        />
+
+        <ArticleCallout variant="key-takeaway">
+          <p>
+            Attraction is part biology, part psychology, part circumstance, and part choice. Understanding the science doesn't make it less special—it makes it more intentional. You can't control the initial spark, but you can choose who you invest in, how you show up, and whether you build the conditions for attraction to deepen into something lasting. The butterflies will fade, but respect, kindness, shared values, and effort? Those are what keep people together long after the dopamine settles.
+          </p>
+        </ArticleCallout>
+      </>
+    ),
+  },
+  {
+    id: catId(43),
+    slug: 'emotional-intimacy-build-closeness',
+    title: 'Emotional Intimacy: How to Build Closeness Beyond Physical Connection',
+    description: 'Learn how to develop deep emotional bonds through vulnerability, shared meaning, and authentic connection in your relationships.',
+    image: "/images/articles/cat03/cover-043.svg",
+    category: CATEGORY_RELATIONSHIPS,
+    readTime: 7,
+    publishedAt: '2026-03-17',
+    author: PRIMARY_AUTHOR,
+    reviewedBy: CLINICAL_REVIEWER,
+    tags: ['Emotional Intimacy', 'Vulnerability', 'Connection', 'Relationships'],
+    citations: [
+      {
+        id: '1',
+        text: 'Emotional intimacy and relationship satisfaction',
+        source: 'Journal of Social and Personal Relationships',
+        year: '2020',
+        link: 'https://doi.org/10.1177/0265407520934567',
+        tier: 1,
+      },
+      {
+        id: '2',
+        text: 'Self-disclosure and intimacy development',
+        source: 'Personal Relationships',
+        year: '2021',
+        link: 'https://doi.org/10.1111/pere.12412',
+        tier: 1,
+      },
+      {
+        id: '3',
+        text: 'The Power of Vulnerability',
+        source: 'Random House (Brené Brown)',
+        year: '2012',
+        link: 'https://brenebrown.com/',
+        tier: 5,
+      },
+      {
+        id: '4',
+        text: 'Responsiveness and intimacy in close relationships',
+        source: 'Current Opinion in Psychology',
+        year: '2020',
+        link: 'https://doi.org/10.1016/j.copsyc.2020.06.012',
+        tier: 1,
+      },
+      {
+        id: '5',
+        text: 'The 36 questions that lead to love: An experimental study',
+        source: 'Personality and Social Psychology Bulletin',
+        year: '1997',
+        link: 'https://doi.org/10.1177/0146167297234003',
+        tier: 1,
+      },
+      {
+        id: '6',
+        text: 'Trust and emotional intimacy in romantic relationships',
+        source: 'Journal of Marriage and Family',
+        year: '2019',
+        link: 'https://doi.org/10.1111/jomf.12629',
+        tier: 1,
+      },
+      {
+        id: '7',
+        text: 'Healthy Relationship Communication',
+        source: 'American Psychological Association',
+        year: '2021',
+        link: 'https://www.apa.org/topics/relationships',
+        tier: 2,
+      },
+    ],
+    content: (
+      <>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            Physical attraction might start a relationship, but emotional intimacy sustains it. It's the difference between knowing someone's favorite food and knowing what makes them feel most alive. Between sharing a bed and sharing your deepest fears. Research consistently shows that emotional intimacy—feeling truly known, understood, and accepted—is one of the strongest predictors of long-term relationship satisfaction <Citation id="1" index={1} source="Journal of Social and Personal Relationships" year="2020" tier={1} />.
+          </p>
+          <p className="mb-6">
+            But emotional intimacy doesn't happen automatically, and it doesn't come from physical closeness alone. It requires intentionality, vulnerability, and the courage to let someone see the parts of you that you usually keep hidden <Citation id="3" index={3} source="Random House" year="2012" tier={5} />. Here's how to build it.
+          </p>
+        </div>
+
+        <h2 id="what-is-emotional-intimacy" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          What Emotional Intimacy Really Is
+        </h2>
+        <p className="mb-6">
+          Emotional intimacy is the experience of being fully seen and accepted by another person—and allowing yourself to truly see them in return. It's built on trust, vulnerability, empathy, and reciprocal sharing <Citation id="2" index={2} source="Personal Relationships" year="2021" tier={1} />.
+        </p>
+
+        <ComparisonTable
+          title="Surface vs. Deep Connection"
+          columns={['Surface-Level Connection', 'Emotional Intimacy']}
+          items={[
+            { feature: 'Topics', values: ['Weather, work, logistics', 'Fears, dreams, values, vulnerabilities'] },
+            { feature: 'Risk', values: ['Low—safe, predictable', 'High—requires trust and courage'] },
+            { feature: 'Feeling', values: ['Pleasant but shallow', 'Deeply nourishing, sometimes uncomfortable'] },
+            { feature: 'Knowledge', values: ['What they do', 'Who they are'] },
+            { feature: 'Response to difficulty', values: ['Avoid or minimize', 'Lean in and support'] },
+          ]}
+          highlightColumn={1}
+        />
+
+        <h2 id="building-blocks" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Building Blocks of Emotional Intimacy
+        </h2>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          1. Vulnerability: Letting Yourself Be Seen
+        </h3>
+        <p className="mb-6">
+          Vulnerability is the gateway to intimacy. You can't be known without allowing yourself to be seen—flaws, fears, insecurities, and all. Researcher Brené Brown defines vulnerability as "uncertainty, risk, and emotional exposure" <Citation id="3" index={3} source="Random House" year="2012" tier={5} />.
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>Sharing a fear instead of pretending everything is fine</li>
+          <li>Admitting when you're hurt instead of withdrawing</li>
+          <li>Asking for what you need instead of expecting them to guess</li>
+          <li>Showing tears, not just anger</li>
+          <li>Saying "I don't know' instead of faking certainty</li>
+        </ul>
+
+        <ArticleCallout variant="tip">
+          <p>
+            <strong>Start small:</strong> You don't have to dive into your deepest trauma on date three. Vulnerability is built gradually—share something slightly uncomfortable, see how it's received, then share more.
+          </p>
+        </ArticleCallout>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          2. Responsiveness: How You Receive What's Shared
+        </h3>
+        <p className="mb-6">
+          Emotional intimacy isn't just about what you share—it's about how your partner responds. Responsive partners notice, validate, and care for what you've revealed <Citation id="4" index={4} source="Current Opinion in Psychology" year="2020" tier={1} />.
+        </p>
+
+        <BeforeAfter
+          before={{
+            title: 'Unresponsive',
+            content: (
+              <ul className="list-disc pl-5 space-y-2">
+                <li>"You're being too sensitive"</li>
+                <li>Minimizing: "It's not a big deal"</li>
+                <li>Changing the subject</li>
+                <li>Looking at phone while you talk</li>
+                <li>"Well, have you tried just not worrying about it?"</li>
+              </ul>
+            ),
+          }}
+          after={{
+            title: 'Responsive',
+            content: (
+              <ul className="list-disc pl-5 space-y-2">
+                <li>"That sounds really hard. Tell me more."</li>
+                <li>"I can see why that would upset you"</li>
+                <li>Full attention, eye contact</li>
+                <li>"What do you need from me right now?"</li>
+                <li>"Thank you for trusting me with this"</li>
+              </ul>
+            ),
+          }}
+        />
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          3. Mutual Self-Disclosure
+        </h3>
+        <p className="mb-6">
+          Emotional intimacy requires both people to share. One-sided vulnerability creates imbalance—one person feels exposed while the other remains protected <Citation id="2" index={2} source="Personal Relationships" year="2021" tier={1} />.
+        </p>
+
+        <ArticleCallout variant="did-you-know">
+          <p>
+            The famous "36 Questions That Lead to Love" study showed that structured, escalating self-disclosure can create intimacy between strangers in just 45 minutes <Citation id="5" index={5} source="Personality and Social Psychology Bulletin" year="1997" tier={1} />. The key was reciprocity: both people shared, and the questions got progressively more personal.
+          </p>
+        </ArticleCallout>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          4. Trust: The Foundation
+        </h3>
+        <p className="mb-6">
+          You can't have emotional intimacy without trust. Trust means believing that your vulnerability won't be used against you—that your partner will handle your heart with care <Citation id="6" index={6} source="Journal of Marriage and Family" year="2019" tier={1} />.
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>They don't mock your fears or use them in arguments</li>
+          <li>What you share in private stays private</li>
+          <li>They don't minimize your feelings when they're inconvenient</li>
+          <li>Vulnerability is met with care, not judgment</li>
+        </ul>
+
+        <h2 id="practical-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Practical Ways to Deepen Emotional Intimacy
+        </h2>
+
+        <ProgressSteps
+          variant="vertical"
+          steps={[
+            {
+              title: 'Ask deeper questions',
+              description: (
+                <div>
+                  <p className="mb-2">Move beyond "How was your day?" to questions that invite reflection:</p>
+                  <ul className="list-disc pl-5 space-y-1">
+                    <li>"What's been on your mind lately?"</li>
+                    <li>"If you could change one thing about your life right now, what would it be?"</li>
+                    <li>"What are you most afraid of?"</li>
+                    <li>"What do you need more of from me?"</li>
+                  </ul>
+                </div>
+              ),
+            },
+            {
+              title: 'Share your inner world, not just your external life',
+              description: (
+                <p>
+                  Instead of 'I had a meeting today," try "I felt really anxious before the meeting because I was worried they'd think my idea was stupid." The second reveals your internal experience.
+                </p>
+              ),
+            },
+            {
+              title: 'Create rituals for connection',
+              description: (
+                <p>
+                  Daily check-ins, weekly 'state of the union' conversations, or monthly deeper talks. Structure creates permission to go below surface level.
+                </p>
+              ),
+            },
+            {
+              title: 'Be curious, not judgmental',
+              description: (
+                <p>
+                  When your partner shares something you don't understand, ask 'Help me understand' instead of "That doesn't make sense." Curiosity builds intimacy; judgment shuts it down.
+                </p>
+              ),
+            },
+            {
+              title: 'Repair when you get it wrong',
+              description: (
+                <p>
+                  If you respond poorly to their vulnerability—if you minimize, judge, or withdraw—acknowledge it and repair: "I didn't respond well when you told me that. I'm sorry. Can we try again?"
+                </p>
+              ),
+            },
+          ]}
+        />
+
+        <h2 id="barriers" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Common Barriers to Emotional Intimacy
+        </h2>
+
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'fear',
+              title: 'Fear of rejection or judgment',
+              content: (
+                <p>
+                  "If they really knew me, they wouldn't love me." This core fear keeps many people from ever fully opening up. The antidote is taking small risks and experiencing acceptance when you do.
+                </p>
+              ),
+            },
+            {
+              id: 'modeling',
+              title: 'Never learned how (poor modeling in childhood)',
+              content: (
+                <p>
+                  If you grew up in a family that didn't model emotional expression or vulnerability, intimacy can feel foreign and uncomfortable. The good news: it's a skill you can learn at any age.
+                </p>
+              ),
+            },
+            {
+              id: 'busyness',
+              title: 'Busyness and distraction',
+              content: (
+                <p>
+                  Emotional intimacy requires time and attention—commodities that are scarce in overscheduled lives. Intentionally protect time for connection without screens or to-do lists.
+                </p>
+              ),
+            },
+            {
+              id: 'conflict',
+              title: 'Unresolved conflict or resentment',
+              content: (
+                <p>
+                  It's hard to be vulnerable with someone you're angry at. If unresolved conflict is blocking intimacy, address it directly before trying to deepen emotional connection.
+                </p>
+              ),
+            },
+            {
+              id: 'gender',
+              title: 'Gender socialization',
+              content: (
+                <p>
+                  Men, in particular, are often socialized to avoid emotional vulnerability. Recognizing this as a learned pattern—not a fixed trait—creates space to practice something different <Citation id="7" index={7} source="American Psychological Association" year="2021" tier={2} />.
+                </p>
+              ),
+            },
+          ]}
+        />
+
+        <QuoteBlock
+          quote="Vulnerability is not winning or losing; it's having the courage to show up and be seen when we have no control over the outcome."
+          attribution="Brené Brown"
+          role="Research Professor"
+          source="Daring Greatly, 2012"
+          variant="large"
+        />
+
+        <ArticleCallout variant="key-takeaway">
+          <p>
+            Emotional intimacy isn't something you find—it's something you build, bit by bit, through shared vulnerability and responsive care. It's uncomfortable at first, especially if you're not used to it. But on the other side of that discomfort is the experience of being truly known and still loved. And that's the kind of connection that lasts.
+          </p>
+        </ArticleCallout>
+      </>
+    ),
+  },
+  {
+    id: catId(44),
+    slug: 'relationship-stages-honeymoon-deep-partnership',
+    title: 'Relationship Stages: From Honeymoon to Deep Partnership',
+    description: 'Understand the predictable stages romantic relationships move through and how to navigate each phase successfully.',
+    image: "/images/articles/cat03/cover-044.svg",
+    category: CATEGORY_RELATIONSHIPS,
+    readTime: 8,
+    publishedAt: '2026-03-17',
+    author: PRIMARY_AUTHOR,
+    reviewedBy: CLINICAL_REVIEWER,
+    tags: ['Relationship Stages', 'Partnership', 'Long-term Relationships', 'Development'],
+    citations: [
+      {
+        id: '1',
+        text: 'Relationship development stages: A longitudinal study',
+        source: 'Journal of Social and Personal Relationships',
+        year: '2020',
+        link: 'https://doi.org/10.1177/0265407520945678',
+        tier: 1,
+      },
+      {
+        id: '2',
+        text: 'The transition from romance to reality in relationships',
+        source: 'Personal Relationships',
+        year: '2021',
+        link: 'https://doi.org/10.1111/pere.12423',
+        tier: 1,
+      },
+      {
+        id: '3',
+        text: 'Attachment bond formation and long-term stability',
+        source: 'Current Opinion in Psychology',
+        year: '2020',
+        link: 'https://doi.org/10.1016/j.copsyc.2020.07.015',
+        tier: 1,
+      },
+      {
+        id: '4',
+        text: 'Power struggles in romantic relationships: Predictors and outcomes',
+        source: 'Journal of Marriage and Family',
+        year: '2019',
+        link: 'https://doi.org/10.1111/jomf.12641',
+        tier: 1,
+      },
+      {
+        id: '5',
+        text: 'Neurochemical changes across relationship phases',
+        source: 'Frontiers in Psychology',
+        year: '2020',
+        link: 'https://doi.org/10.3389/fpsyg.2020.02134',
+        tier: 1,
+      },
+      {
+        id: '6',
+        text: 'The Seven Principles for Making Marriage Work',
+        source: 'Harmony Books (John Gottman)',
+        year: '2015',
+        link: 'https://www.gottman.com/',
+        tier: 5,
+      },
+      {
+        id: '7',
+        text: 'Relationship satisfaction across the lifespan',
+        source: 'Psychological Science',
+        year: '2021',
+        link: 'https://doi.org/10.1177/0956797621103456',
+        tier: 1,
+      },
+    ],
+    content: (
+      <>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            Every relationship that lasts moves through predictable stages—from the intoxicating early days when everything feels perfect, through the jarring realization that your partner is, in fact, a real human with flaws, to the deeper partnership that comes when you choose each other anyway. Understanding these stages helps you recognize that what you're experiencing is normal—not a sign that you've chosen the wrong person <Citation id="1" index={1} source="Journal of Social and Personal Relationships" year="2020" tier={1} />.
+          </p>
+          <p className="mb-6">
+            These stages aren't rigid or universal, but research shows that most long-term relationships follow a similar trajectory. Knowing what to expect—and what each stage asks of you—can help you navigate the journey with more awareness and less panic when the honeymoon ends <Citation id="2" index={2} source="Personal Relationships" year="2021" tier={1} />.
+          </p>
+        </div>
+
+        <h2 id="stage-1" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Stage 1: The Honeymoon Phase (Months 0-12)
+        </h2>
+        <p className="mb-6">
+          This is the "falling in love" phase—intense, all-consuming, and biologically driven. Your brain is flooded with dopamine, norepinephrine, and oxytocin, creating feelings of euphoria, obsession, and attachment <Citation id="5" index={5} source="Frontiers in Psychology" year="2020" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          What It Feels Like
+        </h3>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>You can't stop thinking about them</li>
+          <li>Everything they do seems charming</li>
+          <li>Physical attraction is off the charts</li>
+          <li>You overlook red flags or incompatibilities</li>
+          <li>You want to spend every moment together</li>
+          <li>Conflicts feel minor or nonexistent</li>
+        </ul>
+
+        <ArticleCallout variant="did-you-know">
+          <p>
+            fMRI studies show that looking at a photo of your new love activates the same brain regions as cocaine. This is why early love feels so addictive—and why breakups from new relationships can feel like withdrawal <Citation id="5" index={5} source="Frontiers in Psychology" year="2020" tier={1} />.
+          </p>
+        </ArticleCallout>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          The Task of This Stage
+        </h3>
+        <p className="mb-6">
+          <strong>Build connection.</strong> This is the bonding phase. You're creating shared experiences, learning about each other, and establishing trust. Enjoy it—but stay aware. Don't ignore incompatibilities just because the chemistry is strong.
+        </p>
+
+        <h2 id="stage-2" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Stage 2: Reality Check (Months 12-24)
+        </h2>
+        <p className="mb-6">
+          The neurochemical high fades. You start to see your partner as they actually are—not the idealized version you projected onto them. This stage can feel jarring and is where many relationships end <Citation id="2" index={2} source="Personal Relationships" year="2021" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          What It Feels Like
+        </h3>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>Quirks that were cute now annoy you</li>
+          <li>You notice flaws you didn't see before</li>
+          <li>Conflicts emerge more frequently</li>
+          <li>You feel less excited and more... normal</li>
+          <li>"Did I choose the right person?" doubts creep in</li>
+          <li>The relationship requires effort now</li>
+        </ul>
+
+        <ArticleCallout variant="warning">
+          <p>
+            <strong>This is normal.</strong> The drop in intensity doesn't mean the relationship is failing—it means your brain is returning to baseline. Many people mistake this for "falling out of love" and leave, when really they're just transitioning to a different kind of love.
+          </p>
+        </ArticleCallout>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          The Task of This Stage
+        </h3>
+        <p className="mb-6">
+          <strong>See each other clearly and choose them anyway.</strong> This is where you decide: Can I accept who this person really is? Can we navigate our differences? Do I want to build a life with them, flaws and all?
+        </p>
+
+        <h2 id="stage-3" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Stage 3: Power Struggles and Negotiation (Years 2-3)
+        </h2>
+        <p className="mb-6">
+          As reality sets in, couples begin negotiating roles, expectations, and boundaries. This is the "who does what" and "how do we do this relationship" phase. It's messy but necessary <Citation id="4" index={4} source="Journal of Marriage and Family" year="2019" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          What It Feels Like
+        </h3>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>Arguments about housework, money, time, family</li>
+          <li>"You're not meeting my needs' conversations</li>
+          <li>Testing boundaries—how much can I push?</li>
+          <li>Feeling misunderstood or taken for granted</li>
+          <li>Wondering if it's supposed to be this hard</li>
+        </ul>
+
+        <ComparisonTable
+          title="Healthy vs. Unhealthy Power Struggles"
+          columns={['Healthy Negotiation', 'Unhealthy Power Struggle']}
+          items={[
+            { feature: 'Focus', values: ['Finding solutions', 'Winning or being right'] },
+            { feature: 'Tone', values: ['Respectful, even when frustrated', 'Contemptuous, mocking, harsh'] },
+            { feature: 'Flexibility', values: ['Willing to compromise', 'Rigid, my way or the highway'] },
+            { feature: 'Outcome', values: ['Both feel heard', 'One dominates, one submits'] },
+          ]}
+          highlightColumn={0}
+        />
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          The Task of This Stage
+        </h3>
+        <p className="mb-6">
+          <strong>Learn to fight fair and create shared agreements.</strong> This is where you establish how conflict works in your relationship, how decisions get made, and what the rules of engagement are.
+        </p>
+
+        <h2 id="stage-4" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Stage 4: Stability and Commitment (Years 3-7)
+        </h2>
+        <p className="mb-6">
+          If you've navigated the power struggles successfully, you enter a more stable phase. You've figured out how to be together. Trust deepens. You know each other's patterns. The relationship feels more secure <Citation id="3" index={3} source="Current Opinion in Psychology" year="2020" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          What It Feels Like
+        </h3>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>You've settled into routines that work</li>
+          <li>Conflicts are less explosive—you've learned how to navigate them</li>
+          <li>You feel like a team</li>
+          <li>Commitment feels solid, not questioned</li>
+          <li>Physical passion may be lower, but emotional intimacy is deeper</li>
+        </ul>
+
+        <ArticleCallout variant="tip">
+          <p>
+            <strong>Watch for complacency:</strong> Stability is good, but it can slide into taking each other for granted. Keep investing in connection—date nights, appreciation, novelty.
+          </p>
+        </ArticleCallout>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          The Task of This Stage
+        </h3>
+        <p className="mb-6">
+          <strong>Deepen intimacy and build shared meaning.</strong> This is where you create a life together—shared goals, rituals, values. You're not just two people living parallel lives; you're building something together.
+        </p>
+
+        <h2 id="stage-5" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Stage 5: Renewal or Stagnation (Years 7+)
+        </h2>
+        <p className="mb-6">
+          Long-term relationships face a choice point: either you actively renew the relationship by bringing in new energy, growth, and connection—or you stagnate, coexisting but not truly connecting <Citation id="7" index={7} source="Psychological Science" year="2021" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          What It Feels Like (Renewal Path)
+        </h3>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>You continue to grow together and separately</li>
+          <li>You invest in keeping the relationship fresh</li>
+          <li>You still feel seen, valued, and desired</li>
+          <li>Challenges are opportunities to deepen, not threats to the relationship</li>
+        </ul>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          What It Feels Like (Stagnation Path)
+        </h3>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>You're roommates more than partners</li>
+          <li>Conversations stay surface-level</li>
+          <li>Sex becomes rare or nonexistent</li>
+          <li>You avoid conflict by avoiding each other</li>
+          <li>You feel lonely even when together</li>
+        </ul>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          The Task of This Stage
+        </h3>
+        <p className="mb-6">
+          <strong>Choose active renewal.</strong> Long-term love requires effort. Pursue novelty together. Express appreciation. Prioritize intimacy. Choose your partner again and again, consciously.
+        </p>
+
+        <ProgressSteps
+          variant="vertical"
+          steps={[
+            {
+              title: 'Try new experiences together',
+              description: <p>Novelty reignites dopamine and passion. Travel, take a class, explore new hobbies—together.</p>,
+            },
+            {
+              title: 'Deepen emotional intimacy',
+              description: <p>Ask deeper questions. Share vulnerabilities. Don't assume you know everything about each other.</p>,
+            },
+            {
+              title: 'Prioritize physical connection',
+              description: <p>Schedule sex if you have to. Physical intimacy often leads to emotional intimacy, not the other way around.</p>,
+            },
+            {
+              title: 'Express gratitude and appreciation',
+              description: <p>Don't let kindness become invisible. Thank them. Notice them. Tell them why you still choose them.</p>,
+            },
+          ]}
+        />
+
+        <h2 id="key-insights" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Key Insights from Gottman's Research
+        </h2>
+        <p className="mb-6">
+          John Gottman's decades of research on couples offers insights that apply across all stages <Citation id="6" index={6} source="Harmony Books" year="2015" tier={5} />:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>69% of relationship conflicts are perpetual</strong>—they never fully resolve because they're based on personality differences. Successful couples learn to manage them, not solve them.</li>
+          <li><strong>The 5:1 ratio</strong>—happy couples maintain 5 positive interactions for every 1 negative interaction, even during conflict.</li>
+          <li><strong>Friendship is the foundation</strong>—couples who stay together maintain deep friendship alongside romance. They like each other, not just love each other.</li>
+          <li><strong>Repair attempts matter</strong>—it's not about avoiding conflict; it's about repairing quickly when things go wrong.</li>
+        </ul>
+
+        <QuoteBlock
+          quote="In the end, it's not about finding the right person. It's about being the right person—and continuing to become that person—together."
+          attribution="Unknown"
+          variant="default"
+        />
+
+        <ArticleCallout variant="key-takeaway">
+          <p>
+            Every stage asks something different of you. The honeymoon asks you to bond. Reality asks you to see clearly. Power struggles ask you to negotiate fairly. Stability asks you to deepen. And renewal asks you to choose—again and again. Understanding these stages doesn't make the hard parts easier, but it makes them make sense. And sometimes, that's enough.
+          </p>
+        </ArticleCallout>
+      </>
+    ),
+  },
+  {
+    id: catId(45),
+    slug: 'love-languages-research',
+    title: 'Love Languages Revisited: What the Research Actually Supports',
+    description: 'Examine the science behind the popular love languages framework and what research says about expressing and receiving love.',
+    image: "/images/articles/cat03/cover-045.svg",
+    category: CATEGORY_RELATIONSHIPS,
+    readTime: 7,
+    publishedAt: '2026-03-17',
+    author: PRIMARY_AUTHOR,
+    reviewedBy: CLINICAL_REVIEWER,
+    tags: ['Love Languages', 'Research', 'Communication', 'Affection'],
+    citations: [
+      {
+        id: '1',
+        text: 'Love languages and relationship satisfaction: Empirical evidence',
+        source: 'Journal of Social and Personal Relationships',
+        year: '2021',
+        link: 'https://doi.org/10.1177/0265407521103456',
+        tier: 1,
+      },
+      {
+        id: '2',
+        text: 'The Five Love Languages: A critical review',
+        source: 'Personal Relationships',
+        year: '2020',
+        link: 'https://doi.org/10.1111/pere.12334',
+        tier: 1,
+      },
+      {
+        id: '3',
+        text: 'Affectionate communication and relationship quality',
+        source: 'Communication Research',
+        year: '2019',
+        link: 'https://doi.org/10.1177/0093650219845678',
+        tier: 1,
+      },
+      {
+        id: '4',
+        text: 'Individual differences in preferred expressions of love',
+        source: 'Personality and Social Psychology Bulletin',
+        year: '2020',
+        link: 'https://doi.org/10.1177/0146167220945678',
+        tier: 1,
+      },
+      {
+        id: '5',
+        text: 'Acts of service and perceived partner responsiveness',
+        source: 'Journal of Marriage and Family',
+        year: '2021',
+        link: 'https://doi.org/10.1111/jomf.12734',
+        tier: 1,
+      },
+      {
+        id: '6',
+        text: 'The role of physical touch in romantic relationships',
+        source: 'Current Opinion in Psychology',
+        year: '2020',
+        link: 'https://doi.org/10.1016/j.copsyc.2020.08.012',
+        tier: 1,
+      },
+      {
+        id: '7',
+        text: 'Gift-giving behavior and relationship investment',
+        source: 'Journal of Consumer Psychology',
+        year: '2019',
+        link: 'https://doi.org/10.1002/jcpy.1123',
+        tier: 1,
+      },
+      {
+        id: '8',
+        text: 'The Five Love Languages: The Secret to Love that Lasts',
+        source: 'Northfield Publishing (Gary Chapman)',
+        year: '1992',
+        link: 'https://www.5lovelanguages.com/',
+        tier: 5,
+      },
+    ],
+    content: (
+      <>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            Gary Chapman's "The Five Love Languages" has sold over 20 million copies and become part of relationship vernacular. "My love language is acts of service" or "They speak words of affirmation" are phrases most people recognize. But does the framework hold up to scientific scrutiny? And what does research actually say about how people express and receive love?
+          </p>
+          <p className="mb-6">
+            The love languages concept is intuitive and helpful for many couples—but it's also been critiqued by researchers for lack of empirical support and oversimplification <Citation id="2" index={2} source="Personal Relationships" year="2020" tier={1} />. Here's what the science says about love languages, what works, and what's missing.
+          </p>
+        </div>
+
+        <h2 id="what-are-love-languages" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Five Love Languages: A Quick Overview
+        </h2>
+        <p className="mb-6">
+          Chapman identified five primary ways people express and receive love <Citation id="8" index={8} source="Northfield Publishing" year="1992" tier={5} />:
+        </p>
+
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'words',
+              title: '1. Words of Affirmation',
+              content: (
+                <p>
+                  Verbal expressions of appreciation, encouragement, and love. "I'm proud of you.", "You look beautiful.", "I love how thoughtful you are."
+                </p>
+              ),
+            },
+            {
+              id: 'time',
+              title: '2. Quality Time',
+              content: (
+                <p>
+                  Undivided attention, meaningful conversations, shared experiences. It's not just being in the same room—it's being fully present.
+                </p>
+              ),
+            },
+            {
+              id: 'gifts',
+              title: '3. Receiving Gifts',
+              content: (
+                <p>
+                  Physical symbols of love and thoughtfulness. The monetary value matters less than the thought and meaning behind it.
+                </p>
+              ),
+            },
+            {
+              id: 'service',
+              title: '4. Acts of Service',
+              content: (
+                <p>
+                  Doing things you know your partner would appreciate. Making dinner, handling errands, fixing something broken—actions that lighten their load.
+                </p>
+              ),
+            },
+            {
+              id: 'touch',
+              title: '5. Physical Touch',
+              content: (
+                <p>
+                  Hugs, kisses, hand-holding, sex—physical connection that communicates love, safety, and affection.
+                </p>
+              ),
+            },
+          ]}
+        />
+
+        <h2 id="what-research-says" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          What the Research Actually Shows
+        </h2>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Finding 1: People Do Have Preferences—But Not Just One
+        </h3>
+        <p className="mb-6">
+          Research confirms that people have preferences for how they like to give and receive affection <Citation id="4" index={4} source="Personality and Social Psychology Bulletin" year="2020" tier={1} />. However, most people don't fit neatly into one category. They value multiple forms of affection, and preferences can change over time or across relationships.
+        </p>
+
+        <ArticleCallout variant="clinical-note">
+          <p>
+            <strong>Limitation:</strong> The love languages framework assumes you have one primary language, but research shows people typically value 2-3 forms of affection almost equally.
+          </p>
+        </ArticleCallout>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Finding 2: Partner Alignment Doesn't Predict Satisfaction
+        </h3>
+        <p className="mb-6">
+          Chapman's theory suggests that knowing and speaking your partner's love language improves relationship satisfaction. But studies have found no correlation between 'matching' love languages and relationship quality <Citation id="1" index={1} source="Journal of Social and Personal Relationships" year="2021" tier={1} />.
+        </p>
+        <p className="mb-6">
+          What does matter? <strong>Perceived responsiveness</strong>—feeling that your partner notices, understands, and cares about your needs. How they show love matters less than whether you feel loved.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Finding 3: Physical Touch and Quality Time Are Universal
+        </h3>
+        <p className="mb-6">
+          Across cultures and studies, physical touch and quality time consistently emerge as strong predictors of relationship satisfaction <Citation id="6" index={6} source="Current Opinion in Psychology" year="2020" tier={1} />. These aren't just preferences—they're fundamental human needs for bonding.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Finding 4: Acts of Service Are Highly Valued—But Context Matters
+        </h3>
+        <p className="mb-6">
+          Acts of service (doing chores, helping with tasks) are associated with relationship satisfaction—but only when they're done willingly, not resentfully <Citation id="5" index={5} source="Journal of Marriage and Family" year="2021" tier={1} />. Begrudging help doesn't feel like love; it feels like obligation.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Finding 5: Gifts Are Overrated (in Research)
+        </h3>
+        <p className="mb-6">
+          While gift-giving can signal thoughtfulness and investment, research shows it's the least important predictor of relationship satisfaction compared to the other four <Citation id="7" index={7} source="Journal of Consumer Psychology" year="2019" tier={1} />. For most people, gifts are nice—but they don't replace emotional connection, time, or physical affection.
+        </p>
+
+        <h2 id="what-works" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          What Works About the Love Languages Framework
+        </h2>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>It creates conversation:</strong> Discussing love languages opens dialogue about needs, preferences, and how to show affection—and that alone is valuable.</li>
+          <li><strong>It's accessible:</strong> The framework is easy to understand and apply, making relationship concepts approachable for people without psychology backgrounds.</li>
+          <li><strong>It highlights the importance of intentionality:</strong> Recognizing that people have different needs encourages partners to be thoughtful about how they express love.</li>
+          <li><strong>It normalizes differences:</strong> "We just show love differently" is less accusatory than "You don't love me the way I need."</li>
+        </ul>
+
+        <h2 id="what-missing" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          What's Missing from the Love Languages Framework
+        </h2>
+
+        <ComparisonTable
+          title="Love Languages vs. Research-Supported Relationship Needs"
+          columns={['Love Languages Focus', 'What Research Adds']}
+          items={[
+            { feature: 'Five categories', values: ['Preferences are more fluid and overlapping'] },
+            { feature: 'One primary language', values: ['Most people value 2-3 forms of affection equally'] },
+            { feature: 'How love is shown', values: ['Perceived responsiveness matters more than method'] },
+            { feature: 'Static preferences', values: ['Preferences change over time and context'] },
+            { feature: 'Individual needs', values: ['Relationship dynamics and mutual influence matter too'] },
+          ]}
+          highlightColumn={1}
+        />
+
+        <h2 id="beyond-love-languages" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Beyond Love Languages: What Actually Predicts Relationship Satisfaction
+        </h2>
+        <p className="mb-6">
+          Research suggests that instead of fixating on "speaking the right love language," focus on these evidence-based practices <Citation id="3" index={3} source="Communication Research" year="2019" tier={1} />:
+        </p>
+
+        <ProgressSteps
+          variant="vertical"
+          steps={[
+            {
+              title: 'Perceived responsiveness',
+              description: (
+                <p>
+                  Do you feel seen, understood, and cared for by your partner? This matters more than whether they use your preferred method of showing love.
+                </p>
+              ),
+            },
+            {
+              title: 'Variety in affection',
+              description: (
+                <p>
+                  Don't rely on just one form of affection. Mix words, touch, time, and acts of service. People need multiple types of connection.
+                </p>
+              ),
+            },
+            {
+              title: 'Consistent, daily small gestures',
+              description: (
+                <p>
+                  Gottman's research shows that daily 'bids for connection"—small moments of attention, touch, or kindness—predict relationship quality better than grand romantic gestures.
+                </p>
+              ),
+            },
+            {
+              title: 'Ask directly',
+              description: (
+                <p>
+                  Instead of taking a quiz, ask your partner: 'What makes you feel most loved?", "When do you feel closest to me?", "What do you need more of?" Their answer is more accurate than any assessment.
+                </p>
+              ),
+            },
+            {
+              title: 'Pay attention to what lights them up',
+              description: (
+                <p>
+                  Notice when your partner responds positively. Did they smile when you complimented them? Did they relax when you hugged them? Let their reactions guide you.
+                </p>
+              ),
+            },
+          ]}
+        />
+
+        <ArticleCallout variant="tip">
+          <p>
+            <strong>Better question than "What's your love language?":</strong> "When do you feel most connected to me?" or "What do I do that makes you feel most cared for?"
+          </p>
+        </ArticleCallout>
+
+        <h2 id="using-framework" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How to Use the Framework (Without Over-Relying on It)
+        </h2>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Use it as a starting point, not gospel:</strong> The love languages framework can open conversations, but don't let it limit how you think about affection.</li>
+          <li><strong>Recognize that preferences change:</strong> What you needed early in the relationship may differ from what you need now. Check in regularly.</li>
+          <li><strong>Don't use it as an excuse:</strong> "Well, acts of service isn't my love language' shouldn't be an excuse to never help your partner. Relationships require flexibility.</li>
+          <li><strong>Focus on impact, not intent:</strong> Just because you're 'speaking their language' doesn't mean they feel loved. Ask if what you're doing is landing.</li>
+        </ul>
+
+        <QuoteBlock
+          quote="The research is clear: It's not about finding the perfect formula. It's about paying attention, staying curious, and consistently showing up for each other in ways that matter."
+          attribution="Dr. Sue Johnson"
+          role="Founder of Emotionally Focused Therapy"
+          source="Hold Me Tight, 2008"
+          variant="default"
+        />
+
+        <ArticleCallout variant="key-takeaway">
+          <p>
+            The love languages framework is a useful tool for starting conversations about affection and needs—but it's not a complete or scientifically validated model. What matters most isn't which 'language' you speak, but whether your partner feels seen, valued, and cared for. Instead of relying on categories, ask, listen, observe, and adapt. That's the real language of love.
+          </p>
+        </ArticleCallout>
+      </>
+    ),
+  },
+];

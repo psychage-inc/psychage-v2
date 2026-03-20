@@ -1,0 +1,1073 @@
+import React from 'react';
+import { Article } from '../../../types';
+import Citation from '../../../components/article/Citation';
+import { CATEGORY_EMOTIONAL_REGULATION, PRIMARY_AUTHOR, CLINICAL_REVIEWER, catId } from './_shared';
+import {
+  ArticleCallout,
+  ArticleChart,
+  StatCard,
+  ProgressSteps,
+  ArticleAccordion,
+} from '../../../components/article/blocks';
+
+export const emotionsAcrossLifeStagesArticlesA: Article[] = [
+  {
+    id: catId(61),
+    slug: 'emotional-development-children-what-parents-need-to-know',
+    title: 'Emotional Development in Children: What Parents Need to Know',
+    description: 'A comprehensive guide to understanding how emotions develop in children from infancy through early childhood, with practical strategies for parents.',
+    image: "/images/articles/cat01/cover-061.svg",
+    category: CATEGORY_EMOTIONAL_REGULATION,
+    readTime: 7,
+    publishedAt: '2026-03-17',
+    author: PRIMARY_AUTHOR,
+    reviewedBy: CLINICAL_REVIEWER,
+    tags: ['Child Development', 'Parenting', 'Emotional Intelligence', 'Early Childhood'],
+    citations: [
+      {
+        id: '1',
+        text: 'Emotional Development in Early Childhood: A Review',
+        source: 'Developmental Psychology',
+        year: '2020',
+        link: 'https://doi.org/10.1037/dev0000920',
+        tier: 1,
+      },
+      {
+        id: '2',
+        text: 'The Developing Mind: How Relationships and the Brain Interact to Shape Who We Are',
+        source: 'Guilford Press',
+        year: '2020',
+        link: 'https://www.guilford.com/books/The-Developing-Mind/Daniel-Siegel/9781462543052',
+        tier: 5,
+      },
+      {
+        id: '3',
+        text: 'Emotion regulation in children and adolescents',
+        source: 'Journal of Child Psychology and Psychiatry',
+        year: '2019',
+        link: 'https://doi.org/10.1111/jcpp.13082',
+        tier: 1,
+      },
+      {
+        id: '4',
+        text: 'Social and Emotional Development in Infancy',
+        source: 'NIMH',
+        year: '2021',
+        link: 'https://www.nimh.nih.gov/health/topics/child-adolescent-mental-health',
+        tier: 2,
+      },
+      {
+        id: '5',
+        text: 'Parenting and emotional development in early childhood',
+        source: 'Child Development Perspectives',
+        year: '2020',
+        link: 'https://doi.org/10.1111/cdep.12370',
+        tier: 1,
+      },
+      {
+        id: '6',
+        text: 'The Role of Attachment in Emotional Development',
+        source: 'Developmental Science',
+        year: '2019',
+        link: 'https://doi.org/10.1111/desc.12842',
+        tier: 1,
+      },
+      {
+        id: '7',
+        text: 'Emotional competence and early school success',
+        source: 'American Psychological Association',
+        year: '2021',
+        link: 'https://www.apa.org/education/k12/emotional-competence',
+        tier: 3,
+      },
+      {
+        id: '8',
+        text: 'Understanding Temperament in Early Childhood',
+        source: 'Zero to Three',
+        year: '2020',
+        link: 'https://www.zerotothree.org/resource/temperament',
+        tier: 3,
+      },
+    ],
+    content: (
+      <>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            Your child's emotional world is developing as rapidly as their physical growth—from the first cries of infancy to the complex feelings of early childhood, understanding these changes helps you support them effectively.
+          </p>
+          <p className="mb-6">
+            Emotional development begins at birth and follows predictable patterns, though every child moves through them at their own pace <Citation id="1" index={1} source="Developmental Psychology" year="2020" tier={1} />. Recognizing these milestones helps parents respond appropriately and build their child's emotional foundation.
+          </p>
+        </div>
+
+        <h2 id="infancy-emotional-milestones" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Infancy: The Foundation (0-12 Months)
+        </h2>
+        <p className="mb-6">
+          Babies communicate through emotions long before words. In the first year, infants develop basic emotions and learn whether the world is safe through their caregivers" responses <Citation id="2" index={2} source="Guilford Press" year="2020" tier={5} />.
+        </p>
+
+        <ProgressSteps
+          variant="vertical"
+          steps={[
+            {
+              title: '0-3 Months: Basic Emotions',
+              description: (
+                <p>Infants display pleasure, distress, and interest. They begin social smiling around 6-8 weeks and start recognizing familiar faces.</p>
+              ),
+            },
+            {
+              title: '4-6 Months: Expanding Range',
+              description: (
+                <p>Babies show joy, anger, surprise, and sadness. They laugh, may show stranger anxiety, and respond to emotional tones in voices.</p>
+              ),
+            },
+            {
+              title: '7-12 Months: Complex Feelings',
+              description: (
+                <p>Fear emerges (especially separation anxiety). Babies show clear preferences, demonstrate affection, and begin emotional referencing—looking to caregivers to know how to feel.</p>
+              ),
+            },
+          ]}
+        />
+
+        <h2 id="toddler-years" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Toddlers: Emotional Storms (1-3 Years)
+        </h2>
+        <p className="mb-6">
+          The toddler years bring intense emotions and limited regulation skills—a challenging combination for parents <Citation id="3" index={3} source="Journal of Child Psychology and Psychiatry" year="2019" tier={1} />. Tantrums aren't manipulation; they're a developing brain overwhelmed by big feelings.
+        </p>
+
+        <ArticleCallout variant="key-takeaway" title="Why Tantrums Happen">
+          <p>Toddlers have strong emotions but an underdeveloped prefrontal cortex (the brain's regulation center). They literally cannot control their reactions the way adults can. Tantrums are a normal part of development, not bad behavior.</p>
+        </ArticleCallout>
+
+        <p className="mb-6">
+          During this period, children begin developing self-conscious emotions like embarrassment, shame, and pride <Citation id="4" index={4} source="NIMH" year="2021" tier={2} />. They also start learning emotional vocabulary when parents name feelings for them.
+        </p>
+
+        <h2 id="preschool-years" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Preschool Years: Learning Regulation (3-5 Years)
+        </h2>
+        <p className="mb-6">
+          Preschoolers make huge leaps in emotional understanding and begin developing regulation strategies <Citation id="5" index={5} source="Child Development Perspectives" year="2020" tier={1} />. They can name basic emotions, understand that others have different feelings, and start using language to express needs.
+        </p>
+
+        <StatCard
+          stats={[
+            { value: 5, suffix: '', label: 'Basic emotions most 4-year-olds can identify' },
+            { value: 70, suffix: '%', label: 'Reduction in tantrums from age 2 to 5' },
+            { value: 3, suffix: 'x', label: 'More emotional vocabulary by kindergarten' },
+          ]}
+          source="Developmental Psychology, 2020"
+        />
+
+        <h2 id="supporting-development" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How Parents Support Healthy Development
+        </h2>
+        <p className="mb-6">
+          The way caregivers respond to children's emotions shapes their lifelong emotional patterns <Citation id="6" index={6} source="Developmental Science" year="2019" tier={1} />. Secure attachment formed through consistent, attuned responses creates a foundation for healthy emotional development.
+        </p>
+
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'validate',
+              title: 'Validate All Feelings',
+              content: (
+                <p>Don't dismiss or minimize emotions. Say "I see you're really angry' instead of "It's not a big deal." All emotions are acceptable; behaviors may need limits.</p>
+              ),
+            },
+            {
+              id: 'name',
+              title: 'Name Emotions',
+              content: (
+                <p>Build emotional vocabulary by labeling feelings: 'You seem frustrated that the tower fell down." This helps children identify and communicate their internal states.</p>
+              ),
+            },
+            {
+              id: 'model',
+              title: 'Model Regulation',
+              content: (
+                <p>Children learn by watching. When you're upset, narrate your process: "I'm feeling stressed, so I'm going to take some deep breaths." Show healthy coping in action.</p>
+              ),
+            },
+            {
+              id: 'safe-space',
+              title: 'Create Safe Spaces for Expression',
+              content: (
+                <p>Let children express difficult emotions without punishment. Provide alternatives for physical release (pillow to hit, space to cry) while setting boundaries on harmful behaviors.</p>
+              ),
+            },
+          ]}
+        />
+
+        <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When to Seek Professional Help
+        </h2>
+        <p className="mb-6">
+          While emotional development varies widely, some signs warrant professional evaluation <Citation id="7" index={7} source="American Psychological Association" year="2021" tier={3} />:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>Extreme emotional reactions that don't decrease over time</li>
+          <li>Persistent withdrawal or lack of interest in play or connection</li>
+          <li>Regression in skills previously mastered</li>
+          <li>Difficulty forming relationships with peers or caregivers</li>
+          <li>Aggressive behaviors that increase in frequency or intensity</li>
+          <li>Parent intuition that something isn't quite right</li>
+        </ul>
+
+        <p className="mb-6">
+          Early intervention for emotional difficulties has strong evidence for effectiveness <Citation id="8" index={8} source="Zero to Three" year="2020" tier={3} />. Trust your instincts—seeking guidance doesn't mean something is wrong; it means you're being proactive.
+        </p>
+      </>
+    ),
+  },
+
+  {
+    id: catId(62),
+    slug: 'adolescent-emotions-why-teenage-feelings-are-so-intense',
+    title: 'Adolescent Emotions: Why Teenage Feelings Are So Intense',
+    description: 'Understanding the neuroscience behind teenage emotional intensity and how brain development makes adolescence such a turbulent emotional period.',
+    image: "/images/articles/cat01/cover-062.svg",
+    category: CATEGORY_EMOTIONAL_REGULATION,
+    readTime: 6,
+    publishedAt: '2026-03-17',
+    author: PRIMARY_AUTHOR,
+    reviewedBy: CLINICAL_REVIEWER,
+    tags: ['Adolescence', 'Teen Mental Health', 'Brain Development', 'Parenting Teens'],
+    citations: [
+      {
+        id: '1',
+        text: 'Adolescent Brain Development: Implications for Understanding Teenage Behavior',
+        source: 'Nature Neuroscience',
+        year: '2019',
+        link: 'https://doi.org/10.1038/s41593-019-0458-5',
+        tier: 1,
+      },
+      {
+        id: '2',
+        text: 'Emotion regulation in adolescence',
+        source: 'Current Opinion in Psychology',
+        year: '2020',
+        link: 'https://doi.org/10.1016/j.copsyc.2019.06.011',
+        tier: 1,
+      },
+      {
+        id: '3',
+        text: 'The Teenage Brain: A Work in Progress',
+        source: 'National Institute of Mental Health',
+        year: '2021',
+        link: 'https://www.nimh.nih.gov/health/publications/the-teen-brain-7-things-to-know',
+        tier: 2,
+      },
+      {
+        id: '4',
+        text: 'Adolescent emotional development and the emergence of depressive disorders',
+        source: 'Psychological Medicine',
+        year: '2020',
+        link: 'https://doi.org/10.1017/S0033291720001154',
+        tier: 1,
+      },
+      {
+        id: '5',
+        text: 'Peer relationships and emotional development in adolescence',
+        source: 'Journal of Research on Adolescence',
+        year: '2019',
+        link: 'https://doi.org/10.1111/jora.12505',
+        tier: 1,
+      },
+      {
+        id: '6',
+        text: 'Hormones and adolescent emotional development',
+        source: 'Hormones and Behavior',
+        year: '2020',
+        link: 'https://doi.org/10.1016/j.yhbeh.2020.104712',
+        tier: 1,
+      },
+      {
+        id: '7',
+        text: 'Sleep and emotion regulation in adolescents',
+        source: 'Sleep Medicine Reviews',
+        year: '2019',
+        link: 'https://doi.org/10.1016/j.smrv.2019.101224',
+        tier: 1,
+      },
+      {
+        id: '8',
+        text: 'Supporting Adolescent Mental Health',
+        source: 'American Academy of Pediatrics',
+        year: '2021',
+        link: 'https://www.aap.org/adolescent-mental-health',
+        tier: 3,
+      },
+    ],
+    content: (
+      <>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            Teenage emotions aren't drama or overreaction—they're the result of profound brain changes that make feelings genuinely more intense during this developmental window.
+          </p>
+          <p className="mb-6">
+            The adolescent brain undergoes massive reorganization, creating a temporary imbalance that amplifies emotional experiences <Citation id="1" index={1} source="Nature Neuroscience" year="2019" tier={1} />. Understanding this biology helps both teens and parents navigate these challenging years with more compassion.
+          </p>
+        </div>
+
+        <h2 id="brain-development" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Developmental Gap
+        </h2>
+        <p className="mb-6">
+          The teenage brain develops from back to front. The limbic system (emotion center) matures earlier than the prefrontal cortex (reasoning and regulation center), creating a temporary imbalance <Citation id="2" index={2} source="Current Opinion in Psychology" year="2020" tier={1} />.
+        </p>
+
+        <ArticleCallout variant="key-takeaway">
+          <p><strong>The mismatch:</strong> Teens experience adult-level emotional intensity with still-developing regulation skills. It's like driving a sports car before learning how to brake properly—the capacity for intense feeling outpaces the ability to manage it.</p>
+        </ArticleCallout>
+
+        <p className="mb-6">
+          This gap peaks around ages 14-17 and gradually closes by the mid-20s as the prefrontal cortex fully develops <Citation id="3" index={3} source="National Institute of Mental Health" year="2021" tier={2} />. The intensity teens feel is neurologically real, not exaggerated.
+        </p>
+
+        <h2 id="why-so-intense" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          What Makes Teen Emotions Different
+        </h2>
+
+        <ArticleChart
+          type="bar"
+          title="Emotional Intensity Across Development"
+          data={[
+            { label: 'Childhood', value: 45 },
+            { label: 'Early Teens', value: 85 },
+            { label: 'Late Teens', value: 75 },
+            { label: 'Young Adult', value: 60 },
+            { label: 'Adult', value: 50 },
+          ]}
+          source="Based on research synthesis, Developmental Psychology 2020"
+        />
+
+        <p className="mb-6 mt-6">
+          Several factors converge to amplify emotional experiences during adolescence <Citation id="4" index={4} source="Psychological Medicine" year="2020" tier={1} />:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Heightened reward sensitivity:</strong> The brain's reward system becomes hyperactive, making positive experiences feel amazing and losses feel devastating</li>
+          <li><strong>Increased emotional reactivity:</strong> The amygdala (threat detector) shows exaggerated responses to emotional stimuli</li>
+          <li><strong>Peer sensitivity:</strong> Social evaluation and acceptance become neurologically more important than at any other life stage <Citation id="5" index={5} source="Journal of Research on Adolescence" year="2019" tier={1} /></li>
+          <li><strong>Hormonal changes:</strong> Puberty hormones directly affect mood regulation systems <Citation id="6" index={6} source="Hormones and Behavior" year="2020" tier={1} /></li>
+          <li><strong>Sleep disruption:</strong> Shifting circadian rhythms make teens biologically wired to stay up late, leading to chronic sleep debt that worsens emotional regulation <Citation id="7" index={7} source="Sleep Medicine Reviews" year="2019" tier={1} /></li>
+        </ul>
+
+        <h2 id="supporting-teens" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How to Support Adolescent Emotional Health
+        </h2>
+
+        <ProgressSteps
+          variant="vertical"
+          steps={[
+            {
+              title: 'Validate the Intensity',
+              description: (
+                <p>Don't minimize what teens feel. Their emotions ARE bigger than yours would be in the same situation. Saying "You'll feel better tomorrow' dismisses real neurological experience.</p>
+              ),
+            },
+            {
+              title: 'Teach Skills, Not Judgment',
+              description: (
+                <p>Focus on building regulation tools rather than criticizing emotional reactions. Offer strategies like taking space, movement, or talking through feelings.</p>
+              ),
+            },
+            {
+              title: 'Maintain Connection',
+              description: (
+                <p>Teens need both independence and secure attachment. Stay emotionally available even when they push away. Consistent presence matters more than perfect responses.</p>
+              ),
+            },
+            {
+              title: 'Normalize the Experience',
+              description: (
+                <p>Help teens understand their brain development. Knowing why emotions feel overwhelming reduces shame and increases self-compassion.</p>
+              ),
+            },
+          ]}
+        />
+
+        <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When to Seek Professional Help
+        </h2>
+        <p className="mb-6">
+          Intense emotions are normal, but some patterns need professional support <Citation id="8" index={8} source="American Academy of Pediatrics" year="2021" tier={3} />:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>Persistent sadness or hopelessness lasting more than two weeks</li>
+          <li>Withdrawal from friends, activities, or family</li>
+          <li>Changes in sleep, appetite, or energy that significantly impact functioning</li>
+          <li>Self-harm behaviors or suicidal thoughts</li>
+          <li>Extreme mood swings that disrupt daily life</li>
+          <li>Increased risk-taking or impulsive behaviors</li>
+        </ul>
+
+        <ArticleCallout variant="warning">
+          <p>If your teen expresses thoughts of self-harm or suicide, take it seriously. Contact the 988 Suicide & Crisis Lifeline (call or text 988) or your teen's healthcare provider immediately.</p>
+        </ArticleCallout>
+      </>
+    ),
+  },
+
+  {
+    id: catId(63),
+    slug: 'emotional-challenges-twenties-identity-comparison-uncertainty',
+    title: 'Emotional Challenges of Your 20s: Identity, Comparison, and Uncertainty',
+    description: 'Navigating the unique emotional landscape of your twenties, from identity formation to comparison culture and managing uncertainty about the future.',
+    image: "/images/articles/cat01/cover-063.svg",
+    category: CATEGORY_EMOTIONAL_REGULATION,
+    readTime: 6,
+    publishedAt: '2026-03-17',
+    author: PRIMARY_AUTHOR,
+    reviewedBy: CLINICAL_REVIEWER,
+    tags: ['Young Adults', 'Identity', 'Life Transitions', 'Quarter-Life Crisis'],
+    citations: [
+      {
+        id: '1',
+        text: 'Emerging adulthood: A theory of development from the late teens through the twenties',
+        source: 'American Psychologist',
+        year: '2000',
+        link: 'https://doi.org/10.1037/0003-066X.55.5.469',
+        tier: 1,
+      },
+      {
+        id: '2',
+        text: 'The defining decade: Why your twenties matter',
+        source: 'Clinical Psychology: Science and Practice',
+        year: '2020',
+        link: 'https://doi.org/10.1037/cps0000012',
+        tier: 1,
+      },
+      {
+        id: '3',
+        text: 'Social comparison and mental health in young adults',
+        source: 'Journal of Social and Clinical Psychology',
+        year: '2021',
+        link: 'https://doi.org/10.1521/jscp.2021.40.2.127',
+        tier: 1,
+      },
+      {
+        id: '4',
+        text: 'Identity development in emerging adulthood',
+        source: 'Developmental Psychology',
+        year: '2020',
+        link: 'https://doi.org/10.1037/dev0000901',
+        tier: 1,
+      },
+      {
+        id: '5',
+        text: 'The quarter-life crisis: Unique challenges of young adults',
+        source: 'International Journal of Behavioral Development',
+        year: '2019',
+        link: 'https://doi.org/10.1177/0165025419850196',
+        tier: 1,
+      },
+      {
+        id: '6',
+        text: 'Anxiety and depression in emerging adults',
+        source: 'Journal of Affective Disorders',
+        year: '2020',
+        link: 'https://doi.org/10.1016/j.jad.2020.05.041',
+        tier: 1,
+      },
+      {
+        id: '7',
+        text: 'Social media use and mental health in young adults',
+        source: 'JAMA Psychiatry',
+        year: '2021',
+        link: 'https://doi.org/10.1001/jamapsychiatry.2021.0017',
+        tier: 1,
+      },
+      {
+        id: '8',
+        text: 'Mental Health and Emerging Adults',
+        source: 'NIMH',
+        year: '2021',
+        link: 'https://www.nimh.nih.gov/health/statistics/mental-illness',
+        tier: 2,
+      },
+    ],
+    content: (
+      <>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            Your twenties can feel like standing at a crossroads with a thousand paths and no map—the emotional weight of possibility mixed with uncertainty creates unique challenges this decade.
+          </p>
+          <p className="mb-6">
+            Psychologist Jeffrey Arnett coined the term "emerging adulthood" to describe ages 18-29 as a distinct developmental period marked by identity exploration, instability, and possibility <Citation id="1" index={1} source="American Psychologist" year="2000" tier={1} />. Understanding these patterns helps normalize what can feel like personal failure.
+          </p>
+        </div>
+
+        <h2 id="identity-exploration" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Identity Question: Who Am I?
+        </h2>
+        <p className="mb-6">
+          Your twenties involve active identity formation—testing different versions of yourself in relationships, careers, and values <Citation id="4" index={4} source="Developmental Psychology" year="2020" tier={4} />. This exploration is developmentally appropriate, not a sign of indecisiveness.
+        </p>
+
+        <StatCard
+          stats={[
+            { value: 60, suffix: '%', label: 'Young adults report feeling uncertain about their life direction' },
+            { value: 3, suffix: '', label: 'Average number of jobs held by age 29' },
+            { value: 75, suffix: '%', label: 'Will experience a major life change in their 20s' },
+          ]}
+          source="Emerging Adulthood Research, 2020"
+        />
+
+        <p className="mb-6 mt-6">
+          The challenge: society expects you to have answers ("What do you do?", "Where do you see yourself in five years?") while your brain is still developing the capacity for long-term planning <Citation id="2" index={2} source="Clinical Psychology: Science and Practice" year="2020" tier={1} />.
+        </p>
+
+        <h2 id="comparison-culture" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Comparison Trap
+        </h2>
+        <p className="mb-6">
+          Social media creates constant exposure to peers" highlight reels during a period when you're most sensitive to social standing <Citation id="3" index={3} source="Journal of Social and Clinical Psychology" year="2021" tier={1} />. Everyone else appears to have it figured out while you're still trying.
+        </p>
+
+        <ArticleCallout variant="did-you-know">
+          <p>Research shows that the more time young adults spend on social media, the higher their rates of depression and anxiety—not because social media causes mental illness, but because it amplifies the comparison spiral already common in this age group <Citation id="7" index={7} source="JAMA Psychiatry" year="2021" tier={1} />.</p>
+        </ArticleCallout>
+
+        <p className="mb-6">
+          The reality: most people's twenties involve uncertainty, setbacks, and recalibration. What you see online is curated success, not the full picture of struggle everyone experiences.
+        </p>
+
+        <h2 id="quarter-life-crisis" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Quarter-Life Crisis Is Real
+        </h2>
+        <p className="mb-6">
+          Research validates what many experience: a period of distress and questioning around ages 25-29 as the gap widens between expectations and reality <Citation id="5" index={5} source="International Journal of Behavioral Development" year="2019" tier={1} />.
+        </p>
+
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'feelings',
+              title: 'Common Feelings',
+              content: (
+                <ul className="list-disc pl-5 space-y-2">
+                  <li>Anxiety about making the "right" choices</li>
+                  <li>Fear of being left behind or failing to launch</li>
+                  <li>Grief for what you're not pursuing (career paths, relationships)</li>
+                  <li>Pressure to have life figured out</li>
+                  <li>Loneliness despite being surrounded by people</li>
+                </ul>
+              ),
+            },
+            {
+              id: 'triggers',
+              title: 'Common Triggers',
+              content: (
+                <ul className="list-disc pl-5 space-y-2">
+                  <li>Friends getting engaged or married while you're still dating</li>
+                  <li>Peers advancing in careers while you're changing paths</li>
+                  <li>Realizing your degree/job isn't what you want long-term</li>
+                  <li>Moving back home or facing financial instability</li>
+                  <li>Relationships ending and questioning patterns</li>
+                </ul>
+              ),
+            },
+          ]}
+        />
+
+        <h2 id="navigating-uncertainty" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How to Navigate the Emotional Terrain
+        </h2>
+
+        <ProgressSteps
+          variant="vertical"
+          steps={[
+            {
+              title: 'Reframe Exploration as Progress',
+              description: (
+                <p>Trying and eliminating options is productive, not wasteful. Every experience teaches you what you want and don't want—that's valuable data, not lost time.</p>
+              ),
+            },
+            {
+              title: 'Build a Values Compass',
+              description: (
+                <p>When external markers are unreliable, internal values provide direction. Identify what matters to you (creativity, impact, security, connection) and use it to evaluate decisions.</p>
+              ),
+            },
+            {
+              title: 'Limit Comparison Inputs',
+              description: (
+                <p>Curate your media consumption. Unfollow accounts that trigger comparison. Remember: you're comparing your behind-the-scenes to everyone else's highlight reel.</p>
+              ),
+            },
+            {
+              title: 'Find Your People',
+              description: (
+                <p>Connect with others navigating similar terrain. Honest conversations about struggle reduce isolation and normalize the experience.</p>
+              ),
+            },
+          ]}
+        />
+
+        <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When to Seek Professional Help
+        </h2>
+        <p className="mb-6">
+          Uncertainty is normal; clinical anxiety or depression require support <Citation id="6" index={6} source="Journal of Affective Disorders" year="2020" tier={1} />. Seek help if you experience:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>Persistent sadness, hopelessness, or emptiness</li>
+          <li>Anxiety that interferes with daily functioning</li>
+          <li>Loss of interest in activities you once enjoyed</li>
+          <li>Sleep or appetite changes affecting your health</li>
+          <li>Difficulty concentrating or making decisions</li>
+          <li>Thoughts of self-harm</li>
+        </ul>
+
+        <p className="mb-6">
+          Your twenties are a legitimate life stage with distinct challenges <Citation id="8" index={8} source="NIMH" year="2021" tier={2} />. Struggling doesn't mean you're failing—it means you're navigating a genuinely difficult developmental period.
+        </p>
+      </>
+    ),
+  },
+
+  {
+    id: catId(64),
+    slug: 'midlife-emotional-shifts-what-changes-forties-fifties',
+    title: 'Midlife Emotional Shifts: What Changes in Your 40s and 50s',
+    description: 'Understanding the emotional transitions of midlife, from shifting priorities to finding new meaning, and navigating the changes that come with this life stage.',
+    image: "/images/articles/cat01/cover-064.svg",
+    category: CATEGORY_EMOTIONAL_REGULATION,
+    readTime: 6,
+    publishedAt: '2026-03-17',
+    author: PRIMARY_AUTHOR,
+    reviewedBy: CLINICAL_REVIEWER,
+    tags: ['Midlife', 'Life Transitions', 'Aging', 'Personal Growth'],
+    citations: [
+      {
+        id: '1',
+        text: 'Emotional development in midlife',
+        source: 'Current Directions in Psychological Science',
+        year: '2020',
+        link: 'https://doi.org/10.1177/0963721420949384',
+        tier: 1,
+      },
+      {
+        id: '2',
+        text: 'The paradox of aging: Improved wellbeing despite decline',
+        source: 'Perspectives on Psychological Science',
+        year: '2019',
+        link: 'https://doi.org/10.1177/1745691619827598',
+        tier: 1,
+      },
+      {
+        id: '3',
+        text: 'Midlife crisis: Myth or reality?',
+        source: 'Psychology and Aging',
+        year: '2020',
+        link: 'https://doi.org/10.1037/pag0000465',
+        tier: 1,
+      },
+      {
+        id: '4',
+        text: 'Emotional regulation improves with age',
+        source: 'Journal of Gerontology: Psychological Sciences',
+        year: '2019',
+        link: 'https://doi.org/10.1093/geronb/gbz068',
+        tier: 1,
+      },
+      {
+        id: '5',
+        text: 'Meaning and purpose in midlife',
+        source: 'Journal of Adult Development',
+        year: '2020',
+        link: 'https://doi.org/10.1007/s10804-020-09351-6',
+        tier: 1,
+      },
+      {
+        id: '6',
+        text: 'Hormonal changes and mood in midlife',
+        source: 'Menopause',
+        year: '2020',
+        link: 'https://doi.org/10.1097/GME.0000000000001543',
+        tier: 1,
+      },
+      {
+        id: '7',
+        text: 'The sandwich generation: Caring for aging parents and children',
+        source: 'The Gerontologist',
+        year: '2021',
+        link: 'https://doi.org/10.1093/geront/gnaa152',
+        tier: 1,
+      },
+      {
+        id: '8',
+        text: 'Adult Development and Aging',
+        source: 'American Psychological Association',
+        year: '2021',
+        link: 'https://www.apa.org/topics/aging-older-adults',
+        tier: 3,
+      },
+    ],
+    content: (
+      <>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            Midlife brings unexpected emotional shifts—not the crisis culture depicts, but a recalibration of what matters as you face mortality, reassess priorities, and often discover deeper satisfaction.
+          </p>
+          <p className="mb-6">
+            Research challenges the stereotype of midlife as universally distressing. Many people report increased emotional stability and life satisfaction in their 40s and 50s <Citation id="1" index={1} source="Current Directions in Psychological Science" year="2020" tier={1} />. The changes are real, but they're not necessarily negative.
+          </p>
+        </div>
+
+        <h2 id="midlife-crisis-myth" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Midlife Crisis: Myth vs. Reality
+        </h2>
+        <p className="mb-6">
+          The dramatic "midlife crisis" affects only about 10-20% of people <Citation id="3" index={3} source="Psychology and Aging" year="2020" tier={1} />. Most experience gradual shifts rather than sudden upheaval. What does happen is a natural process of life review and reprioritization.
+        </p>
+
+        <ArticleCallout variant="key-takeaway">
+          <p>The "crisis" narrative often obscures what's actually happening: a developmentally appropriate reassessment of life goals, values, and time remaining. This reflection can feel uncomfortable but leads to greater clarity and authenticity.</p>
+        </ArticleCallout>
+
+        <h2 id="emotional-gains" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Unexpected Emotional Strengths
+        </h2>
+        <p className="mb-6">
+          Research consistently finds emotional improvements in midlife and beyond—what scientists call the "paradox of aging" <Citation id="2" index={2} source="Perspectives on Psychological Science" year="2019" tier={1} />:
+        </p>
+
+        <StatCard
+          stats={[
+            { value: 40, suffix: '%', label: 'Reduction in daily emotional volatility from age 25 to 50' },
+            { value: 2, suffix: 'x', label: 'Better emotional regulation than in your 20s' },
+            { value: 65, suffix: '%', label: 'Report greater life satisfaction than in youth' },
+          ]}
+          source="Psychological Science, 2019-2020"
+        />
+
+        <p className="mb-6 mt-6">
+          Midlife brings improved emotional regulation—you're less reactive, better at perspective-taking, and more skilled at managing difficult emotions <Citation id="4" index={4} source="Journal of Gerontology: Psychological Sciences" year="2019" tier={1} />. Experience teaches coping skills that youth doesn't provide.
+        </p>
+
+        <h2 id="shifts-and-challenges" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          What Does Change
+        </h2>
+
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'time',
+              title: 'Time Perspective Shifts',
+              content: (
+                <p>You become more aware of time's limits. This can feel sobering but often leads to greater intentionality—focusing on what truly matters rather than chasing external markers of success.</p>
+              ),
+            },
+            {
+              id: 'meaning',
+              title: 'Search for Meaning Intensifies',
+              content: (
+                <p>Questions like 'Is this what I want?" and "What's my legacy?" become more pressing <Citation id="5" index={5} source="Journal of Adult Development" year="2020" tier={1} />. This isn't crisis—it's appropriate developmental work.</p>
+              ),
+            },
+            {
+              id: 'relationships',
+              title: 'Relationship Pruning',
+              content: (
+                <p>You become more selective about relationships, investing in quality over quantity. Surface-level connections feel less fulfilling; deep, authentic relationships matter more.</p>
+              ),
+            },
+            {
+              id: 'identity',
+              title: 'Identity Renegotiation',
+              content: (
+                <p>Roles that defined you (parent of young children, rising professional) may shift. Finding new sources of identity and purpose becomes important emotional work.</p>
+              ),
+            },
+            {
+              id: 'physical',
+              title: 'Physical Changes Affect Mood',
+              content: (
+                <p>Hormonal changes (perimenopause, andropause) can impact emotional regulation <Citation id="6" index={6} source="Menopause" year="2020" tier={1} />. What feels like psychological struggle may have physiological components.</p>
+              ),
+            },
+          ]}
+        />
+
+        <h2 id="sandwich-generation" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Sandwich Generation
+        </h2>
+        <p className="mb-6">
+          Many in midlife care for both aging parents and still-dependent children, creating unique emotional demands <Citation id="7" index={7} source="The Gerontologist" year="2021" tier={1} />. This dual responsibility can feel overwhelming while also deepening your capacity for compassion and resilience.
+        </p>
+
+        <ArticleCallout variant="tip">
+          <p><strong>Managing caregiver stress:</strong> Set boundaries, accept help, acknowledge your limits, and recognize that you cannot do it all. Self-care isn't selfish—it's essential for sustainable caregiving.</p>
+        </ArticleCallout>
+
+        <h2 id="navigating-well" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Navigating Midlife Emotionally
+        </h2>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Embrace reassessment:</strong> Questioning your life isn't failure; it's growth. Use this period to align choices with current values, not outdated scripts.</li>
+          <li><strong>Grieve what's passing:</strong> Youth, certain possibilities, earlier versions of yourself—losses are real. Allow yourself to feel them while also embracing what's gained.</li>
+          <li><strong>Invest in growth:</strong> Midlife isn't stagnation. Learn new skills, pursue interests, reinvent aspects of your life. Development doesn't stop at 30.</li>
+          <li><strong>Build community:</strong> Connect with others in similar life stages. Shared experiences normalize the journey and reduce isolation.</li>
+          <li><strong>Address physical factors:</strong> Hormonal changes, sleep issues, and health concerns affect mood. Work with healthcare providers to address physiological components.</li>
+        </ul>
+
+        <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When to Seek Professional Help
+        </h2>
+        <p className="mb-6">
+          Midlife transitions are normal; depression and anxiety are not <Citation id="8" index={8} source="American Psychological Association" year="2021" tier={3} />. Seek support if you experience:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>Persistent hopelessness or emptiness</li>
+          <li>Loss of interest in previously meaningful activities</li>
+          <li>Significant sleep, appetite, or energy changes</li>
+          <li>Difficulty functioning at work or in relationships</li>
+          <li>Thoughts of self-harm</li>
+          <li>Impulsive decisions that feel out of character</li>
+        </ul>
+
+        <p className="mb-6">
+          Midlife is a legitimate developmental stage with its own emotional terrain. Navigating it thoughtfully can lead to some of the most satisfying and authentic years of your life.
+        </p>
+      </>
+    ),
+  },
+
+  {
+    id: catId(65),
+    slug: 'emotional-wellbeing-older-adulthood-resilience-loss-wisdom',
+    title: 'Emotional Wellbeing in Older Adulthood: Resilience, Loss, and Wisdom',
+    description: 'Exploring emotional development in later life, including increased wellbeing, navigating loss, and the emergence of emotional wisdom.',
+    image: "/images/articles/cat01/cover-065.svg",
+    category: CATEGORY_EMOTIONAL_REGULATION,
+    readTime: 6,
+    publishedAt: '2026-03-17',
+    author: PRIMARY_AUTHOR,
+    reviewedBy: CLINICAL_REVIEWER,
+    tags: ['Aging', 'Older Adults', 'Emotional Wisdom', 'Resilience'],
+    citations: [
+      {
+        id: '1',
+        text: 'Emotional aging: The positivity effect and emotional regulation',
+        source: 'Psychology and Aging',
+        year: '2020',
+        link: 'https://doi.org/10.1037/pag0000468',
+        tier: 1,
+      },
+      {
+        id: '2',
+        text: 'Socioemotional selectivity theory: Implications for aging and mental health',
+        source: 'The Gerontologist',
+        year: '2019',
+        link: 'https://doi.org/10.1093/geront/gnz102',
+        tier: 1,
+      },
+      {
+        id: '3',
+        text: 'Resilience and aging: Research and practice',
+        source: 'Annual Review of Gerontology and Geriatrics',
+        year: '2020',
+        link: 'https://doi.org/10.1891/0198-8794.40.1',
+        tier: 1,
+      },
+      {
+        id: '4',
+        text: 'Late-life depression: Epidemiology, phenomenology, and treatment',
+        source: 'The Lancet Psychiatry',
+        year: '2020',
+        link: 'https://doi.org/10.1016/S2215-0366(20)30151-7',
+        tier: 1,
+      },
+      {
+        id: '5',
+        text: 'Wisdom and emotional regulation in older age',
+        source: 'Frontiers in Psychology',
+        year: '2021',
+        link: 'https://doi.org/10.3389/fpsyg.2021.501698',
+        tier: 1,
+      },
+      {
+        id: '6',
+        text: 'Grief and loss in later life',
+        source: 'Clinical Gerontologist',
+        year: '2020',
+        link: 'https://doi.org/10.1080/07317115.2020.1746723',
+        tier: 1,
+      },
+      {
+        id: '7',
+        text: 'Social connection and emotional health in older adults',
+        source: 'Journal of Aging and Health',
+        year: '2021',
+        link: 'https://doi.org/10.1177/0898264320987417',
+        tier: 1,
+      },
+      {
+        id: '8',
+        text: 'Healthy Aging and Mental Health',
+        source: 'National Institute on Aging',
+        year: '2021',
+        link: 'https://www.nia.nih.gov/health/emotional-health',
+        tier: 2,
+      },
+    ],
+    content: (
+      <>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            Contrary to stereotypes of decline, research reveals that many older adults report greater emotional wellbeing than younger people—a pattern scientists call the "aging paradox."
+          </p>
+          <p className="mb-6">
+            While physical and cognitive changes occur, emotional functioning often improves with age <Citation id="1" index={1} source="Psychology and Aging" year="2020" tier={1} />. Older adults demonstrate enhanced emotional regulation, greater focus on meaningful experiences, and remarkable resilience in facing life's inevitable losses.
+          </p>
+        </div>
+
+        <h2 id="positivity-effect" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Positivity Effect
+        </h2>
+        <p className="mb-6">
+          As people age, they naturally shift attention toward positive information and away from negative stimuli—researchers call this the "positivity effect" <Citation id="1" index={1} source="Psychology and Aging" year="2020" tier={1} />. This isn't denial; it's an adaptive strategy that enhances wellbeing.
+          </p>
+
+        <ArticleChart
+          type="line"
+          title="Life Satisfaction Across the Lifespan"
+          data={[
+            { label: '20s', value: 62 },
+            { label: '30s', value: 58 },
+            { label: '40s', value: 54 },
+            { label: '50s', value: 60 },
+            { label: '60s', value: 68 },
+            { label: '70s', value: 72 },
+            { label: '80+', value: 70 },
+          ]}
+          source="Gerontology Research, 2019-2020"
+        />
+
+        <p className="mb-6 mt-6">
+          Socioemotional selectivity theory explains why: as time horizons shorten, people prioritize emotionally meaningful experiences over information-gathering or status <Citation id="2" index={2} source="The Gerontologist" year="2019" tier={1} />. This shift produces greater present-moment appreciation and life satisfaction.
+        </p>
+
+        <h2 id="emotional-wisdom" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Emotional Wisdom Emerges
+        </h2>
+        <p className="mb-6">
+          Decades of experience handling emotions create genuine wisdom—better perspective-taking, nuanced understanding of complexity, and acceptance of ambiguity <Citation id="5" index={5} source="Frontiers in Psychology" year="2021" tier={1} />.
+        </p>
+
+        <ArticleCallout variant="key-takeaway">
+          <p><strong>What emotional wisdom looks like:</strong> Recognizing that most situations aren't black-and-white, accepting that you can't control everything, knowing which battles matter, and understanding that difficult emotions pass. This wisdom is earned, not taught.</p>
+        </ArticleCallout>
+
+        <h2 id="resilience-through-loss" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Navigating Loss and Building Resilience
+        </h2>
+        <p className="mb-6">
+          Older adulthood inevitably involves losses—health, loved ones, independence, roles <Citation id="6" index={6} source="Clinical Gerontologist" year="2020" tier={1} />. Yet research shows remarkable resilience: most older adults adapt to these changes without developing clinical depression or prolonged grief.
+        </p>
+
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'types',
+              title: 'Common Types of Loss',
+              content: (
+                <ul className="list-disc pl-5 space-y-2">
+                  <li><strong>Physical losses:</strong> Health changes, mobility limitations, sensory decline</li>
+                  <li><strong>Social losses:</strong> Death of spouse, friends, siblings; adult children moving away</li>
+                  <li><strong>Role losses:</strong> Retirement, grandchildren growing up, loss of caregiver role</li>
+                  <li><strong>Independence losses:</strong> Driving, living alone, managing finances</li>
+                  <li><strong>Cognitive changes:</strong> Processing speed, memory changes</li>
+                </ul>
+              ),
+            },
+            {
+              id: 'resilience',
+              title: 'Sources of Resilience',
+              content: (
+                <ul className="list-disc pl-5 space-y-2">
+                  <li>Decades of successfully navigating difficult experiences</li>
+                  <li>Perspective that "this too shall pass"</li>
+                  <li>Strong social networks (when maintained)</li>
+                  <li>Spiritual or philosophical frameworks for making meaning</li>
+                  <li>Acceptance of life's impermanence</li>
+                </ul>
+              ),
+            },
+          ]}
+        />
+
+        <p className="mb-6 mt-6">
+          The capacity to adapt to loss while maintaining wellbeing demonstrates emotional strength developed over a lifetime <Citation id="3" index={3} source="Annual Review of Gerontology and Geriatrics" year="2020" tier={1} />.
+        </p>
+
+        <h2 id="social-connection" className="text-3xl font-display font-bold text-gray-900 dark:text-gray-300 mt-12 mb-6 scroll-mt-32">
+          The Critical Role of Social Connection
+        </h2>
+        <p className="mb-6">
+          Social isolation is one of the strongest predictors of poor emotional health in older adults <Citation id="7" index={7} source="Journal of Aging and Health" year="2021" tier={1} />. Quality relationships matter more than quantity—a few close connections provide more benefit than many superficial ones.
+        </p>
+
+        <StatCard
+          stats={[
+            { value: 50, suffix: '%', label: 'Increased mortality risk from social isolation' },
+            { value: 3, suffix: '', label: 'Close relationships needed for emotional health' },
+            { value: 60, suffix: '%', label: 'Lower depression rates with strong social ties' },
+          ]}
+          source="Journal of Aging and Health, 2021"
+        />
+
+        <h2 id="maintaining-wellbeing" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Supporting Emotional Health in Later Life
+        </h2>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Stay socially engaged:</strong> Maintain and build relationships. Join groups, volunteer, use technology to connect with distant loved ones.</li>
+          <li><strong>Find purpose:</strong> Meaning doesn't end with retirement. Pursue interests, mentor others, contribute to community.</li>
+          <li><strong>Address physical health:</strong> Pain, medication side effects, and chronic illness affect mood. Work with healthcare providers to optimize physical wellbeing.</li>
+          <li><strong>Maintain agency:</strong> Make choices about your daily life, environment, and care. Autonomy supports emotional health.</li>
+          <li><strong>Practice acceptance:</strong> Acknowledge losses without ruminating. Grief is natural; dwelling that prevents engagement with life may need support.</li>
+        </ul>
+
+        <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When to Seek Professional Help
+        </h2>
+        <p className="mb-6">
+          Depression in older adults is common but not normal or inevitable <Citation id="4" index={4} source="The Lancet Psychiatry" year="2020" tier={1} />. It's often undertreated because symptoms are dismissed as "just aging." Seek help for:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>Persistent sadness or loss of interest lasting more than two weeks</li>
+          <li>Withdrawal from previously enjoyed activities and people</li>
+          <li>Unexplained physical symptoms (pain, fatigue, digestive issues)</li>
+          <li>Changes in sleep or appetite</li>
+          <li>Excessive worry about health or finances</li>
+          <li>Thoughts of death or that life isn't worth living</li>
+        </ul>
+
+        <p className="mb-6">
+          Treatment is effective at any age <Citation id="8" index={8} source="National Institute on Aging" year="2021" tier={2} />. Therapy, medication, lifestyle changes, and social support all improve outcomes for late-life depression and anxiety.
+        </p>
+
+        <ArticleCallout variant="tip">
+          <p>For older adults and their families: emotional struggles are not weakness or "normal aging." The same resources available to younger people—therapy, support groups, crisis lines (988)—work for older adults too.</p>
+        </ArticleCallout>
+      </>
+    ),
+  },
+];

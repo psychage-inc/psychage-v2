@@ -320,10 +320,15 @@ const ArticlePage: React.FC = () => {
                         </div>
 
                         {/* References */}
-                        <div className="mt-16 pt-8 border-t border-border/40">
+                        <div id="sources-citations" className="mt-16 pt-8 border-t border-border/40 scroll-mt-32">
                             <h3 className="font-bold text-lg mb-6 flex items-center gap-2">
                                 <Search size={20} className="text-primary" />
                                 Sources & Citations
+                                {article.citations && article.citations.length > 0 && (
+                                    <span className="px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-500 font-medium">
+                                        {article.citations.length}
+                                    </span>
+                                )}
                             </h3>
                             <ReferenceList citations={article.citations || []} />
                         </div>

@@ -8,9 +8,8 @@ import {
   ArrowRight,
   Phone,
   TrendingUp,
-  TrendingDown,
   Target,
-  Sparkles,
+  Shield,
 } from 'lucide-react';
 import SEO from '@/components/SEO';
 import Button from '@/components/ui/Button';
@@ -20,6 +19,10 @@ import { DomainCard } from './DomainCard';
 import { RadarChart } from './RadarChart';
 import { RelationshipMap } from './RelationshipMap';
 import { SafetyAlert, SafetyBanner } from './SafetyAlert';
+import { ClinicalInsights } from './ClinicalInsights';
+import { RelationshipBlueprint } from './RelationshipBlueprint';
+import { ActionPlanV2 } from './ActionPlanV2';
+import { ScienceSection } from './ScienceSection';
 
 interface ResultsDashboardProps {
   result: RelationshipHealthResult;
@@ -97,47 +100,6 @@ function getStrokeColor(tier: RelationshipTier): string {
   }
 }
 
-function getActionPlan(
-  domainScores: Record<RelationshipDomain, number>,
-  skipPartner: boolean
-): { domain: RelationshipDomain; label: string; action: string; link: string }[] {
-  const activeDomains = skipPartner
-    ? DOMAINS.filter((d) => d !== 'partner')
-    : DOMAINS;
-
-  // Sort by lowest score first
-  const sorted = [...activeDomains].sort(
-    (a, b) => domainScores[a] - domainScores[b]
-  );
-
-  return sorted.slice(0, 3).map((domain) => {
-    const score = domainScores[domain];
-    const meta = DOMAIN_META[domain];
-    if (score < 40) {
-      return {
-        domain,
-        label: meta.name,
-        action: `Consider speaking with a professional about your ${meta.name.toLowerCase()} connections`,
-        link: '/providers',
-      };
-    }
-    if (score < 60) {
-      return {
-        domain,
-        label: meta.name,
-        action: `Explore ways to strengthen your ${meta.name.toLowerCase()} relationships`,
-        link: '/learn/relationships-social',
-      };
-    }
-    return {
-      domain,
-      label: meta.name,
-      action: `Continue nurturing your ${meta.name.toLowerCase()} connections`,
-      link: '/learn/relationships-social',
-    };
-  });
-}
-
 export const ResultsDashboard: React.FC<ResultsDashboardProps> = ({
   result,
   onSave,
@@ -171,7 +133,6 @@ export const ResultsDashboard: React.FC<ResultsDashboardProps> = ({
   );
   const strongest = sortedDomains[0];
   const weakest = sortedDomains[sortedDomains.length - 1];
-  const actionPlan = getActionPlan(result.domainScores, result.skipPartner);
 
   // SVG arc for the score gauge
   const circumference = 2 * Math.PI * 70;
@@ -259,6 +220,10 @@ export const ResultsDashboard: React.FC<ResultsDashboardProps> = ({
                 <Target size={14} />
                 <span>Focus area: {DOMAIN_META[weakest].name}</span>
               </div>
+              <div className="inline-flex items-center gap-1.5 bg-white/15 backdrop-blur-sm rounded-full px-3 py-1.5 text-sm">
+                <Shield size={14} />
+                <span>Grounded in 10 validated frameworks</span>
+              </div>
             </div>
           </div>
 
@@ -269,11 +234,68 @@ export const ResultsDashboard: React.FC<ResultsDashboardProps> = ({
           </div>
         </motion.div>
 
-        {/* ── Section 2: Radar Chart + Network Map ──────────────────── */}
+        {/* ── Section 2: Isolation Alert ──────────────────────────── */}
+        {result.isolationAlert.triggered && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.15 }}
+            className="mb-10"
+            role="alert"
+          >
+            <div className={`rounded-xl p-6 border ${result.isolationAlert.severity === 'severe' ? 'bg-red-50 border-red-100' : 'bg-blue-50 border-blue-100'}`}>
+              <h3 className="font-bold text-gray-900 mb-2">
+                {result.isolationAlert.severity === 'severe'
+                  ? 'You deserve connection'
+                  : 'Connection matters'}
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                {result.isolationAlert.severity === 'severe'
+                  ? 'Your responses suggest significant disconnection across your relationships. This is painful, and it matters that you\'re here. Loneliness is as impactful on health as smoking — but even one meaningful connection can begin to change this.'
+                  : 'Your responses suggest you may be feeling quite disconnected right now. Loneliness is a common experience, and reaching out — even in small ways — can make a real difference.'}
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Link to="/providers">
+                  <Button size="sm" variant="primary">
+                    Find a provider
+                  </Button>
+                </Link>
+                <Link to="/learn/relationships-social">
+                  <Button size="sm" variant="outline">
+                    Read about connection
+                  </Button>
+                </Link>
+                <a
+                  href="tel:988"
+                  className="inline-flex items-center gap-1.5 text-sm font-bold text-blue-600 hover:text-blue-700 px-3"
+                >
+                  <Phone size={14} />
+                  988 Lifeline
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        )}
+
+        {/* ── Section 3: Clinical Insights ────────────────────────── */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
+          className="mb-10"
+        >
+          <ClinicalInsights
+            fourHorsemen={result.fourHorsemen}
+            patterns={result.patterns}
+            skipPartner={result.skipPartner}
+          />
+        </motion.div>
+
+        {/* ── Section 4: Radar Chart + Network Map ──────────────────── */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.25 }}
           className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10"
         >
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
@@ -296,11 +318,11 @@ export const ResultsDashboard: React.FC<ResultsDashboardProps> = ({
           </div>
         </motion.div>
 
-        {/* ── Section 3: Domain Score Summary Bar ───────────────────── */}
+        {/* ── Section 5: Domain Score Summary Bar ───────────────────── */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.25 }}
+          transition={{ delay: 0.3 }}
           className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 mb-10"
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -332,18 +354,18 @@ export const ResultsDashboard: React.FC<ResultsDashboardProps> = ({
           </div>
         </motion.div>
 
-        {/* ── Section 4: Domain Breakdown (expandable cards) ──────── */}
+        {/* ── Section 6: Domain Breakdown (expandable cards) ──────── */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0.35 }}
           className="mb-10"
         >
           <h2 className="font-display font-bold text-xl text-gray-900 mb-2">
             Domain Breakdown
           </h2>
           <p className="text-sm text-gray-500 mb-6">
-            Click any domain to see your detailed question-by-question breakdown
+            Click any domain to see your sub-dimensional breakdown and evidence-based insights
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {DOMAINS.map((domain) => (
@@ -351,6 +373,7 @@ export const ResultsDashboard: React.FC<ResultsDashboardProps> = ({
                 key={domain}
                 domain={domain}
                 score={result.domainScores[domain]}
+                subDimensionScores={result.subDimensionScores}
                 skipped={domain === 'partner' && result.skipPartner}
                 answers={result.answers}
               />
@@ -358,105 +381,41 @@ export const ResultsDashboard: React.FC<ResultsDashboardProps> = ({
           </div>
         </motion.div>
 
-        {/* ── Section 5: Loneliness Alert ────────────────────────── */}
-        {result.lonelinessAlert && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="mb-10"
-            role="alert"
-          >
-            <div className="bg-blue-50 border border-blue-100 rounded-xl p-6">
-              <h3 className="font-bold text-gray-900 mb-2">Connection matters</h3>
-              <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                Your responses suggest you may be feeling quite disconnected right now.
-                Loneliness is a common experience, and reaching out — even in small ways —
-                can make a real difference. You don't have to navigate this alone.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <Link to="/providers">
-                  <Button size="sm" variant="primary">
-                    Find a provider
-                  </Button>
-                </Link>
-                <Link to="/learn/relationships-social">
-                  <Button size="sm" variant="outline">
-                    Read about connection
-                  </Button>
-                </Link>
-                <a
-                  href="tel:988"
-                  className="inline-flex items-center gap-1.5 text-sm font-bold text-blue-600 hover:text-blue-700 px-3"
-                >
-                  <Phone size={14} />
-                  988 Lifeline
-                </a>
-              </div>
-            </div>
-          </motion.div>
-        )}
+        {/* ── Section 7: Relationship Blueprint ──────────────────── */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="mb-10"
+        >
+          <RelationshipBlueprint blueprint={result.blueprint} />
+        </motion.div>
 
-        {/* ── Section 6: Personalized Action Plan ────────────────── */}
+        {/* ── Section 8: Evidence-Based Action Plan ──────────────── */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.45 }}
-          className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8 mb-10"
+          className="mb-10"
         >
-          <div className="flex items-center gap-2 mb-4">
-            <Sparkles size={20} className="text-teal-600" />
-            <h2 className="font-display font-bold text-xl text-gray-900">
-              Your Action Plan
-            </h2>
-          </div>
-          <p className="text-sm text-gray-500 mb-6">
-            Based on your scores, here are personalized next steps ranked by impact
-          </p>
-          <div className="space-y-4">
-            {actionPlan.map((item, i) => {
-              const meta = DOMAIN_META[item.domain];
-              const score = result.domainScores[item.domain];
-              return (
-                <div
-                  key={item.domain}
-                  className="flex items-start gap-4 p-4 rounded-xl bg-gray-50 border border-gray-100"
-                >
-                  <div className="flex items-center justify-center w-8 h-8 rounded-full bg-teal-100 text-teal-700 font-bold text-sm shrink-0">
-                    {i + 1}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="font-bold text-sm text-gray-900">
-                        {item.label}
-                      </span>
-                      <span className={`text-xs font-bold ${getScoreColor(score)}`}>
-                        {score}/100
-                      </span>
-                      {score < 40 && (
-                        <TrendingDown size={12} className="text-rose-500" />
-                      )}
-                    </div>
-                    <p className="text-sm text-gray-600">{item.action}</p>
-                  </div>
-                  <Link
-                    to={item.link}
-                    className="inline-flex items-center gap-1 text-xs font-bold text-teal-600 hover:text-teal-700 shrink-0"
-                  >
-                    Go
-                    <ArrowRight size={12} />
-                  </Link>
-                </div>
-              );
-            })}
-          </div>
+          <ActionPlanV2 patterns={result.patterns} />
         </motion.div>
 
-        {/* ── Section 7: Action Buttons ──────────────────────────── */}
+        {/* ── Section 9: Understanding the Science ──────────────── */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
+          className="mb-10"
+        >
+          <ScienceSection patterns={result.patterns} />
+        </motion.div>
+
+        {/* ── Section 10: Action Buttons ──────────────────────────── */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.55 }}
           className="flex flex-col sm:flex-row gap-3 justify-center mb-8"
         >
           <Button onClick={handleSave} leftIcon={<Save size={18} />} disabled={saved}>
@@ -484,9 +443,9 @@ export const ResultsDashboard: React.FC<ResultsDashboardProps> = ({
         <div className="mt-12">
           <p className="text-xs text-gray-400 text-center leading-relaxed">
             This tool is for educational purposes only and does not provide a diagnosis.
-            Results are based on self-reported responses and may not reflect clinical
-            assessments. If you're concerned about any aspect of your relationships, please
-            consult a qualified professional.
+            Results are based on self-reported responses and grounded in peer-reviewed
+            relationship science frameworks. If you're concerned about any aspect of your
+            relationships, please consult a qualified professional.
           </p>
         </div>
       </div>

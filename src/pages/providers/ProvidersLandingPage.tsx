@@ -12,7 +12,7 @@ import { ProviderSearchBar } from '@/components/providers/search/ProviderSearchB
 import { useProviderLookups } from '@/context/ProviderLookupsContext';
 
 const TRUST_INDICATORS = [
-  { icon: UserCheck, label: '5,000+ Providers', description: 'Mental health professionals across the US' },
+  { icon: UserCheck, label: '400,000+ Providers', description: 'NPI-verified mental health professionals across the US' },
   { icon: ShieldCheck, label: 'Verified Credentials', description: 'NPI-verified professional credentials' },
   { icon: FlaskConical, label: 'Evidence-First', description: 'No ratings or reviews — just verified credentials' },
   { icon: Sparkles, label: 'Free to Search', description: 'Always free for people seeking care' },
@@ -41,7 +41,7 @@ const ProvidersLandingPage: React.FC = () => {
     <div className="min-h-screen bg-slate-50 dark:bg-gray-950">
       <SEO
         title="Find a Mental Health Provider | Psychage"
-        description="Search thousands of verified therapists, psychologists, and counselors. Free to search, no account required."
+        description="Search over 400,000 verified therapists, psychologists, and counselors across all 50 states. Free to search, no account required."
       />
 
       {/* Hero */}
@@ -62,7 +62,7 @@ const ProvidersLandingPage: React.FC = () => {
               <span className="text-gray-400 dark:text-gray-500">You Can Trust</span>
             </h1>
             <p className="text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mb-10">
-              Search thousands of verified therapists, psychologists, and counselors.
+              Search over 400,000 verified therapists, psychologists, and counselors across all 50 states.
               Free to search, no account required.
             </p>
           </motion.div>
@@ -211,7 +211,7 @@ const ProvidersLandingPage: React.FC = () => {
                 <div className="w-5 h-5 rounded-full bg-teal-500/20 flex items-center justify-center flex-shrink-0">
                   <Check size={12} className="text-teal-400" />
                 </div>
-                <span className="text-sm text-gray-300">5,000+ providers already listed and growing</span>
+                <span className="text-sm text-gray-300">400,000+ providers already listed and growing</span>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">

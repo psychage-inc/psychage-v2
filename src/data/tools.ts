@@ -93,10 +93,10 @@ export const tools: Tool[] = [
   {
     id: 11,
     name: "Relationship Health Check",
-    description: "Understand the quality of your relationships across four key areas of your life with this research-backed reflection tool.",
+    description: "A clinically-grounded assessment measuring 17 dimensions of relationship health across 4 life domains, powered by 10 validated research frameworks.",
     iconName: "HeartHandshake",
     category: "Assessment",
     color: "rose",
-    features: ["4 life domains", "5-min assessment", "Privacy-first"]
+    features: ["17 sub-dimensions", "Pattern detection", "Evidence-based"]
   }
 ];

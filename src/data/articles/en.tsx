@@ -19,8 +19,8 @@ export const articles: Article[] = [
     readTime: 8,
     publishedAt: "2025-01-15",
     author: {
-      id: "sarah-chen",
-      name: "Dr. Sarah Chen",
+      id: "raima",
+      name: "Raima",
       role: "Licensed Therapist",
       image: "/images/authors/author-female-1.svg"
     },
@@ -125,8 +125,8 @@ export const articles: Article[] = [
     readTime: 10,
     publishedAt: "2025-02-01",
     author: {
-      id: "sarah-chen",
-      name: "Dr. Sarah Chen",
+      id: "raima",
+      name: "Raima",
       role: "Licensed Therapist",
       image: "/images/authors/author-female-1.svg"
     },
@@ -183,8 +183,8 @@ export const articles: Article[] = [
     readTime: 7,
     publishedAt: "2025-02-10",
     author: {
-      id: "sarah-chen",
-      name: "Dr. Sarah Chen",
+      id: "raima",
+      name: "Raima",
       role: "Licensed Therapist",
       image: "/images/authors/author-female-1.svg"
     },
@@ -247,8 +247,8 @@ export const articles: Article[] = [
     readTime: 12,
     publishedAt: "2025-03-01",
     author: {
-      id: "sarah-chen",
-      name: "Dr. Sarah Chen",
+      id: "raima",
+      name: "Raima",
       role: "Licensed Therapist",
       image: "/images/authors/author-female-1.svg"
     },
@@ -301,8 +301,8 @@ export const articles: Article[] = [
     readTime: 7,
     publishedAt: "2025-02-20",
     author: {
-      id: "sarah-chen",
-      name: "Dr. Sarah Chen",
+      id: "raima",
+      name: "Raima",
       role: "Licensed Therapist",
       image: "/images/authors/author-female-1.svg"
     },
@@ -355,8 +355,8 @@ export const articles: Article[] = [
     readTime: 8,
     publishedAt: "2025-02-25",
     author: {
-      id: "sarah-chen",
-      name: "Dr. Sarah Chen",
+      id: "raima",
+      name: "Raima",
       role: "Licensed Therapist",
       image: "/images/authors/author-female-1.svg"
     },
@@ -409,8 +409,8 @@ export const articles: Article[] = [
     readTime: 6,
     publishedAt: "2025-01-30",
     author: {
-      id: "sarah-chen",
-      name: "Dr. Sarah Chen",
+      id: "raima",
+      name: "Raima",
       role: "Licensed Therapist",
       image: "/images/authors/author-female-1.svg"
     },
@@ -463,8 +463,8 @@ export const articles: Article[] = [
     readTime: 5,
     publishedAt: "2025-11-10",
     author: {
-      id: "sarah-chen",
-      name: "Dr. Sarah Chen",
+      id: "raima",
+      name: "Raima",
       role: "Licensed Therapist",
       image: "/images/authors/author-female-1.svg"
     },

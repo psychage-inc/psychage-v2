@@ -457,7 +457,7 @@ export const understandingDepressionArticlesB: Article[] = [
 
         <QuoteBlock
           quote="You don't have to wait until you can't function to ask for help. You don't have to earn the right to feel better. Suffering while appearing competent is still suffering."
-          attribution="Dr. Sarah Chen"
+          attribution="Raima"
           role="Clinical Psychologist"
           variant="large"
         />
@@ -838,7 +838,7 @@ export const understandingDepressionArticlesB: Article[] = [
 
         <QuoteBlock
           quote="Rumination is like a record skipping on the same painful groove. You replay what went wrong, analyze why you're inadequate, and predict how things will fail—over and over, without reaching any resolution."
-          attribution="Dr. Sarah Chen"
+          attribution="Raima"
           role="Clinical Psychologist"
           variant="large"
         />
@@ -1396,7 +1396,7 @@ export const understandingDepressionArticlesB: Article[] = [
 
         <QuoteBlock
           quote="Treating depression isn't just about feeling better emotionally—it's about protecting your physical health, improving medical outcomes, and potentially adding years to your life."
-          attribution="Dr. Sarah Chen"
+          attribution="Raima"
           role="Clinical Psychologist"
           variant="large"
         />
@@ -1885,7 +1885,7 @@ export const understandingDepressionArticlesB: Article[] = [
 
         <QuoteBlock
           quote="Depression tells you that isolation protects you and others. This is depression lying. Connection—even small, imperfect connection—is medicine."
-          attribution="Dr. Sarah Chen"
+          attribution="Raima"
           role="Clinical Psychologist"
           variant="large"
         />
@@ -2214,7 +2214,7 @@ export const understandingDepressionArticlesB: Article[] = [
 
         <QuoteBlock
           quote="When your language doesn't have a word for what you're feeling, does that change the experience? Research suggests yes—language both reflects and shapes how we understand our internal states."
-          attribution="Dr. Sarah Chen"
+          attribution="Raima"
           role="Clinical Psychologist"
           variant="large"
         />

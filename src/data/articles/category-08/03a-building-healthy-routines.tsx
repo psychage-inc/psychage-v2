@@ -405,7 +405,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
 
         <QuoteBlock
           quote="The morning routine isn't what you do—it's who you become by doing it consistently."
-          author="Dr. Sarah Chen"
+          author="Raima"
           role="Clinical Psychologist"
         />
       </>
@@ -846,7 +846,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
 
         <QuoteBlock
           quote="Sleep is not a switch you flip. It's a process you enter—and that process begins long before you close your eyes."
-          author="Dr. Sarah Chen"
+          author="Raima"
           role="Clinical Psychologist"
         />
       </>
@@ -1314,7 +1314,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
 
         <QuoteBlock
           quote="The best exercise routine is the one you'll actually do—even if it's just walking around the block while listening to a podcast you love."
-          author="Dr. Sarah Chen"
+          author="Raima"
           role="Clinical Psychologist"
         />
       </>
@@ -1778,7 +1778,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
 
         <QuoteBlock
           quote="Self-care is not self-indulgence. It's self-preservation—and that is an act of survival, not luxury."
-          author="Dr. Sarah Chen"
+          author="Raima"
           role="Clinical Psychologist"
         />
       </>
@@ -2225,7 +2225,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
 
         <QuoteBlock
           quote="The best routine is not the one that looks impressive on paper. It's the one you'll still be doing a year from now."
-          author="Dr. Sarah Chen"
+          author="Raima"
           role="Clinical Psychologist"
         />
       </>

@@ -35,6 +35,7 @@ interface DBArticle {
     read_time?: number;
     created_at: string;
     content?: string;
+    content_format?: 'html' | 'markdown';
     tags?: string[];
     featured?: boolean;
     status?: string;
@@ -168,7 +169,42 @@ export const articleService = {
      * Priority: Supabase > Mock
      */
     getBySlug: async (slug: string): Promise<ArticleWithContent | undefined> => {
-        // Try Supabase first
+        // Check if mock data has rich JSX content for this slug
+        const mockArticle = mockArticles.find(a => a.slug === slug);
+        const hasRichMockContent = mockArticle && mockArticle.content && typeof mockArticle.content !== 'string';
+
+        // If mock data has JSX content (charts, tables, accordions etc.), prefer it
+        // because Supabase only stores string content which loses all interactive components
+        if (hasRichMockContent) {
+            console.log(`[ArticleService] Using rich JSX content for "${slug}" from mock data`);
+
+            // Still try to get Supabase metadata (title, description, image, etc.)
+            try {
+                const { data, error } = await supabase
+                    .from('articles')
+                    .select('*, category:article_categories!category_id(*)')
+                    .eq('slug', slug)
+                    .eq('status', 'published')
+                    .single();
+
+                if (!error && data) {
+                    // Merge: Supabase metadata + mock JSX content
+                    const supabaseArticle = mapSupabaseToArticle(data);
+                    return {
+                        ...supabaseArticle,
+                        content: mockArticle.content, // Use JSX content, not string
+                        citations: mockArticle.citations || supabaseArticle.citations,
+                        _source: 'mock',
+                    };
+                }
+            } catch {
+                // Supabase metadata fetch failed, use mock data entirely
+            }
+
+            return { ...mockArticle, _source: 'mock' };
+        }
+
+        // No rich mock content — try Supabase
         try {
             const { data, error } = await supabase
                 .from('articles')
@@ -192,7 +228,6 @@ export const articleService = {
         }
 
         // Final fallback to mock data
-        const mockArticle = mockArticles.find(a => a.slug === slug);
         if (mockArticle) {
             console.log(`[ArticleService] Fetched article "${slug}" from mock data`);
             return { ...mockArticle, _source: 'mock' };

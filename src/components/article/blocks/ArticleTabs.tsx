@@ -38,7 +38,7 @@ const ArticleTabs: React.FC<ArticleTabsProps> = ({
             initial={{ opacity: 0, y: 16 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
             transition={{ duration: 0.4, ease: 'easeOut' }}
-            className={`my-10 ${className}`}
+            className={`not-prose my-8 ${className}`}
         >
             <Tabs.Root defaultValue={defaultTab || resolvedTabs[0].id}>
                 <Tabs.List className="flex border-b border-gray-200 dark:border-gray-700 overflow-x-auto">

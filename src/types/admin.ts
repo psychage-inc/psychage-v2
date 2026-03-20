@@ -92,7 +92,7 @@ export interface AdminArticle {
   title: string;
   slug: string;
   category: string;
-  status: 'draft' | 'published' | 'archived';
+  status: 'draft' | 'in_review' | 'approved' | 'rejected' | 'published' | 'paused' | 'archived';
   featured: boolean;
   author: string;
   publishedAt: string | null;

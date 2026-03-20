@@ -283,7 +283,7 @@ export const griefLossArticlesB: Article[] = [
 
         <QuoteBlock
           quote="Your grief is not determined by what others recognize. It's determined by what you've lost. If your heart is broken, your grief is real—regardless of whether society validates it."
-          attribution="Dr. Sarah Chen"
+          attribution="Raima"
           role="Clinical Psychologist"
           variant="large"
         />
@@ -784,7 +784,7 @@ export const griefLossArticlesB: Article[] = [
 
         <QuoteBlock
           quote="Grief is grief. Love is love. The depth of your pain reflects the depth of your bond—and that bond was real, regardless of whether it was with a human or an animal. Your grief deserves respect."
-          attribution="Dr. Sarah Chen"
+          attribution="Raima"
           role="Clinical Psychologist"
           variant="large"
         />
@@ -1058,7 +1058,7 @@ export const griefLossArticlesB: Article[] = [
 
         <QuoteBlock
           quote="Grief lives in the body as much as the mind. Tending to your physical self—sleeping, eating, moving, breathing—isn't optional self-care. It's survival care. Your body is carrying an enormous burden. Treat it with gentleness."
-          attribution="Dr. Sarah Chen"
+          attribution="Raima"
           role="Clinical Psychologist"
           variant="large"
         />
@@ -1266,7 +1266,7 @@ export const griefLossArticlesB: Article[] = [
 
         <QuoteBlock
           quote="You never stop missing them. The rawness eases, but the love—and the loss—remains. A decade later, you might still have a moment where you reach for the phone to call them before remembering. That's not pathology. That's love."
-          attribution="Dr. Sarah Chen"
+          attribution="Raima"
           role="Clinical Psychologist"
           variant="large"
         />

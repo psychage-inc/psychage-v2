@@ -43,7 +43,7 @@ const HighlightBox: React.FC<HighlightBoxProps> = ({
             animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.97 }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
             className={`
-                my-12 py-10 px-8 rounded-2xl
+                not-prose my-8 py-8 px-8 rounded-2xl
                 ${styles.bg}
                 border ${styles.border}
                 ${styles.text}

@@ -713,7 +713,7 @@ export const griefLossArticlesA: Article[] = [
 
         <QuoteBlock
           quote="Grieving is not a steady state. It's a dynamic process of confronting and avoiding, feeling and doing, remembering and living. The key is not choosing one—it's learning to dance between both."
-          attribution="Dr. Sarah Chen"
+          attribution="Raima"
           role="Clinical Psychologist"
           variant="large"
         />
@@ -986,7 +986,7 @@ export const griefLossArticlesA: Article[] = [
 
         <QuoteBlock
           quote={`Prolonged grief isn't about how much you loved them—it's about being unable to process and integrate the loss. With the right help, you can honor your love while still engaging with life. Healing doesn't mean forgetting or "getting over it." It means learning to carry the loss without it consuming you.`}
-          attribution="Dr. Sarah Chen"
+          attribution="Raima"
           role="Clinical Psychologist"
           variant="large"
         />
@@ -1244,7 +1244,7 @@ export const griefLossArticlesA: Article[] = [
 
         <QuoteBlock
           quote="Anticipatory grief is love that has nowhere to go yet. It's the heart already breaking for a loss that's coming. There's no timeline that makes this easy, no right way to carry it. Be gentle with yourself."
-          attribution="Dr. Sarah Chen"
+          attribution="Raima"
           role="Clinical Psychologist"
           variant="large"
         />

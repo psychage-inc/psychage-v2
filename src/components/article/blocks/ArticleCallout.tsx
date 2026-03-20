@@ -226,7 +226,7 @@ const ArticleCallout: React.FC<ArticleCalloutProps> = ({
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
             transition={{ duration: 0.4, ease: 'easeOut' }}
             className={`
-                my-8 rounded-xl border-l-4 ${config.border}
+                not-prose my-8 rounded-xl border-l-4 ${config.border}
                 ${config.bg} ${config.darkBg}
                 overflow-hidden
                 ${className}

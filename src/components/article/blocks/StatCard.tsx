@@ -126,7 +126,7 @@ const StatCard: React.FC<StatCardProps> = (props) => {
         <div
             ref={ref}
             className={`
-                my-10 rounded-2xl
+                not-prose my-8 rounded-2xl
                 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900/50 dark:to-gray-900/30
                 border border-gray-100 dark:border-gray-800
                 overflow-hidden

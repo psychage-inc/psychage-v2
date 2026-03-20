@@ -566,7 +566,7 @@ export const typesOfDepressionArticlesA: Article[] = [
 
         <QuoteBlock
           quote="Major Depressive Disorder is not a life sentence. It's a treatable medical condition. Most people recover, many fully. The key is recognizing it, seeking help, and finding the right treatment approach for you."
-          attribution="Dr. Sarah Chen"
+          attribution="Raima"
           role="Clinical Psychologist"
           variant="large"
         />
@@ -1452,7 +1452,7 @@ export const typesOfDepressionArticlesA: Article[] = [
 
         <QuoteBlock
           quote="The correct diagnosis isn't just academic—it determines whether treatment helps or harms. Bipolar depression requires a fundamentally different approach. Getting it right can be the difference between years of struggle and effective treatment."
-          attribution="Dr. Sarah Chen"
+          attribution="Raima"
           role="Clinical Psychologist"
           variant="large"
         />

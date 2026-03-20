@@ -32,8 +32,8 @@ export const CATEGORY_EMOTIONAL_REGULATION: Category = {
 // ---------------------------------------------------------------------------
 
 export const PRIMARY_AUTHOR: Author = {
-  id: 'sarah-chen',
-  name: 'Dr. Sarah Chen',
+  id: 'raima',
+  name: 'Raima',
   role: 'Licensed Clinical Psychologist',
   image: '/images/authors/author-female-1.svg',
 };

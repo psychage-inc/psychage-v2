@@ -1243,7 +1243,7 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
 
         <QuoteBlock
           quote="The future of work isn't predetermined. It's being negotiated right now through millions of individual and collective choices about what we'll accept, demand, and build. Your voice in that negotiation matters."
-          attribution="Dr. Sarah Chen"
+          attribution="Raima"
           role="Future of Work Researcher"
           source="Annual Review of Organizational Psychology, 2024"
         />

@@ -15,8 +15,8 @@ export const articles: Article[] = [
         readTime: 8,
         publishedAt: "2025-01-15",
         author: {
-            id: "sarah-chen",
-            name: "Dra. Sarah Chen",
+            id: "raima",
+            name: "Raima",
             role: "Terapeuta Licenciada",
             image: "/images/authors/author-female-1.svg"
         },

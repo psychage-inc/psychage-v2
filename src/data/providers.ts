@@ -3,7 +3,7 @@ import { Provider } from '../types/models';
 export const providers: Provider[] = [
   {
     id: 1,
-    name: "Dr. Sarah Chen",
+    name: "Raima",
     role: "Clinical Psychologist, PhD",
     image: "/images/authors/author-female-1.svg",
     specialties: ["Anxiety", "Depression", "CBT", "Stress Management"],
@@ -13,7 +13,7 @@ export const providers: Provider[] = [
     verified: true,
     yearsExperience: 12,
     languages: ["English", "Mandarin"],
-    bio: "Dr. Sarah Chen is a licensed clinical psychologist with over a decade of experience helping individuals navigate anxiety and depression. She is passionate about making evidence-based mental health care accessible and personalized.",
+    bio: "Raima is a licensed clinical psychologist with over a decade of experience helping individuals navigate anxiety and depression. She is passionate about making evidence-based mental health care accessible and personalized.",
     approach: "I believe in a collaborative, evidence-based approach. My goal is to empower you with practical tools to manage anxiety and build resilience. I integrate Cognitive Behavioral Therapy (CBT) with mindfulness techniques to help you understand the connection between your thoughts, feelings, and behaviors.",
     education: [
       "PhD in Clinical Psychology, Stanford University",

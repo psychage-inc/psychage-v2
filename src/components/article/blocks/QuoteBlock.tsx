@@ -42,7 +42,7 @@ const QuoteBlock: React.FC<QuoteBlockProps> = ({
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
             className={`
-                my-10 relative
+                not-prose my-8 relative
                 ${isSidebar ? 'float-right ml-8 mb-4 w-72' : ''}
                 ${className}
             `}

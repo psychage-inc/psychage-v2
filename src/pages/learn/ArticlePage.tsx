@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { Share2, Bookmark, ChevronRight, Clock, Calendar, Search, Check } from 'lucide-react';
+import { Share2, Bookmark, ChevronRight, ChevronDown, Clock, Calendar, Search, Check } from 'lucide-react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useArticleService } from '@/services/articleService';
 import { Article } from '@/types/models';
@@ -21,7 +21,8 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import Badge from '@/components/ui/Badge';
 import { cn } from '@/lib/utils';
 import { useBookmarks } from '@/context/BookmarkContext';
-import '@/components/admin/editor/tiptap-styles.css';
+import ArticleHtmlRenderer from '@/components/article/ArticleHtmlRenderer';
+import '@/styles/article-prose.css';
 
 const ArticlePage: React.FC = () => {
     const { categorySlug, articleSlug } = useParams<{ categorySlug: string; articleSlug: string }>();
@@ -161,7 +162,7 @@ const ArticlePage: React.FC = () => {
             <ReadingProgress />
 
             {/* Immersive Hero Section */}
-            <div className="relative h-[85vh] w-full overflow-hidden flex items-end pb-24">
+            <div className="relative h-[60vh] min-h-[400px] max-h-[600px] w-full overflow-hidden flex items-end pb-16">
                 {/* Dynamic Background */}
                 <div className="absolute inset-0 z-0">
                     <MeshGradient className="opacity-60" />
@@ -238,14 +239,23 @@ const ArticlePage: React.FC = () => {
                         </motion.div>
                     </div>
                 </motion.div>
+
+                {/* Scroll indicator */}
+                <motion.div
+                    animate={{ y: [0, 8, 0] }}
+                    transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
+                    className="absolute bottom-6 left-1/2 -translate-x-1/2 text-text-tertiary z-10"
+                >
+                    <ChevronDown size={24} />
+                </motion.div>
             </div>
 
             {/* Main Layout */}
-            <main className="container mx-auto max-w-content px-6 pb-24 -mt-12 relative z-20">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+            <main className="container mx-auto max-w-content px-6 pb-24 -mt-6 relative z-20">
+                <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr_280px] gap-8 lg:gap-10">
 
                     {/* Left Sidebar (Share/Controls) */}
-                    <div className="hidden lg:block lg:col-span-1">
+                    <div className="hidden lg:block">
                         <div className="sticky top-32 flex flex-col gap-4">
                             <motion.button
                                 whileHover={{ scale: 1.1 }}
@@ -279,13 +289,7 @@ const ArticlePage: React.FC = () => {
                     </div>
 
                     {/* Content Area */}
-                    <motion.article
-                        initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                        className="lg:col-span-7"
-                    >
+                    <article className="min-w-0">
                         {/* Disclaimer Banner */}
                         <div className="bg-primary/5 border-l-4 border-primary p-6 mb-10 rounded-r-xl backdrop-blur-sm">
                             <p className="text-sm text-text-secondary leading-relaxed">
@@ -299,23 +303,16 @@ const ArticlePage: React.FC = () => {
                             <img src={article.image} alt={article.title} className="w-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
                         </div>
 
-                        <div className="
-                            prose-medium prose prose-lg max-w-none
-                            prose-headings:font-display prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-text-primary
-                            prose-h1:text-4xl prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
-                            prose-h3:text-2xl prose-h3:mt-8
-                            prose-p:text-lg prose-p:leading-[1.8] prose-p:text-text-secondary prose-p:mb-6
-                            prose-a:text-primary prose-a:font-medium prose-a:no-underline hover:prose-a:underline hover:prose-a:text-primary-hover transition-colors
-                            prose-strong:font-bold prose-strong:text-text-primary
-                            prose-li:text-text-secondary prose-li:leading-7 prose-li:marker:text-primary
-                            prose-ul:my-6 prose-ol:my-6
-                            prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:bg-surface/50 prose-blockquote:backdrop-blur-sm prose-blockquote:rounded-r-lg prose-blockquote:py-6 prose-blockquote:px-8 prose-blockquote:not-italic prose-blockquote:text-xl prose-blockquote:font-medium prose-blockquote:text-text-primary prose-blockquote:my-10
-                            prose-img:rounded-2xl prose-img:shadow-xl prose-img:my-8
-                        ">
-                            {article.content || (
+                        <div className="article-prose prose prose-lg max-w-none">
+                            {/* Smart content renderer: handles HTML strings (Supabase) and JSX (mock data) */}
+                            {!article.content ? (
                                 <p className="text-xl leading-relaxed text-text-secondary">
                                     {article.description}
                                 </p>
+                            ) : typeof article.content === 'string' ? (
+                                <ArticleHtmlRenderer html={article.content} />
+                            ) : (
+                                article.content
                             )}
                         </div>
 
@@ -344,10 +341,10 @@ const ArticlePage: React.FC = () => {
                                 <p className="text-xs text-text-tertiary">Ensuring accuracy and clinical relevance.</p>
                             </div>
                         </InteractiveCard>
-                    </motion.article>
+                    </article>
 
                     {/* Right Column (TOC & Related) */}
-                    <div className="hidden lg:block lg:col-span-4 pl-8">
+                    <div className="hidden lg:block">
                         <div className="sticky top-32 space-y-8">
                             <InteractiveCard className="p-6 bg-surface/30 backdrop-blur-sm border-white/5">
                                 <h3 className="font-bold text-text-primary mb-4 text-xs uppercase tracking-widest text-primary">On this page</h3>

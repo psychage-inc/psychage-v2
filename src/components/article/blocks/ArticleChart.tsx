@@ -201,7 +201,7 @@ const ArticleChart: React.FC<ArticleChartProps> = ({
     height = 280,
     className = '',
 }) => {
-    const { ref, isInView } = useScrollAnimation({ amount: 0.15 });
+    const { ref, isInView } = useScrollAnimation();
     const normalized = Array.isArray(data) ? normalizeData(data) : [];
 
     if (!normalized.length) return null;
@@ -210,7 +210,7 @@ const ArticleChart: React.FC<ArticleChartProps> = ({
         <div
             ref={ref}
             className={`
-                my-10 p-6 rounded-2xl
+                not-prose my-8 p-6 rounded-2xl
                 bg-white dark:bg-gray-900/50
                 border border-gray-100 dark:border-gray-800
                 shadow-sm
@@ -220,23 +220,32 @@ const ArticleChart: React.FC<ArticleChartProps> = ({
             aria-label={title || `${type} chart`}
         >
             {title && (
-                <h4 className="text-base font-bold text-gray-900 dark:text-white mb-1">
+                <h4 className="text-base font-bold text-text-primary mb-1">
                     {title}
                 </h4>
             )}
             {description && (
-                <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                <p className="text-sm text-text-secondary mb-4">
                     {description}
                 </p>
             )}
 
-            {/* Only render chart when in view so Recharts animations play on scroll entry */}
-            <div style={{ minHeight: height }}>
-                {isInView && <ChartRenderer type={type} data={normalized} height={height} />}
+            {/* Render chart when in view; show skeleton placeholder otherwise */}
+            <div style={{ minHeight: height, width: '100%' }}>
+                {isInView ? (
+                    <ChartRenderer type={type} data={normalized} height={height} />
+                ) : (
+                    <div className="flex items-center justify-center h-full animate-pulse" style={{ minHeight: height }}>
+                        <div className="flex flex-col items-center gap-3">
+                            <div className="w-16 h-16 rounded-xl bg-gray-100 dark:bg-gray-800" />
+                            <div className="h-2.5 w-28 bg-gray-100 dark:bg-gray-800 rounded" />
+                        </div>
+                    </div>
+                )}
             </div>
 
             {source && (
-                <p className="mt-3 text-xs text-gray-400 dark:text-gray-500 italic">
+                <p className="mt-3 text-xs text-text-tertiary italic">
                     Source: {source}
                 </p>
             )}

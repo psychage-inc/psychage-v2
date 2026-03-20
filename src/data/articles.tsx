@@ -19,8 +19,8 @@ export const articles: Article[] = [
     publishedAt: "2025-01-15",
     views: 12500,
     author: {
-      id: "sarah-chen",
-      name: "Dr. Sarah Chen",
+      id: "raima",
+      name: "Raima",
       role: "Licensed Therapist",
       image: "/images/authors/author-female-1.svg"
     },
@@ -326,8 +326,8 @@ export const articles: Article[] = [
     publishedAt: "2024-12-20",
     views: 8500,
     author: {
-      id: "dr-sarah-chen",
-      name: "Dr. Sarah Chen",
+      id: "raima",
+      name: "Raima",
       role: "Licensed Therapist",
       image: "/images/authors/author-female-1.svg"
     },
@@ -416,7 +416,7 @@ export const articles: Article[] = [
     readTime: 5,
     publishedAt: "2024-12-10",
     views: 21000,
-    author: { id: "sarah-chen", name: "Dr. Sarah Chen", role: "Licensed Therapist", image: "/images/authors/author-female-1.svg" },
+    author: { id: "raima", name: "Raima", role: "Licensed Therapist", image: "/images/authors/author-female-1.svg" },
     tags: ["Anxiety", "Social", "Self-Help"],
     content: (
       <>
@@ -625,7 +625,7 @@ export const articles: Article[] = [
     readTime: 9,
     publishedAt: "2024-11-20",
     views: 7500,
-    author: { id: "sarah-chen", name: "Dr. Sarah Chen", role: "Licensed Therapist", image: "/images/authors/author-female-1.svg" },
+    author: { id: "raima", name: "Raima", role: "Licensed Therapist", image: "/images/authors/author-female-1.svg" },
     tags: ["Therapy", "Mental Health", "Guide"],
     content: (
       <>
@@ -696,7 +696,7 @@ export const articles: Article[] = [
     readTime: 6,
     publishedAt: "2024-11-10",
     views: 6000,
-    author: { id: "sarah-chen", name: "Dr. Sarah Chen", role: "Licensed Therapist", image: "/images/authors/author-female-1.svg" },
+    author: { id: "raima", name: "Raima", role: "Licensed Therapist", image: "/images/authors/author-female-1.svg" },
     tags: ["Depression", "SAD", "Winter"],
     content: (
       <>

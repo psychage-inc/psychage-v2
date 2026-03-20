@@ -27,7 +27,7 @@ const ProgressSteps: React.FC<ProgressStepsProps> = ({
 
     if (resolvedVariant === 'horizontal') {
         return (
-            <div ref={ref} className={`my-10 ${className}`}>
+            <div ref={ref} className={`not-prose my-8 ${className}`}>
                 <div className="flex overflow-x-auto gap-4 pb-2">
                     {steps.map((step, i) => (
                         <motion.div
@@ -70,7 +70,7 @@ const ProgressSteps: React.FC<ProgressStepsProps> = ({
 
     // Vertical timeline (default)
     return (
-        <div ref={ref} className={`my-10 ${className}`}>
+        <div ref={ref} className={`not-prose my-8 ${className}`}>
             <div className="relative pl-8">
                 {/* Vertical connector line */}
                 <div className="absolute left-[15px] top-2 bottom-2 w-0.5 bg-gray-200 dark:bg-gray-700" />

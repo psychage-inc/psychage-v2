@@ -46,7 +46,7 @@ const BeforeAfter: React.FC<BeforeAfterProps> = ({
             initial={{ opacity: 0, y: 16 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
             transition={{ duration: 0.4, ease: 'easeOut' }}
-            className={`my-10 ${className}`}
+            className={`not-prose my-8 ${className}`}
         >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-0 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700">
                 {/* Before panel */}

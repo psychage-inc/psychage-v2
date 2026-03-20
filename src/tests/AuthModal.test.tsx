@@ -13,9 +13,6 @@ vi.mock('lucide-react', () => ({
     Lock: () => <svg data-testid="icon-lock" />,
     User: () => <svg data-testid="icon-user" />,
     ArrowRight: () => <svg data-testid="icon-arrow-right" />,
-    Github: () => <svg data-testid="icon-github" />,
-    Chrome: () => <svg data-testid="icon-chrome" />,
-    Sparkles: () => <svg data-testid="icon-sparkles" />,
     Loader2: () => <svg data-testid="icon-loader" />,
     AlertCircle: () => <svg data-testid="icon-alert" />,
     CheckCircle: () => <svg data-testid="icon-check" />,
@@ -24,20 +21,7 @@ vi.mock('lucide-react', () => ({
 // Mock the API module
 vi.mock('../lib/api', () => ({
     api: {
-        auth: {
-            login: vi.fn(),
-            signup: vi.fn(),
-            logout: vi.fn(),
-            me: vi.fn(),
-        },
         post: vi.fn(),
-    },
-    tokenStorage: {
-        getAccessToken: vi.fn(() => null),
-        getRefreshToken: vi.fn(() => null),
-        setTokens: vi.fn(),
-        clearTokens: vi.fn(),
-        isAuthenticated: vi.fn(() => false),
     },
     ApiError: class ApiError extends Error {
         constructor(message: string, public status: number, public data?: unknown) {

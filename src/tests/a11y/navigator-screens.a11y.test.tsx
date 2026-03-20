@@ -9,6 +9,21 @@ import { NavigatorProvider } from '../../context/NavigatorContext';
 // Extend expect with jest-axe matchers
 expect.extend(toHaveNoViolations);
 
+// Mock window.matchMedia for useReducedMotion
+Object.defineProperty(window, 'matchMedia', {
+    writable: true,
+    value: vi.fn().mockImplementation((query: string) => ({
+        matches: false,
+        media: query,
+        onchange: null,
+        addListener: vi.fn(),
+        removeListener: vi.fn(),
+        addEventListener: vi.fn(),
+        removeEventListener: vi.fn(),
+        dispatchEvent: vi.fn(),
+    })),
+});
+
 // Mock framer-motion to avoid animation issues in tests
 vi.mock('framer-motion', () => {
     const React = require('react');
@@ -18,6 +33,10 @@ vi.mock('framer-motion', () => {
             button: React.forwardRef(({ children, ...props }: any, ref: any) => (
                 <button ref={ref} {...props}>{children}</button>
             )),
+            section: ({ children, ...props }: any) => <section {...props}>{children}</section>,
+            span: 'span',
+            p: 'p',
+            li: 'li',
         },
         AnimatePresence: ({ children }: any) => <>{children}</>,
     };

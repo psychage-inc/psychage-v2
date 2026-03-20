@@ -269,8 +269,15 @@ const AdminArticleList: React.FC = () => {
               onClick={() => navigate(adminPath('/articles/clusters'))}
               className="flex items-center gap-2 px-3 py-2 border border-border-hover text-text-secondary text-sm font-medium rounded-lg hover:bg-surface-hover transition-colors"
             >
-              <Plus size={16} />
+              <FolderKanban size={16} />
               Topic Clusters
+            </button>
+            <button
+              onClick={() => navigate(adminPath('/articles/new'))}
+              className="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary-hover text-white text-sm font-medium rounded-lg transition-colors"
+            >
+              <Plus size={16} />
+              New Article
             </button>
           </div>
         }

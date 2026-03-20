@@ -71,6 +71,7 @@ const ClarityJournalInsights = React.lazy(() => import('./components/tools/Clari
 const ClarityJournalDailyEntry = React.lazy(() => import('./components/tools/ClarityJournal/v2-sections/DailyEntryV2'));
 const ClarityJournalReport = React.lazy(() => import('./components/tools/ClarityJournal/v2-report/ReportConfigScreen'));
 const CrisisResourcesScreen = React.lazy(() => import('./components/screens/CrisisResourcesScreen'));
+const MedicationTracker = React.lazy(() => import('./components/tools/MedicationTracker'));
 
 // Auth Pages
 const LoginPage = React.lazy(() => import('./pages/auth/LoginPage'));
@@ -200,6 +201,7 @@ const App: React.FC = () => {
                                             <Route path="/tools/symptom-navigator" element={<PageTransition><NavigatorPage /></PageTransition>} />
                                             <Route path="/tools/symptom-navigator/crisis" element={<PageTransition><CrisisResourcesScreen /></PageTransition>} />
                                             <Route path="/tools/relationship-health" element={<PageTransition><RelationshipHealthCheck /></PageTransition>} />
+                                            <Route path="/tools/medication-tracker" element={<PageTransition><MedicationTracker /></PageTransition>} />
                                             <Route path="/tools/clarity-journal" element={<PageTransition><ClarityJournal /></PageTransition>} />
                                             <Route path="/tools/clarity-journal/daily" element={<PageTransition><ClarityJournalDailyCheckIn /></PageTransition>} />
                                             <Route path="/tools/clarity-journal/screening" element={<PageTransition><ClarityJournalWeeklyScreening /></PageTransition>} />

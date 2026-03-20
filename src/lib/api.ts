@@ -2,27 +2,20 @@
  * API Client for Psychage Backend
  *
  * Handles all HTTP requests to the backend API with:
- * - Authentication token management
+ * - Supabase session-based authentication
  * - Error handling
  * - Type-safe responses
  */
 
-const API_URL = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? 'http://localhost:3000' : '');
+import { supabase } from './supabaseClient';
 
-// Token storage keys
-const ACCESS_TOKEN_KEY = 'psychage_access_token';
-const REFRESH_TOKEN_KEY = 'psychage_refresh_token';
+const API_URL = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? 'http://localhost:3000' : '');
 
 // Types for API responses
 export interface ApiResponse<T> {
   success: boolean;
   data?: T;
   error?: string;
-}
-
-export interface AuthTokens {
-  access_token: string;
-  refresh_token: string;
 }
 
 export interface User {
@@ -108,36 +101,6 @@ export interface AdminUser {
   last_active?: string;
 }
 
-// Token management
-export const tokenStorage = {
-  getAccessToken: (): string | null => {
-    if (typeof window === 'undefined') return null;
-    return localStorage.getItem(ACCESS_TOKEN_KEY);
-  },
-
-  getRefreshToken: (): string | null => {
-    if (typeof window === 'undefined') return null;
-    return localStorage.getItem(REFRESH_TOKEN_KEY);
-  },
-
-  setTokens: (tokens: AuthTokens): void => {
-    if (typeof window === 'undefined') return;
-    localStorage.setItem(ACCESS_TOKEN_KEY, tokens.access_token);
-    localStorage.setItem(REFRESH_TOKEN_KEY, tokens.refresh_token);
-  },
-
-  clearTokens: (): void => {
-    if (typeof window === 'undefined') return;
-    localStorage.removeItem(ACCESS_TOKEN_KEY);
-    localStorage.removeItem(REFRESH_TOKEN_KEY);
-  },
-
-  isAuthenticated: (): boolean => {
-    if (typeof window === 'undefined') return false;
-    return !!localStorage.getItem(ACCESS_TOKEN_KEY);
-  }
-};
-
 // API Error class
 export class ApiError extends Error {
   constructor(
@@ -163,27 +126,30 @@ async function fetchApi<T>(
     ...options.headers,
   };
 
-  // Add auth token if available
-  const token = tokenStorage.getAccessToken();
-  if (token) {
-    (headers as Record<string, string>)['Authorization'] = `Bearer ${token}`;
+  // Get auth token from Supabase session
+  try {
+    const { data: { session } } = await supabase.auth.getSession();
+    if (session?.access_token) {
+      (headers as Record<string, string>)['Authorization'] = `Bearer ${session.access_token}`;
+    }
+  } catch {
+    // No session available, proceed without auth header
   }
 
   try {
     const response = await fetch(url, {
       ...options,
       headers,
-      credentials: 'include', // Include cookies for CORS
+      credentials: 'include',
     });
 
     const data = await response.json();
 
     if (!response.ok) {
-      // Handle 401 - try to refresh token (only once to prevent infinite loop)
-      if (response.status === 401 && !_isRetry && tokenStorage.getRefreshToken()) {
-        const refreshed = await refreshAccessToken();
-        if (refreshed) {
-          // Retry the original request with new token
+      // Handle 401 - try Supabase token refresh (only once to prevent infinite loop)
+      if (response.status === 401 && !_isRetry) {
+        const { data: refreshData, error: refreshError } = await supabase.auth.refreshSession();
+        if (!refreshError && refreshData.session) {
           return fetchApi<T>(endpoint, options, true);
         }
       }
@@ -209,37 +175,6 @@ async function fetchApi<T>(
   }
 }
 
-// Refresh access token
-async function refreshAccessToken(): Promise<boolean> {
-  const refreshToken = tokenStorage.getRefreshToken();
-  if (!refreshToken) return false;
-
-  try {
-    const response = await fetch(`${API_URL}/api/auth/refresh`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ refresh_token: refreshToken }),
-    });
-
-    if (!response.ok) {
-      tokenStorage.clearTokens();
-      return false;
-    }
-
-    const data = await response.json();
-    if (data.success && data.data) {
-      tokenStorage.setTokens(data.data);
-      return true;
-    }
-
-    tokenStorage.clearTokens();
-    return false;
-  } catch {
-    tokenStorage.clearTokens();
-    return false;
-  }
-}
-
 // API methods
 export const api = {
   // Generic methods
@@ -258,45 +193,6 @@ export const api = {
     }),
 
   delete: <T>(endpoint: string) => fetchApi<T>(endpoint, { method: 'DELETE' }),
-
-  // Auth endpoints
-  auth: {
-    login: async (email: string, password: string) => {
-      const response = await api.post<AuthTokens & { user: User }>('/api/auth/login', {
-        email,
-        password,
-      });
-      if (response.success && response.data) {
-        tokenStorage.setTokens({
-          access_token: response.data.access_token,
-          refresh_token: response.data.refresh_token,
-        });
-      }
-      return response;
-    },
-
-    signup: async (email: string, password: string, displayName?: string, role: 'patient' | 'provider' = 'patient') => {
-      return api.post<{ user: User }>('/api/auth/signup', {
-        email,
-        password,
-        name: displayName,
-        role,
-      });
-    },
-
-    logout: async () => {
-      try {
-        await api.post('/api/auth/logout');
-      } finally {
-        tokenStorage.clearTokens();
-      }
-    },
-
-    me: () => api.get<User>('/api/auth/me'),
-
-    confirmPasswordReset: (token: string, password: string) =>
-      api.post('/api/auth/reset-password/confirm', { token, password }),
-  },
 
   // Provider endpoints
   providers: {
@@ -411,12 +307,18 @@ export const api = {
     uploadAvatar: async (file: File) => {
       const formData = new FormData();
       formData.append('avatar', file);
-      // Special handling for FormData to avoid default JSON content-type
-      const token = localStorage.getItem('psychage_access_token');
-      const headers: Record<string, string> = {};
-      if (token) headers['Authorization'] = `Bearer ${token}`;
 
-      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:3000'}/api/user/photo`, {
+      const headers: Record<string, string> = {};
+      try {
+        const { data: { session } } = await supabase.auth.getSession();
+        if (session?.access_token) {
+          headers['Authorization'] = `Bearer ${session.access_token}`;
+        }
+      } catch {
+        // proceed without auth
+      }
+
+      const response = await fetch(`${API_URL}/api/user/photo`, {
         method: 'POST',
         headers,
         body: formData

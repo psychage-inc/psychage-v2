@@ -29,14 +29,9 @@ export const ProcessingScreen: React.FC = () => {
     const { state, dispatch, announcePolite, announceAssertive } = useNavigator();
     const [currentStep, setCurrentStep] = useState(0);
     const [processingError, setProcessingError] = useState<string | null>(null);
-    const hasRun = useRef(false);
     const finalTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     useEffect(() => {
-        // Guard: only run engine once (React 18 StrictMode double-invokes effects)
-        if (hasRun.current) return;
-        hasRun.current = true;
-
         const { knowledgeBase, selectedSymptoms, detectedRegion, kbLoadedAt } = state;
 
         // Error: Missing knowledge base (WCAG 4.1.3 Status Messages - announce error assertively)
@@ -52,7 +47,8 @@ export const ProcessingScreen: React.FC = () => {
             console.warn(`[Navigator] Knowledge base loaded >${KB_STALENESS_MINUTES}min ago, results may use stale rules`);
         }
 
-        // Run the engine synchronously (client-side, ~1-2ms)
+        // Run the engine synchronously (client-side, ~1-2ms).
+        // Safe to re-run on StrictMode remount — engine is pure and deterministic.
         const userInputs = Array.from(selectedSymptoms.values());
 
         let engineResults: NavigatorResults;
@@ -82,6 +78,8 @@ export const ProcessingScreen: React.FC = () => {
         const sequenceLength = PROCESSING_STEPS.length;
         let step = 0;
 
+        // Reset animation state for StrictMode remount
+        setCurrentStep(0);
         announcePolite(PROCESSING_STEPS[0]);
 
         const interval = setInterval(() => {

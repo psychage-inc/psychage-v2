@@ -27,7 +27,7 @@ describe('Clarity Journal — Storage', () => {
   describe('loadJournal / saveJournal', () => {
     it('returns default data when empty', () => {
       const data = loadJournal();
-      expect(data.version).toBe(1);
+      expect(data.version).toBe(2);
       expect(data.dailyCheckIns).toEqual([]);
       expect(data.preferences.firstVisitCompleted).toBe(false);
     });
@@ -53,16 +53,16 @@ describe('Clarity Journal — Storage', () => {
     });
 
     it('returns default data for invalid JSON', () => {
-      localStorage.setItem('psychage_clarity_journal_v1', 'not-json');
+      localStorage.setItem('psychage_clarity_journal_v2', 'not-json');
       const data = loadJournal();
-      expect(data.version).toBe(1);
+      expect(data.version).toBe(2);
       expect(data.dailyCheckIns).toEqual([]);
     });
 
     it('returns default data for wrong version', () => {
-      localStorage.setItem('psychage_clarity_journal_v1', JSON.stringify({ version: 99 }));
+      localStorage.setItem('psychage_clarity_journal_v2', JSON.stringify({ version: 99 }));
       const data = loadJournal();
-      expect(data.version).toBe(1);
+      expect(data.version).toBe(2);
     });
 
     it('includes default 988 safety plan entry', () => {

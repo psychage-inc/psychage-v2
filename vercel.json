@@ -19,6 +19,8 @@
       "destination": "/admin.html",
       "has": [{ "type": "host", "value": "admin.psychage.com" }]
     },
+    { "source": "/admin/:path*", "destination": "/admin.html" },
+    { "source": "/admin", "destination": "/admin.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

@@ -38,7 +38,7 @@ describe('NewsletterSection', () => {
 
     it('should render email input', () => {
         render(<MemoryRouter><NewsletterSection /></MemoryRouter>);
-        expect(screen.getByPlaceholderText('your@email.com')).toBeInTheDocument();
+        expect(screen.getByPlaceholderText('Enter your email')).toBeInTheDocument();
     });
 
     it('should render subscribe button', () => {
@@ -50,12 +50,12 @@ describe('NewsletterSection', () => {
         mockSubscribe.mockResolvedValue({ success: true });
         render(<MemoryRouter><NewsletterSection /></MemoryRouter>);
 
-        const input = screen.getByPlaceholderText('your@email.com');
+        const input = screen.getByPlaceholderText('Enter your email');
         fireEvent.change(input, { target: { value: 'test@example.com' } });
         fireEvent.submit(input.closest('form')!);
 
         await waitFor(() => {
-            expect(screen.getByText(/thanks for subscribing/i)).toBeInTheDocument();
+            expect(screen.getByText(/you're subscribed/i)).toBeInTheDocument();
         });
     });
 
@@ -63,17 +63,17 @@ describe('NewsletterSection', () => {
         mockSubscribe.mockRejectedValue(new Error('fail'));
         render(<MemoryRouter><NewsletterSection /></MemoryRouter>);
 
-        const input = screen.getByPlaceholderText('your@email.com');
+        const input = screen.getByPlaceholderText('Enter your email');
         fireEvent.change(input, { target: { value: 'test@example.com' } });
         fireEvent.submit(input.closest('form')!);
 
         await waitFor(() => {
-            expect(screen.getByText('Retry')).toBeInTheDocument();
+            expect(screen.getByText('Try again')).toBeInTheDocument();
         });
     });
 
     it('should show newsletter description text', () => {
         render(<MemoryRouter><NewsletterSection /></MemoryRouter>);
-        expect(screen.getByText(/weekly mental health insights/i)).toBeInTheDocument();
+        expect(screen.getByText(/free weekly insights on mental health/i)).toBeInTheDocument();
     });
 });

@@ -36,7 +36,7 @@ describe('StatusBadge', () => {
 
     it('should fallback to inactive styles for unknown status', () => {
         render(<StatusBadge status="unknown" />);
-        expect(screen.getByText('unknown')).toHaveClass('bg-gray-100');
+        expect(screen.getByText('unknown')).toHaveClass('bg-surface-hover');
     });
 
     it('should normalize case for lookup', () => {

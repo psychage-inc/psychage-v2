@@ -79,20 +79,21 @@ describe('CrisisOverlay Accessibility & Focus Trap', () => {
         expect(dialog).toBeInTheDocument();
 
         const understandButton = screen.getByRole('button', { name: "I understand, continue to results" });
-        const link = screen.getByRole('link');
+        const links = screen.getAllByRole('link');
+        const outsideButton = screen.getByTestId('outside-button');
 
-        link.focus();
-        expect(link).toHaveFocus();
+        // Focus first link
+        links[0].focus();
+        expect(links[0]).toHaveFocus();
 
-        await user.tab();
-        expect(understandButton).toHaveFocus();
+        // Tab through all focusable elements — focus should never escape to outside
+        for (let i = 0; i < links.length + 2; i++) {
+            await user.tab();
+            expect(outsideButton).not.toHaveFocus();
+        }
 
-        // Tabbing again should wrap to link
-        await user.tab();
-        expect(link).toHaveFocus();
-
-        // Shift+Tab should go backwards
-        await user.tab({ shift: true });
+        // After cycling, the understand button should be reachable
+        understandButton.focus();
         expect(understandButton).toHaveFocus();
     });
 

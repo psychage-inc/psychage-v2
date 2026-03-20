@@ -31,6 +31,7 @@ const AdminSettingsV2 = React.lazy(() => import('./pages/admin/v2/settings/Setti
 const AdminUserManagementV2 = React.lazy(() => import('./pages/admin/v2/settings/UserManagement'));
 const AdminAuditLogV2 = React.lazy(() => import('./pages/admin/v2/settings/AuditLog'));
 const AdminArticleList = React.lazy(() => import('./pages/admin/v2/articles/ArticleList'));
+const AdminArticleCreator = React.lazy(() => import('./pages/admin/v2/articles/ArticleCreator'));
 const AdminArticleDetail = React.lazy(() => import('./pages/admin/v2/articles/ArticleDetail'));
 const AdminArticleBreakdown = React.lazy(() => import('./pages/admin/v2/articles/ArticleBreakdown'));
 const AdminTopicClusters = React.lazy(() => import('./pages/admin/v2/articles/TopicClusters'));
@@ -96,6 +97,7 @@ const AdminApp: React.FC = () => {
               <Route path="dashboard" element={<AdminDashboardV2 />} />
               {/* Articles (Command Center) */}
               <Route path="articles" element={<AdminArticleList />} />
+              <Route path="articles/new" element={<AdminArticleCreator />} />
               <Route path="articles/categories" element={<AdminArticleCategories />} />
               <Route path="articles/pipeline" element={<AdminArticlePipeline />} />
               <Route path="articles/tree" element={<AdminArticleTree />} />
@@ -110,6 +112,7 @@ const AdminApp: React.FC = () => {
               <Route path="content/:id/edit" element={<AdminContentEditor />} />
               {/* Providers */}
               <Route path="providers" element={<AdminProviderList />} />
+              <Route path="providers/new" element={<AdminProviderEditor />} />
               <Route path="providers/applications" element={<AdminApplicationReview />} />
               <Route path="providers/import" element={<AdminBulkImport />} />
               <Route path="providers/:id/edit" element={<AdminProviderEditor />} />

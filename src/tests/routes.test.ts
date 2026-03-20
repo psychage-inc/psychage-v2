@@ -19,7 +19,8 @@ const ROUTE_MAP: Record<number, string> = {
   7: '/tools/symptom-navigator',
   8: '/tools/mindmate',
   10: '/tools/clarity-journal',
-  11: '/tools/relationship-health'
+  11: '/tools/relationship-health',
+  12: '/tools/medication-tracker'
 };
 
 const _getToolLink = (toolId: number): string => {

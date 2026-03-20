@@ -98,5 +98,14 @@ export const tools: Tool[] = [
     category: "Assessment",
     color: "rose",
     features: ["17 sub-dimensions", "Pattern detection", "Evidence-based"]
+  },
+  {
+    id: 12,
+    name: "Medication Tracker",
+    description: "Track medications, doses, and adherence patterns privately on your device to share with your care team.",
+    iconName: "Pill",
+    category: "Health Management",
+    color: "teal",
+    features: ["Dose tracking", "Adherence stats", "Exportable reports"]
   }
 ];

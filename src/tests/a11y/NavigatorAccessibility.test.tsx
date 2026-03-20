@@ -18,13 +18,32 @@ import type { NavigatorStep } from '../../lib/navigator/stepConfig';
 // Extend expect with jest-axe matchers
 expect.extend(toHaveNoViolations);
 
+// Mock window.matchMedia for useReducedMotion
+Object.defineProperty(window, 'matchMedia', {
+    writable: true,
+    value: vi.fn().mockImplementation((query: string) => ({
+        matches: false,
+        media: query,
+        onchange: null,
+        addListener: vi.fn(),
+        removeListener: vi.fn(),
+        addEventListener: vi.fn(),
+        removeEventListener: vi.fn(),
+        dispatchEvent: vi.fn(),
+    })),
+});
+
 // Mock Framer Motion to avoid animation issues in tests
 vi.mock('framer-motion', () => ({
     motion: {
         div: 'div',
         button: 'button',
         p: 'p',
-        span: 'span'
+        span: 'span',
+        li: 'li',
+        section: 'section',
+        circle: 'circle',
+        svg: 'svg'
     },
     AnimatePresence: ({ children }: { children: React.ReactNode }) => <>{children}</>,
 }));
@@ -99,9 +118,7 @@ describe('Navigator Accessibility Tests', () => {
 
     describe('ProcessingScreen', () => {
         it('should not have accessibility violations', async () => {
-            // Mock timers to prevent actual processing delays
-            vi.useFakeTimers();
-
+            // Render with real timers — axe needs real async to run
             const { container } = render(
                 <NavigatorProvider>
                     <ProcessingScreen />
@@ -110,8 +127,6 @@ describe('Navigator Accessibility Tests', () => {
 
             const results = await axe(container);
             expect(results).toHaveNoViolations();
-
-            vi.useRealTimers();
         });
     });
 

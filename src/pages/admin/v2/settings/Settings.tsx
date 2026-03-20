@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { Save, AlertTriangle } from 'lucide-react';
+import { Save, AlertTriangle, X, Plus } from 'lucide-react';
+import { toast } from 'sonner';
 import { supabase } from '@/lib/supabaseClient';
 import { logAdminAction } from '@/lib/admin/auditLogger';
 import type { PlatformSetting } from '@/lib/admin/types';
@@ -15,6 +16,21 @@ interface SettingField {
   description?: string;
 }
 
+const AVAILABLE_LANGUAGES: { code: string; label: string }[] = [
+  { code: 'en', label: 'English' },
+  { code: 'es', label: 'Spanish' },
+  { code: 'fr', label: 'French' },
+  { code: 'ar', label: 'Arabic' },
+  { code: 'zh', label: 'Chinese' },
+  { code: 'pt', label: 'Portuguese' },
+  { code: 'sv', label: 'Swedish' },
+  { code: 'de', label: 'German' },
+  { code: 'it', label: 'Italian' },
+  { code: 'ja', label: 'Japanese' },
+  { code: 'ko', label: 'Korean' },
+  { code: 'hi', label: 'Hindi' },
+];
+
 const SETTING_FIELDS: SettingField[] = [
   { key: 'maintenance_mode', label: 'Maintenance Mode', type: 'boolean', critical: true, description: 'Displays maintenance banner and restricts user access' },
   { key: 'ai_chat_enabled', label: 'AI Chat Enabled', type: 'boolean', critical: true, description: 'Enable or disable the MindMate AI chatbot' },
@@ -23,6 +39,7 @@ const SETTING_FIELDS: SettingField[] = [
   { key: 'clarity_score_retake_days', label: 'Clarity Score Retake Days', type: 'number', description: 'Minimum days between Clarity Score assessments' },
   { key: 'crisis_banner_enabled', label: 'Crisis Banner Enabled', type: 'boolean', description: 'Show crisis resource banner globally' },
   { key: 'provider_applications_open', label: 'Provider Applications Open', type: 'boolean', description: 'Allow new provider applications' },
+  { key: 'supported_languages', label: 'Supported Languages', type: 'json', description: 'Languages available on the platform' },
 ];
 
 const AdminSettingsV2: React.FC = () => {
@@ -57,6 +74,10 @@ const AdminSettingsV2: React.FC = () => {
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['admin', 'platform-settings'] });
+      toast.success('Settings saved');
+    },
+    onError: (err: Error) => {
+      toast.error(`Save failed: ${err.message}`);
     },
   });
 
@@ -116,6 +137,109 @@ const AdminSettingsV2: React.FC = () => {
       );
     }
 
+    if (field.type === 'text') {
+      return (
+        <div key={field.key} className="flex items-center justify-between py-4 border-b border-border last:border-0">
+          <div>
+            <p className="text-sm font-medium text-text-primary">{field.label}</p>
+            {field.description && <p className="text-xs text-text-secondary mt-0.5">{field.description}</p>}
+          </div>
+          <input
+            type="text"
+            value={String(value ?? '')}
+            onChange={(e) => setValues((prev) => ({ ...prev, [field.key]: e.target.value }))}
+            className="w-64 px-3 py-1.5 text-sm border border-border rounded-lg bg-surface outline-none focus:ring-2 focus:ring-primary"
+          />
+        </div>
+      );
+    }
+
+    if (field.type === 'json') {
+      // Special chip editor for supported_languages
+      if (field.key === 'supported_languages') {
+        const langs: string[] = Array.isArray(value) ? (value as string[]) : [];
+        const addableLangs = AVAILABLE_LANGUAGES.filter((l) => !langs.includes(l.code));
+
+        return (
+          <div key={field.key} className="py-4 border-b border-border last:border-0">
+            <div className="mb-2">
+              <p className="text-sm font-medium text-text-primary">{field.label}</p>
+              {field.description && <p className="text-xs text-text-secondary mt-0.5">{field.description}</p>}
+            </div>
+            <div className="flex flex-wrap items-center gap-2">
+              {langs.map((code) => {
+                const lang = AVAILABLE_LANGUAGES.find((l) => l.code === code);
+                return (
+                  <span
+                    key={code}
+                    className="inline-flex items-center gap-1 px-2.5 py-1 text-sm bg-primary/10 text-primary rounded-full"
+                  >
+                    {lang?.label || code}
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setValues((prev) => ({
+                          ...prev,
+                          [field.key]: langs.filter((l) => l !== code),
+                        }))
+                      }
+                      className="p-0.5 hover:bg-primary/20 rounded-full transition-colors"
+                    >
+                      <X size={12} />
+                    </button>
+                  </span>
+                );
+              })}
+              {addableLangs.length > 0 && (
+                <select
+                  value=""
+                  onChange={(e) => {
+                    if (e.target.value) {
+                      setValues((prev) => ({
+                        ...prev,
+                        [field.key]: [...langs, e.target.value],
+                      }));
+                    }
+                  }}
+                  className="px-2 py-1 text-sm border border-dashed border-border-hover rounded-lg bg-surface text-text-secondary outline-none focus:ring-2 focus:ring-primary"
+                >
+                  <option value="">+ Add language</option>
+                  {addableLangs.map((l) => (
+                    <option key={l.code} value={l.code}>
+                      {l.label} ({l.code})
+                    </option>
+                  ))}
+                </select>
+              )}
+            </div>
+          </div>
+        );
+      }
+
+      // Generic JSON textarea for other json fields
+      return (
+        <div key={field.key} className="py-4 border-b border-border last:border-0">
+          <div className="mb-2">
+            <p className="text-sm font-medium text-text-primary">{field.label}</p>
+            {field.description && <p className="text-xs text-text-secondary mt-0.5">{field.description}</p>}
+          </div>
+          <textarea
+            value={typeof value === 'string' ? value : JSON.stringify(value ?? '', null, 2)}
+            onChange={(e) => {
+              try {
+                setValues((prev) => ({ ...prev, [field.key]: JSON.parse(e.target.value) }));
+              } catch {
+                // Allow invalid JSON while typing
+                setValues((prev) => ({ ...prev, [field.key]: e.target.value }));
+              }
+            }}
+            rows={4}
+            className="w-full px-3 py-2 text-sm font-mono border border-border rounded-lg bg-surface text-text-primary outline-none focus:ring-2 focus:ring-primary resize-none"
+          />
+        </div>
+      );
+    }
+
     return null;
   };
 
@@ -143,12 +267,6 @@ const AdminSettingsV2: React.FC = () => {
           </button>
         }
       />
-
-      {saveMutation.isSuccess && (
-        <div className="mb-4 px-4 py-2 bg-emerald-50 border border-emerald-200 rounded-lg text-sm text-emerald-700">
-          Settings saved successfully.
-        </div>
-      )}
 
       <div className="bg-surface border border-border rounded-2xl px-6">
         {SETTING_FIELDS.map(renderField)}

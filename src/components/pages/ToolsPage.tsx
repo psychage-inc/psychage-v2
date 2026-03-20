@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { toolService } from '../../services/toolService';
 import { Tool } from '../../types/models';
-import { BrainCircuit, PenTool, Moon, Wind, Users, ShieldAlert, Lightbulb, NotebookPen, HeartHandshake, ArrowRight, Search, Filter, LucideIcon } from 'lucide-react';
+import { BrainCircuit, PenTool, Moon, Wind, Users, ShieldAlert, Lightbulb, NotebookPen, HeartHandshake, Pill, ArrowRight, Search, Filter, LucideIcon } from 'lucide-react';
 import Button from '../ui/Button';
 import SEO from '../SEO';
 import Breadcrumbs from '../ui/Breadcrumbs';
@@ -17,7 +17,8 @@ const iconMap: Record<string, LucideIcon> = {
     ShieldAlert,
     Lightbulb,
     NotebookPen,
-    HeartHandshake
+    HeartHandshake,
+    Pill
 };
 
 const colorVariants: Record<string, string> = {
@@ -70,12 +71,13 @@ const ToolsPage: React.FC = () => {
             case 8: return '/tools/mindmate';
             case 10: return '/tools/clarity-journal';
             case 11: return '/tools/relationship-health';
+            case 12: return '/tools/medication-tracker';
             default: return '#'; // Coming soon
         }
     };
 
     const isComingSoon = (toolId: number) => {
-        return ![1, 2, 3, 5, 6, 7, 8, 9, 10, 11].includes(toolId);
+        return ![1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12].includes(toolId);
     };
 
     if (isLoading) return <div className="min-h-screen bg-gray-50 pt-32 text-center">Loading...</div>;

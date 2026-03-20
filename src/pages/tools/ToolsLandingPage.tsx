@@ -133,7 +133,7 @@ const ToolsLandingPage: React.FC = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {filteredTools.map((tool, index) => {
                             const Icon = iconMap[tool.iconName] || BrainCircuit;
-                            const linkMap: Record<number, string> = { 1: '/tools/clarity-score', 2: '/tools/mood-journal', 3: '/tools/sleep-architect', 7: '/tools/symptom-navigator', 8: '/tools/mindmate', 10: '/tools/clarity-journal', 11: '/tools/relationship-health' };
+                            const linkMap: Record<number, string> = { 1: '/tools/clarity-score', 2: '/tools/mood-journal', 3: '/tools/sleep-architect', 7: '/tools/symptom-navigator', 8: '/tools/mindmate', 10: '/tools/clarity-journal', 11: '/tools/relationship-health', 12: '/tools/medication-tracker' };
                             const link = linkMap[tool.id] || '#';
                             const isLocked = link === '#';
 

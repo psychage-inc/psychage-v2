@@ -15,19 +15,21 @@ vi.mock('framer-motion', () => {
 });
 
 describe('SeveritySlider', () => {
-    it('should render range input', () => {
+    it('should render radiogroup', () => {
         render(<SeveritySlider onChange={vi.fn()} />);
-        expect(screen.getByRole('slider')).toBeInTheDocument();
+        expect(screen.getByRole('radiogroup')).toBeInTheDocument();
     });
 
     it('should have default value of 5', () => {
         render(<SeveritySlider onChange={vi.fn()} />);
-        expect(screen.getByRole('slider')).toHaveValue('5');
+        const selected = screen.getByRole('radio', { name: /^5 -/ });
+        expect(selected).toHaveAttribute('aria-checked', 'true');
     });
 
     it('should accept initial value', () => {
         render(<SeveritySlider value={8} onChange={vi.fn()} />);
-        expect(screen.getByRole('slider')).toHaveValue('8');
+        const selected = screen.getByRole('radio', { name: /^8 -/ });
+        expect(selected).toHaveAttribute('aria-checked', 'true');
     });
 
     it('should render Mild and Severe labels by default', () => {
@@ -46,7 +48,8 @@ describe('SeveritySlider', () => {
         const onChange = vi.fn();
         render(<SeveritySlider onChange={onChange} />);
 
-        fireEvent.change(screen.getByRole('slider'), { target: { value: '7' } });
+        const button7 = screen.getByRole('radio', { name: /^7 -/ });
+        fireEvent.click(button7);
         expect(onChange).toHaveBeenCalledWith(7);
     });
 
@@ -57,13 +60,14 @@ describe('SeveritySlider', () => {
 
     it('should display current value', () => {
         render(<SeveritySlider value={3} onChange={vi.fn()} />);
-        expect(screen.getByText('3')).toBeInTheDocument();
+        // Value appears in both display and button — verify at least one exists
+        const matches = screen.getAllByText('3');
+        expect(matches.length).toBeGreaterThanOrEqual(1);
     });
 
-    it('should have range 1 to 10', () => {
+    it('should render 10 radio buttons', () => {
         render(<SeveritySlider onChange={vi.fn()} />);
-        const slider = screen.getByRole('slider');
-        expect(slider).toHaveAttribute('min', '1');
-        expect(slider).toHaveAttribute('max', '10');
+        const radios = screen.getAllByRole('radio');
+        expect(radios).toHaveLength(10);
     });
 });

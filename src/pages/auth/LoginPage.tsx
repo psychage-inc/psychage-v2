@@ -28,6 +28,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
     const [searchParams] = useSearchParams();
     const [oauthLoading, setOauthLoading] = useState<'google' | 'apple' | null>(null);
     const [infoMessage, setInfoMessage] = useState<string | null>(null);
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     // Get the page they were trying to visit, or default to appropriate dashboard
     // Prefer state (set by ProtectedRoute), fall back to query param (survives refresh)
@@ -90,6 +91,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
             return;
         }
 
+        setIsSubmitting(true);
         try {
             const result = await login(email, password);
 
@@ -168,6 +170,8 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
             }
         } catch {
             setError('An unexpected error occurred. Please try again or contact support if the issue persists.');
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
@@ -235,7 +239,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
                                     className="pl-11 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    disabled={isLoading}
+                                    disabled={isLoading || isSubmitting}
                                 />
                                 <Mail className="absolute left-3.5 top-3.5 h-5 w-5 text-text-tertiary group-focus-within:text-primary transition-colors" />
                             </div>
@@ -252,7 +256,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
                                     value={password}
                                     placeholder="••••••••"
                                     onChange={(e) => setPassword(e.target.value)}
-                                    disabled={isLoading}
+                                    disabled={isLoading || isSubmitting}
                                 />
                                 <Lock className="absolute left-3.5 top-3.5 h-5 w-5 text-text-tertiary group-focus-within:text-primary transition-colors" />
                                 <button
@@ -287,7 +291,8 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
                             type="submit"
                             className="w-full h-12 text-base font-semibold shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all duration-300"
                             size="lg"
-                            isLoading={isLoading}
+                            isLoading={isSubmitting}
+                            disabled={isSubmitting || isLoading}
                         >
                             Sign In
                         </Button>
@@ -310,7 +315,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
                                 variant="outline"
                                 className="px-8 bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20 text-text-primary transition-all duration-300"
                                 onClick={handleGoogleSignIn}
-                                disabled={isLoading || oauthLoading !== null}
+                                disabled={isLoading || isSubmitting || oauthLoading !== null}
                                 isLoading={oauthLoading === 'google'}
                             >
                                 <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
@@ -324,7 +329,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
                                 variant="outline"
                                 className="px-8 bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20 text-text-primary transition-all duration-300"
                                 onClick={handleAppleSignIn}
-                                disabled={isLoading || oauthLoading !== null}
+                                disabled={isLoading || isSubmitting || oauthLoading !== null}
                                 isLoading={oauthLoading === 'apple'}
                             >
                                 <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" aria-hidden="true">

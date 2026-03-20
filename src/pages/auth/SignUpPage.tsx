@@ -28,6 +28,7 @@ const SignUpPage = () => {
     const [error, setError] = useState<string | null>(null);
     const [passwordFocused, setPasswordFocused] = useState(false);
     const [consent, setConsent] = useState<ConsentState>(defaultConsentState);
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const { signup, isLoading } = useAuth();
     const navigate = useNavigate();
@@ -55,6 +56,7 @@ const SignUpPage = () => {
             return;
         }
 
+        setIsSubmitting(true);
         try {
             const result = await signup(
                 formData.email,
@@ -93,6 +95,8 @@ const SignUpPage = () => {
             // Registration error handled by AuthContext
             console.error('Signup error:', err);
             setError('An unexpected error occurred. Please try again.');
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
@@ -347,7 +351,8 @@ const SignUpPage = () => {
                             type="submit"
                             className="w-full h-12 text-base font-semibold shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all duration-300"
                             size="lg"
-                            isLoading={isLoading}
+                            isLoading={isSubmitting}
+                            disabled={isSubmitting || isLoading}
                         >
                             {userType === 'provider' ? 'Create Provider Account' : 'Create Account'}
                         </Button>

@@ -231,6 +231,14 @@ export const navigationConfig: NavigationConfig = {
                             description: 'Structured journaling & tracking',
                             href: '/tools/clarity-journal',
                             icon: 'notebook-pen'
+                        },
+                        {
+                            id: 'medication-tracker',
+                            label: 'Medication Tracker',
+                            description: 'Track doses & adherence',
+                            href: '/tools/medication-tracker',
+                            icon: 'pill',
+                            requiredFeatureFlag: 'VITE_ENABLE_MEDICATION_TRACKER'
                         }
                     ]
                 }

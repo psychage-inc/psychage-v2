@@ -140,8 +140,33 @@ const ArticleCategoryPage: React.FC = () => {
                             ))}
                         </div>
                     ) : (
-                        <div className="text-center py-20 bg-white/5 rounded-3xl border border-dashed border-white/10">
-                            <p className="text-text-secondary text-lg">No articles found in this category yet.</p>
+                        <div className="text-center py-20 bg-surface rounded-3xl border border-dashed border-border">
+                            {category.icon && React.isValidElement(category.icon) && (
+                                <div className={`inline-flex p-5 rounded-2xl ${category.color} text-white/50 mb-6`}>
+                                    {React.cloneElement(category.icon as React.ReactElement, { size: 48 })}
+                                </div>
+                            )}
+                            <h2 className="font-display font-bold text-2xl text-text-primary mb-3">
+                                Articles Coming Soon
+                            </h2>
+                            <p className="text-text-secondary text-lg max-w-md mx-auto mb-8">
+                                We&apos;re preparing expert-reviewed articles about {category.name.toLowerCase()}.
+                                Check back soon or explore our wellness tools in the meantime.
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                                <button
+                                    onClick={() => navigate('/learn')}
+                                    className="px-6 py-3 text-sm font-bold text-text-secondary bg-surface border border-border rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                                >
+                                    Browse Other Topics
+                                </button>
+                                <button
+                                    onClick={() => navigate('/tools')}
+                                    className="px-6 py-3 text-sm font-bold text-white bg-teal-600 rounded-xl hover:bg-teal-700 transition-colors"
+                                >
+                                    Explore Wellness Tools
+                                </button>
+                            </div>
                         </div>
                     )}
                 </div>

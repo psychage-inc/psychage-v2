@@ -1,3 +1,4 @@
+ 
 import { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -14,7 +15,6 @@ import {
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import SEO from '../SEO';
-import Button from '../ui/Button';
 import {
   resolveCountry,
   saveCountryPreference,
@@ -219,6 +219,7 @@ const CrisisPage: React.FC = () => {
 
   useEffect(() => {
     const resolved = getResourcesForCountry(countryCode);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setResult(resolved);
   }, [countryCode]);
 
@@ -399,6 +400,9 @@ const CrisisPage: React.FC = () => {
               <p className="text-sm text-white/80">
                 Prepare for difficult moments with coping strategies and contacts
               </p>
+              <p className="text-xs text-white/60 mt-1">
+                <strong>Safety plans are most effective when created with the guidance of a mental health professional.</strong> We recommend completing this with your clinician or counselor.
+              </p>
             </div>
           </motion.a>
         </div>
@@ -456,7 +460,11 @@ const CrisisPage: React.FC = () => {
             </p>
             <p className="text-xs text-slate-400 dark:text-slate-500 pt-2 border-t border-slate-200 dark:border-slate-700">
               Resource data is sourced from verified crisis directories and reviewed regularly.
-              If you notice outdated information, please contact us so we can update it.
+              If you notice outdated information, please contact us at{' '}
+              <a href="mailto:info@psychage.com" className="text-teal-600 dark:text-teal-400 hover:underline">
+                info@psychage.com
+              </a>{' '}
+              so we can update it.
             </p>
           </div>
         </motion.div>

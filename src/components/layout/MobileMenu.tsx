@@ -17,7 +17,7 @@ interface MobileMenuProps {
   onNavigateGeneric?: (view: string) => void;
 }
 
-const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onNavigateGeneric }) => {
+const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
   const { user, isAuthenticated, logout } = useAuth();
   const navigate = useNavigate();
   const { getDashboardConfig } = useNavigation();

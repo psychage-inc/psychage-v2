@@ -4,7 +4,6 @@ import { type ColumnDef } from '@tanstack/react-table';
 import { UserPlus, Trash2 } from 'lucide-react';
 import { supabase } from '@/lib/supabaseClient';
 import { logAdminAction } from '@/lib/admin/auditLogger';
-import { ADMIN_ROLE_LABELS } from '@/lib/admin/constants';
 import { useAdminAuth } from '@/hooks/useAdminAuth';
 import type { AdminRole, AdminRoleRecord } from '@/lib/admin/types';
 import PageHeader from '@/components/admin/PageHeader';

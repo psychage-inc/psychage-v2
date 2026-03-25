@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Clock, ArrowUpRight, Bookmark } from 'lucide-react';
+import { Clock, ArrowUpRight, Bookmark, BookOpen } from 'lucide-react';
 import Badge from '../ui/Badge';
 import { Article } from '../../types';
 import { NoiseTexture } from '../home/hero/HeroAssets';
@@ -18,6 +18,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, onClick }) => {
   const { isBookmarked, toggleBookmark } = useBookmarks();
   const bookmarked = isBookmarked(article.id);
   const [showAuthModal, setShowAuthModal] = useState(false);
+  const [imgError, setImgError] = useState(false);
 
   const handleBookmark = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -38,12 +39,19 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, onClick }) => {
 
       {/* Image Container */}
       <div className="relative aspect-[16/10] w-full overflow-hidden bg-gray-100 dark:bg-gray-800 rounded-t-2xl">
-        <img
-          src={article.image}
-          alt={article.title}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-          loading="lazy"
-        />
+        {article.image && !imgError ? (
+          <img
+            src={article.image}
+            alt={article.title}
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            loading="lazy"
+            onError={() => setImgError(true)}
+          />
+        ) : (
+          <div className="w-full h-full bg-gradient-to-br from-teal-500/20 via-teal-500/10 to-transparent flex items-center justify-center">
+            <BookOpen size={48} className="text-teal-500/30" />
+          </div>
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
         {/* Category Badge - Floating */}

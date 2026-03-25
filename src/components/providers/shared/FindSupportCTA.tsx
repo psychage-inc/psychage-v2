@@ -1,3 +1,4 @@
+ 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Heart } from 'lucide-react';
@@ -24,6 +25,7 @@ export const FindSupportCTA: React.FC<FindSupportCTAProps> = ({
   useEffect(() => {
     if (!specialtySlug) return;
     let cancelled = false;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsLoading(true);
 
     searchProviders({

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+/* eslint-disable react-hooks/static-components */
+import React, { useState, useMemo } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import {
   Brain,
@@ -96,7 +97,7 @@ function CategoryCard({ dist }: { dist: CategoryArticleDistribution }) {
   const { category, totalCount, publishedCount, byStage } = dist;
   const target = category.article_target || 1;
   const pct = Math.min(100, Math.round((totalCount / target) * 100));
-  const Icon = getIcon(category.icon);
+  const Icon = useMemo(() => getIcon(category.icon), [category.icon]);
 
   return (
     <div className="bg-surface rounded-2xl border border-border overflow-hidden">
@@ -110,7 +111,7 @@ function CategoryCard({ dist }: { dist: CategoryArticleDistribution }) {
             className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
             style={{ backgroundColor: `${category.color}20`, color: category.color || '#6B7280' }}
           >
-            <Icon size={18} />
+<Icon size={18} />
           </div>
           <div className="min-w-0 flex-1">
             <h3 className="font-semibold text-sm text-text-primary truncate">

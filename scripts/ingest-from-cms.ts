@@ -13,7 +13,7 @@ import { createClient as createSanityClient } from '@sanity/client';
 import { createClient } from '@supabase/supabase-js';
 import { ingestDocuments } from '../src/lib/ai/ingestion';
 import { OpenAIProvider } from '../src/lib/ai/llm';
-import type { ContentType, ParsedDocument, ContentSource } from '../src/lib/ai/types';
+import type { ContentType, ParsedDocument } from '../src/lib/ai/types';
 
 // =============================================================================
 // CLI Argument Parsing

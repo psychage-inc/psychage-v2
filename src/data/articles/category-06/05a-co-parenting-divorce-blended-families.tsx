@@ -1,4 +1,4 @@
-import React from 'react';
+ 
 import { Article } from '../../../types';
 import Citation from '../../../components/article/Citation';
 import { CATEGORY_FAMILY_PARENTING, PRIMARY_AUTHOR, CLINICAL_REVIEWER, catId } from './_shared';

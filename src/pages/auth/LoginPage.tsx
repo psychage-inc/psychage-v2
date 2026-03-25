@@ -11,7 +11,7 @@ import { Alert, AlertDescription } from '@/components/ui/Alert';
 import InteractiveCard from '@/components/ui/InteractiveCard';
 import { LogoIcon } from '@/components/ui/LogoIcon';
 import { supabase } from '@/lib/supabaseClient';
-import { adminUrl, mainUrl, isAdminDomain } from '@/lib/urls';
+import { adminUrl, mainUrl } from '@/lib/urls';
 
 interface LoginPageProps {
     variant?: 'main' | 'admin';

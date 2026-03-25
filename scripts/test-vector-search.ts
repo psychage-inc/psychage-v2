@@ -34,7 +34,7 @@ async function test1_DatabaseConnection() {
   console.log('\n1️⃣  Testing database connection...');
 
   try {
-    const { data, error } = await supabase.from('psychage_embeddings').select('count').limit(1);
+    const { _data, error } = await supabase.from('psychage_embeddings').select('count').limit(1);
 
     if (error) {
       console.log('   ❌ Database connection failed:', error.message);
@@ -64,7 +64,7 @@ async function test2_PgvectorExtension() {
 
     console.log(`   ✅ pgvector extension installed (version: ${data})`);
     return true;
-  } catch (error) {
+  } catch {
     console.log('   ⚠️  Could not verify pgvector (this is OK if migration was run)');
     return true; // Don't fail on this
   }

@@ -165,7 +165,7 @@ function main() {
   console.log(`Scanning for ${PROHIBITED_PHRASES.length} prohibited phrases...\n`);
 
   const rootDir = path.resolve(__dirname, '..');
-  let allViolations: Violation[] = [];
+  const allViolations: Violation[] = [];
 
   for (const dir of SCAN_DIRS) {
     const fullDir = path.join(rootDir, dir);

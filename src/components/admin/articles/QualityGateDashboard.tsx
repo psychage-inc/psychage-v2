@@ -1,7 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import {
   ShieldCheck,
-  ShieldAlert,
   ShieldX,
   AlertTriangle,
   CheckCircle,

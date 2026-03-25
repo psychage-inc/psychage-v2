@@ -11,7 +11,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Send, Loader2, Sparkles, ThumbsUp, ThumbsDown, X, Bot } from 'lucide-react';
+import { Send, Loader2, Sparkles, ThumbsUp, ThumbsDown } from 'lucide-react';
 import CitationCard from './CitationCard';
 import SafetyBanner from './SafetyBanner';
 import AIDisclosure from './AIDisclosure';

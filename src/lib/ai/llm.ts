@@ -536,7 +536,7 @@ export async function generateResponse(
   // Build suggested resources
   const suggestedResources = buildSuggestedResources(retrievedContent);
 
-  const elapsed = Date.now() - startTime;
+  const _elapsed = Date.now() - startTime;
 
   return {
     content: response.content,

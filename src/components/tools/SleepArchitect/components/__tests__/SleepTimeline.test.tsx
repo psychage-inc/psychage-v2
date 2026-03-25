@@ -1,4 +1,4 @@
-import React from 'react';
+/* eslint-disable @typescript-eslint/no-require-imports */
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 import SleepTimeline from '../SleepTimeline';

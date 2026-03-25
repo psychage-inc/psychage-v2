@@ -1,6 +1,6 @@
 /**
  * All Articles Aggregator
- * Imports and combines all article arrays from all 15 categories
+ * Imports and combines all article arrays from all 22 categories
  * Used by articleService.ts as mock data fallback
  */
 
@@ -22,6 +22,13 @@ import * as cat12 from './category-12';
 import * as cat13 from './category-13';
 import * as cat14 from './category-14';
 import * as cat15 from './category-15';
+import * as cat16 from './category-16';
+import * as cat17 from './category-17';
+import * as cat18 from './category-18';
+import * as cat19 from './category-19';
+import * as cat20 from './category-20';
+import * as cat21 from './category-21';
+import * as cat22 from './category-22';
 
 /**
  * Flatten a category module into an array of articles
@@ -56,6 +63,13 @@ export const allArticles: Article[] = [
   ...flattenCategoryModule(cat13),
   ...flattenCategoryModule(cat14),
   ...flattenCategoryModule(cat15),
+  ...flattenCategoryModule(cat16),
+  ...flattenCategoryModule(cat17),
+  ...flattenCategoryModule(cat18),
+  ...flattenCategoryModule(cat19),
+  ...flattenCategoryModule(cat20),
+  ...flattenCategoryModule(cat21),
+  ...flattenCategoryModule(cat22),
 ];
 
 console.log(`📚 Loaded ${allArticles.length} articles from mock data`);

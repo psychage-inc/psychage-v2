@@ -24,6 +24,8 @@ import {
   Pencil,
   Eye,
   Save,
+  Film,
+  Headphones,
 } from 'lucide-react';
 import { formatDistanceToNow, format } from 'date-fns';
 import { toast } from 'sonner';
@@ -54,7 +56,6 @@ import type {
   ArticleRecord,
   ArticleCommentRecord,
   ArticleImageRecord,
-  ArticleStatusHistoryRecord,
   ArticleStatus,
   CommentSeverity,
   ImagePurpose,
@@ -625,7 +626,6 @@ function ReviewTab({ article }: { article: ArticleRecord }) {
 
 function CommentCard({
   comment,
-  articleId,
   onResolveToggle,
 }: {
   comment: ArticleCommentRecord;
@@ -787,6 +787,171 @@ function MediaTab({ article }: { article: ArticleRecord }) {
         destructive
         onConfirm={() => deleteTarget && deleteMutation.mutate(deleteTarget)}
       />
+
+      {/* Video & Audio Management */}
+      <VideoAudioSection article={article} />
+    </div>
+  );
+}
+
+function VideoAudioSection({ article }: { article: ArticleRecord }) {
+  const queryClient = useQueryClient();
+
+  const saveMutation = useMutation({
+    mutationFn: (updates: Partial<ArticleRecord>) =>
+      updateArticle(article.id, updates as Record<string, unknown>),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['admin', 'article', article.id] });
+      toast.success('Media settings saved');
+    },
+    onError: (err: Error) => toast.error(`Save failed: ${err.message}`),
+  });
+
+  const [videoUrl, setVideoUrl] = useState(article.video_url || '');
+  const [videoPlatform, setVideoPlatform] = useState(article.video_platform || '');
+  const [videoStatus, setVideoStatus] = useState(article.video_status || 'none');
+  const [videoDuration, setVideoDuration] = useState(article.video_duration_seconds?.toString() || '');
+  const [videoTranscript, setVideoTranscript] = useState(article.video_transcript || '');
+  const [audioUrl, setAudioUrl] = useState(article.audio_url || '');
+  const [audioStatus, setAudioStatus] = useState(article.audio_status || 'tts_only');
+  const [audioDuration, setAudioDuration] = useState(article.audio_duration_seconds?.toString() || '');
+
+  const handleSave = () => {
+    saveMutation.mutate({
+      video_url: videoUrl || null,
+      video_platform: (videoPlatform || null) as ArticleRecord['video_platform'],
+      video_status: videoStatus as ArticleRecord['video_status'],
+      video_duration_seconds: videoDuration ? parseInt(videoDuration, 10) : null,
+      video_transcript: videoTranscript || null,
+      audio_url: audioUrl || null,
+      audio_status: audioStatus as ArticleRecord['audio_status'],
+      audio_duration_seconds: audioDuration ? parseInt(audioDuration, 10) : null,
+    });
+  };
+
+  return (
+    <div className="space-y-6 border-t border-border pt-6">
+      {/* Video Section */}
+      <div>
+        <h3 className="text-sm font-bold text-text-primary mb-3 uppercase tracking-wider flex items-center gap-2">
+          <Film size={16} className="text-indigo-500" />
+          Companion Video
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label className="block text-xs font-medium text-text-secondary mb-1">Video URL</label>
+            <input
+              type="url"
+              value={videoUrl}
+              onChange={(e) => setVideoUrl(e.target.value)}
+              placeholder="https://youtube.com/watch?v=..."
+              className="w-full px-3 py-2 rounded-lg border border-border bg-background text-sm text-text-primary focus:ring-2 focus:ring-primary/30 focus:border-primary"
+            />
+          </div>
+          <div>
+            <label className="block text-xs font-medium text-text-secondary mb-1">Platform</label>
+            <select
+              value={videoPlatform}
+              onChange={(e) => setVideoPlatform(e.target.value)}
+              className="w-full px-3 py-2 rounded-lg border border-border bg-background text-sm text-text-primary"
+            >
+              <option value="">Select...</option>
+              <option value="youtube">YouTube</option>
+              <option value="vimeo">Vimeo</option>
+              <option value="bunny">Bunny CDN</option>
+              <option value="self_hosted">Self-hosted</option>
+            </select>
+          </div>
+          <div>
+            <label className="block text-xs font-medium text-text-secondary mb-1">Status</label>
+            <select
+              value={videoStatus}
+              onChange={(e) => setVideoStatus(e.target.value as 'none' | 'planned' | 'scripted' | 'recorded' | 'published')}
+              className="w-full px-3 py-2 rounded-lg border border-border bg-background text-sm text-text-primary"
+            >
+              <option value="none">None</option>
+              <option value="planned">Planned</option>
+              <option value="scripted">Scripted</option>
+              <option value="recorded">Recorded</option>
+              <option value="published">Published</option>
+            </select>
+          </div>
+          <div>
+            <label className="block text-xs font-medium text-text-secondary mb-1">Duration (seconds)</label>
+            <input
+              type="number"
+              value={videoDuration}
+              onChange={(e) => setVideoDuration(e.target.value)}
+              placeholder="360"
+              className="w-full px-3 py-2 rounded-lg border border-border bg-background text-sm text-text-primary"
+            />
+          </div>
+        </div>
+        <div className="mt-3">
+          <label className="block text-xs font-medium text-text-secondary mb-1">Transcript</label>
+          <textarea
+            value={videoTranscript}
+            onChange={(e) => setVideoTranscript(e.target.value)}
+            rows={4}
+            placeholder="Full video transcript for accessibility..."
+            className="w-full px-3 py-2 rounded-lg border border-border bg-background text-sm text-text-primary resize-y"
+          />
+        </div>
+      </div>
+
+      {/* Audio Section */}
+      <div>
+        <h3 className="text-sm font-bold text-text-primary mb-3 uppercase tracking-wider flex items-center gap-2">
+          <Headphones size={16} className="text-violet-500" />
+          Audio Narration
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label className="block text-xs font-medium text-text-secondary mb-1">Audio URL</label>
+            <input
+              type="url"
+              value={audioUrl}
+              onChange={(e) => setAudioUrl(e.target.value)}
+              placeholder="https://cdn.psychage.com/audio/..."
+              className="w-full px-3 py-2 rounded-lg border border-border bg-background text-sm text-text-primary focus:ring-2 focus:ring-primary/30 focus:border-primary"
+            />
+          </div>
+          <div>
+            <label className="block text-xs font-medium text-text-secondary mb-1">Status</label>
+            <select
+              value={audioStatus}
+              onChange={(e) => setAudioStatus(e.target.value as 'tts_only' | 'planned' | 'recorded' | 'published')}
+              className="w-full px-3 py-2 rounded-lg border border-border bg-background text-sm text-text-primary"
+            >
+              <option value="tts_only">TTS Only (Browser)</option>
+              <option value="planned">Planned</option>
+              <option value="recorded">Recorded</option>
+              <option value="published">Published</option>
+            </select>
+          </div>
+          <div>
+            <label className="block text-xs font-medium text-text-secondary mb-1">Duration (seconds)</label>
+            <input
+              type="number"
+              value={audioDuration}
+              onChange={(e) => setAudioDuration(e.target.value)}
+              placeholder="600"
+              className="w-full px-3 py-2 rounded-lg border border-border bg-background text-sm text-text-primary"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Save Button */}
+      <div className="flex justify-end">
+        <button
+          onClick={handleSave}
+          disabled={saveMutation.isPending}
+          className="px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors disabled:opacity-50"
+        >
+          {saveMutation.isPending ? 'Saving...' : 'Save Media Settings'}
+        </button>
+      </div>
     </div>
   );
 }
@@ -854,10 +1019,10 @@ function ImageCard({
 
 function WorkflowTab({ article }: { article: ArticleRecord }) {
   const queryClient = useQueryClient();
-  const navigate = useNavigate();
+  const _navigate = useNavigate();
   const [rejectReason, setRejectReason] = useState('');
   const [showRejectDialog, setShowRejectDialog] = useState(false);
-  const [transitionNotes, setTransitionNotes] = useState('');
+  const [transitionNotes, _setTransitionNotes] = useState('');
   const [confirmAction, setConfirmAction] = useState<{ status: ArticleStatus; label: string } | null>(null);
 
   const { data: history = [] } = useQuery({

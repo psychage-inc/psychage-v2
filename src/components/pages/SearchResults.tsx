@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, Search, PenTool, FileText, Video, ChevronDown, Loader2, AlertCircle } from 'lucide-react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { api } from '../../lib/api';
-import { articleService, ArticleWithContent } from '../../services/articleService';
+import { ArticleWithContent } from '../../services/articleService';
 import { videoService } from '../../services/videoService';
 import { toolService } from '../../services/toolService';
 import { categoryService } from '../../services/categoryService';

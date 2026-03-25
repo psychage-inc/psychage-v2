@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import React from 'react';
@@ -6,7 +7,7 @@ import { Card } from '../Card';
 
 vi.mock('framer-motion', () => ({
     motion: {
-        div: React.forwardRef(({ children, variants, initial, whileHover, ...props }: any, ref: any) => (
+        div: React.forwardRef(({ children, variants, initial, ...props }: any, ref: any) => (
             <div ref={ref} {...props}>{children}</div>
         )),
     },

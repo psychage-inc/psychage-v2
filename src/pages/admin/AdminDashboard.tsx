@@ -4,7 +4,7 @@ import { Card } from '@/components/ui/Card';
 import {
     Users, FileText, AlertTriangle, Activity, ArrowRight, Clock,
     Shield, Zap, Server, BarChart3, BookOpen, Settings,
-    CheckCircle, UserCheck, UserPlus
+    CheckCircle, UserCheck
 } from 'lucide-react';
 import type { AdminStats, AdminActivityLog } from '@/lib/api';
 import { format } from 'date-fns';

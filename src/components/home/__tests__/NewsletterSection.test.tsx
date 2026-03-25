@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
@@ -10,10 +12,10 @@ vi.mock('framer-motion', () => {
     const { forwardRef } = require('react');
     return {
         motion: {
-            div: forwardRef(({ children, initial, whileInView, animate, transition, viewport, ...props }: any, ref: any) => (
+            div: forwardRef(({ children, initial, whileInView, animate, transition, ...props }: any, ref: any) => (
                 <div ref={ref} {...props}>{children}</div>
             )),
-            button: forwardRef(({ children, whileTap, ...props }: any, ref: any) => (
+            button: forwardRef(({ children, ...props }: any, ref: any) => (
                 <button ref={ref} {...props}>{children}</button>
             )),
         },

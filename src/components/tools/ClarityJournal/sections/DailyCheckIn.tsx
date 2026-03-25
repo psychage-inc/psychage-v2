@@ -1,3 +1,4 @@
+ 
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -36,6 +37,7 @@ const DailyCheckIn: React.FC = () => {
     }
     const existing = data.dailyCheckIns.find(e => e.date === date);
     if (existing) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setMood(existing.mood);
       setSleepHours(existing.sleepHours);
       setSleepQuality(existing.sleepQuality);

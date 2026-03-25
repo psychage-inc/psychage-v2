@@ -13,7 +13,7 @@ interface SectionCardProps {
   entryCount?: number;
 }
 
-const SectionCard: React.FC<SectionCardProps> = ({ section, lastEntry, entryCount }) => {
+const SectionCard: React.FC<SectionCardProps> = ({ section, lastEntry }) => {
   const Icon = iconMap[section.icon] || Sun;
 
   return (

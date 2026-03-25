@@ -108,7 +108,7 @@ export function useProviderSearch(): UseProviderSearchReturn {
         debounceRef.current = null;
       }
     };
-  }, [executeSearch]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [executeSearch]);  
 
   // Update URL params
   const setParams = useCallback((newParams: Partial<ProviderSearchParams>) => {

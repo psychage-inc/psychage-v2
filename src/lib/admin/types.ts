@@ -241,6 +241,21 @@ export interface ArticleRecord {
   internal_links: string[];
   tool_links: string[];
   related_article_ids: string[];
+  // Video & Audio
+  video_url: string | null;
+  video_platform: 'youtube' | 'vimeo' | 'bunny' | 'self_hosted' | null;
+  video_status: 'none' | 'planned' | 'scripted' | 'recorded' | 'published';
+  video_duration_seconds: number | null;
+  video_transcript: string | null;
+  audio_url: string | null;
+  audio_status: 'tts_only' | 'planned' | 'recorded' | 'published';
+  audio_duration_seconds: number | null;
+  subtitle: string | null;
+  // Rewrite tracking
+  rewrite_needed: boolean;
+  rewrite_status: 'not_needed' | 'flagged' | 'in_progress' | 'review' | 'complete';
+  original_word_count: number | null;
+  last_quality_audit: string | null;
   fact_checked: boolean;
   fact_checked_by: string | null;
   fact_checked_at: string | null;

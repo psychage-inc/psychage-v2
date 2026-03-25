@@ -58,12 +58,14 @@ const MindMate: React.FC = () => {
     const [messages, setMessages] = useState<Message[]>(() => {
         const saved = localStorage.getItem(STORAGE_KEY);
         if (saved) {
+            // eslint-disable-next-line no-empty
             try { return JSON.parse(saved); } catch { }
         }
         return [INIT_MESSAGE];
     });
 
     const [isTyping, setIsTyping] = useState(false);
+    const [lastFailedInput, setLastFailedInput] = useState<string | null>(null);
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
     // Check consent and hydrate from Supabase when authenticated
@@ -137,16 +139,27 @@ const MindMate: React.FC = () => {
         }
     };
 
+    const handleRetry = () => {
+        if (lastFailedInput) {
+            setInputText(lastFailedInput);
+            setLastFailedInput(null);
+            // Remove the error message
+            setMessages(prev => prev.filter(m => m.id !== 'error-msg'));
+        }
+    };
+
     const handleSend = async () => {
         if (!inputText.trim()) return;
 
-        const userMsg: Message = { id: Date.now().toString(), sender: 'user', text: inputText };
+        const currentInput = inputText.trim();
+        const userMsg: Message = { id: Date.now().toString(), sender: 'user', text: currentInput };
         setMessages(prev => [...prev, userMsg]);
         setInputText('');
         setIsTyping(true);
+        setLastFailedInput(null);
 
         // Dual-write user message to Supabase
-        persistMessage('user', inputText);
+        persistMessage('user', currentInput);
 
         try {
             // Build message history for the server-side API
@@ -188,8 +201,9 @@ const MindMate: React.FC = () => {
             persistMessage('assistant', aiMsg.text);
         } catch (error) {
             console.error("AI Error:", error);
+            setLastFailedInput(currentInput);
             setMessages(prev => [...prev, {
-                id: Date.now().toString(),
+                id: 'error-msg',
                 sender: 'ai',
                 text: "I'm having trouble connecting. Please try again in a moment.",
                 type: 'text'
@@ -344,6 +358,19 @@ const MindMate: React.FC = () => {
                             )}
                             <div ref={messagesEndRef} />
                         </div>
+
+                        {/* Retry bar */}
+                        {lastFailedInput && !isTyping && (
+                            <div className="relative z-10 px-4 pt-2">
+                                <button
+                                    onClick={handleRetry}
+                                    className="w-full flex items-center justify-center gap-2 px-3 py-2 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 text-amber-700 dark:text-amber-300 rounded-xl text-xs font-medium hover:bg-amber-100 dark:hover:bg-amber-900/30 transition-colors"
+                                >
+                                    <AlertTriangle size={12} />
+                                    Tap to retry your last message
+                                </button>
+                            </div>
+                        )}
 
                         {/* Input — clean border style */}
                         <div className="relative z-10 px-4 pb-4 pt-2">

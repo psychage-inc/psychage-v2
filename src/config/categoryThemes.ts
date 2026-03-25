@@ -2,6 +2,7 @@ import { LucideIcon } from 'lucide-react';
 import {
     Brain, CloudRain, Users, Shield, Zap, AlertTriangle, Moon, Heart,
     MessageCircle, Briefcase, Compass, Baby, Apple, RefreshCw, Globe,
+    UserCheck, Activity, Monitor, Sunrise,
 } from 'lucide-react';
 
 /**
@@ -318,6 +319,80 @@ export const categoryThemes: CategoryThemeMap = {
             spotlight: 'rgba(6, 182, 212, 0.15)',
             gradient: 'from-cyan-400 to-cyan-600',
             ring: 'ring-cyan-500/40',
+        },
+    },
+
+    // ─── BATCH 2 CATEGORIES ───────────────────────────────────────
+    'mens-mental-health': {
+        label: "Men's Mental Health",
+        colorFamily: 'blue',
+        icon: UserCheck,
+        shades: { 50: 'blue-50', 100: 'blue-100', 500: 'blue-600', 600: 'blue-700' },
+        classes: {
+            bg: 'bg-blue-600',
+            bgLight: 'bg-blue-50',
+            bgLightDark: 'dark:bg-blue-950/30',
+            text: 'text-blue-700',
+            textDark: 'dark:text-blue-400',
+            border: 'border-blue-200',
+            borderDark: 'dark:border-blue-800',
+            spotlight: 'rgba(37, 99, 235, 0.15)',
+            gradient: 'from-blue-500 to-blue-700',
+            ring: 'ring-blue-600/40',
+        },
+    },
+    'chronic-illness-pain': {
+        label: 'Chronic Illness & Pain',
+        colorFamily: 'lime',
+        icon: Activity,
+        shades: { 50: 'lime-50', 100: 'lime-100', 500: 'lime-500', 600: 'lime-600' },
+        classes: {
+            bg: 'bg-lime-600',
+            bgLight: 'bg-lime-50',
+            bgLightDark: 'dark:bg-lime-950/30',
+            text: 'text-lime-700',
+            textDark: 'dark:text-lime-400',
+            border: 'border-lime-200',
+            borderDark: 'dark:border-lime-800',
+            spotlight: 'rgba(101, 163, 13, 0.15)',
+            gradient: 'from-lime-400 to-lime-600',
+            ring: 'ring-lime-500/40',
+        },
+    },
+    'technology-digital-life': {
+        label: 'Technology & Digital Life',
+        colorFamily: 'slate',
+        icon: Monitor,
+        shades: { 50: 'slate-50', 100: 'slate-100', 500: 'slate-500', 600: 'slate-600' },
+        classes: {
+            bg: 'bg-slate-600',
+            bgLight: 'bg-slate-50',
+            bgLightDark: 'dark:bg-slate-800/30',
+            text: 'text-slate-600',
+            textDark: 'dark:text-slate-400',
+            border: 'border-slate-200',
+            borderDark: 'dark:border-slate-700',
+            spotlight: 'rgba(100, 116, 139, 0.15)',
+            gradient: 'from-slate-400 to-slate-600',
+            ring: 'ring-slate-500/40',
+        },
+    },
+    'spirituality-meaning': {
+        label: 'Spirituality & Meaning',
+        colorFamily: 'yellow',
+        icon: Sunrise,
+        shades: { 50: 'yellow-50', 100: 'yellow-100', 500: 'yellow-500', 600: 'yellow-600' },
+        classes: {
+            bg: 'bg-yellow-500',
+            bgLight: 'bg-yellow-50',
+            bgLightDark: 'dark:bg-yellow-950/30',
+            text: 'text-yellow-700',
+            textDark: 'dark:text-yellow-400',
+            border: 'border-yellow-200',
+            borderDark: 'dark:border-yellow-800',
+            spotlight: 'rgba(234, 179, 8, 0.15)',
+            gradient: 'from-yellow-400 to-yellow-600',
+            ring: 'ring-yellow-500/40',
         },
     },
 };

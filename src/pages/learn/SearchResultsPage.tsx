@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
-import { Search, Filter, Calendar, Users, FileText, Wrench, X } from 'lucide-react';
+import { Search, Filter, Users, FileText, Wrench, X } from 'lucide-react';
 import { searchService, SearchResult, SearchFilters } from '@/services/searchService';
 import { Article } from '@/types/models';
 import ArticleCard from '@/components/article/ArticleCard';

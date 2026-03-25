@@ -14,7 +14,6 @@
  */
 
 import type {
-  ConditionWithMappings,
   KnowledgeBase,
   NavigatorResultItem,
   NavigatorResults,

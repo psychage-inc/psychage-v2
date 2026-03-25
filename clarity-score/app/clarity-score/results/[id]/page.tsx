@@ -1,10 +1,10 @@
 'use client';
 
 import { useAssessmentDetail } from '@/lib/hooks/useAssessment';
-import { notFound, useParams, useRouter } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 export const dynamic = 'force-dynamic';
 
-import { useEffect, Suspense } from 'react';
+import { useEffect } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Share2, FileText, Lock } from 'lucide-react';
 

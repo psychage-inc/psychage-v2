@@ -1,5 +1,4 @@
 import type {
-  ChatMessage,
   Conversation,
   ConversationListItem,
 } from '../types/chat.types';

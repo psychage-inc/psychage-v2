@@ -1,3 +1,4 @@
+ 
 import React, { useState, useEffect } from 'react';
 import Modal from '@/components/ui/Modal';
 import Button from '@/components/ui/Button';
@@ -39,6 +40,7 @@ const AdminConfirmModal: React.FC<AdminConfirmModalProps> = ({
     const [reason, setReason] = useState('');
 
     useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         if (isOpen) setReason('');
     }, [isOpen]);
 

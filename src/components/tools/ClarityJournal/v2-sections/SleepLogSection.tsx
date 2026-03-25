@@ -38,7 +38,7 @@ const SleepLogSection: React.FC<SleepLogSectionProps> = ({ date, onSave, existin
   const calcDuration = (): string => {
     const [bh, bm] = bedtime.split(':').map(Number);
     const [wh, wm] = wakeTime.split(':').map(Number);
-    let bedMin = bh * 60 + bm;
+    const bedMin = bh * 60 + bm;
     let wakeMin = wh * 60 + wm;
     if (wakeMin <= bedMin) wakeMin += 24 * 60;
     const total = wakeMin - bedMin;

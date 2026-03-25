@@ -40,7 +40,7 @@ function getScoreColor(score: number | null): string {
   return 'bg-emerald-400';
 }
 
-function getScoreLabel(score: number | null): string {
+function _getScoreLabel(score: number | null): string {
   if (score === null) return 'Not scored';
   if (score < 50) return 'Poor';
   if (score < 75) return 'Fair';

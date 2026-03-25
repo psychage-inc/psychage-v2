@@ -38,7 +38,7 @@ export default function AssessmentFlow() {
                     setAnswers(parsed.answers);
                     setCurrentIndex(parsed.currentIndex);
                 }
-            } catch (e) {
+            } catch {
                 // Ignored
             }
         }

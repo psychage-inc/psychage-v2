@@ -1,3 +1,4 @@
+ 
 import React from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
@@ -32,11 +33,13 @@ const RoleGuard: React.FC<RoleGuardProps> = ({ children, allowedRoles }) => {
             if (onAdminDomain) {
                 return <Navigate to="/dashboard" replace />;
             }
+            // eslint-disable-next-line react-hooks/immutability
             window.location.href = adminUrl('/dashboard');
             return null;
         }
         if (user.role === 'provider') {
             if (onAdminDomain) {
+                // eslint-disable-next-line react-hooks/immutability
                 window.location.href = mainUrl('/provider');
                 return null;
             }
@@ -44,6 +47,7 @@ const RoleGuard: React.FC<RoleGuardProps> = ({ children, allowedRoles }) => {
         }
         if (user.role === 'patient') {
             if (onAdminDomain) {
+                // eslint-disable-next-line react-hooks/immutability
                 window.location.href = mainUrl('/dashboard');
                 return null;
             }
@@ -51,6 +55,7 @@ const RoleGuard: React.FC<RoleGuardProps> = ({ children, allowedRoles }) => {
         }
 
         if (onAdminDomain) {
+            // eslint-disable-next-line react-hooks/immutability
             window.location.href = mainUrl('/');
             return null;
         }

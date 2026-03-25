@@ -1,7 +1,6 @@
 import React from 'react';
-import { Phone, MessageSquare, ExternalLink, ShieldAlert } from 'lucide-react';
+import { Phone, MessageSquare, ExternalLink } from 'lucide-react';
 import { CrisisResource } from '../../lib/navigator/types';
-import { cn } from '../../lib/utils';
 import { Card } from '../ui/Card';
 
 interface CrisisResourceCardProps {

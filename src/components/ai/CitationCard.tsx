@@ -9,7 +9,7 @@
  */
 
 import React from 'react';
-import { ExternalLink, FileText, Video, Globe, BadgeCheck } from 'lucide-react';
+import { ExternalLink, FileText, Video, Globe } from 'lucide-react';
 import type { Citation } from '@/lib/ai/types';
 
 interface CitationCardProps {
@@ -22,7 +22,7 @@ const CitationCard: React.FC<CitationCardProps> = ({ citation }) => {
   // Simplified for SourceCitation type
   const isExternal = false;
   const isVideo = false;
-  const isArticle = true;
+  const _isArticle = true;
 
   // Icon based on type
   const Icon = isVideo ? Video : isExternal ? Globe : FileText;

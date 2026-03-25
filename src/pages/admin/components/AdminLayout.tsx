@@ -1,3 +1,4 @@
+ 
 import React, { useEffect, useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import SEO from '@/components/SEO';
@@ -20,6 +21,7 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children, title, subtitle, se
 
     useEffect(() => {
         if (!user || user.role !== 'admin') {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             setOnboardingStatus('completed');
             return;
         }

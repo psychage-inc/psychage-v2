@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import {
@@ -19,7 +19,7 @@ import {
   reorderClusterChildren,
   updateArticleStatus,
 } from '@/services/articleAdminService';
-import type { ArticleRecord, ArticleStatus } from '@/lib/admin/types';
+import type { ArticleRecord } from '@/lib/admin/types';
 import { adminPath } from '@/hooks/useAdminNavigate';
 
 // ============================================================

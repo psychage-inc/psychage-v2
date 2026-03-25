@@ -1,7 +1,7 @@
+ 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useScrollAnimation } from './shared/useScrollAnimation';
-import { useReducedMotion } from '@/hooks/useReducedMotion';
 
 interface StatItem {
     value?: number | string;
@@ -36,6 +36,7 @@ function useCountUp(end: number, isActive: boolean, shouldAnimate: boolean, dura
     useEffect(() => {
         if (!isActive) return;
         if (!shouldAnimate) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             setCount(end);
             return;
         }

@@ -1,3 +1,4 @@
+ 
 import React, { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 import type { Medication, MedicationFrequency } from '../types';
@@ -44,6 +45,7 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
   // Auto-update times when frequency changes (only for new medications)
   useEffect(() => {
     if (!initial) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setTimesOfDay(DEFAULT_TIMES[frequency]);
     }
   }, [frequency, initial]);

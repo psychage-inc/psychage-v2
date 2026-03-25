@@ -19,8 +19,7 @@ import FreeFormSection from './FreeFormSection';
 import WeeklyScreenerV2 from './WeeklyScreenerV2';
 import CrisisOverlay from './CrisisOverlay';
 import { useClarityJournal } from '../hooks/useClarityJournal';
-import { getToday, formatDate, addDays } from '../dates';
-import { addSafetyFlag } from '../storage';
+import { getToday, formatDate } from '../dates';
 
 const SECTIONS = [
   { id: 'mood', label: 'Mood Check-In', icon: Smile, color: 'teal' },

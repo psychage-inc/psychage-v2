@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Video, Users, Building2, Phone, Mail, Globe, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Badge from '@/components/ui/Badge';
 import { hoverLift } from '@/lib/animations';
 import type { ProviderCardData } from '@/lib/providers/types';
 import { VerificationBadge, isProviderVerified } from '../shared/VerificationBadge';

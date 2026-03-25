@@ -5,7 +5,7 @@
  * - Export: copy summary to clipboard, download JSON, generate ICS
  */
 
-import { SleepPlanInputs, SleepPlanOutput, formatDuration, formatTime, parseTime, minutesBetween } from './model';
+import { SleepPlanInputs, SleepPlanOutput, formatDuration, parseTime, minutesBetween } from './model';
 
 // ─── URL Share ──────────────────────────────────────────────────────────────
 
@@ -182,7 +182,7 @@ export function downloadIcs(inputs: SleepPlanInputs): void {
   const dd = today.getDate();
 
   const bedMin = parseTime(inputs.bedtime);
-  const wakeMin = parseTime(inputs.wakeTime);
+  const _wakeMin = parseTime(inputs.wakeTime);
   const tib = minutesBetween(inputs.bedtime, inputs.wakeTime);
 
   // Bedtime event — set to tonight

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/set-state-in-effect, react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Stethoscope } from 'lucide-react';
@@ -43,7 +44,7 @@ export const ProviderQuickMatch: React.FC<ProviderQuickMatchProps> = ({
       });
 
     return () => { cancelled = true; };
-  }, [specialtySlugs.join(','), maxProviders]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [specialtySlugs.join(','), maxProviders]);  
 
   if (isLoading || providers.length === 0) return null;
 

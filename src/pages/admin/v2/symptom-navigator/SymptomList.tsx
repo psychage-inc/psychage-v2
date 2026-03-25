@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { type ColumnDef } from '@tanstack/react-table';
-import { Plus, Pencil, Power, X } from 'lucide-react';
+import { Plus, Pencil, X } from 'lucide-react';
 import { supabase } from '@/lib/supabaseClient';
 import { logAdminAction } from '@/lib/admin/auditLogger';
 import { SYMPTOM_DOMAINS } from '@/lib/admin/constants';

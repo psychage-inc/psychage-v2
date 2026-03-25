@@ -124,7 +124,7 @@ const ProviderProfilePage: React.FC = () => {
           <p className="text-xs text-gray-400 dark:text-gray-500">
             See something wrong?{' '}
             <a
-              href={`mailto:support@psychage.com?subject=Provider Profile Concern: ${provider.display_name}&body=Provider ID: ${provider.id}%0A%0APlease describe your concern:`}
+              href={`mailto:info@psychage.com?subject=Provider Profile Concern: ${provider.display_name}&body=Provider ID: ${provider.id}%0A%0APlease describe your concern:`}
               className="text-teal-600 dark:text-teal-400 hover:underline"
             >
               Report a concern

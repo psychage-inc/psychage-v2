@@ -136,7 +136,7 @@ export const api = {
             try {
                 const id = atob(token);
                 return await this.getAssessment(id);
-            } catch (e) {
+            } catch {
                 throw new Error('Invalid or expired token');
             }
         }

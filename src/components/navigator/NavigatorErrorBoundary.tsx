@@ -37,17 +37,21 @@ export class NavigatorErrorBoundary extends Component<Props, State> {
     }
 
     private handleReset = () => {
-        this.setState({ hasError: false, error: null, errorInfo: null });
+        // Reset context state BEFORE clearing error boundary state.
+        // If we clear hasError first, React re-renders children with the old
+        // (crashed) state before RESET_FLOW processes, causing an immediate re-crash.
         if (this.props.onReset) {
             this.props.onReset();
         }
+        this.setState({ hasError: false, error: null, errorInfo: null });
     };
 
     private handleGoBack = () => {
-        this.setState({ hasError: false, error: null, errorInfo: null });
+        // Same pattern: update context state before unmasking children.
         if (this.props.onGoBack) {
             this.props.onGoBack();
         }
+        this.setState({ hasError: false, error: null, errorInfo: null });
     };
 
     private handleExit = () => {

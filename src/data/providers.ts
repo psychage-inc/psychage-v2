@@ -85,7 +85,7 @@ export const providers: Provider[] = [
   },
   {
     id: 4,
-    name: "James Wilson, LCSW",
+    name: "Marcus Rivera, LCSW",
     role: "Licensed Clinical Social Worker",
     image: "/images/authors/author-male-2.svg",
     specialties: ["Addiction", "Grief", "Men's Issues", "Trauma"],
@@ -95,7 +95,7 @@ export const providers: Provider[] = [
     verified: true,
     yearsExperience: 20,
     languages: ["English"],
-    bio: "James Wilson is a seasoned social worker with a background in crisis intervention and addiction recovery. He is committed to helping men find their emotional voice.",
+    bio: "Marcus Rivera is a seasoned social worker with a background in crisis intervention and addiction recovery. He is committed to helping men find their emotional voice.",
     approach: "I bring a practical, strength-based perspective to therapy. Having worked in various clinical settings, I help clients navigate life's toughest transitions—whether it's loss, addiction, or identity crises—with compassion and grit.",
     education: [
       "MSW, University of Texas at Austin",
@@ -106,7 +106,7 @@ export const providers: Provider[] = [
     rating: 4.9,
     reviews: 2,
     reviewsList: [
-      { id: "r7", user: "Jordan K.", date: "Jan 2025", rating: 5, comment: "James is the real deal. Straight-talking and genuinely cares." },
+      { id: "r7", user: "Jordan K.", date: "Jan 2025", rating: 5, comment: "Marcus is the real deal. Straight-talking and genuinely cares." },
       { id: "r8", user: "Riley B.", date: "Dec 2024", rating: 5, comment: "Helped me through the hardest time of my life. Cannot recommend enough." },
     ],
   },

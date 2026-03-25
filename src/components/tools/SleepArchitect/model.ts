@@ -148,7 +148,7 @@ export function minutesBetween(bedtime: string, wakeTime: string): number {
  * - Cycle 4: ~5% N1, ~55% N2, ~10% N3, ~30% REM → minimal N3
  * - Cycle 5+: ~5% N1, ~55% N2, ~5% N3, ~35% REM → predominantly REM
  */
-function getStageDistribution(cycleNumber: number, totalCycles: number): {
+function getStageDistribution(cycleNumber: number, _totalCycles: number): {
   n1: number; n2: number; n3: number; rem: number;
 } {
   // clamp to reasonable range

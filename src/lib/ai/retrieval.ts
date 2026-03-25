@@ -2,7 +2,7 @@
 // Psychage AI Help — Retrieval Engine (Vector + Hybrid Search)
 // =============================================================================
 
-import { createClient, type SupabaseClient } from '@supabase/supabase-js';
+import { type SupabaseClient } from '@supabase/supabase-js';
 import type {
   RetrievalOptions,
   RetrievalResult,

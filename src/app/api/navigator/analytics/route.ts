@@ -11,7 +11,7 @@
  */
 
 import { createClient } from '@supabase/supabase-js';
-import type { AnalyticsEvent, AnalyticsEventType, RedFlagLevel } from '@/lib/navigator/types';
+import type { AnalyticsEventType, RedFlagLevel } from '@/lib/navigator/types';
 
 const supabaseUrl = process.env.VITE_SUPABASE_URL;
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;

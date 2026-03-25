@@ -1,7 +1,6 @@
 import React from 'react';
 import { Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { CRISIS_MESSAGE } from '../constants';
 
 const CrisisCallout: React.FC = () => {
   return (

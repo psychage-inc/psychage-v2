@@ -178,8 +178,8 @@ export const articles: Article[] = [
     publishedAt: "2025-01-10",
     views: 9800,
     author: {
-      id: "dr-james-wilson",
-      name: "Dr. James Wilson",
+      id: "dr-marcus-rivera",
+      name: "Dr. Marcus Rivera",
       role: "Sleep Specialist",
       image: "/images/authors/author-male-2.svg"
     },

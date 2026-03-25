@@ -86,7 +86,7 @@ export const contactService = {
         } catch {
             return {
                 success: false,
-                error: 'Unable to save your message. Please try again or email us directly at support@psychage.com'
+                error: 'Unable to save your message. Please try again or email us directly at info@psychage.com'
             };
         }
     },

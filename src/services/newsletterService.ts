@@ -29,12 +29,15 @@ export const newsletterService = {
                     status: 'active'
                 });
 
-            if (error) throw error;
+            if (error) {
+                console.error('Newsletter subscription failed:', error);
+                return { success: false, message: 'Subscription failed. Please try again later.' };
+            }
 
             return { success: true, message: 'Successfully subscribed!' };
         } catch (error) {
             console.error('Newsletter subscription failed:', error);
-            throw error;
+            return { success: false, message: 'Subscription failed. Please try again later.' };
         }
     },
 
@@ -45,12 +48,15 @@ export const newsletterService = {
                 .update({ status: 'unsubscribed', unsubscribed_at: new Date().toISOString() })
                 .eq('email', email.toLowerCase());
 
-            if (error) throw error;
+            if (error) {
+                console.error('Newsletter unsubscribe failed:', error);
+                return { success: false, message: 'Unsubscribe failed. Please try again later.' };
+            }
 
             return { success: true, message: 'Successfully unsubscribed.' };
         } catch (error) {
             console.error('Newsletter unsubscribe failed:', error);
-            throw error;
+            return { success: false, message: 'Unsubscribe failed. Please try again later.' };
         }
     },
 

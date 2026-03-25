@@ -3,9 +3,7 @@ import {
     KnowledgeBase,
     NavigatorResults,
     RedFlagLevel,
-    UserSymptomInput,
-    UserDuration,
-    UserFrequency
+    UserSymptomInput
 } from '../lib/navigator/types';
 import { NavigatorAnalytics } from '../lib/navigator/analytics';
 import { mockKnowledgeBase } from '../data/mock_knowledge_base';
@@ -178,7 +176,7 @@ function navigatorReducer(state: NavigatorState, action: NavigatorAction): Navig
 }
 
 // Steps that represent stable, user-interactive states (persisted to storage)
-const PERSISTABLE_STEPS = new Set(['domains', 'symptoms', 'details', 'results']);
+const PERSISTABLE_STEPS = new Set(['domains', 'symptoms', 'details']);
 
 // Context creation
 const NavigatorContext = createContext<{
@@ -214,7 +212,7 @@ const detectRegion = (): string => {
         };
         const lang = parts[0];
         if (lang && langHints[lang]) return langHints[lang];
-    } catch (_e) {
+    } catch {
         // Ignore error
     }
     return 'DEFAULT'; // International fallback
@@ -266,7 +264,7 @@ export const NavigatorProvider: React.FC<{ children: ReactNode }> = ({ children 
         const hadRawData = hasRawNavigatorState();
         const persisted = loadNavigatorState();
         if (persisted) {
-            const restoredStep = persisted.currentStep === 'processing'
+            const restoredStep = (persisted.currentStep === 'processing' || persisted.currentStep === 'results')
                 ? 'details' as NavigatorState['currentStep']
                 : persisted.currentStep as NavigatorState['currentStep'];
             dispatch({
@@ -289,7 +287,7 @@ export const NavigatorProvider: React.FC<{ children: ReactNode }> = ({ children 
             try {
                 const data = await fetchKnowledgeBaseData();
                 dispatch({ type: 'KNOWLEDGE_BASE_LOADED', payload: data });
-            } catch (error) {
+            } catch {
                 const message = 'Failed to load symptom data. Please try again later.';
                 dispatch({ type: 'KNOWLEDGE_BASE_ERROR', payload: message });
                 dispatch({ type: 'ANNOUNCE', payload: { message, mode: 'assertive' } });

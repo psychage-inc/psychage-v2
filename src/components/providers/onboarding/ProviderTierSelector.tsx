@@ -88,7 +88,6 @@ interface TierCardProps {
 }
 
 const TierCard: React.FC<TierCardProps> = ({
-  tier,
   title,
   subtitle,
   features,

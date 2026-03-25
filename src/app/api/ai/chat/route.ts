@@ -334,7 +334,7 @@ export async function handleChatRequest(
     // -------------------------------------------------------------------------
     // 8. Generate response
     // -------------------------------------------------------------------------
-    const { messages: historyMessages, summary } =
+    const { messages: _historyMessages, summary } =
       await conversationManager.getFormattedHistory(
         conversation.id,
         config.conversation.maxHistoryForLLM

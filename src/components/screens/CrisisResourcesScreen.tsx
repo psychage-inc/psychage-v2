@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { ShieldAlert, ArrowLeft } from 'lucide-react';
 import { CrisisResourceCard } from '../navigator/CrisisResourceCard';
 import { CrisisResource } from '../../lib/navigator/types';

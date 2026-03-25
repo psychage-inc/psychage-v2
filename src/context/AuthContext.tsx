@@ -196,7 +196,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         return { success: false, error: error.message };
       }
       return { success: true };
-    } catch (error) {
+    } catch {
       return { success: false, error: 'Failed to sign in with Google' };
     }
   }, []);
@@ -213,7 +213,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         return { success: false, error: error.message };
       }
       return { success: true };
-    } catch (error) {
+    } catch {
       return { success: false, error: 'Failed to sign in with Apple' };
     }
   }, []);

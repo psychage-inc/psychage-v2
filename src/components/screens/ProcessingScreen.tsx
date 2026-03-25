@@ -42,6 +42,14 @@ export const ProcessingScreen: React.FC = () => {
             return;
         }
 
+        // Guard: no symptoms selected
+        if (selectedSymptoms.size === 0) {
+            const errorMsg = 'No symptoms selected. Please go back and select at least one symptom.';
+            setProcessingError(errorMsg);
+            announceAssertive(errorMsg);
+            return;
+        }
+
         // Staleness warning
         if (kbLoadedAt && Date.now() - kbLoadedAt > KB_STALE_MS) {
             console.warn(`[Navigator] Knowledge base loaded >${KB_STALENESS_MINUTES}min ago, results may use stale rules`);
@@ -101,7 +109,9 @@ export const ProcessingScreen: React.FC = () => {
             clearInterval(interval);
             if (finalTimeoutRef.current) clearTimeout(finalTimeoutRef.current);
         };
-    }, []); // eslint-disable-line react-hooks/exhaustive-deps — run once on mount
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+// eslint-disable-next-line react-hooks/exhaustive-deps
 
     // Error state: show accessible error UI with recovery options (WCAG 4.1.3)
     if (processingError) {

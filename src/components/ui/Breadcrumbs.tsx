@@ -34,7 +34,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, className, pageData })
 
                 {breadcrumbs.map((item, index) => {
                     const isLast = index === breadcrumbs.length - 1;
-                    const showSeparator = index > 0 || (!items && index === 0); // If auto, first item needs separator from Home icon? No, wait. 
+                    const _showSeparator = index > 0 || (!items && index === 0); // If auto, first item needs separator from Home icon? No, wait. 
                     // My hook implementation might include Home? Let's check hook.
                     // useBreadcrumbs hook config: usually doesn't include Home unless path includes it.
                     // But standard breadcrumbs usually start with Home.

@@ -40,6 +40,7 @@ const AdminArticlePipeline = React.lazy(() => import('./pages/admin/v2/articles/
 const AdminArticleTree = React.lazy(() => import('./pages/admin/v2/articles/ArticleTree'));
 const AdminArticleQualityMap = React.lazy(() => import('./pages/admin/v2/articles/ArticleQualityMap'));
 const AdminArticleCitationReport = React.lazy(() => import('./pages/admin/v2/articles/ArticleCitationReport'));
+const AdminArticleQualityDashboard = React.lazy(() => import('./pages/admin/v2/articles/ArticleQualityDashboard'));
 const AdminOnboarding = React.lazy(() => import('./pages/admin/AdminOnboarding'));
 
 const AdminLoadingIndicator = () => (
@@ -103,6 +104,7 @@ const AdminApp: React.FC = () => {
               <Route path="articles/tree" element={<AdminArticleTree />} />
               <Route path="articles/quality" element={<AdminArticleQualityMap />} />
               <Route path="articles/citations" element={<AdminArticleCitationReport />} />
+              <Route path="articles/quality-dashboard" element={<AdminArticleQualityDashboard />} />
               <Route path="articles/clusters" element={<AdminTopicClusters />} />
               <Route path="articles/:id" element={<AdminArticleDetail />} />
               <Route path="articles/:id/breakdown" element={<AdminArticleBreakdown />} />

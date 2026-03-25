@@ -109,6 +109,23 @@ export interface Category {
     group?: 'condition' | 'wellness' | 'life' | 'therapy' | 'identity' | 'family';
 }
 
+export interface KeyFact {
+    text: string;
+    citationIndex?: number;
+}
+
+export interface ExerciseStep {
+    title: string;
+    description: string;
+}
+
+export interface ArticleExercise {
+    title: string;
+    steps: ExerciseStep[];
+    toolLink?: string;
+    toolLabel?: string;
+}
+
 export interface Article {
     id: number | string;
     slug: string;
@@ -128,4 +145,20 @@ export interface Article {
     featured?: boolean;
     views?: number;
     status?: string;
+    // Phase 2: Article enrichment fields
+    subtitle?: string;
+    summary?: string;
+    keyFacts?: KeyFact[];
+    sparkMoment?: string;
+    practicalExercise?: ArticleExercise;
+    // Video fields
+    videoUrl?: string;
+    videoPlatform?: 'youtube' | 'vimeo' | 'bunny' | 'self_hosted';
+    videoStatus?: 'none' | 'planned' | 'scripted' | 'recorded' | 'published';
+    videoDurationSeconds?: number;
+    videoTranscript?: string;
+    // Audio fields
+    audioUrl?: string;
+    audioStatus?: 'tts_only' | 'planned' | 'recorded' | 'published';
+    audioDurationSeconds?: number;
 }

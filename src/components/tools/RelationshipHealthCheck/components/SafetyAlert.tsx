@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Phone, MessageCircle, ExternalLink, X } from 'lucide-react';
+import { Phone, MessageCircle, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Button from '@/components/ui/Button';
 
@@ -11,7 +11,6 @@ interface SafetyAlertProps {
 }
 
 export const SafetyAlert: React.FC<SafetyAlertProps> = ({
-  severity,
   visible,
   onDismiss,
 }) => {

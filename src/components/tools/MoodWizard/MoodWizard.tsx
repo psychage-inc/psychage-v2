@@ -6,6 +6,7 @@ import { StepEmotions } from './StepEmotions';
 import { StepImpact } from './StepImpact';
 import { StepReview } from './StepReview';
 import { ArrowLeft, X } from 'lucide-react';
+import { saveMoodEntry } from './storage';
 
 export type WizardState = {
     valence: number;
@@ -21,6 +22,7 @@ interface MoodWizardProps {
 
 export const MoodWizard: React.FC<MoodWizardProps> = ({ onComplete, onCancel }) => {
     const [step, setStep] = useState(0);
+    const [showCancelConfirm, setShowCancelConfirm] = useState(false);
     const [data, setData] = useState<WizardState>({
         valence: 5,
         emotions: [],
@@ -35,7 +37,18 @@ export const MoodWizard: React.FC<MoodWizardProps> = ({ onComplete, onCancel }) 
     const handleNext = () => setStep(s => Math.min(s + 1, 3));
     const handleBack = () => setStep(s => Math.max(s - 1, 0));
 
+    const hasData = data.emotions.length > 0 || data.impactAreas.length > 0 || data.note.trim().length > 0;
+
+    const handleCancel = () => {
+        if (hasData) {
+            setShowCancelConfirm(true);
+        } else {
+            onCancel();
+        }
+    };
+
     const handleSave = () => {
+        saveMoodEntry(data);
         onComplete(data);
     };
 
@@ -64,7 +77,7 @@ export const MoodWizard: React.FC<MoodWizardProps> = ({ onComplete, onCancel }) 
                 ) : (
                     <div className="w-10" />
                 )}
-                <button onClick={onCancel} className="p-2 text-gray-500 hover:bg-black/5 rounded-full transition-colors" aria-label="Cancel">
+                <button onClick={handleCancel} className="p-2 text-gray-500 hover:bg-black/5 rounded-full transition-colors" aria-label="Cancel">
                     <X size={24} />
                 </button>
             </div>
@@ -91,6 +104,30 @@ export const MoodWizard: React.FC<MoodWizardProps> = ({ onComplete, onCancel }) 
             <div className="pb-8 pt-4 flex justify-center bg-transparent">
                 <ProgressDots total={4} current={step} />
             </div>
+
+            {/* Cancel confirmation */}
+            {showCancelConfirm && (
+                <div className="fixed inset-0 z-[250] flex items-center justify-center bg-black/40">
+                    <div className="bg-white rounded-2xl p-6 mx-4 max-w-sm shadow-xl">
+                        <h3 className="text-lg font-semibold text-gray-900 mb-2">Discard entry?</h3>
+                        <p className="text-gray-600 text-sm mb-4">You have unsaved mood data. Are you sure you want to close?</p>
+                        <div className="flex gap-3">
+                            <button
+                                onClick={() => setShowCancelConfirm(false)}
+                                className="flex-1 px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
+                            >
+                                Keep editing
+                            </button>
+                            <button
+                                onClick={onCancel}
+                                className="flex-1 px-4 py-2 text-sm font-medium text-white bg-red-500 rounded-lg hover:bg-red-600 transition-colors"
+                            >
+                                Discard
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

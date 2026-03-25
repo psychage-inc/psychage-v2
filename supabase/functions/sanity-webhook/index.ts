@@ -65,7 +65,7 @@ Deno.serve(async (req: Request) => {
     }
 
     const payload = JSON.parse(body);
-    const { _id, _type, _rev, title, slug, status, category, author } = payload;
+    const { _id, _type, _rev, title, slug, _status, category, author } = payload;
 
     // Only process article documents
     if (_type !== 'article') {

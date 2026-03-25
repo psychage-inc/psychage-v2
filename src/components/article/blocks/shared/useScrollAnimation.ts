@@ -14,7 +14,7 @@ interface ScrollAnimationOptions {
 export function useScrollAnimation(options: ScrollAnimationOptions = {}) {
     const { once = true, amount = 0.05, margin } = options;
     const ref = useRef<HTMLDivElement>(null);
-    const isInView = useInView(ref, {
+    const _isInView = useInView(ref, {
         once,
         amount,
         ...(margin ? { margin: margin as `${number}px` } : {}),

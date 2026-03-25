@@ -1,3 +1,4 @@
+ 
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -42,6 +43,7 @@ function useAnimatedCounter(target: number, duration = 1200): number {
 
   useEffect(() => {
     if (prefersReducedMotion) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setValue(target);
       return;
     }

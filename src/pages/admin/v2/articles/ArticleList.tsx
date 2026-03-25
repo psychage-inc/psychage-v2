@@ -20,7 +20,7 @@ import DataTable from '@/components/admin/DataTable';
 import AdminStatusBadge from '@/components/admin/StatusBadge';
 import ConfirmDialog from '@/components/admin/ConfirmDialog';
 import { getArticles, getArticleStats, updateArticleStatus, getArticleCategories, getArticlesDataSource } from '@/services/articleAdminService';
-import type { ArticleRecord, ArticleStatus, ArticleCategoryRecord } from '@/lib/admin/types';
+import type { ArticleRecord, ArticleCategoryRecord } from '@/lib/admin/types';
 import { ARTICLE_STATUSES, ARTICLE_REVIEW_STAGES } from '@/lib/admin/constants';
 import { adminPath } from '@/hooks/useAdminNavigate';
 

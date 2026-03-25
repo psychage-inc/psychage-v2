@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FlaskConical, ChevronDown, ExternalLink } from 'lucide-react';
+import { FlaskConical, ChevronDown } from 'lucide-react';
 import type { DetectedPattern, FrameworkKey } from '../types';
 import { FRAMEWORKS, getRelevantFrameworks } from '../frameworks';
 import type { FrameworkInfo } from '../frameworks';

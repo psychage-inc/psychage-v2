@@ -2,12 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ShieldCheck, Star, MapPin, Clock, Video, GraduationCap, Languages, ArrowLeft, MessageSquare } from 'lucide-react';
 import { providerService } from '../../services/providerService';
+import { bookingService } from '../../services/bookingService';
+import { messagingService } from '../../services/messagingService';
 import { Provider } from '../../types/models';
 import Button from '../ui/Button';
 import Badge from '../ui/Badge';
 import SEO from '../SEO';
 import BookingModal, { BookingDetails } from '../booking/BookingModal';
 import MessagingModal, { MessageDetails } from '../messaging/MessagingModal';
+import { useAuth } from '../../context/AuthContext';
 
 // Default fallback avatar
 const FallbackAvatar: React.FC<{ name: string; className?: string }> = ({ name, className }) => (
@@ -21,7 +24,7 @@ const FallbackAvatar: React.FC<{ name: string; className?: string }> = ({ name, 
 const ProviderProfile: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
-    // const { user } = useAuth(); // Removed unused variable
+    const { user } = useAuth();
     const [provider, setProvider] = useState<Provider | undefined>();
     const [loading, setLoading] = useState(true);
     const [imageError, setImageError] = useState(false);
@@ -30,17 +33,38 @@ const ProviderProfile: React.FC = () => {
     const [bookingSuccess, setBookingSuccess] = useState(false);
     const [messageSuccess, setMessageSuccess] = useState(false);
 
-    const handleBookingConfirm = (booking: BookingDetails) => {
-        console.log('Booking confirmed:', booking);
-        // TODO: Save to backend when available
+    const handleBookingConfirm = async (booking: BookingDetails) => {
+        if (user && provider) {
+            const result = await bookingService.createBooking({
+                patient_id: user.id,
+                provider_id: String(provider.id),
+                booking_date: booking.date,
+                booking_time: booking.time,
+                visit_type: booking.visitType === 'in-person' ? 'in_person' : 'video',
+                reason: booking.reason,
+            });
+            if (!result.success) {
+                console.error('Booking failed:', result.error);
+            }
+        }
         setIsBookingOpen(false);
         setBookingSuccess(true);
         setTimeout(() => setBookingSuccess(false), 5000);
     };
 
-    const handleMessageSend = (message: MessageDetails) => {
-        console.log('Message sent:', message);
-        // TODO: Save to backend when available
+    const handleMessageSend = async (message: MessageDetails) => {
+        if (user && provider) {
+            const result = await messagingService.sendMessage({
+                sender_id: user.id,
+                provider_id: String(provider.id),
+                subject: message.subject,
+                body: message.message,
+                is_urgent: message.urgent,
+            });
+            if (!result.success) {
+                console.error('Message failed:', result.error);
+            }
+        }
         setIsMessagingOpen(false);
         setMessageSuccess(true);
         setTimeout(() => setMessageSuccess(false), 5000);

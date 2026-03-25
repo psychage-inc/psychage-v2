@@ -1,3 +1,4 @@
+ 
 import { describe, it, expect } from 'vitest';
 import { runQualityGate } from '@/lib/article-framework/quality-gate';
 import type { QualityGateInput, EnhancedCitation } from '@/lib/article-framework/types';

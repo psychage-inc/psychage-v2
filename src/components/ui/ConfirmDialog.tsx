@@ -1,6 +1,6 @@
 import React from 'react';
 import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { AlertCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { scaleIn } from '@/lib/animations';

@@ -115,17 +115,6 @@ const HeroSection: React.FC = () => {
                     ))}
                 </motion.div>
 
-                {/* Browse link */}
-                <motion.div {...animate(0.4)} className="mt-8">
-                    <button
-                        onClick={() => {
-                            document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
-                        }}
-                        className="text-sm text-text-tertiary hover:text-primary transition-colors underline underline-offset-4"
-                    >
-                        See how Psychage works
-                    </button>
-                </motion.div>
             </div>
         </section>
     );

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, CheckSquare, XSquare } from 'lucide-react';
-import { cn } from '../../lib/utils';
 import { SymptomCategory as SymptomCategoryType } from '../../lib/navigator/types';
 
 interface SymptomCategoryProps {
@@ -18,7 +17,6 @@ interface SymptomCategoryProps {
 }
 
 export const SymptomCategory: React.FC<SymptomCategoryProps> = ({
-    category,
     title,
     count,
     initiallyExpanded = false,

@@ -17,7 +17,6 @@ import type {
   UserDuration,
   UserFrequency,
   UserSymptomInput,
-  DURATION_TO_DAYS,
 } from './types';
 import { DURATION_TO_DAYS as durationMap } from './types';
 

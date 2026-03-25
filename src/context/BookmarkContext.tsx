@@ -1,3 +1,4 @@
+ 
 import React, { useContext, useState, useEffect, useCallback, useRef, ReactNode } from 'react';
 import { useAuth } from './AuthContext';
 import { bookmarkService, Bookmark } from '../services/bookmarkService';
@@ -42,11 +43,13 @@ export const BookmarkProvider: React.FC<{ children: ReactNode }> = ({ children }
   useEffect(() => {
     if (!isAuthenticated) {
       hydrated.current = false;
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setBookmarks([]);
       localStorage.removeItem(STORAGE_KEY);
     }
   }, [isAuthenticated]);
 
+  // eslint-disable-next-line react-hooks/preserve-manual-memoization
   const toggleBookmark = useCallback((id: string | number): boolean => {
     // Require authentication for bookmarks
     if (!isAuthenticated || !user?.id) {

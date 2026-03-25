@@ -39,6 +39,16 @@ interface DBArticle {
     tags?: string[];
     featured?: boolean;
     status?: string;
+    // Media enrichment fields
+    subtitle?: string;
+    video_url?: string;
+    video_platform?: string;
+    video_status?: string;
+    video_duration_seconds?: number;
+    video_transcript?: string;
+    audio_url?: string;
+    audio_status?: string;
+    audio_duration_seconds?: number;
 }
 
 export interface ArticleWithContent extends Article {
@@ -84,6 +94,16 @@ function mapSupabaseToArticle(data: DBArticle): ArticleWithContent {
         },
         relatedArticles: [],
         citations: [],
+        // Media enrichment
+        subtitle: data.subtitle || undefined,
+        videoUrl: data.video_url || undefined,
+        videoPlatform: data.video_platform as ArticleWithContent['videoPlatform'],
+        videoStatus: (data.video_status as ArticleWithContent['videoStatus']) || 'none',
+        videoDurationSeconds: data.video_duration_seconds || undefined,
+        videoTranscript: data.video_transcript || undefined,
+        audioUrl: data.audio_url || undefined,
+        audioStatus: (data.audio_status as ArticleWithContent['audioStatus']) || 'tts_only',
+        audioDurationSeconds: data.audio_duration_seconds || undefined,
         _source: 'supabase'
     };
 }

@@ -1,7 +1,5 @@
 import React from 'react';
 import {
-    LineChart,
-    Line,
     XAxis,
     YAxis,
     CartesianGrid,
@@ -10,7 +8,6 @@ import {
     Area,
     AreaChart
 } from 'recharts';
-import { motion } from 'framer-motion';
 
 interface AnalyticsChartProps {
     data: any[];

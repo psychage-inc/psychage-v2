@@ -31,7 +31,7 @@ const TIER_DISPLAY: Record<ScoreTier, string> = {
 };
 
 const TierBadge: React.FC<TierBadgeProps> = ({ tier, label, size = 'md' }) => {
-  const colors = getScoreTierColor(tier);
+  const _colors = getScoreTierColor(tier);
   const displayLabel = label || TIER_DISPLAY[tier];
 
   return (

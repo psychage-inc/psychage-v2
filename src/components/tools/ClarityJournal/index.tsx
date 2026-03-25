@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  Sun, ShieldCheck, BookOpen, BarChart3, Clock, Settings2, ChevronRight, Check, Sparkles,
-  Smile, FileText, PenLine, Shield,
+  ShieldCheck, BookOpen, BarChart3, Clock, Settings2, ChevronRight, Sparkles,
+  Smile, FileText, Shield,
 } from 'lucide-react';
 import SEO from '@/components/SEO';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
@@ -14,12 +14,12 @@ import SectionCard from './components/SectionCard';
 import TrendChart from './components/TrendChart';
 import ExportImportControls from './components/ExportImportControls';
 import { useClarityJournal } from './hooks/useClarityJournal';
-import { JOURNAL_SECTIONS, PRIVACY_NOTICE } from './constants';
-import { formatDate, getToday } from './dates';
+import { JOURNAL_SECTIONS } from './constants';
+import { formatDate } from './dates';
 import { Link } from 'react-router-dom';
 
 const ClarityJournal: React.FC = () => {
-  const navigate = useNavigate();
+  const _navigate = useNavigate();
   const {
     data,
     streak,

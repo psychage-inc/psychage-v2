@@ -154,8 +154,7 @@ export const navigationConfig: NavigationConfig = {
                 { label: 'Recently Added', href: '/learn?sort=recent' },
                 {
                     label: 'Symptom Navigator',
-                    href: '/tools/symptom-navigator',
-                    requiredFeatureFlag: 'VITE_NAV_TIER1_ENABLED'
+                    href: '/tools/symptom-navigator'
                 }
             ]
         } as NavMegaMenu,
@@ -184,8 +183,7 @@ export const navigationConfig: NavigationConfig = {
                             description: 'Interactive symptom checker',
                             href: '/tools/symptom-navigator',
                             icon: 'brain',
-                            cta: 'Start Navigation',
-                            requiredFeatureFlag: 'VITE_NAV_TIER1_ENABLED'
+                            cta: 'Start Navigation'
                         },
                         {
                             id: 'relationship-health',
@@ -252,8 +250,7 @@ export const navigationConfig: NavigationConfig = {
                 },
                 {
                     label: 'Symptom Navigator',
-                    href: '/tools/symptom-navigator',
-                    requiredFeatureFlag: 'VITE_NAV_TIER1_ENABLED'
+                    href: '/tools/symptom-navigator'
                 },
                 {
                     label: 'MindMate AI',

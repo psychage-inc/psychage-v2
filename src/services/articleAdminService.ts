@@ -24,7 +24,6 @@ import type {
   ArticleSubcategoryRecord,
   ArticleDerivativeRecord,
   DerivativeType,
-  DerivativeStatus,
   CategoryArticleDistribution,
   CitationDiversityEntry,
   CommentSeverity,

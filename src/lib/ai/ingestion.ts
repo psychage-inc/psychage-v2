@@ -4,10 +4,8 @@
 
 import type { SupabaseClient } from '@supabase/supabase-js';
 import type {
-  ContentDocument,
   ContentType,
   ContentSource,
-  ChunkMetadata,
   TextChunk,
   ParsedDocument,
   IngestionResult,

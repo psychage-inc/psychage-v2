@@ -1,3 +1,4 @@
+ 
 import React from 'react';
 import { Edit2, Trash2, Clock, TrendingUp } from 'lucide-react';
 import type { Medication, AdherenceStats } from '../types';
@@ -126,6 +127,7 @@ export const MedicationCard: React.FC<Props> = ({
       {medication.refillDate && (
         (() => {
           const daysUntil = Math.ceil(
+            // eslint-disable-next-line react-hooks/purity
             (new Date(medication.refillDate + 'T00:00:00').getTime() - Date.now()) / 86_400_000
           );
           if (daysUntil <= 7 && daysUntil >= 0) {

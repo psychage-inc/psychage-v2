@@ -40,7 +40,7 @@ const ScoreGauge: React.FC<ScoreGaugeProps> = ({
   const displayScore = useTransform(motionScore, (v) => Math.round(v));
   const scoreRef = useRef<HTMLSpanElement>(null);
 
-  const colors = getScoreTierColor(tier);
+  const _colors = getScoreTierColor(tier);
   const strokeHex: Record<ScoreTier, string> = {
     thriving: '#10b981',
     balanced: '#0d9488',

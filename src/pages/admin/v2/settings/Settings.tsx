@@ -1,6 +1,7 @@
+ 
 import React, { useState, useEffect } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { Save, AlertTriangle, X, Plus } from 'lucide-react';
+import { Save, AlertTriangle, X } from 'lucide-react';
 import { toast } from 'sonner';
 import { supabase } from '@/lib/supabaseClient';
 import { logAdminAction } from '@/lib/admin/auditLogger';
@@ -60,6 +61,7 @@ const AdminSettingsV2: React.FC = () => {
     if (settings) {
       const map: Record<string, unknown> = {};
       settings.forEach((s) => { map[s.key] = s.value; });
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setValues(map);
     }
   }, [settings]);

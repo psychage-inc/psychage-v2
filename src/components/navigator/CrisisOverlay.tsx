@@ -1,3 +1,4 @@
+ 
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ShieldAlert, X, Globe, ExternalLink } from 'lucide-react';
@@ -49,6 +50,7 @@ export const CrisisOverlay: React.FC = () => {
             };
         } else {
             document.body.style.overflow = 'unset';
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             setCloseEnabled(false);
         }
         return () => {

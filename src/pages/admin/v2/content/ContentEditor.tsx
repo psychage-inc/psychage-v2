@@ -4,7 +4,7 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { ArrowLeft, Save, Send, Globe as GlobeIcon, Clock, ChevronDown } from 'lucide-react';
+import { ArrowLeft, Save, Send, Globe as GlobeIcon, Clock } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
 import { supabase } from '@/lib/supabaseClient';
 import { logAdminAction } from '@/lib/admin/auditLogger';

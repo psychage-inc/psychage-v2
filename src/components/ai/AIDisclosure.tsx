@@ -1,3 +1,4 @@
+ 
 /**
  * AIDisclosure - Onboarding Disclosure Banner
  *
@@ -9,7 +10,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Info, X, Sparkles } from 'lucide-react';
+import { X, Sparkles } from 'lucide-react';
 
 const STORAGE_KEY = 'psychage_ai_disclosure_accepted';
 
@@ -19,6 +20,7 @@ const AIDisclosure: React.FC = () => {
   useEffect(() => {
     const accepted = localStorage.getItem(STORAGE_KEY);
     if (!accepted) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setShow(true);
     }
   }, []);

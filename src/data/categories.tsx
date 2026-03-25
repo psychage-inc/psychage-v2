@@ -10,7 +10,7 @@ const themeIcon = (slug: string) => {
 const themeColor = (slug: string) => getCategoryTheme(slug).classes.bg;
 
 /**
- * 15 categories aligned with the `article_categories` DB table.
+ * Categories aligned with the `article_categories` DB table.
  * Used as fallback when Supabase is unavailable.
  */
 export const categories: Category[] = [
@@ -163,6 +163,47 @@ export const categories: Category[] = [
         color: themeColor('global-cultural'),
         image: '/images/categories/global.svg',
         subTopics: ['Cultural Stigma', 'Migration & Displacement', 'Indigenous Perspectives', 'LGBTQ+ Mental Health', 'Racial Trauma', 'Collectivist vs Individualist']
+    },
+    // ─── BATCH 2 CATEGORIES ───────────────────────────────────────
+    {
+        id: 'mens-mental-health',
+        name: "Men's Mental Health",
+        slug: 'mens-mental-health',
+        description: "Evidence-based education on men's mental health — exploring help-seeking barriers, masked depression, the gender paradox in suicide, and cultural norms impacting men's psychological wellbeing.",
+        icon: themeIcon('mens-mental-health'),
+        color: themeColor('mens-mental-health'),
+        image: '/images/categories/mens-mental-health.svg',
+        subTopics: ["Understanding Men's Mental Health", "Men's Relationships and Family", "Men's Physical and Mental Health", "Men in Specific Contexts", "Myths About Men's Mental Health", "Men's Health Interventions"],
+    },
+    {
+        id: 'chronic-illness-pain',
+        name: 'Chronic Illness, Pain & Medical Psychology',
+        slug: 'chronic-illness-pain',
+        description: 'Evidence-based education on the psychological dimensions of chronic illness — covering pain neuroscience, medical trauma, and resilience-building strategies.',
+        icon: themeIcon('chronic-illness-pain'),
+        color: themeColor('chronic-illness-pain'),
+        image: '/images/categories/chronic-illness-pain.svg',
+        subTopics: ['Psychology of Chronic Illness', 'Chronic Pain and the Mind', 'Specific Medical Conditions', 'Medical Trauma', 'Supporting Wellbeing', 'Psychological Resilience'],
+    },
+    {
+        id: 'technology-digital-life',
+        name: 'Technology, Digital Life & Mental Health',
+        slug: 'technology-digital-life',
+        description: 'Evidence-based education on the psychological impact of technology — from social media to emerging digital therapeutics.',
+        icon: themeIcon('technology-digital-life'),
+        color: themeColor('technology-digital-life'),
+        image: '/images/categories/technology-digital-life.svg',
+        subTopics: ['Social Media Impact', 'Digital Addiction', 'AI & Emerging Tech', 'Online Relationships', 'Healthy Digital Life', 'Digital Culture'],
+    },
+    {
+        id: 'spirituality-meaning',
+        name: 'Spirituality, Meaning & Existential Mental Health',
+        slug: 'spirituality-meaning',
+        description: 'Evidence-based exploration of existential psychology — confronting questions of meaning, mortality, freedom, and isolation.',
+        icon: themeIcon('spirituality-meaning'),
+        color: themeColor('spirituality-meaning'),
+        image: '/images/categories/spirituality-meaning.svg',
+        subTopics: ['Existential Psychology', 'Search for Meaning', 'Mortality and Death Anxiety', 'Existential Loneliness', 'Freedom and Choice'],
     },
 ];
 

@@ -339,7 +339,7 @@ async function checkBackendConnectivity(apiUrl: string): Promise<CheckResult[]> 
         details: 'This is normal if backend is not yet deployed'
       });
     }
-  } catch (error) {
+  } catch {
     results.push({
       name: 'Backend Health',
       status: 'warn',

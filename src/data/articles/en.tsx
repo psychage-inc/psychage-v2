@@ -1,4 +1,4 @@
-import React from 'react';
+ 
 import { Article } from '../../types';
 import { categories } from '../categories';
 import { CheckCircle } from 'lucide-react';

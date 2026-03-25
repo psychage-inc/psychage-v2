@@ -53,9 +53,22 @@ const LearnPage: React.FC = () => {
         return result;
     }, [articles, searchQuery]);
 
-    const recentArticles = useMemo(() => filteredArticles.slice(0, 4), [filteredArticles]);
-    const popularArticles = useMemo(() => getPopularArticles(articles).slice(0, 3), [articles]);
-    const featuredArticles = useMemo(() => articles.filter(a => a.tags.includes('featured')).slice(0, 3), [articles]);
+    const featuredArticles = useMemo(() => {
+        const featured = filteredArticles.filter(a => a.tags.includes('featured'));
+        return featured.length > 0 ? featured.slice(0, 3) : filteredArticles.slice(0, 3);
+    }, [filteredArticles]);
+
+    const recentArticles = useMemo(() => {
+        const featuredIds = new Set(featuredArticles.map(a => a.id));
+        return filteredArticles.filter(a => !featuredIds.has(a.id)).slice(0, 4);
+    }, [filteredArticles, featuredArticles]);
+
+    const popularArticles = useMemo(() => {
+        const featuredIds = new Set(featuredArticles.map(a => a.id));
+        return getPopularArticles(filteredArticles.filter(a => !featuredIds.has(a.id))).slice(0, 3);
+    }, [filteredArticles, featuredArticles]);
+
+    const hasNoResults = searchQuery.length > 0 && filteredArticles.length === 0;
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -121,7 +134,26 @@ const LearnPage: React.FC = () => {
                 </div>
             </section>
 
+            {/* No Results State */}
+            {hasNoResults && (
+                <section className="px-6 mb-24">
+                    <div className="container mx-auto max-w-7xl">
+                        <div className="text-center py-20 bg-surface rounded-3xl border border-dashed border-border">
+                            <Search size={48} className="mx-auto text-text-tertiary mb-4" />
+                            <h2 className="text-2xl font-display font-bold text-text-primary mb-2">No articles found</h2>
+                            <p className="text-text-secondary mb-6">
+                                No articles match &ldquo;{searchQuery}&rdquo;. Try different keywords or browse by category below.
+                            </p>
+                            <Button variant="outline" onClick={() => setSearchQuery('')}>
+                                Clear search
+                            </Button>
+                        </div>
+                    </div>
+                </section>
+            )}
+
             {/* Featured Articles */}
+            {!hasNoResults && featuredArticles.length > 0 && (
             <section className="px-6 mb-24">
                 <div className="container mx-auto max-w-7xl">
                     <div className="flex items-center gap-3 mb-8">
@@ -136,7 +168,7 @@ const LearnPage: React.FC = () => {
                         viewport={{ once: true }}
                         className="grid grid-cols-1 md:grid-cols-3 gap-8"
                     >
-                        {(featuredArticles.length > 0 ? featuredArticles : articles.slice(0, 3)).map((article) => (
+                        {featuredArticles.map((article) => (
                             <motion.div key={article.id} variants={itemVariants} className="h-full">
                                 <ArticleCard
                                     article={article}
@@ -147,6 +179,7 @@ const LearnPage: React.FC = () => {
                     </motion.div>
                 </div>
             </section>
+            )}
 
             {/* Categories Grid */}
             <section className="px-6 mb-24 relative pt-8 border-t border-border mt-8">
@@ -184,10 +217,12 @@ const LearnPage: React.FC = () => {
             </section>
 
             {/* Recent & Popular Split */}
+            {!hasNoResults && (recentArticles.length > 0 || popularArticles.length > 0) && (
             <section className="px-6 mb-24">
                 <div className="container mx-auto max-w-7xl">
                     <div className="grid lg:grid-cols-3 gap-8">
                         {/* Recent Articles (2 cols) */}
+                        {recentArticles.length > 0 && (
                         <div className="lg:col-span-2 space-y-6">
                             <div className="flex items-center gap-3 mb-6">
                                 <BookOpen className="text-secondary" size={24} />
@@ -204,8 +239,10 @@ const LearnPage: React.FC = () => {
                                 ))}
                             </div>
                         </div>
+                        )}
 
                         {/* Popular Sidebar (1 col) */}
+                        {popularArticles.length > 0 && (
                         <div className="space-y-6">
                             <div className="flex items-center gap-3 mb-6">
                                 <TrendingUp className="text-accent-rose" size={24} />
@@ -236,9 +273,11 @@ const LearnPage: React.FC = () => {
                                 </ul>
                             </InteractiveCard>
                         </div>
+                        )}
                     </div>
                 </div>
             </section>
+            )}
 
             {/* CTA Banner */}
             <section className="px-6 mb-20">

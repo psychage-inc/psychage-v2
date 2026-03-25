@@ -1,8 +1,8 @@
+ 
 // ============================================================================
 // Category 1 | Subcategory 1 — Understanding Your Emotions (Articles 001–010)
 // ============================================================================
 
-import React from 'react';
 import { Article } from '../../../types';
 import { Lightbulb, Quote, Brain, Heart, AlertCircle } from 'lucide-react';
 import Citation from '../../../components/article/Citation';

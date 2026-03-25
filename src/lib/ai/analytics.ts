@@ -3,7 +3,7 @@
 // =============================================================================
 
 import type { SupabaseClient } from '@supabase/supabase-js';
-import type { AnalyticsEvent, AnalyticsEventType } from './types';
+import type { AnalyticsEvent } from './types';
 
 // =============================================================================
 // Analytics Tracker

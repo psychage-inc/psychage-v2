@@ -60,7 +60,7 @@ const TrendLine: React.FC<{ history: RelationshipHistoryItem[] }> = ({ history }
   // Area fill path
   const firstX = padding;
   const lastX = padding + ((scores.length - 1) / (scores.length - 1)) * (width - 2 * padding);
-  const areaPath = `M ${firstX},${height - padding} L ${polyline.replace(/,/g, ' ').split(' ').reduce((acc, val, idx) => {
+  const _areaPath = `M ${firstX},${height - padding} L ${polyline.replace(/,/g, ' ').split(' ').reduce((acc, val, idx) => {
     if (idx % 2 === 0) return [...acc, val];
     return [...acc.slice(0, -1), `${acc[acc.length - 1]},${val}`];
   }, [] as string[]).join(' L ')} L ${lastX},${height - padding} Z`;
@@ -159,7 +159,7 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
 
             <div className="space-y-3">
               {history.map((item) => {
-                const tierMeta = TIER_META[item.tier];
+                const _tierMeta = TIER_META[item.tier];
                 return (
                   <motion.div
                     key={item.id}

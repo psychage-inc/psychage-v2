@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { LayoutDashboard, User, BrainCircuit, Bookmark, LogOut } from 'lucide-react';
+import { LogOut } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import InteractiveCard from '@/components/ui/InteractiveCard';
 import { useAuth } from '@/context/AuthContext';

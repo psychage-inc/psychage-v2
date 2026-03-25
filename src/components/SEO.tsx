@@ -11,6 +11,10 @@ interface ArticleStructuredData {
     categoryName?: string;
     categorySlug?: string;
     url?: string;
+    reviewedByName?: string;
+    reviewedByRole?: string;
+    tags?: string[];
+    isMedical?: boolean;
 }
 
 interface SEOProps {
@@ -30,16 +34,27 @@ const SEO: React.FC<SEOProps> = ({
     canonical,
     article,
 }) => {
+    const isMedical = article?.isMedical !== false; // Default true for articles
+    const schemaType = isMedical ? 'MedicalWebPage' : 'Article';
+
     const articleJsonLd = article ? JSON.stringify({
         '@context': 'https://schema.org',
-        '@type': 'Article',
+        '@type': schemaType,
         headline: article.headline,
         description: article.description,
         image: article.image,
         author: {
-            '@type': 'Person',
-            name: article.authorName || 'Psychage Team',
+            '@type': 'Organization',
+            name: 'Psychage',
+            url: 'https://psychage.com',
         },
+        ...(article.reviewedByName && {
+            reviewedBy: {
+                '@type': 'Person',
+                name: article.reviewedByName,
+                jobTitle: article.reviewedByRole || 'Clinical Neuropsychology',
+            },
+        }),
         publisher: {
             '@type': 'Organization',
             name: 'Psychage',
@@ -81,6 +96,15 @@ const SEO: React.FC<SEOProps> = ({
             <meta property="og:image" content={image} />
             <meta property="og:site_name" content="Psychage" />
             {canonical && <meta property="og:url" content={canonical} />}
+
+            {/* Article-specific OG tags */}
+            {article?.datePublished && <meta property="article:published_time" content={article.datePublished} />}
+            {article?.dateModified && <meta property="article:modified_time" content={article.dateModified} />}
+            {article && <meta property="article:author" content="Psychage" />}
+            {article?.categoryName && <meta property="article:section" content={article.categoryName} />}
+            {article?.tags?.map((tag, i) => (
+                <meta key={i} property="article:tag" content={tag} />
+            ))}
 
             {/* Twitter */}
             <meta name="twitter:card" content="summary_large_image" />

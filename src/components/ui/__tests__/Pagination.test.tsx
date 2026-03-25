@@ -1,3 +1,4 @@
+ 
 import { render, screen, fireEvent } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 import React from 'react';
@@ -5,7 +6,7 @@ import Pagination from '../Pagination';
 
 vi.mock('framer-motion', () => ({
     motion: {
-        button: React.forwardRef(({ children, whileTap, ...props }: any, ref: any) => (
+        button: React.forwardRef(({ children, ...props }: any, ref: any) => (
             <button ref={ref} {...props}>{children}</button>
         )),
     },

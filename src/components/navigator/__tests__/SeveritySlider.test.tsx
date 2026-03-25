@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
@@ -7,7 +9,7 @@ vi.mock('framer-motion', () => {
     const { forwardRef } = require('react');
     return {
         motion: {
-            div: forwardRef(({ children, style, initial, animate, transition, ...props }: any, ref: any) => (
+            div: forwardRef(({ children, style, initial, animate, ...props }: any, ref: any) => (
                 <div ref={ref} style={style} {...props}>{children}</div>
             )),
         },

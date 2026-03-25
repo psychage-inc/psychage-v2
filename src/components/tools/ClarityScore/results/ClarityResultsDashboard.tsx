@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef, useEffect } from 'react';
+import React, { useState, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   BarChart2,
@@ -6,7 +6,6 @@ import {
   BookOpen,
   Clock,
   RefreshCw,
-  CheckCircle2,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import type {
@@ -105,7 +104,7 @@ const ClarityResultsDashboard: React.FC<ClarityResultsDashboardProps> = ({
     [activeTab]
   );
 
-  const tierColors = getScoreTierColor(results.tier);
+  const _tierColors = getScoreTierColor(results.tier);
 
   return (
     <motion.div

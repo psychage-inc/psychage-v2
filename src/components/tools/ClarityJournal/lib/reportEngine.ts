@@ -6,7 +6,6 @@ import type {
   ReportConfig,
   ReportData,
   DailyJournal,
-  EmotionEntry,
   SafetyFlag,
 } from '../types';
 import { loadJournal, getDailyJournalsInRange } from '../storage';
@@ -161,7 +160,7 @@ function computeScreenerTrends(screenings: ClarityJournalData['weeklyScreenings'
 
 // ── Thought Record Analysis ──
 
-function computeThoughtRecordAnalysis(journals: DailyJournal[], data: ClarityJournalData) {
+function computeThoughtRecordAnalysis(journals: DailyJournal[], _data: ClarityJournalData) {
   // Journal thought records
   const journalRecords = journals.flatMap(j => j.thoughtRecords);
   const allRecords = [...journalRecords];
@@ -175,7 +174,7 @@ function computeThoughtRecordAnalysis(journals: DailyJournal[], data: ClarityJou
     }
   }
 
-  let distortionNames: Record<string, string> = {};
+  const distortionNames: Record<string, string> = {};
   try {
     if (COGNITIVE_DISTORTIONS) {
       for (const d of COGNITIVE_DISTORTIONS) {
@@ -275,7 +274,7 @@ function computeSleepAnalysis(
   const durations = sleepEntries.map(s => {
     const [bh, bm] = s.bedtime.split(':').map(Number);
     const [wh, wm] = s.wakeTime.split(':').map(Number);
-    let bedMinutes = bh * 60 + bm;
+    const bedMinutes = bh * 60 + bm;
     let wakeMinutes = wh * 60 + wm;
     if (wakeMinutes < bedMinutes) wakeMinutes += 24 * 60; // overnight
     return (wakeMinutes - bedMinutes) / 60;
@@ -431,8 +430,8 @@ function generateSessionPrompts(
   journals: DailyJournal[],
   checkIns: ClarityJournalData['dailyCheckIns'],
   screenings: ClarityJournalData['weeklyScreenings'],
-  data: ClarityJournalData,
-  config: ReportConfig,
+  _data: ClarityJournalData,
+  _config: ReportConfig,
 ): string[] {
   const prompts: string[] = [];
 

@@ -131,9 +131,7 @@ const ProviderSearchPage: React.FC = () => {
               )}
             </p>
 
-            {/* Mobile filter button — hidden for now, keep code */}
-            {false && (
-              <button
+            <button
                 onClick={() => setMobileFiltersOpen(true)}
                 className="lg:hidden flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50"
               >
@@ -143,7 +141,6 @@ const ProviderSearchPage: React.FC = () => {
                   <span className="w-2 h-2 rounded-full bg-teal-500" />
                 )}
               </button>
-            )}
           </div>
 
           <ProviderSortDropdown
@@ -155,24 +152,18 @@ const ProviderSearchPage: React.FC = () => {
 
         {/* Main Layout */}
         <div className="flex gap-8">
-          {/* Desktop Sidebar — hidden for now, keep code */}
-          {false && (
-            <ProviderFilterPanel
+          <ProviderFilterPanel
               params={params}
               onChange={setParams}
             />
-          )}
 
-          {/* Mobile Drawer — hidden for now, keep code */}
-          {false && (
-            <ProviderFilterPanel
+          <ProviderFilterPanel
               params={params}
               onChange={setParams}
               isMobile={true}
               isOpen={mobileFiltersOpen}
               onClose={() => setMobileFiltersOpen(false)}
             />
-          )}
 
           {/* Results */}
           <div className="flex-1 min-w-0">

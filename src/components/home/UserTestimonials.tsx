@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Quote } from 'lucide-react';
-import { cn } from '@/lib/utils';
 import { staggerContainer, staggerItem } from '@/lib/animations';
 
 interface Testimonial {

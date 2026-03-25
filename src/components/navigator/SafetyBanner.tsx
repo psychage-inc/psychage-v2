@@ -7,7 +7,9 @@ export const SafetyBanner: React.FC = () => {
             <div className="max-w-4xl mx-auto px-4 py-3 flex items-start sm:items-center gap-3">
                 <ShieldAlert className="w-5 h-5 text-crisis-red flex-shrink-0 mt-0.5 sm:mt-0" aria-hidden="true" />
                 <p className="text-sm text-red-800 dark:text-red-200 font-medium">
-                    Your safety is our priority. If you are in immediate danger or experiencing a medical emergency, please call your local emergency services immediately.
+                    Your safety is our priority. If you are in immediate danger or experiencing a medical emergency, please call{' '}
+                    <a href="tel:911" className="underline font-bold">911</a>{' '}
+                    (or your local emergency number) immediately.
                 </p>
             </div>
         </div>

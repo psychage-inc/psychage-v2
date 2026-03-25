@@ -21,8 +21,6 @@ import {
   combinedModifier,
   getDurationModifier,
   getFrequencyModifier,
-  getRelevanceColor,
-  getRelevanceLabel,
   getRelevanceLevel,
   getSeverityModifier,
 } from './utils';

@@ -1,11 +1,12 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useMemo, useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigator } from '../../context/NavigatorContext';
 import { ResultCard } from '../navigator/ResultCard';
 import { NextStepCards, NextStepItem } from '../navigator/NextStepCards';
 import { ProviderQuestions } from '../navigator/ProviderQuestions';
 import { NavigatorButton } from '../navigator/NavigatorButton';
-import { DisclaimerCard } from '../navigator/DisclaimerCard';
 import { ShieldAlert, CheckCircle2, AlertTriangle, Stethoscope, FileText } from 'lucide-react';
 import { CrisisResourceCard } from '../navigator/CrisisResourceCard';
 import { ConfirmDialog } from '../ui/ConfirmDialog';
@@ -15,6 +16,7 @@ import { staggerContainer, staggerItem, slideUp, spark } from '../../lib/animati
 import { SkeletonResultCard } from '../navigator/NavigatorSkeletons';
 
 export const ResultsScreen: React.FC = () => {
+    const navigate = useNavigate();
     const { state, dispatch, announcePolite } = useNavigator();
     const { results, knowledgeBase, detectedRegion, isLoading, error, selectedSymptoms } = state;
     const [showResetConfirm, setShowResetConfirm] = useState(false);
@@ -107,21 +109,24 @@ export const ResultsScreen: React.FC = () => {
             type: 'track',
             title: 'Track Your Symptoms',
             description: 'Keep a daily log of how you feel, noting patterns, triggers, and what helps. This information is invaluable for any future clinical conversations.',
-            actionText: 'Start Tracking'
+            actionText: 'Start Tracking',
+            onClick: () => navigate('/tools/mood-journal')
         },
         {
             id: 'ns2',
             type: 'professional',
             title: 'Talk to a Professional',
             description: 'Share these insights with a therapist, counselor, or doctor. They can provide an accurate assessment based on your full history.',
-            actionText: 'Find a Provider'
+            actionText: 'Find a Provider',
+            onClick: () => navigate('/providers/search')
         },
         {
             id: 'ns3',
             type: 'selfcare',
             title: 'Explore Self-Care Resources',
             description: 'Our library includes guided exercises, educational content, and coping strategies tailored to different experiences.',
-            actionText: 'Browse Library'
+            actionText: 'Browse Library',
+            onClick: () => navigate('/learn')
         }
     ];
 

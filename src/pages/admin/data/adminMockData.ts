@@ -237,7 +237,7 @@ export async function getMockArticles(): Promise<AdminArticle[]> {
   await delay();
   const categories = ['Depression', 'Anxiety', 'PTSD', 'Bipolar', 'ADHD', 'OCD', 'Psychosis', 'Eating Disorders'];
   const statuses: AdminArticle['status'][] = ['published', 'draft', 'archived'];
-  const authors = ['Dr. Sarah Chen', 'Dr. Michael Torres', 'Dr. Emily Roberts', 'Dr. James Wilson'];
+  const authors = ['Dr. Sarah Chen', 'Dr. Michael Torres', 'Dr. Emily Roberts', 'Dr. Marcus Rivera'];
 
   return Array.from({ length: 15 }, (_, i) => ({
     id: `art-${i + 1}`,
@@ -328,7 +328,7 @@ export async function getMockSettings(): Promise<AdminSettings> {
   return {
     general: {
       platformName: 'Psychage',
-      supportEmail: 'support@psychage.com',
+      supportEmail: 'info@psychage.com',
       maintenanceMode: false,
       maxUploadSizeMb: 10,
     },

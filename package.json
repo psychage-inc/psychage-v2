@@ -31,7 +31,8 @@
     "verify:routes": "tsx scripts/verify-routes.ts",
     "seed:articles:generate": "tsx src/scripts/generate-article-seeds.ts",
     "seed:articles:content": "tsx src/scripts/seed-article-content.ts",
-    "seed:articles:citations": "tsx src/scripts/seed-article-citations.ts"
+    "seed:articles:citations": "tsx src/scripts/seed-article-citations.ts",
+    "audit:articles": "tsx src/scripts/article-audit.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.78.0",
@@ -75,7 +76,7 @@
     "@tiptap/pm": "^3.20.2",
     "@tiptap/react": "^3.20.2",
     "@tiptap/starter-kit": "^3.20.2",
-    "@vercel/node": "^5.6.10",
+    "@vercel/node": "^5.6.20",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "d3": "^7.9.0",
@@ -145,7 +146,7 @@
     "storybook": "^10.1.4",
     "tailwindcss": "^3.4.6",
     "typescript": "^5.5.3",
-    "vite": "^5.3.4",
+    "vite": "^5.4.21",
     "vitest": "^4.0.15"
   }
 }

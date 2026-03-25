@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Mail, MapPin, Phone, MessageSquare, Send, Check } from 'lucide-react';
+import { Mail, MessageSquare, Send, Check } from 'lucide-react';
 import Button from '../ui/Button';
 import SEO from '../SEO';
 
@@ -53,27 +53,12 @@ const ContactPage: React.FC = () => {
                                     <Mail className="text-teal-400 mt-1" size={20} />
                                     <div>
                                         <div className="font-bold mb-1">Email</div>
-                                        <div className="text-gray-300">support@psychage.com</div>
-                                        <div className="text-gray-300">partners@psychage.com</div>
-                                    </div>
-                                </div>
-                                <div className="flex items-start gap-4">
-                                    <MapPin className="text-teal-400 mt-1" size={20} />
-                                    <div>
-                                        <div className="font-bold mb-1">Headquarters</div>
-                                        <div className="text-gray-300">
-                                            100 Mental Health Way<br />
-                                            Suite 400<br />
-                                            San Francisco, CA 94103
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="flex items-start gap-4">
-                                    <Phone className="text-teal-400 mt-1" size={20} />
-                                    <div>
-                                        <div className="font-bold mb-1">Phone</div>
-                                        <div className="text-gray-300">+1 (555) 123-4567</div>
-                                        <div className="text-xs text-teal-400 mt-1">Mon-Fri, 9am-5pm PST</div>
+                                        <a href="mailto:info@psychage.com" className="text-gray-300 hover:text-white transition-colors">
+                                            info@psychage.com
+                                        </a>
+                                        <p className="text-sm text-gray-400 mt-3">
+                                            We typically respond within 24 hours on business days.
+                                        </p>
                                     </div>
                                 </div>
                             </div>

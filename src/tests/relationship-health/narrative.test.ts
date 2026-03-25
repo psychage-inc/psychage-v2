@@ -1,10 +1,10 @@
+ 
 import { describe, it, expect } from 'vitest';
 import { generateBlueprint } from '@/components/tools/RelationshipHealthCheck/narrative';
 import type {
   DomainScores,
   SubDimensionScores,
   DetectedPattern,
-  FourHorsemenResult,
 } from '@/components/tools/RelationshipHealthCheck/types';
 
 function makeSubScores(

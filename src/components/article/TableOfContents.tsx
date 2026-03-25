@@ -1,3 +1,4 @@
+ 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -24,6 +25,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({
     // Scan DOM for headings if no sections prop provided
     useEffect(() => {
         if (propSections && propSections.length > 0) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             setSections(propSections);
             return;
         }

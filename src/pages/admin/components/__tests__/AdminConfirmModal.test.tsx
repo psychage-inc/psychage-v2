@@ -1,3 +1,4 @@
+ 
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
@@ -5,7 +6,7 @@ import AdminConfirmModal from '../AdminConfirmModal';
 
 // Mock the Modal component to render children directly
 vi.mock('@/components/ui/Modal', () => ({
-    default: ({ isOpen, children, title, onClose }: any) =>
+    default: ({ isOpen, children, title }: any) =>
         isOpen ? (
             <div role="dialog" aria-label={title}>
                 <h2>{title}</h2>

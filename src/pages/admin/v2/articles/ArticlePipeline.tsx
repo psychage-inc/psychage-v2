@@ -6,7 +6,6 @@ import { toast } from 'sonner';
 import { ChevronRight, GripVertical } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import PageHeader from '@/components/admin/PageHeader';
-import AdminStatusBadge from '@/components/admin/StatusBadge';
 import ConfirmDialog from '@/components/admin/ConfirmDialog';
 import {
   getArticlesByReviewStage,

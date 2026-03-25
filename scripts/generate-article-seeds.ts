@@ -220,9 +220,9 @@ function generateSQL(articles: ArticleMetadata[], categoryNum: number, subcatNum
     displayOrder: parseInt(subcatNum, 10),
   };
 
-  const fileName = `seed_category${String(categoryNum).padStart(2, '0')}_subcategory${subcatNum}.sql`;
+  const _fileName = `seed_category${String(categoryNum).padStart(2, '0')}_subcategory${subcatNum}.sql`;
   const timestamp = new Date().toISOString().split('T')[0].replace(/-/g, '');
-  const migrationNum = `${timestamp}${String(parseInt(subcatNum, 10) + 100).padStart(6, '0')}`;
+  const _migrationNum = `${timestamp}${String(parseInt(subcatNum, 10) + 100).padStart(6, '0')}`;
 
   let sql = `-- ============================================================================
 -- Seed: Category ${categoryNum} (${categoryInfo.name}) — Subcategory ${subcatNum}

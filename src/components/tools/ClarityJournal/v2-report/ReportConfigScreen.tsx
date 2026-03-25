@@ -7,8 +7,8 @@ import { ArrowLeft, Download, Printer, FileText, Check } from 'lucide-react';
 import SEO from '@/components/SEO';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import Button from '@/components/ui/Button';
-import type { ReportConfig, ReportData } from '../types';
-import { getToday, addDays, formatDate, formatDateRange } from '../dates';
+import type { ReportConfig } from '../types';
+import { getToday, addDays, formatDateRange } from '../dates';
 import { generateReportData } from '../lib/reportEngine';
 import { generateTherapistReportPDF } from '../lib/pdfGenerator';
 

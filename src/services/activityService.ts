@@ -1,4 +1,4 @@
-import api from '../lib/api';
+import { supabase } from '../lib/supabaseClient';
 import { useMemo } from 'react';
 
 export interface UserActivity {
@@ -26,11 +26,15 @@ export type ActionType =
 export const activityService = {
     getRecentActivity: async (_userId?: string, limit: number = 10): Promise<UserActivity[]> => {
         try {
-            const response = await api.activity.getRecent(limit);
-            if (!response.success || !response.data) return [];
-            return response.data as UserActivity[];
-        } catch (error) {
-            console.error('Failed to fetch user activity:', error);
+            const { data, error } = await supabase
+                .from('user_activity')
+                .select('*')
+                .order('created_at', { ascending: false })
+                .limit(limit);
+
+            if (error || !data) return [];
+            return data as UserActivity[];
+        } catch {
             return [];
         }
     },
@@ -43,21 +47,33 @@ export const activityService = {
         metadata?: Record<string, unknown>
     ): Promise<boolean> => {
         try {
-            const response = await api.activity.log(actionType, resourceType, resourceId, metadata);
-            return response.success;
-        } catch (error) {
-            console.error('Failed to log activity:', error);
+            const { error } = await supabase
+                .from('user_activity')
+                .insert({
+                    action_type: actionType,
+                    resource_type: resourceType,
+                    resource_id: resourceId,
+                    metadata: metadata ?? {},
+                });
+
+            return !error;
+        } catch {
             return false;
         }
     },
 
     getActivityByType: async (_userId: string, actionType: ActionType, limit: number = 10): Promise<UserActivity[]> => {
         try {
-            const response = await api.activity.getByType(actionType, limit);
-            if (!response.success || !response.data) return [];
-            return response.data as UserActivity[];
-        } catch (error) {
-            console.error('Failed to fetch activity by type:', error);
+            const { data, error } = await supabase
+                .from('user_activity')
+                .select('*')
+                .eq('action_type', actionType)
+                .order('created_at', { ascending: false })
+                .limit(limit);
+
+            if (error || !data) return [];
+            return data as UserActivity[];
+        } catch {
             return [];
         }
     },
@@ -71,35 +87,26 @@ export const activityService = {
         daysActive: number;
     }> => {
         try {
-            const response = await api.activity.getStats();
-            if (!response.success || !response.data) {
-                return {
-                    totalAssessments: 0,
-                    articlesRead: 0,
-                    videosWatched: 0,
-                    moodLogs: 0,
-                    sleepLogs: 0,
-                    daysActive: 0
-                };
+            const { data, error } = await supabase
+                .from('user_activity')
+                .select('action_type, created_at');
+
+            if (error || !data) {
+                return { totalAssessments: 0, articlesRead: 0, videosWatched: 0, moodLogs: 0, sleepLogs: 0, daysActive: 0 };
             }
-            return response.data as {
-                totalAssessments: number;
-                articlesRead: number;
-                videosWatched: number;
-                moodLogs: number;
-                sleepLogs: number;
-                daysActive: number;
+
+            const stats = {
+                totalAssessments: data.filter(a => a.action_type === 'assessment_completed').length,
+                articlesRead: data.filter(a => a.action_type === 'article_viewed').length,
+                videosWatched: data.filter(a => a.action_type === 'video_watched').length,
+                moodLogs: data.filter(a => a.action_type === 'mood_logged').length,
+                sleepLogs: data.filter(a => a.action_type === 'sleep_logged').length,
+                daysActive: new Set(data.map(a => a.created_at?.split('T')[0])).size,
             };
-        } catch (error) {
-            console.error('Failed to fetch activity stats:', error);
-            return {
-                totalAssessments: 0,
-                articlesRead: 0,
-                videosWatched: 0,
-                moodLogs: 0,
-                sleepLogs: 0,
-                daysActive: 0
-            };
+
+            return stats;
+        } catch {
+            return { totalAssessments: 0, articlesRead: 0, videosWatched: 0, moodLogs: 0, sleepLogs: 0, daysActive: 0 };
         }
     }
 };

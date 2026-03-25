@@ -1,4 +1,4 @@
-import React from 'react';
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Article } from '../../../types';
 import Citation from '../../../components/article/Citation';
 import { CATEGORY_WORK_PRODUCTIVITY, PRIMARY_AUTHOR, CLINICAL_REVIEWER, catId } from './_shared';

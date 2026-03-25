@@ -55,8 +55,9 @@ const ConsentCheckboxes: React.FC<ConsentCheckboxesProps> = ({ consent, onChange
                 textSize={textSize}
             >
                 <span className={labelSize}>
-                    I consent to Psychage storing my wellness data to provide personalized tracking
-                    and insights. I can withdraw consent and delete my data at any time.
+                    I understand that my wellness data is stored locally on my device for privacy.
+                    Psychage does not store or transmit my personal health information to its servers.
+                    I can delete my data at any time from my device.
                 </span>
             </ConsentCheckbox>
 
@@ -69,7 +70,7 @@ const ConsentCheckboxes: React.FC<ConsentCheckboxesProps> = ({ consent, onChange
                 textSize={textSize}
             >
                 <span className={labelSize}>
-                    I confirm I am <strong>16 years of age or older</strong>.
+                    I confirm that I am <strong>18 years of age or older</strong>.
                 </span>
             </ConsentCheckbox>
 

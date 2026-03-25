@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Plus, Check } from 'lucide-react';
+import { Check } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import MoodSlider from '../components/MoodSlider';
 import type { StressorEntry } from '../types';

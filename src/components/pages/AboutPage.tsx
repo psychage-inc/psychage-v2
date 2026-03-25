@@ -1,36 +1,39 @@
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Shield, Globe, Heart, Brain } from 'lucide-react';
 import Button from '../ui/Button';
 import SEO from '../SEO';
 
 const AboutPage: React.FC = () => {
+    const navigate = useNavigate();
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
     const stats = [
-        { label: "Active Users", value: "50k+" },
-        { label: "Articles Published", value: "200+" },
-        { label: "Verified Providers", value: "1,200+" },
-        { label: "Countries Reached", value: "45" },
+        { label: "Languages Supported", value: "5" },
+        { label: "Articles Published", value: "2,000+" },
+        { label: "Verified Providers", value: "5,600+" },
+        { label: "Crisis Resources", value: "24/7" },
     ];
 
     const values = [
         {
             icon: Shield,
-            title: "Clinical Integrity",
-            desc: "Every piece of content is reviewed by licensed mental health professionals to ensure medical accuracy."
+            title: "Integrity",
+            desc: "Every piece of content is reviewed by professional mental health experts to ensure accuracy."
         },
         {
             icon: Heart,
-            title: "Radical Empathy",
+            title: "Empathy",
             desc: "We design for the human experience, prioritizing warmth, safety, and understanding in every interaction."
         },
         {
             icon: Globe,
             title: "Universal Access",
-            desc: "Mental health education should be a right, not a privilege. Our core resources will always be free."
+            desc: "Mental health access should be a right, not a privilege. Our core resources will always be free, multilingual, and accessible to people with disabilities."
         }
     ];
 
@@ -118,13 +121,13 @@ const AboutPage: React.FC = () => {
                         <div className="mt-8 pt-8 border-t border-gray-200">
                             <div className="flex items-center gap-4">
                                 <img
-                                    src="/images/authors/author-placeholder.svg"
-                                    alt="Founder"
-                                    className="w-12 h-12 rounded-full object-cover"
+                                    src="/images/logo.png"
+                                    alt="Psychage logo"
+                                    className="w-12 h-12 object-contain"
                                 />
                                 <div>
-                                    <div className="font-bold text-gray-900">Dr. James Wilson</div>
-                                    <div className="text-sm text-gray-500">Founder & Clinical Director</div>
+                                    <div className="font-bold text-gray-900">Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology</div>
+                                    <div className="text-sm text-gray-500">Founder</div>
                                 </div>
                             </div>
                         </div>
@@ -160,8 +163,8 @@ const AboutPage: React.FC = () => {
             <div className="container mx-auto px-6 py-24 text-center">
                 <h2 className="font-display font-bold text-4xl text-gray-900 mb-8">Ready to explore?</h2>
                 <div className="flex justify-center gap-4">
-                    <Button size="lg" className="bg-teal-600 hover:bg-teal-700">Explore Articles</Button>
-                    <Button size="lg" variant="outline">Join the Team</Button>
+                    <Button size="lg" className="bg-teal-600 hover:bg-teal-700" onClick={() => navigate('/learn')}>Explore Articles</Button>
+                    <Button size="lg" variant="outline" onClick={() => navigate('/contact')}>Join the Team</Button>
                 </div>
             </div>
 

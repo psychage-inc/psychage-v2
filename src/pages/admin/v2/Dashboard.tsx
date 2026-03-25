@@ -4,11 +4,11 @@ import { useQuery } from '@tanstack/react-query';
 import {
   Users, ClipboardCheck, MessageSquare, ShieldAlert,
   UserCheck, FileText, TrendingUp, TrendingDown,
-  Newspaper, Star, AlertCircle, Clock,
+  AlertCircle, Clock,
 } from 'lucide-react';
 import {
-  ResponsiveContainer, AreaChart, Area, BarChart, Bar,
-  XAxis, YAxis, CartesianGrid, Tooltip, PieChart, Pie, Cell,
+  ResponsiveContainer, AreaChart, Area,
+  XAxis, YAxis, CartesianGrid, Tooltip,
 } from 'recharts';
 import { formatDistanceToNow } from 'date-fns';
 import { supabase } from '@/lib/supabaseClient';
@@ -126,7 +126,7 @@ function useRecentActivity() {
 // Charts
 // ============================================================
 
-const CHART_COLORS = ['#0d9488', '#f59e0b', '#ef4444', '#3b82f6', '#8b5cf6'];
+const _CHART_COLORS = ['#0d9488', '#f59e0b', '#ef4444', '#3b82f6', '#8b5cf6'];
 
 const UserGrowthChart: React.FC<{ data: { date: string; count: number }[] }> = ({ data }) => (
   <div className="bg-surface border border-border rounded-2xl p-5">

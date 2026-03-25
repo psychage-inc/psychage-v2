@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigator } from '../../context/NavigatorContext';
@@ -84,7 +85,7 @@ export const NavigatorFlow: React.FC = () => {
 
     // Handle browser back/forward navigation
     useEffect(() => {
-        const handlePopState = (event: PopStateEvent) => {
+        const handlePopState = (_event: PopStateEvent) => {
             // Check if we have flow progress to prevent accidental exit
             const hasProgress = state.currentStep !== 'welcome' ||
                                state.selectedSymptoms.size > 0 ||

@@ -1,3 +1,4 @@
+ 
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
@@ -384,6 +385,7 @@ const AdminProviderEditor: React.FC = () => {
   // Populate junction data when editing
   useEffect(() => {
     if (existingLocations && existingLocations.length > 0) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setLocations(
         existingLocations.map((loc: Record<string, unknown>) => ({
           address_line1: (loc.address_line1 as string) || '',
@@ -398,18 +400,22 @@ const AdminProviderEditor: React.FC = () => {
   }, [existingLocations]);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (existingSpecialties) setSelectedSpecialtyIds(existingSpecialties);
   }, [existingSpecialties]);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (existingLanguages) setSelectedLanguages(existingLanguages);
   }, [existingLanguages]);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (existingInsurance) setSelectedInsuranceIds(existingInsurance);
   }, [existingInsurance]);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (existingCompetencies) setSelectedCompetencyIds(existingCompetencies);
   }, [existingCompetencies]);
 

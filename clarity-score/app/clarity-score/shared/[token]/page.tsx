@@ -1,9 +1,8 @@
 'use client';
 
 import { useSharedAssessment } from '@/lib/hooks/useAssessment';
-import { notFound, useParams } from 'next/navigation';
+import { useParams } from 'next/navigation';
 export const dynamic = 'force-dynamic';
-import { Suspense } from 'react';
 import ProviderView from '@/components/clarity-score/ProviderView';
 import DisclaimerBanner from '@/components/clarity-score/DisclaimerBanner';
 

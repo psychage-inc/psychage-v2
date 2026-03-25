@@ -119,7 +119,7 @@ function getClosing(
 /**
  * Simple hash for deterministic template variant selection.
  */
-function simpleHash(answers: Record<string, number>): number {
+function _simpleHash(answers: Record<string, number>): number {
   let hash = 0;
   const keys = Object.keys(answers).sort();
   for (const key of keys) {

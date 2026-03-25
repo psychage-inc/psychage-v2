@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  ArrowRight, ChevronRight, ExternalLink, Zap,
+  ChevronRight, Zap,
   Brain, Leaf, Briefcase, Heart, BarChart3, Edit, Moon,
   // Learn category icons (semantic system)
   Library, Cloud, ShieldCheck, Stethoscope, HeartPulse,

@@ -28,7 +28,9 @@ export const DisclaimerCard: React.FC<DisclaimerCardProps> = ({ className }) => 
                         The Symptom Navigator is an educational tool designed to help you understand your experiences and find relevant resources. It is <strong className="font-semibold">not a diagnostic tool</strong> and cannot replace professional medical or mental health advice.
                     </p>
                     <p className="text-sm text-text-secondary leading-relaxed">
-                        If you are in immediate danger or experiencing a medical emergency, please call your local emergency services immediately.
+                        If you are in immediate danger or experiencing a medical emergency, please call{' '}
+                        <a href="tel:911" className="underline font-semibold text-text-primary">911</a>{' '}
+                        (or your local emergency number) immediately.
                     </p>
                 </div>
             </div>

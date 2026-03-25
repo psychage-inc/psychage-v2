@@ -1,3 +1,4 @@
+ 
 import { useEffect, useState, useRef } from 'react';
 import lottie, { AnimationItem } from 'lottie-web';
 
@@ -18,6 +19,7 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
     const hasCompleted = useRef(false);
     const exitTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
     const onCompleteRef = useRef(onComplete);
+    // eslint-disable-next-line react-hooks/refs
     onCompleteRef.current = onComplete;
 
     // Skip immediately if already shown this session

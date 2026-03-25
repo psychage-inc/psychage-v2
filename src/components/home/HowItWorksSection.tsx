@@ -134,7 +134,7 @@ const steps = [
     {
         icon: InsightIcon,
         title: 'Get personalized insights',
-        description: 'AI-powered analysis processed on your device gives you a clear picture of where you stand.',
+        description: 'AI-powered analysis processed on your device gives you a clearer picture of where you stand.',
         color: 'from-indigo-400 to-purple-500',
     },
     {
@@ -212,9 +212,16 @@ const HowItWorksSection: React.FC = () => {
                     transition={{ duration: 0.5, delay: 0.35 }}
                     className="mt-14 flex flex-col items-center gap-5"
                 >
-                    <div className="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
-                        <Lock className="w-4 h-4 text-teal-600 dark:text-teal-400" />
-                        <span>Your data never leaves your device</span>
+                    <div className="max-w-lg w-full rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 text-center shadow-sm">
+                        <div className="flex items-center justify-center gap-2 mb-3">
+                            <Lock className="w-5 h-5 text-teal-600 dark:text-teal-400" />
+                            <span className="font-semibold text-slate-900 dark:text-white text-base">
+                                Your data never leaves your device
+                            </span>
+                        </div>
+                        <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                            Psychage is built with privacy at its foundation. Your wellness data is processed and stored entirely on your device — it never touches our servers. Our architecture is designed to meet the principles of HIPAA and GDPR, so you can explore your mental health with complete confidence that your information remains yours alone.
+                        </p>
                     </div>
                     <button
                         onClick={() => navigate('/clarity-score')}

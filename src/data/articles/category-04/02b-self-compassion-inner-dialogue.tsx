@@ -1,4 +1,4 @@
-import React from 'react';
+/* eslint-disable no-useless-escape */
 import { Article } from '../../../types';
 import Citation from '../../../components/article/Citation';
 import { CATEGORY_SELF_WORTH, PRIMARY_AUTHOR, CLINICAL_REVIEWER, catId } from './_shared';

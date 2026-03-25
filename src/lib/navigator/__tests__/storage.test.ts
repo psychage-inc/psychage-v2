@@ -1,10 +1,11 @@
+ 
 /**
  * Navigator Storage Module — Unit Tests
  *
  * Tests persistence round-trips, expiry, corruption recovery, and Map serialization.
  */
 
-import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { describe, it, expect, beforeEach } from 'vitest';
 import {
     saveNavigatorState,
     loadNavigatorState,

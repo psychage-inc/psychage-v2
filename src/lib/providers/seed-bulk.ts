@@ -82,7 +82,7 @@ const TAXONOMY_DESCRIPTIONS = [
 // ─── Types ────────────────────────────────────────────────────────────────────
 
 interface NPPESResult {
-  result_count: number;
+  resultcount: number;
   results: NPPESRecord[] | null;
 }
 
@@ -255,10 +255,11 @@ function mapNPPESToInsert(record: NPPESRecord): ProviderInsert | null {
 
 // ─── Database Operations ──────────────────────────────────────────────────────
 
-async function getExistingNPICount(
+async function _getExistingNPICount(
   supabase: SupabaseClient,
   state: string,
 ): Promise<number> {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { count } = await supabase
     .from('providers')
     .select('id', { count: 'exact', head: true })

@@ -1,3 +1,4 @@
+ 
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
@@ -135,6 +136,7 @@ const AdminConditionEditor: React.FC = () => {
   // ── Populate form on load ──
   useEffect(() => {
     if (condition) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setConditionId(condition.condition_id);
       setNameEn(condition.name?.en || '');
       setCategory(condition.category);
@@ -152,6 +154,7 @@ const AdminConditionEditor: React.FC = () => {
 
   useEffect(() => {
     if (existingMappings) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setMappings(
         existingMappings.map((m) => ({
           symptom_id: m.symptom_id,

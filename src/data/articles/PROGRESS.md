@@ -4,22 +4,22 @@
 
 ## Summary
 
-- **Total planned**: 1,000
-- **Total written**: 650
+- **Total planned**: 1,200 (1,000 Batch 1 + 200 Batch 2)
+- **Total written**: 850
 - **Total remaining**: 350
-- **Total subtopics**: 102
-- **Subtopics complete**: 83
-- **Current batch**: Category 2 COMPLETE
+- **Total subtopics**: 122 (102 Batch 1 + 20 Batch 2)
+- **Subtopics complete**: 103
+- **Current batch**: Batch 2 — Categories 19–22
 
 ## By Type
 
 | Type | Planned | Written |
 |------|---------|---------|
-| self_help | 750 | 465 |
-| research_digest | 128 | 86 |
-| condition_deep_dive | 73 | 78 |
-| treatment_guide | 45 | 29 |
-| crisis_safety | 4 | 4 |
+| self_help | 750 | 529 |
+| research_digest | 128 | 116 |
+| condition_deep_dive | 73 | 101 |
+| treatment_guide | 45 | 41 |
+| crisis_safety | 4 | 7 |
 
 ## Category Progress
 
@@ -40,6 +40,15 @@
 | 13 | Understanding Mental Health Conditions | 80 | 80 | 8/8 | DONE |
 | 14 | Therapy, Treatment & Mental Health Navigation | 50 | 50 | 5/5 | DONE |
 | 15 | Loneliness, Social Connection & Belonging | 50 | 50 | 5/5 | DONE |
+
+### Batch 2 Categories (Articles #1201–#1400)
+
+| Cat | Name | Target | Written | Subtopics Done | Next Subtopic |
+|-----|------|--------|---------|----------------|---------------|
+| 19 | Men's Mental Health | 62 | 62 | 7/7 | DONE |
+| 20 | Chronic Illness, Pain & Medical Psychology | 68 | 68 | 6/6 | DONE |
+| 21 | Technology, Digital Life & Mental Health | 64 | 64 | 6/6 | DONE |
+| 22 | Spirituality, Meaning & Existential Mental Health | 6 | 6 | 1/1 | DONE |
 
 ## Completed Subcategories
 
@@ -145,3 +154,23 @@
 - [x] Cat 8, Sub 7: Systems, Environment & Identity-Based Change (CAT08-061 to CAT08-065) — 5 articles
 - [x] Cat 7, Sub 6: Depression in Specific Populations (CAT07-051 to CAT07-060) — 10 articles
 - [x] Cat 7, Sub 7: Treatment, Recovery & Moving Forward (CAT07-061 to CAT07-070) — 10 articles
+- [x] Cat 22, Sub 1: Existential Psychology (SPR-001 to SPR-006) — 6 articles
+- [x] Cat 19, Sub 1: Understanding Men's Mental Health (MMH-005 to MMH-010) — 6 articles
+- [x] Cat 19, Sub 2: Men's Relationships and Family (MMH-011 to MMH-020) — 10 articles
+- [x] Cat 19, Sub 3: Men's Physical and Mental Health (MMH-021 to MMH-030) — 10 articles
+- [x] Cat 19, Sub 4: Men in Specific Contexts (MMH-031 to MMH-040) — 10 articles
+- [x] Cat 19, Sub 5: Myths About Men's Mental Health (MMH-041 to MMH-046) — 6 articles
+- [x] Cat 19, Sub 6: Men's Health Interventions Part 1 (MMH-047 to MMH-056) — 10 articles
+- [x] Cat 19, Sub 7: Men's Health Interventions Part 2 (MMH-057 to MMH-066) — 10 articles
+- [x] Cat 20, Sub 1: Psychology of Chronic Illness (CIP-001 to CIP-010) — 10 articles
+- [x] Cat 20, Sub 2: Chronic Pain and the Mind (CIP-011 to CIP-022) — 12 articles
+- [x] Cat 20, Sub 3: Specific Medical Conditions and Mental Health (CIP-023 to CIP-034) — 12 articles
+- [x] Cat 20, Sub 4: Medical Trauma and Healthcare Experiences (CIP-035 to CIP-042) — 8 articles
+- [x] Cat 20, Sub 5: Supporting Wellbeing Alongside Illness (CIP-043 to CIP-050) — 8 articles
+- [x] Cat 20, Sub 6: Psychological Resilience in Medical Settings (CIP-051 to CIP-068) — 18 articles
+- [x] Cat 21, Sub 1: Social Media and Psychological Impact (TEC-001 to TEC-010) — 10 articles
+- [x] Cat 21, Sub 2: Digital Addiction and Compulsive Use (TEC-011 to TEC-020) — 10 articles
+- [x] Cat 21, Sub 3: AI, Emerging Technology & Mental Health (TEC-021 to TEC-030) — 10 articles
+- [x] Cat 21, Sub 4: Online Relationships and Community (TEC-031 to TEC-038) — 8 articles
+- [x] Cat 21, Sub 5: Healthy Digital Life (TEC-039 to TEC-044) — 6 articles
+- [x] Cat 21, Sub 6: Digital Culture and Society (TEC-045 to TEC-064) — 20 articles

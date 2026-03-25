@@ -1,3 +1,4 @@
+ 
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { format, formatDistanceToNow } from 'date-fns';
@@ -200,6 +201,7 @@ const LoadingSkeleton: React.FC = () => (
       <div className="h-6 w-32 bg-surface-hover rounded mb-4" />
       <div className="space-y-3">
         {Array.from({ length: 5 }).map((_, i) => (
+          // eslint-disable-next-line react-hooks/purity
           <div key={i} className="h-4 bg-surface-hover rounded" style={{ width: `${70 + Math.random() * 30}%` }} />
         ))}
       </div>

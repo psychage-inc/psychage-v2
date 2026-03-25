@@ -7,7 +7,6 @@ import SEO from '@/components/SEO';
 import { useAuth } from '@/context/AuthContext';
 import { api } from '@/lib/api';
 import { format, subDays } from 'date-fns';
-import InteractiveCard from '@/components/ui/InteractiveCard';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { moodService, type MoodEntry, type MoodStats } from '@/services/moodService';
 import { sleepService, type SleepEntry, type SleepStats } from '@/services/sleepService';

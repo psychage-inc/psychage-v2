@@ -1,3 +1,4 @@
+ 
 /**
  * Automated accessibility tests for Navigator components using jest-axe.
  * Tests for WCAG 2.1 AA compliance.

@@ -55,9 +55,9 @@ function generateSessionId(): string {
 // Helper: Extract Citations from LLM Response
 // ============================================================================
 
-function extractCitations(content: string, searchResults: unknown[]): Citation[] {
+function extractCitations(content: string, _searchResults: unknown[]): Citation[] {
   const citations: Citation[] = [];
-  const citationRegex = /\[SOURCE:\s*([^\|]+)\s*\|\s*([^\]]+)\]/g;
+  const citationRegex = /\[SOURCE:\s*([^|]+)\s*|\s*([^\]]+)\]/g;
 
   let match;
   while ((match = citationRegex.exec(content)) !== null) {

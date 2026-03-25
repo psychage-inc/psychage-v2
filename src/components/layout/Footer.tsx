@@ -1,10 +1,6 @@
 
 import React, { useRef } from 'react';
 import {
-  Twitter,
-  Instagram,
-  Linkedin,
-  Youtube,
   ArrowRight,
   Globe,
   ArrowUp
@@ -66,12 +62,13 @@ const Footer: React.FC = () => {
     ]
   };
 
-  const socialLinks = [
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Youtube, href: '#', label: 'YouTube' },
-  ];
+  // TODO: Add real social media URLs — all were placeholder '#'
+  // const socialLinks = [
+  //   { icon: Twitter, href: 'https://twitter.com/psychage', label: 'Twitter' },
+  //   { icon: Instagram, href: 'https://instagram.com/psychage', label: 'Instagram' },
+  //   { icon: Linkedin, href: 'https://linkedin.com/company/psychage', label: 'LinkedIn' },
+  //   { icon: Youtube, href: 'https://youtube.com/@psychage', label: 'YouTube' },
+  // ];
 
   return (
     <footer ref={footerRef} className="bg-white text-gray-900 relative font-sans overflow-hidden flex flex-col border-t border-gray-100 transition-colors duration-500">
@@ -164,19 +161,7 @@ const Footer: React.FC = () => {
 
         {/* Socials & Legal */}
         <div className="bg-white border-t border-gray-100 pt-16 pb-8 mt-24 mb-12 flex flex-col md:flex-row items-start md:items-end justify-between gap-8">
-          <div className="flex gap-4">
-            {socialLinks.map((social, idx) => (
-              <MagneticButton key={idx}>
-                <a
-                  href={social.href}
-                  aria-label={social.label}
-                  className="w-14 h-14 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-black hover:text-white transition-colors duration-300"
-                >
-                  <social.icon size={22} />
-                </a>
-              </MagneticButton>
-            ))}
-          </div>
+          {/* TODO: Restore social links once real URLs are available */}
 
           <div className="flex flex-col md:items-end gap-4 text-xs text-gray-500 font-medium tracking-wide">
             <button
@@ -207,36 +192,5 @@ const Footer: React.FC = () => {
   );
 };
 
-// Magnetic Button Component for Socials
-const MagneticButton: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const [position, setPosition] = React.useState({ x: 0, y: 0 });
-
-  const handleMouse = (e: React.MouseEvent) => {
-    const { clientX, clientY } = e;
-    const { height, width, left, top } = ref.current?.getBoundingClientRect() || { height: 0, width: 0, left: 0, top: 0 };
-    const middleX = clientX - (left + width / 2);
-    const middleY = clientY - (top + height / 2);
-    setPosition({ x: middleX * 0.2, y: middleY * 0.2 });
-  };
-
-  const reset = () => {
-    setPosition({ x: 0, y: 0 });
-  };
-
-  const { x, y } = position;
-
-  return (
-    <motion.div
-      ref={ref}
-      onMouseMove={handleMouse}
-      onMouseLeave={reset}
-      animate={{ x, y }}
-      transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
-    >
-      {children}
-    </motion.div>
-  );
-}
 
 export default Footer;

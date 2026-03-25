@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { ArrowLeft, Save, PenLine, ChevronDown } from 'lucide-react';
+import { ArrowLeft, Save, PenLine } from 'lucide-react';
 import { toast } from 'sonner';
 import TiptapEditor from '@/components/admin/TiptapEditor';
 import ArticleTypeSelector from '@/components/admin/articles/ArticleTypeSelector';
@@ -12,7 +12,7 @@ import PageHeader from '@/components/admin/PageHeader';
 import { createArticle, getArticleCategories, getSubcategoriesForCategory } from '@/services/articleAdminService';
 import { ARTICLE_TEMPLATE_TYPES } from '@/lib/admin/constants';
 import type { ArticleType } from '@/lib/article-framework/types';
-import type { ArticleCategoryRecord, ArticleSubcategoryRecord, ArticleTemplateType } from '@/lib/admin/types';
+import type { ArticleCategoryRecord, ArticleSubcategoryRecord } from '@/lib/admin/types';
 import { adminPath } from '@/hooks/useAdminNavigate';
 
 // ============================================================

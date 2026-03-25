@@ -6,7 +6,6 @@ import Navigation from './components/layout/Navigation';
 import Footer from './components/layout/Footer';
 import HeroSection from './components/home/HeroSection';
 import ProductShowcase from './components/home/ProductShowcase';
-import UserTestimonials from './components/home/UserTestimonials';
 import HowItWorksSection from './components/home/HowItWorksSection';
 import FeatureSpotlight from './components/home/FeatureSpotlight';
 import ContentPreview from './components/home/ContentPreview';
@@ -24,18 +23,17 @@ import SEO from './components/SEO';
 import SkipLink from './components/ui/SkipLink';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import RoleGuard from './components/auth/RoleGuard';
-import { ADMIN_URL, MAIN_URL, adminUrl } from './lib/urls';
+import { adminUrl } from './lib/urls';
 import Preloader from './components/Preloader';
 import PageTransition from './components/ui/PageTransition';
 import { ScrollManager } from './components/ui/ScrollManager';
-import { CustomCursor } from './components/ui/CustomCursor';
 
 // --- LAZY LOADED ROUTES (Code Splitting) ---
 const LearnPage = React.lazy(() => import('./pages/LearnPage'));
 const ArticleCategoryPage = React.lazy(() => import('./pages/ArticleCategoryPage'));
 const ArticlePage = React.lazy(() => import('./pages/learn/ArticlePage'));
 const ArticleRedirect = React.lazy(() => import('./components/article/ArticleRedirect'));
-const ArticleDetail = React.lazy(() => import('./components/pages/ArticleDetail'));
+const _ArticleDetail = React.lazy(() => import('./components/pages/ArticleDetail'));
 const VideoDetail = React.lazy(() => import('./components/pages/VideoDetail'));
 // Provider Directory V2
 const ProvidersLandingPage = React.lazy(() => import('./pages/providers/ProvidersLandingPage'));
@@ -133,7 +131,6 @@ const App: React.FC = () => {
                     {isLoading && <Preloader onComplete={() => setIsLoading(false)} />}
 
                     <ScrollManager />
-                    <CustomCursor />
 
                     {!isLoading && (
                         <div className="min-h-screen bg-background font-sans text-gray-900 overflow-x-hidden flex flex-col transition-colors duration-300">
@@ -222,8 +219,9 @@ const App: React.FC = () => {
                                             <Route path="/legal/privacy" element={<PageTransition><LegalPage type="privacy" /></PageTransition>} />
                                             <Route path="/legal/terms" element={<PageTransition><LegalPage type="terms" /></PageTransition>} />
                                             <Route path="/crisis" element={<PageTransition><CrisisPage /></PageTransition>} />
-                                            <Route path="/navigator" element={<PageTransition><NavigatorPage /></PageTransition>} />
-                                            <Route path="/navigator/crisis" element={<PageTransition><CrisisResourcesScreen /></PageTransition>} />
+                                            {/* Redirect legacy /navigator routes to /tools/symptom-navigator */}
+                                            <Route path="/navigator" element={<Navigate to="/tools/symptom-navigator" replace />} />
+                                            <Route path="/navigator/crisis" element={<Navigate to="/tools/symptom-navigator/crisis" replace />} />
                                             <Route path="/providers/register" element={<Navigate to="/for-providers/apply" replace />} />
 
                                             {/* Auth Routes */}

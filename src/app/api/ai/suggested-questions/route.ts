@@ -103,7 +103,7 @@ const QUESTION_POOLS: Record<string, SuggestedQuestion[]> = {
 
 export function handleSuggestedQuestions(
   timeOfDay?: string,
-  language?: string
+  _language?: string
 ): SuggestedQuestionsResponse {
   let pool: SuggestedQuestion[];
 

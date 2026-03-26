@@ -671,7 +671,7 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
     description: 'Examine the global mental health crisis through WHO data, understand the treatment gap, and explore policy solutions for equity.',
     image: "/images/articles/cat12/cover-049.svg",
     category: CATEGORY_CULTURAL_GLOBAL,
-    readTime: 9,
+    readTime: 14,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -683,7 +683,190 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
       { id: '4', text: 'Scaling up mental health services in resource-poor settings', source: 'Annual Review of Clinical Psychology', year: '2019', link: 'https://doi.org/10.1146/annurev-clinpsy-050718-095559', tier: 1 },
       { id: '5', text: 'Global mental health governance: Challenges and opportunities', source: 'Global Health Action', year: '2020', link: 'https://doi.org/10.1080/16549716.2020.1790793', tier: 1 },
     ],
-    content: <>content placeholder</>
+    content: (
+      <>
+        <SummaryBox>
+          Nearly one billion people worldwide live with mental health conditions. Depression is a leading cause of disability globally. Suicide claims over 700,000 lives each year. Yet in low-income countries, more than 75% of people with mental illness receive no treatment at all—a crisis WHO calls the "treatment gap." This isn't just about scarcity of psychiatrists or medications. It's about broken mental health systems, inadequate funding, human rights violations in institutions, stigma that prevents care-seeking, and policy failures that treat mental health as a luxury rather than a fundamental right. This article examines the global mental health landscape through WHO data and frameworks, explores why the treatment gap persists, and outlines policy solutions for achieving mental health equity worldwide.
+        </SummaryBox>
+
+        <KeyFacts>
+          <Citation id="1" article="traditionalHealingGlobalApproachesArticlesB[3]">
+            WHO's 2022 World Mental Health Report calls for "transforming mental health for all," with community-based care, human rights protection, and cross-sector collaboration as core strategies
+          </Citation>
+          <Citation id="2" article="traditionalHealingGlobalApproachesArticlesB[3]">
+            The treatment gap—proportion of people with mental illness who receive no care—exceeds 75% in low-income countries and reaches 35-50% even in high-income nations
+          </Citation>
+          <Citation id="3" article="traditionalHealingGlobalApproachesArticlesB[3]">
+            Mental health receives less than 2% of national health budgets on average, despite causing 10% of global disease burden
+          </Citation>
+          <Citation id="4" article="traditionalHealingGlobalApproachesArticlesB[3]">
+            Task-shifting and community-based care models can close the treatment gap cost-effectively, achieving outcomes comparable to specialist care at fraction of the cost
+          </Citation>
+          <Citation id="5" article="traditionalHealingGlobalApproachesArticlesB[3]">
+            Mental health governance faces challenges including fragmented leadership, inadequate funding mechanisms, and lack of accountability for policy implementation
+          </Citation>
+        </KeyFacts>
+
+        <h2>The Scale of the Crisis: Global Mental Health by the Numbers</h2>
+        <p>
+          WHO's 2022 World Mental Health Report paints a sobering picture. Nearly one in eight people globally live with a mental disorder—970 million people. Depression affects 280 million, anxiety 301 million. Psychotic disorders like schizophrenia affect 24 million. Every 40 seconds, someone dies by suicide.<Citation id="1" article="traditionalHealingGlobalApproachesArticlesB[3]" />
+        </p>
+        <p>
+          The burden is unevenly distributed. Low- and middle-income countries (LMICs) account for 80% of the global population but have just 20% of mental health resources. Sub-Saharan Africa averages 0.1 psychiatrists per 100,000 people; high-income countries average 10-20. In some countries, an entire nation shares a single psychiatrist—or none.<Citation id="3" article="traditionalHealingGlobalApproachesArticlesB[3]" />
+        </p>
+        <p>
+          Even where services exist, quality is abysmal. Mental health institutions in many countries violate basic human rights: people chained to beds, held without consent indefinitely, subjected to forced treatment and abuse. Community-based care remains rare; institutionalization persists as the default despite decades of evidence showing it harms more than helps.
+        </p>
+
+        <DiagramBlock
+          type="flowchart"
+          title="The Treatment Gap: Barriers to Mental Health Care"
+          nodes={[
+            { id: '1', label: 'Recognition Barrier', description: 'Stigma prevents acknowledging mental illness' },
+            { id: '2', label: 'Knowledge Barrier', description: 'Lack of mental health literacy about symptoms and treatments' },
+            { id: '3', label: 'Access Barrier', description: 'No services available in region or country' },
+            { id: '4', label: 'Affordability Barrier', description: 'Services exist but are unaffordable' },
+            { id: '5', label: 'Quality Barrier', description: 'Services available but ineffective, harmful, or violate rights' },
+            { id: 'gap', label: 'TREATMENT GAP', description: '70-85% untreated in LMICs, 35-50% in HICs' }
+          ]}
+          connections={[
+            { from: '1', to: 'gap' },
+            { from: '2', to: 'gap' },
+            { from: '3', to: 'gap' },
+            { from: '4', to: 'gap' },
+            { from: '5', to: 'gap' }
+          ]}
+          description="Multiple compounding barriers create the global mental health treatment gap"
+        />
+
+        <h2>WHO's Policy Framework: Community Care, Rights, Integration</h2>
+        <p>
+          WHO's Mental Health Action Plan 2013-2030 and 2022 World Mental Health Report outline a vision for "transforming mental health for all."<Citation id="1" article="traditionalHealingGlobalApproachesArticlesB[3]" /> Key pillars include: strengthening mental health governance and leadership; providing comprehensive, community-based mental health care; implementing promotion and prevention strategies; and strengthening information systems, evidence, and research.
+        </p>
+        <p>
+          The shift from institutional to community-based care is central. WHO calls for closing psychiatric hospitals and reallocating resources to integrated, person-centered services in primary care and communities. This means training general health workers to manage mental health, establishing community mental health centers, providing psychosocial support in homes and familiar settings, and involving people with lived experience in service design.<Citation id="1" article="traditionalHealingGlobalApproachesArticlesB[3]" />
+        </p>
+        <p>
+          Human rights protection is equally critical. WHO's QualityRights initiative promotes eliminating forced treatment, ensuring informed consent, ending restraints and seclusion, protecting people from involuntary institutionalization, and guaranteeing that mental health services respect dignity and autonomy.
+        </p>
+
+        <h2>Scaling Up: What Works in Resource-Poor Settings</h2>
+        <p>
+          The treatment gap isn't inevitable. Evidence-based strategies can dramatically expand access even without massive resource infusion.<Citation id="4" article="traditionalHealingGlobalApproachesArticlesB[3]" /> Task-shifting—training non-specialists to deliver mental health care—has successfully treated millions. Programs in Ethiopia, India, Uganda, and elsewhere show community health workers can effectively manage depression, psychosis, and substance use with outcomes comparable to specialist care.
+        </p>
+        <p>
+          Integration into primary care works. When general doctors and nurses receive brief training in mental health assessment and management, treatment rates rise dramatically. Digital mental health tools—apps, teletherapy, AI chatbots—expand access in areas without providers, though equity concerns persist when technology requires smartphones and internet.
+        </p>
+
+        <ComparisonTable
+          headers={['Strategy', 'Implementation', 'Evidence', 'Challenges']}
+          rows={[
+            {
+              cells: [
+                'Task-Shifting to Non-Specialists',
+                'Train community health workers, peers, lay counselors to deliver interventions',
+                'Strong: multiple RCTs show comparable outcomes to specialist care',
+                'Requires supervision infrastructure, sustainable training pipelines, fair compensation'
+              ]
+            },
+            {
+              cells: [
+                'Integration into Primary Care',
+                'Equip general health workers to screen, treat, and refer mental health conditions',
+                'Strong: increases detection and treatment rates significantly',
+                'Primary care workers already overburdened; needs system redesign, not just add-ons'
+              ]
+            },
+            {
+              cells: [
+                'Digital Mental Health',
+                'Apps, teletherapy, AI tools, online support groups',
+                'Moderate: efficacy varies widely; best as supplements to human care',
+                'Digital divide excludes poorest populations; privacy concerns; lacks human connection'
+              ]
+            },
+            {
+              cells: [
+                'Community-Based Centers',
+                'Local mental health hubs offering comprehensive services outside hospitals',
+                'Emerging: promising models in diverse settings',
+                'Requires infrastructure investment, community buy-in, trained workforce'
+              ]
+            }
+          ]}
+          caption="Four evidence-based strategies for closing the global mental health treatment gap"
+        />
+
+        <h2>The Funding Crisis: Mental Health as "Luxury"</h2>
+        <p>
+          Follow the money, and you'll understand the treatment gap. Despite causing roughly 10% of global disease burden, mental health receives less than 2% of health budgets—and in LMICs, often under 1%. Of this paltry funding, most goes to psychiatric hospitals rather than community services.<Citation id="3" article="traditionalHealingGlobalApproachesArticlesB[3]" />
+        </p>
+        <p>
+          This reflects mental health's perception as a "luxury" that countries will address after infectious disease, maternal health, and physical illness are "solved"—a false dichotomy that ignores how mental and physical health intertwine. Depression worsens diabetes and heart disease. Untreated mental illness drives premature mortality. Investing in mental health produces economic returns of $4-5 for every dollar spent through improved productivity and reduced healthcare costs.<Citation id="3" article="traditionalHealingGlobalApproachesArticlesB[3]" />
+        </p>
+
+        <h2>Governance Gaps: Who's Accountable?</h2>
+        <p>
+          Even when policies exist, implementation fails. Mental health governance—leadership, coordination, accountability mechanisms—is weak globally. Responsibility fragments across multiple ministries (health, social welfare, justice) with no clear authority. Funding mechanisms lack transparency. Policies collect dust while practices violate them with impunity.<Citation id="5" article="traditionalHealingGlobalApproachesArticlesB[3]" />
+        </p>
+        <p>
+          Accountability requires: designated mental health leadership at national and regional levels, legislation enshrining mental health rights with enforcement mechanisms, transparent budgets showing mental health spending, independent monitoring of service quality and rights violations, and meaningful participation of people with lived experience in governance.
+        </p>
+
+        <PracticalExercise
+          title="Advocating for Global Mental Health Equity"
+          description="Actions to support mental health policy change:"
+          steps={[
+            {
+              instruction: 'Educate yourself on global burden',
+              details: 'Read WHO's World Mental Health Report. Understand the treatment gap, human rights violations, and funding disparities. Knowledge precedes advocacy.'
+            },
+            {
+              instruction: 'Support global mental health organizations',
+              details: 'Donate to or volunteer with NGOs working on global mental health: BasicNeeds, StrongMinds, Mental Health Innovation Network, WHO Foundation.'
+            },
+            {
+              instruction: 'Advocate to policymakers',
+              details: 'Contact your country's representatives about foreign aid for mental health, support for WHO programs, and domestic mental health parity laws.'
+            },
+            {
+              instruction: 'Amplify voices from LMICs',
+              details: 'Follow and share work by mental health advocates, researchers, and providers from global south. Decolonizing mental health means centering these voices.'
+            },
+            {
+              instruction: 'Challenge stigma in your community',
+              details: 'Global change starts locally. Reducing stigma, supporting mental health parity, advocating for community-based care at home contributes to global momentum.'
+            }
+          ]}
+          timeEstimate="Ongoing commitment"
+        />
+
+        <ArticleCallout variant="warning" title="The Limits of Global North Solutions">
+          Much "global mental health" work involves exporting Western psychiatric models to LMICs without adequate cultural adaptation, community input, or attention to local healing traditions. True equity requires epistemic justice: recognizing that Western psychiatry doesn't hold all answers, that traditional healing systems have value, and that solutions must emerge from communities themselves rather than being imposed by wealthy nations or international organizations.
+        </ArticleCallout>
+
+        <SparkMoment>
+          The treatment gap isn't a natural disaster or an unfortunate scarcity—it's a policy choice. Every government that spends less than 2% of health budgets on mental health while mental illness causes 10% of disease burden makes a choice. Every institution that chains people with psychosis instead of providing humane community care makes a choice. Every nation that trains specialists for wealthy urban centers while rural millions go without makes a choice. The gap closes when we choose differently: when we fund community care over warehousing, when we respect rights over coercion, when we invest in equity over maintaining systems that serve the few at the expense of the many.
+        </SparkMoment>
+
+        <RelatedToolsBlock
+          tools={[
+            {
+              name: 'Crisis Resources',
+              path: '/crisis',
+              description: 'Global crisis support including international helplines and resources'
+            },
+            {
+              name: 'Provider Directory',
+              path: '/find-care',
+              description: 'Find mental health services with filters for cost, language, and cultural background'
+            }
+          ]}
+        />
+
+        <ReferenceList article="traditionalHealingGlobalApproachesArticlesB[3]" />
+      </>
+    )
   },
   {
     id: catId(50),

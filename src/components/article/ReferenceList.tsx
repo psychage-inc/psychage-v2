@@ -13,7 +13,11 @@ const TIER_BADGE_COLORS: Record<SourceTier, string> = {
 };
 
 interface ReferenceListProps {
-    citations: Citation[];
+    citations?: Citation[];
+    /** Alternative prop names used by some articles */
+    references?: Citation[];
+    article?: string;
+    className?: string;
 }
 
 const BackLink: React.FC<{ citationId: string; index: number }> = ({ citationId, index }) => {
@@ -42,7 +46,8 @@ const BackLink: React.FC<{ citationId: string; index: number }> = ({ citationId,
     );
 };
 
-const ReferenceList: React.FC<ReferenceListProps> = ({ citations }) => {
+const ReferenceList: React.FC<ReferenceListProps> = ({ citations: citationsProp, references }) => {
+    const citations = citationsProp ?? references ?? [];
     if (!citations || citations.length === 0) return null;
 
     return (
@@ -99,7 +104,7 @@ const ReferenceList: React.FC<ReferenceListProps> = ({ citations }) => {
 
                                 {/* Title */}
                                 <span className="italic text-gray-700 dark:text-gray-300">
-                                    {citation.text}
+                                    {citation.text || citation.title}
                                 </span>
 
                                 {/* Journal */}

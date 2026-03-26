@@ -13,14 +13,19 @@ export interface KeyFact {
 }
 
 interface KeyFactsProps {
-    facts: KeyFact[];
+    facts?: KeyFact[];
+    /** Alternative prop name used by some articles */
+    citations?: { citationId: string; fact: string }[];
+    children?: React.ReactNode;
     className?: string;
 }
 
-const KeyFacts: React.FC<KeyFactsProps> = ({ facts, className = '' }) => {
+const KeyFacts: React.FC<KeyFactsProps> = ({ facts: factsProp, citations, children, className = '' }) => {
     const prefersReducedMotion = useReducedMotion();
 
-    if (!facts || facts.length === 0) return null;
+    // Normalize citations to facts format
+    const facts = factsProp ?? (citations ? citations.map(c => ({ text: c.fact, label: c.citationId })) : []);
+    if ((!facts || facts.length === 0) && !children) return null;
 
     return (
         <motion.div

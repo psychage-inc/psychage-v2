@@ -6,14 +6,15 @@ import { useReducedMotion } from '@/hooks/useReducedMotion';
 interface SummaryBoxProps {
     summary?: string;
     keyPoints?: string[];
+    children?: React.ReactNode;
     className?: string;
 }
 
-const SummaryBox: React.FC<SummaryBoxProps> = ({ summary, keyPoints, className = '' }) => {
+const SummaryBox: React.FC<SummaryBoxProps> = ({ summary, keyPoints, children, className = '' }) => {
     const prefersReducedMotion = useReducedMotion();
 
-    // Support both summary string and keyPoints array
-    const content = summary || keyPoints;
+    // Support summary string, keyPoints array, and children
+    const content = summary || keyPoints || children;
     if (!content) return null;
 
     const isArray = Array.isArray(content);

@@ -22,6 +22,8 @@ interface StatCardProps {
     title?: string;
     /** Articles sometimes pass props directly instead of stats array */
     value?: number | string;
+    /** Alternative prop name used by some articles */
+    number?: number | string;
     stat?: string;
     label?: string;
     description?: string;
@@ -108,8 +110,8 @@ const StatCard: React.FC<StatCardProps> = (props) => {
 
     // Normalize: support both `stats` array and direct props
     const stats: StatItem[] = props.stats ?? (
-        (props.value != null || props.stat != null)
-            ? [{ value: props.value ?? props.stat ?? '', label: props.label ?? '', description: props.description, source: props.source, citation: props.citation }]
+        (props.value != null || props.number != null || props.stat != null)
+            ? [{ value: props.value ?? props.number ?? props.stat ?? '', label: props.label ?? '', description: props.description, source: props.source, citation: props.citation }]
             : []
     );
     const source = props.source ?? stats[0]?.source;

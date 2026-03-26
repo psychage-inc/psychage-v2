@@ -23,6 +23,9 @@ interface CitationProps {
     journalName?: string;
     doi?: string;
     link?: string;
+    /** Alternative prop names used by some articles */
+    article?: string;
+    children?: React.ReactNode;
 }
 
 const SingleCitation: React.FC<{ id: string; index: number; source?: string; year?: string; tier?: SourceTier; journalName?: string; doi?: string; link?: string }> = ({

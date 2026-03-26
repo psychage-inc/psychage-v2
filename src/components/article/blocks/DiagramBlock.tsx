@@ -10,6 +10,7 @@ export interface DiagramNode {
   x?: number;
   y?: number;
   color?: string;
+  description?: string;
 }
 
 export interface DiagramConnection {
@@ -56,7 +57,7 @@ export const DiagramBlock: React.FC<DiagramBlockProps> = ({
 
   // If items are provided instead of nodes, convert them or render as simple list
   const isSimpleList = items && items.length > 0 && !propNodes;
-  const nodes = propNodes || (items ? items.map((item, i) => ({
+  const nodes: DiagramNode[] = propNodes || (items ? items.map((item, i) => ({
     id: `item-${i}`,
     label: item.label
   })) : []);

@@ -4,13 +4,21 @@ import { motion } from 'framer-motion';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 
 interface SparkMomentProps {
-    children: React.ReactNode;
+    children?: React.ReactNode;
+    /** Alternative prop name used by some articles */
+    content?: React.ReactNode;
     title?: string;
+    /** Alternative props used by some articles for quote format */
+    quote?: string;
+    author?: string;
+    context?: string;
+    reflection?: string;
     className?: string;
 }
 
 const SparkMoment: React.FC<SparkMomentProps> = ({
     children,
+    content,
     title = 'Spark Moment',
     className = '',
 }) => {
@@ -34,7 +42,7 @@ const SparkMoment: React.FC<SparkMomentProps> = ({
                         {title}
                     </h3>
                     <div className="text-base leading-relaxed text-amber-900/80 dark:text-amber-200/80 font-medium">
-                        {children}
+                        {children ?? content}
                     </div>
                 </div>
             </div>

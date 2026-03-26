@@ -31,7 +31,11 @@ type CalloutVariant =
     | 'science'
     | 'action'
     | 'self-assessment'
-    | 'research';
+    | 'research'
+    | 'exercise'
+    | 'clinical'
+    | 'danger'
+    | 'crisis';
 
 interface ArticleCalloutProps {
     variant?: CalloutVariant;
@@ -209,6 +213,42 @@ const CALLOUT_CONFIG: Record<
         border: 'border-l-cyan-400',
         iconColor: 'text-cyan-500',
         titleColor: 'text-cyan-900 dark:text-cyan-200',
+    },
+    exercise: {
+        icon: ClipboardList,
+        defaultTitle: 'Exercise',
+        bg: 'bg-indigo-50',
+        darkBg: 'dark:bg-indigo-950/20',
+        border: 'border-l-indigo-400',
+        iconColor: 'text-indigo-500',
+        titleColor: 'text-indigo-900 dark:text-indigo-200',
+    },
+    clinical: {
+        icon: Stethoscope,
+        defaultTitle: 'Clinical Note',
+        bg: 'bg-rose-50',
+        darkBg: 'dark:bg-rose-950/20',
+        border: 'border-l-rose-400',
+        iconColor: 'text-rose-500',
+        titleColor: 'text-rose-900 dark:text-rose-200',
+    },
+    danger: {
+        icon: AlertTriangle,
+        defaultTitle: 'Warning',
+        bg: 'bg-red-50',
+        darkBg: 'dark:bg-red-950/20',
+        border: 'border-l-red-500',
+        iconColor: 'text-red-500',
+        titleColor: 'text-red-900 dark:text-red-200',
+    },
+    crisis: {
+        icon: AlertTriangle,
+        defaultTitle: 'Crisis Resources',
+        bg: 'bg-red-50',
+        darkBg: 'dark:bg-red-950/20',
+        border: 'border-l-red-600',
+        iconColor: 'text-red-600',
+        titleColor: 'text-red-900 dark:text-red-200',
     },
 };
 

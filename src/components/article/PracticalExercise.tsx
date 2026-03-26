@@ -5,15 +5,25 @@ import { motion } from 'framer-motion';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 
 export interface ExerciseStep {
-    title: string;
-    description: string;
+    title?: string;
+    description?: string;
+    /** Alternative prop names used by some articles */
+    content?: string;
+    instruction?: string;
+    details?: string;
 }
 
 interface PracticalExerciseProps {
     title: string;
-    steps: ExerciseStep[];
+    steps: (ExerciseStep | string)[];
     toolLink?: string; // Can be either internal path or external URL
     toolLabel?: string;
+    /** Additional props used by some articles */
+    description?: string;
+    duration?: string;
+    frequency?: string;
+    warning?: string;
+    timeEstimate?: string;
     className?: string;
 }
 
@@ -50,38 +60,51 @@ const PracticalExercise: React.FC<PracticalExerciseProps> = ({
             </div>
 
             <ol className="space-y-4 mb-6">
-                {steps.map((step, i) => (
-                    <li key={i} className="flex items-start gap-4">
-                        <span className="shrink-0 w-8 h-8 rounded-full bg-indigo-500 text-white text-sm font-bold flex items-center justify-center mt-0.5 shadow-sm">
-                            {i + 1}
-                        </span>
-                        <div>
-                            <p className="font-semibold text-gray-900 dark:text-gray-100 mb-1">
-                                {step.title}
-                            </p>
-                            <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-                                {step.description}
-                            </p>
-                        </div>
-                    </li>
-                ))}
+                {steps.map((step, i) => {
+                    const isString = typeof step === 'string';
+                    const title = isString ? step : (step.title || step.instruction);
+                    const desc = isString ? undefined : (step.description || step.content || step.details);
+                    return (
+                        <li key={i} className="flex items-start gap-4">
+                            <span className="shrink-0 w-8 h-8 rounded-full bg-indigo-500 text-white text-sm font-bold flex items-center justify-center mt-0.5 shadow-sm">
+                                {i + 1}
+                            </span>
+                            <div>
+                                <p className="font-semibold text-gray-900 dark:text-gray-100 mb-1">
+                                    {title}
+                                </p>
+                                {desc && (
+                                    <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+                                        {desc}
+                                    </p>
+                                )}
+                            </div>
+                        </li>
+                    );
+                })}
             </ol>
 
             {toolLink && (() => {
                 const isExternal = toolLink.startsWith('http://') || toolLink.startsWith('https://');
-                const Component = isExternal ? 'a' : Link;
-                const linkProps = isExternal
-                    ? { href: toolLink, target: '_blank', rel: 'noopener noreferrer' }
-                    : { to: toolLink };
 
-                return (
-                    <Component
-                        {...linkProps}
+                return isExternal ? (
+                    <a
+                        href={toolLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-white rounded-lg font-medium text-sm hover:bg-primary/90 transition-colors shadow-sm"
                     >
                         {toolLabel || 'Try This Tool'}
                         <ArrowRight size={16} />
-                    </Component>
+                    </a>
+                ) : (
+                    <Link
+                        to={toolLink}
+                        className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-white rounded-lg font-medium text-sm hover:bg-primary/90 transition-colors shadow-sm"
+                    >
+                        {toolLabel || 'Try This Tool'}
+                        <ArrowRight size={16} />
+                    </Link>
                 );
             })()}
         </motion.div>

@@ -56,19 +56,10 @@ export const RelatedToolsBlock: React.FC<RelatedToolsBlockProps> = ({
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {displayTools.map((tool, index) => {
-          const href = tool.link || tool.path || '#';
           const isExternal = !!tool.link;
-          const Component = isExternal ? 'a' : Link;
-          const linkProps = isExternal
-            ? { href, target: '_blank', rel: 'noopener noreferrer' }
-            : { to: tool.path || '/' };
-
-          return (
-            <Component
-              key={index}
-              {...linkProps}
-              className="group relative bg-white dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800 rounded-xl p-5 hover:border-primary dark:hover:border-primary transition-all duration-300 hover:shadow-md"
-            >
+          const commonClass = "group relative bg-white dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800 rounded-xl p-5 hover:border-primary dark:hover:border-primary transition-all duration-300 hover:shadow-md";
+          const inner = (
+            <>
               <div className="flex items-start gap-3 mb-3">
                 {tool.icon ? (
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
@@ -92,7 +83,27 @@ export const RelatedToolsBlock: React.FC<RelatedToolsBlockProps> = ({
               <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
                 {tool.description}
               </p>
-            </Component>
+            </>
+          );
+
+          return isExternal ? (
+            <a
+              key={index}
+              href={tool.link || '#'}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={commonClass}
+            >
+              {inner}
+            </a>
+          ) : (
+            <Link
+              key={index}
+              to={tool.path || '/'}
+              className={commonClass}
+            >
+              {inner}
+            </Link>
           );
         })}
       </div>

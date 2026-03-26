@@ -26,6 +26,7 @@ interface ComparisonTableProps {
     rightLabel?: string;
     title?: string;
     highlightColumn?: number;
+    caption?: string;
     className?: string;
 }
 

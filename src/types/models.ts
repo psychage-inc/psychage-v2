@@ -85,7 +85,9 @@ export interface Author {
 
 export interface Citation {
     id: string;
-    text: string;
+    text?: string;
+    /** Alternative prop name used by some articles */
+    title?: string;
     link?: string;
     source: string;
     year?: string;
@@ -115,8 +117,11 @@ export interface KeyFact {
 }
 
 export interface ExerciseStep {
-    title: string;
-    description: string;
+    title?: string;
+    description?: string;
+    content?: string;
+    instruction?: string;
+    details?: string;
 }
 
 export interface ArticleExercise {
@@ -130,12 +135,12 @@ export interface Article {
     id: number | string;
     slug: string;
     title: string;
-    description: string;
-    image: string;
+    description?: string;
+    image?: string;
     category: Category;
-    readTime: number;
-    author: Author;
-    publishedAt: string;
+    readTime?: number;
+    author?: Author;
+    publishedAt?: string;
     updatedAt?: string;
     reviewedBy?: Author;
     tags: string[];
@@ -151,6 +156,12 @@ export interface Article {
     keyFacts?: KeyFact[];
     sparkMoment?: string;
     practicalExercise?: ArticleExercise;
+    hero_image_url?: string;
+    /** Flat-format fields used by some article content files */
+    author_name?: string | Author;
+    published_at?: string;
+    word_count?: number;
+    seo_description?: string;
     // Video fields
     videoUrl?: string;
     videoPlatform?: 'youtube' | 'vimeo' | 'bunny' | 'self_hosted';

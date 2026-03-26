@@ -690,10 +690,190 @@ export const traumaDissociativeArticles: Article[] = [
     />
   </> },
 
-  { id: catId(24), slug: 'dissociative-identity-disorder', title: 'Dissociative Identity Disorder: Understanding What Was Once Called "Multiple Personality', description: "DID involves distinct identity states. Learn the reality behind this misunderstood condition.", image: "/images/articles/cat13/cover-024.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 14, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['DID', 'Dissociation', 'Trauma'], citations: [
-    { id: '1', text: 'DID Diagnosis', source: 'DSM-5-TR', year: '2022', link: 'https://doi.org/10.1176/appi.books.9780890425787', tier: 4 },
-    { id: '2', text: 'DID and Trauma', source: 'American Journal of Psychiatry', year: '2020', link: 'https://doi.org/10.1176/appi.ajp.2019.19080821', tier: 1 },
-  ], content: <><div id="introduction" className="scroll-mt-32"><p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">DID involves two or more distinct identity states resulting from severe childhood trauma <Citation id="2" index={1} source="American Journal of Psychiatry" year="2020" tier={1} />.</p></div><h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Treatment</h2><p className="mb-6">Phase-oriented trauma therapy aims for integration or cooperation between alters.</p></> },
+  { id: catId(24), slug: 'dissociative-identity-disorder', title: 'Dissociative Identity Disorder: Understanding What Was Once Called "Multiple Personality"', description: "DID involves distinct identity states. Learn the reality behind this misunderstood condition.", image: "/images/articles/cat13/cover-024.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 14, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['DID', 'Dissociation', 'Trauma'], citations: [
+    { id: '1', text: 'DID Diagnostic Criteria', source: 'DSM-5-TR', year: '2022', link: 'https://doi.org/10.1176/appi.books.9780890425787', tier: 4 },
+    { id: '2', text: 'Trauma Etiology of DID', source: 'American Journal of Psychiatry', year: '2020', link: 'https://doi.org/10.1176/appi.ajp.2019.19080821', tier: 1 },
+    { id: '3', text: 'DID Treatment Guidelines', source: 'International Society for the Study of Trauma and Dissociation', year: '2023', link: 'https://www.isst-d.org/guidelines/', tier: 3 },
+    { id: '4', text: 'Prevalence of DID', source: 'Journal of Trauma & Dissociation', year: '2021', link: 'https://doi.org/10.1080/15299732.2021.1903183', tier: 1 },
+    { id: '5', text: 'Neurobiology of DID', source: 'NeuroImage: Clinical', year: '2020', link: 'https://doi.org/10.1016/j.nicl.2020.102356', tier: 1 },
+    { id: '6', text: 'Misdiagnosis of DID', source: 'Psychological Medicine', year: '2021', link: 'https://doi.org/10.1017/S0033291721001628', tier: 1 },
+    { id: '7', text: 'Phase-Oriented Treatment', source: 'European Journal of Psychotraumatology', year: '2020', link: 'https://doi.org/10.1080/20008198.2020.1771382', tier: 1 },
+    { id: '8', text: 'Integration vs Cooperation', source: 'Journal of Clinical Psychology', year: '2021', link: 'https://doi.org/10.1002/jclp.23117', tier: 1 },
+  ], content: <>
+    <SummaryBox
+      keyPoints={[
+        "DID involves two or more distinct personality states with discontinuities in sense of self and agency",
+        "Results from severe, repeated childhood trauma (90% have documented abuse history)",
+        "Prevalence: 1-1.5% of general population—more common than previously thought",
+        "Not a psychotic disorder—reality testing remains intact",
+        "Treatment is phase-oriented trauma therapy aiming for cooperation or integration of identity states"
+      ]}
+      className="mb-12"
+    />
+
+    <div id="introduction" className="scroll-mt-32">
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+        Dissociative Identity Disorder (DID), formerly called Multiple Personality Disorder, is perhaps the most misunderstood psychiatric condition. Sensationalized in media and doubted by some clinicians, DID's reality is both more complex and more comprehensible than popular portrayals suggest. At its core, DID represents the mind's attempt to compartmentalize overwhelming childhood trauma so severe that normal integration of identity, memory, and consciousness could not occur <Citation id="2" index={1} source="American Journal of Psychiatry" year="2020" tier={1} />.
+      </p>
+
+      <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+        The condition involves disruption of identity characterized by two or more distinct personality states (often called "alters"). These states demonstrate discontinuous sense of self and agency, accompanied by gaps in memory beyond ordinary forgetting. DID is not schizophrenia, not psychosis, and not voluntary role-playing—it's a complex trauma disorder involving fundamental fragmentationof identity development.
+      </p>
+    </div>
+
+    <h2 id="diagnostic-criteria" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">What DID Actually Is</h2>
+
+    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+      DSM-5-TR criteria require <Citation id="1" index={2} source="DSM-5-TR" year="2022" tier={4} />:
+    </p>
+
+    <ComparisonTable
+      title="Core Features of DID"
+      items={[
+        {
+          name: "Identity Disruption",
+          description: "Two or more distinct personality states with discontinuous sense of self, each with its own pattern of perceiving, relating to, and thinking about self and environment"
+        },
+        {
+          name: "Amnesia",
+          description: "Recurrent gaps in recall of everyday events, personal information, or traumatic events—inconsistent with ordinary forgetting"
+        },
+        {
+          name: "Distress/Impairment",
+          description: "Significant distress or impairment in social, occupational, or other areas of functioning"
+        },
+        {
+          name: "Not Cultural Practice",
+          description: "Not part of broadly accepted cultural or religious practice (e.g., possession states in certain traditions)"
+        },
+        {
+          name: "Not Substance-Induced",
+          description: "Not attributable to physiological effects of substances or medical conditions"
+        }
+      ]}
+      className="my-8"
+    />
+
+    <Article Callout type="info" className="my-8">
+      <h4 className="font-bold mb-2">Understanding "Alters"</h4>
+      <p>Different identity states (alters) may have distinct names, ages, genders, preferences, and even physical characteristics (handwriting, voice). They're not "separate people" but fragmented aspects of one person's psyche that didn't integrate during development. Think of them as survival-based compartments that allowed a child to endure the unendurable by psychologically "going away" during abuse.</p>
+    </ArticleCallout>
+
+    <h2 id="causes" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Trauma Origins of DID</h2>
+
+    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+      DID develops from severe, repeated childhood trauma—typically before age 9. Research shows 90% of individuals with DID report documented histories of severe childhood abuse or neglect. The condition represents a developmental adaptation to trauma so overwhelming that the child's mind compartmentalizes the experience into separate states to preserve some semblance of functioning <Citation id="2" index={3} source="American Journal of Psychiatry" year="2020" tier={1} />.
+    </p>
+
+    <DiagramBlock
+      title="How DID Develops"
+      description="Dissociative defense becomes structural fragmentation"
+      items={[
+        { label: "Severe Childhood Trauma", value: "Before Age 9", description: "Typically prolonged sexual, physical, or emotional abuse by caregivers" },
+        { label: "Dissociation as Defense", value: "Adaptive", description: "Child 'goes away' mentally during abuse—a normal protective response" },
+        { label: "Repeated Activation", value: "Chronic", description: "Ongoing trauma reinforces dissociative escape as primary coping mechanism" },
+        { label: "Failed Integration", value: "Developmental", description: "Normal consolidation of unified identity doesn't occur—compartments remain separate" },
+        { label: "Distinct Identity States", value: "Structural", description: "What began as situational dissociation becomes structural personality fragmentation" }
+      ]}
+      className="my-8"
+    />
+
+    <h2 id="prevalence" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">More Common Than You Think</h2>
+
+    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+      DID is not extremely rare. Population studies suggest prevalence of 1-1.5%—similar to schizophrenia or bipolar disorder <Citation id="4" index={4} source="Journal of Trauma & Dissociation" year="2021" tier={1} />. However, it's dramatically underdiagnosed. Average time from first contact with mental health services to accurate diagnosis is 12 years. Patients typically receive an average of 3-4 misdiagnoses (commonly bipolar disorder, borderline personality disorder, schizophrenia, or major depression) before DID is recognized.
+    </p>
+
+    <KeyFacts
+      facts={[
+        { label: "Prevalence", value: "1-1.5%", context: "Of general population" },
+        { label: "Childhood Abuse", value: "90%", context: "Report documented trauma history" },
+        { label: "Time to Diagnosis", value: "12 years", context: "Average delay from first treatment contact" },
+        { label: "Female:Male Ratio", value: "9:1", context: "In clinical samples (gender differences in trauma types)" },
+        { label: "Comorbidity", value: "95%+", context: "Have other mental health diagnoses" }
+      ]}
+      className="my-12"
+    />
+
+    <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Treatment: Phase-Oriented Approach</h2>
+
+    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+      DID treatment follows a three-phase model similar to C-PTSD but with additional focus on working with different identity states <Citation id="3" index={5} source="ISSTD" year="2023" tier={3} />:
+    </p>
+
+    <ComparisonTable
+      title="Three Phases of DID Treatment"
+      items={[
+        {
+          name: "Phase 1: Stabilization",
+          description: "Establishing safety, symptom management, developing internal communication between alters, reducing self-harm and dangerous behaviors, building trust in therapy. Duration: 1-3 years."
+        },
+        {
+          name: "Phase 2: Trauma Processing",
+          description: "Carefully working through traumatic memories while maintaining stabilization, addressing each alter's trauma experiences, modifying EMDR/CPT for dissociative presentations. Duration: 2-5 years."
+        },
+        {
+          name: "Phase 3: Integration or Cooperation",
+          description: "Working toward either full integration (alters blending into unified self) or cooperative functioning (alters working together harmoniously). Duration: 1-2 years."
+        }
+      ]}
+      className="my-8"
+    />
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Integration vs. Cooperation</h3>
+
+    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+      Treatment goals are individualized. Full integration—where all alters blend into a unified identity—is one possible outcome but not the only valid goal. Many individuals with DID achieve excellent functioning through cooperation, where alters maintain some distinctness but work together collaboratively, sharing memories and co-managing life <Citation id="8" index={6} source="Journal of Clinical Psychology" year="2021" tier={1} />.
+    </p>
+
+    <ArticleCallout type="warning" className="my-8">
+      <h4 className="font-bold mb-2">Hypnosis and "Recovered Memories" Controversy</h4>
+      <p>While hypnosis was historically used in DID treatment, current guidelines recommend against it due to risk of creating false memories. Treatment focuses on processing memories that naturally emerge rather than using techniques to "recover" hidden memories. The goal is healing, not archaeological excavation of every trauma detail.</p>
+    </ArticleCallout>
+
+    <SparkMoment
+      quote="DID is not about 'having multiple people inside.' It's about being one person who, as a child, learned to compartmentalize overwhelming experiences so thoroughly that the compartments developed their own continuity."
+      author="Dr. Bethany Brand"
+      context="Clinical psychologist and DID researcher"
+      reflection="This reframing is crucial: DID patients are not 'possessed' by foreign entities or housing separate individuals. They're trauma survivors whose normal developmental integration was disrupted by experiences no child should endure. Understanding this reduces stigma and clarifies treatment goals—helping one person become more unified."
+      className="my-12"
+    />
+
+    <RelatedToolsBlock
+      tools={[
+        {
+          name: "ISSTD Treatment Guidelines",
+          description: "Evidence-based clinical guidelines for dissociative disorders",
+          link: "https://www.isst-d.org/guidelines/"
+        },
+        {
+          name: "Dissociative Experiences Scale",
+          description: "Screening tool for dissociative symptoms",
+          link: "https://www.isst-d.org/resources/screening-tools/"
+        },
+        {
+          name: "The Haunted Self",
+          description: "Definitive textbook by van der Hart, Nijenhuis, & Steele on structural dissociation",
+          link: "https://www.guilford.com/books/The-Haunted-Self/Hart-Nijenhuis-Steele/9780393704570"
+        }
+      ]}
+      className="my-12"
+    />
+
+    <ReferenceList
+      references={[
+        { id: '1', text: 'DID Diagnostic Criteria', source: 'DSM-5-TR', year: '2022', link: 'https://doi.org/10.1176/appi.books.9780890425787', tier: 4 },
+        { id: '2', text: 'Trauma Etiology of DID', source: 'American Journal of Psychiatry', year: '2020', link: 'https://doi.org/10.1176/appi.ajp.2019.19080821', tier: 1 },
+        { id: '3', text: 'DID Treatment Guidelines', source: 'International Society for the Study of Trauma and Dissociation', year: '2023', link: 'https://www.isst-d.org/guidelines/', tier: 3 },
+        { id: '4', text: 'Prevalence of DID', source: 'Journal of Trauma & Dissociation', year: '2021', link: 'https://doi.org/10.1080/15299732.2021.1903183', tier: 1 },
+        { id: '5', text: 'Neurobiology of DID', source: 'NeuroImage: Clinical', year: '2020', link: 'https://doi.org/10.1016/j.nicl.2020.102356', tier: 1 },
+        { id: '6', text: 'Misdiagnosis of DID', source: 'Psychological Medicine', year: '2021', link: 'https://doi.org/10.1017/S0033291721001628', tier: 1 },
+        { id: '7', text: 'Phase-Oriented Treatment', source: 'European Journal of Psychotraumatology', year: '2020', link: 'https://doi.org/10.1080/20008198.2020.1771382', tier: 1 },
+        { id: '8', text: 'Integration vs Cooperation', source: 'Journal of Clinical Psychology', year: '2021', link: 'https://doi.org/10.1002/jclp.23117', tier: 1 },
+      ]}
+      className="mt-12"
+    />
+  </> },
 
   { id: catId(25), slug: 'osdd', title: 'Other Specified Dissociative Disorder: The In-Between Diagnosis', description: 'OSDD captures dissociative experiences not meeting full DID criteria.', image: "/images/articles/cat13/cover-025.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 10, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['OSDD', 'Dissociation'], citations: [
     { id: '1', text: 'DSM-5-TR', source: 'APA', year: '2022', link: 'https://doi.org/10.1176/appi.books.9780890425787', tier: 4 },

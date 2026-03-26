@@ -875,7 +875,7 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
     description: 'Envision a future where Western and traditional healing systems work together, honoring diverse ways of knowing and healing.',
     image: "/images/articles/cat12/cover-050.svg",
     category: CATEGORY_CULTURAL_GLOBAL,
-    readTime: 7,
+    readTime: 13,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -887,6 +887,191 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
       { id: '4', text: 'Pluralistic approaches to mental health: Global perspectives', source: 'Global Mental Health', year: '2021', link: 'https://doi.org/10.1017/gmh.2021.16', tier: 1 },
       { id: '5', text: 'Mental Health Action Plan 2013-2030', source: 'World Health Organization', year: '2021', link: 'https://www.who.int/publications/i/item/9789241506021', tier: 2 },
     ],
-    content: <>content placeholder</>
+    content: (
+      <>
+        <SummaryBox>
+          The future of mental health care isn't a choice between Western psychiatry and traditional healing, between evidence-based practice and cultural wisdom, between individual therapy and community support. It's integration: systems where multiple knowledge traditions coexist with mutual respect, where biomedical interventions and spiritual practices work together, where clinical expertise and lived experience share authority, where no one has to abandon their cultural identity to access care. This vision—call it pluralistic, integrative, or decolonized mental health—represents a profound shift from universalist models that impose one approach globally to contextualized care that honors diversity. This article explores what culturally responsive mental healthcare looks like in practice, the barriers blocking its realization, and the innovations pointing toward more equitable, effective, and human-centered healing systems.
+        </SummaryBox>
+
+        <KeyFacts>
+          <Citation id="1" article="traditionalHealingGlobalApproachesArticlesB[4]">
+            Integrative mental health care combines evidence-based biomedical treatments with traditional healing, complementary medicine, and community-based approaches tailored to local contexts
+          </Citation>
+          <Citation id="2" article="traditionalHealingGlobalApproachesArticlesB[4]">
+            Decolonizing mental health requires epistemic justice: recognizing that Western psychiatry is one knowledge system among many, not the universal authority on suffering and healing
+          </Citation>
+          <Citation id="3" article="traditionalHealingGlobalApproachesArticlesB[4]">
+            Cultural humility—ongoing self-reflection about power, privilege, and cultural limitations—surpasses cultural competence as a framework for respectful cross-cultural care
+          </Citation>
+          <Citation id="4" article="traditionalHealingGlobalApproachesArticlesB[4]">
+            Pluralistic mental health systems allow multiple healing traditions to coexist, letting communities and individuals choose what aligns with their values and needs
+          </Citation>
+          <Citation id="5" article="traditionalHealingGlobalApproachesArticlesB[4]">
+            WHO's Mental Health Action Plan explicitly endorses integrating traditional medicine and community-based healing into national mental health systems
+          </Citation>
+        </KeyFacts>
+
+        <h2>From Cultural Competence to Cultural Humility</h2>
+        <p>
+          For decades, mental health training emphasized "cultural competence"—learning about different cultures to provide better care. While well-intentioned, this approach often reduces cultures to lists of traits, reinforces stereotypes, and positions the (usually Western) provider as expert learning about "others." It doesn't address power imbalances or challenge whose knowledge counts as legitimate.<Citation id="3" article="traditionalHealingGlobalApproachesArticlesB[4]" />
+        </p>
+        <p>
+          Cultural humility offers a different path. Rather than claiming competence or mastery, practitioners commit to lifelong self-reflection: examining their own biases, acknowledging power differentials, recognizing what they don't and can't know about others' experiences, and letting clients be the experts on their own lives and cultures.<Citation id="3" article="traditionalHealingGlobalApproachesArticlesB[4]" /> It means asking, not assuming. Learning from mistakes without defensiveness. Partnering rather than diagnosing.
+        </p>
+        <p>
+          Cultural humility also challenges institutional power—advocating for policies that reduce barriers, hiring diverse staff, changing systems that exclude marginalized communities, and supporting community-led healing initiatives rather than imposing top-down interventions.
+        </p>
+
+        <DiagramBlock
+          type="cycle"
+          title="Cultural Humility as Ongoing Practice"
+          nodes={[
+            { id: '1', label: 'Self-Reflection', description: 'Examine own biases, assumptions, cultural limitations' },
+            { id: '2', label: 'Learning from Clients', description: 'Position clients as experts on their culture and experience' },
+            { id: '3', label: 'Acknowledging Power', description: 'Recognize provider privilege and systemic inequities' },
+            { id: '4', label: 'Institutional Advocacy', description: 'Change systems that create barriers for marginalized groups' },
+            { id: '5', label: 'Continuous Growth', description: 'Cultural learning never ends; mistakes inform future practice' }
+          ]}
+          connections={[
+            { from: '1', to: '2' },
+            { from: '2', to: '3' },
+            { from: '3', to: '4' },
+            { from: '4', to: '5' },
+            { from: '5', to: '1' }
+          ]}
+          description="Cultural humility as an ongoing, iterative practice rather than achieved competence"
+        />
+
+        <h2>Pluralistic Systems: Multiple Healing Pathways</h2>
+        <p>
+          Pluralistic mental health systems recognize that diverse healing traditions can coexist, each with value, each appropriate for different contexts and preferences. This doesn't mean uncritical acceptance of everything—safety, ethics, and evidence still matter—but it rejects the hierarchy that places Western psychiatry at the top with all other systems as "alternative."<Citation id="4" article="traditionalHealingGlobalApproachesArticlesB[4]" />
+        </p>
+        <p>
+          What pluralism looks like in practice: mental health facilities that employ both psychiatrists and traditional healers; insurance covering acupuncture, art therapy, and pastoral counseling alongside medications and psychotherapy; research funding for studying Indigenous healing practices using methodologies that respect their paradigms; licensing pathways for non-Western practitioners; and most critically, letting communities define what healing means for them.
+        </p>
+
+        <h2>Decolonizing Mental Health: Epistemic Justice</h2>
+        <p>
+          Colonization didn't just steal land and resources—it imposed epistemological dominance, declaring Western knowledge the only valid form of knowing while dismissing Indigenous, traditional, and non-Western systems as primitive superstition. Decolonizing mental health means challenging this hierarchy and working toward epistemic justice: the recognition that multiple ways of understanding suffering and healing have legitimacy.<Citation id="2" article="traditionalHealingGlobalApproachesArticlesB[4]" />
+        </p>
+        <p>
+          This requires: centering marginalized communities as authorities on their own mental health needs; compensating traditional knowledge keepers fairly when their wisdom informs research or practice; deconstructing diagnostic categories that pathologize cultural differences; questioning which research methods get funded and whose voices count as expertise; and confronting how psychiatry has been weaponized against Indigenous peoples, people of color, LGBTQ+ communities, and political dissidents.
+        </p>
+
+        <h2>Innovations Pointing the Way Forward</h2>
+
+        <ComparisonTable
+          headers={['Innovation', 'Description', 'Impact', 'Example']}
+          rows={[
+            {
+              cells: [
+                'Community-Governed Mental Health',
+                'Services designed, led, and governed by the communities they serve',
+                'Higher engagement, lower stigma, culturally appropriate care',
+                'Maori mental health services in New Zealand, tribal behavioral health in U.S.'
+              ]
+            },
+            {
+              cells: [
+                'Peer Support Specialists',
+                'People with lived mental health experience providing support as credentialed professionals',
+                'Reduces stigma, models recovery, improves outcomes',
+                'Certified peer specialists now covered by Medicaid in many U.S. states'
+              ]
+            },
+            {
+              cells: [
+                'Technology for Global Access',
+                'Teletherapy, AI chatbots, mental health apps reaching underserved populations',
+                'Expands access but raises equity and cultural appropriateness concerns',
+                'AYDA (digital mental health in Bangladesh), StrongMinds (group therapy via phone in Africa)'
+              ]
+            },
+            {
+              cells: [
+                'Trauma-Informed Systems',
+                'Entire systems (schools, justice, healthcare) trained to recognize and respond to trauma',
+                'Prevents retraumatization, addresses root causes beyond symptoms',
+                'SAMHSA trauma-informed care framework widely adopted in U.S. human services'
+              ]
+            },
+            {
+              cells: [
+                'Rights-Based Approaches',
+                'Mental health care guided by UN Convention on Rights of Persons with Disabilities',
+                'Eliminates coercion, protects autonomy, ensures dignity',
+                'WHO QualityRights initiative training facilities globally to end forced treatment'
+              ]
+            }
+          ]}
+          caption="Five innovations shaping culturally responsive, equitable mental health care"
+        />
+
+        <h2>Barriers to Integration and How to Address Them</h2>
+        <p>
+          Despite promising models, barriers persist. Professional turf battles pit psychiatrists against traditional healers, psychologists against peers. Funding mechanisms favor billable clinical services over community healing. Insurance doesn't cover traditional practices. Research institutions demand Western methodologies that don't fit traditional paradigms. Training programs teach Western frameworks exclusively.<Citation id="1" article="traditionalHealingGlobalApproachesArticlesB[4]" />
+        </p>
+        <p>
+          Progress requires: policy changes mandating coverage for diverse healing modalities; research funding for community-based participatory research respecting traditional knowledge; licensure creating pathways for non-Western practitioners; curriculum reform in clinical training to include cultural humility, traditional healing, and decolonization frameworks; and most importantly, transferring power and resources to communities rather than maintaining extractive relationships where institutions take knowledge without reciprocity.
+        </p>
+
+        <h2>What You Can Do: Individual Action for Systemic Change</h2>
+
+        <PracticalExercise
+          title="Contributing to Culturally Responsive Mental Health"
+          description="Actions at individual, community, and systems levels:"
+          steps={[
+            {
+              instruction: 'If you're a provider: commit to cultural humility',
+              details: 'Examine your biases, seek supervision on cultural issues, learn from clients, advocate institutionally for equitable practices, support hiring diverse staff, compensate traditional healers fairly when collaborating.'
+            },
+            {
+              instruction: 'If you're seeking care: advocate for your needs',
+              details: 'Request providers who understand your cultural background, ask about integrating traditional practices, give feedback when care feels culturally misaligned, know you have the right to culturally responsive treatment.'
+            },
+            {
+              instruction: 'Support community-led initiatives',
+              details: 'Donate to Indigenous mental health programs, cultural healing organizations, peer-run services. Volunteer with community mental health centers. Amplify voices from marginalized communities.'
+            },
+            {
+              instruction: 'Advocate for policy change',
+              details: 'Contact legislators about mental health parity, insurance coverage for traditional healing, funding for community-based care, ending coercive practices, supporting peer specialists.'
+            },
+            {
+              instruction: 'Educate yourself continuously',
+              details: 'Read work by scholars from diverse cultural backgrounds, follow Indigenous mental health advocates, learn about historical trauma and colonization, challenge your assumptions about what counts as "real" mental health care.'
+            }
+          ]}
+          timeEstimate="Ongoing lifelong commitment"
+        />
+
+        <ArticleCallout variant="info" title="Integration Doesn't Mean Everything Works Together">
+          Not all healing systems are compatible in all contexts. Some people want strictly biomedical care. Others want only traditional approaches. Integration means creating space for multiple pathways, not forcing one blended model. The goal is choice, informed by cultural values and individual preferences—not prescribing integration as a new universal standard that everyone must follow.
+        </ArticleCallout>
+
+        <SparkMoment>
+          The future we're building isn't a polite coexistence where Western psychiatry condescends to "allow" traditional healing a small corner. It's a fundamental reorganization of power, knowledge, and healing—where an Ayurvedic practitioner and a psychiatrist sit as equals, where Indigenous Elders' wisdom carries the same weight as peer-reviewed studies, where communities define what wellness means rather than having it defined for them, where no one's culture becomes the price of mental health care. This future is already emerging in pockets worldwide—community-governed clinics, pluralistic systems, decolonized research. The question isn't whether it's possible, but whether those holding power will redistribute it, whether those benefiting from current systems will join the transformation, whether we collectively choose justice over maintaining convenient hierarchies.
+        </SparkMoment>
+
+        <RelatedToolsBlock
+          tools={[
+            {
+              name: 'Provider Directory',
+              path: '/find-care',
+              description: 'Find culturally responsive providers including traditional healers and integrative practitioners'
+            },
+            {
+              name: 'Symptom Navigator',
+              path: '/tools/symptom-navigator',
+              description: 'Understand symptoms through multiple cultural and medical frameworks'
+            }
+          ]}
+        />
+
+        <ReferenceList article="traditionalHealingGlobalApproachesArticlesB[4]" />
+      </>
+    )
+  },
+];
   },
 ];

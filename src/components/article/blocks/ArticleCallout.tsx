@@ -30,7 +30,8 @@ type CalloutVariant =
     | 'insight'
     | 'science'
     | 'action'
-    | 'self-assessment';
+    | 'self-assessment'
+    | 'research';
 
 interface ArticleCalloutProps {
     variant?: CalloutVariant;
@@ -199,6 +200,15 @@ const CALLOUT_CONFIG: Record<
         border: 'border-l-fuchsia-400',
         iconColor: 'text-fuchsia-500',
         titleColor: 'text-fuchsia-900 dark:text-fuchsia-200',
+    },
+    research: {
+        icon: Info,
+        defaultTitle: 'Research',
+        bg: 'bg-cyan-50',
+        darkBg: 'dark:bg-cyan-950/20',
+        border: 'border-l-cyan-400',
+        iconColor: 'text-cyan-500',
+        titleColor: 'text-cyan-900 dark:text-cyan-200',
     },
 };
 

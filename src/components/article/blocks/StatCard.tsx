@@ -28,6 +28,8 @@ interface StatCardProps {
     source?: React.ReactNode;
     citation?: string;
     className?: string;
+    /** Visual variant — used by article content */
+    variant?: string;
 }
 
 function useCountUp(end: number, isActive: boolean, shouldAnimate: boolean, duration = 1500) {

@@ -9,6 +9,9 @@ export { QuoteBlock } from './QuoteBlock';
 export { HighlightBox } from './HighlightBox';
 export { ProgressSteps } from './ProgressSteps';
 export { BeforeAfter } from './BeforeAfter';
+export { MythVsFactBlock } from './MythVsFactBlock';
+export { RelatedToolsBlock } from './RelatedToolsBlock';
+export { DiagramBlock } from './DiagramBlock';
 
 // Types
 export type { CalloutVariant, ArticleCalloutProps } from './ArticleCallout';
@@ -21,3 +24,6 @@ export type { QuoteBlockProps } from './QuoteBlock';
 export type { HighlightBoxProps } from './HighlightBox';
 export type { StepItem, ProgressStepsProps } from './ProgressSteps';
 export type { BeforeAfterPanel, BeforeAfterProps } from './BeforeAfter';
+export type { MythVsFactBlockProps } from './MythVsFactBlock';
+export type { RelatedToolsBlockProps, RelatedTool } from './RelatedToolsBlock';
+export type { DiagramBlockProps, DiagramType, DiagramNode, DiagramConnection } from './DiagramBlock';

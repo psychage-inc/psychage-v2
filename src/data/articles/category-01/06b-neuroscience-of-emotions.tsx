@@ -2,10 +2,17 @@
 import { Article } from '../../../types';
 import Citation from '../../../components/article/Citation';
 import { CATEGORY_EMOTIONAL_REGULATION, PRIMARY_AUTHOR, CLINICAL_REVIEWER, catId } from './_shared';
+import SummaryBox from '../../../components/article/SummaryBox';
+import KeyFacts from '../../../components/article/KeyFacts';
+import SparkMoment from '../../../components/article/SparkMoment';
+import PracticalExercise from '../../../components/article/PracticalExercise';
+import ReferenceList from '../../../components/article/ReferenceList';
 import {
   ArticleCallout,
   StatCard,
   QuoteBlock,
+  DiagramBlock,
+  RelatedToolsBlock,
 } from '../../../components/article/blocks';
 
 export const neuroscienceOfEmotionsArticlesB: Article[] = [
@@ -17,7 +24,7 @@ export const neuroscienceOfEmotionsArticlesB: Article[] = [
     description: "Mirror neurons help you simulate others' experiences—the biological basis of empathy and why emotions spread between people.",
     image: '/images/articles/cat01/cover-056.svg',
     category: CATEGORY_EMOTIONAL_REGULATION,
-    readTime: 6,
+    readTime: 12,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -31,23 +38,197 @@ export const neuroscienceOfEmotionsArticlesB: Article[] = [
     ],
     content: (
       <>
-        <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You wince when someone stubs their toe. You feel joy watching a friend succeed. You absorb anxiety from a stressed coworker. This isn't imagination—your brain is literally simulating their internal experience through mirror neurons.
-          </p>
-          <p className="mb-6">
-            Mirror neurons fire both when you perform an action and when you observe someone else performing it <Citation id="1" index={1} source="Current Biology" year="2020" tier={1} />. They're the biological foundation of empathy and emotional contagion.
-          </p>
-        </div>
-        <h2 id="key-findings" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Key Research Findings</h2>
-        <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Mirror neurons activate in premotor cortex, inferior parietal lobule, and insula</li>
-          <li>Emotional contagion occurs through automatic mimicry + mirror neuron activation <Citation id="2" index={2} source="Trends in Cognitive Sciences" year="2021" tier={1} /></li>
-          <li>Social pain (rejection, exclusion) activates the same brain regions as physical pain <Citation id="5" index={5} source="Science" year="2020" tier={5} /></li>
-          <li>Reduced mirror neuron activity may contribute to empathy deficits in autism <Citation id="4" index={4} source="Molecular Psychiatry" year="2019" tier={1} /></li>
+        <SummaryBox>
+          Have you ever winced watching someone stub their toe? Felt your mood darken around an anxious friend? Absorbed the energy of a room full of stressed colleagues? This isn't coincidence or oversensitivity—it's your mirror neuron system at work. Mirror neurons are brain cells that fire both when you perform an action and when you observe someone else performing it, creating an internal simulation of their experience. This neural mirroring forms the biological foundation of empathy, allowing you to understand others' feelings not through intellectual analysis but through direct neurological resonance. The same system that helps you connect deeply with others can also leave you vulnerable to emotional contagion, absorbing others' stress, anxiety, or sadness. Understanding how mirror neurons work—and when they work too well—empowers you to harness empathy's gifts while protecting yourself from its costs.
+        </SummaryBox>
+
+        <KeyFacts citations={[
+          { citationId: '1', fact: 'Mirror neurons fire in your premotor cortex, inferior parietal lobule, and insula when you both perform actions and observe others performing them, creating neural simulation of their experience' },
+          { citationId: '2', fact: 'Emotional contagion occurs through automatic facial mimicry paired with mirror neuron activation, causing you to literally "catch" others' emotional states' },
+          { citationId: '5', fact: 'Social pain from rejection or exclusion activates the same brain regions (anterior cingulate cortex, insula) as physical pain, explaining why emotional hurt feels genuinely painful' },
+          { citationId: '4', fact: 'Reduced mirror neuron activity in autism spectrum disorder may contribute to difficulties with intuitive empathy, though cognitive empathy remains intact' },
+          { citationId: '3', fact: 'Empathy involves complex brain connectivity between mirror neuron regions, emotional processing centers, and executive control networks—not a single "empathy center"' },
+        ]} />
+
+        <h2>What Are Mirror Neurons?</h2>
+
+        <p>
+          Mirror neurons were first discovered accidentally in the 1990s by Italian neuroscientist Giacomo Rizzolatti. While studying motor control in macaque monkeys, researchers noticed something unexpected: certain neurons fired not only when a monkey performed an action (like grasping food) but also when the monkey <em>watched</em> another monkey or human perform the same action.<Citation id="1" />
+        </p>
+
+        <p>
+          This discovery revolutionized neuroscience's understanding of social cognition. These neurons weren't just representing the monkey's own actions—they were creating an internal simulation of <em>observed</em> actions, as if the monkey were performing them itself. In humans, mirror neuron systems are far more sophisticated, extending beyond simple motor actions to emotions, intentions, and complex social behaviors.
+        </p>
+
+        <p>
+          In humans, mirror neurons are located in several key brain regions:<Citation id="1" />
+        </p>
+
+        <ul>
+          <li><strong>Premotor cortex:</strong> Mirrors observed motor actions, allowing you to understand what someone is doing</li>
+          <li><strong>Inferior parietal lobule:</strong> Integrates sensory information about observed actions and intentions</li>
+          <li><strong>Insula:</strong> Mirrors emotional states, particularly disgust, pain, and visceral experiences</li>
+          <li><strong>Anterior cingulate cortex:</strong> Involved in mirroring social pain and emotional distress</li>
         </ul>
-        <h2 id="what-this-means" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">What This Means for You</h2>
-        <p className="mb-6">Emotional contagion is automatic and biological. When you're around anxious or stressed people, your mirror neurons simulate their state—which is why boundaries and self-regulation matter. You're not "too sensitive"—you're neurologically wired for connection <Citation id="3" index={3} source="Neuroscience & Biobehavioral Reviews" year="2020" tier={1} />.</p>
+
+        <p>
+          When you watch someone smile, your mirror neurons activate the same facial motor programs that produce smiling—often causing you to smile slightly yourself (even if you don't notice). When you see someone in pain, your pain-processing regions activate. When you observe someone reaching for a cup, your action-planning regions simulate that reach. You're not just <em>seeing</em> others' experiences—you're neurologically <em>resonating</em> with them.
+        </p>
+
+        <h2>Mirror Neurons and Empathy</h2>
+
+        <p>
+          Empathy—the capacity to understand and share others' feelings—relies heavily on mirror neuron systems. But empathy isn't a single, simple process. Neuroscience distinguishes between different types:<Citation id="3" />
+        </p>
+
+        <ul>
+          <li><strong>Affective empathy (emotional contagion):</strong> Automatically feeling what someone else feels through mirror neuron resonance. This happens fast, unconsciously, and is hard to control. You see someone cry, your throat tightens, your eyes water.</li>
+          <li><strong>Cognitive empathy (perspective-taking):</strong> Consciously understanding someone else's mental state through reasoning and theory of mind. This requires prefrontal cortex activity and executive function, not just mirror neurons. You think, "She must be frustrated because her proposal was rejected."</li>
+          <li><strong>Empathic concern (compassion):</strong> Feeling motivated to help someone suffering, mediated by different brain regions (anterior insula, medial prefrontal cortex) than mirroring alone.</li>
+        </ul>
+
+        <p>
+          Mirror neurons primarily drive <em>affective</em> empathy—the gut-level, automatic sharing of emotions. This can be beautiful (crying at weddings, feeling joy for a friend's success) or burdensome (absorbing a partner's anxiety, feeling drained after being around someone depressed). Crucially, affective empathy doesn't require <em>accuracy</em>—you might mirror distress someone isn't actually feeling, or misread their emotion entirely based on your own projections.
+        </p>
+
+        <DiagramBlock
+          type="cycle"
+          title="The Emotional Contagion Cycle"
+          description="How mirror neurons create automatic emotional spreading between people"
+          nodes={[
+            { id: '1', label: 'Person A feels anxious' },
+            { id: '2', label: 'Person A displays anxiety cues (facial tension, fidgeting)' },
+            { id: '3', label: 'Person B observes cues' },
+            { id: '4', label: 'Person B's mirror neurons activate' },
+            { id: '5', label: 'Person B unconsciously mimics cues' },
+            { id: '6', label: 'Person B feels anxious (feedback from mimicry + neural simulation)' },
+          ]}
+          source="Based on Trends in Cognitive Sciences, 2021"
+        />
+
+        <h2>How Emotional Contagion Works</h2>
+
+        <p>
+          Emotional contagion—the phenomenon of "catching" someone else's mood—happens through a multi-step process involving mirror neurons and facial feedback:<Citation id="2" />
+        </p>
+
+        <ol>
+          <li><strong>Observation:</strong> You see someone displaying an emotion (facial expression, body language, vocal tone)</li>
+          <li><strong>Automatic mimicry:</strong> Your mirror neurons activate motor programs that subtly mimic their expression—you slightly furrow your brow when they look worried, relax your shoulders when they seem calm</li>
+          <li><strong>Facial feedback:</strong> Sensory signals from your own facial muscles feed back to your brain's emotion centers (this is why forcing a smile can slightly improve mood—your brain interprets your face's position as evidence of happiness)</li>
+          <li><strong>Neural simulation:</strong> Your insula and anterior cingulate cortex activate patterns similar to what you'd experience if you were genuinely feeling that emotion</li>
+          <li><strong>Conscious experience:</strong> You become aware of feeling anxious, sad, happy, or stressed—often without recognizing it came from someone else</li>
+        </ol>
+
+        <p>
+          This process happens automatically and unconsciously. You don't <em>decide</em> to catch someone's anxiety—your mirror neurons don't ask permission. This explains why being around chronically stressed, anxious, or depressed people can wear you down emotionally, even when you consciously want to support them. It also explains why positive emotions spread: laughter is contagious because your mirror neurons simulate others' joy.<Citation id="2" />
+        </p>
+
+        <h2>Social Pain and Physical Pain: Shared Circuits</h2>
+
+        <p>
+          One of the most striking findings in social neuroscience is that social pain—rejection, exclusion, ostracism, loss—activates the same brain regions as physical pain. The anterior cingulate cortex (ACC) and insula, which light up when you burn your hand or stub your toe, also activate when you're socially rejected or watch someone else be excluded.<Citation id="5" />
+        </p>
+
+        <p>
+          This isn't metaphor—social pain is neurologically real pain. Studies show that taking acetaminophen (Tylenol) can reduce not just physical pain but also the distress of social rejection, because both use overlapping neural pathways. This overlap likely evolved because social connection was survival-critical for humans: being excluded from the group meant death, so the brain treats social pain as seriously as physical injury.<Citation id="5" />
+        </p>
+
+        <p>
+          Mirror neurons play a role here too: when you watch someone be rejected or humiliated, your own pain networks activate. You literally feel a portion of their hurt. This capacity for shared pain drives prosocial behavior (helping, defending, comforting) but can also lead to empathic distress—becoming so overwhelmed by others' suffering that you shut down or avoid them.
+        </p>
+
+        <h2>Mirror Neurons in Autism: A Complex Picture</h2>
+
+        <p>
+          Early mirror neuron research hypothesized that autism spectrum disorder (ASD) might involve "broken" mirror neurons, explaining difficulties with social communication and empathy. The reality is far more nuanced.<Citation id="4" />
+        </p>
+
+        <p>
+          Some studies do find reduced mirror neuron activity in autistic individuals during certain tasks, particularly those involving spontaneous imitation or emotional facial mimicry. However, when autistic people are explicitly instructed to imitate or empathize, mirror neuron activation normalizes. This suggests the issue may be less about broken mirrors and more about different patterns of spontaneous social attention or motivation.<Citation id="4" />
+        </p>
+
+        <p>
+          Moreover, many autistic people report experiencing <em>intense</em> empathy—sometimes overwhelmingly so—contradicting the idea that they lack mirror neuron function. The difference may lie in <em>expressing</em> empathy in neurotypical-recognizable ways, not in feeling it. Autistic individuals often show strong cognitive empathy (understanding others' perspectives intellectually) even when affective empathy (automatic emotional resonance) functions differently.
+        </p>
+
+        <p>
+          This research reminds us that mirror neurons are one piece of a complex social brain, not the sole determinant of empathy or social connection.
+        </p>
+
+        <SparkMoment
+          title="Connection Is Neurological"
+          content="Empathy isn't some mystical ability to 'read minds'—it's your brain physically simulating others' internal states using the same neural hardware you use for your own experiences. When someone says they 'feel your pain,' it's not just rhetoric. Their brain is literally activating pain-processing regions. Connection is biological."
+        />
+
+        <PracticalExercise
+          title="Empathy with Boundaries: Balancing Mirror Neurons"
+          description="A 5-step practice for maintaining empathic connection without emotional overwhelm"
+          steps={[
+            {
+              title: '1. Notice Emotional Contagion in Real-Time',
+              content: 'When you're around others, pause and check: How did I feel before entering this space? How do I feel now? Did my mood shift after interacting with this person? Awareness is the first step to regulating automatic mirroring.',
+            },
+            {
+              title: '2. Name Whose Emotion You're Feeling',
+              content: 'Ask yourself: Is this <em>my</em> anxiety, or am I mirroring someone else's stress? Labeling the source creates psychological distance. You can acknowledge their emotion without fully absorbing it.',
+            },
+            {
+              title: '3. Use Physical Boundaries to Interrupt Mirroring',
+              content: 'Mirror neurons activate through visual observation. If you're overwhelmed by someone's emotional state, briefly look away, create physical distance, or excuse yourself. Reducing sensory input to the mirror system reduces contagion.',
+            },
+            {
+              title: '4. Engage Cognitive Empathy, Not Just Affective',
+              content: 'Shift from feeling-with (affective empathy) to thinking-about (cognitive empathy). "I understand they're stressed" is less draining than viscerally experiencing their stress yourself. Both are valid forms of empathy—choose intentionally.',
+            },
+            {
+              title: '5. Practice Empathic Concern Without Distress',
+              content: 'Compassion—caring about someone's suffering and wanting to help—can exist without full emotional resonance. You can support someone in pain while maintaining your own emotional equilibrium. That's not coldness; it's sustainable empathy.',
+            },
+          ]}
+        />
+
+        <h2>When Mirror Neurons Work Too Well</h2>
+
+        <p>
+          For some people—particularly highly sensitive individuals, those with anxiety disorders, or people raised in environments requiring hypervigilance to others' emotions—mirror neuron systems can become over-responsive. You absorb every emotional shift in a room. You feel exhausted after social interactions because you've been neurologically mirroring everyone. You struggle to distinguish your own emotions from those you've absorbed.
+        </p>
+
+        <p>
+          If this describes you, you're not "too sensitive"—your mirror neurons are doing exactly what they evolved to do, just intensely. Strategies that help:
+        </p>
+
+        <ul>
+          <li><strong>Limit exposure to highly emotional environments:</strong> You wouldn't expect someone with sensory processing issues to thrive in loud, chaotic spaces. Similarly, highly empathic people need to limit time in emotionally intense settings.</li>
+          <li><strong>Practice grounding after social interactions:</strong> Physical grounding (cold water, weighted blankets, movement) helps reset your nervous system after intense mirroring.</li>
+          <li><strong>Distinguish cognitive from affective empathy:</strong> You can understand someone without viscerally feeling their emotions. Practice shifting to cognitive empathy when affective empathy becomes overwhelming.</li>
+          <li><strong>Work with a therapist on boundaries:</strong> Therapists can help you develop skills for maintaining empathic connection without losing yourself in others' emotions.</li>
+        </ul>
+
+        <RelatedToolsBlock
+          tools={[
+            {
+              name: 'Mood Journal',
+              path: '/tools/mood-journal',
+              description: 'Track your emotional patterns and identify when you're absorbing others' emotions',
+            },
+            {
+              name: 'Emotional Regulation Tools',
+              path: '/tools',
+              description: 'Explore evidence-based practices for managing empathic overwhelm',
+            },
+          ]}
+        />
+
+        <ReferenceList
+          references={[
+            { id: '1', text: 'Mirror neuron system and empathy', source: 'Current Biology', year: '2020', link: 'https://doi.org/10.1016/j.cub.2020.02.016' },
+            { id: '2', text: 'Emotional contagion: Neural mechanisms', source: 'Trends in Cognitive Sciences', year: '2021', link: 'https://doi.org/10.1016/j.tics.2021.02.003' },
+            { id: '3', text: 'Empathy and brain connectivity', source: 'Neuroscience & Biobehavioral Reviews', year: '2020', link: 'https://doi.org/10.1016/j.neubiorev.2020.05.008' },
+            { id: '4', text: 'Mirror neuron dysfunction in autism', source: 'Molecular Psychiatry', year: '2019', link: 'https://doi.org/10.1038/s41380-019-0405-5' },
+            { id: '5', text: 'Social pain and physical pain: Shared neural circuits', source: 'Science', year: '2020', link: 'https://doi.org/10.1126/science.aay2352' },
+          ]}
+        />
       </>
     ),
   },

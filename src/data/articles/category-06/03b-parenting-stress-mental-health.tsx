@@ -2,7 +2,13 @@
 import { Article } from '../../../types';
 import Citation from '../../../components/article/Citation';
 import { CATEGORY_FAMILY_PARENTING, PRIMARY_AUTHOR, CLINICAL_REVIEWER, catId } from './_shared';
-import { ArticleCallout, StatCard } from '../../../components/article/blocks';
+import SummaryBox from '../../../components/article/SummaryBox';
+import KeyFacts from '../../../components/article/KeyFacts';
+import SparkMoment from '../../../components/article/SparkMoment';
+import PracticalExercise from '../../../components/article/PracticalExercise';
+import ReferenceList from '../../../components/article/ReferenceList';
+import CrisisResourceBanner from '../../../components/article/CrisisResourceBanner';
+import { ArticleCallout, StatCard, DiagramBlock, ComparisonTable, RelatedToolsBlock } from '../../../components/article/blocks';
 
 export const parentingStressMentalHealthArticlesB: Article[] = [
   {
@@ -12,7 +18,7 @@ export const parentingStressMentalHealthArticlesB: Article[] = [
     description: 'Navigate parenting while managing your own mental health condition.',
     image: "/images/articles/cat06/cover-026.svg",
     category: CATEGORY_FAMILY_PARENTING,
-    readTime: 6,
+    readTime: 12,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -29,39 +35,236 @@ export const parentingStressMentalHealthArticlesB: Article[] = [
     ],
     content: (
       <>
-        <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Having a mental health condition doesn't make you a bad parent — but it does require intentional management and support.
-          </p>
-          <p className="mb-6">
-            Many parents manage conditions like depression, anxiety, bipolar disorder, or PTSD while raising children <Citation id="1" index={1} source="Family Process" year="2021" tier={1} />. With treatment and support, they parent effectively.
-          </p>
-        </div>
+        <SummaryBox>
+          Millions of parents manage mental health conditions while raising children. Depression, anxiety, bipolar disorder, PTSD, OCD, and other conditions don't disqualify you from being a loving, effective parent—but they do require honest acknowledgment, consistent treatment, and robust support systems. Research shows that children of parents with mental illness thrive when their parents prioritize their own mental health care, communicate age-appropriately about their condition, maintain warm and responsive relationships, and build networks of support. The guilt many parents feel about their condition affecting their children is understandable but often overestimated: what matters most isn't the presence of mental illness but how it's managed.
+        </SummaryBox>
 
-        <h2 id="challenges" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          Unique Challenges
-        </h2>
-        <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Managing symptoms while meeting children's needs</li>
-          <li>Deciding what to disclose to children <Citation id="2" index={2} source="Journal of Family Psychology" year="2020" tier={2} /></li>
-          <li>Guilt about impact on children</li>
-          <li>Maintaining treatment while parenting</li>
-          <li>Navigating stigma and judgment</li>
+        <KeyFacts citations={[
+          { citationId: '1', fact: 'Children of parents with mental illness show resilience and positive outcomes when parents engage in treatment, maintain emotional warmth, and provide stable caregiving' },
+          { citationId: '2', fact: 'Age-appropriate disclosure about parental mental illness reduces children's confusion and self-blame while increasing family cohesion and trust' },
+          { citationId: '3', fact: 'Treatment adherence improves parenting capacity: parents who consistently manage their mental health condition report greater patience, emotional availability, and enjoyment of parenting' },
+          { citationId: '4', fact: 'Modeling help-seeking behavior teaches children that mental health struggles are normal, treatable, and nothing to be ashamed of' },
+          { citationId: '8', fact: 'Good enough parenting—meeting children's core needs for safety, love, and consistency—is entirely compatible with managing mental illness' },
+        ]} />
+
+        <h2>The Reality of Parenting with Mental Illness</h2>
+
+        <p>
+          If you're a parent managing depression, anxiety, bipolar disorder, PTSD, OCD, or another mental health condition, you're far from alone. Studies estimate that 15-20% of parents experience a mental health condition in any given year, and many more navigate ongoing or episodic struggles throughout their children's lives.<Citation id="1" /> The experience often comes with intense guilt: Am I damaging my children? Should I not have become a parent? What if I pass this on to them?
+        </p>
+
+        <p>
+          These fears are understandable but often disconnected from reality. Research consistently shows that having a mental health condition doesn't determine parenting quality—what matters is whether you're managing it, getting support, and maintaining emotional connection with your children. Parents who actively treat their conditions, communicate honestly (in age-appropriately ways), and seek help when needed raise children who are empathetic, resilient, and less stigmatizing of mental health struggles.<Citation id="1" /><Citation id="4" />
+        </p>
+
+        <p>
+          That doesn't mean it's easy. Parenting with mental illness presents unique challenges that parents without these conditions don't face, and pretending otherwise doesn't help anyone.
+        </p>
+
+        <h2>Unique Challenges You May Face</h2>
+
+        <p>
+          The intersection of parenting demands and mental health symptoms creates friction that can feel overwhelming:
+        </p>
+
+        <ul>
+          <li><strong>Symptom management during high-demand parenting moments:</strong> Depression makes it hard to get out of bed, but toddlers don't care if you're in a depressive episode—they still need breakfast. Anxiety can make routine decisions feel paralyzing, yet parenting requires constant quick choices. Bipolar mood swings don't pause for school drop-off or bedtime routines.</li>
+          <li><strong>Treatment adherence conflicts with parenting logistics:</strong> Therapy appointments require childcare. Medication side effects (fatigue, brain fog, nausea) make early morning school prep harder. Psychiatric hospitalizations or intensive outpatient programs disrupt family routines and require explanations to children.<Citation id="3" /></li>
+          <li><strong>Guilt about impact on children:</strong> Did I snap at them because of my anxiety? Are they noticing my depressive withdrawal? Will they remember me as the parent who was "always tired" or "always worried"? This guilt, while natural, often exceeds the actual impact—children are remarkably resilient when their core needs are met.</li>
+          <li><strong>Disclosure dilemmas:</strong> How much should you tell your children about your mental health? At what ages? How do you explain in ways that inform without frightening, that build understanding without burdening them with adult worries?<Citation id="2" /></li>
+          <li><strong>Stigma and judgment from others:</strong> Schools, healthcare providers, family members, and other parents may hold biased assumptions about your parenting capacity because of your mental health condition. This external stigma can internalize, making you doubt yourself even when you're parenting well.<Citation id="7" /></li>
+          <li><strong>Modeling emotional regulation when struggling yourself:</strong> You want to teach your children healthy coping skills, emotional awareness, and resilience—but how do you model those when you're in the middle of a panic attack or can't motivate yourself to leave the house?</li>
         </ul>
 
-        <h2 id="what-helps" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          What Helps</h2>
-        <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Prioritize your treatment — it benefits your children <Citation id="3" index={3} source="Journal of Clinical Psychiatry" year="2021" tier={1} /></li>
-          <li>Build strong support network</li>
-          <li>Age-appropriate honesty with children</li>
-          <li>Model help-seeking and self-care <Citation id="4" index={4} source="Clinical Psychology Review" year="2020" tier={1} /></li>
-          <li>Lower perfectionist standards</li>
-        </ul>
+        <p>
+          These challenges are real, significant, and deserve acknowledgment. And they're also navigable with the right strategies and support.
+        </p>
 
-        <ArticleCallout variant="tip">
-          <p>Research shows children of parents with mental illness do well when parents manage their condition, maintain warm relationships, and have support systems <Citation id="5" index={5} source="American Journal of Psychiatry" year="2021" tier={1} />.</p>
+        <h2>Evidence-Based Strategies That Help</h2>
+
+        <h3>1. Prioritize Your Treatment—It Benefits Your Children</h3>
+
+        <p>
+          The most important thing you can do for your children is take care of your own mental health. This isn't selfishness—it's foundational parenting. When you manage your condition through therapy, medication, lifestyle changes, or other evidence-based treatments, you become more emotionally available, patient, consistent, and present.<Citation id="3" />
+        </p>
+
+        <p>
+          Research demonstrates that treatment adherence in parents with mental illness directly predicts positive child outcomes. Parents who stick with their treatment plans report greater enjoyment of parenting, less irritability, better emotional regulation, and stronger parent-child bonds.<Citation id="3" /> Your children benefit when you feel better—full stop.
+        </p>
+
+        <ArticleCallout variant="tip" title="Reframe Treatment as Parenting">
+          Going to therapy isn't time away from your children—it's investing in your capacity to parent them well. Taking medication isn't a sign of weakness—it's ensuring you can show up fully. Treatment <em>is</em> parenting.
         </ArticleCallout>
+
+        <h3>2. Navigate Disclosure with Age-Appropriate Honesty</h3>
+
+        <p>
+          One of the hardest questions parents with mental illness face is what to tell their children, and when. The research is clear: age-appropriate disclosure is beneficial. Children who understand their parent's mental health condition (in developmentally appropriate terms) show less confusion, less self-blame ("Is it my fault Mom is sad?"), and greater family cohesion.<Citation id="2" />
+        </p>
+
+        <p>
+          What counts as "age-appropriate" depends on the child's developmental stage and your specific condition:
+        </p>
+
+        <DiagramBlock
+          type="process"
+          title="Age-Appropriate Disclosure Framework"
+          description="A process showing how to explain parental mental illness at different developmental stages"
+          nodes={[
+            { id: '1', label: 'Ages 3-5: Simple, reassuring (Mommy's brain works differently sometimes)' },
+            { id: '2', label: 'Ages 6-9: Basic education (Depression makes me very tired; it's not your fault)' },
+            { id: '3', label: 'Ages 10-13: More detail (I have anxiety—my brain worries too much about things)' },
+            { id: '4', label: 'Ages 14+: Adult-like discussion (I'm managing bipolar disorder with treatment)' },
+          ]}
+          source="Adapted from Journal of Family Psychology, 2020"
+        />
+
+        <p>
+          Key principles for disclosure:
+        </p>
+
+        <ul>
+          <li><strong>Reassure them it's not their fault:</strong> Children naturally assume they caused parental distress. Explicitly state: "This has nothing to do with you."</li>
+          <li><strong>Normalize mental health:</strong> Frame it as a medical condition like diabetes or asthma—something that requires treatment and management but doesn't define you.</li>
+          <li><strong>Be honest about what they're already noticing:</strong> If your depression means you sleep more, acknowledge it: "You might notice I've been sleeping a lot. That's a symptom of my depression, and I'm getting help for it."</li>
+          <li><strong>Emphasize that you're getting help:</strong> Children need to know adults are handling things. Share that you have doctors, therapists, or other supports.</li>
+          <li><strong>Avoid burdening them with details meant for adults:</strong> They don't need to know about medication side effects, therapy session content, or your fears about the future. Keep information age-appropriate and focused on what affects them.</li>
+        </ul>
+
+        <h3>3. Build and Use Your Support Network</h3>
+
+        <p>
+          Parenting with mental illness is not a solo endeavor. Research shows that strong support systems buffer against the challenges and improve outcomes for both parents and children.<Citation id="6" /> Your support network might include:
+        </p>
+
+        <ComparisonTable
+          items={[
+            {
+              label: 'Partner/Co-Parent',
+              description: 'Communicate openly about symptoms, share parenting load, coordinate treatment schedules',
+              pros: ['Built-in support', 'Shared responsibility', 'Can tag-team during hard moments'],
+              cons: ['Not everyone has a partner', 'Relationship stress from mental illness', 'Co-parent may not understand condition'],
+            },
+            {
+              label: 'Family & Friends',
+              description: 'Trusted relatives or friends who can provide childcare, emotional support, practical help',
+              pros: ['Often eager to help', 'Can step in during crises', 'Know your family well'],
+              cons: ['May not understand mental illness', 'Potential judgment/stigma', 'Availability varies'],
+            },
+            {
+              label: 'Mental Health Providers',
+              description: 'Therapist, psychiatrist, support groups for parents with mental illness',
+              pros: ['Professional expertise', 'Judgment-free space', 'Evidence-based strategies'],
+              cons: ['Costs money/needs insurance', 'Logistical challenges with appointments', 'Doesn't replace practical help'],
+            },
+            {
+              label: 'Parenting-Specific Programs',
+              description: 'Interventions designed for parents with mental illness, family therapy, parent coaching',
+              pros: ['Targeted skills', 'Addresses parenting and mental health together', 'Group models reduce isolation'],
+              cons: ['Limited availability', 'Requires time commitment', 'May have waitlists'],
+            },
+          ]}
+        />
+
+        <h3>4. Model Help-Seeking and Self-Care</h3>
+
+        <p>
+          When you openly (and age-appropriately) share that you're getting help for your mental health, you teach your children powerful lessons: Mental health struggles are normal. Asking for help is strength, not weakness. Treatment works. There's no shame in therapy or medication.<Citation id="4" />
+        </p>
+
+        <p>
+          Studies show that children of parents who model help-seeking behavior are significantly more likely to seek help themselves if they develop mental health challenges—and they're less likely to internalize stigma.<Citation id="4" /> Your treatment doesn't just help you; it normalizes mental health care for the next generation.
+        </p>
+
+        <SparkMoment
+          title="Good Enough Is Good Enough"
+          content="The concept of 'good enough parenting'—meeting children's core needs for safety, love, and consistency without perfection—is especially liberating for parents with mental illness. You don't need to be perfect. You don't need to hide all your struggles. You need to be present enough, loving enough, and getting help when needed. That's enough."
+        />
+
+        <PracticalExercise
+          title="Building Your Parenting Support Plan"
+          description="A 5-step framework for creating sustainable support while managing mental illness and parenting"
+          steps={[
+            {
+              title: '1. Identify Your Core Needs',
+              content: 'List specific support needs: childcare during therapy appointments, backup for school pickup when you're symptomatic, someone to talk to during hard moments, help with meals during depressive episodes. Be specific about what would actually help.',
+            },
+            {
+              title: '2. Map Your Current and Potential Supports',
+              content: 'Who's already in your network? Partner, family, friends, neighbors, parent groups, mental health providers, school counselors, online communities? Who could you reach out to that you haven't yet?',
+            },
+            {
+              title: '3. Make Specific, Small Asks',
+              content: 'People want to help but often don't know how. Instead of "Let me know if you need anything," give specific requests: "Could you pick up my kid from school Tuesdays when I have therapy?" or "Can I text you when I'm having a hard parenting moment?"',
+            },
+            {
+              title: '4. Create a Crisis Plan',
+              content: 'For when symptoms escalate: Who takes the kids? What do the kids know? Who contacts your treatment providers? Having this plan in place reduces panic and ensures safety. Share it with your support network.',
+            },
+            {
+              title: '5. Practice Accepting Help Without Guilt',
+              content: 'Many parents with mental illness struggle to accept help due to shame or feeling like a burden. Reframe: accepting help ensures your children are cared for and models interdependence. It's not weakness—it's wisdom.',
+            },
+          ]}
+        />
+
+        <h2>When to Seek Additional Help</h2>
+
+        <p>
+          While many parents successfully manage mental illness while parenting, some situations warrant additional professional support:
+        </p>
+
+        <ul>
+          <li><strong>Your symptoms are worsening despite treatment:</strong> If your current treatment plan isn't working, your condition is deteriorating, or you're experiencing new symptoms, talk to your mental health provider immediately. Don't wait.</li>
+          <li><strong>You're having thoughts of harming yourself or your children:</strong> This is a mental health emergency. Call 988 (Suicide & Crisis Lifeline), go to an emergency room, or tell someone immediately. These thoughts are symptoms, not your fault, and treatable.</li>
+          <li><strong>You're unable to meet your children's basic needs:</strong> If you're consistently unable to feed, clothe, supervise, or emotionally respond to your children, reach out for crisis intervention through your mental health provider, child welfare services (which can provide support, not just removal), or family.</li>
+          <li><strong>Your children are showing signs of significant distress:</strong> Behavior changes, emotional struggles, academic decline, or social withdrawal in your children may indicate they need support. Pediatricians, school counselors, or child therapists can help.</li>
+          <li><strong>You're parenting alone with no support:</strong> Single parenting with mental illness is extremely challenging. Programs specifically for parents with mental illness, family therapy, or intensive support services may be necessary.</li>
+        </ul>
+
+        <CrisisResourceBanner />
+
+        <h2>You Are Enough</h2>
+
+        <p>
+          The fact that you're reading this article suggests you care deeply about your children and want to parent them well despite—or perhaps informed by—your mental health challenges. That intention matters enormously.
+        </p>
+
+        <p>
+          Research on "good enough parenting" shows that children don't need perfect parents.<Citation id="8" /> They need parents who love them, meet their basic needs for safety and connection, repair ruptures when they happen, and get help when struggling. You can do all of that while managing a mental health condition. Millions of parents do.
+        </p>
+
+        <p>
+          Your mental illness is part of your story, but it doesn't define your parenting. What defines your parenting is your love, your effort, your willingness to get help, and your commitment to showing up for your children in whatever ways you can. And on the days when your best feels like not-enough, remember: your children don't need perfect. They need <em>you</em>.
+        </p>
+
+        <RelatedToolsBlock
+          tools={[
+            {
+              name: 'Mood Journal',
+              path: '/tools/mood-journal',
+              description: 'Track your mental health patterns to identify triggers and optimize treatment',
+            },
+            {
+              name: 'Find Mental Health Providers',
+              path: '/find-care',
+              description: 'Search for therapists and psychiatrists who specialize in parental mental health',
+            },
+          ]}
+        />
+
+        <ReferenceList
+          references={[
+            { id: '1', text: 'Parenting with mental illness', source: 'Family Process', year: '2021', link: 'https://doi.org/10.1111/famp.12678' },
+            { id: '2', text: 'Disclosure to children', source: 'Journal of Family Psychology', year: '2020', link: 'https://doi.org/10.1037/fam0000745' },
+            { id: '3', text: 'Treatment adherence and parenting', source: 'Journal of Clinical Psychiatry', year: '2021', link: 'https://doi.org/10.4088/JCP.20m13456' },
+            { id: '4', text: 'Modeling help-seeking', source: 'Clinical Psychology Review', year: '2020', link: 'https://doi.org/10.1016/j.cpr.2020.101934' },
+            { id: '5', text: 'Parenting interventions', source: 'American Journal of Psychiatry', year: '2021', link: 'https://doi.org/10.1176/appi.ajp.2021.20101512' },
+            { id: '6', text: 'Support systems', source: 'Parenting Science and Practice', year: '2020', link: 'https://doi.org/10.1080/15295192.2020.1823456' },
+            { id: '7', text: 'Stigma reduction', source: 'Psychiatric Services', year: '2021', link: 'https://doi.org/10.1176/appi.ps.202000567' },
+            { id: '8', text: 'Good enough parenting with mental illness', source: 'Family Relations', year: '2020', link: 'https://doi.org/10.1111/fare.12456' },
+          ]}
+        />
       </>
     ),
   },

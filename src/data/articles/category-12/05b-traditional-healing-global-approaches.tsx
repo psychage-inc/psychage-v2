@@ -464,7 +464,7 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
     description: 'Learn from mental health models that prioritize community, connection, and collective healing over individual treatment.',
     image: "/images/articles/cat12/cover-048.svg",
     category: CATEGORY_CULTURAL_GLOBAL,
-    readTime: 7,
+    readTime: 13,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -476,7 +476,193 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
       { id: '4', text: 'Task-shifting and community health workers in mental health', source: 'World Psychiatry', year: '2018', link: 'https://doi.org/10.1002/wps.20544', tier: 1 },
       { id: '5', text: 'Community Mental Health Services', source: 'World Health Organization', year: '2021', link: 'https://www.who.int/mental_health/community-based-services', tier: 2 },
     ],
-    content: <>content placeholder</>
+    content: (
+      <>
+        <SummaryBox>
+          Western psychiatry often treats mental illness as an individual problem requiring individual treatment: one patient, one therapist, fifty-minute sessions, diagnosis and cure located within a single brain. But across much of the world—particularly in collectivist cultures and low-resource settings—mental health care looks fundamentally different. Community-based models prioritize collective wellbeing over individual pathology, involve families and communities as primary healing agents, and address mental distress through social connection rather than clinical isolation. From Ubuntu philosophy in Southern Africa to collective healing circles in Indigenous communities to task-shifting models that train non-specialists as community mental health workers, these approaches offer powerful alternatives to Western individualism—often achieving better engagement, lower stigma, and more sustainable outcomes.
+        </SummaryBox>
+
+        <KeyFacts>
+          <Citation id="2" article="traditionalHealingGlobalApproachesArticlesB[2]">
+            Ubuntu philosophy—"I am because we are"—frames mental wellness as inseparable from community health, emphasizing collective responsibility for individual suffering
+          </Citation>
+          <Citation id="1" article="traditionalHealingGlobalApproachesArticlesB[2]">
+            Community-based mental health care in low-resource settings demonstrates outcomes comparable to specialist care while dramatically increasing access and reducing costs
+          </Citation>
+          <Citation id="4" article="traditionalHealingGlobalApproachesArticlesB[2]">
+            Task-shifting—training community health workers to deliver mental health interventions—has successfully treated millions of people where psychiatrists are scarce or absent
+          </Citation>
+          <Citation id="3" article="traditionalHealingGlobalApproachesArticlesB[2]">
+            Collective healing approaches address shared trauma (colonization, violence, displacement) rather than treating individuals in isolation from their social context
+          </Citation>
+          <Citation id="5" article="traditionalHealingGlobalApproachesArticlesB[2]">
+            WHO now recommends community-based care as the foundation of mental health systems globally, moving away from institutional psychiatric hospitals
+          </Citation>
+        </KeyFacts>
+
+        <h2>Ubuntu and African Communal Mental Health</h2>
+        <p>
+          Ubuntu—a Nguni Bantu term from Southern Africa—translates roughly as "I am because we are" or "humanity toward others." It's both a philosophy and a way of life emphasizing interconnectedness, shared humanity, and collective responsibility.<Citation id="2" article="traditionalHealingGlobalApproachesArticlesB[2]" /> In mental health terms, Ubuntu means that individual suffering is never just individual—it reflects and affects the entire community, requiring communal response and healing.
+        </p>
+        <p>
+          Under Ubuntu frameworks, someone experiencing depression isn't simply diagnosed and medicated in isolation. Instead, the community gathers to understand what imbalances in relationships, social roles, or collective harmony might contribute to distress. Healing involves restoring the person's connection to community, addressing social determinants like poverty or exclusion, and ensuring the community takes responsibility for supporting wellness—not as a medical intervention, but as a moral obligation rooted in shared humanity.<Citation id="2" article="traditionalHealingGlobalApproachesArticlesB[2]" />
+        </p>
+        <p>
+          This doesn't mean ignoring individual clinical needs—Ubuntu-informed mental health programs often integrate Western psychiatric treatments—but it reframes them within collective contexts. Medication might treat symptoms, but community support, restored relationships, and meaningful social roles sustain recovery.
+        </p>
+
+        <h2>Task-Shifting: Community Health Workers as Mental Health Providers</h2>
+        <p>
+          In much of the world, psychiatrists are vanishingly rare—sub-Saharan Africa averages one psychiatrist per 500,000 people; some countries have none. Task-shifting addresses this crisis by training non-specialist community health workers, peers, teachers, or even motivated community members to deliver evidence-based mental health interventions under supervision.<Citation id="4" article="traditionalHealingGlobalApproachesArticlesB[2]" />
+        </p>
+        <p>
+          Programs like the WHO's Mental Health Gap Action Programme (mhGAP) provide training protocols for community workers to assess, manage, and refer mental health conditions. Studies across low- and middle-income countries show task-shifted interventions—delivered by trained lay workers—achieve outcomes comparable to specialist care for depression, anxiety, PTSD, and serious mental illness, while dramatically increasing access and reducing costs.<Citation id="4" article="traditionalHealingGlobalApproachesArticlesB[2]" />
+        </p>
+        <p>
+          Why does it work? Community health workers share language, culture, and social context with the people they serve. They're trusted community members, not distant medical authorities. They provide care in homes, community centers, and familiar settings rather than intimidating hospitals. And they address social determinants—helping clients access food, employment, housing—alongside mental health symptoms, recognizing that poverty and distress are inseparable.
+        </p>
+
+        <DiagramBlock
+          type="hierarchy"
+          title="Community-Based Mental Health Model"
+          nodes={[
+            { id: '1', label: 'Community', description: 'Source of social support, cultural wisdom, collective healing' },
+            { id: '2', label: 'Community Health Workers', description: 'Trained lay providers delivering front-line mental health care' },
+            { id: '3', label: 'Primary Care Providers', description: 'Generalists managing common mental health conditions' },
+            { id: '4', label: 'Mental Health Specialists', description: 'Psychiatrists/psychologists for complex cases, supervision, training' },
+            { id: '5', label: 'Individual in Distress', description: 'Person supported within their social context' }
+          ]}
+          connections={[
+            { from: '1', to: '5' },
+            { from: '2', to: '5' },
+            { from: '3', to: '2' },
+            { from: '4', to: '3' },
+            { from: '4', to: '2' }
+          ]}
+          description="Pyramid model showing community as foundation, specialists as consultants rather than sole providers"
+        />
+
+        <h2>Collective Healing for Collective Trauma</h2>
+        <p>
+          Some suffering isn't individual—it's collective. Genocide, colonization, war, displacement, systemic oppression create shared wounds that can't be adequately addressed through individual therapy. Collective healing approaches bring communities together to process shared trauma, rebuild social fabric, and restore collective identity.<Citation id="3" article="traditionalHealingGlobalApproachesArticlesB[2]" />
+        </p>
+        <p>
+          Examples include: truth and reconciliation processes that create space for collective witnessing and accountability, community healing circles that address intergenerational trauma, memorial practices that honor collective loss, and cultural revitalization programs that restore practices colonization tried to erase. Research in post-conflict settings and Indigenous communities shows collective approaches reduce individual trauma symptoms while strengthening social cohesion—outcomes individual therapy alone can't achieve.<Citation id="3" article="traditionalHealingGlobalApproachesArticlesB[2]" />
+        </p>
+
+        <h2>Comparing Individualist vs Collectivist Mental Health Models</h2>
+
+        <ComparisonTable
+          headers={['Dimension', 'Western Individualist Model', 'Collectivist Community Model']}
+          rows={[
+            {
+              cells: [
+                'Unit of Treatment',
+                'Individual patient in isolation',
+                'Individual within family, community, social context'
+              ]
+            },
+            {
+              cells: [
+                'Location of Problem',
+                'Inside the individual (brain, cognition, behavior)',
+                'In relationships, social roles, community balance'
+              ]
+            },
+            {
+              cells: [
+                'Healing Agents',
+                'Professional specialists (psychiatrists, therapists)',
+                'Community, family, elders, peers, trained lay workers'
+              ]
+            },
+            {
+              cells: [
+                'Treatment Setting',
+                'Clinical offices, hospitals, institutions',
+                'Homes, community centers, natural settings, familiar spaces'
+              ]
+            },
+            {
+              cells: [
+                'Treatment Focus',
+                'Symptom reduction, individual functioning',
+                'Restoring relationships, social roles, collective wellbeing'
+              ]
+            },
+            {
+              cells: [
+                'Success Metrics',
+                'Individual symptom scores, diagnostic remission',
+                'Social connection, community integration, collective harmony'
+              ]
+            }
+          ]}
+          caption="Contrasting individualist and collectivist approaches to mental health care"
+        />
+
+        <h2>Integrating Models: Community and Clinical Care Together</h2>
+        <p>
+          The goal isn't to replace Western clinical care with community models—it's integration. Psychiatric medications can save lives during acute crises; evidence-based psychotherapy offers powerful tools for specific conditions; specialized assessment prevents misdiagnosis. But wrapping these interventions in community-based care enhances effectiveness, reduces stigma, and creates sustainable support.<Citation id="1" article="traditionalHealingGlobalApproachesArticlesB[2]" />
+        </p>
+        <p>
+          Best-practice models include: community health workers as first contact who assess, provide basic interventions, and refer complex cases; peer support groups that reduce isolation and provide ongoing community; family psychoeducation that involves loved ones as healing partners; and community mental health centers that deliver clinical services within culturally familiar, accessible settings rather than imposing institutional care.
+        </p>
+
+        <PracticalExercise
+          title="Assessing Your Community Mental Health Support"
+          description="Reflect on how community and collective support intersect with your mental health:"
+          steps={[
+            {
+              instruction: 'Map your current support community',
+              details: 'List all people, groups, and communities that support your mental wellness. How many are professional (therapists, doctors) vs. natural community (family, friends, faith groups, cultural communities)? Is the balance working?'
+            },
+            {
+              instruction: 'Identify collective vs. individual needs',
+              details: 'Are some of your struggles rooted in individual factors (brain chemistry, personal history) or social/collective issues (discrimination, poverty, cultural disconnection)? Do your current supports address both?'
+            },
+            {
+              instruction: 'Explore community mental health resources',
+              details: 'Research what community-based mental health services exist in your area: peer support groups, community health workers, faith-based programs, cultural organizations. What\'s accessible to you?'
+            },
+            {
+              instruction: 'Consider cultural fit',
+              details: 'If you come from a collectivist cultural background, does your mental health care honor those values? Can family be involved? Are there providers who share your cultural framework?'
+            },
+            {
+              instruction: 'Build community alongside treatment',
+              details: 'If receiving individual therapy, identify one way to also strengthen community connection: join a support group, engage cultural community, volunteer, reconnect with family. Healing happens in both spaces.'
+            }
+          ]}
+          timeEstimate="1-2 hours for initial reflection; ongoing implementation"
+        />
+
+        <ArticleCallout variant="info" title="Community Models in High-Income Countries">
+          Community-based mental health isn't just for low-resource settings. In the U.S., peer support specialists, certified recovery coaches, and community mental health workers increasingly deliver care. Clubhouse programs, WRAP (Wellness Recovery Action Plan), and peer-run organizations demonstrate that community models improve outcomes even where specialists are abundant. The question isn't resources alone—it's philosophy: do we treat mental illness as individual pathology or as suffering that requires both clinical intervention and community care?
+        </ArticleCallout>
+
+        <SparkMoment>
+          In collectivist frameworks, there's no paradox between "I" and "we"—the self exists only in relation, wellness arises through connection, and suffering in one person ripples through the community demanding collective response. Western individualism asks: what's wrong with you? Community models ask: what happened to us, and how do we heal together? This shift—from pathology to context, from isolation to connection, from specialist-only care to community healing—doesn't reject clinical expertise. It places it within a richer understanding: that mental health lives not just in neurons and neurotransmitters, but in the quality of our relationships, the strength of our communities, and the collective commitment to each other's flourishing.
+        </SparkMoment>
+
+        <RelatedToolsBlock
+          tools={[
+            {
+              name: 'Provider Directory',
+              path: '/find-care',
+              description: 'Find community mental health centers and peer support programs'
+            },
+            {
+              name: 'Mood Journal',
+              path: '/tools/mood-journal',
+              description: 'Track how social connection and community involvement affect your wellness'
+            }
+          ]}
+        />
+
+        <ReferenceList article="traditionalHealingGlobalApproachesArticlesB[2]" />
+      </>
+    )
   },
   {
     id: catId(49),

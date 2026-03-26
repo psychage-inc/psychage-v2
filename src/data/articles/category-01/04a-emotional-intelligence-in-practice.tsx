@@ -10,6 +10,10 @@ import {
   ArticleAccordion,
   QuoteBlock,
   ProgressSteps,
+  ArticleTabs,
+  BeforeAfter,
+  MythVsFactBlock,
+  HighlightBox,
 } from '../../../components/article/blocks';
 
 export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
@@ -28,6 +32,26 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Emotional Intelligence', 'Self-Awareness', 'Empathy', 'Interpersonal Skills'],
+    summary: 'Emotional intelligence (EQ) is a set of trainable skills for understanding and managing emotions in yourself and others. Explore the four-branch model of EQ, discover why it predicts success better than IQ in many domains, and learn evidence-based exercises to build emotional awareness, empathy, and regulation.',
+    keyFacts: [
+      { text: 'People with higher emotional intelligence report 43% lower rates of depression and anxiety compared to those with low EQ', citationIndex: 4 },
+      { text: 'EQ is a stronger predictor of workplace performance, leadership effectiveness, and life satisfaction than cognitive intelligence (IQ)', citationIndex: 5 },
+      { text: 'Unlike IQ which remains stable after adolescence, emotional intelligence can improve throughout your entire life with deliberate practice', citationIndex: 8 },
+      { text: 'Brain imaging shows that people with higher EQ have greater connectivity between the prefrontal cortex and amygdala, allowing better emotional regulation', citationIndex: 7 },
+      { text: 'High EQ individuals are 2.5 times more likely to seek help when needed, reducing the risk of mental health crises', citationIndex: 4 },
+    ],
+    sparkMoment: 'Emotional intelligence is not about being smarter--it\'s about being wiser with your feelings and the feelings of others.',
+    practicalExercise: {
+      title: 'The 30-Day EQ Foundation Builder',
+      steps: [
+        { title: 'Week 1: Emotion Labeling', description: 'Three times daily, pause and name your current emotion using specific words (frustrated vs. overwhelmed vs. discouraged). Notice where you feel it in your body. Journal your observations.' },
+        { title: 'Week 2: Perspective-Taking', description: 'Once daily, ask someone to share a recent emotional experience. Listen without fixing or relating it to yourself. Reflect back what you heard and ask clarifying questions.' },
+        { title: 'Week 3: Reappraisal Practice', description: 'When you notice a negative emotion, write down your initial interpretation. Then generate three alternative ways to view the situation. Choose the most balanced perspective.' },
+        { title: 'Week 4: Integration', description: 'Combine all three skills: notice your emotions, understand others\' perspectives, and reappraise difficult situations. Reflect on changes in your relationships and stress levels.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Emotional Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -403,6 +427,26 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Empathy', 'Social Skills', 'Nonverbal Communication', 'Attunement'],
+    summary: 'Learn the science and art of reading emotions in others through facial expressions, vocal cues, body language, and context. Discover common mistakes in emotion recognition, understand the difference between empathy and projection, and practice attunement--the skill of sensing and responding to emotional shifts with accuracy and sensitivity.',
+    keyFacts: [
+      { text: 'Six basic emotions (happiness, sadness, anger, fear, surprise, disgust) have universal facial expressions across all cultures', citationIndex: 2 },
+      { text: 'Your brain automatically mimics facial expressions you observe, helping you "feel into" others\' emotional states through embodied empathy', citationIndex: 3 },
+      { text: 'Most people are less accurate at reading emotions than they think they are, highlighting the importance of checking assumptions', citationIndex: 8 },
+      { text: 'Context dramatically changes how facial expressions should be interpreted--the same expression can mean different things in different situations', citationIndex: 7 },
+      { text: 'Vocal tone, pitch, and pacing convey emotional information that often contradicts the literal words being spoken', citationIndex: 5 },
+    ],
+    sparkMoment: 'Reading emotions is not about becoming a mind reader--it\'s about tuning into the signals people give off and responding with curiosity instead of certainty.',
+    practicalExercise: {
+      title: 'The Emotion Recognition Practice',
+      steps: [
+        { title: 'Baseline Observation', description: 'For one week, watch people in public spaces (cafes, parks, waiting rooms). Notice facial expressions, body language, and vocal tone without assigning meaning. Just describe what you see: "shoulders hunched," "voice pitch rising."' },
+        { title: 'Video Training', description: 'Watch emotional scenes from movies with the sound off. Guess the emotions based solely on facial expressions and body language. Then watch with sound to check your accuracy.' },
+        { title: 'Check Your Assumptions', description: 'In real conversations, when you think you know what someone feels, ask: "You seem frustrated--is that right?" Track how often your initial read was accurate vs. inaccurate.' },
+        { title: 'Reflect on Patterns', description: 'At the end of each day, journal: What signals did I miss? When did I project my own feelings onto someone else? What contextual cues helped me read emotions more accurately?' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Explore Emotional Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -663,6 +707,26 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Active Listening', 'Communication', 'Validation', 'Emotional Intelligence'],
+    summary: 'True listening is rare and transformative. Discover the three levels of listening, learn the difference between validation and agreement, and master reflective listening to build deeper connections. Explore what kills conversations (unsolicited advice, one-upping, minimizing) and how to stay present during emotionally charged discussions.',
+    keyFacts: [
+      { text: 'Active listening is the intentional practice of receiving both the content and emotional subtext of communication, not just waiting for your turn to talk', citationIndex: 1 },
+      { text: 'Validation reduces emotional distress and increases trust in relationships--yet it\'s one of the most underused communication tools', citationIndex: 2 },
+      { text: 'Brain imaging shows that when someone feels truly heard, their neural activity synchronizes with the listener\'s brain in a phenomenon called "brain-to-brain coupling"', citationIndex: 3 },
+      { text: 'Reflective listening (paraphrasing what you heard and checking for accuracy) significantly increases emotional disclosure and relationship satisfaction', citationIndex: 5 },
+      { text: 'Nonverbal synchrony--matching the other person\'s energy, tone, and pace--increases empathic accuracy by up to 40%', citationIndex: 6 },
+    ],
+    sparkMoment: 'The most powerful way to connect with another person is to listen with your full attention--not to respond, not to fix, but to truly understand.',
+    practicalExercise: {
+      title: 'The Level 3 Listening Challenge',
+      steps: [
+        { title: 'Choose Your Practice Conversation', description: 'Pick one conversation today where you will practice Level 3 listening (words + emotions + meaning). Put your phone away and eliminate all distractions before starting.' },
+        { title: 'Listen Without Interrupting', description: 'Let the person finish their complete thought before you respond. Notice the urge to jump in with advice, your own story, or reassurance. Resist that urge.' },
+        { title: 'Reflect Content + Emotion', description: 'Paraphrase what you heard using this formula: "It sounds like [content] and you\'re feeling [emotion]." Then check: "Did I get that right?"' },
+        { title: 'Validate Their Experience', description: 'Even if you disagree or would feel differently, validate their feelings: "That makes sense given what you went through" or "I can see why that would be frustrating."' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Reflect on Your Interactions',
+    },
     citations: [
       {
         id: '1',
@@ -933,6 +997,26 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Emotional Regulation', 'Impulse Control', 'Mindfulness', 'Communication'],
+    summary: 'The critical difference between reacting and responding determines whether situations escalate or de-escalate. Understand the neuroscience of amygdala hijack, learn the STOP skill from Dialectical Behavior Therapy, and practice creating the pause that gives your prefrontal cortex time to engage before you act.',
+    keyFacts: [
+      { text: 'A reaction is automatic and driven by the limbic system; a response is thoughtful and guided by the prefrontal cortex--the brain region responsible for executive control', citationIndex: 1 },
+      { text: 'Even a 5-10 second pause before responding can significantly reduce regrettable reactions and improve relationship outcomes', citationIndex: 5 },
+      { text: 'The chemical lifespan of an emotion in the body is approximately 90 seconds--if you can ride out the initial surge without reacting, the intensity naturally decreases', citationIndex: 2 },
+      { text: 'Simply labeling your emotion ("I\'m feeling angry") activates the prefrontal cortex and dampens amygdala reactivity, creating distance from the feeling', citationIndex: 3 },
+      { text: 'Research shows it takes about 20 minutes for full physiological recovery from an acute stress response, which is why "sleeping on it" often leads to better decisions', citationIndex: 2 },
+    ],
+    sparkMoment: 'Between stimulus and response there is a space. In that space is our power to choose our response. In our response lies our growth and our freedom.',
+    practicalExercise: {
+      title: 'The Pause Practice: Building Response Flexibility',
+      steps: [
+        { title: 'Start with Low-Stakes Triggers', description: 'For one week, practice pausing for 5 seconds before reacting to minor irritations: spilled coffee, slow traffic, dropped items. This builds the neural pathway in safe conditions.' },
+        { title: 'Use the STOP Acronym', description: 'When triggered, practice: Stop (freeze, don\'t act), Take a breath (slow deep breath), Observe (what\'s happening inside and outside you), Proceed mindfully (choose based on values).' },
+        { title: 'Digital Pause Protocol', description: 'Before sending any emotionally charged text or email, save it as a draft and wait 10 minutes. Re-read before sending. Track how many times this saves you from regrettable communication.' },
+        { title: 'Reflection and Pattern Analysis', description: 'Each evening, reflect on one moment when you reacted vs. responded. What was different? What helped you pause? What made pausing harder? Build awareness of your personal triggers.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Emotional Triggers',
+    },
     citations: [
       {
         id: '1',
@@ -1204,6 +1288,26 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Workplace Wellbeing', 'Emotional Intelligence', 'Professional Development', 'Boundaries'],
+    summary: 'You spend a third of your life at work--learn how to manage workplace emotions without exhausting yourself. Understand emotional labor, handle difficult colleagues with strategy instead of stress, set boundaries without guilt, and create psychological safety if you lead. Emotional intelligence at work predicts job performance, career advancement, and resilience under pressure.',
+    keyFacts: [
+      { text: '58% of job performance can be attributed to emotional intelligence, and 90% of top performers have high EQ', citationIndex: 1 },
+      { text: 'People with strong emotional intelligence skills earn an average of 4 times more than those with low EQ in the same roles', citationIndex: 2 },
+      { text: 'Deep acting (genuinely shifting your emotional state) is less depleting than surface acting (faking emotions), which leads to higher burnout rates', citationIndex: 4 },
+      { text: 'Psychological safety--the belief that you won\'t be punished for speaking up--is the strongest predictor of team effectiveness', citationIndex: 8 },
+      { text: 'Emotional intelligence helps you navigate difficult dynamics, but it cannot compensate for abusive or toxic work environments--leaving is sometimes the most emotionally intelligent choice', citationIndex: 6 },
+    ],
+    sparkMoment: 'Bringing emotional intelligence to work is not about being perfect or never feeling frustrated--it\'s about managing yourself, reading others, and navigating professional life with skill and self-compassion.',
+    practicalExercise: {
+      title: 'The Workplace EQ Audit',
+      steps: [
+        { title: 'Map Your Emotional Triggers', description: 'For one week, notice what situations at work trigger strong emotions: specific people, types of feedback, time pressure, etc. Write down the pattern: "When X happens, I feel Y."' },
+        { title: 'Assess Your Boundaries', description: 'Identify one area where you consistently over-function or struggle to say no. Draft a boundary statement: "I don\'t [action] because [reason], but I can [alternative]."' },
+        { title: 'Practice One EQ Strategy Per Week', description: 'Week 1: Validate a colleague\'s emotions. Week 2: Pause before responding to criticism. Week 3: Set one small boundary. Week 4: Thank someone for bringing up a problem.' },
+        { title: 'Reflect on Impact', description: 'At the end of each week, journal: How did applying this EQ skill change the dynamic? What felt uncomfortable? What improved? What will you continue doing?' },
+      ],
+      toolLink: '/find-care',
+      toolLabel: 'Find a Therapist for Workplace Stress',
+    },
     citations: [
       {
         id: '1',

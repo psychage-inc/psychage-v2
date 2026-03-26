@@ -18,11 +18,31 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
     description: 'A comprehensive guide to understanding how emotions develop in children from infancy through early childhood, with practical strategies for parents.',
     image: "/images/articles/cat01/cover-061.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
-    readTime: 10,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Child Development', 'Parenting', 'Emotional Intelligence', 'Early Childhood'],
+    summary: 'Emotional development in children follows predictable patterns from birth through early childhood, shaped profoundly by caregiver responses. Understanding these milestones and supporting healthy emotional growth builds the neural foundation for lifelong regulation, resilience, and relationship capacity.',
+    keyFacts: [
+      { text: 'Quality of early emotional experiences directly shapes brain architecture, influencing stress regulation and relationship capacity throughout life', citationIndex: 1 },
+      { text: 'Toddlers experience intense emotions with limited regulation skills because their prefrontal cortex (brain\'s regulation center) won\'t fully mature until mid-20s', citationIndex: 3 },
+      { text: 'By age 4, most children can identify 5 basic emotions and show a 70% reduction in tantrums compared to age 2', citationIndex: 5 },
+      { text: 'Secure attachment formed through consistent, attuned responses creates foundation for healthy emotional development across the lifespan', citationIndex: 6 },
+      { text: 'Building emotional vocabulary through naming feelings helps children connect internal sensations to words, a crucial step toward self-regulation', citationIndex: 3 },
+    ],
+    sparkMoment: 'When a parent consistently responds to their infant\'s cries with soothing touch and calm voice, the baby\'s developing brain learns that distress can be managed and help is available---creating neural pathways for emotional resilience that last a lifetime.',
+    practicalExercise: {
+      title: 'The Emotion Naming Game',
+      steps: [
+        { title: 'Practice with books', description: 'During calm moments, look at picture books together and identify emotions on characters\' faces. Ask: "How do you think she\'s feeling?"' },
+        { title: 'Expand vocabulary', description: 'Go beyond happy/sad. Introduce words like frustrated, excited, nervous, proud, disappointed, and surprised.' },
+        { title: 'Model sharing', description: 'Share your own feelings: "I felt proud when I finished that project" or "I felt frustrated when the internet stopped working."' },
+        { title: 'Connect to real life', description: 'When emotions arise in real situations, reference the practice: "Remember when the character felt disappointed? That\'s what we\'re feeling now."' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Emotional Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -284,6 +304,43 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
           </div>
         </ArticleCallout>
 
+        <h2 id="temperament-differences" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Understanding Temperament Differences
+        </h2>
+        <p className="mb-6">
+          Not all children develop emotionally at the same pace or with the same intensity---temperament plays a significant role <Citation id="8" index={8} source="Zero to Three" year="2020" tier={3} />. Some babies are naturally more reactive, others more placid. Some toddlers have intense emotional responses, while others seem to roll with challenges. These aren't character flaws or parenting failures---they're innate temperamental differences that affect how children experience and express emotions.
+        </p>
+
+        <p className="mb-6">
+          Consider two 18-month-olds at a birthday party. Emma approaches new children eagerly, laughing when the clown appears. Her temperament is naturally outgoing and adaptable. Across the room, Liam clings to his father, eyes wide at the commotion. His temperament is more cautious and slow-to-warm. Both are developing normally---they simply have different emotional wiring. Neither temperament is better or worse, but each requires different support strategies from caregivers.
+        </p>
+
+        <ArticleChart
+          type="bar"
+          title="Temperament Dimensions in Early Childhood"
+          data={[
+            { label: 'Activity Level', value: 75 },
+            { label: 'Emotional Intensity', value: 65 },
+            { label: 'Adaptability', value: 55 },
+            { label: 'Approach/Withdrawal', value: 60 },
+            { label: 'Mood Quality', value: 70 },
+          ]}
+          description="Children vary along multiple temperament dimensions, all within normal range. Understanding your child's profile helps you provide appropriate support."
+          source="Zero to Three, 2020"
+        />
+
+        <p className="mb-6">
+          Highly reactive children---about 15-20% of the population---have more sensitive nervous systems <Citation id="3" index={3} source="Journal of Child Psychology and Psychiatry" year="2019" tier={1} />. They startle more easily, have bigger emotional responses, and take longer to calm down. These children aren't being difficult---their biology processes stimuli more intensely. They benefit from extra preparation for transitions, calm environments when possible, and patient coaching through overwhelming moments. With support, highly reactive children often develop into deeply empathetic, perceptive adults.
+        </p>
+
+        <p className="mb-6">
+          The key is matching your response to your child's temperament rather than fighting it. If you have a cautious child, pushing them into social situations before they're ready creates distress, not growth. Instead, arrive early to parties so they can observe before the crowd arrives. If you have an intense child, accept that their feelings will be bigger and their recovery slower. Plan extra transition time and normalize their experience: "You feel things really strongly. That's okay. We'll work through this together."
+        </p>
+
+        <p className="mb-6">
+          Research shows that temperament remains relatively stable across development, but how it manifests can change dramatically based on environment <Citation id="6" index={6} source="Developmental Science" year="2019" tier={1} />. A sensitive, reactive infant can become either an anxious child or a deeply intuitive one---the difference often lies in whether caregivers treat their sensitivity as a problem to fix or a trait to support. Your acceptance of your child's temperamental style teaches them to accept themselves, which ultimately builds emotional resilience more effectively than trying to change who they fundamentally are.
+        </p>
+
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Professional Help
         </h2>
@@ -316,11 +373,31 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
     description: 'Understanding the neuroscience behind teenage emotional intensity and how brain development makes adolescence such a turbulent emotional period.',
     image: "/images/articles/cat01/cover-062.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
-    readTime: 10,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Adolescence', 'Teen Mental Health', 'Brain Development', 'Parenting Teens'],
+    summary: 'Adolescent emotional intensity stems from a neurodevelopmental gap where the limbic system (emotion center) matures years before the prefrontal cortex (regulation center). This biological reality creates genuinely amplified feelings that require understanding and skill-building rather than judgment.',
+    keyFacts: [
+      { text: 'The limbic system reaches adult maturity around age 15, while the prefrontal cortex continues developing until age 25, creating a decade-long developmental gap', citationIndex: 2 },
+      { text: 'Teen amygdalas show activity levels 2-3 times higher than adults when viewing emotional stimuli, making feelings neurologically more intense', citationIndex: 1 },
+      { text: 'The brain\'s reward system becomes hyperactive during adolescence, making positive experiences feel amazing and losses feel devastating', citationIndex: 4 },
+      { text: 'Adolescent circadian rhythms naturally delay melatonin release by 2 hours, making early school start times a neurological mismatch that worsens emotional regulation', citationIndex: 7 },
+      { text: 'Peer relationships activate different brain regions in teens than adults, explaining why social evaluation becomes neurologically more important during this stage', citationIndex: 5 },
+    ],
+    sparkMoment: 'Teenage emotions aren\'t drama or overreaction---they\'re the result of a sports car emotion center running at full power while the regulation brakes are still being installed, creating genuinely intense experiences that will moderate as the brain matures.',
+    practicalExercise: {
+      title: 'The Emotion Thermometer',
+      steps: [
+        { title: 'Check your temperature', description: 'Throughout your day, rate your emotional intensity on a 1-10 scale. Don\'t change anything, just notice where you are.' },
+        { title: 'Identify your warning zone', description: 'When you hit a 7, that\'s your signal to use a coping skill BEFORE reaching 10. At 7, skills still work. At 10, your prefrontal cortex is offline.' },
+        { title: 'Build a strategy menu', description: 'Develop "7 strategies" you can use when intensity builds: text a friend, walk, listen to music, do jumping jacks, journal.' },
+        { title: 'Practice when calm', description: 'Use these strategies when you\'re at 3/10 so they become automatic. Your overwhelmed self can\'t problem-solve; your calm self prepares in advance.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Emotional Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -553,6 +630,34 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
           </div>
         </ArticleCallout>
 
+        <h2 id="social-media-amplification" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Social Media Amplification Effect
+        </h2>
+        <p className="mb-6">
+          Modern teens navigate emotional intensity with a layer previous generations didn't face: constant social comparison and digital performance anxiety <Citation id="5" index={5} source="Journal of Research on Adolescence" year="2019" tier={1} />. When your brain is already hyperreactive to peer evaluation, adding an algorithmically-curated highlight reel creates a perfect storm for emotional distress.
+        </p>
+
+        <p className="mb-6">
+          Seventeen-year-old Mia posts a photo and checks her phone every few minutes to count likes. Each notification triggers a small dopamine hit; the absence of notifications creates anxiety. Her already-sensitive reward system becomes even more dysregulated by this intermittent reinforcement schedule---the same mechanism that makes slot machines addictive. When she sees friends at a gathering she wasn't invited to, her amygdala registers this as genuine social threat, triggering the same stress response our ancestors experienced when facing actual exclusion from the tribe.
+        </p>
+
+        <StatCard
+          stats={[
+            { value: 3, suffix: 'hrs', label: 'Average teen daily social media use' },
+            { value: 45, suffix: '%', label: 'Teens who feel overwhelmed by social media pressure' },
+            { value: 2, suffix: 'x', label: 'Increased anxiety risk with heavy social media use' },
+          ]}
+          source="American Academy of Pediatrics, 2021"
+        />
+
+        <p className="mb-6">
+          The problem isn't that teens are weak or overly sensitive---it's that social media hijacks development systems designed for face-to-face tribal living and amplifies them through digital technology. Constant availability means teens never get a break from peer dynamics. Curated content makes everyone else's life seem effortlessly perfect, creating impossible comparison standards. And the addictive design keeps them scrolling even when it makes them feel worse.
+        </p>
+
+        <p className="mb-6">
+          This doesn't mean teens need to delete all social media, but it does require intentional boundaries. Designate phone-free times (meals, bedtime, homework). Turn off notifications so you're checking on your schedule, not the app's. Regularly ask: "Does this app make me feel better or worse?" and adjust accordingly. Remember that what you see online is a highlight reel, not reality---everyone is curating their most impressive moments while hiding struggles.
+        </p>
+
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Professional Help
         </h2>
@@ -595,6 +700,26 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Young Adults', 'Identity', 'Life Transitions', 'Quarter-Life Crisis'],
+    summary: 'The twenties represent "emerging adulthood"---a distinct developmental period marked by identity exploration, instability, and possibility. Social comparison, uncertainty about life direction, and quarter-life crises are normal experiences during this stage, not signs of failure or being behind.',
+    keyFacts: [
+      { text: 'The prefrontal cortex (responsible for long-term planning) doesn\'t finish developing until around age 25, meaning early-twenties brains are literally not equipped to make lifelong decisions', citationIndex: 4 },
+      { text: '60% of young adults report feeling uncertain about their life direction, and 75% will experience a major life change in their twenties', citationIndex: 1 },
+      { text: 'More time spent on social media correlates with higher rates of depression and anxiety in young adults, amplifying the comparison spiral common in this age group', citationIndex: 7 },
+      { text: 'Most people\'s twenties involve uncertainty, setbacks, and recalibration---exploration and path-changing are developmentally appropriate, not signs of indecisiveness', citationIndex: 2 },
+      { text: 'The quarter-life crisis (ages 25-29) reflects the gap between expectations and reality, validated by research as a distinct period of distress and questioning', citationIndex: 5 },
+    ],
+    sparkMoment: 'Your twenties aren\'t about having it all figured out---they\'re about exploring different versions of yourself, testing values, and discovering what gives your life meaning through trial, adjustment, and recalibration.',
+    practicalExercise: {
+      title: 'Values Clarification Inventory',
+      steps: [
+        { title: 'List possible values', description: 'Review common values: creativity, security, autonomy, connection, adventure, learning, impact, recognition, balance, tradition, innovation, justice. Add others that resonate.' },
+        { title: 'Narrow to top 5', description: 'Force yourself to prioritize---choose the 5 values that matter most, not what you think should matter.' },
+        { title: 'Define each value', description: 'Write 2-3 sentences about why each value matters to you and what it looks like in practice.' },
+        { title: 'Apply to decisions', description: 'For current choices, ask which option aligns better with your top values. This creates internal consistency rather than chasing external validation.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Reflect on Your Journey',
+    },
     citations: [
       {
         id: '1',
@@ -764,6 +889,10 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
           Twenty-seven-year-old Priya experiences this acutely. She's working a job she doesn't love, living in a city because that's where she ended up (not by choice), single after a difficult breakup, and watching her younger sister get engaged. Priya feels like she should be further along---more established, more certain, more successful. The quarter-life crisis hits when the narrative you told yourself about how life would unfold doesn't match the reality you're living.
         </p>
 
+        <p className="mb-6">
+          What makes the quarter-life crisis particularly challenging is that society offers few rituals or acknowledgments for this transition. There's no graduation ceremony for figuring yourself out, no cultural script for"I changed my mind about my life direction." You're expected to have answers when developmentally you're designed to be exploring questions. This disconnect creates shame around uncertainty that previous generations didn't experience to the same degree. Your parents might have followed a more linear path---college, job, marriage, house, kids---not because they were more decisive, but because the economic and social landscape made that trajectory more accessible and expected. Your generation faces more options, less stability, delayed milestones, and crushing pressure to optimize every decision. The quarter-life crisis isn't personal weakness---it's a rational response to historically unprecedented circumstances.
+        </p>
+
         <h2 id="navigating-uncertainty" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           How to Navigate the Emotional Terrain
         </h2>
@@ -892,11 +1021,31 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
     description: 'Understanding the emotional transitions of midlife, from shifting priorities to finding new meaning, and navigating the changes that come with this life stage.',
     image: "/images/articles/cat01/cover-064.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
-    readTime: 10,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Midlife', 'Life Transitions', 'Aging', 'Personal Growth'],
+    summary: 'Midlife brings emotional recalibration and often increased wellbeing despite cultural myths about crisis. Most people experience gradual reassessment of priorities and improved emotional regulation rather than dramatic upheaval, with research showing the 40s and 50s as a sweet spot for life satisfaction.',
+    keyFacts: [
+      { text: 'Only 10-20% of people experience a dramatic midlife crisis; most undergo gradual shifts and reprioritization rather than sudden upheaval', citationIndex: 3 },
+      { text: 'Emotional volatility decreases by 40% from age 25 to 50, with midlife adults showing twice the emotional regulation capacity of younger adults', citationIndex: 4 },
+      { text: '65% of midlife adults report greater life satisfaction than in their youth, demonstrating the "paradox of aging" where wellbeing improves despite physical decline', citationIndex: 2 },
+      { text: 'Many midlife adults are part of the "sandwich generation," simultaneously caring for aging parents and still-dependent children, creating unique emotional demands', citationIndex: 7 },
+      { text: 'Hormonal changes during perimenopause and andropause can significantly impact emotional regulation, with physiological factors often underlying what seems like psychological struggle', citationIndex: 6 },
+    ],
+    sparkMoment: 'Midlife isn\'t about crisis---it\'s about clarity, as decades of experience converge into wisdom, competence, and the confidence to align your life with what truly matters rather than chasing external markers of success.',
+    practicalExercise: {
+      title: 'The Life Review Inventory',
+      steps: [
+        { title: 'Rate life domains', description: 'Rate satisfaction (1-10) in: work, relationships, family, health, personal growth, leisure, contribution, finances, living environment.' },
+        { title: 'Identify change opportunities', description: 'For areas rated 6 or below, ask: "Is this low because of changeable circumstances, or do I need to adjust expectations?"' },
+        { title: 'Focus on one domain', description: 'Pick one area to improve this year. What specific action would move it one point higher? Be realistic.' },
+        { title: 'Extract principles', description: 'For highly-rated areas, identify what makes them work. Can you apply those principles to lower-rated domains?' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Life Satisfaction',
+    },
     citations: [
       {
         id: '1',
@@ -1015,6 +1164,10 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
 
         <p className="mb-6">
           Fifty-one-year-old David illustrates this. In his twenties, a professional setback would spiral him into weeks of anxiety and self-doubt. Now, when a project fails, he feels disappointed but moves on quickly. He knows from experience that one failure doesn't define his career, that new opportunities will arise, and that his worth isn't contingent on perfect performance. That's not apathy---it's wisdom born from pattern recognition across decades.
+        </p>
+
+        <p className="mb-6">
+          This emotional stability doesn't mean midlife adults feel less---they feel more selectively and more deeply about what genuinely matters <Citation id="2" index={2} source="Perspectives on Psychological Science" year="2019" tier={1} />. The minor irritations that consumed emotional energy in your twenties (traffic, social slights, petty workplace politics) lose their power to derail your day. Meanwhile, moments of genuine connection, meaningful accomplishment, and simple pleasures register more intensely. You're not numbing out---you're developing emotional discernment, the capacity to distinguish signal from noise in your affective life. This selectivity is one of aging's underappreciated gifts, allowing you to invest your limited emotional resources where they yield the greatest return in terms of wellbeing and fulfillment.
         </p>
 
         <h2 id="shifts-and-challenges" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">

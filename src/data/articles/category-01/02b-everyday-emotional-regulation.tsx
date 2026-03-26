@@ -28,6 +28,26 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Affect Labeling', 'Neuroscience', 'Emotional Awareness', 'Brain Research', 'fMRI'],
+    summary: 'Neuroscience research shows that simply naming your emotions--a process called affect labeling--reduces amygdala activation by up to 50% within seconds. The more precise your emotional vocabulary, the more effectively your brain regulates distress.',
+    keyFacts: [
+      { text: 'Labeling emotions reduces amygdala activation by approximately 50% compared to passive viewing', citationIndex: 1 },
+      { text: 'The regulatory effect happens automatically--participants did not consciously try to regulate their emotions', citationIndex: 1 },
+      { text: 'People with more specific emotional vocabularies show better emotion regulation outcomes and fewer maladaptive coping strategies', citationIndex: 4 },
+      { text: 'Affect labeling outperformed cognitive reappraisal in reducing fear responses in phobia treatment', citationIndex: 9 },
+      { text: 'Writing emotion labels down produces even stronger regulation effects than just thinking them', citationIndex: 2 },
+    ],
+    sparkMoment: 'Your brain treats naming an emotion like solving a puzzle--the act of finding the right word shifts you from feeling overwhelmed to being the observer of your experience.',
+    practicalExercise: {
+      title: 'Build Your Emotion Vocabulary Practice',
+      steps: [
+        { title: 'Set Three Daily Check-Ins', description: 'Set alarms for morning, midday, and evening. At each check-in, pause and ask: "What am I feeling right now?"' },
+        { title: 'Go Beyond Basic Six', description: 'Instead of "happy, sad, angry, scared," use specific words like "grateful," "disappointed," "frustrated," or "uneasy." Keep an emotion wheel on your phone for reference.' },
+        { title: 'Use the Observer Phrase', description: 'Say "I notice I am feeling [emotion]" rather than "I am [emotion]." This creates helpful distance between you and the feeling.' },
+        { title: 'Track in a Journal', description: 'Write down the emotion word you chose and rate how well it captured the feeling (1-10). Over time, your precision will improve.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Emotions',
+    },
     citations: [
       {
         id: '1',
@@ -255,6 +275,26 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Emotional First Aid', 'Crisis Coping', 'Emotional Regulation', 'Quick Interventions', 'Self-Care'],
+    summary: 'The first five minutes after an emotional trigger are critical--this is when stress hormones peak and automatic reactions are strongest. A simple five-step protocol (pause, ground, name, validate, choose) can prevent hours of emotional fallout and help you respond with clarity instead of reactivity.',
+    keyFacts: [
+      { text: 'The first few minutes after an emotional trigger represent the highest-intensity period of the stress response', citationIndex: 2 },
+      { text: 'During emotional arousal, the prefrontal cortex has reduced capacity while the amygdala floods the body with cortisol and adrenaline', citationIndex: 5 },
+      { text: 'Early intervention during the critical first minutes dramatically improves emotional regulation outcomes', citationIndex: 2 },
+      { text: 'Self-compassion during low-stress periods makes it easier to access validation skills during high-stress moments', citationIndex: 4 },
+      { text: 'The five-step protocol draws from stress inoculation training, an evidence-based method for preparing for and recovering from stressful events', citationIndex: 3 },
+    ],
+    sparkMoment: 'The difference between reacting and responding is measured in minutes--give yourself five minutes, and you give yourself the power to choose.',
+    practicalExercise: {
+      title: 'Create Your Five-Minute Emotional First Aid Card',
+      steps: [
+        { title: 'Write the Five Steps', description: 'On an index card or phone note, write: 1) Pause & Acknowledge, 2) Ground Your Body, 3) Name the Emotion, 4) Validate Yourself, 5) Choose Your Next Step.' },
+        { title: 'Place in Visible Locations', description: 'Keep a copy on your desk, in your wallet, and as your phone lock screen. You need it visible during calm moments so you remember it during storms.' },
+        { title: 'Rehearse During Calm', description: 'Walk through all five steps when you are feeling neutral or mildly annoyed. Practice makes the sequence automatic when you need it most.' },
+        { title: 'Track Your First Use', description: 'After using the protocol for the first time in a real situation, write down what happened and how well each step worked. Adjust for next time.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Log Your Emotional Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -453,6 +493,26 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Distress Tolerance', 'ACT', 'Emotional Avoidance', 'Mindfulness', 'Acceptance'],
+    summary: 'Experiential avoidance--the unwillingness to stay with uncomfortable emotions--is a core driver of anxiety, depression, and substance use. Learning to sit with difficult feelings through methods like the RAIN technique, wave surfing, and cognitive defusion builds distress tolerance and emotional resilience.',
+    keyFacts: [
+      { text: 'Experiential avoidance is a core driver of anxiety, depression, substance use, and many other mental health challenges', citationIndex: 2 },
+      { text: 'Most emotional waves pass within 60-90 seconds if you do not feed them with rumination or avoidance', citationIndex: 8 },
+      { text: 'Chronic emotional avoidance narrows your life and prevents emotional growth', citationIndex: 8 },
+      { text: 'Distress tolerance expands with practice--the range of feelings you can hold without escaping gets wider over time', citationIndex: 4 },
+      { text: 'Starting with low-intensity emotions and gradually increasing intensity is the most effective approach to building tolerance', citationIndex: 6 },
+    ],
+    sparkMoment: 'The paradox of acceptance is this: the moment you stop fighting the discomfort, it loses half its power.',
+    practicalExercise: {
+      title: 'Two-Minute Distress Tolerance Training',
+      steps: [
+        { title: 'Choose a Low-Intensity Emotion', description: 'Start with mild boredom, restlessness, or irritation--not intense fear or rage. The goal is to build capacity gradually.' },
+        { title: 'Set a Timer for Two Minutes', description: 'Commit to sitting with the feeling for just 120 seconds. Do not distract, suppress, or numb. Just observe.' },
+        { title: 'Notice Where It Lives', description: 'Scan your body. Where do you feel the emotion? Chest? Stomach? Throat? Describe the physical sensation without judgment.' },
+        { title: 'Use the RAIN Method', description: 'Recognize ("Restlessness is here"). Allow ("I am letting it be here"). Investigate ("It feels like tightness in my chest"). Nurture ("I can handle this feeling").' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Tolerance Growth',
+    },
     citations: [
       {
         id: '1',
@@ -653,6 +713,26 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Movement', 'Nervous System', 'Exercise', 'Polyvagal Theory', 'Body-Based Regulation'],
+    summary: 'Physical movement is one of the most direct ways to regulate your nervous system and emotional state. From walking to shaking to yoga, different types of movement help shift between sympathetic activation, dorsal vagal shutdown, and regulated calm by producing neurobiological changes including endorphin release, cortisol reduction, and vagal tone improvement.',
+    keyFacts: [
+      { text: 'Exercise and movement are among the most effective strategies for regulating mood and reducing anxiety and depression symptoms', citationIndex: 1 },
+      { text: 'Regular physical activity is associated with a 26% lower risk of depression', citationIndex: 9 },
+      { text: 'Even a single 20-minute walk can significantly reduce anxiety and improve mood', citationIndex: 3 },
+      { text: 'Yoga significantly reduces symptoms of anxiety and depression with effects comparable to some medications for mild to moderate symptoms', citationIndex: 4 },
+      { text: 'The World Health Organization recommends 150 minutes of weekly physical activity for mental health', citationIndex: 7 },
+    ],
+    sparkMoment: 'Your body is not separate from your emotions--it is the place where emotions live, and movement is the language that changes them.',
+    practicalExercise: {
+      title: 'Match Your Movement to Your Nervous System State',
+      steps: [
+        { title: 'Check Your State', description: 'Notice how you feel right now. Anxious and restless (sympathetic)? Numb and flat (dorsal vagal)? Already calm (ventral vagal)?' },
+        { title: 'If Anxious: Walk It Out', description: 'Take a 10-minute walk, focusing on the rhythm of your feet. Let the movement burn off stress hormones. Notice when the heat in your body begins to cool.' },
+        { title: 'If Numb: Shake and Stretch', description: 'Stand with knees bent, shake your whole body for 2 minutes, then stretch gently for 5 minutes. Bring energy back into the system without overwhelming it.' },
+        { title: 'Track the Shift', description: 'After movement, rate your emotional state (1-10). Notice how your body feels different. Log which movements work best for which states.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Log Your Movement Effects',
+    },
     citations: [
       {
         id: '1',
@@ -868,6 +948,26 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Emotional Toolkit', 'Personalized Coping', 'Self-Help', 'Wellness Plan', 'Emotional Skills'],
+    summary: 'The most psychologically healthy people have a repertoire of emotion regulation techniques they match to different situations. Building a personalized toolkit involves mapping your triggers, identifying default strategies, selecting core techniques from different categories, matching strategies to scenarios, practicing in low-stakes moments, and reviewing monthly.',
+    keyFacts: [
+      { text: 'People who use a wider variety of emotion regulation strategies report better well-being and lower rates of anxiety and depression', citationIndex: 2 },
+      { text: 'Emotion regulation flexibility--having multiple techniques to draw from--is a hallmark of psychological health', citationIndex: 1 },
+      { text: 'Context matters: the same strategy may work in one setting but be impractical in another', citationIndex: 7 },
+      { text: 'People who actively track their regulation efforts improve faster than those who simply try to remember techniques', citationIndex: 5 },
+      { text: 'Every time you practice a regulation technique, you strengthen neural pathways that make future regulation easier and faster', citationIndex: 6 },
+    ],
+    sparkMoment: 'Having a plan does not mean you will never feel overwhelmed--it means you will never feel completely helpless.',
+    practicalExercise: {
+      title: 'Build Your Personal Regulation Toolkit',
+      steps: [
+        { title: 'Week 1: Map Your Triggers', description: 'For seven days, note what triggers strong emotions. Write down: situation, emotion, intensity (1-10). Look for patterns--specific people, times of day, types of situations.' },
+        { title: 'Week 2: Audit Your Defaults', description: 'List every coping strategy you currently use, helpful and unhelpful. Be honest: distraction, suppression, exercise, calling friends, substance use, etc.' },
+        { title: 'Week 3: Select Core Techniques', description: 'Choose 4-6 techniques from different categories: body (breathing, movement), mind (labeling, reappraisal), social (support call), self-soothing (visualization). Write them on a card.' },
+        { title: 'Week 4: Match and Practice', description: 'For each common trigger, assign one or two strategies. Practice each technique during calm moments so the steps become automatic. Review monthly and adjust.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Start Tracking Your Toolkit',
+    },
     citations: [
       {
         id: '1',

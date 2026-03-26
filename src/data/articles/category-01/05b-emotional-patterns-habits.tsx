@@ -8,6 +8,10 @@ import {
   ArticleAccordion,
   ProgressSteps,
   QuoteBlock,
+  StatCard,
+  BeforeAfter,
+  MythVsFactBlock,
+  HighlightBox,
 } from '../../../components/article/blocks';
 
 export const emotionalPatternsHabitsArticlesB: Article[] = [
@@ -21,11 +25,31 @@ export const emotionalPatternsHabitsArticlesB: Article[] = [
     description: `Anger is often a surface emotion masking deeper feelings. Learn to look beneath the iceberg to understand what's really driving your irritation.`,
     image: "/images/articles/cat01/cover-046.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
-    readTime: 8,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Anger', 'Emotional Awareness', 'Vulnerability', 'Communication'],
+    summary: 'Anger is often a protective surface emotion masking deeper vulnerable feelings like hurt, fear, and shame. Learning to identify and express what lies beneath the anger iceberg transforms relationships and promotes emotional healing.',
+    keyFacts: [
+      { text: 'Anger is a secondary emotion that often protects us from feeling more vulnerable emotions like sadness, fear, or shame', citationIndex: 2 },
+      { text: 'Men are disproportionately socialized to express anger while suppressing vulnerability, though this pattern affects people of all genders', citationIndex: 4 },
+      { text: 'Anger activates the sympathetic nervous system\'s fight response, creating a sense of power and control that vulnerable emotions don\'t provide', citationIndex: 3 },
+      { text: 'Expressing the vulnerable feelings beneath anger opens connection and repair, while anger alone often escalates conflict', citationIndex: 1 },
+      { text: 'Meta-analyses show that anger management interventions are most effective when they address underlying emotions, not just anger expression', citationIndex: 5 },
+    ],
+    sparkMoment: 'The next time anger surges, pause and ask: "What am I protecting? What feeling am I afraid to face?" The answer is where your real healing begins.',
+    practicalExercise: {
+      title: 'The Anger Iceberg Exploration',
+      steps: [
+        { title: 'Notice the anger', description: 'When you feel irritated, frustrated, or angry, pause and acknowledge it without judgment.' },
+        { title: 'Ask what\'s underneath', description: 'Scan for softer emotions: Am I hurt? Scared? Ashamed? Disappointed? What feels threatening right now?' },
+        { title: 'Name the vulnerable feeling', description: 'Say it aloud or write it down: "I\'m angry because I feel _____ (hurt/scared/invisible)."' },
+        { title: 'Express it differently', description: 'Share the vulnerable truth: "I feel hurt when..." instead of "You always..." Notice how this shifts the conversation.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Emotional Patterns',
+    },
     citations: [
       { id: '1', text: 'The function of anger in psychological health', source: 'Aggression and Violent Behavior', year: '2020', link: 'https://doi.org/10.1016/j.avb.2020.101422', tier: 1 },
       { id: '2', text: 'Secondary emotions and emotional suppression', source: 'Emotion', year: '2019', link: 'https://doi.org/10.1037/emo0000562', tier: 1 },
@@ -63,6 +87,14 @@ export const emotionalPatternsHabitsArticlesB: Article[] = [
         <ArticleCallout variant="key-takeaway">
           <p>Anger is not a "bad" emotion---it's a messenger. But if you only listen to the anger and ignore what's beneath it, you never address the real wound.</p>
         </ArticleCallout>
+
+        <StatCard
+          stats={[
+            { value: 75, suffix: '%', label: 'of people report anger as easier to express than sadness or fear' },
+            { value: 3, suffix: 'x', label: 'higher risk of heart disease in those with chronic, unexpressed anger' },
+          ]}
+          source="Aggression and Violent Behavior, 2020"
+        />
 
         <h2 id="whats-below" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What's Below the Surface
@@ -273,11 +305,31 @@ export const emotionalPatternsHabitsArticlesB: Article[] = [
     description: 'Shame and guilt are often confused, but their effects on mental health and behavior are radically different. Learn to tell them apart---and why it matters.',
     image: "/images/articles/cat01/cover-047.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
-    readTime: 8,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Shame', 'Guilt', 'Self-Compassion', 'Mental Health'],
+    summary: 'Guilt focuses on behavior ("I did something bad"), while shame attacks identity ("I am bad"). While guilt motivates repair and growth, shame leads to isolation, defensiveness, and mental health problems. Learning to transform shame into guilt is essential for healing.',
+    keyFacts: [
+      { text: 'Shame is highly correlated with depression, anxiety, addiction, aggression, eating disorders, and suicidal ideation', citationIndex: 2 },
+      { text: 'Guilt motivates prosocial behavior and relationship repair, while shame promotes hiding and withdrawal', citationIndex: 3 },
+      { text: 'Shame thrives in secrecy and silence--sharing shame with a trusted person is the most powerful antidote', citationIndex: 1 },
+      { text: 'Compassion-Focused Therapy (CFT) specifically targets deep-seated shame by teaching self-compassion skills', citationIndex: 4 },
+      { text: 'Healthy guilt is temporary and action-oriented, while toxic guilt becomes chronic self-punishment without repair', citationIndex: 3 },
+    ],
+    sparkMoment: 'You are not your worst moment. You are not your mistakes. Guilt says you did something wrong. Shame says you are something wrong. Only one of those is true.',
+    practicalExercise: {
+      title: 'Shame-to-Guilt Reframing Practice',
+      steps: [
+        { title: 'Identify a shame thought', description: 'Notice when you say "I am bad/broken/worthless" instead of "I did something I regret."' },
+        { title: 'Write it down', description: 'Document the exact self-talk: "I\'m a terrible person for..." Get specific about the shame language.' },
+        { title: 'Reframe to guilt', description: 'Rewrite it: "I did [specific behavior] that doesn\'t align with my values, and I can make it right."' },
+        { title: 'Share with someone safe', description: 'Tell one trusted person about this reframe. Shame loses power when brought into the light.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Emotional Patterns',
+    },
     citations: [
       { id: '1', text: 'Shame and guilt: Distinct self-conscious emotions', source: 'Psychological Bulletin', year: '2020', link: 'https://doi.org/10.1037/bul0000241', tier: 1 },
       { id: '2', text: 'Shame-proneness and psychopathology', source: 'Clinical Psychology Review', year: '2019', link: 'https://doi.org/10.1016/j.cpr.2019.04.007', tier: 1 },
@@ -484,6 +536,24 @@ export const emotionalPatternsHabitsArticlesB: Article[] = [
           </p>
         </div>
 
+        <h2 id="shame-vs-guilt-communication" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Communicating With Shame vs. Guilt
+        </h2>
+        <BeforeAfter
+          before={{ title: 'Shame-Based Self-Talk', points: [
+            '"I\'m such an idiot for making that mistake"',
+            '"I always mess everything up"',
+            '"I\'m a terrible person"',
+            '"No one would want to be with someone like me"'
+          ]}}
+          after={{ title: 'Guilt-Based Self-Talk', points: [
+            '"I made a mistake in that moment"',
+            '"I messed up this time, and I can learn from it"',
+            '"I did something I regret, and I can make amends"',
+            '"I made a choice that doesn\'t reflect who I want to be"'
+          ]}}
+        />
+
         <h2 id="real-world-examples" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Real-World Applications
         </h2>
@@ -549,11 +619,31 @@ export const emotionalPatternsHabitsArticlesB: Article[] = [
     description: 'Rumination keeps you stuck in the past, amplifying distress. Learn why it happens and evidence-based strategies to break the cycle.',
     image: "/images/articles/cat01/cover-048.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
-    readTime: 8,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Rumination', 'Overthinking', 'Depression', 'Cognitive Patterns'],
+    summary: 'Rumination is repetitive, passive focus on distress without moving toward solutions. It activates the brain\'s default mode network and strengthens neural pathways of distress. Evidence-based strategies like mindfulness, scheduled worry time, and cognitive restructuring can break the cycle.',
+    keyFacts: [
+      { text: 'Rumination is one of the strongest predictors of depression, amplifying negative mood and prolonging distress', citationIndex: 1 },
+      { text: 'The brain\'s default mode network (DMN) activates during rumination, creating mental loops when not focused on tasks', citationIndex: 5 },
+      { text: 'Mindfulness-based interventions are highly effective for rumination by teaching observation without fusion with thoughts', citationIndex: 4 },
+      { text: 'Rumination creates the illusion of problem-solving but actually impairs cognitive function and decision-making', citationIndex: 2 },
+      { text: 'Research shows habit formation for interrupting rumination takes 66 days on average, with complex patterns requiring longer', citationIndex: 3 },
+    ],
+    sparkMoment: 'You are not your thoughts. You are the sky, and thoughts are clouds passing through. Rumination asks you to chase every cloud. Mindfulness teaches you to watch them drift by.',
+    practicalExercise: {
+      title: 'The Two-Minute Rumination Interrupt',
+      steps: [
+        { title: 'Catch yourself ruminating', description: 'Notice when you\'re in a mental loop replaying the past or asking "why me?" questions with no answers.' },
+        { title: 'Set a timer for 2 minutes', description: 'Allow yourself to ruminate fully for exactly two minutes. Give the thoughts permission to be there.' },
+        { title: 'When the timer ends, shift focus', description: 'Do something physical: 10 jumping jacks, wash your hands, step outside. Move your body to interrupt the pattern.' },
+        { title: 'Repeat as needed', description: 'If rumination returns, repeat the 2-minute cycle. You\'re training your brain that you control the thoughts, not vice versa.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Thought Patterns',
+    },
     citations: [
       { id: '1', text: 'Rumination and depression: A meta-analysis', source: 'Clinical Psychology Review', year: '2020', link: 'https://doi.org/10.1016/j.cpr.2020.101885', tier: 1 },
       { id: '2', text: 'The neuroscience of repetitive negative thinking', source: 'Nature Reviews Neuroscience', year: '2021', link: 'https://doi.org/10.1038/s41583-021-00470-6', tier: 1 },
@@ -619,6 +709,24 @@ export const emotionalPatternsHabitsArticlesB: Article[] = [
         <ArticleCallout variant="key-takeaway">
           <p>Rumination creates the illusion of control. "If I keep thinking about it, I can prevent it from happening again." But you can't think your way out of an emotional problem. Rumination keeps you stuck in a loop, not moving toward a solution.</p>
         </ArticleCallout>
+
+        <h2 id="myths-about-rumination" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Common Myths About Rumination
+        </h2>
+        <div className="space-y-4 my-8">
+          <MythVsFactBlock
+            myth="Rumination is productive thinking that helps me solve problems"
+            fact="Rumination is passive and circular thinking that reinforces distress without generating solutions. Productive problem-solving is active, time-limited, and leads to concrete action steps."
+          />
+          <MythVsFactBlock
+            myth="If I just think hard enough about what went wrong, I can prevent it in the future"
+            fact="Rumination about past events doesn't prevent future ones. It only strengthens the neural pathway of distress and impairs your actual problem-solving ability."
+          />
+          <MythVsFactBlock
+            myth="Analyzing why I feel bad will make me feel better"
+            fact="Asking 'why' questions about negative emotions without moving to action keeps you stuck. Asking 'what can I do about this?' shifts you toward solutions."
+          />
+        </div>
 
         <h2 id="the-costs" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Costs of Rumination
@@ -780,11 +888,31 @@ export const emotionalPatternsHabitsArticlesB: Article[] = [
     description: "The unrealistic expectation that you should always be happy, calm, and positive creates suffering. Learn to accept the full range of human emotions.",
     image: "/images/articles/cat01/cover-049.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
-    readTime: 8,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Perfectionism', 'Acceptance', 'Self-Compassion', 'Toxic Positivity'],
+    summary: 'Emotional perfectionism is the unrealistic belief that you should only feel pleasant emotions. This creates secondary suffering--pain about your pain--and blocks authentic emotional processing. Radical acceptance and self-compassion are the antidotes to this toxic pattern.',
+    keyFacts: [
+      { text: 'Emotional perfectionism leads to chronic emotional suppression, which is linked to increased anxiety, depression, and physical health problems', citationIndex: 1 },
+      { text: 'Toxic positivity invalidates genuine struggle and creates shame around normal human emotions, making people less likely to seek help', citationIndex: 2 },
+      { text: 'Every emotion serves an adaptive function: sadness signals loss, anger signals boundary violations, fear signals threat', citationIndex: 4 },
+      { text: 'Radical acceptance in DBT teaches that accepting emotions doesn\'t mean approving of them--it means stopping the exhausting fight against reality', citationIndex: 3 },
+      { text: 'People who practice emotional acceptance report lower distress and better psychological flexibility than those who suppress emotions', citationIndex: 1 },
+    ],
+    sparkMoment: 'You don\'t have to feel good to be good. You\'re allowed to feel all of it. Discomfort isn\'t a bug in the system--it\'s a feature of being fully human.',
+    practicalExercise: {
+      title: 'The Emotion Permission Slip Practice',
+      steps: [
+        { title: 'Identify a rejected emotion', description: 'Notice an emotion you judge yourself for feeling (sadness, anger, anxiety, jealousy).' },
+        { title: 'Write a permission slip', description: 'On paper or in your notes: "I give myself permission to feel [emotion]. It\'s okay that I feel this way."' },
+        { title: 'Add self-compassion', description: 'Continue writing: "Feeling [emotion] doesn\'t mean I\'m weak or broken. It means I\'m human."' },
+        { title: 'Keep it visible', description: 'Save it as your phone wallpaper, a sticky note, or journal entry. Return to it when the "should" thoughts arise.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Emotional Range',
+    },
     citations: [
       { id: '1', text: 'Emotional perfectionism and psychological distress', source: 'Personality and Individual Differences', year: '2021', link: 'https://doi.org/10.1016/j.paid.2021.110892', tier: 1 },
       { id: '2', text: 'Toxic positivity: The dark side of positive thinking', source: 'Journal of Humanistic Psychology', year: '2020', link: 'https://doi.org/10.1177/0022167820951155', tier: 1 },
@@ -882,7 +1010,10 @@ export const emotionalPatternsHabitsArticlesB: Article[] = [
         <h2 id="negative-emotions-serve-purpose" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Why Negative Emotions Aren't the Enemy
         </h2>
-        <p className="mb-6">
+        <HighlightBox variant="emphasis">
+          <p className="text-base">Emotions are data, not directives. They give you information about what matters to you, what needs attention, and what requires action. Trying to eliminate "negative" emotions is like removing the warning lights from your car's dashboard--it doesn't fix the problem, it just makes you blind to it.</p>
+        </HighlightBox>
+        <p className="mb-6 mt-6">
           Every emotion serves a function <Citation id="4" index={4} source="Emotion Review" year="2020" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-3">
@@ -1003,11 +1134,31 @@ export const emotionalPatternsHabitsArticlesB: Article[] = [
     description: 'Step-by-step guide to identifying old emotional patterns and deliberately building new, healthier responses that serve you better.',
     image: "/images/articles/cat01/cover-050.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
-    readTime: 9,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Behavior Change', 'Neuroplasticity', 'Habits', 'Personal Growth'],
+    summary: 'Emotional patterns are learned neural pathways that can be rewired through neuroplasticity. By identifying triggers, understanding the function of old patterns, and deliberately practicing new responses with self-compassion, you can build healthier emotional habits. Change takes 66+ days on average but creates lasting transformation.',
+    keyFacts: [
+      { text: 'Neuroplasticity allows your brain to form new pathways throughout life--what was learned can be unlearned through deliberate practice', citationIndex: 1 },
+      { text: 'Implementation intentions ("When X happens, I will Y") significantly increase the likelihood of behavior change compared to vague goals', citationIndex: 2 },
+      { text: 'Habit formation takes an average of 66 days, with a range of 18-254 days depending on complexity--emotional patterns are on the longer end', citationIndex: 3 },
+      { text: 'Self-compassion, not self-criticism, is the key factor that predicts successful behavior change and prevents relapse', citationIndex: 4 },
+      { text: 'Cognitive restructuring helps change the automatic thoughts that drive emotional patterns, giving you more choice in how you respond', citationIndex: 5 },
+    ],
+    sparkMoment: 'You are not your patterns. They\'re learned responses that once served you. And what was learned can be unlearned. With patience, practice, and self-compassion, you can build a new way of being--one response at a time.',
+    practicalExercise: {
+      title: 'Pattern Mapping & Redesign',
+      steps: [
+        { title: 'Map your pattern', description: 'Identify trigger → thoughts → emotions → body sensations → behavior → outcome for one pattern you want to change.' },
+        { title: 'Understand the function', description: 'Ask: What does this pattern protect me from? What need does it meet? Understanding the payoff helps you find healthier alternatives.' },
+        { title: 'Design new response', description: 'Choose a specific, realistic alternative that meets the same need. Don\'t aim for perfection--aim for better.' },
+        { title: 'Create implementation intention', description: 'Write: "When [trigger], I will [new behavior]." Be specific. Visualize success daily for 30 days to strengthen the neural pathway.' },
+      ],
+      toolLink: '/tools',
+      toolLabel: 'Explore Self-Awareness Tools',
+    },
     citations: [
       { id: '1', text: 'Neuroplasticity and habit change', source: 'Nature Reviews Neuroscience', year: '2021', link: 'https://doi.org/10.1038/s41583-021-00474-2', tier: 1 },
       { id: '2', text: 'Implementation intentions for behavior change', source: 'Psychological Bulletin', year: '2020', link: 'https://doi.org/10.1037/bul0000267', tier: 1 },
@@ -1191,7 +1342,17 @@ export const emotionalPatternsHabitsArticlesB: Article[] = [
         <h2 id="cognitive-restructuring" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Changing the Thoughts That Drive the Pattern
         </h2>
-        <p className="mb-6">
+        <ComparisonTable
+          title="Automatic Thought vs. Balanced Alternative"
+          columns={['Automatic Thought (Drives Old Pattern)', 'Balanced Alternative (Supports New Pattern)']}
+          items={[
+            { feature: '"They\'re attacking me"', values: ['"They\'re giving feedback that might have useful information"'] },
+            { feature: '"I always mess everything up"', values: ['"I made a mistake this time, and I can learn from it"'] },
+            { feature: '"If I show vulnerability, I\'ll be rejected"', values: ['"Vulnerability is how real connection happens"'] },
+            { feature: '"I need to be perfect to be worthy"', values: ['"I\'m worthy as I am, imperfections included"'] },
+          ]}
+        />
+        <p className="mb-6 mt-6">
           Often, emotional patterns are driven by automatic thoughts. Cognitive restructuring helps you identify and challenge them <Citation id="5" index={5} source="Behavior Therapy" year="2020" tier={1} />:
         </p>
         <ul className="list-decimal pl-6 mb-6 space-y-3">

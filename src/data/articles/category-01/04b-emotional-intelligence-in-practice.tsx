@@ -24,11 +24,31 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
     description: 'Understanding the three types of empathy---cognitive, affective, and compassionate---and how they shape connection, burnout, and helping behavior.',
     image: "/images/articles/cat01/cover-036.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
-    readTime: 8,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Empathy', 'Compassion', 'Neuroscience', 'Research Digest'],
+    summary: 'Empathy is not a single ability but a spectrum of three distinct processes: cognitive empathy (understanding what others feel), affective empathy (feeling what others feel), and compassionate empathy (being moved to help with warmth). Understanding these differences explains why some people seem cold despite understanding others, why healthcare workers burn out, and how compassion training can sustain helping behavior while protecting mental health.',
+    keyFacts: [
+      { text: 'Cognitive, affective, and compassionate empathy activate different brain networks and have distinct effects on wellbeing and behavior', citationIndex: 1 },
+      { text: 'Psychopaths often have intact cognitive empathy but lack affective empathy, enabling manipulation without emotional connection', citationIndex: 5 },
+      { text: 'Affective empathy without regulation is a major risk factor for compassion fatigue and burnout in caregiving professions', citationIndex: 3 },
+      { text: 'Compassion training activates reward circuits rather than pain circuits, leading to sustainable helping behavior', citationIndex: 4 },
+      { text: 'The myth that autistic individuals lack empathy is harmful and inaccurate---many have high affective empathy but struggle with cognitive empathy', citationIndex: 7 },
+    ],
+    sparkMoment: 'Empathy without compassion exhausts you; compassion without empathy sustains you.',
+    practicalExercise: {
+      title: 'Shift from Empathy to Compassion',
+      steps: [
+        { title: 'Notice Emotional Absorption', description: 'When you start feeling overwhelmed by someone else\'s distress, pause and name it: "I\'m absorbing their anxiety right now."' },
+        { title: 'Create Separation', description: 'Remind yourself: "This is their experience, not mine. I can care deeply without carrying their pain as my own."' },
+        { title: 'Generate Warmth', description: 'Silently offer a compassionate wish: "May you find peace. May you feel supported." Notice how this activates warmth instead of distress.' },
+        { title: 'Focus on Action', description: 'Ask yourself: "What concrete thing can I do to help?" Shift from passive absorption to active, sustainable support.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Emotional Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -307,6 +327,31 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
           ]}
         />
 
+        <h2 id="when-empathy-overwhelms" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When Empathy Becomes Overwhelming
+        </h2>
+        <p className="mb-6">
+          For some people, particularly those with high sensitivity or who work in caregiving roles, affective empathy can become a burden rather than a gift. You might find yourself unable to watch the news without feeling crushed, avoiding friends who are struggling because their pain is too much to bear, or coming home from work emotionally depleted.
+        </p>
+        <p className="mb-6">
+          This is empathic distress---when feeling others' emotions becomes so overwhelming that it interferes with your ability to function or help. Unlike compassion, which energizes and motivates, empathic distress leads to avoidance, withdrawal, and burnout <Citation id="3" index={3} source="Journal of Clinical Nursing" year="2021" tier={1} />.
+        </p>
+
+        <ArticleCallout variant="warning" title="Signs of Empathic Distress">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Feeling emotionally flooded or overwhelmed in social situations</li>
+            <li>Avoiding people who are suffering because it's "too much"</li>
+            <li>Absorbing others' anxiety, depression, or stress as if it were your own</li>
+            <li>Feeling exhausted after being around people, even those you care about</li>
+            <li>Difficulty separating your emotions from others' emotional states</li>
+            <li>Experiencing vicarious trauma from witnessing others' pain</li>
+          </ul>
+        </ArticleCallout>
+
+        <p className="mb-6">
+          The solution is not to suppress empathy or become callous. Instead, the research shows that training yourself to respond with compassion rather than raw empathy can protect your wellbeing while actually increasing your capacity to help effectively.
+        </p>
+
         <h2 id="cultivating-compassion" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           How to Shift from Empathy to Compassion
         </h2>
@@ -345,6 +390,59 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
           </ul>
         </ArticleCallout>
 
+        <h2 id="real-world-applications" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Real-World Applications: From Parenting to Leadership
+        </h2>
+        <p className="mb-6">
+          Understanding the empathy spectrum has practical implications across all areas of life:
+        </p>
+
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'parenting',
+              title: 'Parenting',
+              content: (
+                <div>
+                  <p className="mb-4">Parents need all three types of empathy, but in balance. Cognitive empathy helps you understand what your toddler needs when they can't articulate it. Affective empathy creates emotional attunement and secure attachment. But compassionate empathy prevents you from absorbing every tantrum and meltdown as if it were your own crisis.</p>
+                  <p><strong>Practical tip:</strong> When your child is upset, feel with them (affective empathy), understand what's driving the emotion (cognitive empathy), but respond with calm warmth and problem-solving (compassionate empathy) rather than becoming equally dysregulated.</p>
+                </div>
+              ),
+            },
+            {
+              id: 'leadership',
+              title: 'Leadership and Management',
+              content: (
+                <div>
+                  <p className="mb-4">Effective leaders use cognitive empathy to understand team members' perspectives and motivations without being swayed by every emotional reaction. They maintain boundaries while still showing they care---that's compassionate empathy in action.</p>
+                  <p><strong>Practical tip:</strong> During difficult conversations, focus on understanding the situation (cognitive empathy) and offering support (compassionate empathy) without absorbing the employee's anxiety or frustration as your own emotional burden.</p>
+                </div>
+              ),
+            },
+            {
+              id: 'relationships',
+              title: 'Intimate Relationships',
+              content: (
+                <div>
+                  <p className="mb-4">Healthy relationships require emotional attunement (affective empathy) and understanding your partner's inner world (cognitive empathy). But codependent relationships often feature too much affective empathy---feeling so enmeshed that you can't tell where your emotions end and your partner's begin.</p>
+                  <p><strong>Practical tip:</strong> Practice saying, "I hear that you're anxious about this. How can I support you?" rather than immediately absorbing their anxiety and becoming equally anxious. That's compassionate empathy with healthy boundaries.</p>
+                </div>
+              ),
+            },
+            {
+              id: 'helping-professions',
+              title: 'Healthcare and Helping Professions',
+              content: (
+                <div>
+                  <p className="mb-4">Nurses, therapists, social workers, and other caregivers face a constant risk of burnout from excessive affective empathy. Research shows that compassion training programs significantly reduce burnout while improving patient outcomes <Citation id="8" index={8} source="Patient Education and Counseling" year="2020" tier={1} />.</p>
+                  <p><strong>Practical tip:</strong> After a difficult patient interaction, do a brief compassion practice: "That person is suffering. I wish them peace and healing." This activates warmth without prolonged emotional absorption.</p>
+                </div>
+              ),
+            },
+          ]}
+        />
+
         <h2 id="key-findings" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Key Research Findings
         </h2>
@@ -355,6 +453,24 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
           <li>Compassion can be trained---it's a skill, not just a personality trait</li>
           <li>The brain's 'empathy network' and "compassion network" are distinct and can be independently strengthened</li>
         </ul>
+
+        <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When to Seek Professional Help
+        </h2>
+        <p className="mb-6">
+          While developing compassion skills can help most people manage empathic distress, some situations warrant professional support:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Vicarious trauma:</strong> If you're experiencing intrusive thoughts, nightmares, or flashbacks related to others' trauma, this goes beyond normal empathic distress</li>
+          <li><strong>Chronic emotional exhaustion:</strong> Persistent burnout that doesn't improve with rest or boundary-setting may indicate compassion fatigue requiring professional intervention</li>
+          <li><strong>Inability to function:</strong> If absorbing others' emotions prevents you from work, relationships, or daily activities</li>
+          <li><strong>Empathy deficits causing harm:</strong> If you recognize you're using cognitive empathy to manipulate others without genuine care, therapy can help develop compassionate empathy</li>
+          <li><strong>Suspected neurological or psychiatric conditions:</strong> Significant difficulties with any form of empathy may warrant evaluation for autism spectrum, personality disorders, or other conditions</li>
+        </ul>
+
+        <ArticleCallout variant="clinical-note">
+          <p><strong>Recommended approaches:</strong> Compassion-Focused Therapy (CFT), Mindfulness-Based Stress Reduction (MBSR), and trauma-focused therapies like EMDR have strong evidence for helping with empathic distress and compassion fatigue. Cognitive-behavioral approaches can help develop theory of mind skills if cognitive empathy is impaired.</p>
+        </ArticleCallout>
 
         <h2 id="what-this-means" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What This Means for You
@@ -372,6 +488,17 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
         <p className="mb-6">
           The goal is not to eliminate empathy---it's to balance understanding, feeling, and compassionate action in a way that sustains both you and the people you care about.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Empathy is not one ability but three distinct processes with different brain networks and outcomes</li>
+            <li>Cognitive empathy (understanding) without affective empathy (feeling) enables manipulation</li>
+            <li>Affective empathy without boundaries leads to empathic distress and burnout</li>
+            <li>Compassionate empathy combines warmth and action while protecting your wellbeing</li>
+            <li>Compassion is a trainable skill that activates reward circuits instead of pain circuits</li>
+            <li>The most sustainable approach to helping others involves shifting from pure empathy to compassionate empathy</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -386,11 +513,31 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
     description: `The neuroscience of emotional contagion---how moods spread between people, who's most susceptible, and how to protect your emotional state.`,
     image: "/images/articles/cat01/cover-037.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
-    readTime: 7,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Emotional Contagion', 'Mirror Neurons', 'Social Neuroscience', 'Research Digest'],
+    summary: 'Emotional contagion is the automatic, unconscious transfer of emotions between people through mimicry and neural synchronization. Within milliseconds, you can catch someone else\'s stress, anxiety, or joy without realizing it. Understanding how emotional contagion works---and who is most susceptible---empowers you to protect your emotional state while still staying connected.',
+    keyFacts: [
+      { text: 'Emotional contagion occurs automatically through facial mimicry, physiological feedback, and emotional convergence---often within 300 milliseconds', citationIndex: 2 },
+      { text: 'Mirror neurons fire both when you perform an action and when you observe someone else performing it, creating shared emotional experiences', citationIndex: 2 },
+      { text: '72% of people catch anxiety from a stressed romantic partner, with stress levels synchronizing over time', citationIndex: 8 },
+      { text: 'Emotional contagion occurs even through social media, with negative posts increasing negative posting and positive content spreading positivity', citationIndex: 5 },
+      { text: 'People with high empathy, anxiety sensitivity, and emotional expressiveness are most susceptible to catching others\' emotions', citationIndex: 4 },
+    ],
+    sparkMoment: 'Your emotions aren\'t always yours---sometimes you\'re just holding someone else\'s feelings.',
+    practicalExercise: {
+      title: 'Identify What\'s Yours vs. What You Caught',
+      steps: [
+        { title: 'Notice the Emotion', description: 'When you feel anxious, stressed, or down, pause and name the feeling: "I\'m feeling anxious right now."' },
+        { title: 'Ask: When Did It Start?', description: 'Trace back: Did this feeling arise after being with someone, scrolling social media, or entering a particular environment?' },
+        { title: 'Check for Mimicry', description: 'Are you matching someone else\'s posture, tone, or facial expression? Awareness breaks the automatic mimicry loop.' },
+        { title: 'Ground Yourself', description: 'Use a grounding technique (5-4-3-2-1 senses, deep breathing, pressing feet into floor) to return to your own emotional baseline.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Emotional Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -687,6 +834,24 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
           <li>Positive emotions are contagious too---you can be a source of uplift for others</li>
         </ul>
 
+        <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When to Seek Professional Help
+        </h2>
+        <p className="mb-6">
+          While awareness and grounding can help manage normal emotional contagion, some situations require professional support:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Chronic emotional absorption:</strong> If you consistently take on others' emotions to the point of losing your sense of self</li>
+          <li><strong>Inability to separate:</strong> Difficulty distinguishing your feelings from others', especially in close relationships</li>
+          <li><strong>Empathic distress or burnout:</strong> Persistent emotional exhaustion from absorbing others' pain, particularly in caregiving roles</li>
+          <li><strong>Social withdrawal:</strong> Avoiding people altogether because emotional contagion feels too overwhelming</li>
+          <li><strong>Relationship dysfunction:</strong> Codependency or enmeshment where you and your partner become emotionally fused</li>
+        </ul>
+
+        <ArticleCallout variant="clinical-note">
+          <p><strong>Recommended approaches:</strong> Dialectical Behavior Therapy (DBT) for emotional regulation and interpersonal effectiveness, Mindfulness-Based Stress Reduction (MBSR) for awareness and grounding, and family systems therapy for addressing enmeshment and differentiation. Cognitive-behavioral techniques can help challenge automatic emotional responses.</p>
+        </ArticleCallout>
+
         <h2 id="what-this-means" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What This Means for You
         </h2>
@@ -702,6 +867,17 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
         <p className="mb-6">
           You are not responsible for fixing everyone's emotional state. But you are responsible for protecting your own---and for being mindful of the emotional wake you leave behind.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Emotional contagion happens automatically through mimicry, physiological feedback, and neural synchronization</li>
+            <li>You can catch emotions from screens, social media, and even strangers---not just close relationships</li>
+            <li>High empathy, anxiety sensitivity, and low emotional regulation increase susceptibility</li>
+            <li>Stress is particularly contagious, especially in close relationships and workplaces</li>
+            <li>Awareness, grounding, and boundaries can reduce negative contagion while preserving connection</li>
+            <li>Positive emotions are contagious too---you can choose to be a source of calm and joy for others</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -716,11 +892,31 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
     description: 'How to protect your emotional energy without shutting people out---the delicate balance between empathy and self-preservation.',
     image: "/images/articles/cat01/cover-038.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
-    readTime: 7,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Boundaries', 'Self-Care', 'Relationships', 'Emotional Regulation'],
+    summary: 'Emotional boundaries define where your emotional responsibility ends and another person\'s begins. They protect your energy and wellbeing without shutting people out. This guide covers how to identify when boundaries are needed, communicate them effectively without guilt, and maintain genuine connection while protecting yourself from emotional exhaustion and resentment.',
+    keyFacts: [
+      { text: 'Healthy emotional boundaries are flexible doors you can open and close, not rigid walls that prevent all vulnerability', citationIndex: 7 },
+      { text: 'Feeling guilty when setting boundaries often stems from conditioning to prioritize others\' needs, not evidence that boundaries are wrong', citationIndex: 1 },
+      { text: 'If someone leaves because you set a boundary, they weren\'t respecting you to begin with---boundaries reveal who truly values you', citationIndex: 1 },
+      { text: 'Codependency and enmeshment occur when emotional boundaries are too porous, leading to loss of self in relationships', citationIndex: 3 },
+      { text: 'Assertiveness and the ability to say no correlate with higher relationship satisfaction and lower resentment', citationIndex: 5 },
+    ],
+    sparkMoment: 'Boundaries aren\'t about pushing people away---they\'re about making space for connection that doesn\'t cost you your peace.',
+    practicalExercise: {
+      title: 'Set One Boundary This Week',
+      steps: [
+        { title: 'Identify One Boundary Violation', description: 'Notice when you feel resentful, drained, or taken advantage of this week. Ask: "What need of mine is not being met?"' },
+        { title: 'Clarify Your Need', description: 'Get specific. Write down exactly what you need (e.g., "I need one hour alone after work before engaging in family conversations").' },
+        { title: 'Script Your Boundary', description: 'Use an "I" statement: "I feel X when Y happens. I need Z." Practice saying it out loud before the conversation.' },
+        { title: 'Communicate and Hold', description: 'Tell the person your boundary calmly and clearly. Follow through consistently, even if there\'s pushback. Consistency builds trust.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Emotional Energy',
+    },
     citations: [
       {
         id: '1',
@@ -1047,6 +1243,17 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
         <p className="mb-6">
           Setting emotional boundaries is an act of self-respect. It's not about shutting people out---it's about making room for authentic connection by protecting what makes that connection sustainable.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Emotional boundaries are flexible doors, not rigid walls---they protect you while allowing connection</li>
+            <li>Guilt when setting boundaries usually stems from conditioning, not evidence that your boundary is wrong</li>
+            <li>Healthy boundaries require clear communication, consistency, and willingness to tolerate others' discomfort</li>
+            <li>Boundaries prevent codependency, resentment, and burnout by clarifying what's yours to manage</li>
+            <li>You can care deeply about someone while refusing to take responsibility for their emotions or problems</li>
+            <li>If someone leaves because you set a boundary, they weren't truly respecting you</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -1066,6 +1273,26 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Communication', 'Conflict Resolution', 'Difficult Conversations', 'Emotional Intelligence'],
+    summary: 'Difficult conversations trigger threat responses that make us defensive, shutdown, or attack. This guide teaches you how to navigate conflict with emotional intelligence---delivering hard feedback, addressing sensitive topics, and resolving disagreements without damaging relationships. Learn to recognize defensive reactions, use nonviolent communication, and create psychological safety even in high-stakes moments.',
+    keyFacts: [
+      { text: 'Conflict activates the amygdala and triggers fight-flight-freeze responses, making rational conversation physiologically difficult', citationIndex: 2 },
+      { text: 'Psychological safety---the belief that you won\'t be punished or humiliated---is the strongest predictor of successful difficult conversations in teams', citationIndex: 4 },
+      { text: 'Nonviolent Communication\'s four components (observation, feeling, need, request) reduce defensiveness and increase understanding', citationIndex: 3 },
+      { text: 'Starting with facts rather than interpretations prevents the conversation from derailing into blame and counter-blame', citationIndex: 8 },
+      { text: 'Asking for the other person\'s perspective with genuine curiosity transforms conflict from a battle into collaborative problem-solving', citationIndex: 5 },
+    ],
+    sparkMoment: 'The goal of a difficult conversation is not to win---it\'s to understand and be understood.',
+    practicalExercise: {
+      title: 'Plan Your Next Difficult Conversation',
+      steps: [
+        { title: 'Identify the Facts', description: 'Write down observable facts without interpretation or judgment: "You were 20 minutes late to our last 3 meetings" NOT "You don\'t respect me."' },
+        { title: 'Name Your Feelings & Needs', description: 'Identify the emotion (frustrated, hurt, anxious) and the underlying need (respect, clarity, safety). Example: "I feel anxious because I need predictability."' },
+        { title: 'Make a Specific Request', description: 'What concrete action would help? "Would you be willing to text me if you\'ll be more than 5 minutes late?" Be specific and doable.' },
+        { title: 'Prepare for Their Perspective', description: 'What might be their side of the story? What questions could you ask with genuine curiosity? Approach with openness, not ammunition.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Process Your Emotions First',
+    },
     citations: [
       {
         id: '1',
@@ -1416,6 +1643,26 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Parenting', 'Child Development', 'Education', 'Emotional Intelligence'],
+    summary: 'Children aren\'t born knowing how to identify emotions, regulate distress, or navigate social conflicts---these skills must be taught. This guide provides age-appropriate strategies for parents, teachers, and mentors to help children develop emotional awareness, self-regulation, empathy, and social competence. Learn emotion coaching, co-regulation techniques, and how to model emotional intelligence in daily interactions.',
+    keyFacts: [
+      { text: 'Social-emotional learning programs improve academic performance, social skills, and mental health outcomes for children across all age groups', citationIndex: 1 },
+      { text: 'Emotion coaching---validating feelings while guiding behavior---leads to better emotional regulation and fewer behavioral problems in children', citationIndex: 2 },
+      { text: 'Children learn emotional intelligence primarily through modeling, not lecturing---they imitate how adults handle emotions', citationIndex: 4 },
+      { text: 'Co-regulation (calming yourself to calm your child) is more effective than demanding "calm down" during tantrums and meltdowns', citationIndex: 6 },
+      { text: 'Teaching emotional vocabulary early (expanded feeling words beyond "happy" and "sad") improves emotional granularity and regulation throughout life', citationIndex: 4 },
+    ],
+    sparkMoment: 'The most powerful emotional intelligence lesson you can teach a child is this: "Your feelings matter, and you can handle them."',
+    practicalExercise: {
+      title: 'Daily Emotion Check-In Routine',
+      steps: [
+        { title: 'Pick a Consistent Time', description: 'Choose a regular time each day (dinner, bedtime, after school) to check in about emotions.' },
+        { title: 'Use a Feelings Scale', description: '"On a scale of 1-10, how\'s your energy? Your mood? Your stress?" This builds emotional awareness through regular practice.' },
+        { title: 'Validate Before Problem-Solving', description: 'When they share a difficult emotion, validate first: "That sounds really hard." Then ask if they want help or just want to be heard.' },
+        { title: 'Share Your Own Emotions', description: 'Model emotional awareness: "I felt frustrated today when X happened. I took some deep breaths and that helped." Show them how you handle emotions.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Try the Mood Journal',
+    },
     citations: [
       {
         id: '1',

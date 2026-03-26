@@ -28,6 +28,26 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Mindfulness', 'Emotional Awareness', 'Meditation', 'Present Moment', 'Beginners Guide'],
+    summary: 'Mindfulness is not about clearing your mind--it\'s about paying attention to the present moment without judgment. Research shows that even 5-10 minutes of daily practice creates measurable brain changes, strengthens emotional regulation, and builds the capacity to notice feelings as they arise without being controlled by them.',
+    keyFacts: [
+      { text: 'Eight weeks of mindfulness practice produces visible brain changes: thicker prefrontal cortex for attention and emotional regulation, less reactive amygdala.', citationIndex: 3 },
+      { text: 'Mindfulness meditation is associated with moderate improvements in anxiety, depression, and pain according to a JAMA meta-analysis.', citationIndex: 7 },
+      { text: 'Even 5-10 minutes of daily mindfulness practice produces measurable benefits--consistency matters more than duration.', citationIndex: 5 },
+      { text: 'Mindfulness strengthens the immune system, reduces inflammation markers, and slows biological aging.', citationIndex: 4 },
+      { text: 'For some people with trauma histories, mindfulness can be activating rather than calming and should be approached with trauma-informed guidance.', citationIndex: 6 },
+    ],
+    sparkMoment: 'The goal is not to empty your mind--it\'s to build the capacity to be present with whatever arises, comfortable or uncomfortable, without being controlled by it.',
+    practicalExercise: {
+      title: 'Start a 4-Week Mindfulness Practice',
+      steps: [
+        { title: 'Week 1-2: Breath Awareness', description: 'Set a timer for 5 minutes each morning. Sit comfortably, close your eyes, and focus on your breath. When your mind wanders (it will), gently bring it back. This is your attention training.' },
+        { title: 'Week 3-4: Add Emotion Noting', description: 'Add 5 minutes in the evening where you sit quietly and label whatever emotion is present--"worry," "contentment," "irritation"--without engaging the story behind it.' },
+        { title: 'Week 5+: Informal Practice', description: 'Choose one daily activity (brushing teeth, washing dishes, walking) and do it with full attention to every sensation. Notice when your mind wanders and bring it back.' },
+        { title: 'Track Your Progress', description: 'Use the Mood Journal to note subtle shifts in your emotional awareness and reactivity over time.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Try the Mood Journal',
+    },
     citations: [
       {
         id: '1',
@@ -224,6 +244,26 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Blind Spots', 'Hidden Emotions', 'Self-Awareness', 'Defense Mechanisms', 'Emotional Intelligence'],
+    summary: 'Emotional blind spots are feelings that influence your behavior without your conscious awareness--anger masking hurt, "fine" concealing anxiety, or unprocessed grief showing up as fatigue. These hidden emotions still drive decisions, relationships, and health. Bringing them into awareness requires listening to your body, noticing overreactions, and asking trusted others what they see.',
+    keyFacts: [
+      { text: 'Your brain processes emotional information even when you\'re not consciously aware of it, and these unrecognized emotions still drive behavior and decision-making.', citationIndex: 1 },
+      { text: 'People with greater emotional awareness have significantly better mental health outcomes according to meta-analytic research.', citationIndex: 4 },
+      { text: 'Shame is linked to depression, anxiety, eating disorders, and substance use--yet it often hides behind anger, perfectionism, or withdrawal.', citationIndex: 6 },
+      { text: 'Loneliness is as harmful to health as smoking 15 cigarettes a day, yet it remains one of the most stigmatized and least recognized emotions.', citationIndex: 7 },
+      { text: 'Anger is often a "secondary emotion"--a protective layer over more vulnerable feelings like fear, hurt, or helplessness.', citationIndex: 5 },
+    ],
+    sparkMoment: 'The emotions you don\'t know about have just as much power over you as the ones you do--uncovering blind spots leads to a more honest and integrated emotional life.',
+    practicalExercise: {
+      title: 'The Overreaction Audit',
+      steps: [
+        { title: 'Notice Strong Reactions', description: 'This week, when you notice yourself reacting strongly to something (anger, withdrawal, defensiveness), pause and take note. Write down what happened and your immediate reaction.' },
+        { title: 'Dig Beneath the Surface', description: 'Ask yourself: "Is there a deeper emotion underneath this reaction that I\'m not acknowledging?" Common hidden emotions: fear, shame, grief, loneliness, resentment.' },
+        { title: 'Check Your Body', description: 'Where do you feel this in your body? Tightness in your chest, heaviness in your shoulders, knot in your stomach? Your body often knows before your mind does.' },
+        { title: 'Journal What You Discover', description: 'Write freely about what emerges. Over time, you\'ll see patterns--the hidden emotions that have been driving your behavior all along.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Patterns in the Mood Journal',
+    },
     citations: [
       {
         id: '1',
@@ -416,6 +456,26 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Feedback', 'External Self-Awareness', 'Relationships', 'Personal Growth', 'Emotional Patterns'],
+    summary: 'You can\'t see your own face without a mirror--and you can\'t fully see your emotional patterns without the reflection of others. External feedback closes the gap between how you see yourself and how others experience you. Research shows that people who actively seek feedback report higher well-being, stronger relationships, and faster personal growth.',
+    keyFacts: [
+      { text: 'Internal reflection alone is not enough for self-awareness--people who scored highest in self-awareness actively sought feedback from others.', citationIndex: 1 },
+      { text: 'People who actively seek feedback report higher well-being, stronger relationships, and faster personal growth.', citationIndex: 2 },
+      { text: 'The gap between how you see yourself and how others see you is often wider than you think--you might believe you\'re being patient when your partner experiences you as distant.', citationIndex: 5 },
+      { text: 'Three common feedback triggers: truth triggers ("that\'s wrong"), relationship triggers ("who are you to tell me?"), and identity triggers ("that\'s not who I am").', citationIndex: 3 },
+      { text: 'People with a growth mindset are significantly better at receiving and using feedback than those with a fixed mindset.', citationIndex: 7 },
+    ],
+    sparkMoment: 'Feedback from trusted others is the mirror for self-awareness--it shows you the patterns you can\'t see on your own, and asking for it is an act of vulnerability that strengthens relationships.',
+    practicalExercise: {
+      title: 'Ask for One Piece of Feedback This Week',
+      steps: [
+        { title: 'Choose the Right Person', description: 'Select someone who knows you well, cares about your growth, and will be honest. This could be a partner, close friend, family member, or trusted colleague. Avoid people who only tell you what you want to hear.' },
+        { title: 'Set the Frame', description: 'Explain why you\'re asking: "I\'m working on understanding my emotional patterns better, and I would value your honest perspective." This signals you\'re ready to hear the truth.' },
+        { title: 'Ask a Specific Question', description: 'Choose one question: "What do I do when I\'m stressed that I might not realize?" or "How do I tend to react when I feel criticized?" or "What is it like to be around me when I\'m upset?"' },
+        { title: 'Listen Without Defending', description: 'When you hear something you don\'t want to hear, your instinct is to explain or justify. Instead, say "Thank you for telling me that." Process and evaluate later--in the moment, your only job is to receive.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Journal About What You Learned',
+    },
     citations: [
       {
         id: '1',
@@ -612,6 +672,26 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Values', 'Self-Awareness', 'ACT', 'Purpose', 'Emotional Intelligence'],
+    summary: 'Your emotions aren\'t random--they\'re signals about what matters most to you. When a value is honored, you feel pride and fulfillment. When a value is violated, you feel anger, guilt, or sadness. Understanding the connection between your values and your emotions gives you a compass for both feelings and choices, and research shows that living in alignment with your values is one of the strongest predictors of well-being.',
+    keyFacts: [
+      { text: 'Knowing your values and living in alignment with them is one of the strongest predictors of psychological well-being according to ACT research.', citationIndex: 1 },
+      { text: 'When you live in alignment with your values, you feel fulfilled. When you drift, you feel anxious, empty, or lost.', citationIndex: 4 },
+      { text: 'Your emotional responses are deeply connected to your value system--when a value is honored, you feel positive emotions; when violated, negative emotions.', citationIndex: 3 },
+      { text: 'Reflecting on personal values during stressful moments reduces cortisol and improves decision-making according to self-affirmation research.', citationIndex: 2 },
+      { text: 'Self-concordance--when your daily actions match your deeper self--is strongly associated with greater well-being, persistence, and life satisfaction.', citationIndex: 7 },
+    ],
+    sparkMoment: 'Your emotions are not random disruptions--they are signals about what you value. Every emotion becomes useful information for living a more intentional life.',
+    practicalExercise: {
+      title: 'Identify Your Core Values',
+      steps: [
+        { title: 'List Your Top Five Values', description: 'Use the Peak Experience Exercise: Think of three moments when you felt most alive or fulfilled. What were you doing? What made them meaningful? The values that show up repeatedly are your core values. Write down your top five.' },
+        { title: 'Track Your Emotional-Value Connections', description: 'For one week, notice which of your emotional reactions connect to those values. When you feel anger, ask: "What value is being violated?" When you feel joy, ask: "What value is being honored?"' },
+        { title: 'Daily Alignment Check', description: 'At the end of each day, ask: "Did I live in alignment with my values today? Where did I drift?" Write a brief reflection on what you discover.' },
+        { title: 'Use Values as Decision Anchors', description: 'When facing a difficult choice or emotional storm, ask: "What do my values say about how to handle this?" Let your values guide the decision.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Values Alignment in the Mood Journal',
+    },
     citations: [
       {
         id: '1',
@@ -789,6 +869,26 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Self-Compassion', 'Self-Awareness', 'Non-Judgment', 'Kristin Neff', 'Inner Critic'],
+    summary: 'Self-awareness without self-compassion becomes self-punishment. The more you see about yourself, the more material your inner critic has to work with. Research shows that self-compassion--treating yourself with the same kindness you\'d offer a struggling friend--is associated with greater motivation, more accountability, and better emotional regulation than self-criticism. It activates your care system, not your threat system.',
+    keyFacts: [
+      { text: 'Self-compassion is treating yourself with the same kindness, concern, and support you would offer a good friend who is struggling.', citationIndex: 1 },
+      { text: 'Self-criticism activates the threat system (cortisol, rigid thinking), while self-compassion activates the care system (oxytocin, emotional resilience).', citationIndex: 6 },
+      { text: 'Self-compassion training produces a 79% reduction in depression and 33% reduction in anxiety symptoms according to meta-analytic research.', citationIndex: 4 },
+      { text: 'Even in people who are naturally self-critical, self-compassion buffers their risk of depressive episodes.', citationIndex: 3 },
+      { text: 'The three components of self-compassion: self-kindness (vs. self-judgment), common humanity (vs. isolation), and mindfulness (vs. over-identification).', citationIndex: 8 },
+    ],
+    sparkMoment: 'Self-awareness without self-compassion becomes self-punishment. Self-compassion without self-awareness becomes avoidance. Together, they form the foundation of genuine psychological growth.',
+    practicalExercise: {
+      title: 'Practice the Self-Compassion Break',
+      steps: [
+        { title: 'Notice Self-Criticism', description: 'This week, when you catch yourself being harsh or critical ("What\'s wrong with me?", "I\'m so stupid", "I always mess this up"), pause and recognize that you\'re in self-criticism mode.' },
+        { title: 'Use the Self-Compassion Break', description: 'Say to yourself: "This is a moment of suffering. Suffering is part of being human. May I be kind to myself right now." Place your hand on your chest as you say it. Feel the warmth and pressure.' },
+        { title: 'Try the "Good Friend" Test', description: 'Ask yourself: "Would I say this to a close friend in the same situation?" If not, rewrite the internal message with the same care you would offer them. Write it down.' },
+        { title: 'Practice Three Times', description: 'Use the self-compassion break at least three times this week. It will feel awkward at first--that\'s normal. Self-compassion is a skill that strengthens with practice.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Self-Compassion Practice',
+    },
     citations: [
       {
         id: '1',

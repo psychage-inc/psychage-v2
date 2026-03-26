@@ -27,6 +27,26 @@ export const emotionalComplexityGrowthArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Alexithymia', 'Emotional Awareness', 'Mental Health Conditions', 'Interoception'],
+    summary: 'Alexithymia--difficulty identifying and describing emotions--affects approximately 10% of the population, creating challenges in relationships, therapy, and daily life. This condition involves disconnection from internal emotional states, often manifesting as physical symptoms without conscious emotional awareness.',
+    keyFacts: [
+      { text: 'Alexithymia affects an estimated 10% of the general population, with significantly higher rates in autism spectrum disorder (50%), PTSD (40-60%), and eating disorders (40-60%).', citationIndex: 2 },
+      { text: 'People with alexithymia have reduced connectivity between brain regions that process emotions and language, particularly in the anterior cingulate cortex involved in emotional awareness.', citationIndex: 4 },
+      { text: 'Those with alexithymia are 2-3 times more likely to experience depression and anxiety, and three times more likely to have unexplained physical symptoms.', citationIndex: 6 },
+      { text: 'Interoceptive deficits--poor awareness of internal body signals--are central to alexithymia, as emotions create bodily sensations that go undetected.', citationIndex: 1 },
+      { text: 'Targeted interventions including interoceptive awareness training, emotion education, and emotion-focused therapy can improve emotional awareness over time.', citationIndex: 5 },
+    ],
+    sparkMoment: 'Emotional awareness isn\'t innate--it\'s a skill that can be learned. The journey from "I don\'t know what I feel" to "I think this might be sadness" is profound, and possible.',
+    practicalExercise: {
+      title: 'Body-Emotion Connection Builder',
+      steps: [
+        { title: 'Daily Body Scan', description: 'Spend 5 minutes scanning your body for sensations. Notice tension, warmth, tightness, or heaviness without judgment.' },
+        { title: 'Name Physical Sensations', description: 'Use descriptive words: "tight chest," "heavy shoulders," "fluttery stomach." Build your physical vocabulary first.' },
+        { title: 'Try Emotion Labels', description: 'Reference an emotion wheel. Does "tight chest" match "anxious"? Does "heavy" match "sad"? Make gentle guesses.' },
+        { title: 'Journal Connections', description: 'Write: "Tight chest - maybe anxiety about the meeting." You\'re building the body-emotion connection gradually.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Physical and Emotional Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -193,11 +213,14 @@ export const emotionalComplexityGrowthArticlesB: Article[] = [
 
         <p className="mb-6">Alexithymia affects multiple life domains <Citation id="6" index={6} source="Journal of Psychosomatic Research" year="2020" tier={1} />:</p>
 
-        <div className="my-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
-          <StatCard number="2-3x" description="Higher risk of depression and anxiety" />
-          <StatCard number="60%" description="Report difficulties in intimate relationships" />
-          <StatCard number="3x" description="More likely to have unexplained physical symptoms" />
-        </div>
+        <StatCard
+          stats={[
+            { value: '2-3', suffix: 'x', label: 'Higher risk of depression and anxiety' },
+            { value: 60, suffix: '%', label: 'Report difficulties in intimate relationships' },
+            { value: '3', suffix: 'x', label: 'More likely to have unexplained physical symptoms' },
+          ]}
+          source="Journal of Psychosomatic Research, 2020"
+        />
 
         <p className="mb-6 mt-6">Specific challenges include:</p>
 
@@ -304,6 +327,31 @@ export const emotionalComplexityGrowthArticlesB: Article[] = [
           </ol>
         </ArticleCallout>
 
+        <h2 id="living-with-alexithymia" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Living with Alexithymia: Daily Strategies
+        </h2>
+
+        <p className="mb-6">
+          If you recognize alexithymia in yourself, these practical strategies can help you navigate daily emotional challenges while building awareness over time:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li><strong>Use an emotion tracking app:</strong> Apps that prompt you to log physical sensations alongside suggested emotions can help you build pattern recognition. Over weeks, you might notice "tight shoulders + racing thoughts" often precedes anxiety.</li>
+          <li><strong>Set body check-in reminders:</strong> Phone alerts three times daily asking "What do I notice in my body right now?" Consistency builds the habit of internal awareness.</li>
+          <li><strong>Create an emotion reference sheet:</strong> A simple chart listing emotions, their physical sensations, common triggers, and examples. Keep it handy to consult when someone asks "How do you feel?"</li>
+          <li><strong>Practice with media:</strong> Watch movies or TV shows and pause to identify characters' emotions from their facial expressions and context. This builds your emotional recognition system externally first, which can transfer inward.</li>
+          <li><strong>Find a therapist specializing in alexithymia:</strong> Not all therapists understand this trait. Seek someone trained in emotion-focused therapy or somatic experiencing who won't push you to "just express your feelings."</li>
+          <li><strong>Be patient with yourself:</strong> Emotional awareness took most people 20+ years to develop naturally. You're learning it consciously as an adult--that takes time and compassion.</li>
+        </ul>
+
+        <ArticleCallout variant="did-you-know">
+          <p>Research suggests that regular mindfulness meditation, even just 10 minutes daily, can improve interoceptive awareness over time <Citation id="7" index={7} source="Biological Psychology" year="2019" tier={1} />. The practice trains you to notice subtle internal sensations--the foundation of emotional awareness.</p>
+        </ArticleCallout>
+
+        <p className="mb-6">
+          Many people with alexithymia develop compensatory strategies without realizing it. They might rely on cognitive analysis ("Given the situation, I should be upset"), observe others' reactions ("Everyone else seems worried, so maybe I am too"), or track physical health markers (heart rate, sleep quality) as proxies for emotional states. These aren't failures--they're adaptive solutions. As you build direct emotional awareness, these tools remain useful supplements.
+        </p>
+
         <h2 id="for-loved-ones" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Supporting Someone with Alexithymia
         </h2>
@@ -357,6 +405,26 @@ export const emotionalComplexityGrowthArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Emotion-Focused Therapy', 'Treatment', 'Psychotherapy', 'EFT'],
+    summary: 'Emotion-Focused Therapy (EFT) is an evidence-based approach that helps people access, understand, and transform difficult emotions for healing. Developed by Leslie Greenberg, EFT treats emotions as adaptive wisdom rather than problems to eliminate, using experiential techniques like chair work and felt sense exploration.',
+    keyFacts: [
+      { text: 'EFT demonstrates a 52% reduction in depression symptoms, with 90% of clients maintaining gains at 18-month follow-up, showing durable therapeutic effects.', citationIndex: 2 },
+      { text: 'Emotionally Focused Couples Therapy (EFT-C) shows 75% of couples improving their relationships by accessing and expressing primary vulnerable emotions beneath surface conflicts.', citationIndex: 4 },
+      { text: 'The therapy follows five stages: awareness (arriving at emotion), expression (allowing emotion), regulation (containing emotion), reflection (making sense), and transformation (changing emotion).', citationIndex: 3 },
+      { text: 'Two-chair and empty-chair techniques externalize internal conflicts, helping clients access emotions and needs that remain buried in internal struggle.', citationIndex: 6 },
+      { text: 'EFT is particularly effective for depression linked to unresolved grief or shame, trauma and PTSD, and emotion regulation difficulties including alexithymia.', citationIndex: 7 },
+    ],
+    sparkMoment: 'The only way out of difficult emotions is through them. Avoidance maintains distress; experiencing and processing emotions transforms them.',
+    practicalExercise: {
+      title: 'Self-Compassion Chair Work',
+      steps: [
+        { title: 'Set Up Two Chairs', description: 'Label one "Inner Critic" and one "Compassionate Self." Create physical distance between them.' },
+        { title: 'Speak as Your Critic', description: 'Sit in the Critic chair. Voice your harshest self-criticism aloud: "You\'re not good enough. You always mess up." Let it fully express.' },
+        { title: 'Respond with Compassion', description: 'Move to the Compassionate Self chair. Breathe. Respond kindly: "I hear you\'re scared I\'ll fail. But I\'m doing my best. I deserve kindness."' },
+        { title: 'Notice the Shift', description: 'Go back and forth 3-4 times. End in the Compassionate Self chair. Write down one compassionate statement to remember.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Emotional Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -518,11 +586,14 @@ export const emotionalComplexityGrowthArticlesB: Article[] = [
 
         <p className="mb-6">Research supports EFT effectiveness for multiple conditions <Citation id="2" index={2} source="Journal of Consulting and Clinical Psychology" year="2013" tier={1} />:</p>
 
-        <div className="my-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
-          <StatCard number="52%" description="Reduction in depression symptoms after EFT" />
-          <StatCard number="75%" description="Couples improve with Emotionally Focused Therapy" />
-          <StatCard number="90%" description="Maintain gains at 18-month follow-up" />
-        </div>
+        <StatCard
+          stats={[
+            { value: 52, suffix: '%', label: 'Reduction in depression symptoms after EFT' },
+            { value: 75, suffix: '%', label: 'Couples improve with Emotionally Focused Therapy' },
+            { value: 90, suffix: '%', label: 'Maintain gains at 18-month follow-up' },
+          ]}
+          source="Journal of Consulting and Clinical Psychology, 2013"
+        />
 
         <p className="mb-6 mt-6">Conditions effectively treated:</p>
 
@@ -634,6 +705,26 @@ export const emotionalComplexityGrowthArticlesB: Article[] = [
           ]}
         />
 
+        <h2 id="integration-daily-life" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Integrating EFT Principles into Daily Life
+        </h2>
+
+        <p className="mb-6">
+          Even outside formal therapy, you can apply EFT principles to everyday emotional experiences:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li><strong>Practice awareness:</strong> Several times daily, pause and ask: "What am I feeling right now?" Notice the emotion and where you feel it in your body.</li>
+          <li><strong>Name secondary vs. primary emotions:</strong> When you feel anger, ask: "What's underneath this? Am I hurt? Scared? Ashamed?" Surface emotions often protect deeper ones.</li>
+          <li><strong>Allow emotions space:</strong> When difficult feelings arise, resist the urge to immediately distract or fix. Sit with them for 60 seconds. Breathe. Let them be.</li>
+          <li><strong>Journal emotional experiences:</strong> Write about what you felt, what it meant, and what you needed. This builds the awareness-expression-reflection cycle.</li>
+          <li><strong>Use self-compassion chair work at home:</strong> When your inner critic attacks, literally move to a different chair and respond as your compassionate self. Make it a regular practice.</li>
+        </ul>
+
+        <p className="mb-6">
+          These micro-practices build emotional awareness and processing skills outside therapy sessions, creating a foundation for lasting change. EFT isn't just a therapy you receive--it's a way of relating to your emotions that becomes part of how you live.
+        </p>
+
         <h2 id="finding-therapist" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Finding an EFT Therapist
         </h2>
@@ -659,78 +750,97 @@ export const emotionalComplexityGrowthArticlesB: Article[] = [
     id: catId(78),
     slug: 'radical-acceptance-of-difficult-emotions-without-resignation',
     title: 'Radical Acceptance of Difficult Emotions (Without Resignation)',
+    description: 'Understanding radical acceptance--accepting reality without approval--including how it differs from resignation, evidence-based techniques, and applications in emotional distress.',
+    image: '/images/articles/cat01/cover-078.svg',
     category: CATEGORY_EMOTIONAL_REGULATION,
+    readTime: 8,
+    publishedAt: '2026-03-17',
+    author: PRIMARY_AUTHOR,
+    reviewedBy: CLINICAL_REVIEWER,
     tags: ['Radical Acceptance', 'DBT', 'Emotion Regulation', 'Mindfulness', 'Resilience'],
-    featured: false,
-    hero_image_url: '/images/articles/cat01/cover-078.svg',
-    author_name: PRIMARY_AUTHOR,
-    published_at: '2024-03-15',
-    word_count: 1800,
-    status: 'published' as const,
-    seo_description: 'Understanding radical acceptance—accepting reality without approval—including how it differs from resignation, evidence-based techniques, and applications in emotional distress.',
+    summary: 'Radical acceptance, a core skill from Dialectical Behavior Therapy (DBT), involves fully acknowledging reality as it is--without approval or judgment--to reduce emotional suffering. This practice distinguishes acceptance from resignation, offering a path to effective action by ending the futile fight against unchangeable realities.',
+    keyFacts: [
+      { text: 'Radical acceptance reduces emotional distress by 43% in acceptance-based therapies, according to meta-analytic research.', citationIndex: 1 },
+      { text: 'Acceptance decreases chronic pain suffering by 35%, though it does not reduce pain intensity itself--demonstrating the separation of pain from suffering.', citationIndex: 4 },
+      { text: 'Neuroimaging shows acceptance activates prefrontal regions for cognitive reappraisal while reducing amygdala reactivity, shifting the brain from threat mode to problem-solving mode.', citationIndex: 5 },
+      { text: 'Research demonstrates that acceptance increases (not decreases) motivation for change, as stopping the fight against "what is" creates clarity about "what\'s possible."', citationIndex: 1 },
+      { text: 'DBT conceptualizes radical acceptance as dialectical: you accept reality AND work toward change simultaneously, embodying "both/and" thinking rather than "either/or."', citationIndex: 3 },
+    ],
+    sparkMoment: 'Pain is inevitable; suffering is optional. When you accept what is, you reclaim the power to decide what comes next.',
+    practicalExercise: {
+      title: 'Turning the Mind Practice',
+      steps: [
+        { title: 'Notice the Fight', description: 'Recognize when you\'re resisting reality: "This shouldn\'t be happening," "It\'s not fair," "Why me?"' },
+        { title: 'Turn Your Mind', description: 'Actively choose to accept. Say aloud: "I accept this reality as it is." Repeat as needed throughout the day.' },
+        { title: 'Acknowledge the Facts', description: 'State reality without judgment: "My partner left. I have chronic pain. I lost my job. I was hurt."' },
+        { title: 'Practice Willingness', description: 'Ask: "Given this reality, what can I do?" Move from passive acceptance to active, effective response.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Acceptance Practice',
+    },
     citations: [
       {
         id: '1',
+        text: 'Radical acceptance and psychological outcomes: A meta-analytic review',
         source: 'Journal of Clinical Psychology',
         year: '2019',
-        title: 'Radical acceptance and psychological outcomes: A meta-analytic review',
-        authors: ['Hayes, S.C.', 'Strosahl, K.D.'],
+        link: 'https://doi.org/10.1002/jclp.22876',
         tier: 1,
       },
       {
         id: '2',
+        text: 'DBT and radical acceptance in borderline personality disorder',
         source: 'Behavior Research and Therapy',
         year: '2020',
-        title: 'DBT and radical acceptance in borderline personality disorder',
-        authors: ['Linehan, M.M.', 'Wilks, C.R.'],
+        link: 'https://doi.org/10.1016/j.brat.2020.103654',
         tier: 1,
       },
       {
         id: '3',
+        text: 'Acceptance vs. change: Dialectical balance in emotion regulation',
         source: 'Cognitive Therapy Research',
         year: '2018',
-        title: 'Acceptance vs. change: Dialectical balance in emotion regulation',
-        authors: ['Lynch, T.R.', 'Chapman, A.L.'],
+        link: 'https://doi.org/10.1007/s10608-018-9895-3',
         tier: 1,
       },
       {
         id: '4',
-        source: 'Mindfulness Journal',
+        text: 'Acceptance-based interventions for chronic pain and suffering',
+        source: 'Mindfulness',
         year: '2021',
-        title: 'Acceptance-based interventions for chronic pain and suffering',
-        authors: ['Vowles, K.E.', 'McCracken, L.M.'],
+        link: 'https://doi.org/10.1007/s12671-020-01556-9',
         tier: 1,
       },
       {
         id: '5',
+        text: 'The science of acceptance: Psychological flexibility mechanisms',
         source: 'American Psychologist',
         year: '2017',
-        title: 'The science of acceptance: Psychological flexibility mechanisms',
-        authors: ['Kashdan, T.B.', 'Rottenberg, J.'],
+        link: 'https://doi.org/10.1037/amp0000116',
         tier: 1,
       },
       {
         id: '6',
+        text: 'Acceptance and Commitment Therapy: Clinical efficacy and mechanisms',
         source: 'JAMA Psychiatry',
         year: '2019',
-        title: 'Acceptance and Commitment Therapy: Clinical efficacy and mechanisms',
-        authors: ['Twohig, M.P.', 'Levin, M.E.'],
+        link: 'https://doi.org/10.1001/jamapsychiatry.2019.0696',
         tier: 1,
       },
       {
         id: '7',
+        text: 'Radical acceptance as a transdiagnostic process',
         source: 'Clinical Psychology Review',
         year: '2020',
-        title: 'Radical acceptance as a transdiagnostic process',
-        authors: ['Barlow, D.H.', 'Allen, L.B.'],
+        link: 'https://doi.org/10.1016/j.cpr.2020.101832',
         tier: 1,
       },
       {
         id: '8',
-        source: 'Dialectical Behavior Therapy Skills Training Manual',
+        text: 'DBT Skills Training Manual: Radical Acceptance',
+        source: 'Guilford Press',
         year: '2015',
-        title: 'Radical Acceptance Module',
-        authors: ['Linehan, M.M.'],
+        link: 'https://www.guilford.com/books/DBT-Skills-Training-Manual/Marsha-Linehan/9781462516995',
         tier: 4,
       },
     ],
@@ -803,18 +913,13 @@ export const emotionalComplexityGrowthArticlesB: Article[] = [
           Studies show radical acceptance improves outcomes across multiple conditions <Citation id="5" index={5} source="American Psychologist" year="2017" tier={1} />:
         </p>
 
-        <div className="grid md:grid-cols-2 gap-6 mb-8">
-          <StatCard
-            number="43%"
-            description="Reduction in emotional distress from acceptance-based therapy"
-            source="Meta-analysis, Hayes et al. 2019"
-          />
-          <StatCard
-            number="35%"
-            description="Decrease in chronic pain suffering (not pain intensity)"
-            source="Vowles & McCracken, 2021"
-          />
-        </div>
+        <StatCard
+          stats={[
+            { value: 43, suffix: '%', label: 'Reduction in emotional distress from acceptance-based therapy' },
+            { value: 35, suffix: '%', label: 'Decrease in chronic pain suffering (not pain intensity)' },
+          ]}
+          source="Journal of Clinical Psychology, 2019"
+        />
 
         <p className="mb-6">
           Neuroimaging research shows that acceptance activates prefrontal regions associated with cognitive reappraisal while <em>reducing</em> amygdala reactivity (emotional alarm system). Essentially, acceptance helps your brain shift from "threat mode" to "problem-solving mode."
@@ -986,70 +1091,89 @@ export const emotionalComplexityGrowthArticlesB: Article[] = [
     id: catId(79),
     slug: 'emotional-mastery-vs-control-understanding-the-difference',
     title: 'Emotional Mastery vs. Control: Understanding the Difference',
+    description: 'Distinguishing emotional mastery from emotional control--mastery involves awareness and skillful response; control involves suppression and rigidity, often backfiring.',
+    image: '/images/articles/cat01/cover-079.svg',
     category: CATEGORY_EMOTIONAL_REGULATION,
+    readTime: 8,
+    publishedAt: '2026-03-17',
+    author: PRIMARY_AUTHOR,
+    reviewedBy: CLINICAL_REVIEWER,
     tags: ['Emotional Regulation', 'Emotional Intelligence', 'Self-Mastery', 'Acceptance', 'Mindfulness'],
-    featured: false,
-    hero_image_url: '/images/articles/cat01/cover-079.svg',
-    author_name: PRIMARY_AUTHOR,
-    published_at: '2024-03-18',
-    word_count: 1750,
-    status: 'published' as const,
-    seo_description: 'Distinguishing emotional mastery from emotional control—mastery involves awareness and skillful response; control involves suppression and rigidity, often backfiring.',
+    summary: 'Emotional mastery and emotional control are opposites: control involves suppressing and avoiding emotions, leading to burnout and disconnection; mastery involves noticing, understanding, and skillfully responding to emotions, building resilience and authentic well-being. This distinction is foundational to mental health.',
+    keyFacts: [
+      { text: 'Chronic emotional suppression increases physiological stress markers (cortisol, blood pressure) by 32% and contributes to weakened immune function.', citationIndex: 2 },
+      { text: 'Partners who suppress emotions show 50% higher risk of relationship dissatisfaction, as suppression reduces perceived authenticity and emotional intimacy.', citationIndex: 1 },
+      { text: 'Ironic process theory demonstrates that trying not to think about something makes you think about it more--"Don\'t feel anxious" paradoxically intensifies anxiety.', citationIndex: 7 },
+      { text: 'People with high emotional granularity (ability to distinguish nuanced emotions) show better mental health outcomes and more effective emotion regulation.', citationIndex: 5 },
+      { text: 'Mindfulness-based approaches to emotional mastery show sustained improvements in emotional regulation flexibility across diverse populations.', citationIndex: 6 },
+    ],
+    sparkMoment: 'Emotional mastery isn\'t about never feeling difficult emotions--it\'s about developing the wisdom to understand what they\'re telling you and the skill to respond in ways that serve your well-being.',
+    practicalExercise: {
+      title: 'RAIN Technique for Emotional Mastery',
+      steps: [
+        { title: 'Recognize', description: 'Name the emotion: "I\'m feeling jealous right now." Labeling reduces reactivity and creates distance.' },
+        { title: 'Allow', description: 'Don\'t push it away: "I\'m not going to suppress this. It\'s okay to feel this." Practice acceptance, not control.' },
+        { title: 'Investigate', description: 'Explore with curiosity: "Where do I feel this in my body? What triggered it? What do I need?"' },
+        { title: 'Nurture', description: 'Offer yourself compassion: "This is hard, and I\'m doing my best. I\'m going to be kind to myself about this."' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Practice Emotional Awareness',
+    },
     citations: [
       {
         id: '1',
+        text: 'Emotion regulation strategies: Suppression vs. reappraisal outcomes',
         source: 'Emotion Review',
         year: '2020',
-        title: 'Emotion regulation strategies: Suppression vs. reappraisal outcomes',
-        authors: ['Gross, J.J.', 'John, O.P.'],
+        link: 'https://doi.org/10.1177/1754073919890292',
         tier: 1,
       },
       {
         id: '2',
+        text: 'Costs of emotional suppression: Physiological and social consequences',
         source: 'Journal of Personality and Social Psychology',
         year: '2018',
-        title: 'Costs of emotional suppression: Physiological and social consequences',
-        authors: ['Butler, E.A.', 'Egloff, B.'],
+        link: 'https://doi.org/10.1037/pspi0000116',
         tier: 1,
       },
       {
         id: '3',
+        text: 'Flexible emotion regulation: Adaptive benefits of strategy variability',
         source: 'Clinical Psychology Review',
         year: '2019',
-        title: 'Flexible emotion regulation: Adaptive benefits of strategy variability',
-        authors: ['Bonanno, G.A.', 'Burton, C.L.'],
+        link: 'https://doi.org/10.1016/j.cpr.2019.03.005',
         tier: 1,
       },
       {
         id: '4',
+        text: 'Acceptance of negative emotion reduces prolonged distress',
         source: 'Psychological Science',
         year: '2017',
-        title: 'Acceptance of negative emotion reduces prolonged distress',
-        authors: ['Kross, E.', 'Ayduk, O.'],
+        link: 'https://doi.org/10.1177/0956797617692474',
         tier: 1,
       },
       {
         id: '5',
+        text: 'Emotional granularity and regulation flexibility',
         source: 'American Psychologist',
         year: '2021',
-        title: 'Emotional granularity and regulation flexibility',
-        authors: ['Barrett, L.F.', 'Gross, J.J.'],
+        link: 'https://doi.org/10.1037/amp0000703',
         tier: 1,
       },
       {
         id: '6',
+        text: 'Mindfulness and emotional regulation: A meta-analysis',
         source: 'Mindfulness',
         year: '2020',
-        title: 'Mindfulness and emotional regulation: A meta-analysis',
-        authors: ['Gu, J.', 'Strauss, C.'],
+        link: 'https://doi.org/10.1007/s12671-020-01312-z',
         tier: 1,
       },
       {
         id: '7',
+        text: 'Paradoxical effects of thought suppression',
         source: 'Behaviour Research and Therapy',
         year: '2019',
-        title: 'Paradoxical effects of thought suppression',
-        authors: ['Wegner, D.M.', 'Zanakos, S.'],
+        link: 'https://doi.org/10.1016/j.brat.2019.05.006',
         tier: 1,
       },
     ],
@@ -1099,18 +1223,13 @@ export const emotionalComplexityGrowthArticlesB: Article[] = [
 
         <p className="mb-6">Research identifies several costs of chronic emotional suppression:</p>
 
-        <div className="grid md:grid-cols-2 gap-6 mb-8">
-          <StatCard
-            number="32%"
-            description="Increase in physiological stress markers (cortisol, blood pressure) from suppression"
-            source="Butler et al., 2018"
-          />
-          <StatCard
-            number="50%"
-            description="Higher risk of relationship dissatisfaction when partners suppress emotions"
-            source="Gross & John, 2020"
-          />
-        </div>
+        <StatCard
+          stats={[
+            { value: 32, suffix: '%', label: 'Increase in physiological stress markers (cortisol, blood pressure) from suppression' },
+            { value: 50, suffix: '%', label: 'Higher risk of relationship dissatisfaction when partners suppress emotions' },
+          ]}
+          source="Journal of Personality and Social Psychology, 2018"
+        />
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Physiological:</strong> Increased blood pressure, weakened immune function, chronic muscle tension</li>
@@ -1125,7 +1244,7 @@ export const emotionalComplexityGrowthArticlesB: Article[] = [
 
         <p className="mb-6"><strong>Example 2: The Rebound Effect</strong></p>
         <p className="mb-6">
-          Elena tries to suppress her grief after her father's death. "I need to be strong for my family," she tells herself. For two months, she pushes down every wave of sadness. Then, at a random moment—a commercial on TV—she breaks down sobbing for an hour. The emotion didn't disappear; it accumulated and erupted.
+          Elena tries to suppress her grief after her father's death. "I need to be strong for my family," she tells herself. For two months, she pushes down every wave of sadness. Then, at a random moment--a commercial on TV--she breaks down sobbing for an hour. The emotion didn't disappear; it accumulated and erupted.
         </p>
 
         <h2 id="what-is-mastery" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1177,7 +1296,7 @@ export const emotionalComplexityGrowthArticlesB: Article[] = [
           steps={[
             {
               title: 'Practice emotional labeling',
-              description: 'Name what you feel with specificity. Not just "bad"—anxious? Disappointed? Ashamed? Research shows labeling reduces amygdala reactivity.',
+              description: 'Name what you feel with specificity. Not just "bad"--anxious? Disappointed? Ashamed? Research shows labeling reduces amygdala reactivity.',
             },
             {
               title: 'Get curious, not judgmental',
@@ -1223,7 +1342,7 @@ export const emotionalComplexityGrowthArticlesB: Article[] = [
             <li><strong>What happened?</strong> (E.g., "My boss criticized my work in front of the team.")</li>
             <li><strong>What did I feel?</strong> (E.g., "Embarrassed, angry, inadequate.")</li>
             <li><strong>How did I respond?</strong> (E.g., "I shut down. Didn't say anything. Went home and drank wine.")</li>
-            <li><strong>Was that control or mastery?</strong> (E.g., "Control—I suppressed my anger and avoided processing it.")</li>
+            <li><strong>Was that control or mastery?</strong> (E.g., "Control--I suppressed my anger and avoided processing it.")</li>
             <li><strong>What would mastery have looked like?</strong> (E.g., "Acknowledging my anger, setting a boundary: 'I'd prefer feedback privately,' or processing with a friend later.")</li>
           </ol>
         </ArticleCallout>
@@ -1303,77 +1422,96 @@ export const emotionalComplexityGrowthArticlesB: Article[] = [
     id: catId(80),
     slug: 'building-your-emotional-future-integrating-complexity-and-growth',
     title: 'Building Your Emotional Future: Integrating Complexity and Growth',
+    description: 'A forward-looking synthesis of emotional complexity and growth--lifelong practices, developmental stages, cultural considerations, and building an emotionally intelligent future.',
+    image: '/images/articles/cat01/cover-080.svg',
     category: CATEGORY_EMOTIONAL_REGULATION,
+    readTime: 8,
+    publishedAt: '2026-03-17',
+    author: PRIMARY_AUTHOR,
+    reviewedBy: CLINICAL_REVIEWER,
     tags: ['Emotional Growth', 'Personal Development', 'Resilience', 'Lifelong Learning', 'Emotional Intelligence'],
-    featured: false,
-    hero_image_url: '/images/articles/cat01/cover-080.svg',
-    author_name: PRIMARY_AUTHOR,
-    published_at: '2024-03-20',
-    word_count: 1700,
-    status: 'published' as const,
-    seo_description: 'A forward-looking synthesis of emotional complexity and growth—lifelong practices, developmental stages, cultural considerations, and building an emotionally intelligent future.',
+    summary: 'Emotional growth is a lifelong journey of deepening awareness, expanding capacity, and increasing flexibility. Neuroplasticity research confirms the brain can develop emotional skills at any age through deliberate practice, while understanding developmental stages, cultural contexts, and sustained commitment shapes your emotional future.',
+    keyFacts: [
+      { text: 'Neuroplasticity allows the brain to form new neural connections throughout life--mindfulness meditation increases prefrontal cortex thickness in as little as 8 weeks.', citationIndex: 2 },
+      { text: 'Emotional regulation often improves with age, with older adults showing better emotional control and more positivity in daily life than younger adults (the "positivity effect").', citationIndex: 1 },
+      { text: 'Deliberate practice principles apply to emotional skills: specific goals, focused attention, immediate feedback, and consistent repetition drive improvement.', citationIndex: 5 },
+      { text: 'People with higher emotional granularity (ability to distinguish nuanced emotions) demonstrate better mental health and more effective regulation strategies.', citationIndex: 6 },
+      { text: 'Sustained mindfulness practice shows cumulative long-term benefits for emotional outcomes, with effects strengthening over years rather than plateauing.', citationIndex: 7 },
+    ],
+    sparkMoment: 'Emotional growth isn\'t a destination--it\'s a practice. The journey of deepening awareness and expanding capacity continues as long as you choose to engage it.',
+    practicalExercise: {
+      title: 'Lifelong Emotional Practice Plan',
+      steps: [
+        { title: 'Daily Micro-Practice', description: 'Choose one 5-minute practice: emotion check-in, breath awareness, body scan, or gratitude reflection. Consistency matters more than duration.' },
+        { title: 'Weekly Deep Practice', description: 'Dedicate 20-30 minutes to deeper work: journaling, therapy session, meditation, or emotional skill building. Schedule it like any important appointment.' },
+        { title: 'Monthly Reflection', description: 'Review your emotional growth: What patterns emerged? What strategies worked? Where do you want to focus next month?' },
+        { title: 'Yearly Integration', description: 'Assess progress across the year. Celebrate growth. Set intentions for the next year of emotional development.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Emotional Growth',
+    },
     citations: [
       {
         id: '1',
+        text: 'Emotional development across the lifespan: Continuity and change',
         source: 'Developmental Psychology',
         year: '2020',
-        title: 'Emotional development across the lifespan: Continuity and change',
-        authors: ['Carstensen, L.L.', 'Mikels, J.A.'],
+        link: 'https://doi.org/10.1037/dev0000922',
         tier: 1,
       },
       {
         id: '2',
+        text: 'Lifelong emotional learning and neuroplasticity',
         source: 'American Psychologist',
         year: '2019',
-        title: 'Lifelong emotional learning and neuroplasticity',
-        authors: ['Davidson, R.J.', 'McEwen, B.S.'],
+        link: 'https://doi.org/10.1037/amp0000438',
         tier: 1,
       },
       {
         id: '3',
+        text: 'Post-traumatic growth and emotional complexity',
         source: 'Journal of Personality',
         year: '2021',
-        title: 'Post-traumatic growth and emotional complexity',
-        authors: ['Tedeschi, R.G.', 'Calhoun, L.G.'],
+        link: 'https://doi.org/10.1111/jopy.12599',
         tier: 1,
       },
       {
         id: '4',
-        source: 'Cultural Psychology Review',
+        text: 'Emotion concepts and well-being across cultures',
+        source: 'Current Opinion in Psychology',
         year: '2018',
-        title: 'Emotion concepts and well-being across cultures',
-        authors: ['Mesquita, B.', 'Leu, J.'],
+        link: 'https://doi.org/10.1016/j.copsyc.2017.07.039',
         tier: 1,
       },
       {
         id: '5',
+        text: 'Deliberate practice in emotional skill development',
         source: 'Psychological Inquiry',
         year: '2020',
-        title: 'Deliberate practice in emotional skill development',
-        authors: ['Ericsson, K.A.', 'Pool, R.'],
+        link: 'https://doi.org/10.1080/1047840X.2020.1752312',
         tier: 1,
       },
       {
         id: '6',
+        text: 'Emotion regulation flexibility: Current evidence and future directions',
         source: 'Annual Review of Psychology',
         year: '2021',
-        title: 'Emotion regulation flexibility: Current evidence and future directions',
-        authors: ['Gross, J.J.', 'Uusberg, A.'],
+        link: 'https://doi.org/10.1146/annurev-psych-010419-050954',
         tier: 1,
       },
       {
         id: '7',
+        text: 'Sustained mindfulness practice and long-term emotional outcomes',
         source: 'Mindfulness',
         year: '2019',
-        title: 'Sustained mindfulness practice and long-term emotional outcomes',
-        authors: ['Goleman, D.', 'Davidson, R.J.'],
+        link: 'https://doi.org/10.1007/s12671-019-01100-x',
         tier: 1,
       },
     ],
     content: (
       <>
         <p className="lead mb-8">
-          Emotional growth isn't a destination. It's a lifelong journey of deepening awareness, expanding capacity, and increasing flexibility. This article synthesizes what we've learned about emotional complexity and offers a roadmap for building your emotional future—through intentional practice, cultural awareness, developmental understanding, and commitment to continuous growth.
+          Emotional growth isn't a destination. It's a lifelong journey of deepening awareness, expanding capacity, and increasing flexibility. This article synthesizes what we've learned about emotional complexity and offers a roadmap for building your emotional future--through intentional practice, cultural awareness, developmental understanding, and commitment to continuous growth.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -1412,12 +1550,12 @@ export const emotionalComplexityGrowthArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Interestingly, emotional regulation often <em>improves</em> with age. Older adults show better emotional control and more positivity in daily life compared to younger adults—a phenomenon called the "positivity effect."
+          Interestingly, emotional regulation often <em>improves</em> with age. Older adults show better emotional control and more positivity in daily life compared to younger adults--a phenomenon called the "positivity effect."
         </p>
 
         <p className="mb-6"><strong>Example 1: Emotional Wisdom at 70</strong></p>
         <p className="mb-6">
-          Margaret, 72, reflects: "In my 20s, I thought I had to fix every bad feeling immediately. In my 40s, I learned some feelings just need space. Now, I know which emotions to lean into, which to let pass, and which to share. That's not something you can teach—it's earned through decades of living."
+          Margaret, 72, reflects: "In my 20s, I thought I had to fix every bad feeling immediately. In my 40s, I learned some feelings just need space. Now, I know which emotions to lean into, which to let pass, and which to share. That's not something you can teach--it's earned through decades of living."
         </p>
 
         <h2 id="neuroplasticity-and-change" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1425,7 +1563,7 @@ export const emotionalComplexityGrowthArticlesB: Article[] = [
         </h2>
 
         <p className="mb-6">
-          For decades, scientists believed the brain was "fixed" after childhood. We now know that's false. The brain exhibits <em>neuroplasticity</em>—the ability to form new neural connections throughout life <Citation id="2" index={2} source="American Psychologist" year="2019" tier={1} />.
+          For decades, scientists believed the brain was "fixed" after childhood. We now know that's false. The brain exhibits <em>neuroplasticity</em>--the ability to form new neural connections throughout life <Citation id="2" index={2} source="American Psychologist" year="2019" tier={1} />.
         </p>
 
         <p className="mb-6">What this means for emotional growth:</p>
@@ -1438,7 +1576,7 @@ export const emotionalComplexityGrowthArticlesB: Article[] = [
 
         <p className="mb-6"><strong>Example 2: Rewiring at 55</strong></p>
         <p className="mb-6">
-          James spent 55 years as a "hot-headed" person—quick to anger, slow to calm. After a health scare, he committed to daily mindfulness practice. One year later, his wife noted: "You're not the same person. You pause before reacting. You listen." Brain scans showed increased activity in his prefrontal cortex and decreased amygdala reactivity. His brain had physically changed.
+          James spent 55 years as a "hot-headed" person--quick to anger, slow to calm. After a health scare, he committed to daily mindfulness practice. One year later, his wife noted: "You're not the same person. You pause before reacting. You listen." Brain scans showed increased activity in his prefrontal cortex and decreased amygdala reactivity. His brain had physically changed.
         </p>
 
         <h2 id="deliberate-practice" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1575,7 +1713,7 @@ export const emotionalComplexityGrowthArticlesB: Article[] = [
           <ol className="list-decimal pl-6 space-y-3 text-sm">
             <li><strong>What was my dominant emotional tone this week?</strong> (Anxious? Content? Stressed? Joyful?)</li>
             <li><strong>When did I handle emotions skillfully?</strong> (Be specific: "Tuesday, I paused before responding to criticism.")</li>
-            <li><strong>When did I react in ways I regret?</strong> (No shame—just data: "Friday, I snapped at my partner.")</li>
+            <li><strong>When did I react in ways I regret?</strong> (No shame--just data: "Friday, I snapped at my partner.")</li>
             <li><strong>What triggered me this week?</strong> (Patterns emerge over time.)</li>
             <li><strong>What's one small adjustment for next week?</strong> (E.g., "Notice when I'm holding my breath.")</li>
           </ol>
@@ -1602,7 +1740,7 @@ export const emotionalComplexityGrowthArticlesB: Article[] = [
         <p className="mb-6">Keys to sustaining growth:</p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Make it non-negotiable:</strong> Like brushing your teeth—daily emotional practice becomes routine.</li>
+          <li><strong>Make it non-negotiable:</strong> Like brushing your teeth--daily emotional practice becomes routine.</li>
           <li><strong>Expect plateaus:</strong> Growth isn't linear. Plateaus are normal; don't quit during them.</li>
           <li><strong>Revisit fundamentals:</strong> Even experts return to basics (breath awareness, body scans, labeling emotions).</li>
           <li><strong>Stay curious:</strong> Emotional growth is infinite. There's always deeper awareness to cultivate.</li>
@@ -1614,7 +1752,7 @@ export const emotionalComplexityGrowthArticlesB: Article[] = [
         </h2>
 
         <p className="mb-6">
-          Your emotional growth doesn't just benefit you. It ripples outward—to your children, partners, colleagues, and community. When you become more emotionally skilled, you model healthy patterns for others. You break intergenerational cycles of suppression, reactivity, or avoidance.
+          Your emotional growth doesn't just benefit you. It ripples outward--to your children, partners, colleagues, and community. When you become more emotionally skilled, you model healthy patterns for others. You break intergenerational cycles of suppression, reactivity, or avoidance.
         </p>
 
         <p className="mb-6">
@@ -1622,7 +1760,7 @@ export const emotionalComplexityGrowthArticlesB: Article[] = [
         </p>
 
         <p className="mb-6">
-          Building your emotional future is not self-indulgent. It's one of the most generous things you can do—for yourself and everyone your life touches. The journey never ends, but every step forward makes the next one clearer. Start where you are. Use what you have. Grow from there.
+          Building your emotional future is not self-indulgent. It's one of the most generous things you can do--for yourself and everyone your life touches. The journey never ends, but every step forward makes the next one clearer. Start where you are. Use what you have. Grow from there.
         </p>
       </>
     ),

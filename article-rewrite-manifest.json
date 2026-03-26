@@ -2,8 +2,8 @@
   "version": 1,
   "generatedAt": "2026-03-26T22:20:03.374Z",
   "wordThreshold": 1500,
-  "totalSessions": 253,
-  "completedSessions": 1,
+  "totalSessions": 260,
+  "completedSessions": 26,
   "totalArticles": 1246,
   "sessions": {
     "1": {
@@ -147,7 +147,7 @@
       "completedAt": null
     },
     "3": {
-      "status": "pending",
+      "status": "complete",
       "category": 1,
       "subcategoryFile": "02b-everyday-emotional-regulation",
       "file": "src/data/articles/category-01/02b-everyday-emotional-regulation.tsx",
@@ -159,7 +159,7 @@
           "slug": "power-of-naming-emotions-affect-labeling",
           "title": "The Power of Naming Your Emotions: Why Labeling Feelings Calms the Brain",
           "currentWords": 590,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -167,7 +167,7 @@
           "slug": "emotional-first-aid-first-five-minutes",
           "title": "Emotional First Aid: What to Do in the First 5 Minutes of a Strong Emotion",
           "currentWords": 417,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -175,7 +175,7 @@
           "slug": "sit-with-uncomfortable-emotions-without-numbing",
           "title": "How to Sit with Uncomfortable Emotions Without Numbing or Avoiding",
           "currentWords": 391,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -183,7 +183,7 @@
           "slug": "using-movement-to-regulate-nervous-system",
           "title": "Using Movement to Regulate Your Nervous System",
           "currentWords": 425,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -191,13 +191,13 @@
           "slug": "building-emotional-regulation-toolkit",
           "title": "Building an Emotional Regulation Toolkit: Your Personalized Plan",
           "currentWords": 456,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T06:25:00.000Z"
     },
     "4": {
-      "status": "pending",
+      "status": "complete",
       "category": 1,
       "subcategoryFile": "03a-self-awareness-reflection",
       "file": "src/data/articles/category-01/03a-self-awareness-reflection.tsx",
@@ -209,7 +209,7 @@
           "slug": "what-is-self-awareness-skill-that-changes-everything",
           "title": "What Is Self-Awareness? The Skill That Changes Everything",
           "currentWords": 460,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -217,7 +217,7 @@
           "slug": "journaling-for-self-awareness-prompts",
           "title": "Journaling for Self-Awareness: Prompts That Go Beyond 'How Was Your Day'",
           "currentWords": 419,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -225,7 +225,7 @@
           "slug": "body-awareness-physical-signals-of-emotions",
           "title": "Body Awareness: Learning to Read the Physical Signals of Your Emotions",
           "currentWords": 399,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -233,7 +233,7 @@
           "slug": "how-thoughts-shape-feelings-notice-the-pattern",
           "title": "How Your Thoughts Shape Your Feelings (And How to Notice the Pattern)",
           "currentWords": 410,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -241,13 +241,13 @@
           "slug": "observer-self-watch-emotions-without-being-consumed",
           "title": "The Observer Self: Learning to Watch Your Emotions Without Being Consumed",
           "currentWords": 393,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T08:56:12.000Z"
     },
     "5": {
-      "status": "pending",
+      "status": "complete",
       "category": 1,
       "subcategoryFile": "03b-self-awareness-reflection",
       "file": "src/data/articles/category-01/03b-self-awareness-reflection.tsx",
@@ -259,7 +259,7 @@
           "slug": "mindfulness-for-emotional-awareness-practical-guide",
           "title": "Mindfulness for Emotional Awareness: A Practical Starting Guide",
           "currentWords": 403,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -267,7 +267,7 @@
           "slug": "common-emotional-blind-spots",
           "title": "Common Blind Spots: Emotions You Might Not Realize You're Feeling",
           "currentWords": 475,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -275,7 +275,7 @@
           "slug": "asking-honest-feedback-about-emotional-patterns",
           "title": "How to Ask for Honest Feedback About Your Emotional Patterns",
           "currentWords": 423,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -283,7 +283,7 @@
           "slug": "role-of-values-in-emotional-self-awareness",
           "title": "The Role of Values in Emotional Self-Awareness",
           "currentWords": 433,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -291,13 +291,13 @@
           "slug": "self-awareness-without-self-judgment",
           "title": "Self-Awareness Without Self-Judgment: A Compassionate Approach",
           "currentWords": 470,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T08:50:15.000Z"
     },
     "6": {
-      "status": "pending",
+      "status": "complete",
       "category": 1,
       "subcategoryFile": "04a-emotional-intelligence-in-practice",
       "file": "src/data/articles/category-01/04a-emotional-intelligence-in-practice.tsx",
@@ -309,7 +309,7 @@
           "slug": "what-is-emotional-intelligence-beyond-the-buzzword",
           "title": "What Is Emotional Intelligence? Beyond the Buzzword",
           "currentWords": 1249,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -317,7 +317,7 @@
           "slug": "reading-other-peoples-emotions-empathy-attunement-social-cues",
           "title": "Reading Other People's Emotions: Empathy, Attunement, and Social Cues",
           "currentWords": 542,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -325,7 +325,7 @@
           "slug": "emotional-intelligence-in-conversations-listening-beyond-words",
           "title": "Emotional Intelligence in Conversations: Listening Beyond Words",
           "currentWords": 645,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -333,7 +333,7 @@
           "slug": "how-to-respond-not-react-in-emotionally-charged-situations",
           "title": "How to Respond (Not React) in Emotionally Charged Situations",
           "currentWords": 559,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -341,13 +341,13 @@
           "slug": "emotional-intelligence-at-work-managing-feelings-in-professional-settings",
           "title": "Emotional Intelligence at Work: Managing Feelings in Professional Settings",
           "currentWords": 626,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T05:45:00.000Z"
     },
     "7": {
-      "status": "pending",
+      "status": "complete",
       "category": 1,
       "subcategoryFile": "04b-emotional-intelligence-in-practice",
       "file": "src/data/articles/category-01/04b-emotional-intelligence-in-practice.tsx",
@@ -359,7 +359,7 @@
           "slug": "the-empathy-spectrum-from-cognitive-to-affective-to-compassionate",
           "title": "The Empathy Spectrum: From Cognitive to Affective to Compassionate",
           "currentWords": 670,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -367,7 +367,7 @@
           "slug": "emotional-contagion-why-other-peoples-moods-affect-yours",
           "title": "1. Automatic Mimicry",
           "currentWords": 721,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -375,7 +375,7 @@
           "slug": "setting-emotional-boundaries-while-staying-connected",
           "title": "Setting Emotional Boundaries While Staying Connected",
           "currentWords": 577,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -383,7 +383,7 @@
           "slug": "how-to-have-difficult-conversations-with-emotional-intelligence",
           "title": "How to Have Difficult Conversations with Emotional Intelligence",
           "currentWords": 650,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -391,10 +391,10 @@
           "slug": "teaching-emotional-intelligence-skills-for-parents-teachers-mentors",
           "title": "Teaching Emotional Intelligence: Skills for Parents, Teachers, and Mentors",
           "currentWords": 549,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T10:15:00.000Z"
     },
     "8": {
       "status": "pending",
@@ -447,7 +447,7 @@
       "completedAt": null
     },
     "9": {
-      "status": "pending",
+      "status": "complete",
       "category": 1,
       "subcategoryFile": "05b-emotional-patterns-habits",
       "file": "src/data/articles/category-01/05b-emotional-patterns-habits.tsx",
@@ -459,7 +459,7 @@
           "slug": "the-anger-iceberg-whats-really-underneath-your-frustration",
           "title": "Workplace Criticism",
           "currentWords": 1093,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -467,7 +467,7 @@
           "slug": "shame-vs-guilt-two-very-different-emotions-with-very-different-effects",
           "title": "Shame vs. Guilt: Two Very Different Emotions with Very Different Effects",
           "currentWords": 875,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -475,7 +475,7 @@
           "slug": "rumination-why-your-brain-replays-painful-moments-and-how-to-stop",
           "title": "Rumination: Why Your Brain Replays Painful Moments (And How to Stop)",
           "currentWords": 972,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -483,7 +483,7 @@
           "slug": "emotional-perfectionism-the-hidden-pressure-to-always-feel-good",
           "title": "Validate your feelings",
           "currentWords": 893,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -491,13 +491,13 @@
           "slug": "breaking-the-pattern-how-to-build-new-emotional-responses",
           "title": "Breaking the Pattern: How to Build New Emotional Responses",
           "currentWords": 1110,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T09:15:45.000Z"
     },
     "10": {
-      "status": "pending",
+      "status": "complete",
       "category": 1,
       "subcategoryFile": "06a-neuroscience-of-emotions",
       "file": "src/data/articles/category-01/06a-neuroscience-of-emotions.tsx",
@@ -509,7 +509,7 @@
           "slug": "your-brain-on-emotions-neural-networks-that-create-feelings",
           "title": "Your Brain on Emotions: A Tour of the Neural Networks That Create Feelings",
           "currentWords": 205,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -517,7 +517,7 @@
           "slug": "amygdala-role-how-brain-detects-threat-too-quickly",
           "title": "The Amygdala's Role: How Your Brain Detects Threat (Sometimes Too Quickly)",
           "currentWords": 224,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -525,7 +525,7 @@
           "slug": "neuroplasticity-emotional-change-rewire-feeling-patterns",
           "title": "Neuroplasticity and Emotional Change: Can You Rewire Your Feeling Patterns?",
           "currentWords": 191,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -533,7 +533,7 @@
           "slug": "vagus-nerve-bodys-built-in-calm-down-system",
           "title": "The Vagus Nerve: Your Body's Built-In Calm-Down System",
           "currentWords": 247,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -541,13 +541,13 @@
           "slug": "stress-hormones-hijack-emotional-regulation",
           "title": "How Stress Hormones Hijack Your Emotional Regulation",
           "currentWords": 211,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T09:28:00.000Z"
     },
     "11": {
-      "status": "pending",
+      "status": "complete",
       "category": 1,
       "subcategoryFile": "06b-neuroscience-of-emotions",
       "file": "src/data/articles/category-01/06b-neuroscience-of-emotions.tsx",
@@ -559,7 +559,7 @@
           "slug": "neuroscience-emotional-contagion-mirror-neurons-empathy",
           "title": "The Neuroscience of Emotional Contagion: Mirror Neurons and Empathy",
           "currentWords": 1172,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -567,7 +567,7 @@
           "slug": "sleep-deprivation-makes-everything-feel-worse-brain-science",
           "title": "Why Sleep Deprivation Makes Everything Feel Worse: The Brain Science",
           "currentWords": 118,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -575,7 +575,7 @@
           "slug": "exercise-changes-brain-chemistry-emotional-baseline",
           "title": "How Exercise Changes Your Brain Chemistry and Emotional Baseline",
           "currentWords": 126,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -583,7 +583,7 @@
           "slug": "default-mode-network-brain-lost-in-thought",
           "title": "The Default Mode Network: What Your Brain Does When You're Lost in Thought",
           "currentWords": 134,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -591,13 +591,13 @@
           "slug": "polyvagal-theory-nervous-system-three-states",
           "title": "Polyvagal Theory in Plain Language: Your Nervous System's Three States",
           "currentWords": 181,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T14:35:00Z"
     },
     "12": {
-      "status": "pending",
+      "status": "complete",
       "category": 1,
       "subcategoryFile": "07a-emotions-across-life-stages",
       "file": "src/data/articles/category-01/07a-emotions-across-life-stages.tsx",
@@ -609,7 +609,7 @@
           "slug": "emotional-development-children-what-parents-need-to-know",
           "title": "Emotional Development in Children: What Parents Need to Know",
           "currentWords": 1190,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -617,7 +617,7 @@
           "slug": "adolescent-emotions-why-teenage-feelings-are-so-intense",
           "title": "Adolescent Emotions: Why Teenage Feelings Are So Intense",
           "currentWords": 1210,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -625,7 +625,7 @@
           "slug": "emotional-challenges-twenties-identity-comparison-uncertainty",
           "title": "Emotional Challenges of Your 20s: Identity, Comparison, and Uncertainty",
           "currentWords": 1471,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -633,10 +633,10 @@
           "slug": "midlife-emotional-shifts-what-changes-forties-fifties",
           "title": "Midlife Emotional Shifts: What Changes in Your 40s and 50s",
           "currentWords": 1418,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T09:16:12Z"
     },
     "13": {
       "status": "pending",
@@ -707,7 +707,7 @@
       "completedAt": null
     },
     "15": {
-      "status": "pending",
+      "status": "complete",
       "category": 1,
       "subcategoryFile": "08b-emotional-complexity-growth",
       "file": "src/data/articles/category-01/08b-emotional-complexity-growth.tsx",
@@ -719,7 +719,7 @@
           "slug": "alexithymia-when-you-cant-identify-or-describe-your-emotions",
           "title": "Alexithymia: When You Can't Identify or Describe Your Emotions",
           "currentWords": 1225,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -727,7 +727,7 @@
           "slug": "emotion-focused-therapy-what-it-is-and-who-it-helps",
           "title": "Emotion-Focused Therapy: What It Is and Who It Helps",
           "currentWords": 1243,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -735,7 +735,7 @@
           "slug": "radical-acceptance-of-difficult-emotions-without-resignation",
           "title": "Radical Acceptance of Difficult Emotions (Without Resignation)",
           "currentWords": 1043,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -743,7 +743,7 @@
           "slug": "emotional-mastery-vs-control-understanding-the-difference",
           "title": "Emotional Mastery vs. Control: Understanding the Difference",
           "currentWords": 1030,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -751,13 +751,13 @@
           "slug": "building-your-emotional-future-integrating-complexity-and-growth",
           "title": "Building Your Emotional Future: Integrating Complexity and Growth",
           "currentWords": 1081,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T09:15:00.000Z"
     },
     "16": {
-      "status": "pending",
+      "status": "complete",
       "category": 2,
       "subcategoryFile": "01a-understanding-anxiety",
       "file": "src/data/articles/category-02/01a-understanding-anxiety.tsx",
@@ -769,7 +769,7 @@
           "slug": "what-is-anxiety-complete-guide",
           "title": "What Is Anxiety? A Complete Guide to Your Body's Alarm System",
           "currentWords": 732,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -777,7 +777,7 @@
           "slug": "normal-worry-vs-anxiety-disorder",
           "title": "Normal Worry vs. Anxiety Disorder: How to Tell the Difference",
           "currentWords": 706,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -785,7 +785,7 @@
           "slug": "anxiety-cycle-avoidance-feeds-fear",
           "title": "The Anxiety Cycle: How Avoidance Feeds Fear",
           "currentWords": 838,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -793,7 +793,7 @@
           "slug": "why-anxiety-feels-physical-mind-body-connection",
           "title": "Why Anxiety Feels So Physical: Understanding the Mind-Body Connection",
           "currentWords": 765,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -801,13 +801,13 @@
           "slug": "types-of-anxiety-disorders-overview",
           "title": "Types of Anxiety Disorders: A Clear Overview",
           "currentWords": 899,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T09:35:42.000Z"
     },
     "17": {
-      "status": "pending",
+      "status": "complete",
       "category": 2,
       "subcategoryFile": "01b-understanding-anxiety",
       "file": "src/data/articles/category-02/01b-understanding-anxiety.tsx",
@@ -819,7 +819,7 @@
           "slug": "what-causes-anxiety-genetics-environment-brain",
           "title": "What Causes Anxiety? Genetics, Environment, and the Brain",
           "currentWords": 981,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -827,7 +827,7 @@
           "slug": "how-anxiety-develops-over-time-chronic-pattern",
           "title": "How Anxiety Develops Over Time: From First Episode to Chronic Pattern",
           "currentWords": 785,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -835,7 +835,7 @@
           "slug": "anxiety-statistics-research-who-is-affected",
           "title": "Anxiety in Numbers: What the Research Tells Us About Who's Affected",
           "currentWords": 796,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -843,7 +843,7 @@
           "slug": "evolutionary-purpose-of-anxiety-brain-wired-to-worry",
           "title": "The Evolutionary Purpose of Anxiety: Why Your Brain Is Wired to Worry",
           "currentWords": 821,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -851,13 +851,13 @@
           "slug": "anxiety-vs-excitement-brain-processes-same-way",
           "title": "Anxiety vs. Excitement: How Your Brain Processes Both the Same Way",
           "currentWords": 829,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T11:35:00Z"
     },
     "18": {
-      "status": "pending",
+      "status": "complete",
       "category": 2,
       "subcategoryFile": "02a-panic-physical-anxiety-somatic-symptoms",
       "file": "src/data/articles/category-02/02a-panic-physical-anxiety-somatic-symptoms.tsx",
@@ -869,7 +869,7 @@
           "slug": "panic-attacks-explained-brain-body",
           "title": "Panic Attacks Explained: What Happens in Your Brain and Body",
           "currentWords": 695,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -877,7 +877,7 @@
           "slug": "heart-attack-vs-panic-attack-difference",
           "title": "Am I Having a Heart Attack?' --- How to Tell the Difference from a Panic Attack",
           "currentWords": 692,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -885,7 +885,7 @@
           "slug": "hyperventilation-and-anxiety-why-breathing-goes-wrong-and-how-to-fix-it",
           "title": "Hyperventilation and Anxiety: Why Breathing Goes Wrong and How to Fix It",
           "currentWords": 654,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -893,7 +893,7 @@
           "slug": "chest-tightness-tingling-and-dizziness-understanding-anxietys-physical-symptoms",
           "title": "Chest Tightness, Tingling, and Dizziness: Understanding Anxiety's Physical Symptoms",
           "currentWords": 621,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -901,13 +901,13 @@
           "slug": "health-anxiety-when-worry-about-illness-becomes-the-illness",
           "title": "Health Anxiety: When Worry About Illness Becomes the Illness",
           "currentWords": 775,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T09:15:00Z"
     },
     "19": {
-      "status": "pending",
+      "status": "complete",
       "category": 2,
       "subcategoryFile": "02b-panic-physical-anxiety-somatic-symptoms",
       "file": "src/data/articles/category-02/02b-panic-physical-anxiety-somatic-symptoms.tsx",
@@ -919,7 +919,7 @@
           "slug": "the-nervous-stomach-why-anxiety-targets-your-gut",
           "title": "The Nervous Stomach: Why Anxiety Targets Your Gut",
           "currentWords": 689,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -927,7 +927,7 @@
           "slug": "panic-disorder-when-panic-attacks-become-a-pattern",
           "title": "Panic Disorder: When Panic Attacks Become a Pattern",
           "currentWords": 809,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -935,7 +935,7 @@
           "slug": "interoception-and-anxiety-how-body-awareness-can-help-or-hurt",
           "title": "Interoception and Anxiety: How Body Awareness Can Help or Hurt",
           "currentWords": 809,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -943,7 +943,7 @@
           "slug": "agoraphobia-when-the-fear-of-panic-shrinks-your-world",
           "title": "Agoraphobia: When the Fear of Panic Shrinks Your World",
           "currentWords": 912,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -951,13 +951,13 @@
           "slug": "night-panic-why-anxiety-wakes-you-up-and-what-to-do-about-it",
           "title": "Night Panic: Why Anxiety Wakes You Up and What to Do About It",
           "currentWords": 702,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-26T23:41:56.230185Z"
     },
     "20": {
-      "status": "pending",
+      "status": "complete",
       "category": 2,
       "subcategoryFile": "03a-social-anxiety-fear-of-judgment",
       "file": "src/data/articles/category-02/03a-social-anxiety-fear-of-judgment.tsx",
@@ -969,7 +969,7 @@
           "slug": "social-anxiety-disorder-more-than-just-shyness",
           "title": "Social Anxiety Disorder: More Than Just Shyness",
           "currentWords": 1058,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -977,7 +977,7 @@
           "slug": "the-inner-critic-in-social-anxiety-why-you-assume-the-worst",
           "title": "The Inner Critic in Social Anxiety: Why You Assume the Worst",
           "currentWords": 644,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -985,7 +985,7 @@
           "slug": "performance-anxiety-stage-fright-test-anxiety-and-public-speaking-fear",
           "title": "Performance Anxiety: Stage Fright, Test Anxiety, and Public Speaking Fear",
           "currentWords": 876,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -993,7 +993,7 @@
           "slug": "social-anxiety-at-work-managing-fear-in-professional-settings",
           "title": "Social Anxiety at Work: Managing Fear in Professional Settings",
           "currentWords": 582,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -1001,13 +1001,13 @@
           "slug": "social-media-and-social-anxiety-how-digital-comparison-fuels-fear",
           "title": "Social Media and Social Anxiety: How Digital Comparison Fuels Fear",
           "currentWords": 761,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T20:15:00Z"
     },
     "21": {
-      "status": "pending",
+      "status": "complete",
       "category": 2,
       "subcategoryFile": "03b-social-anxiety-fear-of-judgment",
       "file": "src/data/articles/category-02/03b-social-anxiety-fear-of-judgment.tsx",
@@ -1019,7 +1019,7 @@
           "slug": "dating-with-social-anxiety-a-practical-guide",
           "title": "Dating with Social Anxiety: A Practical Guide",
           "currentWords": 707,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -1027,7 +1027,7 @@
           "slug": "why-social-anxiety-makes-you-avoid-eye-contact-phone-calls-and-small-talk",
           "title": "Why Social Anxiety Makes You Avoid Eye Contact, Phone Calls, and Small Talk",
           "currentWords": 670,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -1035,13 +1035,13 @@
           "slug": "selective-mutism-in-adults-when-anxiety-steals-your-voice",
           "title": "Selective Mutism in Adults: When Anxiety Steals Your Voice",
           "currentWords": 736,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T09:32:00.000Z"
     },
     "22": {
-      "status": "pending",
+      "status": "complete",
       "category": 2,
       "subcategoryFile": "04a-chronic-stress-overwhelm",
       "file": "src/data/articles/category-02/04a-chronic-stress-overwhelm.tsx",
@@ -1053,7 +1053,7 @@
           "slug": "what-is-chronic-stress-how-ongoing-pressure-changes-your-brain-and-body",
           "title": "What Is Chronic Stress? How Ongoing Pressure Changes Your Brain and Body",
           "currentWords": 656,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -1061,7 +1061,7 @@
           "slug": "the-stress-response-system-understanding-cortisol-adrenaline-and-your-nervous-system",
           "title": "The Stress Response System: Understanding Cortisol, Adrenaline, and Your Nervous System",
           "currentWords": 599,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -1069,7 +1069,7 @@
           "slug": "overwhelm-when-everything-feels-like-too-much-at-once",
           "title": "Overwhelm: When Everything Feels Like Too Much at Once",
           "currentWords": 580,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -1077,7 +1077,7 @@
           "slug": "decision-fatigue-why-too-many-choices-drain-your-mental-energy",
           "title": "Decision Fatigue: Why Too Many Choices Drain Your Mental Energy",
           "currentWords": 861,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -1085,13 +1085,13 @@
           "slug": "stress-and-memory-why-you-cant-think-clearly-under-pressure",
           "title": "Hippocampus: Memory Formation Center",
           "currentWords": 616,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T10:05:12.000Z"
     },
     "23": {
-      "status": "pending",
+      "status": "complete",
       "category": 2,
       "subcategoryFile": "04b-chronic-stress-overwhelm",
       "file": "src/data/articles/category-02/04b-chronic-stress-overwhelm.tsx",
@@ -1103,7 +1103,7 @@
           "slug": "chronic-stress-and-physical-health-the-long-term-consequences",
           "title": "Chronic Stress and Physical Health: The Long-Term Consequences",
           "currentWords": 789,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -1111,7 +1111,7 @@
           "slug": "financial-stress-and-mental-health-breaking-the-worry-cycle",
           "title": "Financial Stress and Mental Health: Breaking the Worry Cycle",
           "currentWords": 851,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -1119,7 +1119,7 @@
           "slug": "caregiver-stress-when-taking-care-of-others-depletes-you",
           "title": "Caregiver Stress: When Taking Care of Others Depletes You",
           "currentWords": 816,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -1127,7 +1127,7 @@
           "slug": "how-stress-accumulates-understanding-allostatic-load",
           "title": "How Stress Accumulates: Understanding Allostatic Load",
           "currentWords": 610,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -1135,13 +1135,13 @@
           "slug": "stress-inoculation-how-controlled-exposure-builds-resilience",
           "title": "Stress Inoculation: How Controlled Exposure Builds Resilience",
           "currentWords": 786,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T09:15:30.000Z"
     },
     "24": {
-      "status": "pending",
+      "status": "complete",
       "category": 2,
       "subcategoryFile": "05a-burnout-emotional-exhaustion",
       "file": "src/data/articles/category-02/05a-burnout-emotional-exhaustion.tsx",
@@ -1153,7 +1153,7 @@
           "slug": "what-is-burnout-the-three-dimensions-of-emotional-exhaustion",
           "title": "What Is Burnout? The Three Dimensions of Emotional Exhaustion",
           "currentWords": 574,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -1161,7 +1161,7 @@
           "slug": "am-i-burned-out-or-just-tired-how-to-tell-the-difference",
           "title": "Am I Burned Out or Just Tired? How to Tell the Difference",
           "currentWords": 492,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -1169,7 +1169,7 @@
           "slug": "the-12-stages-of-burnout-recognizing-the-progression-before-its-too-late",
           "title": "Stage 1: The Compulsion to Prove Oneself",
           "currentWords": 479,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -1177,7 +1177,7 @@
           "slug": "burnout-in-healthcare-workers-a-crisis-within-a-crisis",
           "title": "Burnout in Healthcare Workers: A Crisis Within a Crisis",
           "currentWords": 583,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -1185,10 +1185,10 @@
           "slug": "academic-burnout-when-the-pressure-to-perform-breaks-students-down",
           "title": "Academic Burnout: When the Pressure to Perform Breaks Students Down",
           "currentWords": 561,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T09:15:00.000Z"
     },
     "25": {
       "status": "pending",
@@ -1567,7 +1567,7 @@
       "completedAt": null
     },
     "33": {
-      "status": "pending",
+      "status": "complete",
       "category": 2,
       "subcategoryFile": "09b-crisis-seeking-professional-help",
       "file": "src/data/articles/category-02/09b-crisis-seeking-professional-help.tsx",
@@ -1579,7 +1579,7 @@
           "slug": "online-therapy-for-anxiety-what-the-research-says-about-effectiveness",
           "title": "Online Therapy for Anxiety: What the Research Says About Effectiveness",
           "currentWords": 884,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -1587,7 +1587,7 @@
           "slug": "the-role-of-exercise-in-anxiety-treatment-more-than-just-a-mood-boost",
           "title": "The Role of Exercise in Anxiety Treatment: More Than Just a Mood Boost",
           "currentWords": 847,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -1595,7 +1595,7 @@
           "slug": "combining-therapy-and-medication-what-the-evidence-shows",
           "title": "Combining Therapy and Medication: What the Evidence Shows",
           "currentWords": 901,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -1603,7 +1603,7 @@
           "slug": "relapse-prevention-how-to-maintain-your-progress-after-treatment",
           "title": "Relapse Prevention: How to Maintain Your Progress After Treatment",
           "currentWords": 960,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -1611,13 +1611,13 @@
           "slug": "recovery-is-not-linear-what-to-expect-on-the-path-from-anxiety",
           "title": "Recovery Is Not Linear: What to Expect on the Path from Anxiety",
           "currentWords": 1103,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T01:00:00.000Z"
     },
     "34": {
-      "status": "pending",
+      "status": "complete",
       "category": 3,
       "subcategoryFile": "01a-attachment-styles-relationship-patterns",
       "file": "src/data/articles/category-03/01a-attachment-styles-relationship-patterns.tsx",
@@ -1629,7 +1629,7 @@
           "slug": "four-attachment-styles-how-early-bonds-shape-adult-love",
           "title": "The Four Attachment Styles: How Early Bonds Shape Adult Love",
           "currentWords": 805,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -1637,7 +1637,7 @@
           "slug": "anxious-attachment-when-fear-of-abandonment-drives-relationships",
           "title": "Anxious Attachment: When Fear of Abandonment Drives Your Relationships",
           "currentWords": 770,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -1645,7 +1645,7 @@
           "slug": "avoidant-attachment-when-closeness-feels-like-a-threat",
           "title": "Avoidant Attachment: When Closeness Feels Like a Threat",
           "currentWords": 723,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -1653,7 +1653,7 @@
           "slug": "disorganized-attachment-push-pull-pattern-confuses-everyone",
           "title": "Disorganized Attachment: The Push-Pull Pattern That Confuses Everyone",
           "currentWords": 846,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -1661,13 +1661,13 @@
           "slug": "can-you-change-attachment-style-what-research-says",
           "title": "Can You Change Your Attachment Style? What the Research Says",
           "currentWords": 926,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T10:45:00.000Z"
     },
     "35": {
-      "status": "pending",
+      "status": "complete",
       "category": 3,
       "subcategoryFile": "01b-attachment-styles-relationship-patterns",
       "file": "src/data/articles/category-03/01b-attachment-styles-relationship-patterns.tsx",
@@ -1679,7 +1679,7 @@
           "slug": "how-to-identify-attachment-style-self-assessment-guide",
           "title": "How to Identify Your Attachment Style: A Self-Assessment Guide",
           "currentWords": 781,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -1687,7 +1687,7 @@
           "slug": "attachment-styles-in-friendships-not-just-about-romance",
           "title": "Attachment Styles in Friendships: It's Not Just About Romance",
           "currentWords": 969,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -1695,7 +1695,7 @@
           "slug": "when-two-insecure-attachment-styles-meet-anxious-avoidant-trap",
           "title": "When Two Insecure Attachment Styles Meet: The Anxious-Avoidant Trap",
           "currentWords": 1011,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -1703,7 +1703,7 @@
           "slug": "earned-secure-attachment-how-healing-happens-through-new-relationships",
           "title": "Earned Secure Attachment: How Healing Happens Through New Relationships",
           "currentWords": 974,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -1711,10 +1711,10 @@
           "slug": "attachment-theory-for-parents-how-your-style-affects-children",
           "title": "Attachment Theory for Parents: How Your Style Affects Your Children",
           "currentWords": 1168,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T13:45:00.000Z"
     },
     "36": {
       "status": "pending",
@@ -1917,7 +1917,7 @@
       "completedAt": null
     },
     "40": {
-      "status": "pending",
+      "status": "complete",
       "category": 3,
       "subcategoryFile": "04a-navigating-conflict-repair",
       "file": "src/data/articles/category-03/04a-navigating-conflict-repair.tsx",
@@ -1929,7 +1929,7 @@
           "slug": "why-conflict-isnt-the-enemy",
           "title": "Myth: Conflict means the relationship is failing",
           "currentWords": 586,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -1937,7 +1937,7 @@
           "slug": "gottman-repair-attempt",
           "title": "Notice when the conversation is escalating",
           "currentWords": 658,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -1945,7 +1945,7 @@
           "slug": "fighting-fair-rules-of-engagement",
           "title": "Fighting Fair: Rules of Engagement for Productive Conflict",
           "currentWords": 866,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -1953,7 +1953,7 @@
           "slug": "stonewalling-shutdown-during-conflict",
           "title": "Stonewalling: What Happens When Someone Shuts Down During Conflict",
           "currentWords": 849,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -1961,10 +1961,10 @@
           "slug": "resolve-argument-no-one-backs-down",
           "title": "How to Resolve an Argument When Neither Person Wants to Back Down",
           "currentWords": 932,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T12:15:30Z"
     },
     "41": {
       "status": "pending",
@@ -2117,7 +2117,7 @@
       "completedAt": null
     },
     "44": {
-      "status": "pending",
+      "status": "complete",
       "category": 3,
       "subcategoryFile": "06a-friendships-social-circles",
       "file": "src/data/articles/category-03/06a-friendships-social-circles.tsx",
@@ -2129,7 +2129,7 @@
           "slug": "psychology-friendship-close-connections",
           "title": "The Psychology of Friendship: Why We Need Close Connections",
           "currentWords": 577,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -2137,7 +2137,7 @@
           "slug": "making-friends-adult-difficult",
           "title": "1. Loss of Proximity",
           "currentWords": 442,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -2145,7 +2145,7 @@
           "slug": "friendship-breakups-hurt-romantic",
           "title": "Friendship Breakups: Why They Hurt as Much as Romantic Ones",
           "currentWords": 595,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -2153,7 +2153,7 @@
           "slug": "maintaining-friendships-life-busy",
           "title": "Maintaining Friendships When Life Gets Busy",
           "currentWords": 572,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -2161,13 +2161,13 @@
           "slug": "friendship-quality-quantity-research",
           "title": "Quality vs. Quantity: How Many Friends Do You Actually Need?",
           "currentWords": 901,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T19:33:47Z"
     },
     "45": {
-      "status": "pending",
+      "status": "complete",
       "category": 3,
       "subcategoryFile": "06b-friendships-social-circles",
       "file": "src/data/articles/category-03/06b-friendships-social-circles.tsx",
@@ -2179,7 +2179,7 @@
           "slug": "one-sided-friendships-always-reaching-out",
           "title": "You Always Initiate Contact",
           "currentWords": 660,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -2187,7 +2187,7 @@
           "slug": "deepen-surface-level-friendship-meaningful",
           "title": "How to Deepen a Surface-Level Friendship Into a Meaningful Bond",
           "currentWords": 824,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -2195,7 +2195,7 @@
           "slug": "friendship-mental-health-social-circle-wellbeing",
           "title": "Friendship and Mental Health: How Your Social Circle Affects Your Wellbeing",
           "currentWords": 795,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -2203,7 +2203,7 @@
           "slug": "navigating-friend-groups-cliques-exclusion",
           "title": "Navigating Friend Groups: Cliques, Exclusion, and Social Dynamics",
           "currentWords": 855,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -2211,10 +2211,10 @@
           "slug": "online-friendships-digital-connections-valuable",
           "title": "Online Friendships: Are Digital Connections as Valuable as In-Person Ones?",
           "currentWords": 1010,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T00:10:00.000Z"
     },
     "46": {
       "status": "pending",
@@ -8562,286 +8562,6 @@
           "title": "ADHD and Autism Overlap: When Conditions Co-Occur",
           "currentWords": 211,
           "status": "pending"
-        },
-        {
-          "index": 5,
-          "catIdNum": 46,
-          "slug": "hyperkinetic-disorder",
-          "title": "Hyperkinetic Disorder: Understanding the ICD Perspective on Attention and Activity",
-          "currentWords": 211,
-          "status": "pending"
-        },
-        {
-          "index": 6,
-          "catIdNum": 47,
-          "slug": "adhd-executive-function",
-          "title": "ADHD and Executive Function: Why Simple Tasks Feel Impossible",
-          "currentWords": 226,
-          "status": "pending"
-        },
-        {
-          "index": 7,
-          "catIdNum": 48,
-          "slug": "autism-masking",
-          "title": "Autism and Masking: The Exhausting Work of Appearing Neurotypical",
-          "currentWords": 228,
-          "status": "pending"
-        },
-        {
-          "index": 8,
-          "catIdNum": 49,
-          "slug": "neurodevelopmental-mental-health",
-          "title": "Neurodevelopmental Conditions and Mental Health: The Comorbidity Challenge",
-          "currentWords": 192,
-          "status": "pending"
-        },
-        {
-          "index": 9,
-          "catIdNum": 50,
-          "slug": "support-accommodation",
-          "title": "Support and Accommodation: Building a Life That Works with Your Brain",
-          "currentWords": 220,
-          "status": "pending"
-        },
-        {
-          "index": 10,
-          "catIdNum": 51,
-          "slug": "anorexia-nervosa",
-          "title": "Anorexia Nervosa: More Than Just Not Eating",
-          "currentWords": 194,
-          "status": "pending"
-        },
-        {
-          "index": 11,
-          "catIdNum": 52,
-          "slug": "bulimia-nervosa",
-          "title": "Bulimia Nervosa: The Hidden Cycle of Bingeing and Purging",
-          "currentWords": 206,
-          "status": "pending"
-        },
-        {
-          "index": 12,
-          "catIdNum": 53,
-          "slug": "binge-eating-disorder",
-          "title": "Binge Eating Disorder: The Most Common Eating Disorder Most People Haven't Heard Of",
-          "currentWords": 212,
-          "status": "pending"
-        },
-        {
-          "index": 13,
-          "catIdNum": 54,
-          "slug": "arfid",
-          "title": "ARFID: When Food Avoidance Goes Beyond Picky Eating",
-          "currentWords": 205,
-          "status": "pending"
-        },
-        {
-          "index": 14,
-          "catIdNum": 55,
-          "slug": "orthorexia",
-          "title": "Orthorexia: When 'Healthy Eating' Becomes Unhealthy",
-          "currentWords": 196,
-          "status": "pending"
-        },
-        {
-          "index": 15,
-          "catIdNum": 56,
-          "slug": "eating-disorders-men",
-          "title": "Eating Disorders in Men: Breaking the Stereotype",
-          "currentWords": 204,
-          "status": "pending"
-        },
-        {
-          "index": 16,
-          "catIdNum": 57,
-          "slug": "eating-disorders-athletes",
-          "title": "Eating Disorders and Athletes: Performance Pressure and Body Control",
-          "currentWords": 221,
-          "status": "pending"
-        },
-        {
-          "index": 17,
-          "catIdNum": 58,
-          "slug": "eating-disorders-comorbidity",
-          "title": "The Relationship Between Eating Disorders and Other Mental Health Conditions",
-          "currentWords": 196,
-          "status": "pending"
-        },
-        {
-          "index": 18,
-          "catIdNum": 59,
-          "slug": "eating-disorder-recovery",
-          "title": "Recovery from Eating Disorders: What the Journey Actually Looks Like",
-          "currentWords": 209,
-          "status": "pending"
-        },
-        {
-          "index": 19,
-          "catIdNum": 60,
-          "slug": "supporting-eating-disorder",
-          "title": "Supporting Someone with an Eating Disorder: A Guide for Family and Friends",
-          "currentWords": 256,
-          "status": "pending"
-        },
-        {
-          "index": 20,
-          "catIdNum": 61,
-          "slug": "alcohol-use-disorder",
-          "title": "Alcohol Use Disorder: From Social Drinking to Dependence",
-          "currentWords": 185,
-          "status": "pending"
-        },
-        {
-          "index": 21,
-          "catIdNum": 62,
-          "slug": "substance-use-disorder",
-          "title": "Substance Use Disorder: Understanding Addiction Beyond Willpower",
-          "currentWords": 194,
-          "status": "pending"
-        },
-        {
-          "index": 22,
-          "catIdNum": 63,
-          "slug": "self-medication-hypothesis",
-          "title": "The Self-Medication Hypothesis: Why People Use Substances to Cope",
-          "currentWords": 188,
-          "status": "pending"
-        },
-        {
-          "index": 23,
-          "catIdNum": 64,
-          "slug": "insomnia-disorder",
-          "title": "Insomnia Disorder: When Sleep Problems Become Chronic",
-          "currentWords": 204,
-          "status": "pending"
-        },
-        {
-          "index": 24,
-          "catIdNum": 65,
-          "slug": "sleep-apnea",
-          "title": "Sleep Apnea: The Sleep Disorder That Stops Your Breathing",
-          "currentWords": 190,
-          "status": "pending"
-        },
-        {
-          "index": 25,
-          "catIdNum": 66,
-          "slug": "narcolepsy",
-          "title": "Narcolepsy: Living with Sudden Sleep Attacks",
-          "currentWords": 173,
-          "status": "pending"
-        },
-        {
-          "index": 26,
-          "catIdNum": 67,
-          "slug": "somatic-symptom-disorder",
-          "title": "Somatic Symptom Disorder: When Physical Symptoms Have No Medical Cause",
-          "currentWords": 195,
-          "status": "pending"
-        },
-        {
-          "index": 27,
-          "catIdNum": 68,
-          "slug": "illness-anxiety-disorder",
-          "title": "Illness Anxiety Disorder: When Health Anxiety Becomes Consuming",
-          "currentWords": 193,
-          "status": "pending"
-        },
-        {
-          "index": 28,
-          "catIdNum": 69,
-          "slug": "dual-diagnosis",
-          "title": "Dual Diagnosis: When Mental Illness and Addiction Co-Occur",
-          "currentWords": 191,
-          "status": "pending"
-        },
-        {
-          "index": 29,
-          "catIdNum": 70,
-          "slug": "harm-reduction",
-          "title": "Harm Reduction: A Pragmatic Approach to Substance Use",
-          "currentWords": 216,
-          "status": "pending"
-        },
-        {
-          "index": 30,
-          "catIdNum": 71,
-          "slug": "schizophrenia",
-          "title": "Schizophrenia: Beyond the Stereotypes to Understanding Reality",
-          "currentWords": 203,
-          "status": "pending"
-        },
-        {
-          "index": 31,
-          "catIdNum": 72,
-          "slug": "schizoaffective-disorder",
-          "title": "Schizoaffective Disorder: When Psychosis Meets Mood Episodes",
-          "currentWords": 175,
-          "status": "pending"
-        },
-        {
-          "index": 32,
-          "catIdNum": 73,
-          "slug": "understanding-psychosis",
-          "title": "What Psychosis Actually Is: Symptoms, Causes, and Treatment",
-          "currentWords": 183,
-          "status": "pending"
-        },
-        {
-          "index": 33,
-          "catIdNum": 74,
-          "slug": "narcissistic-personality-disorder",
-          "title": "Narcissistic Personality Disorder: Grandiosity Masking Fragile Self-Esteem",
-          "currentWords": 214,
-          "status": "pending"
-        },
-        {
-          "index": 34,
-          "catIdNum": 75,
-          "slug": "antisocial-personality-disorder",
-          "title": "Antisocial Personality Disorder: Understanding Persistent Pattern of Violating Rights",
-          "currentWords": 205,
-          "status": "pending"
-        },
-        {
-          "index": 35,
-          "catIdNum": 76,
-          "slug": "dependent-personality-disorder",
-          "title": "Dependent Personality Disorder: When Fear of Autonomy Becomes Disabling",
-          "currentWords": 219,
-          "status": "pending"
-        },
-        {
-          "index": 36,
-          "catIdNum": 77,
-          "slug": "schizoid-personality-disorder",
-          "title": "Schizoid Personality Disorder: Detachment from Social Relationships",
-          "currentWords": 222,
-          "status": "pending"
-        },
-        {
-          "index": 37,
-          "catIdNum": 78,
-          "slug": "adjustment-disorder",
-          "title": "Adjustment Disorder: When Life Stress Overwhelms Coping",
-          "currentWords": 204,
-          "status": "pending"
-        },
-        {
-          "index": 38,
-          "catIdNum": 79,
-          "slug": "personality-disorders-overview",
-          "title": "Personality Disorders Explained: Enduring Patterns of Inner Experience and Behavior",
-          "currentWords": 193,
-          "status": "pending"
-        },
-        {
-          "index": 39,
-          "catIdNum": 80,
-          "slug": "living-with-personality-disorder",
-          "title": "Living with a Personality Disorder: Recovery, Support, and Hope",
-          "currentWords": 209,
-          "status": "pending"
         }
       ],
       "completedAt": null
@@ -12503,6 +12223,349 @@
         }
       ],
       "completedAt": null
+    },
+    "254": {
+      "status": "pending",
+      "category": 13,
+      "subcategoryFile": "05-06-07-08-neurodevelopmental-eating-substance-psychotic",
+      "file": "src/data/articles/category-13/05-06-07-08-neurodevelopmental-eating-substance-psychotic.tsx",
+      "exportName": "neurodevelopmentalArticles",
+      "articles": [
+        {
+          "index": 5,
+          "catIdNum": 46,
+          "slug": "hyperkinetic-disorder",
+          "title": "Hyperkinetic Disorder: Understanding the ICD Perspective on Attention and Activity",
+          "currentWords": 211,
+          "status": "pending"
+        },
+        {
+          "index": 6,
+          "catIdNum": 47,
+          "slug": "adhd-executive-function",
+          "title": "ADHD and Executive Function: Why Simple Tasks Feel Impossible",
+          "currentWords": 226,
+          "status": "pending"
+        },
+        {
+          "index": 7,
+          "catIdNum": 48,
+          "slug": "autism-masking",
+          "title": "Autism and Masking: The Exhausting Work of Appearing Neurotypical",
+          "currentWords": 228,
+          "status": "pending"
+        },
+        {
+          "index": 8,
+          "catIdNum": 49,
+          "slug": "neurodevelopmental-mental-health",
+          "title": "Neurodevelopmental Conditions and Mental Health: The Comorbidity Challenge",
+          "currentWords": 192,
+          "status": "pending"
+        },
+        {
+          "index": 9,
+          "catIdNum": 50,
+          "slug": "support-accommodation",
+          "title": "Support and Accommodation: Building a Life That Works with Your Brain",
+          "currentWords": 220,
+          "status": "pending"
+        }
+      ]
+    },
+    "255": {
+      "status": "pending",
+      "category": 13,
+      "subcategoryFile": "05-06-07-08-neurodevelopmental-eating-substance-psychotic",
+      "file": "src/data/articles/category-13/05-06-07-08-neurodevelopmental-eating-substance-psychotic.tsx",
+      "exportName": "neurodevelopmentalArticles",
+      "articles": [
+        {
+          "index": 10,
+          "catIdNum": 51,
+          "slug": "anorexia-nervosa",
+          "title": "Anorexia Nervosa: More Than Just Not Eating",
+          "currentWords": 194,
+          "status": "pending"
+        },
+        {
+          "index": 11,
+          "catIdNum": 52,
+          "slug": "bulimia-nervosa",
+          "title": "Bulimia Nervosa: The Hidden Cycle of Bingeing and Purging",
+          "currentWords": 206,
+          "status": "pending"
+        },
+        {
+          "index": 12,
+          "catIdNum": 53,
+          "slug": "binge-eating-disorder",
+          "title": "Binge Eating Disorder: The Most Common Eating Disorder Most People Haven't Heard Of",
+          "currentWords": 212,
+          "status": "pending"
+        },
+        {
+          "index": 13,
+          "catIdNum": 54,
+          "slug": "arfid",
+          "title": "ARFID: When Food Avoidance Goes Beyond Picky Eating",
+          "currentWords": 205,
+          "status": "pending"
+        },
+        {
+          "index": 14,
+          "catIdNum": 55,
+          "slug": "orthorexia",
+          "title": "Orthorexia: When 'Healthy Eating' Becomes Unhealthy",
+          "currentWords": 196,
+          "status": "pending"
+        }
+      ]
+    },
+    "256": {
+      "status": "pending",
+      "category": 13,
+      "subcategoryFile": "05-06-07-08-neurodevelopmental-eating-substance-psychotic",
+      "file": "src/data/articles/category-13/05-06-07-08-neurodevelopmental-eating-substance-psychotic.tsx",
+      "exportName": "neurodevelopmentalArticles",
+      "articles": [
+        {
+          "index": 15,
+          "catIdNum": 56,
+          "slug": "eating-disorders-men",
+          "title": "Eating Disorders in Men: Breaking the Stereotype",
+          "currentWords": 204,
+          "status": "pending"
+        },
+        {
+          "index": 16,
+          "catIdNum": 57,
+          "slug": "eating-disorders-athletes",
+          "title": "Eating Disorders and Athletes: Performance Pressure and Body Control",
+          "currentWords": 221,
+          "status": "pending"
+        },
+        {
+          "index": 17,
+          "catIdNum": 58,
+          "slug": "eating-disorders-comorbidity",
+          "title": "The Relationship Between Eating Disorders and Other Mental Health Conditions",
+          "currentWords": 196,
+          "status": "pending"
+        },
+        {
+          "index": 18,
+          "catIdNum": 59,
+          "slug": "eating-disorder-recovery",
+          "title": "Recovery from Eating Disorders: What the Journey Actually Looks Like",
+          "currentWords": 209,
+          "status": "pending"
+        },
+        {
+          "index": 19,
+          "catIdNum": 60,
+          "slug": "supporting-eating-disorder",
+          "title": "Supporting Someone with an Eating Disorder: A Guide for Family and Friends",
+          "currentWords": 256,
+          "status": "pending"
+        }
+      ]
+    },
+    "257": {
+      "status": "pending",
+      "category": 13,
+      "subcategoryFile": "05-06-07-08-neurodevelopmental-eating-substance-psychotic",
+      "file": "src/data/articles/category-13/05-06-07-08-neurodevelopmental-eating-substance-psychotic.tsx",
+      "exportName": "neurodevelopmentalArticles",
+      "articles": [
+        {
+          "index": 20,
+          "catIdNum": 61,
+          "slug": "alcohol-use-disorder",
+          "title": "Alcohol Use Disorder: From Social Drinking to Dependence",
+          "currentWords": 185,
+          "status": "pending"
+        },
+        {
+          "index": 21,
+          "catIdNum": 62,
+          "slug": "substance-use-disorder",
+          "title": "Substance Use Disorder: Understanding Addiction Beyond Willpower",
+          "currentWords": 194,
+          "status": "pending"
+        },
+        {
+          "index": 22,
+          "catIdNum": 63,
+          "slug": "self-medication-hypothesis",
+          "title": "The Self-Medication Hypothesis: Why People Use Substances to Cope",
+          "currentWords": 188,
+          "status": "pending"
+        },
+        {
+          "index": 23,
+          "catIdNum": 64,
+          "slug": "insomnia-disorder",
+          "title": "Insomnia Disorder: When Sleep Problems Become Chronic",
+          "currentWords": 204,
+          "status": "pending"
+        },
+        {
+          "index": 24,
+          "catIdNum": 65,
+          "slug": "sleep-apnea",
+          "title": "Sleep Apnea: The Sleep Disorder That Stops Your Breathing",
+          "currentWords": 190,
+          "status": "pending"
+        }
+      ]
+    },
+    "258": {
+      "status": "pending",
+      "category": 13,
+      "subcategoryFile": "05-06-07-08-neurodevelopmental-eating-substance-psychotic",
+      "file": "src/data/articles/category-13/05-06-07-08-neurodevelopmental-eating-substance-psychotic.tsx",
+      "exportName": "neurodevelopmentalArticles",
+      "articles": [
+        {
+          "index": 25,
+          "catIdNum": 66,
+          "slug": "narcolepsy",
+          "title": "Narcolepsy: Living with Sudden Sleep Attacks",
+          "currentWords": 173,
+          "status": "pending"
+        },
+        {
+          "index": 26,
+          "catIdNum": 67,
+          "slug": "somatic-symptom-disorder",
+          "title": "Somatic Symptom Disorder: When Physical Symptoms Have No Medical Cause",
+          "currentWords": 195,
+          "status": "pending"
+        },
+        {
+          "index": 27,
+          "catIdNum": 68,
+          "slug": "illness-anxiety-disorder",
+          "title": "Illness Anxiety Disorder: When Health Anxiety Becomes Consuming",
+          "currentWords": 193,
+          "status": "pending"
+        },
+        {
+          "index": 28,
+          "catIdNum": 69,
+          "slug": "dual-diagnosis",
+          "title": "Dual Diagnosis: When Mental Illness and Addiction Co-Occur",
+          "currentWords": 191,
+          "status": "pending"
+        },
+        {
+          "index": 29,
+          "catIdNum": 70,
+          "slug": "harm-reduction",
+          "title": "Harm Reduction: A Pragmatic Approach to Substance Use",
+          "currentWords": 216,
+          "status": "pending"
+        }
+      ]
+    },
+    "259": {
+      "status": "pending",
+      "category": 13,
+      "subcategoryFile": "05-06-07-08-neurodevelopmental-eating-substance-psychotic",
+      "file": "src/data/articles/category-13/05-06-07-08-neurodevelopmental-eating-substance-psychotic.tsx",
+      "exportName": "neurodevelopmentalArticles",
+      "articles": [
+        {
+          "index": 30,
+          "catIdNum": 71,
+          "slug": "schizophrenia",
+          "title": "Schizophrenia: Beyond the Stereotypes to Understanding Reality",
+          "currentWords": 203,
+          "status": "pending"
+        },
+        {
+          "index": 31,
+          "catIdNum": 72,
+          "slug": "schizoaffective-disorder",
+          "title": "Schizoaffective Disorder: When Psychosis Meets Mood Episodes",
+          "currentWords": 175,
+          "status": "pending"
+        },
+        {
+          "index": 32,
+          "catIdNum": 73,
+          "slug": "understanding-psychosis",
+          "title": "What Psychosis Actually Is: Symptoms, Causes, and Treatment",
+          "currentWords": 183,
+          "status": "pending"
+        },
+        {
+          "index": 33,
+          "catIdNum": 74,
+          "slug": "narcissistic-personality-disorder",
+          "title": "Narcissistic Personality Disorder: Grandiosity Masking Fragile Self-Esteem",
+          "currentWords": 214,
+          "status": "pending"
+        },
+        {
+          "index": 34,
+          "catIdNum": 75,
+          "slug": "antisocial-personality-disorder",
+          "title": "Antisocial Personality Disorder: Understanding Persistent Pattern of Violating Rights",
+          "currentWords": 205,
+          "status": "pending"
+        }
+      ]
+    },
+    "260": {
+      "status": "pending",
+      "category": 13,
+      "subcategoryFile": "05-06-07-08-neurodevelopmental-eating-substance-psychotic",
+      "file": "src/data/articles/category-13/05-06-07-08-neurodevelopmental-eating-substance-psychotic.tsx",
+      "exportName": "neurodevelopmentalArticles",
+      "articles": [
+        {
+          "index": 35,
+          "catIdNum": 76,
+          "slug": "dependent-personality-disorder",
+          "title": "Dependent Personality Disorder: When Fear of Autonomy Becomes Disabling",
+          "currentWords": 219,
+          "status": "pending"
+        },
+        {
+          "index": 36,
+          "catIdNum": 77,
+          "slug": "schizoid-personality-disorder",
+          "title": "Schizoid Personality Disorder: Detachment from Social Relationships",
+          "currentWords": 222,
+          "status": "pending"
+        },
+        {
+          "index": 37,
+          "catIdNum": 78,
+          "slug": "adjustment-disorder",
+          "title": "Adjustment Disorder: When Life Stress Overwhelms Coping",
+          "currentWords": 204,
+          "status": "pending"
+        },
+        {
+          "index": 38,
+          "catIdNum": 79,
+          "slug": "personality-disorders-overview",
+          "title": "Personality Disorders Explained: Enduring Patterns of Inner Experience and Behavior",
+          "currentWords": 193,
+          "status": "pending"
+        },
+        {
+          "index": 39,
+          "catIdNum": 80,
+          "slug": "living-with-personality-disorder",
+          "title": "Living with a Personality Disorder: Recovery, Support, and Hope",
+          "currentWords": 209,
+          "status": "pending"
+        }
+      ]
     }
   }
 }

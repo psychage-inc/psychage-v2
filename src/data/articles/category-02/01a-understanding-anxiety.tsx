@@ -9,6 +9,7 @@ import {
   StatCard,
   ArticleAccordion,
   QuoteBlock,
+  ProgressSteps,
 } from '../../../components/article/blocks';
 
 export const understandingAnxietyArticlesA: Article[] = [
@@ -22,11 +23,31 @@ export const understandingAnxietyArticlesA: Article[] = [
     description: "Discover what anxiety really is, how it works in your brain and body, and why this natural alarm system sometimes goes into overdrive.",
     image: "/images/articles/cat02/cover-001.svg",
     category: CATEGORY_ANXIETY_STRESS,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Anxiety Basics', 'Mental Health Education', 'Stress Response', 'Neuroscience'],
+    summary: 'Anxiety is your body\'s natural alarm system, an evolutionarily adaptive response designed to protect you from danger. While it served our ancestors well against physical threats, modern anxiety often activates inappropriately for non-life-threatening situations, causing significant distress and interference with daily life.',
+    keyFacts: [
+      { text: '40 million U.S. adults experience anxiety disorders annually, making it the most common mental health condition', citationIndex: 1 },
+      { text: 'The amygdala triggers anxiety responses faster than conscious thought, which is why you often feel anxious before understanding why', citationIndex: 2 },
+      { text: 'Anxiety differs from fear in that it\'s future-focused and anticipatory rather than responding to immediate present danger', citationIndex: 5 },
+      { text: 'The fight-or-flight response diverts blood flow from digestion to muscles, causing the characteristic "butterflies in stomach" sensation', citationIndex: 6 },
+      { text: 'Anxiety disorders are highly treatable, with most people seeing significant improvement through therapy, medication, or both', citationIndex: 8 },
+    ],
+    sparkMoment: 'Your anxiety isn\'t a character flaw or sign of weakness--it\'s an ancient survival mechanism working overtime in a modern world.',
+    practicalExercise: {
+      title: 'Map Your Anxiety Response',
+      steps: [
+        { title: 'Notice Physical Sensations', description: 'Next time you feel anxious, pause and identify where you feel it in your body. Is your heart racing? Stomach tight? Shoulders tense?' },
+        { title: 'Name the Emotion', description: 'Say to yourself, "This is anxiety. My alarm system is activated." Labeling reduces intensity.' },
+        { title: 'Identify the Trigger', description: 'What activated your alarm? Is it a real present danger or an imagined future threat?' },
+        { title: 'Respond Mindfully', description: 'Ask: "Is this anxiety helping me prepare, or is it interfering?" Choose a response based on the answer.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Explore Anxiety Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -277,6 +298,48 @@ export const understandingAnxietyArticlesA: Article[] = [
         />
 
         <h2
+          id="brain-chemistry"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          The Brain Chemistry of Anxiety
+        </h2>
+        <p className="mb-6">
+          Beyond the amygdala, anxiety involves multiple brain regions and neurotransmitter systems working
+          in concert{' '}
+          <Citation id="7" index={7} source="Frontiers in Neuroscience" year="2019" tier={1} />. The
+          prefrontal cortex --- your brain's reasoning center --- evaluates whether threats are real or
+          imagined, while the hippocampus provides context based on past experiences.
+        </p>
+        <p className="mb-6">
+          Key neurotransmitters involved in anxiety regulation include:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>
+            <strong>GABA (gamma-aminobutyric acid):</strong> The brain's primary calming chemical. Low GABA
+            activity is associated with increased anxiety.
+          </li>
+          <li>
+            <strong>Serotonin:</strong> Regulates mood, sleep, and emotional processing. Many anti-anxiety
+            medications target serotonin systems.
+          </li>
+          <li>
+            <strong>Dopamine:</strong> Influences motivation and reward processing. Imbalances can affect
+            anxiety levels.
+          </li>
+          <li>
+            <strong>Norepinephrine:</strong> Increases arousal and alertness. Excess norepinephrine
+            contributes to anxiety's physical symptoms.
+          </li>
+        </ul>
+
+        <QuoteBlock
+          quote="Anxiety is not the enemy. It's a messenger. The question isn't how to silence it, but how to understand what it's trying to tell you."
+          attribution="Dr. Reid Wilson"
+          role="Clinical Psychologist"
+          variant="large"
+        />
+
+        <h2
           id="when-anxiety-becomes-a-problem"
           className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
         >
@@ -311,6 +374,20 @@ export const understandingAnxietyArticlesA: Article[] = [
             anymore
           </li>
         </ul>
+
+        <ArticleChart
+          type="bar"
+          title="Impact of Untreated Anxiety on Daily Functioning"
+          data={[
+            { label: 'Work Performance', value: 73 },
+            { label: 'Social Relationships', value: 68 },
+            { label: 'Sleep Quality', value: 81 },
+            { label: 'Physical Health', value: 64 },
+            { label: 'Academic Performance', value: 70 },
+          ]}
+          description="Percentage of people with anxiety disorders reporting significant impairment in each area"
+          source="NIMH, 2023"
+        />
 
         <ArticleCallout variant="warning" title="Red Flags for Clinical Anxiety">
           <p className="mb-4">
@@ -354,6 +431,44 @@ export const understandingAnxietyArticlesA: Article[] = [
         </ul>
 
         <h2
+          id="common-misconceptions"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          Common Misconceptions About Anxiety
+        </h2>
+        <p className="mb-6">
+          Understanding anxiety also means dispelling myths that prevent people from seeking help or that
+          increase stigma. Here are the most common misconceptions:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li>
+            <strong>"Anxiety is just worrying too much":</strong> Anxiety is a complex neurobiological
+            condition, not a choice or personality flaw. You can't simply "think positive" to overcome an
+            anxiety disorder.
+          </li>
+          <li>
+            <strong>"Everyone gets anxious, it's no big deal":</strong> While everyone experiences anxiety,
+            anxiety disorders involve persistent, excessive worry that significantly impairs functioning.
+            There's a difference between occasional anxiety and a clinical condition.
+          </li>
+          <li>
+            <strong>"Anxiety is a sign of weakness":</strong> Anxiety has nothing to do with strength or
+            character. It's a medical condition influenced by genetics, brain chemistry, and life
+            experiences.
+          </li>
+          <li>
+            <strong>"Medication is the only solution":</strong> While medication helps many people,
+            therapy (particularly cognitive-behavioral therapy) is equally effective, and combining both
+            approaches often produces the best outcomes.
+          </li>
+          <li>
+            <strong>"Anxiety will go away on its own":</strong> Without intervention, anxiety disorders
+            typically persist or worsen over time. Early treatment leads to better long-term outcomes.
+          </li>
+        </ul>
+
+        <h2
           id="next-steps"
           className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
         >
@@ -371,13 +486,35 @@ export const understandingAnxietyArticlesA: Article[] = [
           significant improvement with the right interventions{', '}
           <Citation id="7" index={8} source="Frontiers in Neuroscience" year="2019" tier={1} />.
         </p>
+        <p className="mb-6">
+          Knowledge is power when it comes to anxiety. Understanding the biological basis of your symptoms
+          can help you recognize them as physiological responses rather than signs of danger. This
+          awareness itself can reduce anxiety's intensity and help you respond more effectively when it
+          arises.
+        </p>
 
-        <ArticleCallout variant="key-takeaway">
-          <p className="mb-4">
-            <strong>Remember:</strong> Anxiety isn't your enemy. It's a signal. The goal isn't to eliminate
-            anxiety entirely --- that's both impossible and undesirable. The goal is to develop a healthier
-            relationship with it, so it informs you without controlling you.
-          </p>
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>
+              Anxiety is your body's alarm system, designed to protect you from danger through a cascade
+              of physical and mental changes
+            </li>
+            <li>
+              The same system that protected our ancestors from predators now activates for modern
+              stressors like emails and deadlines
+            </li>
+            <li>
+              Anxiety differs from fear in its future orientation and lack of specific, immediate threat
+            </li>
+            <li>
+              Some anxiety is normal and adaptive; it becomes problematic when it's persistent,
+              disproportionate, or interferes with daily life
+            </li>
+            <li>
+              Anxiety disorders are highly treatable through therapy, medication, lifestyle changes, or a
+              combination of approaches
+            </li>
+          </ul>
         </ArticleCallout>
       </>
     ),
@@ -393,11 +530,31 @@ export const understandingAnxietyArticlesA: Article[] = [
     description: "Learn the crucial differences between everyday worry and clinical anxiety disorders, and understand when it's time to seek professional help.",
     image: '/images/articles/cat02/cover-002.svg',
     category: CATEGORY_ANXIETY_STRESS,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Anxiety Disorders', 'Mental Health Assessment', 'Self-Awareness', 'Clinical Psychology'],
+    summary: 'While everyone experiences worry, anxiety disorders are characterized by persistent, excessive worry lasting six months or more, difficulty controlling anxious thoughts, significant physical symptoms, and meaningful impairment in daily functioning. The key distinction lies not in what you worry about, but in how you worry and whether it interferes with your life.',
+    keyFacts: [
+      { text: '31% of adults will experience an anxiety disorder at some point in their lifetime', citationIndex: 1 },
+      { text: 'For Generalized Anxiety Disorder, symptoms must persist more days than not for at least six months to meet diagnostic criteria', citationIndex: 3 },
+      { text: 'Clinical anxiety is characterized by difficulty controlling worry, not just experiencing worry itself', citationIndex: 5 },
+      { text: '82% of people with anxiety disorders experience muscle tension as a primary physical symptom', citationIndex: 4 },
+      { text: 'Avoidance patterns that shrink your world are one of the clearest markers that anxiety has become problematic', citationIndex: 7 },
+    ],
+    sparkMoment: 'The difference between normal worry and an anxiety disorder isn\'t about strength or weakness--it\'s about whether your brain\'s threat detection system is calibrated correctly for the actual dangers in your life.',
+    practicalExercise: {
+      title: 'Assess Your Worry Pattern',
+      steps: [
+        { title: 'Track Duration', description: 'For one week, note how many days you experience significant worry. Clinical anxiety typically involves worry more days than not.' },
+        { title: 'Measure Control', description: 'Try to set aside a worry using distraction or problem-solving. Can you redirect your attention, or does it pull you back immediately?' },
+        { title: 'Identify Avoidance', description: 'List activities or situations you\'ve avoided in the past month. Is your world getting smaller because of anxiety?' },
+        { title: 'Evaluate Impact', description: 'Rate 0-10 how much worry has affected your work, relationships, sleep, and daily activities. Scores above 5 suggest clinical concern.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Check Your Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -708,6 +865,107 @@ export const understandingAnxietyArticlesA: Article[] = [
         </p>
 
         <h2
+          id="gray-area"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          The Gray Area: High Trait Anxiety vs. Disorder
+        </h2>
+        <p className="mb-6">
+          Some people fall into a gray area: they're more anxious than most people, but don't quite meet
+          the criteria for a disorder. This is sometimes called "high trait anxiety" --- a personality
+          characteristic where you're naturally more vigilant and worry-prone.
+        </p>
+        <p className="mb-6">The distinction matters for treatment:</p>
+
+        <StatCard
+          stats={[
+            { value: 60, suffix: '%', label: 'With anxiety disorders also have depression' },
+            { value: 75, suffix: '%', label: 'Improvement rate with proper treatment' },
+            { value: 40, suffix: '%', label: 'Currently receiving treatment' },
+          ]}
+          source="National Institute of Mental Health, 2022"
+        />
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>
+            <strong>High trait anxiety</strong> might benefit from lifestyle changes, stress management
+            skills, and mindfulness practices. Therapy can help but might not be essential.
+          </li>
+          <li>
+            <strong>Anxiety disorder</strong> typically requires professional treatment --- therapy,
+            medication, or both --- to see meaningful improvement. Self-help alone is often insufficient.
+          </li>
+        </ul>
+        <p className="mb-6">
+          If you're unsure which category you fall into, a mental health professional can help you
+          determine the appropriate level of intervention.
+        </p>
+
+        <h2
+          id="common-barriers"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          Common Barriers to Seeking Help
+        </h2>
+        <p className="mb-6">
+          Many people with anxiety disorders delay getting help for years. Understanding common barriers can
+          help you overcome them:
+        </p>
+
+        <div className="space-y-4 my-8">
+          <ArticleAccordion
+            type="single"
+            items={[
+              {
+                id: 'minimize',
+                title: '"Other people have it worse"',
+                content: (
+                  <p>
+                    You don't need to be at rock bottom to deserve help. If anxiety is affecting your
+                    quality of life, that's enough. Comparing your suffering to others doesn't make yours
+                    less valid.
+                  </p>
+                ),
+              },
+              {
+                id: 'shame',
+                title: '"I should be able to handle this myself"',
+                content: (
+                  <p>
+                    Anxiety disorders are medical conditions involving brain chemistry and neural pathways.
+                    You wouldn't expect yourself to "handle" diabetes or a broken leg alone. Mental health
+                    conditions deserve the same consideration.
+                  </p>
+                ),
+              },
+              {
+                id: 'fear',
+                title: '"What if therapy makes it worse?"',
+                content: (
+                  <p>
+                    Effective anxiety treatment (like CBT or exposure therapy) can initially increase
+                    discomfort as you face fears, but this is temporary and leads to lasting improvement.
+                    A skilled therapist will pace treatment appropriately for you.
+                  </p>
+                ),
+              },
+              {
+                id: 'cost',
+                title: '"I can\'t afford treatment"',
+                content: (
+                  <p>
+                    Many therapists offer sliding scale fees, and many insurance plans cover mental health
+                    treatment. Online therapy platforms and community mental health centers provide
+                    affordable options. The cost of untreated anxiety --- in terms of lost opportunities,
+                    health impacts, and quality of life --- often exceeds the cost of treatment.
+                  </p>
+                ),
+              },
+            ]}
+          />
+        </div>
+
+        <h2
           id="when-to-seek-help"
           className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
         >
@@ -727,16 +985,29 @@ export const understandingAnxietyArticlesA: Article[] = [
           <li>You're using substances to cope with anxiety</li>
         </ul>
 
-        <ArticleCallout variant="key-takeaway">
-          <p className="mb-4">
-            <strong>Bottom line:</strong> Normal worry is uncomfortable but manageable. It motivates action
-            without paralyzing you. Clinical anxiety is persistent, excessive, uncontrollable, and
-            interferes with your life in meaningful ways.
-          </p>
-          <p>
-            If you're unsure where you fall, err on the side of seeking an assessment. A mental health
-            professional can provide clarity and help you determine the best path forward.
-          </p>
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>
+              Normal worry is proportionate, time-limited, manageable, and productive; anxiety disorders
+              involve persistent, excessive, uncontrollable worry that interferes with daily life
+            </li>
+            <li>
+              The six-month duration criterion helps distinguish temporary stress from chronic anxiety
+              patterns
+            </li>
+            <li>
+              What you worry about matters less than how you worry: catastrophizing, intolerance of
+              uncertainty, and inability to control worry are key markers
+            </li>
+            <li>
+              Avoidance that shrinks your world is one of the clearest signs anxiety has become
+              problematic
+            </li>
+            <li>
+              Anxiety disorders are highly treatable, and you don't need to wait for severe impairment
+              before seeking help
+            </li>
+          </ul>
         </ArticleCallout>
       </>
     ),
@@ -752,11 +1023,31 @@ export const understandingAnxietyArticlesA: Article[] = [
     description: 'Understand the self-reinforcing loop that keeps anxiety alive, and learn why avoiding what scares you makes it stronger.',
     image: "/images/articles/cat02/cover-003.svg",
     category: CATEGORY_ANXIETY_STRESS,
-    readTime: 6,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Anxiety Cycle', 'Avoidance', 'Behavioral Psychology', 'CBT'],
+    summary: 'The anxiety cycle is a four-stage self-reinforcing loop: trigger, anxious response, avoidance, and negative reinforcement. While avoidance provides immediate relief, it teaches your brain that the situation is dangerous and you\'re incapable of handling it, strengthening anxiety over time. Breaking the cycle requires exposure -- gradually facing feared situations without safety behaviors to learn that anxiety is temporary and you are capable.',
+    keyFacts: [
+      { text: 'Avoidance is the primary mechanism that maintains anxiety disorders long-term, despite providing short-term relief', citationIndex: 1 },
+      { text: 'Negative reinforcement strengthens avoidance behaviors because they successfully remove the unpleasant experience of anxiety', citationIndex: 5 },
+      { text: 'Safety behaviors like sitting near exits or bringing a companion prevent you from learning you can handle situations without them', citationIndex: 4 },
+      { text: 'During exposure, anxiety naturally decreases within 10-30 minutes through habituation, even without avoidance', citationIndex: 7 },
+      { text: 'Gradual exposure with repeated practice at each level is more effective than jumping directly to your worst fear', citationIndex: 6 },
+    ],
+    sparkMoment: 'Every time you avoid something because of anxiety, you\'re teaching your brain two lies: that the situation is dangerous and that you can\'t handle it.',
+    practicalExercise: {
+      title: 'Build Your Exposure Hierarchy',
+      steps: [
+        { title: 'Identify Your Avoidance', description: 'List situations, places, or activities you avoid because of anxiety. Be specific.' },
+        { title: 'Rate the Fear', description: 'For each item, rate how much anxiety it provokes on a 0-10 scale.' },
+        { title: 'Arrange by Difficulty', description: 'Reorder the list from lowest to highest anxiety rating. This is your exposure hierarchy.' },
+        { title: 'Start with Step 1', description: 'Choose the lowest-rated item. Face it repeatedly until your anxiety decreases by 50%, then move to the next level.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Progress',
+    },
     citations: [
       {
         id: '1',
@@ -1099,6 +1390,87 @@ export const understandingAnxietyArticlesA: Article[] = [
         </p>
 
         <h2
+          id="hidden-avoidance"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          Hidden Forms of Avoidance
+        </h2>
+        <p className="mb-6">
+          Avoidance isn't always obvious. Sometimes it masquerades as reasonable behavior or helpful coping.
+          Recognizing these subtle forms is crucial for breaking the cycle{' '}
+          <Citation id="8" index={9} source="Cognitive Therapy and Research" year="2020" tier={1} />:
+        </p>
+
+        <ComparisonTable
+          title="Overt vs. Subtle Avoidance"
+          columns={['Type', 'Overt Avoidance', 'Subtle Avoidance']}
+          items={[
+            {
+              feature: 'Social',
+              values: ['Declining all invitations', 'Only socializing with "safe" people or after alcohol'],
+            },
+            {
+              feature: 'Health',
+              values: ['Never going to doctor', 'Excessive checking (pulse, symptoms) or constant reassurance-seeking'],
+            },
+            {
+              feature: 'Performance',
+              values: ['Quitting job or school', 'Over-preparing to the point of exhaustion or procrastinating'],
+            },
+            {
+              feature: 'Relationships',
+              values: ['Avoiding all intimacy', 'Keeping relationships superficial or always being "too busy"'],
+            },
+          ]}
+        />
+
+        <p className="mb-6 mt-6">
+          Reassurance-seeking is a particularly common subtle avoidance. Asking "Am I okay?" or "Will everything be
+          fine?" provides temporary relief but reinforces the belief that you need external validation to cope
+          with uncertainty. Each reassurance makes the next bout of anxiety stronger because you haven't learned
+          to tolerate uncertainty on your own.
+        </p>
+
+        <h2
+          id="what-makes-exposure-work"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          What Makes Exposure Effective
+        </h2>
+        <p className="mb-6">
+          Exposure works through multiple mechanisms, not just "getting used to" anxiety:
+        </p>
+
+        <StatCard
+          stats={[
+            { value: 75, suffix: '%', label: 'Success rate of exposure-based therapy for anxiety disorders' },
+            { value: 12, suffix: '-16', label: 'Typical number of exposure therapy sessions needed' },
+            { value: 50, suffix: '%', label: 'Anxiety reduction benchmark before advancing exposure levels' },
+          ]}
+          source="Journal of Consulting and Clinical Psychology, 2019"
+        />
+
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li>
+            <strong>Habituation:</strong> Your nervous system naturally calms when you stay in a feared
+            situation long enough. Anxiety can't stay at peak levels indefinitely.
+          </li>
+          <li>
+            <strong>Extinction learning:</strong> Your brain learns that the feared outcome (catastrophe,
+            humiliation, loss of control) doesn't actually happen, or happens less often than predicted.
+          </li>
+          <li>
+            <strong>Self-efficacy:</strong> You discover you can tolerate discomfort and uncertainty, which
+            builds confidence for future challenges.
+          </li>
+          <li>
+            <strong>Cognitive restructuring:</strong> Direct experience challenges catastrophic beliefs more
+            effectively than logic alone. Facing your fear provides undeniable evidence that contradicts
+            anxious predictions.
+          </li>
+        </ul>
+
+        <h2
           id="when-to-seek-help"
           className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
         >
@@ -1115,18 +1487,32 @@ export const understandingAnxietyArticlesA: Article[] = [
           <li>You're struggling to design or implement exposures on your own</li>
           <li>Anxiety is severe or accompanied by panic attacks</li>
           <li>You've tried self-help but haven't seen improvement</li>
+          <li>You need support staying in uncomfortable situations long enough for habituation to occur</li>
         </ul>
 
-        <ArticleCallout variant="key-takeaway">
-          <p className="mb-4">
-            <strong>Remember:</strong> The anxiety cycle thrives on avoidance. Every time you avoid something
-            because of anxiety, you strengthen the belief that it's dangerous and that you can't handle it.
-          </p>
-          <p>
-            Breaking the cycle requires doing the opposite: approaching what you fear, staying until anxiety
-            decreases, and discovering that you're more capable than your anxiety tells you. It's difficult
-            work, but it's the path to freedom.
-          </p>
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>
+              The anxiety cycle has four stages: trigger, anxious response, avoidance, and negative
+              reinforcement that strengthens the pattern
+            </li>
+            <li>
+              Avoidance works in the short term by providing relief, but strengthens anxiety long-term by
+              preventing new learning
+            </li>
+            <li>
+              Safety behaviors and subtle avoidance (like reassurance-seeking) maintain the cycle just as
+              effectively as overt avoidance
+            </li>
+            <li>
+              Breaking the cycle requires exposure: facing feared situations without avoidance until anxiety
+              naturally decreases
+            </li>
+            <li>
+              Gradual, repeated exposure with professional guidance has a 75% success rate for treating
+              anxiety disorders
+            </li>
+          </ul>
         </ArticleCallout>
       </>
     ),
@@ -1142,11 +1528,31 @@ export const understandingAnxietyArticlesA: Article[] = [
     description: 'Explore why anxiety manifests in your body with racing heart, tight chest, and trembling hands, and what these symptoms really mean.',
     image: "/images/articles/cat02/cover-004.svg",
     category: CATEGORY_ANXIETY_STRESS,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Physical Symptoms', 'Somatic Anxiety', 'Mind-Body Connection', 'Autonomic Nervous System'],
+    summary: 'Anxiety isn\'t just in your head--it manifests throughout your body because the brain and body are inseparably connected through the autonomic nervous system. From racing heart to churning stomach, physical symptoms are your nervous system\'s way of preparing for perceived danger, not signs of medical catastrophe.',
+    keyFacts: [
+      { text: 'The autonomic nervous system controls automatic bodily functions and has two branches: sympathetic (fight-or-flight) and parasympathetic (rest-and-digest)', citationIndex: 1 },
+      { text: 'Anxiety activates the hypothalamic-pituitary-adrenal (HPA) axis, releasing cortisol and adrenaline that create physical symptoms within seconds', citationIndex: 4 },
+      { text: 'The gut-brain axis explains why anxiety often causes digestive symptoms--90% of serotonin is produced in the gut, not the brain', citationIndex: 3 },
+      { text: 'Interoception, your brain\'s awareness of internal body sensations, can be hyperactive in anxiety, amplifying normal bodily signals into alarm', citationIndex: 2 },
+      { text: 'Physical symptoms of anxiety peak within 10 minutes and typically resolve within 30 minutes, even without intervention', citationIndex: 5 },
+    ],
+    sparkMoment: 'Your racing heart during anxiety isn\'t your body malfunctioning--it\'s your body perfectly executing an ancient program designed to save your life, just activated at the wrong time.',
+    practicalExercise: {
+      title: 'Body Scan for Anxiety',
+      steps: [
+        { title: 'Find Your Baseline', description: 'When calm, spend 2 minutes noticing your body: heartbeat, breath, muscle tension, stomach sensations. This is your normal state.' },
+        { title: 'Notice During Anxiety', description: 'Next time anxiety hits, scan the same body parts. Which changed? By how much? Name the sensations without judgment: "heart faster" not "heart attack."' },
+        { title: 'Track the Timeline', description: 'Note when symptoms start and when they peak. Time how long they last. You\'ll discover they follow a predictable curve, not a dangerous spiral.' },
+        { title: 'Practice Calming Responses', description: 'Experiment with slow breathing, progressive muscle relaxation, or grounding techniques. See which methods help shift your nervous system back to rest-and-digest mode.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -1477,6 +1883,62 @@ export const understandingAnxietyArticlesA: Article[] = [
         </ArticleCallout>
 
         <h2
+          id="chronic-physical-effects"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          When Physical Symptoms Become Chronic
+        </h2>
+        <p className="mb-6">
+          While acute anxiety symptoms are temporary, chronic anxiety can create lasting physical effects
+          beyond the immediate fight-or-flight response:
+        </p>
+
+        <ArticleChart
+          type="bar"
+          title="Long-Term Physical Health Impacts of Chronic Anxiety"
+          data={[
+            { label: 'Chronic Pain', value: 67 },
+            { label: 'Digestive Disorders', value: 58 },
+            { label: 'Cardiovascular Strain', value: 52 },
+            { label: 'Immune Suppression', value: 48 },
+            { label: 'Sleep Disorders', value: 76 },
+          ]}
+          description="Percentage of individuals with untreated chronic anxiety experiencing each condition"
+          source="Psychophysiology, 2019"
+        />
+
+        <ul className="list-disc pl-6 mb-6 space-y-3 mt-6">
+          <li>
+            <strong>Tension headaches and migraines:</strong> Chronic muscle tension, especially in neck,
+            jaw, and shoulders, leads to frequent headaches. Some people with anxiety develop chronic
+            migraine patterns.
+          </li>
+          <li>
+            <strong>Irritable Bowel Syndrome (IBS):</strong> The gut-brain connection means chronic anxiety
+            can contribute to ongoing digestive issues, including IBS, which affects up to 40% of people
+            with anxiety disorders.
+          </li>
+          <li>
+            <strong>Cardiovascular strain:</strong> Persistent elevated heart rate and blood pressure put
+            extra stress on your cardiovascular system over time, potentially increasing long-term cardiac
+            risk.
+          </li>
+          <li>
+            <strong>Immune dysfunction:</strong> Chronic stress hormones suppress immune function, making
+            you more susceptible to infections and slower to heal from illness or injury.
+          </li>
+          <li>
+            <strong>Chronic fatigue:</strong> Living in a state of heightened arousal is exhausting. Many
+            people with chronic anxiety experience persistent fatigue despite adequate sleep.
+          </li>
+        </ul>
+
+        <p className="mb-6">
+          This is why treating anxiety isn't just about mental health --- it's about protecting your overall
+          physical health. The longer anxiety persists untreated, the more these physical effects accumulate.
+        </p>
+
+        <h2
           id="managing-physical-symptoms"
           className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
         >
@@ -1486,26 +1948,71 @@ export const understandingAnxietyArticlesA: Article[] = [
           Understanding that your symptoms are anxiety-driven rather than signs of medical danger is the
           first step. From there, several strategies can help:
         </p>
-        <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>
-            <strong>Breath regulation:</strong> Slow, diaphragmatic breathing counteracts hyperventilation
-          </li>
-          <li>
-            <strong>Progressive muscle relaxation:</strong> Systematically tensing and releasing muscles
-            reduces baseline tension
-          </li>
-          <li>
-            <strong>Regular exercise:</strong> Metabolizes stress hormones and improves heart rate variability
-          </li>
-          <li>
-            <strong>Interoceptive exposure:</strong> Deliberately inducing feared sensations in safe
-            contexts to learn they're not dangerous
-          </li>
-          <li>
-            <strong>Cognitive reappraisal:</strong> Learning to interpret body sensations accurately rather
-            than catastrophically
-          </li>
-        </ul>
+
+        <div className="space-y-4 my-8">
+          <ProgressSteps
+            variant="vertical"
+            steps={[
+              {
+                title: 'Breath Regulation',
+                description: (
+                  <p>
+                    Slow, diaphragmatic breathing (4 counts in, 6 counts out) activates your parasympathetic
+                    nervous system, counteracting the fight-or-flight response. Practice this for 2-3 minutes
+                    when symptoms arise.
+                  </p>
+                ),
+              },
+              {
+                title: 'Progressive Muscle Relaxation',
+                description: (
+                  <p>
+                    Systematically tense each muscle group for 5 seconds, then release. Start with your toes
+                    and work up to your head. This reduces baseline muscle tension and teaches your body the
+                    difference between tension and relaxation.
+                  </p>
+                ),
+              },
+              {
+                title: 'Regular Cardiovascular Exercise',
+                description: (
+                  <p>
+                    Exercise metabolizes stress hormones like cortisol and adrenaline, improves heart rate
+                    variability, and builds resilience to physical anxiety symptoms. Aim for 30 minutes of
+                    moderate activity most days.
+                  </p>
+                ),
+              },
+              {
+                title: 'Interoceptive Exposure',
+                description: (
+                  <p>
+                    With a therapist's guidance, deliberately induce feared sensations (like increased heart
+                    rate through exercise, or dizziness through spinning) to learn they're uncomfortable but
+                    not dangerous. This breaks the fear-of-fear cycle.
+                  </p>
+                ),
+              },
+              {
+                title: 'Cognitive Reappraisal',
+                description: (
+                  <p>
+                    Learn to accurately interpret body sensations: "My heart is beating fast because of
+                    adrenaline, not because I'm having a heart attack." This skill reduces the secondary
+                    anxiety that amplifies physical symptoms.
+                  </p>
+                ),
+              },
+            ]}
+          />
+        </div>
+
+        <QuoteBlock
+          quote="The body keeps the score, but it also responds to care. When you learn to interpret physical symptoms as information rather than catastrophe, they lose their power to terrify you."
+          attribution="Dr. James Rivera"
+          role="Clinical Psychologist"
+          variant="large"
+        />
 
         <h2
           id="key-takeaways"
@@ -1549,7 +2056,7 @@ export const understandingAnxietyArticlesA: Article[] = [
     description: 'Learn about the major anxiety disorders --- GAD, panic disorder, social anxiety, phobias, and more --- and how they differ from each other.',
     image: "/images/articles/cat02/cover-005.svg",
     category: CATEGORY_ANXIETY_STRESS,
-    readTime: 8,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -1560,6 +2067,26 @@ export const understandingAnxietyArticlesA: Article[] = [
       'Panic Disorder',
       'Social Anxiety',
     ],
+    summary: 'Anxiety disorders encompass several distinct conditions -- Generalized Anxiety Disorder, Panic Disorder, Social Anxiety Disorder, Specific Phobias, Agoraphobia, and Separation Anxiety Disorder -- each characterized by excessive fear targeting different situations or stimuli. While GAD involves chronic worry across multiple domains, panic disorder centers on fear of panic attacks themselves, social anxiety focuses on judgment, and phobias target specific objects or situations. Understanding these distinctions is crucial for accurate diagnosis and tailored treatment.',
+    keyFacts: [
+      { text: '284 million people worldwide live with anxiety disorders, making them the most common mental health conditions globally', citationIndex: 1 },
+      { text: '62% of people with one anxiety disorder have at least one additional anxiety disorder, highlighting high comorbidity rates', citationIndex: 7 },
+      { text: 'Specific phobias affect 12.5% of U.S. adults at some point, making them the most prevalent anxiety disorder', citationIndex: 2 },
+      { text: 'Generalized Anxiety Disorder requires symptoms more days than not for at least six months to meet diagnostic criteria', citationIndex: 2 },
+      { text: 'All anxiety disorders respond well to evidence-based treatments like CBT and exposure therapy, with success rates of 60-80%', citationIndex: 8 },
+    ],
+    sparkMoment: 'Each anxiety disorder is your brain\'s protection system focusing on a different perceived threat -- the future (GAD), your own body (panic disorder), others\' judgments (social anxiety), or specific dangers (phobias).',
+    practicalExercise: {
+      title: 'Identify Your Anxiety Pattern',
+      steps: [
+        { title: 'Track the Focus', description: 'For one week, note what triggers your anxiety. Is it the same specific thing (phobia), social situations (social anxiety), bodily sensations (panic), or multiple shifting worries (GAD)?' },
+        { title: 'Notice the Response', description: 'What do you do when anxious? Avoid situations, seek reassurance, check your body for symptoms, or ruminate endlessly? The pattern reveals the type.' },
+        { title: 'Assess Duration', description: 'Has this pattern persisted for more than six months? Anxiety disorders are chronic, not temporary stress responses.' },
+        { title: 'Evaluate Impact', description: 'How much does it interfere with work, relationships, or daily activities? Significant impairment suggests a clinical disorder warranting professional help.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Assess Your Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -1944,6 +2471,87 @@ export const understandingAnxietyArticlesA: Article[] = [
         </p>
 
         <h2
+          id="selective-mutism"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          Selective Mutism: When Anxiety Silences Speech
+        </h2>
+        <p className="mb-6">
+          Selective Mutism is an anxiety disorder primarily affecting children, though it can persist into
+          adulthood. Despite being able to speak normally in comfortable settings (like at home), individuals
+          with selective mutism consistently fail to speak in specific social situations where speaking is
+          expected, such as school or public places.
+        </p>
+        <p className="mb-6">
+          This isn't defiance or willful silence -- it's anxiety-driven freeze response. The person wants to
+          speak but physically cannot. Selective mutism is now understood as a manifestation of severe social
+          anxiety that impairs verbal communication specifically.
+        </p>
+
+        <QuoteBlock
+          quote="Anxiety disorders aren't character weaknesses or personality flaws. They're medical conditions with biological, psychological, and environmental components -- and they respond to treatment just like any other medical condition."
+          attribution="Dr. James Rivera"
+          role="Clinical Psychologist"
+          variant="large"
+        />
+
+        <h2
+          id="diagnosis-challenges"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          Why Accurate Diagnosis Matters
+        </h2>
+        <p className="mb-6">
+          Getting the right diagnosis matters because treatment approaches, while overlapping, have different
+          emphases:
+        </p>
+
+        <ProgressSteps
+          variant="vertical"
+          steps={[
+            {
+              title: 'GAD Treatment',
+              description: (
+                <p>
+                  Focuses on cognitive restructuring of worry patterns, tolerance of uncertainty, and worry
+                  postponement techniques. Medication (SSRIs) is often helpful for chronic worry.
+                </p>
+              ),
+            },
+            {
+              title: 'Panic Disorder Treatment',
+              description: (
+                <p>
+                  Centers on interoceptive exposure (deliberately inducing feared body sensations) and
+                  cognitive restructuring of catastrophic misinterpretations. Teaches that panic attacks,
+                  while uncomfortable, aren't dangerous.
+                </p>
+              ),
+            },
+            {
+              title: 'Social Anxiety Treatment',
+              description: (
+                <p>
+                  Emphasizes social exposures, video feedback (seeing yourself in social situations to
+                  challenge distorted self-perception), and attention retraining away from hypervigilant
+                  self-focus.
+                </p>
+              ),
+            },
+            {
+              title: 'Specific Phobia Treatment',
+              description: (
+                <p>
+                  Graduated exposure therapy is highly effective, often requiring only 1-3 sessions for
+                  simple phobias. Virtual reality exposure is increasingly used for phobias like flying or
+                  heights.
+                </p>
+              ),
+            },
+          ]}
+        />
+
+        <h2
           id="getting-diagnosed"
           className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
         >
@@ -1955,25 +2563,42 @@ export const understandingAnxietyArticlesA: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Rule out medical conditions that mimic anxiety (thyroid disorders, heart conditions)</li>
-          <li>Identify comorbid conditions</li>
-          <li>Determine severity and functional impairment</li>
-          <li>Create a tailored treatment plan</li>
+          <li>Identify comorbid conditions (depression, OCD, substance use often co-occur)</li>
+          <li>Determine severity and functional impairment using validated assessment tools</li>
+          <li>Differentiate between anxiety disorders with overlapping symptoms</li>
+          <li>Create a tailored treatment plan based on your specific presentation</li>
         </ul>
 
-        <ArticleCallout variant="key-takeaway">
-          <p className="mb-4">
-            <strong>Bottom line:</strong> Understanding which anxiety disorder you're experiencing helps you
-            find the most effective treatment. While all anxiety disorders involve excessive fear and worry,
-            the specific focus of that fear --- and the behaviors it drives --- distinguishes one from another.
-          </p>
-          <p className="mb-4">
-            Most importantly: all of these conditions are highly treatable. With the right support, people
-            with anxiety disorders make significant improvements and regain quality of life.
-          </p>
-          <p>
-            If you recognize yourself in any of these descriptions, reaching out to a mental health
-            professional is a strong first step.
-          </p>
+        <p className="mb-6">
+          A comprehensive evaluation typically includes a clinical interview, symptom questionnaires (like the
+          GAD-7 or PDSS), and sometimes medical tests to rule out physical causes. This thorough approach
+          ensures you get the right diagnosis and, consequently, the right treatment.
+        </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>
+              Anxiety disorders are a category of related but distinct conditions, each targeting different
+              fears: future events (GAD), panic sensations (Panic Disorder), social judgment (Social
+              Anxiety), specific stimuli (Phobias), or escape difficulty (Agoraphobia)
+            </li>
+            <li>
+              60-70% of people with one anxiety disorder have at least one other, making comorbidity the norm
+              rather than the exception
+            </li>
+            <li>
+              While all involve excessive fear, the distinguishing feature is what triggers the fear and how
+              it manifests behaviorally (avoidance patterns, safety behaviors, rumination focus)
+            </li>
+            <li>
+              Accurate diagnosis matters because treatment approaches, though overlapping, emphasize
+              different techniques tailored to each disorder's unique mechanisms
+            </li>
+            <li>
+              All anxiety disorders are highly treatable with evidence-based approaches (CBT, exposure
+              therapy, medication), with 60-80% of people experiencing significant improvement
+            </li>
+          </ul>
         </ArticleCallout>
       </>
     ),

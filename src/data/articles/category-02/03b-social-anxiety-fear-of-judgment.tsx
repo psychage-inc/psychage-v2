@@ -29,11 +29,31 @@ export const socialAnxietyArticlesB: Article[] = [
     description: 'Navigate the challenges of dating when social anxiety makes first dates, vulnerability, and intimacy feel overwhelming. Practical strategies for connection.',
     image: "/images/articles/cat02/cover-026.svg",
     category: CATEGORY_ANXIETY_STRESS,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Social Anxiety', 'Dating', 'Relationships', 'Intimacy'],
+    summary: 'Dating with social anxiety presents unique challenges--fear of judgment, vulnerability, and performance pressure can make romantic connection feel impossible. Research shows 47% of people with social anxiety avoid dating entirely, yet connection is achievable through strategic approaches: reframing dates as mutual exploration rather than evaluation, choosing lower-pressure activities, managing self-focused attention, and practicing gradual vulnerability. The right partner will value authenticity over perfection.',
+    keyFacts: [
+      { text: '47% of people with social anxiety report avoiding dating entirely, while 35% end relationships due to fear rather than actual incompatibility', citationIndex: 1 },
+      { text: 'Activity-based dates (walks, mini golf, museums) reduce conversational pressure by providing shared focus beyond face-to-face interaction', citationIndex: 2 },
+      { text: 'Self-focused attention during dates--monitoring performance and analyzing every word--increases anxiety and reduces genuine connection', citationIndex: 3 },
+      { text: 'Online dating offers initial advantages for social anxiety (controlled pacing, thoughtful responses) but requires transitioning to in-person meetings within weeks to prevent anticipation anxiety buildup', citationIndex: 4 },
+      { text: 'Gradual vulnerability--starting with interests, progressing to values, then sharing struggles--builds intimacy without overwhelming early-stage anxiety', citationIndex: 5 },
+    ],
+    sparkMoment: 'The right person won\'t require you to perform perfectly or hide your anxiety--they\'ll value your authentic self, nervousness and all, because genuine connection happens when we stop pretending.',
+    practicalExercise: {
+      title: 'Reframe Your Next Date',
+      steps: [
+        { title: 'Write Down Anxiety-Driven Thoughts', description: 'Before your next date (or hypothetical date), list the catastrophic predictions: "I\'ll run out of things to say," "They\'ll think I\'m boring," "I have to be perfect."' },
+        { title: 'Challenge Each Prediction', description: 'Ask: What evidence do I have this will happen? What\'s a more realistic outcome? Have I survived uncomfortable dates before?' },
+        { title: 'Reframe the Purpose', description: 'Write an alternative mindset: "This date is about seeing if we\'re compatible--not proving my worth. I can be myself and see what happens."' },
+        { title: 'Plan One Outward Focus Strategy', description: 'Choose one technique to shift focus from internal monitoring to genuine curiosity: ask three follow-up questions, notice their interests, or observe the environment.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Dating Anxiety',
+    },
     citations: [
       {
         id: '1',
@@ -337,16 +357,30 @@ export const socialAnxietyArticlesB: Article[] = [
         <p className="mb-6">
           During dates, anxiety pulls attention inward: monitoring your performance, analyzing every word, watching for
           signs of judgment{', '}
-          <Citation id="6" index={3} source="Journal of Social and Clinical Psychology" year="2021" tier={1} />.
+          <Citation id="6" index={3} source="Journal of Social and Clinical Psychology" year="2021" tier={1} />. This creates a feedback loop--the more you focus on yourself, the more anxious you become, and the more awkward you actually appear.
+        </p>
+        <p className="mb-6">
+          Research shows that people with social anxiety overestimate how much their nervousness is visible to others. Your date probably can't tell you're anxious unless you explicitly mention it. They're likely focused on their own performance, not scrutinizing yours.
         </p>
         <p className="mb-6">
           <strong>Shift focus outward:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Listen actively to what they're saying, not to your internal critic</li>
-          <li>Notice details about them --- their interests, humor, values</li>
-          <li>Ask follow-up questions based on genuine curiosity</li>
-          <li>Focus on the environment --- the food, the activity, the surroundings</li>
+          <li>
+            <strong>Listen actively to what they're saying, not to your internal critic:</strong> When you notice yourself thinking "Did I just sound stupid?" redirect to "What did they just say about their work?"
+          </li>
+          <li>
+            <strong>Notice details about them:</strong> What makes them laugh? What lights them up when they talk? These observations create genuine connection and distract from self-monitoring.
+          </li>
+          <li>
+            <strong>Ask follow-up questions based on genuine curiosity:</strong> Instead of planning your next clever comment, build on what they've shared: "You mentioned traveling to Japan--what was your favorite part?"
+          </li>
+          <li>
+            <strong>Focus on the environment:</strong> If conversation stalls, comment on surroundings. "This coffee shop is cozy" or "The art in here is interesting" provides natural transitions.
+          </li>
+          <li>
+            <strong>Use the "spotlight effect" reminder:</strong> Tell yourself, "They're not analyzing me as harshly as I'm analyzing myself. They're probably nervous too."
+          </li>
         </ul>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -500,6 +534,49 @@ export const socialAnxietyArticlesB: Article[] = [
           </li>
         </ul>
 
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          9. When Anxiety Spikes During the Date: In-the-Moment Coping
+        </h3>
+        <p className="mb-6">
+          Even with preparation, anxiety can surge mid-date. Having quick grounding techniques helps you ride the wave without fleeing:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li>
+            <strong>5-4-3-2-1 grounding:</strong> Name 5 things you see, 4 you can touch, 3 you hear, 2 you smell, 1 you taste. This pulls attention from internal panic to external reality.
+          </li>
+          <li>
+            <strong>Excuse yourself briefly:</strong> It's okay to take a bathroom break. Splash water on your face, practice deep breathing, remind yourself you're safe.
+          </li>
+          <li>
+            <strong>Acknowledge the anxiety internally:</strong> "I'm feeling anxious right now. That's okay. It doesn't mean something's wrong--it's just my nervous system." Acceptance reduces the secondary anxiety about being anxious.
+          </li>
+          <li>
+            <strong>Normalize silences:</strong> Not every second needs to be filled. Comfortable silence can actually build connection. If silence feels awkward, try: "I'm enjoying just being here--I don't always need to fill every gap."
+          </li>
+          <li>
+            <strong>Remember your exit plan (without using it impulsively):</strong> Knowing you could leave if needed often makes staying easier. You're choosing to stay, not trapped.
+          </li>
+        </ul>
+
+        <ArticleCallout variant="tip" title="The 'Good Enough' Date">
+          <p>
+            Perfectionism fuels dating anxiety. Instead of aiming for a flawless, charming performance, aim for "good enough": show up, be reasonably present, treat the other person with kindness, and allow yourself to be human. Good enough is actually more attractive than perfect--authenticity beats performance every time.
+          </p>
+        </ArticleCallout>
+
+        <h2
+          id="when-to-seek-help"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          When to Seek Professional Help
+        </h2>
+        <p className="mb-6">
+          If social anxiety completely prevents you from dating, or if you're ending promising relationships solely due to fear, therapy can help. Cognitive-behavioral therapy (CBT) specifically targets the thought patterns and avoidance behaviors that maintain dating anxiety. Exposure therapy gradually builds tolerance for dating situations in a supported way.
+        </p>
+        <p className="mb-6">
+          Many therapists specialize in social anxiety and relationship issues. Working with a professional doesn't mean you're broken--it means you're investing in your ability to connect with others, which is one of the most valuable things you can do for your wellbeing.
+        </p>
+
         <ArticleCallout variant="key-takeaway">
           <p className="mb-4">
             <strong>Dating with social anxiety is hard, but it's not impossible.</strong> You don't have to be
@@ -529,11 +606,31 @@ export const socialAnxietyArticlesB: Article[] = [
     description: 'Understand why social anxiety creates avoidance of specific behaviors like eye contact, phone calls, and small talk --- and how to gradually build tolerance.',
     image: "/images/articles/cat02/cover-027.svg",
     category: CATEGORY_ANXIETY_STRESS,
-    readTime: 6,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Social Anxiety', 'Avoidance', 'Social Skills', 'Exposure Therapy'],
+    summary: 'Social anxiety drives avoidance of specific vulnerable behaviors--eye contact feels exposing, phone calls eliminate time to think, and small talk creates performance pressure. These avoidances provide short-term relief but maintain long-term anxiety by preventing evidence that feared outcomes won\'t occur. Gradual exposure hierarchies--starting with minimal-stakes situations and progressively building tolerance--effectively reduce avoidance and prove that intact social skills were inhibited by anxiety, not absent.',
+    keyFacts: [
+      { text: 'Eye contact triggers heightened amygdala activation in social anxiety, making direct gaze feel intensely threatening and exposing', citationIndex: 2 },
+      { text: 'Phone anxiety (telephonophobia) is increasingly common in the texting era--real-time conversation eliminates the ability to edit, revise, or carefully craft responses', citationIndex: 3 },
+      { text: 'Small talk serves a crucial social function as low-stakes connection initiation, but social anxiety reframes it as meaningless performance that must be avoided', citationIndex: 4 },
+      { text: 'Avoidance creates a self-reinforcing cycle: immediate anxiety relief strengthens the belief that the behavior is unbearable, increasing future avoidance and shrinking life opportunities', citationIndex: 5 },
+      { text: 'Research shows people with social anxiety often have intact social skills that are inhibited by anxiety--the problem is performance anxiety, not skill deficits', citationIndex: 8 },
+    ],
+    sparkMoment: 'You\'re not avoiding eye contact, phone calls, and small talk because you can\'t do them--you\'re avoiding them because anxiety makes them feel unbearable, and gradual exposure proves your capability was there all along.',
+    practicalExercise: {
+      title: 'Create Your Personal Exposure Hierarchy',
+      steps: [
+        { title: 'Choose One Avoided Behavior', description: 'Pick eye contact, phone calls, or small talk--whichever feels most limiting in your life right now.' },
+        { title: 'List 5-7 Steps from Easiest to Hardest', description: 'Start with the lowest-anxiety version (e.g., eye contact with yourself in a mirror) and progress to more challenging (sustained eye contact in conversations). Each step should be noticeably harder than the last but not overwhelming.' },
+        { title: 'Start with Step 1 This Week', description: 'Complete the easiest step 3-5 times before moving on. Notice: Does the anxiety decrease with repetition? What catastrophic predictions didn\'t come true?' },
+        { title: 'Progress When Anxiety Drops by Half', description: 'Move to the next step only when your anxiety for the current step has significantly decreased. Don\'t rush--building tolerance takes time.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Exposure Progress',
+    },
     citations: [
       {
         id: '1',
@@ -614,6 +711,9 @@ export const socialAnxietyArticlesB: Article[] = [
             feel especially vulnerable{', '}
             <Citation id="1" index={1} source="Clinical Psychology Review" year="2020" tier={1} />. Eye contact, phone
             calls, and small talk are common avoidance patterns that maintain the disorder.
+          </p>
+          <p className="mb-6">
+            These aren't quirks or preferences--they're strategic avoidances that feel protective in the moment but create long-term problems. Each time you sidestep these behaviors, you reinforce the belief that they're dangerous. Meanwhile, opportunities for connection, career advancement, and personal growth slip away because they require the very behaviors you're avoiding.
           </p>
         </div>
 
@@ -804,6 +904,27 @@ export const socialAnxietyArticlesB: Article[] = [
           </li>
         </ol>
 
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Real-World Consequences of These Avoidances
+        </h3>
+        <p className="mb-6">
+          These avoidance patterns create tangible impacts across life domains:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li>
+            <strong>Career limitations:</strong> Avoiding phone calls means missing networking opportunities, not following up on leads, and appearing unresponsive. Lack of eye contact in interviews or meetings can be misread as dishonesty or disinterest, costing promotions or job offers.
+          </li>
+          <li>
+            <strong>Relationship barriers:</strong> Romantic and platonic relationships struggle without small talk (the foundation for deeper connection) and eye contact (which signals trust and intimacy). Texting-only communication keeps relationships surface-level.
+          </li>
+          <li>
+            <strong>Misunderstood intentions:</strong> People who don't know you have anxiety may interpret your avoidance as rudeness, arrogance, or dislike. You become known as "the person who never talks" or "hard to read," when the truth is you're just anxious.
+          </li>
+          <li>
+            <strong>Isolation creep:</strong> As avoidance expands, social life contracts. You decline invitations to avoid small talk. You skip events where you might have to make phone calls to RSVP. Eventually, isolation becomes the new normal.
+          </li>
+        </ul>
+
         <h2
           id="building-tolerance"
           className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
@@ -980,6 +1101,48 @@ export const socialAnxietyArticlesB: Article[] = [
         />
 
         <h2
+          id="misconceptions"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          Common Misconceptions About These Avoidances
+        </h2>
+
+        <ComparisonTable
+          title="Myths vs. Reality"
+          columns={['Misconception', 'Reality']}
+          items={[
+            {
+              feature: 'Eye Contact',
+              values: [
+                "I need to maintain constant eye contact or I'll seem rude",
+                "Natural eye contact is intermittent--50% while speaking, 70% while listening. Breaking gaze to think is normal.",
+              ],
+            },
+            {
+              feature: 'Phone Calls',
+              values: [
+                "Everyone prefers calling and I'm weird for avoiding it",
+                "Phone anxiety is increasingly common, especially among younger generations. Many people share your preference for text.",
+              ],
+            },
+            {
+              feature: 'Small Talk',
+              values: [
+                "I should have something clever or interesting to say",
+                "Small talk is intentionally low-stakes. Mundane topics (weather, weekend plans) are expected and appropriate.",
+              ],
+            },
+            {
+              feature: 'Skill Deficit',
+              values: [
+                "I avoid these because I'm bad at them",
+                "Research shows anxiety inhibits existing skills--you likely can do these behaviors, but anxiety blocks performance.",
+              ],
+            },
+          ]}
+        />
+
+        <h2
           id="important-principles"
           className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
         >
@@ -1063,11 +1226,31 @@ export const socialAnxietyArticlesB: Article[] = [
     description: 'Explore selective mutism in adults --- a rare form of social anxiety where speech becomes impossible in specific situations, despite the ability to speak in others.',
     image: "/images/articles/cat02/cover-028.svg",
     category: CATEGORY_ANXIETY_STRESS,
-    readTime: 9,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Selective Mutism', 'Social Anxiety', 'Communication Disorders', 'Rare Conditions'],
+    summary: 'Selective mutism in adults is a rare, severe manifestation of social anxiety where speech becomes physically impossible in specific situations despite normal ability to speak in other settings. Affecting an estimated 0.1% of adults (likely underreported), 90% also meet criteria for social anxiety disorder. Brain imaging reveals heightened amygdala activation and reduced speech-region activity during "mute" situations--anxiety literally hijacks neurological pathways for speech. Treatment through CBT with gradual exposure, behavioral shaping techniques, and SSRIs can restore speech capability.',
+    keyFacts: [
+      { text: 'Selective mutism is not a choice--brain imaging shows heightened amygdala activation and inhibited speech-region activity during anxiety-triggered mutism situations', citationIndex: 2 },
+      { text: '90% of people with selective mutism also meet criteria for social anxiety disorder, making it an extreme manifestation of social anxiety rather than a separate condition', citationIndex: 4 },
+      { text: 'Adults with selective mutism can speak fluently at home or with close friends but experience complete voice freeze in work, school, or situations with strangers or authority figures', citationIndex: 1 },
+      { text: 'Cognitive behavioral therapy with gradual exposure--using shaping techniques from nonverbal communication to whispered words to normal volume speech--is the most effective treatment', citationIndex: 7 },
+      { text: 'Earlier treatment produces better outcomes; the longer selective mutism goes untreated, the more entrenched the speech freeze pattern becomes in the brain', citationIndex: 3 },
+    ],
+    sparkMoment: 'Your voice isn\'t gone--it\'s trapped by fear. The silence isn\'t a choice or weakness; it\'s your brain\'s extreme anxiety response, and with specialized treatment, you can gradually reclaim your ability to speak.',
+    practicalExercise: {
+      title: 'Start Your Speech Recovery Journey',
+      steps: [
+        { title: 'Find a Specialized Therapist', description: 'Search for mental health professionals with experience in selective mutism or severe social anxiety. Not all therapists have training in this rare condition--ask specifically about SM experience.' },
+        { title: 'Document Your Voice Patterns', description: 'Keep a log for one week: Where can you speak? Where can\'t you? Who makes speech easier or harder? This helps your therapist understand your specific triggers and design targeted exposure.' },
+        { title: 'Practice Non-Threatening Vocalizations', description: 'Start where you can: hum along to music, laugh at videos, clear your throat--any sound production builds neural pathways and reduces voice-use anxiety.' },
+        { title: 'Identify One Low-Stakes Exposure', description: 'Choose the easiest speaking situation from your "can\'t speak" list--maybe whispering a single word to a trusted friend in a safe setting. This becomes your Step 1 in therapy.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Assess Your Anxiety Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -1163,6 +1346,9 @@ export const socialAnxietyArticlesB: Article[] = [
             where speech becomes physically impossible in specific situations{', '}
             <Citation id="1" index={1} source="Journal of Anxiety Disorders" year="2021" tier={1} />. It's not
             shyness, not stubbornness, not a choice. It's an anxiety disorder that hijacks your ability to speak.
+          </p>
+          <p className="mb-6">
+            While selective mutism is most commonly diagnosed in childhood (affecting roughly 0.7% of children), many cases persist undiagnosed into adulthood or emerge later in life during periods of heightened stress. Adults with selective mutism often spend years believing they're "just shy" or "bad at talking," unaware that their inability to speak in certain contexts is a treatable anxiety condition. The isolation and functional impairment can be severe--careers derailed, relationships lost, daily tasks avoided--all because the brain's fear response has locked the voice away.
           </p>
         </div>
 
@@ -1377,6 +1563,10 @@ export const socialAnxietyArticlesB: Article[] = [
           ]}
         />
 
+        <p className="mb-6 mt-6">
+          The cumulative effect of these challenges is profound. Adults with selective mutism often describe feeling trapped in their own bodies--mentally articulate but vocally paralyzed. They develop coping strategies that allow survival but not thriving: avoiding promotions that require presentations, staying in relationships with partners who speak for them, declining social invitations that might require verbal participation. Over time, the world contracts to only those spaces where speech is possible, and life becomes defined by what's avoided rather than what's pursued.
+        </p>
+
         <h2
           id="diagnosis"
           className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
@@ -1507,6 +1697,46 @@ export const socialAnxietyArticlesB: Article[] = [
         <p className="mb-6">
           Group settings with others who have SM or social anxiety provide low-pressure practice for speaking in front
           of multiple people. Shared understanding reduces judgment and creates a safe environment for exposure.
+        </p>
+
+        <h2
+          id="living-with-sm"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          Living with Selective Mutism: Practical Strategies
+        </h2>
+        <p className="mb-6">
+          While professional treatment is essential, these strategies can help manage selective mutism in daily life:
+        </p>
+
+        <BeforeAfter
+          before={{
+            title: 'Unhelpful Coping Patterns',
+            points: [
+              'Completely avoiding situations where speech is required',
+              'Always relying on others to speak for you',
+              'Believing you\'ll never be able to speak in those situations',
+              'Hiding the condition and pretending everything is fine',
+              'Refusing all accommodations or support',
+            ],
+          }}
+          after={{
+            title: 'Adaptive Coping Strategies',
+            points: [
+              'Gradually exposing yourself to speaking situations with support',
+              'Using written communication temporarily while building speech capacity',
+              'Disclosing the condition to trusted people who can provide understanding',
+              'Requesting reasonable accommodations (written alternatives, one-on-one meetings)',
+              'Celebrating small wins--a whispered word, a brief greeting--as progress',
+            ],
+          }}
+        />
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Self-Advocacy and Disclosure
+        </h3>
+        <p className="mb-6">
+          Deciding whether and how to disclose selective mutism is personal. Some find that explaining the condition reduces misunderstandings ("I have an anxiety condition that makes speaking very difficult in certain situations, but I can communicate through writing") helps others understand that silence isn't rudeness or disinterest. Others prefer privacy. Both approaches are valid--choose what feels safest and most empowering for you.
         </p>
 
         <h2

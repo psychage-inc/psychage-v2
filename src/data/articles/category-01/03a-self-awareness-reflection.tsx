@@ -28,6 +28,26 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Self-Awareness', 'Personal Growth', 'Emotional Intelligence', 'Psychology', 'Self-Reflection'],
+    summary: 'Self-awareness is the ability to understand your own values, emotions, and patterns (internal) and how others perceive you (external). While 95% of people believe they are self-aware, research shows only 10-15% actually meet the criteria. This gap shapes every relationship and decision we make.',
+    keyFacts: [
+      { text: 'Only 10-15% of people who believe they are self-aware actually meet research criteria, leaving an 80% gap between perceived and actual self-awareness', citationIndex: 1 },
+      { text: 'Internal and external self-awareness are independent dimensions--being high in one does not guarantee being high in the other', citationIndex: 2 },
+      { text: 'Self-awareness predicts better decision-making, stronger relationships, higher job satisfaction, and greater overall well-being', citationIndex: 3 },
+      { text: 'The gap between how leaders see themselves and how their teams see them directly predicts team performance and engagement', citationIndex: 4 },
+      { text: 'Self-awareness is not a fixed trait but a learnable skill that develops with practice', citationIndex: 7 },
+    ],
+    sparkMoment: 'The willingness to question what you think you know about yourself is the first step toward actually knowing yourself.',
+    practicalExercise: {
+      title: 'Daily Self-Awareness Check-In',
+      steps: [
+        { title: 'Pause Three Times Daily', description: 'Set alarms for morning, midday, and evening. When the alarm sounds, stop whatever you are doing.' },
+        { title: 'Ask the Three Core Questions', description: 'What am I feeling right now? What am I thinking? What do I need? Write down brief answers--just a few words or sentences.' },
+        { title: 'Review Your Patterns Weekly', description: 'Every Sunday, read through your week of check-ins. Look for recurring emotions, thoughts, or needs that appear across multiple days.' },
+        { title: 'Identify One Actionable Insight', description: 'Based on your patterns, choose one small change to try this week--a boundary to set, a need to express, or a pattern to interrupt.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Try the Mood Journal',
+    },
     citations: [
       {
         id: '1',
@@ -194,6 +214,26 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Journaling', 'Self-Awareness', 'Reflection', 'Writing Therapy', 'Emotional Growth'],
+    summary: 'Surface-level journaling produces surface-level insights. Evidence-based journaling uses targeted prompts that reveal emotional patterns, values, and blind spots you cannot see in daily life. Research shows 15-20 minutes of structured expressive writing produces measurable improvements in mental and physical health.',
+    keyFacts: [
+      { text: 'Writing about emotional experiences for just 15-20 minutes daily over several days produces measurable improvements in mental and physical health', citationIndex: 2 },
+      { text: 'Journaling reduces anxiety by 72%, improves mood by 68%, and enhances sleep quality by 55% according to meta-analysis', citationIndex: 1 },
+      { text: 'Writing forces translation of vague internal experiences into concrete language, activating the prefrontal cortex and calming the emotional brain', citationIndex: 1 },
+      { text: 'Patterns invisible in the moment emerge when you read back entries over days and weeks--anxiety triggers, confidence sources, draining relationships', citationIndex: 6 },
+      { text: 'The prompts that make you uncomfortable are often the ones that lead to the most growth', citationIndex: 7 },
+    ],
+    sparkMoment: 'Journaling is not about recording events--it is about understanding yourself by making the invisible patterns of your inner life visible on the page.',
+    practicalExercise: {
+      title: '10-Minute Pattern Discovery Journal',
+      steps: [
+        { title: 'Choose One Prompt', description: 'Select a prompt from the emotional patterns, relationship patterns, values, or growth categories. Pick the one that makes you slightly uncomfortable--that is where insight lives.' },
+        { title: 'Set a Timer for 10 Minutes', description: 'Write continuously without stopping to edit, censor, or judge. Let the words flow even if they feel messy or incoherent. Spelling and grammar do not matter.' },
+        { title: 'Review Weekly on Sundays', description: 'Read all your entries from the past week in one sitting. Use a highlighter or notes to mark recurring themes, emotions, or patterns that appear across multiple days.' },
+        { title: 'Name the Pattern', description: 'Write one sentence summarizing the pattern you noticed. Example: "I feel most anxious on Sunday evenings before the work week" or "I withdraw when I need support most."' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Try the Mood Journal',
+    },
     citations: [
       {
         id: '1',
@@ -406,6 +446,26 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Body Awareness', 'Interoception', 'Somatic Experience', 'Mind-Body Connection', 'Emotional Signals'],
+    summary: 'Your body communicates emotions before your conscious mind registers them--jaw clenching before anger, chest tightening before anxiety, shoulders slumping before sadness. Body awareness (interoception) is the ability to sense and interpret these internal signals, forming the foundation of emotional experience and regulation.',
+    keyFacts: [
+      { text: 'A landmark study across 700 participants and five cultures found consistent bodily maps of emotions--anger in upper body and arms, sadness in limbs, anxiety in chest, happiness radiating throughout', citationIndex: 2 },
+      { text: 'Physical sensations are not side effects of emotions--theories of emotion suggest they are part of how emotions are constructed in the brain', citationIndex: 1 },
+      { text: 'People with higher interoceptive awareness have better emotion regulation, greater empathy, and clearer decision-making', citationIndex: 8 },
+      { text: 'Poor body awareness (alexithymia) increases risk for anxiety, depression, and psychosomatic complaints', citationIndex: 7 },
+      { text: 'Regular body scan meditation significantly improves interoceptive awareness within weeks', citationIndex: 5 },
+    ],
+    sparkMoment: 'Your body is your first emotional alert system--learning to read these signals gives you earlier access to emotions and more time to respond wisely rather than react impulsively.',
+    practicalExercise: {
+      title: 'Three-Point Body Check-In',
+      steps: [
+        { title: 'Set Three Daily Alarms', description: 'Schedule alarms for morning (9am), midday (1pm), and evening (6pm). Label them "Body Check-In" so you remember the purpose when they sound.' },
+        { title: 'Scan Three Key Areas', description: 'When the alarm sounds, pause and focus on your stomach, chest, and shoulders. Notice any tension, warmth, tingling, heaviness, or tightness. Do not try to change anything--just observe.' },
+        { title: 'Rate the Tension', description: 'Mentally rate the tension in each area from 1 (completely relaxed) to 10 (extremely tense). This gives you concrete data about your body state.' },
+        { title: 'Track Patterns Weekly', description: 'After one week, review your mental notes. Do certain times of day show higher tension? Does a specific area (like chest or shoulders) consistently carry more tension? These patterns reveal your emotional baseline and triggers.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Body Signals',
+    },
     citations: [
       {
         id: '1',
@@ -598,6 +658,26 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Thought Patterns', 'CBT', 'Automatic Thoughts', 'Cognitive Distortions', 'Self-Awareness'],
+    summary: 'Between every event and every emotion lives a thought--often automatic, outside awareness, and not entirely accurate. Cognitive behavioral therapy reveals that these automatic thoughts powerfully shape emotional experience, and learning to catch and question them is one of psychology\'s most effective skills for emotional resilience.',
+    keyFacts: [
+      { text: 'Automatic thoughts are rapid, unconscious interpretations that pop up instantly, feel completely true, and shape emotional experience before conscious awareness', citationIndex: 3 },
+      { text: 'These automatic thoughts are powerful predictors of anxiety and depression across populations', citationIndex: 2 },
+      { text: 'The CBT triangle connects thoughts, feelings, and behaviors--each influences the other in self-reinforcing cycles', citationIndex: 5 },
+      { text: 'Most automatic thoughts are interpretations, not facts--"My colleague did not say hello" is fact, "They are ignoring me because they are angry" is interpretation', citationIndex: 7 },
+      { text: 'Metacognitive awareness (being aware of your own thinking patterns) is one of the strongest predictors of emotional resilience and prevention of depression relapse', citationIndex: 6 },
+    ],
+    sparkMoment: 'Your feelings are real, but the thoughts driving them may not be accurate--learning to question automatic thoughts does not change reality, it changes how clearly you see it.',
+    practicalExercise: {
+      title: 'Two-Week Thought Record Practice',
+      steps: [
+        { title: 'Notice Strong Emotions', description: 'When you feel a strong emotion (anxiety, anger, sadness, shame), pause immediately. The emotion is your signal that an automatic thought just fired.' },
+        { title: 'Capture the Thought', description: 'Ask: "What was I just thinking?" Write down the exact thought word-for-word, even if it sounds extreme. Examples: "Nobody likes me," "I am going to get fired," "I always mess everything up."' },
+        { title: 'Record the Facts', description: 'Write (1) the situation that triggered the thought, (2) the automatic thought, (3) the emotion and its intensity from 1-10. This creates a concrete record instead of a vague memory.' },
+        { title: 'Generate Alternatives', description: 'Write 2-3 alternative interpretations of the same situation. They do not need to be positive--just realistic and equally plausible. This breaks the assumption that your first interpretation is the only one.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Thought Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -788,6 +868,26 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Observer Self', 'ACT', 'Mindfulness', 'Defusion', 'Metacognition'],
+    summary: 'The Observer Self is the part of you that can watch thoughts and feelings without being swept away by them--like watching a storm from a window instead of being caught in it. This capacity, central to ACT and mindfulness, creates space between stimulus and response, reducing emotional distress and enabling intentional action.',
+    keyFacts: [
+      { text: 'The Observer Self (self-as-context) is one of six core processes in acceptance and commitment therapy that lead to psychological flexibility', citationIndex: 1 },
+      { text: 'People who can access this observing perspective experience less emotional distress, greater resilience, and more values-aligned decision-making', citationIndex: 2 },
+      { text: 'When fused with thoughts, "I am a failure" feels like absolute truth; the Observer Self creates space to notice "I am having the thought that I am a failure"', citationIndex: 3 },
+      { text: 'Decentering (observing thoughts as mental events rather than reality) is a common mechanism across all effective mindfulness-based interventions', citationIndex: 5 },
+      { text: 'Self-distancing research shows that shifting from first-person to third-person perspective reduces emotional reactivity and improves problem-solving without increasing avoidance', citationIndex: 8 },
+    ],
+    sparkMoment: 'You are not your thoughts--you are the awareness that notices them, the sky behind the passing weather.',
+    practicalExercise: {
+      title: 'One-Week Language Shift Practice',
+      steps: [
+        { title: 'Notice the Emotion First', description: 'When you feel a strong emotion (anxiety, sadness, anger), pause and acknowledge it. The emotion is your cue to practice.' },
+        { title: 'Change Your Language', description: 'Instead of "I am anxious," say aloud or silently: "I am noticing feelings of anxiety." Instead of "I cannot do this," say: "My mind is telling me I cannot do this." This creates distance between you and the experience.' },
+        { title: 'Practice Without Believing', description: 'You do not need to believe the new phrasing feels true--just practice saying it. The observer perspective develops through repetition, not through forcing belief.' },
+        { title: 'Notice the Space', description: 'After one week of language shifts, observe whether there is more space between your emotions and your reactions. Does anxiety feel slightly less permanent? Do thoughts feel slightly less absolutely true?' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Observer Practice',
+    },
     citations: [
       {
         id: '1',

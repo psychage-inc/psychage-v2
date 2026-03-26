@@ -489,7 +489,7 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
     description: 'Learn how Ayurvedic principles address mind-body wellness, and whether ancient Indian medicine has a place in contemporary mental health care.',
     image: "/images/articles/cat12/cover-043.svg",
     category: CATEGORY_CULTURAL_GLOBAL,
-    readTime: 7,
+    readTime: 13,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -501,7 +501,214 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
       { id: '4', text: 'Ayurvedic Medicine: Introduction and Overview', source: 'National Center for Complementary and Integrative Health', year: '2022', link: 'https://www.nccih.nih.gov/health/ayurvedic-medicine', tier: 2 },
       { id: '5', text: 'Cultural considerations in Ayurvedic practice', source: 'Journal of Ethnopharmacology', year: '2018', link: 'https://doi.org/10.1016/j.jep.2018.09.028', tier: 1 },
     ],
-    content: <>content placeholder</>
+    content: (
+      <>
+        <SummaryBox>
+          Ayurveda—Sanskrit for "science of life"—is one of the world's oldest holistic healing systems, originating in India over 3,000 years ago. Unlike Western psychiatry's focus on diagnosing discrete mental disorders, Ayurveda views mental wellness through interconnected lenses of body constitution (doshas), digestive fire (agni), life force (prana), and mind qualities (gunas). As interest in integrative medicine grows, more people are exploring Ayurvedic approaches for anxiety, depression, and stress. But how does this ancient system hold up against modern evidence? And what does culturally respectful integration look like for a practice rooted in Hindu philosophy and Indian cultural context?
+        </SummaryBox>
+
+        <KeyFacts>
+          <Citation id="1" article="traditionalHealingGlobalApproachesArticlesA[2]">
+            Ayurveda conceptualizes mental health through three gunas (sattva/clarity, rajas/activity, tamas/inertia) and three doshas (vata, pitta, kapha) rather than Western diagnostic categories
+          </Citation>
+          <Citation id="3" article="traditionalHealingGlobalApproachesArticlesA[2]">
+            Research shows Ayurvedic interventions—particularly yoga, meditation, and herbal formulations—demonstrate benefits for anxiety and depression with effect sizes comparable to conventional treatments
+          </Citation>
+          <Citation id="2" article="traditionalHealingGlobalApproachesArticlesA[2]">
+            Mind-body practices like yoga and pranayama (breathwork) show neurobiological effects including reduced cortisol, increased GABA, and enhanced prefrontal regulation
+          </Citation>
+          <Citation id="4" article="traditionalHealingGlobalApproachesArticlesA[2]">
+            Safety concerns exist for some Ayurvedic herbal supplements, which may contain heavy metals or interact with psychiatric medications
+          </Citation>
+          <Citation id="5" article="traditionalHealingGlobalApproachesArticlesA[2]">
+            Authentic Ayurvedic practice requires understanding its cultural and philosophical context, not just extracting techniques or herbs
+          </Citation>
+        </KeyFacts>
+
+        <h2>The Ayurvedic Framework: How Mind and Body Are One</h2>
+        <p>
+          Ayurveda doesn't separate mental and physical health—they're expressions of the same underlying imbalances. The system describes three fundamental energies or doshas that govern all biological and psychological processes: vata (movement, creativity, anxiety), pitta (transformation, focus, anger), and kapha (structure, stability, lethargy).<Citation id="1" article="traditionalHealingGlobalApproachesArticlesA[2]" /> Everyone has a unique constitutional balance of these doshas, and illness arises when they become disturbed by diet, lifestyle, season, stress, or trauma.
+        </p>
+        <p>
+          Mental health specifically relates to the three gunas—qualities of consciousness. Sattva represents clarity, balance, and wisdom; rajas is activity, passion, and restlessness; tamas is heaviness, confusion, and inertia.<Citation id="1" article="traditionalHealingGlobalApproachesArticlesA[2]" /> What Western psychiatry might call depression could be seen in Ayurveda as excess tamas (heaviness, lack of motivation) combined with disturbed vata (irregular energy) or kapha (stagnation). Anxiety might reflect excess rajas (overstimulation) and vata (movement without grounding).
+        </p>
+        <p>
+          Treatment aims to restore balance through multiple interventions: dietary changes aligned with doshic constitution, herbal medicines, daily routines (dinacharya), seasonal adjustments (ritucharya), yoga and pranayama, meditation, massage, and panchakarma (intensive detoxification therapies). The approach is deeply personalized—what balances one person may disturb another based on their unique constitution.
+        </p>
+
+        <DiagramBlock
+          type="hierarchy"
+          title="Ayurvedic Mental Health Framework"
+          nodes={[
+            { id: '1', label: 'Prakriti (Constitution)', description: 'Unique balance of vata, pitta, kapha determined at birth' },
+            { id: '2', label: 'Vikriti (Imbalance)', description: 'Current state of doshic disturbance from diet, stress, season' },
+            { id: '3', label: 'Gunas (Mind Qualities)', description: 'Sattva (clarity), rajas (activity), tamas (inertia)' },
+            { id: '4', label: 'Agni (Digestive Fire)', description: 'Capacity to transform food, emotions, experiences' },
+            { id: '5', label: 'Treatment Protocol', description: 'Diet, herbs, yoga, meditation, lifestyle aligned to restore balance' }
+          ]}
+          connections={[
+            { from: '1', to: '2' },
+            { from: '2', to: '3' },
+            { from: '2', to: '4' },
+            { from: '3', to: '5' },
+            { from: '4', to: '5' }
+          ]}
+          description="How Ayurveda conceptualizes and addresses mental health imbalances"
+        />
+
+        <h2>What the Research Shows: Yoga, Herbs, and Mind-Body Integration</h2>
+        <p>
+          While Ayurveda as a complete system hasn't been extensively studied in rigorous trials, individual components have substantial research support. Yoga—Ayurveda's sister science—shows consistent benefits for anxiety and depression across meta-analyses, with effect sizes comparable to psychotherapy and antidepressants.<Citation id="3" article="traditionalHealingGlobalApproachesArticlesA[2]" /> Mechanisms include reduced inflammatory markers, increased neurotransmitters like GABA and serotonin, improved heart rate variability, and enhanced prefrontal cortex regulation of stress responses.
+        </p>
+        <p>
+          Pranayama (breathwork) practices like alternate nostril breathing and coherent breathing demonstrate immediate reductions in anxiety and improvements in autonomic nervous system balance.<Citation id="2" article="traditionalHealingGlobalApproachesArticlesA[2]" /> These practices are now being integrated into evidence-based treatments like trauma-focused therapy, where breathwork helps patients regulate arousal before processing traumatic memories.
+        </p>
+        <p>
+          Ayurvedic herbal medicines present a more complex picture. Ashwagandha (Withania somnifera) has the strongest evidence for anxiety reduction, with randomized controlled trials showing significant improvements and good tolerability. Brahmi (Bacopa monnieri) shows promise for memory and cognitive function. Turmeric (curcumin) demonstrates anti-inflammatory and potentially antidepressant effects.<Citation id="1" article="traditionalHealingGlobalApproachesArticlesA[2]" /> However, quality control is a major issue—studies have found heavy metal contamination (lead, mercury, arsenic) in some Ayurvedic supplements, and herb-drug interactions can occur when combining Ayurvedic medicines with psychiatric medications.
+        </p>
+
+        <h2>Safety Considerations and When to Avoid Ayurvedic Treatments</h2>
+        <p>
+          The U.S. Centers for Disease Control and National Center for Complementary and Integrative Health have issued warnings about Ayurvedic products, particularly those manufactured outside regulatory oversight.<Citation id="4" article="traditionalHealingGlobalApproachesArticlesA[2]" /> Some traditional Ayurvedic formulations intentionally include heavy metals like lead and mercury in processed forms claimed to be therapeutic, but these can cause serious toxicity.
+        </p>
+        <p>
+          Additionally, panchakarma therapies—intensive detoxification involving medicated enemas, purgation, and induced vomiting—can be dangerous without proper supervision and should never replace evidence-based care for serious mental illness. There are reports of people discontinuing psychiatric medications during Ayurvedic treatment and experiencing dangerous relapses of bipolar disorder, psychosis, or severe depression.<Citation id="1" article="traditionalHealingGlobalApproachesArticlesA[2]" />
+        </p>
+
+        <ComparisonTable
+          headers={['Ayurvedic Component', 'Evidence Level', 'Safety Profile', 'Integration Potential']}
+          rows={[
+            {
+              cells: [
+                'Yoga & Pranayama',
+                'Strong evidence for anxiety, depression, stress (50+ RCTs)',
+                'Generally safe; rare adverse events with proper instruction',
+                'High — widely integrated into clinical programs'
+              ]
+            },
+            {
+              cells: [
+                'Meditation (Dhyana)',
+                'Strong evidence (overlaps with mindfulness research)',
+                'Safe for most; cautions for trauma, psychosis, dissociation',
+                'High — already mainstream in mental health care'
+              ]
+            },
+            {
+              cells: [
+                'Herbal Medicines',
+                'Moderate evidence for specific herbs (ashwagandha, brahmi); limited for complex formulations',
+                'Variable — heavy metal risk, herb-drug interactions',
+                'Moderate — requires quality control and medical supervision'
+              ]
+            },
+            {
+              cells: [
+                'Dietary Recommendations',
+                'Limited specific research; overlaps with general nutrition evidence',
+                'Generally safe when balanced; cautions for restrictive patterns',
+                'Moderate — can complement conventional care'
+              ]
+            },
+            {
+              cells: [
+                'Panchakarma (Detox)',
+                'Very limited research; traditional practice claims not verified',
+                'Potentially risky without qualified supervision',
+                'Low — intensive intervention best reserved for Ayurvedic hospitals'
+              ]
+            }
+          ]}
+          caption="Evidence base and safety profile of major Ayurvedic interventions for mental health"
+        />
+
+        <h2>Cultural Context: Ayurveda Beyond Technique Extraction</h2>
+        <p>
+          Ayurveda emerged from Vedic philosophy and Hindu cosmology, viewing health as alignment with natural rhythms and spiritual principles. Extracting techniques like yoga or specific herbs while ignoring this philosophical foundation can distort the practice's meaning and effectiveness.<Citation id="5" article="traditionalHealingGlobalApproachesArticlesA[2]" />
+        </p>
+        <p>
+          For example, Ayurvedic diagnosis relies on pulse reading (nadi pariksha), tongue examination, and detailed questioning about digestion, sleep, and lifestyle—not symptom checklists. Treatments are prescribed based on individual constitution, not standardized diagnoses. The concept of "mental health" itself doesn't quite translate; Ayurveda speaks of manasika vikriti (mental disturbances) as inseparable from physical and spiritual imbalance.
+        </p>
+        <p>
+          Respectful integration means learning from qualified Ayurvedic practitioners trained in the traditional gurukula system, acknowledging the Hindu and Indian cultural origins, and resisting the urge to repackage Ayurveda as generic "wellness" stripped of its roots. It also means recognizing when Western medical care is essential—Ayurveda has much to offer for prevention and chronic conditions but isn't equipped to handle acute psychiatric crises.
+        </p>
+
+        <h2>Integrative Models: Ayurveda and Psychiatry Working Together</h2>
+        <p>
+          In India, some mental health facilities integrate Ayurvedic and allopathic (Western) medicine, with psychiatrists and vaidyas (Ayurvedic physicians) collaborating on treatment plans. Patients might receive antidepressants for acute symptoms while also following Ayurvedic dietary recommendations, taking herbal supplements, and practicing yoga—all coordinated to avoid interactions and maximize benefit.
+        </p>
+        <p>
+          Research from these integrative centers suggests that combined approaches may improve outcomes and reduce medication doses needed, though rigorous comparative trials are limited.<Citation id="3" article="traditionalHealingGlobalApproachesArticlesA[2]" /> The model works best when practitioners from both traditions respect each other's expertise, communicate openly about treatments, and prioritize patient safety over ideological purity.
+        </p>
+        <p>
+          In Western contexts, integration more often means psychiatrists referring patients to yoga teachers, recommending meditation apps based on Ayurvedic principles, or suggesting specific supplements like ashwagandha as adjuncts to conventional care. This lighter-touch integration avoids some safety risks but also loses the personalized, holistic assessment that defines authentic Ayurvedic practice.
+        </p>
+
+        <h2>Ayurveda for Prevention and Wellness</h2>
+        <p>
+          Where Ayurveda truly shines is prevention—dinacharya (daily routine) and ritucharya (seasonal routine) practices that maintain balance before illness develops. Morning routines might include tongue scraping, oil pulling, self-massage with sesame oil, and meditation. Dietary recommendations emphasize eating with the seasons, favoring warm cooked foods, and adjusting spice use based on doshic needs.
+        </p>
+        <p>
+          These practices align with what we know about mental health resilience: regular sleep-wake cycles support circadian rhythms; mindful eating improves gut health and the gut-brain axis; daily movement and breathwork regulate stress responses. Ayurveda provides a culturally rich framework for these evidence-supported behaviors, packaged in a holistic system rather than atomized "wellness hacks."
+        </p>
+        <p>
+          For people of South Asian heritage, Ayurvedic approaches may feel more culturally congruent than Western psychiatric frameworks, providing language and practices that connect to family traditions and spiritual beliefs. This cultural resonance can enhance engagement and reduce the stigma that often surrounds mental health treatment in South Asian communities.
+        </p>
+
+        <PracticalExercise
+          title="Exploring Ayurvedic Principles for Mental Wellness"
+          description="Try these Ayurveda-inspired practices to assess their fit for your life (always consult healthcare providers before changing medications or supplements):"
+          steps={[
+            {
+              instruction: 'Assess your current balance',
+              details: 'Complete an online dosha quiz (available free from reputable Ayurvedic organizations) to identify your constitutional type. Reflect: do the descriptions resonate with your physical and emotional patterns?'
+            },
+            {
+              instruction: 'Establish dinacharya (daily routine)',
+              details: 'Wake and sleep at consistent times for one week. Add one morning grounding practice: 5 minutes of pranayama, tongue scraping, or warm lemon water. Notice effects on mood and energy.'
+            },
+            {
+              instruction: 'Try doshic eating',
+              details: 'For 3 days, eat according to your dominant dosha guidelines (vata: warm, grounding foods; pitta: cooling, moderate foods; kapha: light, stimulating foods). Track how meals affect energy and mood.'
+            },
+            {
+              instruction: 'Explore yoga beyond fitness',
+              details: 'Attend one class or online session that incorporates breathwork, meditation, and philosophy—not just asana (postures). Reflect on differences from exercise-focused yoga.'
+            },
+            {
+              instruction: 'Learn from authentic sources',
+              details: 'Read one article or book by a credentialed Ayurvedic practitioner from South Asian heritage (not generic wellness influencers). What cultural context were you missing?'
+            }
+          ]}
+          timeEstimate="1-2 weeks for full exploration; ongoing for practice integration"
+        />
+
+        <ArticleCallout variant="warning" title="Red Flags: When Ayurveda Becomes Unsafe">
+          Discontinuing psychiatric medications to pursue Ayurvedic treatment exclusively, practitioners promising cures for serious mental illness, products without ingredient disclosure or quality testing, resistance to coordinating with your psychiatrist or therapist, extreme dietary restrictions causing nutritional deficiency, use of heavy metal-containing formulations without explicit informed consent about risks.
+        </ArticleCallout>
+
+        <SparkMoment>
+          Ayurveda reminds us that healing isn't just about eliminating symptoms—it's about aligning with natural rhythms, honoring the body's wisdom, and seeing mental health as inseparable from how we eat, sleep, breathe, and connect to the world around us. When integrated respectfully with modern psychiatric care, this ancient system offers not a replacement for evidence-based treatment, but a richer, more holistic framework for living well—one that has sustained communities for millennia and still has profound relevance today.
+        </SparkMoment>
+
+        <RelatedToolsBlock
+          tools={[
+            {
+              name: 'Sleep Architect',
+              path: '/tools/sleep-architect',
+              description: 'Track sleep patterns aligned with Ayurvedic circadian principles'
+            },
+            {
+              name: 'Mood Journal',
+              path: '/tools/mood-journal',
+              description: 'Monitor emotional patterns and their connection to diet, routine, and seasons'
+            }
+          ]}
+        />
+
+        <ReferenceList article="traditionalHealingGlobalApproachesArticlesA[2]" />
+      </>
+    )
   },
   {
     id: catId(44),

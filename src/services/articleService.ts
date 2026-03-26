@@ -149,7 +149,7 @@ export const articleService = {
             if (data && data.length > 0) {
                 const sizeKB = (JSON.stringify(data).length / 1024).toFixed(1);
                 console.log(`[ArticleService] Fetched ${data.length} articles from Supabase (${sizeKB}KB)`);
-                return data.map(mapSupabaseToArticle);
+                return (data as unknown as DBArticle[]).map(mapSupabaseToArticle);
             }
         } catch (error) {
             console.warn('[ArticleService] Supabase fetch failed, using mock data:', error);

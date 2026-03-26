@@ -25,7 +25,7 @@ const CategoryPage: React.FC = () => {
             try {
                 const [cat, allArticles] = await Promise.all([
                     categoryService.getBySlug(categorySlug),
-                    articleService.getAll()
+                    articleService.getAll({ category: categorySlug })
                 ]);
                 setCategory(cat);
                 setArticles(allArticles);
@@ -54,8 +54,9 @@ const CategoryPage: React.FC = () => {
         );
     }
 
+    // Articles are already filtered by category in the query, but keep this as safety net
     const categoryArticles = articles.filter(
-        article => article.category.id === category.id
+        article => article.category.slug === category.slug
     );
 
     return (

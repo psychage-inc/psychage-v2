@@ -1,0 +1,642 @@
+[
+  {
+    "article_id": "CAT01-001",
+    "article_title": "What Are Emotions, Really? A Beginner's Guide to How Feelings Work",
+    "image_filename": "EMO-001 — What Are Emotions, Really.jpeg",
+    "image_title": "What Are Emotions, Really",
+    "match_confidence": 90,
+    "needs_review": false
+  },
+  {
+    "article_id": "CAT01-002",
+    "article_title": "The Emotion Spectrum: Why Your Feelings Exist on a Continuum, Not in Boxes",
+    "image_filename": "EMO-002 — The Emotion Spectrum.jpeg",
+    "image_title": "The Emotion Spectrum",
+    "match_confidence": 90,
+    "needs_review": false
+  },
+  {
+    "article_id": "CAT01-003",
+    "article_title": "Why \"Negative\" Emotions Aren't Actually Bad for You",
+    "image_filename": "EMO-003 — Why Negative Emotions Aren_t Bad for You.jpeg",
+    "image_title": "Why Negative Emotions Aren't Bad for You",
+    "match_confidence": 89,
+    "needs_review": false
+  },
+  {
+    "article_id": "CAT01-004",
+    "article_title": "The Science of Emotional Triggers: What Fires Off Your Feelings and Why",
+    "image_filename": "EMO-004 — The Science of Emotional Triggers.jpeg",
+    "image_title": "The Science of Emotional Triggers",
+    "match_confidence": 90,
+    "needs_review": false
+  },
+  {
+    "article_id": "CAT01-005",
+    "article_title": "Emotional Granularity: How Naming Your Feelings More Precisely Changes Everything",
+    "image_filename": "EMO-005 — Emotional Granularity.jpeg",
+    "image_title": "Emotional Granularity",
+    "match_confidence": 90,
+    "needs_review": false
+  },
+  {
+    "article_id": "CAT01-006",
+    "article_title": "Why You Feel Everything So Deeply: Understanding Emotional Sensitivity",
+    "image_filename": "EMO-006 — Why You Feel Everything So Deeply.jpeg",
+    "image_title": "Why You Feel Everything So Deeply",
+    "match_confidence": 90,
+    "needs_review": false
+  },
+  {
+    "article_id": "CAT01-007",
+    "article_title": "The Difference Between Feelings, Emotions, and Moods — And Why It Matters",
+    "image_filename": "EMO-007 — The Difference Between Feelings, Emotions, and Moods.jpeg",
+    "image_title": "The Difference Between Feelings, Emotions, and Moods",
+    "match_confidence": 90,
+    "needs_review": false
+  },
+  {
+    "article_id": "CAT01-008",
+    "article_title": "How Your Brain Decides What You Feel Before You Even Know It",
+    "image_filename": "EMO-008 — How Your Brain Decides What You Feel.jpeg",
+    "image_title": "How Your Brain Decides What You Feel",
+    "match_confidence": 90,
+    "needs_review": false
+  },
+  {
+    "article_id": "CAT01-009",
+    "article_title": "Mixed Emotions: Why You Can Feel Two Contradictory Things at Once",
+    "image_filename": "EMO-009 — Mixed Emotions.jpeg",
+    "image_title": "Mixed Emotions",
+    "match_confidence": 90,
+    "needs_review": false
+  },
+  {
+    "article_id": "CAT01-010",
+    "article_title": "The Purpose of Emotions: What Evolutionary Psychology Tells Us About Why We Feel",
+    "image_filename": "EMO-010 — The Purpose of Emotions.jpeg",
+    "image_title": "The Purpose of Emotions",
+    "match_confidence": 90,
+    "needs_review": false
+  },
+  {
+    "article_id": "CAT01-011",
+    "article_title": "What Is Emotional Regulation? A Complete Guide to Managing Your Inner World",
+    "image_filename": "EMO-033 — What Emotional Intelligence Actually Is.jpeg",
+    "image_title": "What Emotional Intelligence Actually Is",
+    "match_confidence": 21,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-012",
+    "article_title": "The Window of Tolerance: Understanding Your Emotional Comfort Zone",
+    "image_filename": "EMO-016 — The Window of Tolerance.jpeg",
+    "image_title": "The Window of Tolerance",
+    "match_confidence": 90,
+    "needs_review": false
+  },
+  {
+    "article_id": "CAT01-013",
+    "article_title": "5 Science-Backed Breathing Techniques for Instant Calm",
+    "image_filename": "EMO-011 — 5 Evidence-Based Ways to Calm Your Nervous System.jpeg",
+    "image_title": "5 Evidence-Based Ways to Calm Your Nervous System",
+    "match_confidence": 13,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-014",
+    "article_title": "Cognitive Reappraisal: How Changing Your Thoughts Can Change Your Feelings",
+    "image_filename": "EMO-012 — Cognitive Reappraisal.jpeg",
+    "image_title": "Cognitive Reappraisal",
+    "match_confidence": 90,
+    "needs_review": false
+  },
+  {
+    "article_id": "CAT01-015",
+    "article_title": "Grounding Techniques for Emotional Overwhelm: Practical Tools That Work",
+    "image_filename": "EMO-014 — Grounding Techniques That Actually Work.jpeg",
+    "image_title": "Grounding Techniques That Actually Work",
+    "match_confidence": 40,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-016",
+    "article_title": "The RAIN Method: A Mindful Approach to Sitting With Difficult Emotions",
+    "image_filename": "EMO-010 — The Purpose of Emotions.jpeg",
+    "image_title": "The Purpose of Emotions",
+    "match_confidence": 15,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-017",
+    "article_title": "How Journaling Rewires Your Emotional Brain: The Science of Expressive Writing",
+    "image_filename": "EMO-004 — The Science of Emotional Triggers.jpeg",
+    "image_title": "The Science of Emotional Triggers",
+    "match_confidence": 33,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-018",
+    "article_title": "Body-Based Emotion Regulation: Somatic Strategies That Actually Work",
+    "image_filename": "EMO-020 — Body-Based Regulation.jpeg",
+    "image_title": "Body-Based Regulation",
+    "match_confidence": 33,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-019",
+    "article_title": "Emotional Regulation in Relationships: How to Manage Reactivity With People You Love",
+    "image_filename": "EMO-068 — Emotional Regulation in Men.jpeg",
+    "image_title": "Emotional Regulation in Men",
+    "match_confidence": 23,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-020",
+    "article_title": "When Emotions Feel Uncontrollable: A Step-by-Step De-Escalation Guide",
+    "image_filename": "EMO-009 — Mixed Emotions.jpeg",
+    "image_title": "Mixed Emotions",
+    "match_confidence": 9,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-021",
+    "article_title": "What Is Self-Awareness? The Skill That Changes Everything",
+    "image_filename": "EMO-030 — The Difference Between Self-Awareness and Overthinking.jpeg",
+    "image_title": "The Difference Between Self-Awareness and Overthinking",
+    "match_confidence": 23,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-022",
+    "article_title": "Journaling for Self-Awareness: Prompts That Go Beyond ",
+    "image_filename": "EMO-026 — Journaling for Emotional Clarity.jpeg",
+    "image_title": "Journaling for Emotional Clarity",
+    "match_confidence": 20,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-023",
+    "article_title": "Body Awareness: Learning to Read the Physical Signals of Your Emotions",
+    "image_filename": "EMO-010 — The Purpose of Emotions.jpeg",
+    "image_title": "The Purpose of Emotions",
+    "match_confidence": 25,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-024",
+    "article_title": "How Your Thoughts Shape Your Feelings (And How to Notice the Pattern)",
+    "image_filename": "EMO-031 — How to Notice Your Emotional Patterns Without Judging Them.jpeg",
+    "image_title": "How to Notice Your Emotional Patterns Without Judging Them",
+    "match_confidence": 27,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-025",
+    "article_title": "The Observer Self: Learning to Watch Your Emotions Without Being Consumed",
+    "image_filename": "EMO-029 — What Your Recurring Emotions Are Trying to Tell You.jpeg",
+    "image_title": "What Your Recurring Emotions Are Trying to Tell You",
+    "match_confidence": 18,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-026",
+    "article_title": "Mindfulness for Emotional Awareness: A Practical Starting Guide",
+    "image_filename": "EMO-026 — Journaling for Emotional Clarity.jpeg",
+    "image_title": "Journaling for Emotional Clarity",
+    "match_confidence": 20,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-027",
+    "article_title": "Common Blind Spots: Emotions You Might Not Realize You",
+    "image_filename": "EMO-003 — Why Negative Emotions Aren_t Bad for You.jpeg",
+    "image_title": "Why Negative Emotions Aren't Bad for You",
+    "match_confidence": 14,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-028",
+    "article_title": "How to Ask for Honest Feedback About Your Emotional Patterns",
+    "image_filename": "EMO-031 — How to Notice Your Emotional Patterns Without Judging Them.jpeg",
+    "image_title": "How to Notice Your Emotional Patterns Without Judging Them",
+    "match_confidence": 36,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-029",
+    "article_title": "The Role of Values in Emotional Self-Awareness",
+    "image_filename": "EMO-074 — The Role of Vulnerability in Emotional Strength.jpeg",
+    "image_title": "The Role of Vulnerability in Emotional Strength",
+    "match_confidence": 50,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-030",
+    "article_title": "Self-Awareness Without Self-Judgment: A Compassionate Approach",
+    "image_filename": "EMO-023 — How to Build Genuine Self-Awareness.jpeg",
+    "image_title": "How to Build Genuine Self-Awareness",
+    "match_confidence": 18,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-031",
+    "article_title": "What Is Emotional Intelligence? Beyond the Buzzword",
+    "image_filename": "EMO-033 — What Emotional Intelligence Actually Is.jpeg",
+    "image_title": "What Emotional Intelligence Actually Is",
+    "match_confidence": 50,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-032",
+    "article_title": "Reading Other People",
+    "image_filename": "NO_MATCH",
+    "image_title": "",
+    "match_confidence": 0,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-033",
+    "article_title": "Emotional Intelligence in Conversations: Listening Beyond Words",
+    "image_filename": "EMO-041 — Emotional Intelligence in Leadership.jpeg",
+    "image_title": "Emotional Intelligence in Leadership",
+    "match_confidence": 38,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-034",
+    "article_title": "How to Respond (Not React) in Emotionally Charged Situations",
+    "image_filename": "EMO-018 — How to Stop Spiraling.jpeg",
+    "image_title": "How to Stop Spiraling",
+    "match_confidence": 18,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-035",
+    "article_title": "Emotional Intelligence at Work: Managing Feelings in Professional Settings",
+    "image_filename": "EMO-037 — How Emotional Intelligence Shows Up at Work.jpeg",
+    "image_title": "How Emotional Intelligence Shows Up at Work",
+    "match_confidence": 33,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-036",
+    "article_title": "The Empathy Spectrum: From Cognitive to Affective to Compassionate",
+    "image_filename": "EMO-002 — The Emotion Spectrum.jpeg",
+    "image_title": "The Emotion Spectrum",
+    "match_confidence": 22,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-037",
+    "article_title": "Emotional Contagion: Why Other People",
+    "image_filename": "EMO-005 — Emotional Granularity.jpeg",
+    "image_title": "Emotional Granularity",
+    "match_confidence": 17,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-038",
+    "article_title": "Setting Emotional Boundaries While Staying Connected",
+    "image_filename": "EMO-005 — Emotional Granularity.jpeg",
+    "image_title": "Emotional Granularity",
+    "match_confidence": 14,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-039",
+    "article_title": "How to Have Difficult Conversations with Emotional Intelligence",
+    "image_filename": "EMO-015 — How to Sit with Uncomfortable Feelings.jpeg",
+    "image_title": "How to Sit with Uncomfortable Feelings",
+    "match_confidence": 27,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-040",
+    "article_title": "Teaching Emotional Intelligence: Skills for Parents, Teachers, and Mentors",
+    "image_filename": "EMO-038 — Teaching Children Emotional Intelligence.jpeg",
+    "image_title": "Teaching Children Emotional Intelligence",
+    "match_confidence": 30,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-041",
+    "article_title": "Emotional Habits: How Repetitive Feeling Patterns Form and Stick",
+    "image_filename": "EMO-048 — How Shame Shapes Your Emotional Patterns.jpeg",
+    "image_title": "How Shame Shapes Your Emotional Patterns",
+    "match_confidence": 25,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-042",
+    "article_title": "Why You Always React the Same Way: Understanding Emotional Triggers",
+    "image_filename": "EMO-004 — The Science of Emotional Triggers.jpeg",
+    "image_title": "The Science of Emotional Triggers",
+    "match_confidence": 25,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-043",
+    "article_title": "The Cycle of Emotional Avoidance: Why Running from Feelings Makes Them Louder",
+    "image_filename": "EMO-045 — Emotional Avoidance.jpeg",
+    "image_title": "Emotional Avoidance",
+    "match_confidence": 90,
+    "needs_review": false
+  },
+  {
+    "article_id": "CAT01-044",
+    "article_title": "Emotional Eating, Shopping, and Scrolling: Understanding Coping Mechanisms",
+    "image_filename": "EMO-060 — Neuroplasticity and Emotional Change.jpeg",
+    "image_title": "Neuroplasticity and Emotional Change",
+    "match_confidence": 20,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-045",
+    "article_title": "How Childhood Experiences Shape Your Adult Emotional Patterns",
+    "image_filename": "EMO-027 — How Your Childhood Emotional Patterns Show Up Today.jpeg",
+    "image_title": "How Your Childhood Emotional Patterns Show Up Today",
+    "match_confidence": 45,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-046",
+    "article_title": "The Anger Iceberg: What",
+    "image_filename": "EMO-049 — The Role of Anger in Your Emotional Landscape.jpeg",
+    "image_title": "The Role of Anger in Your Emotional Landscape",
+    "match_confidence": 20,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-047",
+    "article_title": "Shame vs. Guilt: Two Very Different Emotions with Very Different Effects",
+    "image_filename": "EMO-078 — How Acceptance Changes Your Relationship With Emotions.jpeg",
+    "image_title": "How Acceptance Changes Your Relationship With Emotions",
+    "match_confidence": 14,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-048",
+    "article_title": "Rumination: Why Your Brain Replays Painful Moments (And How to Stop)",
+    "image_filename": "EMO-018 — How to Stop Spiraling.jpeg",
+    "image_title": "How to Stop Spiraling",
+    "match_confidence": 25,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-049",
+    "article_title": "Emotional Perfectionism: The Hidden Pressure to Always Feel ",
+    "image_filename": "EMO-004 — The Science of Emotional Triggers.jpeg",
+    "image_title": "The Science of Emotional Triggers",
+    "match_confidence": 18,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-050",
+    "article_title": "Breaking the Pattern: How to Build New Emotional Responses",
+    "image_filename": "EMO-034 — How to Read the Room.jpeg",
+    "image_title": "How to Read the Room",
+    "match_confidence": 27,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-051",
+    "article_title": "Your Brain on Emotions: A Tour of the Neural Networks That Create Feelings",
+    "image_filename": "EMO-010 — The Purpose of Emotions.jpeg",
+    "image_title": "The Purpose of Emotions",
+    "match_confidence": 21,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-052",
+    "article_title": "The Amygdala",
+    "image_filename": "EMO-053 — The Amygdala Explained.jpeg",
+    "image_title": "The Amygdala Explained",
+    "match_confidence": 90,
+    "needs_review": false
+  },
+  {
+    "article_id": "CAT01-053",
+    "article_title": "Neuroplasticity and Emotional Change: Can You Rewire Your Feeling Patterns?",
+    "image_filename": "EMO-060 — Neuroplasticity and Emotional Change.jpeg",
+    "image_title": "Neuroplasticity and Emotional Change",
+    "match_confidence": 90,
+    "needs_review": false
+  },
+  {
+    "article_id": "CAT01-054",
+    "article_title": "The Vagus Nerve: Your Body",
+    "image_filename": "EMO-055 — The Vagus Nerve and Emotional Regulation.jpeg",
+    "image_title": "The Vagus Nerve and Emotional Regulation",
+    "match_confidence": 38,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-055",
+    "article_title": "How Stress Hormones Hijack Your Emotional Regulation",
+    "image_filename": "EMO-048 — How Shame Shapes Your Emotional Patterns.jpeg",
+    "image_title": "How Shame Shapes Your Emotional Patterns",
+    "match_confidence": 30,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-056",
+    "article_title": "The Neuroscience of Emotional Contagion: Mirror Neurons and Empathy",
+    "image_filename": "EMO-057 — The Neuroscience of Fear.jpeg",
+    "image_title": "The Neuroscience of Fear",
+    "match_confidence": 30,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-057",
+    "article_title": "Why Sleep Deprivation Makes Everything Feel Worse: The Brain Science",
+    "image_filename": "EMO-006 — Why You Feel Everything So Deeply.jpeg",
+    "image_title": "Why You Feel Everything So Deeply",
+    "match_confidence": 23,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-058",
+    "article_title": "How Exercise Changes Your Brain Chemistry and Emotional Baseline",
+    "image_filename": "EMO-066 — How Parenthood Changes Your Emotional World.jpeg",
+    "image_title": "How Parenthood Changes Your Emotional World",
+    "match_confidence": 36,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-059",
+    "article_title": "The Default Mode Network: What Your Brain Does When You",
+    "image_filename": "EMO-008 — How Your Brain Decides What You Feel.jpeg",
+    "image_title": "How Your Brain Decides What You Feel",
+    "match_confidence": 31,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-060",
+    "article_title": "Polyvagal Theory in Plain Language: Your Nervous System",
+    "image_filename": "EMO-011 — 5 Evidence-Based Ways to Calm Your Nervous System.jpeg",
+    "image_title": "5 Evidence-Based Ways to Calm Your Nervous System",
+    "match_confidence": 21,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-061",
+    "article_title": "Emotional Development in Children: What Parents Need to Know",
+    "image_filename": "EMO-061 — Emotional Development in Childhood.jpeg",
+    "image_title": "Emotional Development in Childhood",
+    "match_confidence": 30,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-062",
+    "article_title": "Adolescent Emotions: Why Teenage Feelings Are So Intense",
+    "image_filename": "EMO-001 — What Are Emotions, Really.jpeg",
+    "image_title": "What Are Emotions, Really",
+    "match_confidence": 20,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-063",
+    "article_title": "Emotional Challenges of Your 20s: Identity, Comparison, and Uncertainty",
+    "image_filename": "EMO-049 — The Role of Anger in Your Emotional Landscape.jpeg",
+    "image_title": "The Role of Anger in Your Emotional Landscape",
+    "match_confidence": 21,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-064",
+    "article_title": "Midlife Emotional Shifts: What Changes in Your 40s and 50s",
+    "image_filename": "EMO-064 — Midlife and Emotional Complexity.jpeg",
+    "image_title": "Midlife and Emotional Complexity",
+    "match_confidence": 27,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-065",
+    "article_title": "Emotional Wellbeing in Older Adulthood: Resilience, Loss, and Wisdom",
+    "image_filename": "EMO-080 — Emotional Wisdom.jpeg",
+    "image_title": "Emotional Wisdom",
+    "match_confidence": 22,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-066",
+    "article_title": "How Major Life Transitions Reshape Your Emotional Landscape",
+    "image_filename": "EMO-048 — How Shame Shapes Your Emotional Patterns.jpeg",
+    "image_title": "How Shame Shapes Your Emotional Patterns",
+    "match_confidence": 27,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-067",
+    "article_title": "Emotional Regulation During Pregnancy and Postpartum",
+    "image_filename": "EMO-055 — The Vagus Nerve and Emotional Regulation.jpeg",
+    "image_title": "The Vagus Nerve and Emotional Regulation",
+    "match_confidence": 33,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-068",
+    "article_title": "Emotions and Menopause: Understanding Hormonal Emotional Changes",
+    "image_filename": "EMO-056 — Hormones and Emotions.jpeg",
+    "image_title": "Hormones and Emotions",
+    "match_confidence": 25,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-069",
+    "article_title": "Retirement and Emotional Identity: Who Are You Without Your Role?",
+    "image_filename": "EMO-049 — The Role of Anger in Your Emotional Landscape.jpeg",
+    "image_title": "The Role of Anger in Your Emotional Landscape",
+    "match_confidence": 20,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-070",
+    "article_title": "Teaching Kids Emotional Regulation: Age-Appropriate Strategies",
+    "image_filename": "EMO-038 — Teaching Children Emotional Intelligence.jpeg",
+    "image_title": "Teaching Children Emotional Intelligence",
+    "match_confidence": 22,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-071",
+    "article_title": "Emotional Agility: Moving Flexibly Through Complex Feelings",
+    "image_filename": "EMO-005 — Emotional Granularity.jpeg",
+    "image_title": "Emotional Granularity",
+    "match_confidence": 13,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-072",
+    "article_title": "Holding Two Feelings at Once: The Skill of Emotional Dialectics",
+    "image_filename": "EMO-004 — The Science of Emotional Triggers.jpeg",
+    "image_title": "The Science of Emotional Triggers",
+    "match_confidence": 25,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-073",
+    "article_title": "Post-Traumatic Growth and Emotional Transformation",
+    "image_filename": "EMO-071 — Post-Traumatic Growth.jpeg",
+    "image_title": "Post-Traumatic Growth",
+    "match_confidence": 90,
+    "needs_review": false
+  },
+  {
+    "article_id": "CAT01-074",
+    "article_title": "The Role of Positive Emotions in Building Resilience",
+    "image_filename": "EMO-074 — The Role of Vulnerability in Emotional Strength.jpeg",
+    "image_title": "The Role of Vulnerability in Emotional Strength",
+    "match_confidence": 36,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-075",
+    "article_title": "Emotional Wisdom: What Research Says About Growing Through Difficulty",
+    "image_filename": "EMO-080 — Emotional Wisdom.jpeg",
+    "image_title": "Emotional Wisdom",
+    "match_confidence": 90,
+    "needs_review": false
+  },
+  {
+    "article_id": "CAT01-076",
+    "article_title": "Alexithymia: When You Can",
+    "image_filename": "EMO-006 — Why You Feel Everything So Deeply.jpeg",
+    "image_title": "Why You Feel Everything So Deeply",
+    "match_confidence": 11,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-077",
+    "article_title": "Emotion-Focused Therapy: What It Is and Who It Helps",
+    "image_filename": "EMO-033 — What Emotional Intelligence Actually Is.jpeg",
+    "image_title": "What Emotional Intelligence Actually Is",
+    "match_confidence": 17,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-078",
+    "article_title": "Radical Acceptance: Letting Go of the Fight Against Your Feelings",
+    "image_filename": "EMO-049 — The Role of Anger in Your Emotional Landscape.jpeg",
+    "image_title": "The Role of Anger in Your Emotional Landscape",
+    "match_confidence": 20,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-079",
+    "article_title": "Emotional Mastery vs. Emotional Control: Why the Difference Matters",
+    "image_filename": "EMO-076 — The Difference Between Emotional Regulation and Suppression.jpeg",
+    "image_title": "The Difference Between Emotional Regulation and Suppression",
+    "match_confidence": 25,
+    "needs_review": true
+  },
+  {
+    "article_id": "CAT01-080",
+    "article_title": "Your Emotional Future: Building a Lifelong Practice of Emotional Awareness",
+    "image_filename": "EMO-049 — The Role of Anger in Your Emotional Landscape.jpeg",
+    "image_title": "The Role of Anger in Your Emotional Landscape",
+    "match_confidence": 21,
+    "needs_review": true
+  }
+]
